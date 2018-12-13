@@ -1,4 +1,13 @@
-﻿using System.Reflection;
+﻿/****************************** Ghost.github.io ******************************\
+*	Module Name:	AssemblyInfo.cs
+*	Project:		Hesabdari_TG_N1_V1
+*	Copyright (C) 2018 Kamal Khayati, All rights reserved.
+*	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
+*
+*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2018 / 12 / 13   03:21 ق.ظ
+*	
+***********************************************************************************/
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
@@ -28,5 +37,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.1")]
+[assembly: AssemblyFileVersion("1.0.0.1")]
