@@ -14,13 +14,17 @@ namespace Hesabdari_TG_N1_V1.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-
+    using System.Windows.Forms;
 
     internal sealed class Configuration : DbMigrationsConfiguration<MyContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
+            ContextKey = "Hesabdari_TG_N1_V1.Models.MyContext";
+            string DataPath = Application.StartupPath + @"\DB";
+            AppDomain.CurrentDomain.SetData("DataDirectory", DataPath);
         }
 
         protected override void Seed(MyContext context)

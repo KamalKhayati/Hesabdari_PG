@@ -9,8 +9,10 @@
 ***********************************************************************************/
 namespace Hesabdari_TG_N1_V1.Models
 {
+    using Hesabdari_TG_N1_V1.Migrations;
     using System;
     using System.Data.Entity;
+    using System.Data.SqlClient;
     using System.Linq;
 
     public class MyContext : DbContext
@@ -24,6 +26,8 @@ namespace Hesabdari_TG_N1_V1.Models
         public MyContext()
             : base("name=MyContext")
         {
+            Database.SetInitializer<MyContext>(new MigrateDatabaseToLatestVersion<MyContext, Configuration>());
+            SqlConnection.ClearAllPools();
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 

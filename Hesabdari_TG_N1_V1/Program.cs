@@ -13,6 +13,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
+using Hesabdari_TG_N1_V1.Models;
 using Hesabdari_TG_N1_V1.Forms;
 
 namespace Hesabdari_TG_N1_V1
@@ -27,7 +28,24 @@ namespace Hesabdari_TG_N1_V1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            #region
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    if (!db.Database.Exists())
+                    {
+                        db.Database.Initialize(true);
+                    }
+                }
 
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            #endregion
             BonusSkins.Register();
             Application.Run(new FrmMain());
         }
