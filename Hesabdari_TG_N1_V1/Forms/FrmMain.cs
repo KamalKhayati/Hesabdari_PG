@@ -26,5 +26,15 @@ namespace Hesabdari_TG_N1_V1.Forms
         {
             InitializeComponent();
         }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
