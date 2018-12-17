@@ -17,23 +17,54 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.XtraTabbedMdi;
+using Hesabdari_TG_N1_V1.Forms.Base;
+using DevExpress.XtraBars.Docking2010.Views.NativeMdi;
+using DevExpress.XtraBars.Docking2010.Views.Tabbed;
+using DevExpress.XtraBars.InternalItems;
+using DevExpress.XtraBars.Docking2010;
+using DevExpress.XtraTab;
 
 namespace Hesabdari_TG_N1_V1.Forms
 {
     public partial class FrmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        //DocumentManager documentManager1;
+        XtraTabbedMdiManager xtraTabbedMdiManager1;
         public FrmMain()
         {
             InitializeComponent();
         }
 
-        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            // that will manage MDI child windows.
+            // xtraTabbedMdiManager1.MdiParent = this;
+            //documentManager1.MdiParent = this;
+            //documentManager1.View = new NativeMdiView();
+            ribbon.Minimized = true;
+            //documentManager1 = new DocumentManager();
+            xtraTabbedMdiManager1 = new XtraTabbedMdiManager();
+            xtraTabbedMdiManager1.MdiParent = this;
+        }
+
+        private void btnHesabGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            // Create an MDI child form.
+            FrmHesabGroup f = new FrmHesabGroup();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void btnHesabCol_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //documentManager1.MdiParent = this;
+            //documentManager1.View = new NativeMdiView();
+
+            // Create an MDI child form.
+            FrmHesabCol f = new FrmHesabCol();
+            //f.MdiParent = this;
+            f.Show();
 
         }
     }

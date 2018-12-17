@@ -64,6 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Base\FrmHesabCol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\FrmHesabCol.Designer.cs">
+      <DependentUpon>FrmHesabCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\FrmHesabGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\FrmHesabGroup.Designer.cs">
+      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,12 @@
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Base\FrmHesabCol.resx">
+      <DependentUpon>FrmHesabCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\FrmHesabGroup.resx">
+      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
