@@ -33,10 +33,7 @@ namespace Hesabdari_TG_N1_V1
             {
                 try
                 {
-                    if (!db.Database.Exists())
-                    {
                         db.Database.Initialize(true);
-                    }
                 }
 
                 catch (Exception ex)

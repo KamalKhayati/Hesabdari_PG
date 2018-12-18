@@ -74,7 +74,7 @@
             this.btnHesabTafzili = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupTafzili = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnListAnbars = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
@@ -152,20 +152,15 @@
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
-            this.dockManager2 = new DevExpress.XtraBars.Docking.DockManager(this.components);
-            this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            this.hideContainerRight.SuspendLayout();
             this.dockPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dockManager2)).BeginInit();
-            this.dockPanel2.SuspendLayout();
-            this.hideContainerRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -218,7 +213,7 @@
             this.btnHesabTafzili,
             this.btnGroupTafzili,
             this.barSubItem6,
-            this.barButtonItem19,
+            this.btnListAnbars,
             this.barButtonItem20,
             this.barButtonItem21,
             this.barButtonItem22,
@@ -579,14 +574,12 @@
             this.btnHesabGroup.Caption = "حسابهای گروه";
             this.btnHesabGroup.Id = 52;
             this.btnHesabGroup.Name = "btnHesabGroup";
-            this.btnHesabGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabGroup_ItemClick);
             // 
             // btnHesabCol
             // 
             this.btnHesabCol.Caption = "حسابهای کل";
             this.btnHesabCol.Id = 53;
             this.btnHesabCol.Name = "btnHesabCol";
-            this.btnHesabCol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabCol_ItemClick);
             // 
             // btnHesabMoeen
             // 
@@ -612,7 +605,7 @@
             this.barSubItem6.Id = 57;
             this.barSubItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem6.ImageOptions.Image")));
             this.barSubItem6.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnListAnbars),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem22),
@@ -620,11 +613,12 @@
             this.barSubItem6.Name = "barSubItem6";
             this.barSubItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem19
+            // btnListAnbars
             // 
-            this.barButtonItem19.Caption = "نام انبارها";
-            this.barButtonItem19.Id = 58;
-            this.barButtonItem19.Name = "barButtonItem19";
+            this.btnListAnbars.Caption = "لیست انبارها";
+            this.btnListAnbars.Id = 58;
+            this.btnListAnbars.Name = "btnListAnbars";
+            this.btnListAnbars.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAnbars_ItemClick);
             // 
             // barButtonItem20
             // 
@@ -1212,6 +1206,15 @@
             "DevExpress.XtraBars.TabFormControl",
             "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl"});
             // 
+            // hideContainerRight
+            // 
+            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.hideContainerRight.Controls.Add(this.dockPanel1);
+            this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.hideContainerRight.Location = new System.Drawing.Point(1452, 206);
+            this.hideContainerRight.Name = "hideContainerRight";
+            this.hideContainerRight.Size = new System.Drawing.Size(31, 391);
+            // 
             // dockPanel1
             // 
             this.dockPanel1.Appearance.Options.UseTextOptions = true;
@@ -1246,68 +1249,12 @@
             this.dockPanel1_Container.Size = new System.Drawing.Size(142, 354);
             this.dockPanel1_Container.TabIndex = 0;
             // 
-            // dockManager2
-            // 
-            this.dockManager2.Form = this;
-            this.dockManager2.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel2});
-            this.dockManager2.TopZIndexControls.AddRange(new string[] {
-            "DevExpress.XtraBars.BarDockControl",
-            "DevExpress.XtraBars.StandaloneBarDockControl",
-            "System.Windows.Forms.StatusBar",
-            "System.Windows.Forms.MenuStrip",
-            "System.Windows.Forms.StatusStrip",
-            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
-            "DevExpress.XtraBars.Ribbon.RibbonControl",
-            "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
-            "DevExpress.XtraBars.Navigation.TileNavPane",
-            "DevExpress.XtraBars.TabFormControl",
-            "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl"});
-            // 
-            // dockPanel2
-            // 
-            this.dockPanel2.Controls.Add(this.dockPanel2_Container);
-            this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Bottom;
-            this.dockPanel2.ID = new System.Guid("a58886cc-9be2-4a10-871b-29ed593b11f2");
-            this.dockPanel2.Location = new System.Drawing.Point(0, 560);
-            this.dockPanel2.Name = "dockPanel2";
-            this.dockPanel2.Options.AllowDockAsTabbedDocument = false;
-            this.dockPanel2.Options.AllowDockFill = false;
-            this.dockPanel2.Options.AllowDockRight = false;
-            this.dockPanel2.Options.AllowDockTop = false;
-            this.dockPanel2.Options.AllowFloating = false;
-            this.dockPanel2.Options.FloatOnDblClick = false;
-            this.dockPanel2.Options.ShowAutoHideButton = false;
-            this.dockPanel2.Options.ShowCloseButton = false;
-            this.dockPanel2.Options.ShowMaximizeButton = false;
-            this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 37);
-            this.dockPanel2.SavedSizeFactor = 0D;
-            this.dockPanel2.Size = new System.Drawing.Size(1483, 37);
-            this.dockPanel2.Text = "dockPanel2";
-            // 
-            // dockPanel2_Container
-            // 
-            this.dockPanel2_Container.Location = new System.Drawing.Point(4, 33);
-            this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(1475, 0);
-            this.dockPanel2_Container.TabIndex = 0;
-            // 
-            // hideContainerRight
-            // 
-            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.hideContainerRight.Controls.Add(this.dockPanel1);
-            this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1452, 206);
-            this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(31, 391);
-            // 
             // FrmMain
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1483, 638);
-            this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -1325,11 +1272,9 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            this.hideContainerRight.ResumeLayout(false);
             this.dockPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dockManager2)).EndInit();
-            this.dockPanel2.ResumeLayout(false);
-            this.hideContainerRight.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1410,7 +1355,7 @@
         private DevExpress.XtraBars.BarButtonItem btnHesabTafzili;
         private DevExpress.XtraBars.BarButtonItem btnGroupTafzili;
         private DevExpress.XtraBars.BarSubItem barSubItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+        private DevExpress.XtraBars.BarButtonItem btnListAnbars;
         private DevExpress.XtraBars.BarButtonItem barButtonItem20;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem21;
@@ -1462,9 +1407,6 @@
         private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel2;
-        private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
-        private DevExpress.XtraBars.Docking.DockManager dockManager2;
         private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerRight;
     }
 }

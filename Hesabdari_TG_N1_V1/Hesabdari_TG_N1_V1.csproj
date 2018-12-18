@@ -43,6 +43,9 @@
     <Reference Include="DevExpress.XtraBars.v18.2" />
     <Reference Include="DevExpress.Sparkline.v18.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -64,17 +67,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Base\FrmHesabCol.cs">
+    <Compile Include="Forms\Base\AnbarKala\FrmSaveAnbars.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Base\FrmHesabCol.Designer.cs">
-      <DependentUpon>FrmHesabCol.cs</DependentUpon>
+    <Compile Include="Forms\Base\AnbarKala\FrmSaveAnbars.Designer.cs">
+      <DependentUpon>FrmSaveAnbars.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Base\FrmHesabGroup.cs">
+    <Compile Include="Forms\Base\AnbarKala\FrmListAnbars.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Base\FrmHesabGroup.Designer.cs">
-      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
+    <Compile Include="Forms\Base\AnbarKala\FrmListAnbars.Designer.cs">
+      <DependentUpon>FrmListAnbars.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
@@ -82,15 +85,17 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpClass\HelpClass1.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Base\AnbarKala\BaseAnbar.cs" />
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Base\FrmHesabCol.resx">
-      <DependentUpon>FrmHesabCol.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Base\AnbarKala\FrmSaveAnbars.resx">
+      <DependentUpon>FrmSaveAnbars.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Base\FrmHesabGroup.resx">
-      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Base\AnbarKala\FrmListAnbars.resx">
+      <DependentUpon>FrmListAnbars.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -120,10 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\Anbar\" />
+    <Folder Include="Forms\Base\Hesabdari\" />
     <Folder Include="Forms\Factor\" />
     <Folder Include="Forms\Mali\" />
     <Folder Include="Forms\Sanad\" />
     <Folder Include="Models\Anbar\" />
+    <Folder Include="Models\Base\Hesabdari\" />
     <Folder Include="Models\Factor\" />
     <Folder Include="Models\Mali\" />
     <Folder Include="Models\Sanad\" />

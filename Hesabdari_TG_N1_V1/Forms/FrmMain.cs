@@ -24,6 +24,8 @@ using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 using DevExpress.XtraBars.InternalItems;
 using DevExpress.XtraBars.Docking2010;
 using DevExpress.XtraTab;
+using Hesabdari_TG_N1_V1.Forms.Base.AnbarKala;
+using Hesabdari_TG_N1_V1.HelpClass;
 
 namespace Hesabdari_TG_N1_V1.Forms
 {
@@ -42,30 +44,17 @@ namespace Hesabdari_TG_N1_V1.Forms
             // xtraTabbedMdiManager1.MdiParent = this;
             //documentManager1.MdiParent = this;
             //documentManager1.View = new NativeMdiView();
-            ribbon.Minimized = true;
             //documentManager1 = new DocumentManager();
+            ribbon.Minimized = true;
             xtraTabbedMdiManager1 = new XtraTabbedMdiManager();
             xtraTabbedMdiManager1.MdiParent = this;
         }
 
-        private void btnHesabGroup_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnListAnbars_ItemClick(object sender, ItemClickEventArgs e)
         {
-            // Create an MDI child form.
-            FrmHesabGroup f = new FrmHesabGroup();
-            f.MdiParent = this;
-            f.Show();
-        }
-
-        private void btnHesabCol_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //documentManager1.MdiParent = this;
-            //documentManager1.View = new NativeMdiView();
-
-            // Create an MDI child form.
-            FrmHesabCol f = new FrmHesabCol();
-            //f.MdiParent = this;
-            f.Show();
-
+            FrmListAnbars fm = new FrmListAnbars();
+            fm.MdiParent = this;
+            HelpClass1.ActiveForm(fm);
         }
     }
 }
