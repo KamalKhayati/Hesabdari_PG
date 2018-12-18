@@ -31,8 +31,8 @@ namespace Hesabdari_TG_N1_V1.Forms
 {
     public partial class FrmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        //DocumentManager documentManager1;
-        XtraTabbedMdiManager xtraTabbedMdiManager1;
+        DocumentManager documentManager1;
+        //XtraTabbedMdiManager xtraTabbedMdiManager1;
         public FrmMain()
         {
             InitializeComponent();
@@ -46,15 +46,20 @@ namespace Hesabdari_TG_N1_V1.Forms
             //documentManager1.View = new NativeMdiView();
             //documentManager1 = new DocumentManager();
             ribbon.Minimized = true;
-            xtraTabbedMdiManager1 = new XtraTabbedMdiManager();
-            xtraTabbedMdiManager1.MdiParent = this;
+            //xtraTabbedMdiManager1 = new XtraTabbedMdiManager();
+            //xtraTabbedMdiManager1.MdiParent = this;     
+            documentManager1 = new DocumentManager();
+            documentManager1.MdiParent = this;
+            documentManager1.View = new TabbedView();
+
+
         }
 
         private void btnListAnbars_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmListAnbars fm = new FrmListAnbars();
             fm.MdiParent = this;
-            HelpClass1.ActiveForm(fm);
+            HelpClass1.FormActive(fm);
         }
     }
 }

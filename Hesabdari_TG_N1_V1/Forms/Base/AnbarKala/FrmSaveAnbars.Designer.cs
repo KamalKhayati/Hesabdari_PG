@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSaveAnbars));
-            this.codeAnbar = new DevExpress.XtraEditors.TextEdit();
-            this.NameAnbar = new DevExpress.XtraEditors.TextEdit();
+            this.txtcodeAnbar = new DevExpress.XtraEditors.TextEdit();
+            this.txtNameAnbar = new DevExpress.XtraEditors.TextEdit();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.codeAnbar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameAnbar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            this.chkIsActive = new DevExpress.XtraEditors.CheckEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcodeAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // codeAnbar
+            // txtcodeAnbar
             // 
-            this.codeAnbar.Location = new System.Drawing.Point(279, 12);
-            this.codeAnbar.Name = "codeAnbar";
-            this.codeAnbar.Properties.Mask.EditMask = "f0";
-            this.codeAnbar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.codeAnbar.Properties.MaxLength = 3;
-            this.codeAnbar.Size = new System.Drawing.Size(150, 32);
-            this.codeAnbar.TabIndex = 0;
+            this.txtcodeAnbar.Location = new System.Drawing.Point(279, 12);
+            this.txtcodeAnbar.Name = "txtcodeAnbar";
+            this.txtcodeAnbar.Properties.Mask.EditMask = "f0";
+            this.txtcodeAnbar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtcodeAnbar.Properties.MaxLength = 3;
+            this.txtcodeAnbar.Size = new System.Drawing.Size(150, 32);
+            this.txtcodeAnbar.TabIndex = 0;
             // 
-            // NameAnbar
+            // txtNameAnbar
             // 
-            this.NameAnbar.Location = new System.Drawing.Point(12, 59);
-            this.NameAnbar.Name = "NameAnbar";
-            this.NameAnbar.Properties.MaxLength = 100;
-            this.NameAnbar.Size = new System.Drawing.Size(417, 32);
-            this.NameAnbar.TabIndex = 1;
+            this.txtNameAnbar.Location = new System.Drawing.Point(12, 59);
+            this.txtNameAnbar.Name = "txtNameAnbar";
+            this.txtNameAnbar.Properties.MaxLength = 100;
+            this.txtNameAnbar.Size = new System.Drawing.Size(417, 32);
+            this.txtNameAnbar.TabIndex = 1;
             // 
             // btnSave
             // 
@@ -67,6 +67,7 @@
             this.btnSave.Size = new System.Drawing.Size(150, 40);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "ذخیره";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -76,6 +77,7 @@
             this.btnClose.Size = new System.Drawing.Size(143, 40);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "بستن ";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // labelControl1
             // 
@@ -93,29 +95,29 @@
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "نام انبار";
             // 
-            // checkEdit1
+            // chkIsActive
             // 
-            this.checkEdit1.EditValue = true;
-            this.checkEdit1.Location = new System.Drawing.Point(12, 8);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.checkEdit1.Properties.Caption = "انبار فعال باشد؟  ";
-            this.checkEdit1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkEdit1.Size = new System.Drawing.Size(129, 33);
-            this.checkEdit1.TabIndex = 2;
+            this.chkIsActive.EditValue = true;
+            this.chkIsActive.Location = new System.Drawing.Point(12, 8);
+            this.chkIsActive.Name = "chkIsActive";
+            this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.chkIsActive.Properties.Caption = "انبار فعال باشد؟  ";
+            this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkIsActive.Size = new System.Drawing.Size(129, 33);
+            this.chkIsActive.TabIndex = 2;
             // 
             // FrmSaveAnbars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 158);
-            this.Controls.Add(this.checkEdit1);
+            this.Controls.Add(this.chkIsActive);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.NameAnbar);
-            this.Controls.Add(this.codeAnbar);
+            this.Controls.Add(this.txtNameAnbar);
+            this.Controls.Add(this.txtcodeAnbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -123,22 +125,22 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.codeAnbar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NameAnbar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            this.Load += new System.EventHandler(this.FrmSaveAnbars_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txtcodeAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.TextEdit codeAnbar;
-        private DevExpress.XtraEditors.TextEdit NameAnbar;
         public DevExpress.XtraEditors.SimpleButton btnSave;
         public DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        public DevExpress.XtraEditors.TextEdit txtcodeAnbar;
+        public DevExpress.XtraEditors.TextEdit txtNameAnbar;
+        public DevExpress.XtraEditors.CheckEdit chkIsActive;
     }
 }

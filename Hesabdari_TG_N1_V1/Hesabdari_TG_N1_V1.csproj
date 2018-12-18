@@ -87,7 +87,7 @@
     </Compile>
     <Compile Include="HelpClass\HelpClass1.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Base\AnbarKala\BaseAnbar.cs" />
+    <Compile Include="Models\Base\AnbarKala\BSAnbar.cs" />
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
