@@ -85,6 +85,12 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListMojtamaha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListMojtamaha.Designer.cs">
+      <DependentUpon>FrmListMojtamaha.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpClass\HelpClass1.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Base\AnbarKala\BSAnbar.cs" />
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmListMojtamaha.resx">
+      <DependentUpon>FrmListMojtamaha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -128,6 +137,8 @@
     <Folder Include="Forms\Base\Hesabdari\" />
     <Folder Include="Forms\Factor\" />
     <Folder Include="Forms\Mali\" />
+    <Folder Include="Forms\ModirSystem\KarbaranSystem\" />
+    <Folder Include="Forms\ModirSystem\SalMali\" />
     <Folder Include="Forms\Sanad\" />
     <Folder Include="Models\Anbar\" />
     <Folder Include="Models\Base\Hesabdari\" />

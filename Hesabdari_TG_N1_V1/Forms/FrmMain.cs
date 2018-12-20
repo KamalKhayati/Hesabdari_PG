@@ -26,6 +26,7 @@ using DevExpress.XtraBars.Docking2010;
 using DevExpress.XtraTab;
 using Hesabdari_TG_N1_V1.Forms.Base.AnbarKala;
 using Hesabdari_TG_N1_V1.HelpClass;
+using Hesabdari_TG_N1_V1.Forms.ModirSystem.DafaterMali;
 
 namespace Hesabdari_TG_N1_V1.Forms
 {
@@ -60,6 +61,14 @@ namespace Hesabdari_TG_N1_V1.Forms
             FrmListAnbars fm = new FrmListAnbars();
             fm.MdiParent = this;
             HelpClass1.FormActive(fm);
+        }
+
+        private void btnListMojtamaha_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmListMojtamaha fm = new FrmListMojtamaha();
+            fm.MdiParent = this;
+            HelpClass1.FormActive(fm);
+
         }
     }
 }

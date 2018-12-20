@@ -17,11 +17,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using DevExpress.XtraGrid;
+using System.Drawing;
 
 namespace Hesabdari_TG_N1_V1.HelpClass
 {
     public class HelpClass1
     {
+        /// <summary>
+        /// جلوگیری از باز شدن فرمها بیش از یک بار
+        /// </summary>
+        /// <param name="form"></param>
         public static void FormActive(XtraForm form)
         {
             if (Application.OpenForms[form.Name] == null)
@@ -34,6 +40,11 @@ namespace Hesabdari_TG_N1_V1.HelpClass
             }
 
         }
+        /// <summary>
+        /// تنظیم شماره بندی ردیفهای گرید ویو در ستون آنباند
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public static void SetNumberRowsColumnUnboundGirdView(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
             GridView view = sender as GridView;
@@ -69,12 +80,11 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         #endregion
 
         #region //اضافه کردن رکورد جدید به دیتاگرید ویو
-
         //private void gridView1_InitNewRow(object sender, InitNewRowEventArgs e)
         //{
-        //    gridView1.SetRowCellValue(e.RowHandle, gridView1.Columns[1], "105");
-        //    gridView1.SetRowCellValue(e.RowHandle, gridView1.Columns[2], "ارومیه");
-        //    gridView1.SetRowCellValue(e.RowHandle, gridView1.Columns[3], true);
+        //    gridView1.SetRowCellValue(e.RowHandle, "Code", "105");
+        //    gridView1.SetRowCellValue(e.RowHandle, "Name", "ارومیه");
+        //    gridView1.SetRowCellValue(e.RowHandle, IsActive, true);
         //}
 
         //
@@ -90,7 +100,56 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         //    gridView1.DeleteRow(gridView1.FocusedRowHandle);
         //}
         #endregion
+
+        /// <summary>
+        /// پیش نمایش چاپ گرید ویو
+        /// </summary>
+        /// <param name="gridControl1"></param>
+        /// <param name="gridView1"></param>
+        public static void ShowGridPreview(GridControl gridControl1, GridView gridView1)
+        {
+            // Check whether the GridControl can be previewed.
+            if (!gridControl1.IsPrintingAvailable)
+            {
+                MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
+                return;
+            }
+            // Open the Preview window.
+            gridView1.ShowPrintPreview();
+        }
+
+        /// <summary>
+        /// چاپ گرید ویو
+        /// </summary>
+        /// <param name="gridControl1"></param>
+        /// <param name="gridView1"></param>
+        public static void PrintGrid(GridControl gridControl1, GridView gridView1)
+        {
+            // Check whether the GridControl can be printed.
+            if (!gridControl1.IsPrintingAvailable)
+            {
+                MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
+                return;
+            }
+            // Print.
+            gridView1.Print();
+        }
+
+        /// <summary>
+        /// شماره بندی ردیف های اندیکاتور گرید ویو
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <param name="gridView1"></param>
+        public static void CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e, GridView gridView1)
+        {
+            gridView1.IndicatorWidth = 60;
+            // Handle this event to paint RowIndicator manually
+            GridView view = sender as GridView;
+            if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+            }
+        }
     }
-
-
 }
