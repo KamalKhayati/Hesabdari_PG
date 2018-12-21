@@ -58,14 +58,14 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void btnListAnbars_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmListAnbars fm = new FrmListAnbars();
+            FrmListAnbarha fm = new FrmListAnbarha();
             fm.MdiParent = this;
             HelpClass1.FormActive(fm);
         }
 
         private void btnListMojtamaha_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmListMojtamaha fm = new FrmListMojtamaha();
+            FrmListMajmoeha fm = new FrmListMajmoeha();
             fm.MdiParent = this;
             HelpClass1.FormActive(fm);
 

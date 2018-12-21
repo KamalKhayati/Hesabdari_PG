@@ -37,15 +37,39 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v18.2" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v18.2.Win, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v18.2" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.2.UI, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v18.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v18.2" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v18.2" />
     <Reference Include="DevExpress.Sparkline.v18.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Presets, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Win, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -67,17 +91,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Base\AnbarKala\FrmSaveAnbars.cs">
+    <Compile Include="Forms\Base\AnbarKala\FrmSedAnbarha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Base\AnbarKala\FrmSaveAnbars.Designer.cs">
-      <DependentUpon>FrmSaveAnbars.cs</DependentUpon>
+    <Compile Include="Forms\Base\AnbarKala\FrmSedAnbarha.Designer.cs">
+      <DependentUpon>FrmSedAnbarha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Base\AnbarKala\FrmListAnbars.cs">
+    <Compile Include="Forms\Base\AnbarKala\FrmListAnbarha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Base\AnbarKala\FrmListAnbars.Designer.cs">
-      <DependentUpon>FrmListAnbars.cs</DependentUpon>
+    <Compile Include="Forms\Base\AnbarKala\FrmListAnbarha.Designer.cs">
+      <DependentUpon>FrmListAnbarha.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
@@ -85,11 +109,53 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListMojtamaha.cs">
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListMajmoeha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListMojtamaha.Designer.cs">
-      <DependentUpon>FrmListMojtamaha.cs</DependentUpon>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListMajmoeha.Designer.cs">
+      <DependentUpon>FrmListMajmoeha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListSalMali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListSalMali.Designer.cs">
+      <DependentUpon>FrmListSalMali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListShoabat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListShoabat.Designer.cs">
+      <DependentUpon>FrmListShoabat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListVahedha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmListVahedha.Designer.cs">
+      <DependentUpon>FrmListVahedha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedMajmoeha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedMajmoeha.Designer.cs">
+      <DependentUpon>FrmSedMajmoeha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedSalMali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedSalMali.Designer.cs">
+      <DependentUpon>FrmSedSalMali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedShoabat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedShoabat.Designer.cs">
+      <DependentUpon>FrmSedShoabat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedVahedha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModirSystem\DafaterMali\FrmSedVahedha.Designer.cs">
+      <DependentUpon>FrmSedVahedha.cs</DependentUpon>
     </Compile>
     <Compile Include="HelpClass\HelpClass1.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -97,17 +163,38 @@
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Base\AnbarKala\FrmSaveAnbars.resx">
-      <DependentUpon>FrmSaveAnbars.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Base\AnbarKala\FrmSedAnbarha.resx">
+      <DependentUpon>FrmSedAnbarha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Base\AnbarKala\FrmListAnbars.resx">
-      <DependentUpon>FrmListAnbars.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Base\AnbarKala\FrmListAnbarha.resx">
+      <DependentUpon>FrmListAnbarha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmListMojtamaha.resx">
-      <DependentUpon>FrmListMojtamaha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmListMajmoeha.resx">
+      <DependentUpon>FrmListMajmoeha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmListSalMali.resx">
+      <DependentUpon>FrmListSalMali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmListShoabat.resx">
+      <DependentUpon>FrmListShoabat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmListVahedha.resx">
+      <DependentUpon>FrmListVahedha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmSedMajmoeha.resx">
+      <DependentUpon>FrmSedMajmoeha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmSedSalMali.resx">
+      <DependentUpon>FrmSedSalMali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmSedShoabat.resx">
+      <DependentUpon>FrmSedShoabat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModirSystem\DafaterMali\FrmSedVahedha.resx">
+      <DependentUpon>FrmSedVahedha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -144,6 +231,9 @@
     <Folder Include="Models\Base\Hesabdari\" />
     <Folder Include="Models\Factor\" />
     <Folder Include="Models\Mali\" />
+    <Folder Include="Models\ModirSystem\DafaterMali\" />
+    <Folder Include="Models\ModirSystem\KarbaranSystem\" />
+    <Folder Include="Models\ModirSystem\SalMali\" />
     <Folder Include="Models\Sanad\" />
   </ItemGroup>
   <ItemGroup>
