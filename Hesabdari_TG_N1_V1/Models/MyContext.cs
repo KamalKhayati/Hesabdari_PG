@@ -10,8 +10,10 @@
 namespace Hesabdari_TG_N1_V1.Models
 {
     using Hesabdari_TG_N1_V1.Migrations;
-    using Hesabdari_TG_N1_V1.Models.Base;
-    using Hesabdari_TG_N1_V1.Models.Base.AnbarKala;
+    using Hesabdari_TG_N1_V1.Models.AP;
+    using Hesabdari_TG_N1_V1.Models.AP.AnbarKala;
+    using Hesabdari_TG_N1_V1.Models.MS.DafaterMali;
+    using Hesabdari_TG_N1_V1.Models.MS.UsersSystem;
     using System;
     using System.Data.Entity;
     using System.Data.SqlClient;
@@ -35,7 +37,9 @@ namespace Hesabdari_TG_N1_V1.Models
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
-         public virtual DbSet<BSAnbar> BSAnbars { get; set; }
+        public virtual DbSet<ApAnbar> ApAnbars { get; set; }
+        public virtual DbSet<MsUser> MsUsers { get; set; }
+
     }
 
     //public class MyEntity

@@ -19,6 +19,8 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using DevExpress.XtraGrid;
 using System.Drawing;
+using Hesabdari_TG_N1_V1.Models.AP.AnbarKala;
+using Microsoft.Win32;
 
 namespace Hesabdari_TG_N1_V1.HelpClass
 {
@@ -40,6 +42,33 @@ namespace Hesabdari_TG_N1_V1.HelpClass
             }
 
         }
+        public static void FormSaveNewRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string txtName = "txtName", string panelControl2 = "panelControl2")
+        {
+            ChildForm.Text = "ثبت رکورد جدید";
+            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text="ثبت و بستن";
+            ChildForm.ShowDialog();
+        }
+
+        public static int EditRowIndex = 0;
+        public static void FormEditeCurrentRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string btnSaveNext = "btnSaveNext", string panelControl2 = "panelControl2")
+        {
+                EditRowIndex = gridView1.FocusedRowHandle;
+                ChildForm.Text = "ویرایش رکورد جاری";
+                ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "ویرایش و بستن";
+                ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
+                ChildForm.ShowDialog();
+        }
+
+        public static void FormDeleteCurrentRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string btnSaveNext = "btnSaveNext", string panelControl1 = "panelControl1", string panelControl2 = "panelControl2")
+        {
+                EditRowIndex = gridView1.FocusedRowHandle;
+                ChildForm.Text = "حذف رکورد جاری";
+                ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "حذف و بستن";
+                ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
+                ChildForm.Controls[panelControl1].Enabled = false;
+                ChildForm.ShowDialog();
+        }
+
         /// <summary>
         /// تنظیم شماره بندی ردیفهای گرید ویو در ستون آنباند
         /// </summary>
@@ -47,7 +76,7 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         /// <param name="e"></param>
         public static void SetNumberRowsColumnUnboundGirdView(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
-            GridView view = sender as GridView;
+            GridView view = (GridView)sender;
             if (view == null) return;
             int rowHandle = view.GetRowHandle(e.ListSourceRowIndex);
             //int visibleIndex = view.GetVisibleIndex(rowHandle);
@@ -108,14 +137,17 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         /// <param name="gridView1"></param>
         public static void ShowGridPreview(GridControl gridControl1, GridView gridView1)
         {
-            // Check whether the GridControl can be previewed.
-            if (!gridControl1.IsPrintingAvailable)
+            if (gridView1.SelectedRowsCount > 0)
             {
-                MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
-                return;
+                // Check whether the GridControl can be previewed.
+                if (!gridControl1.IsPrintingAvailable)
+                {
+                    MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
+                    return;
+                }
+                // Open the Preview window.
+                gridView1.ShowPrintPreview();
             }
-            // Open the Preview window.
-            gridView1.ShowPrintPreview();
         }
 
         /// <summary>
@@ -125,14 +157,18 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         /// <param name="gridView1"></param>
         public static void PrintGrid(GridControl gridControl1, GridView gridView1)
         {
-            // Check whether the GridControl can be printed.
-            if (!gridControl1.IsPrintingAvailable)
+            if (gridView1.SelectedRowsCount > 0)
             {
-                MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
-                return;
+
+                // Check whether the GridControl can be printed.
+                if (!gridControl1.IsPrintingAvailable)
+                {
+                    MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
+                    return;
+                }
+                // Print.
+                gridView1.Print();
             }
-            // Print.
-            gridView1.Print();
         }
 
         /// <summary>
@@ -151,5 +187,42 @@ namespace Hesabdari_TG_N1_V1.HelpClass
                 e.Info.DisplayText = (e.RowHandle + 1).ToString();
             }
         }
+
+        public static void EnterReplaceTab(KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SendKeys.Send("{tab}");
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        public static void SetPersianLanguage()
+        {
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(System.Globalization.CultureInfo.CreateSpecificCulture("fa-IR"));
+        }
+
+        public static void SetDateTimeFormat()
+        {
+            RegistryKey regkey = Registry.CurrentUser.OpenSubKey(@"Control Panel\International", true);
+            regkey.SetValue("sShortDate", "yyyy/MM/dd");
+            regkey.SetValue("sLongDate", "yyyy/MM/dd");
+        }
+
+        public void StartCalculater()
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+        public void StartWordPad()
+        {
+            System.Diagnostics.Process.Start("WordPad.exe");
+        }
+        public void StartNotePad()
+        {
+            System.Diagnostics.Process.Start("NotePad.exe");
+        }
+
+
     }
 }

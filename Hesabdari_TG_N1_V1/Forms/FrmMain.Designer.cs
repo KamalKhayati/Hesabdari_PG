@@ -716,6 +716,7 @@
             this.btnListKarbaran.Caption = "لیست کاربران";
             this.btnListKarbaran.Id = 82;
             this.btnListKarbaran.Name = "btnListKarbaran";
+            this.btnListKarbaran.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListKarbaran_ItemClick);
             // 
             // btnSatheDastrasi
             // 
