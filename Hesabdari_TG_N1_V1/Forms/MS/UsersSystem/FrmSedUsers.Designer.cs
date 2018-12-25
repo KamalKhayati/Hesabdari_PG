@@ -133,7 +133,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
             this.btnClose.Location = new System.Drawing.Point(5, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(143, 40);
@@ -143,7 +143,7 @@
             // 
             // btnSaveClose
             // 
-            this.btnSaveClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnSaveClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveClose.ImageOptions.Image")));
             this.btnSaveClose.Location = new System.Drawing.Point(154, 3);
             this.btnSaveClose.Name = "btnSaveClose";
             this.btnSaveClose.Size = new System.Drawing.Size(150, 40);
@@ -198,7 +198,7 @@
             // 
             // btnNewCode
             // 
-            this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode.ImageOptions.SvgImage")));
             this.btnNewCode.Location = new System.Drawing.Point(107, 6);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(100, 35);
@@ -209,8 +209,8 @@
             // 
             // btnSaveNext
             // 
-            this.btnSaveNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.btnSaveNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.btnSaveNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveNext.ImageOptions.Image")));
+            this.btnSaveNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveNext.ImageOptions.SvgImage")));
             this.btnSaveNext.Location = new System.Drawing.Point(341, 5);
             this.btnSaveNext.Name = "btnSaveNext";
             this.btnSaveNext.Size = new System.Drawing.Size(135, 38);

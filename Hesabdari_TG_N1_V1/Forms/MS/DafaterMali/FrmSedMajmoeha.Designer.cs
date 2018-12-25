@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSedMajmoeha));
-            this.txtcode = new DevExpress.XtraEditors.TextEdit();
+            this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.chkIsActive = new DevExpress.XtraEditors.CheckEdit();
@@ -38,33 +38,36 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.chkcmbMajavezKarbaran = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.btnCodeJadid = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSabtBadi = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSabtBastan = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.txtcode.Properties)).BeginInit();
+            this.chkcmbPermissiveUsers = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.btnNewCode = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSaveNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSaveClose = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkcmbMajavezKarbaran.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtcode
+            // txtCode
             // 
-            this.txtcode.Location = new System.Drawing.Point(346, 8);
-            this.txtcode.Name = "txtcode";
-            this.txtcode.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtcode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtcode.Properties.Mask.EditMask = "f0";
-            this.txtcode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtcode.Properties.MaxLength = 3;
-            this.txtcode.Properties.ReadOnly = true;
-            this.txtcode.Size = new System.Drawing.Size(133, 32);
-            this.txtcode.TabIndex = 0;
-            this.txtcode.TabStop = false;
-            this.txtcode.Visible = false;
+            this.txtCode.Location = new System.Drawing.Point(346, 8);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtCode.Properties.Mask.EditMask = "f0";
+            this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCode.Properties.MaxLength = 3;
+            this.txtCode.Properties.ReadOnly = true;
+            this.txtCode.Size = new System.Drawing.Size(133, 32);
+            this.txtCode.TabIndex = 0;
+            this.txtCode.TabStop = false;
+            this.txtCode.Visible = false;
             // 
             // txtName
             // 
@@ -77,7 +80,7 @@
             // btnClose
             // 
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(12, 150);
+            this.btnClose.Location = new System.Drawing.Point(6, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(138, 38);
             this.btnClose.TabIndex = 2;
@@ -125,9 +128,9 @@
             this.panelControl1.Controls.Add(this.txtName);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl3);
-            this.panelControl1.Controls.Add(this.chkcmbMajavezKarbaran);
-            this.panelControl1.Controls.Add(this.btnCodeJadid);
-            this.panelControl1.Controls.Add(this.txtcode);
+            this.panelControl1.Controls.Add(this.chkcmbPermissiveUsers);
+            this.panelControl1.Controls.Add(this.btnNewCode);
+            this.panelControl1.Controls.Add(this.txtCode);
             this.panelControl1.Controls.Add(this.chkIsActive);
             this.panelControl1.Controls.Add(this.txtId);
             this.panelControl1.Controls.Add(this.labelControl1);
@@ -154,56 +157,64 @@
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "کاربران مجاز به ثبت عملیات";
             // 
-            // chkcmbMajavezKarbaran
+            // chkcmbPermissiveUsers
             // 
-            this.chkcmbMajavezKarbaran.Location = new System.Drawing.Point(5, 46);
-            this.chkcmbMajavezKarbaran.Name = "chkcmbMajavezKarbaran";
-            this.chkcmbMajavezKarbaran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.chkcmbPermissiveUsers.Location = new System.Drawing.Point(5, 46);
+            this.chkcmbPermissiveUsers.Name = "chkcmbPermissiveUsers";
+            this.chkcmbPermissiveUsers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.chkcmbMajavezKarbaran.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkcmbMajavezKarbaran.Size = new System.Drawing.Size(474, 32);
-            this.chkcmbMajavezKarbaran.TabIndex = 1;
+            this.chkcmbPermissiveUsers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkcmbPermissiveUsers.Size = new System.Drawing.Size(474, 32);
+            this.chkcmbPermissiveUsers.TabIndex = 1;
             // 
-            // btnCodeJadid
+            // btnNewCode
             // 
-            this.btnCodeJadid.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCodeJadid.ImageOptions.SvgImage")));
-            this.btnCodeJadid.Location = new System.Drawing.Point(236, 5);
-            this.btnCodeJadid.Name = "btnCodeJadid";
-            this.btnCodeJadid.Size = new System.Drawing.Size(100, 35);
-            this.btnCodeJadid.TabIndex = 7;
-            this.btnCodeJadid.TabStop = false;
-            this.btnCodeJadid.Text = "کد جدید";
-            this.btnCodeJadid.Visible = false;
+            this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCodeJadid.ImageOptions.SvgImage")));
+            this.btnNewCode.Location = new System.Drawing.Point(236, 7);
+            this.btnNewCode.Name = "btnNewCode";
+            this.btnNewCode.Size = new System.Drawing.Size(100, 33);
+            this.btnNewCode.TabIndex = 7;
+            this.btnNewCode.TabStop = false;
+            this.btnNewCode.Text = "کد جدید";
+            this.btnNewCode.Visible = false;
             // 
-            // btnSabtBadi
+            // btnSaveNext
             // 
-            this.btnSabtBadi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSabtBadi.ImageOptions.Image")));
-            this.btnSabtBadi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSabtBadi.ImageOptions.SvgImage")));
-            this.btnSabtBadi.Location = new System.Drawing.Point(545, 152);
-            this.btnSabtBadi.Name = "btnSabtBadi";
-            this.btnSabtBadi.Size = new System.Drawing.Size(135, 38);
-            this.btnSabtBadi.TabIndex = 0;
-            this.btnSabtBadi.Text = "ثبت و بعدی";
-            this.btnSabtBadi.Click += new System.EventHandler(this.btnSabtBadi_Click);
+            this.btnSaveNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveNext.ImageOptions.Image")));
+            this.btnSaveNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveNext.ImageOptions.SvgImage")));
+            this.btnSaveNext.Location = new System.Drawing.Point(526, 5);
+            this.btnSaveNext.Name = "btnSaveNext";
+            this.btnSaveNext.Size = new System.Drawing.Size(135, 38);
+            this.btnSaveNext.TabIndex = 0;
+            this.btnSaveNext.Text = "ثبت و بعدی";
+            this.btnSaveNext.Click += new System.EventHandler(this.btnSabtBadi_Click);
             // 
-            // btnSabtBastan
+            // btnSaveClose
             // 
-            this.btnSabtBastan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSabtBastan.ImageOptions.Image")));
-            this.btnSabtBastan.Location = new System.Drawing.Point(157, 150);
-            this.btnSabtBastan.Name = "btnSabtBastan";
-            this.btnSabtBastan.Size = new System.Drawing.Size(135, 38);
-            this.btnSabtBastan.TabIndex = 1;
-            this.btnSabtBastan.Text = "ثبت و بستن";
-            this.btnSabtBastan.Click += new System.EventHandler(this.btnSabtBastan_Click);
+            this.btnSaveClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveClose.ImageOptions.Image")));
+            this.btnSaveClose.Location = new System.Drawing.Point(151, 5);
+            this.btnSaveClose.Name = "btnSaveClose";
+            this.btnSaveClose.Size = new System.Drawing.Size(135, 38);
+            this.btnSaveClose.TabIndex = 1;
+            this.btnSaveClose.Text = "ثبت و بستن";
+            this.btnSaveClose.Click += new System.EventHandler(this.btnSabtBastan_Click);
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.btnSaveClose);
+            this.panelControl2.Controls.Add(this.btnSaveNext);
+            this.panelControl2.Controls.Add(this.btnClose);
+            this.panelControl2.Location = new System.Drawing.Point(12, 150);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(666, 49);
+            this.panelControl2.TabIndex = 11;
             // 
             // FrmSedMajmoeha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 198);
-            this.Controls.Add(this.btnSabtBadi);
-            this.Controls.Add(this.btnSabtBastan);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(690, 208);
+            this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -213,32 +224,35 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ثبت مجتمع یا مجموعه های زنجیره ای";
-            ((System.ComponentModel.ISupportInitialize)(this.txtcode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chkcmbMajavezKarbaran.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public DevExpress.XtraEditors.TextEdit txtcode;
+        public DevExpress.XtraEditors.TextEdit txtCode;
         public DevExpress.XtraEditors.TextEdit txtName;
         public DevExpress.XtraEditors.SimpleButton btnClose;
         public DevExpress.XtraEditors.CheckEdit chkIsActive;
         public DevExpress.XtraEditors.TextEdit txtId;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnCodeJadid;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit chkcmbMajavezKarbaran;
-        public DevExpress.XtraEditors.SimpleButton btnSabtBadi;
-        public DevExpress.XtraEditors.SimpleButton btnSabtBastan;
+        private DevExpress.XtraEditors.SimpleButton btnNewCode;
+        public DevExpress.XtraEditors.SimpleButton btnSaveNext;
+        public DevExpress.XtraEditors.SimpleButton btnSaveClose;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        public DevExpress.XtraEditors.CheckedComboBoxEdit chkcmbPermissiveUsers;
     }
 }

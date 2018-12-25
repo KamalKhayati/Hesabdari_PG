@@ -22,9 +22,15 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
 {
     public partial class FrmSedMajmoeha : DevExpress.XtraEditors.XtraForm
     {
+        FrmListMajmoeha Fm;
         public FrmSedMajmoeha()
         {
             InitializeComponent();
+        }
+        public FrmSedMajmoeha(FrmListMajmoeha fm)
+        {
+            InitializeComponent();
+            Fm = fm;
         }
 
         private void btnSabtBastan_Click(object sender, EventArgs e)

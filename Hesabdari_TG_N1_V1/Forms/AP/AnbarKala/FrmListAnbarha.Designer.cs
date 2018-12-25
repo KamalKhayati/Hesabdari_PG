@@ -48,6 +48,8 @@
             this.btnDisplyListNotActive = new DevExpress.XtraBars.BarButtonItem();
             this.btnPreviewPrint = new DevExpress.XtraBars.BarButtonItem();
             this.btnPrintList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEmkanat = new DevExpress.XtraBars.BarSubItem();
+            this.btnAdvancedSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -91,6 +93,7 @@
             this.gridView1.IndicatorWidth = 25;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
             this.gridView1.OptionsMenu.ShowFooterItem = true;
             this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
@@ -101,6 +104,7 @@
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
+            this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // colApStorageId
@@ -193,8 +197,10 @@
             this.btnDisplyListActive,
             this.btnDisplyListNotActive,
             this.btnPreviewPrint,
-            this.btnPrintList});
-            this.barManager1.MaxItemId = 7;
+            this.btnPrintList,
+            this.btnEmkanat,
+            this.btnAdvancedSearch});
+            this.barManager1.MaxItemId = 9;
             this.barManager1.RightToLeft = DevExpress.Utils.DefaultBoolean.True;
             // 
             // bar1
@@ -211,7 +217,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyListActive, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyListNotActive, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPreviewPrint, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmkanat, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DisableClose = true;
             this.bar1.OptionsBar.DisableCustomization = true;
@@ -274,6 +281,23 @@
             this.btnPrintList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintList.ImageOptions.SvgImage")));
             this.btnPrintList.Name = "btnPrintList";
             this.btnPrintList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintList_ItemClick);
+            // 
+            // btnEmkanat
+            // 
+            this.btnEmkanat.Caption = "امکانات";
+            this.btnEmkanat.Id = 7;
+            this.btnEmkanat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmkanat.ImageOptions.SvgImage")));
+            this.btnEmkanat.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnAdvancedSearch, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.btnEmkanat.Name = "btnEmkanat";
+            // 
+            // btnAdvancedSearch
+            // 
+            this.btnAdvancedSearch.Caption = "جستجوی پیشرفته";
+            this.btnAdvancedSearch.Id = 8;
+            this.btnAdvancedSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.btnAdvancedSearch.Name = "btnAdvancedSearch";
+            this.btnAdvancedSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdvancedSearch_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -355,5 +379,7 @@
         private DevExpress.XtraBars.BarButtonItem btnPreviewPrint;
         private DevExpress.XtraBars.BarButtonItem btnPrintList;
         public DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraBars.BarSubItem btnEmkanat;
+        private DevExpress.XtraBars.BarButtonItem btnAdvancedSearch;
     }
 }

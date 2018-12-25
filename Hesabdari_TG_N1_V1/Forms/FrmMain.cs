@@ -28,6 +28,9 @@ using Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala;
 using Hesabdari_TG_N1_V1.HelpClass;
 using Hesabdari_TG_N1_V1.Forms.MS.DafaterMali;
 using Hesabdari_TG_N1_V1.Forms.MS.UsersSystem;
+using Microsoft.Win32;
+using Hesabdari_TG_N1_V1.Models;
+using System.Data.SqlClient;
 
 namespace Hesabdari_TG_N1_V1.Forms
 {
@@ -42,6 +45,7 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+
             HelpClass1.SetPersianLanguage();
             HelpClass1.SetDateTimeFormat();
             // that will manage MDI child windows.
@@ -61,7 +65,7 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         }
 
-        private void btnListAnbars_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnListAnbarha_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmListAnbarha fm = new FrmListAnbarha
             {
@@ -80,14 +84,18 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         }
 
-        private void btnListKarbaran_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnUsersList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmListUsers fm = new FrmListUsers
-            {
-                MdiParent = this
-            };
+            FrmListUsers fm = new FrmListUsers();
+                fm.MdiParent = this;
             HelpClass1.FormActive(fm);
 
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SqlConnection.ClearAllPools();
+            Dispose(true);
         }
     }
 }

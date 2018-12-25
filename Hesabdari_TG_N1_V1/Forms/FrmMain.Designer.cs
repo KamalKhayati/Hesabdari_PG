@@ -74,7 +74,7 @@
             this.btnHesabTafzili = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupTafzili = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
-            this.btnListAnbars = new DevExpress.XtraBars.BarButtonItem();
+            this.btnListAnbarha = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
@@ -87,7 +87,7 @@
             this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
-            this.btnListKarbaran = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUsersList = new DevExpress.XtraBars.BarButtonItem();
             this.btnSatheDastrasi = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaghirRamzObor = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
@@ -217,7 +217,7 @@
             this.btnHesabTafzili,
             this.btnGroupTafzili,
             this.barSubItem6,
-            this.btnListAnbars,
+            this.btnListAnbarha,
             this.barButtonItem20,
             this.barButtonItem21,
             this.barButtonItem22,
@@ -237,7 +237,7 @@
             this.btnGhateeKardanAsnad,
             this.btnAmaliatEbtedaDoreh,
             this.btnHazfeColiEtelaat,
-            this.btnListKarbaran,
+            this.btnUsersList,
             this.btnSatheDastrasi,
             this.btnTaghirRamzObor,
             this.barSubItem11,
@@ -613,7 +613,7 @@
             this.barSubItem6.Id = 57;
             this.barSubItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem6.ImageOptions.Image")));
             this.barSubItem6.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnListAnbars),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnListAnbarha),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem22),
@@ -621,12 +621,12 @@
             this.barSubItem6.Name = "barSubItem6";
             this.barSubItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btnListAnbars
+            // btnListAnbarha
             // 
-            this.btnListAnbars.Caption = "لیست انبارها";
-            this.btnListAnbars.Id = 58;
-            this.btnListAnbars.Name = "btnListAnbars";
-            this.btnListAnbars.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAnbars_ItemClick);
+            this.btnListAnbarha.Caption = "لیست انبارها";
+            this.btnListAnbarha.Id = 58;
+            this.btnListAnbarha.Name = "btnListAnbarha";
+            this.btnListAnbarha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAnbarha_ItemClick);
             // 
             // barButtonItem20
             // 
@@ -705,18 +705,18 @@
             this.barSubItem9.Id = 73;
             this.barSubItem9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem9.ImageOptions.SvgImage")));
             this.barSubItem9.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnListKarbaran),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnUsersList),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnSatheDastrasi),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTaghirRamzObor)});
             this.barSubItem9.Name = "barSubItem9";
             this.barSubItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btnListKarbaran
+            // btnUsersList
             // 
-            this.btnListKarbaran.Caption = "لیست کاربران";
-            this.btnListKarbaran.Id = 82;
-            this.btnListKarbaran.Name = "btnListKarbaran";
-            this.btnListKarbaran.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListKarbaran_ItemClick);
+            this.btnUsersList.Caption = "لیست کاربران";
+            this.btnUsersList.Id = 82;
+            this.btnUsersList.Name = "btnUsersList";
+            this.btnUsersList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUsersList_ItemClick);
             // 
             // btnSatheDastrasi
             // 
@@ -1308,6 +1308,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "نرم افزار حسابداری تلاشگران";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
@@ -1394,7 +1395,7 @@
         private DevExpress.XtraBars.BarButtonItem btnHesabTafzili;
         private DevExpress.XtraBars.BarButtonItem btnGroupTafzili;
         private DevExpress.XtraBars.BarSubItem barSubItem6;
-        private DevExpress.XtraBars.BarButtonItem btnListAnbars;
+        private DevExpress.XtraBars.BarButtonItem btnListAnbarha;
         private DevExpress.XtraBars.BarButtonItem barButtonItem20;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
         private DevExpress.XtraBars.BarButtonItem barButtonItem21;
@@ -1416,7 +1417,7 @@
         private DevExpress.XtraBars.BarButtonItem btnBastanHesabhaDaem;
         private DevExpress.XtraBars.BarButtonItem btnGhateeKardanAsnad;
         private DevExpress.XtraBars.BarButtonItem btnAmaliatEbtedaDoreh;
-        private DevExpress.XtraBars.BarButtonItem btnListKarbaran;
+        private DevExpress.XtraBars.BarButtonItem btnUsersList;
         private DevExpress.XtraBars.BarButtonItem btnSatheDastrasi;
         private DevExpress.XtraBars.BarButtonItem btnTaghirRamzObor;
         private DevExpress.XtraBars.BarButtonItem btnHazfeColiEtelaat;

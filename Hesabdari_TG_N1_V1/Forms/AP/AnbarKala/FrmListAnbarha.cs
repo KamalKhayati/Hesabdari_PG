@@ -101,8 +101,8 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             HelpClass.HelpClass1.FormSaveNewRecord(gridView1, fm);
 
         }
-        bool isActive;
-        private void btnDisplyListActive_ItemClick(object sender, ItemClickEventArgs e)
+        bool isActive = true;
+        public void btnDisplyListActive_ItemClick(object sender, ItemClickEventArgs e)
         {
             isActive = true;
             FillGridViewWhitInstantFeedbackSource();
@@ -127,7 +127,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             HelpClass.HelpClass1.ShowGridPreview(gridControl1, gridView1);
         }
 
-        private void btnDisplyListNotActive_ItemClick(object sender, ItemClickEventArgs e)
+        public void btnDisplyListNotActive_ItemClick(object sender, ItemClickEventArgs e)
         {
             isActive = false;
             FillGridViewWhitInstantFeedbackSource();
@@ -149,6 +149,21 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
 
         private void btnPrintList_ItemClick(object sender, ItemClickEventArgs e)
         {
+        }
+
+        private void btnAdvancedSearch_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            gridView1.OptionsFind.AlwaysVisible = gridView1.OptionsFind.AlwaysVisible ? false : true;
+
+        }
+
+        private void gridView1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnEdit_ItemClick(null, null);
+            }
+
         }
     }
 }

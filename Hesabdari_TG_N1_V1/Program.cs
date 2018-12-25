@@ -15,6 +15,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using Hesabdari_TG_N1_V1.Models;
 using Hesabdari_TG_N1_V1.Forms;
+using System.Threading;
 
 namespace Hesabdari_TG_N1_V1
 {
@@ -33,7 +34,7 @@ namespace Hesabdari_TG_N1_V1
             {
                 try
                 {
-                        db.Database.Initialize(true);
+                    db.Database.Initialize(true);
                 }
 
                 catch (Exception ex)
@@ -42,7 +43,23 @@ namespace Hesabdari_TG_N1_V1
                     MessageBox.Show(ex.Message);
                 }
             }
+
             #endregion
+            //var current = System.Threading.Thread.CurrentThread.CurrentCulture;
+            //var culture = System.Globalization.CultureInfo.CreateSpecificCulture(current.Name);
+            //culture.NumberFormat.DigitSubstitution = System.Globalization.DigitShapes.Context;
+            //System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = culture;
+
+            //System.Globalization.CultureInfo cinfo = (System.Globalization.CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
+            //Thread.CurrentThread.CurrentCulture.ClearCachedData();
+            //Application.CurrentCulture.ClearCachedData();
+            //cinfo.NumberFormat.DigitSubstitution = System.Globalization.DigitShapes.Context;
+            //Thread.CurrentThread.CurrentCulture = cinfo;
+            //Thread.CurrentThread.CurrentUICulture = cinfo;
+            //Application.CurrentCulture = cinfo;
+
+
             BonusSkins.Register();
             Application.Run(new FrmMain());
         }

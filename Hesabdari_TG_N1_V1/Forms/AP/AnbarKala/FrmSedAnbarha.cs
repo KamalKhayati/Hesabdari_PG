@@ -77,7 +77,10 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                             };
                             db.ApAnbars.Add(obj);
                             db.SaveChanges();
-                            Fm.FillGridViewWhitInstantFeedbackSource();
+                            if (chkIsActive.Checked)
+                                Fm.btnDisplyListActive_ItemClick(null, null);
+                            else
+                                Fm.btnDisplyListNotActive_ItemClick(null, null);
                             XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Fm.gridView1.MoveLast();
                             if (btnSaveClose_Clicked)
@@ -110,7 +113,10 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                                 q.IsActive = Convert.ToBoolean(chkIsActive.Checked);
 
                                 db.SaveChanges();
-                                Fm.FillGridViewWhitInstantFeedbackSource();
+                                if (chkIsActive.Checked)
+                                    Fm.btnDisplyListActive_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyListNotActive_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
                                 Fm.gridView1.FocusedRowHandle = HelpClass.HelpClass1.EditRowIndex;
@@ -140,7 +146,10 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
 
                                 db.ApAnbars.Remove(q);
                                 db.SaveChanges();
-                                Fm.FillGridViewWhitInstantFeedbackSource();
+                                if (chkIsActive.Checked)
+                                    Fm.btnDisplyListActive_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyListNotActive_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
                                 Fm.gridView1.FocusedRowHandle = HelpClass.HelpClass1.EditRowIndex - 1;

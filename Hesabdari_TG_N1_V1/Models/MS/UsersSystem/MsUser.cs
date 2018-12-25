@@ -7,6 +7,7 @@
 *	Written by Kamal Khayati <Kamal1355@gmail.com>,  2018 / 12 / 22   02:53 ق.ظ
 *	
 ***********************************************************************************/
+using Hesabdari_TG_N1_V1.Models.MS.DafaterMali;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -29,6 +30,8 @@ namespace Hesabdari_TG_N1_V1.Models.MS.UsersSystem
         public string Password { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        public virtual ICollection<RmsUserhaBmsMajmoeha> RmsUserhaBmsMajmoehas { get; set; }
+
 
     }
 }

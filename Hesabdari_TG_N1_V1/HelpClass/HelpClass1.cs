@@ -45,28 +45,28 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         public static void FormSaveNewRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string txtName = "txtName", string panelControl2 = "panelControl2")
         {
             ChildForm.Text = "ثبت رکورد جدید";
-            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text="ثبت و بستن";
+            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "ثبت و بستن";
             ChildForm.ShowDialog();
         }
 
         public static int EditRowIndex = 0;
         public static void FormEditeCurrentRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string btnSaveNext = "btnSaveNext", string panelControl2 = "panelControl2")
         {
-                EditRowIndex = gridView1.FocusedRowHandle;
-                ChildForm.Text = "ویرایش رکورد جاری";
-                ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "ویرایش و بستن";
-                ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
-                ChildForm.ShowDialog();
+            EditRowIndex = gridView1.FocusedRowHandle;
+            ChildForm.Text = "ویرایش رکورد جاری";
+            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "ویرایش و بستن";
+            ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
+            ChildForm.ShowDialog();
         }
 
         public static void FormDeleteCurrentRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string btnSaveNext = "btnSaveNext", string panelControl1 = "panelControl1", string panelControl2 = "panelControl2")
         {
-                EditRowIndex = gridView1.FocusedRowHandle;
-                ChildForm.Text = "حذف رکورد جاری";
-                ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "حذف و بستن";
-                ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
-                ChildForm.Controls[panelControl1].Enabled = false;
-                ChildForm.ShowDialog();
+            EditRowIndex = gridView1.FocusedRowHandle;
+            ChildForm.Text = "حذف رکورد جاری";
+            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "حذف و بستن";
+            ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
+            ChildForm.Controls[panelControl1].Enabled = false;
+            ChildForm.ShowDialog();
         }
 
         /// <summary>
@@ -206,8 +206,87 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         public static void SetDateTimeFormat()
         {
             RegistryKey regkey = Registry.CurrentUser.OpenSubKey(@"Control Panel\International", true);
-            regkey.SetValue("sShortDate", "yyyy/MM/dd");
+
+            ///Set Values
+            regkey.SetValue("iCalendarType", "1");
+            regkey.SetValue("iCountry", "981");
+            regkey.SetValue("iCurrDigits", "0");
+            regkey.SetValue("iCurrency", "0");
+            regkey.SetValue("iDate", "2");
+            regkey.SetValue("iDigits", "0");
+            regkey.SetValue("iFirstDayOfWeek", "5");
+            regkey.SetValue("iFirstWeekOfYear", "0");
+            regkey.SetValue("iLocale", "00000429");
+            regkey.SetValue("iLocaleName", "fa-IR");
+            regkey.SetValue("iLZero", "1");
+            regkey.SetValue("iMeasure", "0");
+            regkey.SetValue("iNegCurr", "3");
+            regkey.SetValue("iNegNumber", "3");
+            regkey.SetValue("iPaperSize", "9");
+            regkey.SetValue("iTime", "0");
+            regkey.SetValue("iTimePrefix", "0");
+            regkey.SetValue("iTLZero", "1");
+            regkey.SetValue("Locale", "00000429");
+            regkey.SetValue("LocaleName", "fa-IR");
+            regkey.SetValue("iNumShape", "0");
+            regkey.SetValue("s1159", "ق.ظ");
+            regkey.SetValue("s2359", "ب.ظ");
+            regkey.SetValue("sCountry", "Iran");
+            regkey.SetValue("sCurrency", " ");
+            regkey.SetValue("sDate", "/");
+            regkey.SetValue("sDecimal", "/");
+            regkey.SetValue("sGrouping", "3;0");
+            regkey.SetValue("sLanguage", "FAR");
+            regkey.SetValue("sList", ";");
             regkey.SetValue("sLongDate", "yyyy/MM/dd");
+            regkey.SetValue("sMonDecimalSep", "/");
+            regkey.SetValue("sMonGrouping", "3;0");
+            regkey.SetValue("sMonThousandSep", ",");
+            regkey.SetValue("sNativeDigits", "۰۱۲۳۴۵۶۷۸۹");
+            regkey.SetValue("sNegativeSign", "-");
+            regkey.SetValue("sPositiveSign", "");
+            regkey.SetValue("sShortDate", "yyyy/MM/dd");
+            regkey.SetValue("sShortTime", "hh:mm tt");
+            regkey.SetValue("sTime", ":");
+            regkey.SetValue("sTimeFormat", "hh:mm:ss tt");
+            regkey.SetValue("sYearMonth", "hh:mm:ss tt");
+            
+            //Close the Registry
+            regkey.Close();
+
+            /////////////////////////////////////////////////////////////////
+            //Get Data From Text Boxes
+
+            //string DateFormat = txtDateFormat.Text.Trim();
+
+            //string TimeFormat = txtTimeFormat.Text.Trim();
+
+            //string Currency = txtCurrency.Text.Trim();
+
+
+
+            //Registry Logic
+
+            //Open Sub key
+
+            //RegistryKey rkey = Registry.CurrentUser.OpenSubKey(@"Control Panel\International", true);
+
+
+
+            ///Set Values
+
+            //rkey.SetValue("sTimeFormat", TimeFormat);
+
+            //rkey.SetValue("sShortDate", DateFormat);
+
+            //rkey.SetValue("sCurrency", Currency);
+
+
+
+            //Close the Registry
+
+            //rkey.Close();
+            /////////////////////////////////////////////////////////////
         }
 
         public void StartCalculater()

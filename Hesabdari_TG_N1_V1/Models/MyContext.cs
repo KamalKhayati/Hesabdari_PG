@@ -30,7 +30,8 @@ namespace Hesabdari_TG_N1_V1.Models
         public MyContext()
             : base("name=MyContext")
         {
-            Database.SetInitializer<MyContext>(new MigrateDatabaseToLatestVersion<MyContext, Configuration>());
+            Database.SetInitializer<MyContext>(new MigrateDatabaseToLatestVersion<MyContext, Configuration>(true));
+            //Database.SetInitializer<MyContext>(new DropCreateDatabaseIfModelChanges<MyContext>());
             SqlConnection.ClearAllPools();
         }
 
@@ -39,6 +40,8 @@ namespace Hesabdari_TG_N1_V1.Models
 
         public virtual DbSet<ApAnbar> ApAnbars { get; set; }
         public virtual DbSet<MsUser> MsUsers { get; set; }
+        public virtual DbSet<MsMajmoe> MsMajmoes { get; set; }
+        public virtual DbSet<RmsUserhaBmsMajmoeha> RmsUserhaBmsMajmoehas { get; set; }
 
     }
 

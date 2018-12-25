@@ -33,17 +33,18 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
-            this.btnSabt = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.btnDisplyListActive = new DevExpress.XtraBars.BarButtonItem();
             this.btnDisplyListNotActive = new DevExpress.XtraBars.BarButtonItem();
             this.btnPreviewPrint = new DevExpress.XtraBars.BarButtonItem();
             this.btnPrintList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEmkanat = new DevExpress.XtraBars.BarSubItem();
+            this.btnAdvancedSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.colLine = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -55,7 +56,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1015, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1125, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 449);
             // 
@@ -72,14 +73,16 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnSabt,
+            this.btnSave,
             this.btnEdit,
             this.btnDelete,
             this.btnDisplyListActive,
             this.btnDisplyListNotActive,
             this.btnPreviewPrint,
-            this.btnPrintList});
-            this.barManager1.MaxItemId = 7;
+            this.btnPrintList,
+            this.btnEmkanat,
+            this.btnAdvancedSearch});
+            this.barManager1.MaxItemId = 9;
             this.barManager1.RightToLeft = DevExpress.Utils.DefaultBoolean.True;
             // 
             // bar1
@@ -90,13 +93,14 @@
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSabt, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSave, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEdit, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDelete, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyListActive, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyListNotActive, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPreviewPrint, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmkanat, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DisableClose = true;
             this.bar1.OptionsBar.DisableCustomization = true;
@@ -104,13 +108,13 @@
             this.bar1.OptionsBar.UseWholeRow = true;
             this.bar1.Text = "Tools";
             // 
-            // btnSabt
+            // btnSave
             // 
-            this.btnSabt.Caption = "ثبت کردن";
-            this.btnSabt.Id = 0;
-            this.btnSabt.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSabt.ImageOptions.SvgImage")));
-            this.btnSabt.Name = "btnSabt";
-            this.btnSabt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSabt_ItemClick);
+            this.btnSave.Caption = "ثبت کردن";
+            this.btnSave.Id = 0;
+            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
+            this.btnSave.Name = "btnSave";
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // btnEdit
             // 
@@ -134,6 +138,7 @@
             this.btnDisplyListActive.Id = 3;
             this.btnDisplyListActive.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyListActive.ImageOptions.SvgImage")));
             this.btnDisplyListActive.Name = "btnDisplyListActive";
+            this.btnDisplyListActive.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyListActive_ItemClick);
             // 
             // btnDisplyListNotActive
             // 
@@ -141,6 +146,7 @@
             this.btnDisplyListNotActive.Id = 4;
             this.btnDisplyListNotActive.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyListNotActive.ImageOptions.SvgImage")));
             this.btnDisplyListNotActive.Name = "btnDisplyListNotActive";
+            this.btnDisplyListNotActive.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyListNotActive_ItemClick);
             // 
             // btnPreviewPrint
             // 
@@ -157,13 +163,29 @@
             this.btnPrintList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintList.ImageOptions.SvgImage")));
             this.btnPrintList.Name = "btnPrintList";
             // 
+            // btnEmkanat
+            // 
+            this.btnEmkanat.Caption = "امکانات";
+            this.btnEmkanat.Id = 7;
+            this.btnEmkanat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmkanat.ImageOptions.SvgImage")));
+            this.btnEmkanat.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAdvancedSearch)});
+            this.btnEmkanat.Name = "btnEmkanat";
+            // 
+            // btnAdvancedSearch
+            // 
+            this.btnAdvancedSearch.Caption = "جستجوی پیشرفته";
+            this.btnAdvancedSearch.Id = 8;
+            this.btnAdvancedSearch.Name = "btnAdvancedSearch";
+            this.btnAdvancedSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdvancedSearch_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1015, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1125, 60);
             // 
             // barDockControlBottom
             // 
@@ -171,7 +193,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 509);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1015, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1125, 0);
             // 
             // barDockControlLeft
             // 
@@ -180,19 +202,6 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 449);
-            // 
-            // colLine
-            // 
-            this.colLine.AppearanceCell.Options.UseTextOptions = true;
-            this.colLine.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLine.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLine.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLine.Caption = "ردیف";
-            this.colLine.FieldName = "Line";
-            this.colLine.Name = "colLine";
-            this.colLine.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
-            this.colLine.Visible = true;
-            this.colLine.VisibleIndex = 0;
             // 
             // gridView1
             // 
@@ -204,13 +213,12 @@
             this.gridView1.Appearance.VertLine.BackColor2 = System.Drawing.Color.Yellow;
             this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
             this.gridView1.Appearance.VertLine.Options.UseBorderColor = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colLine});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
             this.gridView1.OptionsMenu.ShowFooterItem = true;
             this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
@@ -220,6 +228,8 @@
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // gridControl1
             // 
@@ -228,7 +238,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1015, 449);
+            this.gridControl1.Size = new System.Drawing.Size(1125, 449);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -238,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1015, 509);
+            this.ClientSize = new System.Drawing.Size(1125, 509);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -262,7 +272,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.BarButtonItem btnSabt;
+        private DevExpress.XtraBars.BarButtonItem btnSave;
         private DevExpress.XtraBars.BarButtonItem btnEdit;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraBars.BarButtonItem btnDisplyListActive;
@@ -274,6 +284,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraGrid.GridControl gridControl1;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colLine;
+        private DevExpress.XtraBars.BarSubItem btnEmkanat;
+        private DevExpress.XtraBars.BarButtonItem btnAdvancedSearch;
     }
 }

@@ -17,6 +17,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraBars;
 
 namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
 {
@@ -29,40 +30,74 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
 
         private void FrmListMojtamaha_Load(object sender, EventArgs e)
         {
-            bar1.OptionsBar.DisableCustomization = true;
         }
 
-        private void btnSabt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmSedMajmoeha fm = new FrmSedMajmoeha();
-            fm.Text = "ثبت نام مجتمع یا مجموعه زنجیره ای";
-            fm.ShowDialog();
+            FrmSedMajmoeha fm = new FrmSedMajmoeha(this);
+            HelpClass.HelpClass1.FormSaveNewRecord(gridView1, fm);
         }
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmSedMajmoeha fm = new FrmSedMajmoeha();
-            fm.Text = "ویرایش نام مجتمع یا مجموعه زنجیره ای";
-            fm.btnSabtBastan.Text = "ویرایش و بستن";
-            fm.btnSabtBadi.Visible = false;
-            fm.ShowDialog();
-
+            if (gridView1.SelectedRowsCount > 0 && btnEdit.Visibility == BarItemVisibility.Always)
+            {
+                FrmSedMajmoeha fm = new FrmSedMajmoeha(this);
+                fm.txtId.Text = gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString();
+                fm.txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
+                fm.txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                fm.chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                HelpClass.HelpClass1.FormEditeCurrentRecord(gridView1, fm);
+            }
         }
 
         private void btnDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmSedMajmoeha fm = new FrmSedMajmoeha();
-            fm.Text = "حذف نام مجتمع یا مجموعه زنجیره ای";
-            fm.btnSabtBastan.Text = "حذف و بستن";
-            fm.btnSabtBadi.Visible = false;
-            fm.panelControl1.Enabled = false;
-            fm.ShowDialog();
-
+            if (gridView1.SelectedRowsCount > 0)
+            {
+                FrmSedMajmoeha fm = new FrmSedMajmoeha(this);
+                fm.txtId.Text = gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString();
+                fm.txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
+                fm.txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                fm.chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                HelpClass.HelpClass1.FormDeleteCurrentRecord(gridView1, fm);
+            }
         }
 
         private void btnPreviewPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             HelpClass.HelpClass1.ShowGridPreview(gridControl1, gridView1);
+        }
+
+        private void btnAdvancedSearch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            gridView1.OptionsFind.AlwaysVisible = gridView1.OptionsFind.AlwaysVisible ? false : true;
+
+        }
+
+        private void btnDisplyListActive_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnDisplyListNotActive_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            btnEdit_ItemClick(null, null);
+
+        }
+
+        private void gridView1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnEdit_ItemClick(null, null);
+            }
+
         }
     }
 }
