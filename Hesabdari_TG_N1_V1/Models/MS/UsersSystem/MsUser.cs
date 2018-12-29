@@ -21,16 +21,17 @@ namespace Hesabdari_TG_N1_V1.Models.MS.UsersSystem
     {
         public int MsUserId { get; set; }
         [Required]
-        public int Code { get; set; }
-        [Required, MaxLength(50)]
-        public string Name { get; set; }
+        public int UserCode { get; set; }
         [Required, MaxLength(50)]
         public string UserName { get; set; }
         [Required, MaxLength(50)]
-        public string Password { get; set; }
+        public string UserNam { get; set; }
+        [Required, MaxLength(50)]
+        public string UserPassword { get; set; }
         [Required]
-        public bool IsActive { get; set; }
-        public virtual ICollection<RmsUserhaBmsMajmoeha> RmsUserhaBmsMajmoehas { get; set; }
+        public bool UserIsActive { get; set; }
+        public virtual ICollection<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
+        public virtual ICollection<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
 
 
     }

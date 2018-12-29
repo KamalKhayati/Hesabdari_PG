@@ -30,7 +30,7 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         /// جلوگیری از باز شدن فرمها بیش از یک بار
         /// </summary>
         /// <param name="form"></param>
-        public static void FormActive(XtraForm form)
+        public static void ActiveForm(XtraForm form)
         {
             if (Application.OpenForms[form.Name] == null)
             {
@@ -42,29 +42,29 @@ namespace Hesabdari_TG_N1_V1.HelpClass
             }
 
         }
-        public static void FormSaveNewRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string txtName = "txtName", string panelControl2 = "panelControl2")
+        public static void FormNewRecordCreate(XtraForm ChildForm, string btnCreateClose = "btnCreateClose", string txtName = "txtName", string panelControl2 = "panelControl2")
         {
-            ChildForm.Text = "ثبت رکورد جدید";
-            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "ثبت و بستن";
+            ChildForm.Text = "ایجاد رکورد جدید";
+            ChildForm.Controls[panelControl2].Controls[btnCreateClose].Text = "ایجاد و بستن";
             ChildForm.ShowDialog();
         }
 
         public static int EditRowIndex = 0;
-        public static void FormEditeCurrentRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string btnSaveNext = "btnSaveNext", string panelControl2 = "panelControl2")
+        public static void FormCurrentRecordEdit(GridView gridView1, XtraForm ChildForm, string btnCreateClose = "btnCreateClose", string btnCreateNext = "btnCreateNext", string panelControl2 = "panelControl2")
         {
             EditRowIndex = gridView1.FocusedRowHandle;
             ChildForm.Text = "ویرایش رکورد جاری";
-            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "ویرایش و بستن";
-            ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
+            ChildForm.Controls[panelControl2].Controls[btnCreateClose].Text = "ویرایش و بستن";
+            ChildForm.Controls[panelControl2].Controls[btnCreateNext].Visible = false;
             ChildForm.ShowDialog();
         }
 
-        public static void FormDeleteCurrentRecord(GridView gridView1, XtraForm ChildForm, string btnSaveClose = "btnSaveClose", string btnSaveNext = "btnSaveNext", string panelControl1 = "panelControl1", string panelControl2 = "panelControl2")
+        public static void FormCurrentRecordDelete(GridView gridView1, XtraForm ChildForm, string btnCreateClose = "btnCreateClose", string btnCreateNext = "btnCreateNext", string panelControl1 = "panelControl1", string panelControl2 = "panelControl2")
         {
             EditRowIndex = gridView1.FocusedRowHandle;
             ChildForm.Text = "حذف رکورد جاری";
-            ChildForm.Controls[panelControl2].Controls[btnSaveClose].Text = "حذف و بستن";
-            ChildForm.Controls[panelControl2].Controls[btnSaveNext].Visible = false;
+            ChildForm.Controls[panelControl2].Controls[btnCreateClose].Text = "حذف و بستن";
+            ChildForm.Controls[panelControl2].Controls[btnCreateNext].Visible = false;
             ChildForm.Controls[panelControl1].Enabled = false;
             ChildForm.ShowDialog();
         }
@@ -135,7 +135,7 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         /// </summary>
         /// <param name="gridControl1"></param>
         /// <param name="gridView1"></param>
-        public static void ShowGridPreview(GridControl gridControl1, GridView gridView1)
+        public static void PrintPreview(GridControl gridControl1, GridView gridView1)
         {
             if (gridView1.SelectedRowsCount > 0)
             {
@@ -155,19 +155,19 @@ namespace Hesabdari_TG_N1_V1.HelpClass
         /// </summary>
         /// <param name="gridControl1"></param>
         /// <param name="gridView1"></param>
-        public static void PrintGrid(GridControl gridControl1, GridView gridView1)
+        public static void ListPrint(GridControl gridControl1, GridView gridView1)
         {
             if (gridView1.SelectedRowsCount > 0)
             {
 
-                // Check whether the GridControl can be printed.
-                if (!gridControl1.IsPrintingAvailable)
-                {
-                    MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
-                    return;
-                }
-                // Print.
-                gridView1.Print();
+                //// Check whether the GridControl can be printed.
+                //if (!gridControl1.IsPrintingAvailable)
+                //{
+                //    MessageBox.Show("کتابخانه XtraPrinting پیدا نشد", "خطا");
+                //    return;
+                //}
+                //// Print.
+                //gridView1.Print();
             }
         }
 
@@ -198,12 +198,12 @@ namespace Hesabdari_TG_N1_V1.HelpClass
             }
         }
 
-        public static void SetPersianLanguage()
+        public static void SwitchToPersianLanguage()
         {
             InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(System.Globalization.CultureInfo.CreateSpecificCulture("fa-IR"));
         }
 
-        public static void SetDateTimeFormat()
+        public static void SetRegionAndLanguage()
         {
             RegistryKey regkey = Registry.CurrentUser.OpenSubKey(@"Control Panel\International", true);
 
@@ -250,7 +250,7 @@ namespace Hesabdari_TG_N1_V1.HelpClass
             regkey.SetValue("sTime", ":");
             regkey.SetValue("sTimeFormat", "hh:mm:ss tt");
             regkey.SetValue("sYearMonth", "hh:mm:ss tt");
-            
+
             //Close the Registry
             regkey.Close();
 
@@ -289,19 +289,22 @@ namespace Hesabdari_TG_N1_V1.HelpClass
             /////////////////////////////////////////////////////////////
         }
 
-        public void StartCalculater()
+        public static void StartCalculater()
         {
             System.Diagnostics.Process.Start("Calc.exe");
         }
-        public void StartWordPad()
+        public static void StartWordPad()
         {
             System.Diagnostics.Process.Start("WordPad.exe");
         }
-        public void StartNotePad()
+        public static void StartNotePad()
         {
             System.Diagnostics.Process.Start("NotePad.exe");
         }
-
+        public static void TextBoxFormatDesign_000(TextEdit TextEdit)
+        {
+            TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("00#");
+        }
 
     }
 }

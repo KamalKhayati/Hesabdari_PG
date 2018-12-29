@@ -911,6 +911,7 @@
             this.btnListSherkatha.Caption = "لیست اسامی شرکتها یا واحدهای تجاری و خدماتی";
             this.btnListSherkatha.Id = 106;
             this.btnListSherkatha.Name = "btnListSherkatha";
+            this.btnListSherkatha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListSherkatha_ItemClick);
             // 
             // btnListShoabat
             // 

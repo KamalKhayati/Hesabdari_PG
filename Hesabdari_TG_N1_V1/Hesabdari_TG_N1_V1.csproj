@@ -91,17 +91,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AP\AnbarKala\FrmSedAnbarha.cs">
+    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaCed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AP\AnbarKala\FrmSedAnbarha.Designer.cs">
-      <DependentUpon>FrmSedAnbarha.cs</DependentUpon>
+    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaCed.Designer.cs">
+      <DependentUpon>FrmAnbarhaCed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AP\AnbarKala\FrmListAnbarha.cs">
+    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AP\AnbarKala\FrmListAnbarha.Designer.cs">
-      <DependentUpon>FrmListAnbarha.cs</DependentUpon>
+    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaList.Designer.cs">
+      <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
@@ -109,113 +109,120 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListMajmoeha.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListMajmoeha.Designer.cs">
-      <DependentUpon>FrmListMajmoeha.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaList.Designer.cs">
+      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListSalMali.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListSalMali.Designer.cs">
-      <DependentUpon>FrmListSalMali.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliList.Designer.cs">
+      <DependentUpon>FrmSalMaliList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListShoabat.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmShoabatList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListShoabat.Designer.cs">
-      <DependentUpon>FrmListShoabat.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmShoabatList.Designer.cs">
+      <DependentUpon>FrmShoabatList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListVahedha.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmListVahedha.Designer.cs">
-      <DependentUpon>FrmListVahedha.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaList.Designer.cs">
+      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedMajmoeha.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaCed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedMajmoeha.Designer.cs">
-      <DependentUpon>FrmSedMajmoeha.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaCed.Designer.cs">
+      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedSalMali.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliCed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedSalMali.Designer.cs">
-      <DependentUpon>FrmSedSalMali.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliCed.Designer.cs">
+      <DependentUpon>FrmSalMaliCed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedShoabat.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmShoabatCed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedShoabat.Designer.cs">
-      <DependentUpon>FrmSedShoabat.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmShoabatCed.Designer.cs">
+      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedVahedha.cs">
+    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaCed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSedVahedha.Designer.cs">
-      <DependentUpon>FrmSedVahedha.cs</DependentUpon>
+    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaCed.Designer.cs">
+      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmListUsers.cs">
+    <Compile Include="Forms\MS\UsersSystem\FrmUsersList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmListUsers.Designer.cs">
-      <DependentUpon>FrmListUsers.cs</DependentUpon>
+    <Compile Include="Forms\MS\UsersSystem\FrmUsersList.Designer.cs">
+      <DependentUpon>FrmUsersList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmSedUsers.cs">
+    <Compile Include="Forms\MS\UsersSystem\FrmUsersCed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmSedUsers.Designer.cs">
-      <DependentUpon>FrmSedUsers.cs</DependentUpon>
+    <Compile Include="Forms\MS\UsersSystem\FrmUsersCed.Designer.cs">
+      <DependentUpon>FrmUsersCed.cs</DependentUpon>
     </Compile>
     <Compile Include="HelpClass\HelpClass1.cs" />
     <Compile Include="HelpClass\HelpClass2.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AP\AnbarKala\ApAnbar.cs" />
     <Compile Include="Models\MS\DafaterMali\MsMajmoe.cs" />
+    <Compile Include="Models\MS\DafaterMali\MsVahed.cs" />
     <Compile Include="Models\MS\UsersSystem\MsUser.cs" />
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AP\AnbarKala\FrmSedAnbarha.resx">
-      <DependentUpon>FrmSedAnbarha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AP\AnbarKala\FrmAnbarhaCed.resx">
+      <DependentUpon>FrmAnbarhaCed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AP\AnbarKala\FrmListAnbarha.resx">
-      <DependentUpon>FrmListAnbarha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AP\AnbarKala\FrmAnbarhaList.resx">
+      <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmListMajmoeha.resx">
-      <DependentUpon>FrmListMajmoeha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmMajmoehaList.resx">
+      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmListSalMali.resx">
-      <DependentUpon>FrmListSalMali.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSalMaliList.resx">
+      <DependentUpon>FrmSalMaliList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmListShoabat.resx">
-      <DependentUpon>FrmListShoabat.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmShoabatList.resx">
+      <DependentUpon>FrmShoabatList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmListVahedha.resx">
-      <DependentUpon>FrmListVahedha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmVahedhaList.resx">
+      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSedMajmoeha.resx">
-      <DependentUpon>FrmSedMajmoeha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmMajmoehaCed.resx">
+      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSedSalMali.resx">
-      <DependentUpon>FrmSedSalMali.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSalMaliCed.resx">
+      <DependentUpon>FrmSalMaliCed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSedShoabat.resx">
-      <DependentUpon>FrmSedShoabat.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmShoabatCed.resx">
+      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSedVahedha.resx">
-      <DependentUpon>FrmSedVahedha.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmVahedhaCed.resx">
+      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\UsersSystem\FrmListUsers.resx">
-      <DependentUpon>FrmListUsers.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\UsersSystem\FrmUsersList.resx">
+      <DependentUpon>FrmUsersList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\UsersSystem\FrmSedUsers.resx">
-      <DependentUpon>FrmSedUsers.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MS\UsersSystem\FrmUsersCed.resx">
+      <DependentUpon>FrmUsersCed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -230,6 +237,7 @@
     </Compile>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Hesabdari_TG_N1_V1.Models.MS.UsersSystem.MsUser.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

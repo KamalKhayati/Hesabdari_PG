@@ -46,13 +46,10 @@ namespace Hesabdari_TG_N1_V1.Forms
         private void FrmMain_Load(object sender, EventArgs e)
         {
 
-            HelpClass1.SetPersianLanguage();
-            HelpClass1.SetDateTimeFormat();
+            HelpClass1.SwitchToPersianLanguage();
+            HelpClass1.SetRegionAndLanguage();
             // that will manage MDI child windows.
-            // xtraTabbedMdiManager1.MdiParent = this;
-            //documentManager1.MdiParent = this;
             //documentManager1.View = new NativeMdiView();
-            //documentManager1 = new DocumentManager();
             ribbon.Minimized = true;
             //xtraTabbedMdiManager1 = new XtraTabbedMdiManager();
             //xtraTabbedMdiManager1.MdiParent = this;     
@@ -67,28 +64,28 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void btnListAnbarha_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmListAnbarha fm = new FrmListAnbarha
+            FrmAnbarhaList fm = new FrmAnbarhaList
             {
                 MdiParent = this
             };
-            HelpClass1.FormActive(fm);
+            HelpClass1.ActiveForm(fm);
         }
 
         private void btnListMojtamaha_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmListMajmoeha fm = new FrmListMajmoeha
+            FrmMajmoehaList fm = new FrmMajmoehaList
             {
                 MdiParent = this
             };
-            HelpClass1.FormActive(fm);
+            HelpClass1.ActiveForm(fm);
 
         }
 
         private void btnUsersList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmListUsers fm = new FrmListUsers();
+            FrmUsersList fm = new FrmUsersList();
                 fm.MdiParent = this;
-            HelpClass1.FormActive(fm);
+            HelpClass1.ActiveForm(fm);
 
         }
 
@@ -96,6 +93,16 @@ namespace Hesabdari_TG_N1_V1.Forms
         {
             SqlConnection.ClearAllPools();
             Dispose(true);
+        }
+
+        private void btnListSherkatha_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmVahedhaList fm = new FrmVahedhaList
+            {
+                MdiParent = this
+            };
+            HelpClass1.ActiveForm(fm);
+
         }
     }
 }

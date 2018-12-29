@@ -20,10 +20,10 @@ namespace Hesabdari_TG_N1_V1.Models.AP.AnbarKala
     {
         public int ApAnbarId { get; set; }
         [Required]
-        public int Code { get; set; }
+        public int AnbarCode { get; set; }
         [Required, MaxLength(50)]
-        public string Name { get; set; }
+        public string AnbarName { get; set; }
         [Required]
-        public bool IsActive { get; set; }
+        public bool AnbarIsActive { get; set; }
     }
 }

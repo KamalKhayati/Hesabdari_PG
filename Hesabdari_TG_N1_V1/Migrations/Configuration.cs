@@ -38,7 +38,9 @@ namespace Hesabdari_TG_N1_V1.Migrations
             {
                 using (context = new MyContext())
                 {
-                    context.MsUsers.Add(new Models.MS.UsersSystem.MsUser() { Code = 101, Name = "مدیر سیستم", UserName = "1", Password = "1", IsActive = true });
+                    context.MsUsers.Add(new Models.MS.UsersSystem.MsUser() { UserCode = 101, UserName = "مدیر سیستم", UserNam = "1", UserPassword = "1", UserIsActive = true });
+                    context.MsUsers.Add(new Models.MS.UsersSystem.MsUser() { UserCode = 102, UserName = "کمال خیاطی", UserNam = "2", UserPassword = "2", UserIsActive = true });
+                    context.MsUsers.Add(new Models.MS.UsersSystem.MsUser() { UserCode = 103, UserName = "جمال خیاطی", UserNam = "3", UserPassword = "3", UserIsActive = false });
                     context.SaveChanges();
                 }
             }
