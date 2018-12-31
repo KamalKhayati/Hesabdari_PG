@@ -86,7 +86,8 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
                             {
                                 MajmoeCode = Convert.ToInt32(txtCode.Text),
                                 MajmoeName = txtName.Text,
-                                MajmoeIsActive = chkIsActive.Checked
+                                MajmoeIsActive = chkIsActive.Checked,
+                                PermissiveUsers=chkcmbPermissiveUsers.Text
                             };
                             db.MsMajmoes.Add(obj);
                             db.SaveChanges();
@@ -146,6 +147,7 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
                                 q.MajmoeCode = Convert.ToInt32(txtCode.Text);
                                 q.MajmoeName = txtName.Text;
                                 q.MajmoeIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                q.PermissiveUsers = chkcmbPermissiveUsers.Text;
 
                                 db.SaveChanges();
 
@@ -215,6 +217,8 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
                                 q.MajmoeCode = Convert.ToInt32(txtCode.Text);
                                 q.MajmoeName = txtName.Text;
                                 q.MajmoeIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                q.PermissiveUsers = chkcmbPermissiveUsers.Text;
+
                                 db.MsMajmoes.Remove(q);
                                 db.SaveChanges();
 

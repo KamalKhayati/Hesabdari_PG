@@ -32,6 +32,7 @@ namespace Hesabdari_TG_N1_V1.Models.MS.UsersSystem
         public bool UserIsActive { get; set; }
         public virtual ICollection<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
         public virtual ICollection<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
+        public virtual ICollection<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }
 
 
     }

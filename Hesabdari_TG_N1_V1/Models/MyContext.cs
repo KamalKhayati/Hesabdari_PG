@@ -59,6 +59,8 @@ namespace Hesabdari_TG_N1_V1.Models
         public virtual DbSet<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
         public virtual DbSet<MsVahed> MsVaheds { get; set; }
         public virtual DbSet<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
+        public virtual DbSet<MsShobe> MsShobes { get; set; }
+        public virtual DbSet<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }
 
 
 

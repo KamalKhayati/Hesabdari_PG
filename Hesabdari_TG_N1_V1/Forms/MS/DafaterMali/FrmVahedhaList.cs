@@ -18,6 +18,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Views.Grid;
+using Hesabdari_TG_N1_V1.Models;
 
 namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
 {
@@ -68,7 +70,6 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
         {
             isActive = true;
             FillGridViewWhitInstantFeedbackSource();
-
         }
 
         public void btnDisplyNotActiveList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -130,8 +131,11 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
         private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
             HelpClass.HelpClass1.SetNumberRowsColumnUnboundGirdView(sender, e);
-
         }
 
+        private void btnListPrint_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

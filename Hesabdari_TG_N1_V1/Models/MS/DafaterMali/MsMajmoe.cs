@@ -28,6 +28,7 @@ namespace Hesabdari_TG_N1_V1.Models.MS.DafaterMali
         public string MajmoeName { get; set; }
         [Required]
         public bool MajmoeIsActive { get; set; }
+        public string PermissiveUsers { get; set; }
         public virtual ICollection<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
         public virtual ICollection<MsVahed> MsVaheds { get; set; }
 

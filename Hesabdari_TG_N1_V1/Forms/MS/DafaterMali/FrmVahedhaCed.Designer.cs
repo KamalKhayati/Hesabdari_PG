@@ -41,14 +41,14 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.cmbMajmoehaList = new DevExpress.XtraEditors.LookUpEdit();
+            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chkcmbPermissiveUsers = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.msUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNewCode = new DevExpress.XtraEditors.SimpleButton();
             this.txtMajmoeCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.btnCreateNext = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.msUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
@@ -56,12 +56,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMajmoehaList.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMajmoeCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCode
@@ -200,6 +200,10 @@
             this.cmbMajmoehaList.EditValueChanged += new System.EventHandler(this.cmbListMajmoeha_EditValueChanged);
             this.cmbMajmoehaList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
+            // msMajmoesBindingSource
+            // 
+            this.msMajmoesBindingSource.DataSource = typeof(Hesabdari_TG_N1_V1.Models.MS.DafaterMali.MsMajmoe);
+            // 
             // chkcmbPermissiveUsers
             // 
             this.chkcmbPermissiveUsers.EditValue = "";
@@ -214,6 +218,10 @@
             this.chkcmbPermissiveUsers.Size = new System.Drawing.Size(483, 32);
             this.chkcmbPermissiveUsers.TabIndex = 2;
             this.chkcmbPermissiveUsers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            // 
+            // msUsersBindingSource
+            // 
+            this.msUsersBindingSource.DataSource = typeof(Hesabdari_TG_N1_V1.Models.MS.UsersSystem.MsUser);
             // 
             // btnNewCode
             // 
@@ -239,7 +247,6 @@
             this.txtMajmoeCode.Size = new System.Drawing.Size(115, 32);
             this.txtMajmoeCode.TabIndex = 5;
             this.txtMajmoeCode.TabStop = false;
-            this.txtMajmoeCode.Leave += new System.EventHandler(this.txtMajmoeCode_Leave);
             // 
             // labelControl4
             // 
@@ -270,14 +277,6 @@
             this.panelControl2.Size = new System.Drawing.Size(673, 48);
             this.panelControl2.TabIndex = 14;
             // 
-            // msMajmoesBindingSource
-            // 
-            this.msMajmoesBindingSource.DataSource = typeof(Hesabdari_TG_N1_V1.Models.MS.DafaterMali.MsMajmoe);
-            // 
-            // msUsersBindingSource
-            // 
-            this.msUsersBindingSource.DataSource = typeof(Hesabdari_TG_N1_V1.Models.MS.UsersSystem.MsUser);
-            // 
             // FrmVahedhaCed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -302,12 +301,12 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMajmoehaList.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMajmoeCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

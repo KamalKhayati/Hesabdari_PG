@@ -90,6 +90,37 @@ namespace Hesabdari_TG_N1_V1.HelpClass
 
         }
 
+        public void AddPermissiveUsersNameToColumnUnboundGirdView()
+        {
+            //for (int i = 0; i < gridView1.RowCount; i++)
+            //{
+
+            //    using (var db = new MyContext())
+            //    {
+            //        try
+            //        {
+            //            int Id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
+            //            var q = db.RmsVahedhaBmsUserhas.Where(s => s.MsVahedId == Id).Select(s => s.UserName).ToList();
+            //            if (q.Count > 0)
+            //            {
+            //                string a = "";
+            //                foreach (var item in q)
+            //                {
+            //                    a += item + ",";
+
+            //                }
+            //                gridView1.SetRowCellValue(i, "PermissiveUsersName", a);
+            //            }
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+            //                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+            //}
+        }
+
         #region // متد ایجاد کد جدید به فرم بصورت اتومات
         //using (var db = new MyContext())
         //{

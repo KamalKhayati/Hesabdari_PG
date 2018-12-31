@@ -118,11 +118,11 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
                 {
                     try
                     {
-                            int cmbMajmoeListId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                        var q = db.MsVaheds.Where(s => s.MsMajmoeId == cmbMajmoeListId);
+                            int MajmoetId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                        var q = db.MsVaheds.Where(s => s.MsMajmoeId == MajmoetId);
                         if (q.Any())
                         {
-                            var MaximumCod = db.MsVaheds.Where(s => s.MsMajmoeId == cmbMajmoeListId).Max(p => p.VahedCode);
+                            var MaximumCod = q.Max(p => p.VahedCode);
                             txtCode.Text = (MaximumCod + 1).ToString().Substring(3);
                         }
                         else
@@ -210,7 +210,8 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
                                 VahedName = txtName.Text,
                                 VahedIsActive = chkIsActive.Checked,
                                 MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue),
-                                MajmoeName = cmbMajmoehaList.Text
+                                MajmoeName = cmbMajmoehaList.Text,
+                                PermissiveUsers=chkcmbPermissiveUsers.Text,
                             };
                             db.MsVaheds.Add(obj);
                             db.SaveChanges();
@@ -273,6 +274,7 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
                                 q.VahedIsActive = chkIsActive.Checked;
                                 q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
                                 q.MajmoeName = cmbMajmoehaList.Text;
+                                q.PermissiveUsers = chkcmbPermissiveUsers.Text;
 
                                 db.SaveChanges();
 
@@ -341,6 +343,8 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
                                 q.VahedIsActive = chkIsActive.Checked;
                                 q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
                                 q.MajmoeName = cmbMajmoehaList.Text;
+                                q.PermissiveUsers = chkcmbPermissiveUsers.Text;
+
                                 db.MsVaheds.Remove(q);
                                 db.SaveChanges();
 
@@ -514,9 +518,5 @@ namespace Hesabdari_TG_N1_V1.Forms.MS.DafaterMali
             HelpClass1.TextBoxFormatDesign_000(txtCode);
         }
 
-        private void txtMajmoeCode_Leave(object sender, EventArgs e)
-        {
-            HelpClass1.TextBoxFormatDesign_000(txtMajmoeCode);
-        }
     }
 }

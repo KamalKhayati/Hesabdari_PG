@@ -51,6 +51,7 @@
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PermissiveUsers = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.entityInstantFeedbackSource1 = new DevExpress.Data.Linq.EntityInstantFeedbackSource();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -226,7 +227,8 @@
             this.Line,
             this.colCode,
             this.colName,
-            this.colIsActive});
+            this.colIsActive,
+            this.PermissiveUsers});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -314,6 +316,20 @@
             this.colIsActive.Visible = true;
             this.colIsActive.VisibleIndex = 3;
             // 
+            // PermissiveUsers
+            // 
+            this.PermissiveUsers.AppearanceCell.Options.UseTextOptions = true;
+            this.PermissiveUsers.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.PermissiveUsers.AppearanceHeader.Options.UseTextOptions = true;
+            this.PermissiveUsers.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PermissiveUsers.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.PermissiveUsers.Caption = "کاربران مجاز به ثبت عملیات";
+            this.PermissiveUsers.FieldName = "PermissiveUsers";
+            this.PermissiveUsers.Name = "PermissiveUsers";
+            this.PermissiveUsers.Visible = true;
+            this.PermissiveUsers.VisibleIndex = 4;
+            this.PermissiveUsers.Width = 600;
+            // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -380,5 +396,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colIsActive;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
+        private DevExpress.XtraGrid.Columns.GridColumn PermissiveUsers;
     }
 }

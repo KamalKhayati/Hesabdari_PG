@@ -918,6 +918,7 @@
             this.btnListShoabat.Caption = "لیست اسامی شعبات شرکتها یا واحدها ";
             this.btnListShoabat.Id = 107;
             this.btnListShoabat.Name = "btnListShoabat";
+            this.btnListShoabat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListShoabat_ItemClick);
             // 
             // btnListDorehaiMali
             // 

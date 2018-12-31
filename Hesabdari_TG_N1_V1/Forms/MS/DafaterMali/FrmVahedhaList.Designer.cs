@@ -48,11 +48,12 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMsVahedId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMajmoeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMajmoeId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMajmoeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PermissiveUsers = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.entityInstantFeedbackSource1 = new DevExpress.Data.Linq.EntityInstantFeedbackSource();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -171,6 +172,7 @@
             this.btnListPrint.Id = 6;
             this.btnListPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListPrint.ImageOptions.SvgImage")));
             this.btnListPrint.Name = "btnListPrint";
+            this.btnListPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListPrint_ItemClick);
             // 
             // btnEmkanat
             // 
@@ -226,11 +228,12 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMsVahedId,
             this.Line,
+            this.colMajmoeName,
             this.colCode,
             this.colName,
             this.colIsActive,
             this.colMajmoeId,
-            this.colMajmoeName});
+            this.PermissiveUsers});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -271,6 +274,20 @@
             this.Line.VisibleIndex = 0;
             this.Line.Width = 70;
             // 
+            // colMajmoeName
+            // 
+            this.colMajmoeName.AppearanceCell.Options.UseTextOptions = true;
+            this.colMajmoeName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colMajmoeName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMajmoeName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMajmoeName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colMajmoeName.Caption = "نام مجتمع یا مجموعه";
+            this.colMajmoeName.FieldName = "MajmoeName";
+            this.colMajmoeName.Name = "colMajmoeName";
+            this.colMajmoeName.Visible = true;
+            this.colMajmoeName.VisibleIndex = 1;
+            this.colMajmoeName.Width = 350;
+            // 
             // colCode
             // 
             this.colCode.AppearanceCell.Options.UseTextOptions = true;
@@ -283,7 +300,7 @@
             this.colCode.FieldName = "VahedCode";
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 1;
+            this.colCode.VisibleIndex = 2;
             this.colCode.Width = 85;
             // 
             // colName
@@ -297,7 +314,7 @@
             this.colName.FieldName = "VahedName";
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 2;
+            this.colName.VisibleIndex = 3;
             this.colName.Width = 350;
             // 
             // colIsActive
@@ -312,7 +329,7 @@
             this.colIsActive.FieldName = "VahedIsActive";
             this.colIsActive.Name = "colIsActive";
             this.colIsActive.Visible = true;
-            this.colIsActive.VisibleIndex = 3;
+            this.colIsActive.VisibleIndex = 4;
             this.colIsActive.Width = 70;
             // 
             // colMajmoeId
@@ -326,19 +343,19 @@
             this.colMajmoeId.FieldName = "MsMajmoeId";
             this.colMajmoeId.Name = "colMajmoeId";
             // 
-            // colMajmoeName
+            // PermissiveUsers
             // 
-            this.colMajmoeName.AppearanceCell.Options.UseTextOptions = true;
-            this.colMajmoeName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colMajmoeName.AppearanceHeader.Options.UseTextOptions = true;
-            this.colMajmoeName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colMajmoeName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colMajmoeName.Caption = "نام مجتمع یا مجموعه";
-            this.colMajmoeName.FieldName = "MajmoeName";
-            this.colMajmoeName.Name = "colMajmoeName";
-            this.colMajmoeName.Visible = true;
-            this.colMajmoeName.VisibleIndex = 4;
-            this.colMajmoeName.Width = 350;
+            this.PermissiveUsers.AppearanceCell.Options.UseTextOptions = true;
+            this.PermissiveUsers.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.PermissiveUsers.AppearanceHeader.Options.UseTextOptions = true;
+            this.PermissiveUsers.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PermissiveUsers.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.PermissiveUsers.Caption = "کاربران مجاز به ثبت عملیات";
+            this.PermissiveUsers.FieldName = "PermissiveUsers";
+            this.PermissiveUsers.Name = "PermissiveUsers";
+            this.PermissiveUsers.Visible = true;
+            this.PermissiveUsers.VisibleIndex = 5;
+            this.PermissiveUsers.Width = 600;
             // 
             // gridControl1
             // 
@@ -408,5 +425,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMajmoeName;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
         private DevExpress.XtraGrid.Columns.GridColumn colMajmoeId;
+        private DevExpress.XtraGrid.Columns.GridColumn PermissiveUsers;
     }
 }

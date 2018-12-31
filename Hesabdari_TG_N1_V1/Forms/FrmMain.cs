@@ -104,5 +104,15 @@ namespace Hesabdari_TG_N1_V1.Forms
             HelpClass1.ActiveForm(fm);
 
         }
+
+        private void btnListShoabat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmShoabatList fm = new FrmShoabatList
+            {
+                MdiParent = this
+            };
+            HelpClass1.ActiveForm(fm);
+
+        }
     }
 }
