@@ -1,10 +1,10 @@
 ﻿/****************************** Ghost.github.io ******************************\
-*	Module Name:	FrmAnbarsName.cs
-*	Project:		Hesabdari_TG_N1_V1
+*	Module Name:	FrmUsersCed.cs
+*	Project:		SystemManagement
 *	Copyright (C) 2018 Kamal Khayati, All rights reserved.
 *	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
 *
-*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2018 / 12 / 17   04:17 ب.ظ
+*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2018 / 12 / 31   03:48 ب.ظ
 *	
 ***********************************************************************************/
 using System;
@@ -20,24 +20,19 @@ using DevExpress.XtraEditors;
 using HelpClassLibrary;
 using DBHesabdari_TG;
 
-
-namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
+namespace SystemManagement.UsersSystem
 {
-    public partial class FrmAnbarhaCed : DevExpress.XtraEditors.XtraForm
+    public partial class FrmUsersCed : DevExpress.XtraEditors.XtraForm
     {
-        FrmAnbarhaList Fm;
-        public FrmAnbarhaCed()
-        {
-            InitializeComponent();
-        }
-        public FrmAnbarhaCed(FrmAnbarhaList fm)
+        FrmUsersList Fm;
+        public FrmUsersCed(FrmUsersList fm)
         {
             InitializeComponent();
             Fm = fm;
         }
         string CodeBeforeEdit = "";
         string NameBeforeEdit = "";
-        private void FrmAnbarhaCed_Load(object sender, EventArgs e)
+        private void FrmUsersCed_Load(object sender, EventArgs e)
         {
             if (this.Text == "ایجاد رکورد جدید")
             {
@@ -45,6 +40,13 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             }
             else
             {
+                txtId.Text = Fm.gridView1.GetFocusedRowCellValue("MsUserId").ToString();
+                txtCode.Text = Fm.gridView1.GetFocusedRowCellValue("UserCode").ToString();
+                txtName.Text = Fm.gridView1.GetFocusedRowCellValue("UserName").ToString();
+                txtUserName.Text = Fm.gridView1.GetFocusedRowCellValue("UserNam").ToString();
+                txtPassword.Text = Fm.gridView1.GetFocusedRowCellValue("UserPassword").ToString();
+                chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("UserIsActive"));
+
                 CodeBeforeEdit = txtCode.Text;
                 NameBeforeEdit = txtName.Text;
             }
@@ -67,16 +69,18 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                     {
                         try
                         {
-                            ApAnbar obj = new ApAnbar()
+                            MsUser obj = new MsUser()
                             {
-                                AnbarCode = Convert.ToInt32(txtCode.Text),
-                                AnbarName = txtName.Text,
-                                AnbarIsActive = chkIsActive.Checked
+                                UserCode = Convert.ToInt32(txtCode.Text),
+                                UserName = txtName.Text,
+                                UserNam = txtUserName.Text,
+                                UserPassword = txtPassword.Text,
+                                UserIsActive = chkIsActive.Checked
                             };
-                            db.ApAnbars.Add(obj);
+                            db.MsUsers.Add(obj);
                             db.SaveChanges();
                             Fm.btnDisplyActiveList_ItemClick(null, null);
-                            XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             Fm.gridView1.MoveLast();
                             if (btnCreateClose_Clicked)
                                 this.Close();
@@ -84,6 +88,8 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                             {
                                 btnNewCode_Click(null, null);
                                 txtName.Text = "";
+                                txtUserName.Text = "";
+                                txtPassword.Text = "";
                                 txtName.Focus();
                             }
                         }
@@ -100,12 +106,14 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                         try
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q = db.ApAnbars.FirstOrDefault(p => p.ApAnbarId == RowId);
+                            var q = db.MsUsers.FirstOrDefault(p => p.MsUserId == RowId);
                             if (q != null)
                             {
-                                q.AnbarCode = Convert.ToInt32(txtCode.Text);
-                                q.AnbarName = txtName.Text;
-                                q.AnbarIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                q.UserCode = Convert.ToInt32(txtCode.Text);
+                                q.UserName = txtName.Text;
+                                q.UserNam = txtUserName.Text;
+                                q.UserPassword = txtPassword.Text;
+                                q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
 
                                 db.SaveChanges();
                                 Fm.btnDisplyActiveList_ItemClick(null, null);
@@ -129,14 +137,16 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                         try
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q = db.ApAnbars.FirstOrDefault(p => p.ApAnbarId == RowId);
+                            var q = db.MsUsers.FirstOrDefault(p => p.MsUserId == RowId);
                             if (q != null)
                             {
-                                q.AnbarCode = Convert.ToInt32(txtCode.Text);
-                                q.AnbarName = txtName.Text;
-                                q.AnbarIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                q.UserCode = Convert.ToInt32(txtCode.Text);
+                                q.UserName = txtName.Text;
+                                q.UserNam = txtUserName.Text;
+                                q.UserPassword = txtPassword.Text;
+                                q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
 
-                                db.ApAnbars.Remove(q);
+                                db.MsUsers.Remove(q);
                                 db.SaveChanges();
                                 Fm.btnDisplyActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
@@ -161,9 +171,9 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             {
                 try
                 {
-                    if (db.ApAnbars.Any())
+                    if (db.MsUsers.Any())
                     {
-                        var MaximumCod = db.ApAnbars.Max(p => p.AnbarCode);
+                        var MaximumCod = db.MsUsers.Max(p => p.UserCode);
                         txtCode.Text = (MaximumCod + 1).ToString();
                     }
                     else
@@ -185,11 +195,13 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             btnCreateClose_Click(null, null);
             btnCreateClose_Clicked = true;
         }
+
         private bool TextEditValidation()
         {
-            if (txtCode.Text == string.Empty || txtCode.Text == "0")
+            ///////////////// اعتبار سنجی کد////////////////////////////////////
+            if (string.IsNullOrEmpty(txtCode.Text))
             {
-                XtraMessageBox.Show("لطفاً کد را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("لطفا کد را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (Convert.ToInt32(txtCode.Text) <= 100)
@@ -206,10 +218,50 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
 
                 return false;
             }
+            else
+            {
+                using (var db = new MyContext())
+                {
+                    try
+                    {
+                        if (this.Text == "ایجاد رکورد جدید")
+                        {
+                            if (db.MsUsers.Any())
+                            {
+                                int _code = Convert.ToInt32(txtCode.Text);
+                                var q1 = db.MsUsers.Where(p => p.UserCode == _code);
+                                if (q1.Any())
+                                {
+                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    btnNewCode_Click(null, null);
+                                    return false;
+                                }
+                            }
+                        }
+                        else if (this.Text == "ویرایش رکورد جاری")
+                        {
+                            int RowId = Convert.ToInt32(txtId.Text);
+                            int _code = Convert.ToInt32(txtCode.Text);
+                            var q1 = db.MsUsers.Where(p => p.MsUserId != RowId && p.UserCode == _code);
+                            if (q1.Any())
+                            {
+                                XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtCode.Text = CodeBeforeEdit;
+                                return false;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
 
-            /////////////////////////////////////////////
+            }
 
-            if (txtName.Text == string.Empty || txtName.Text == "0")
+            //////////////// اعتبار سنجی تکس باکس///////////////////////////////
+
+            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text) || txtName.Text == "0")
             {
                 XtraMessageBox.Show("لطفاً اطلاعات را کامل وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -222,18 +274,10 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                     {
                         if (this.Text == "ایجاد رکورد جدید")
                         {
-                            if (db.ApAnbars.Any())
+                            if (db.MsUsers.Any())
                             {
-                                int _code = Convert.ToInt32(txtCode.Text);
-                                var q1 = db.ApAnbars.Where(p => p.AnbarCode == _code);
-                                var q2 = db.ApAnbars.Where(p => p.AnbarName.Contains(txtName.Text));
-                                if (q1.Any())
-                                {
-                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    btnNewCode_Click(null, null);
-                                    return false;
-                                }
-                                else if (q2.Any())
+                                var q2 = db.MsUsers.Where(p => p.UserName.Contains(txtName.Text));
+                                if (q2.Any())
                                 {
                                     XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return false;
@@ -243,16 +287,8 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                         else if (this.Text == "ویرایش رکورد جاری")
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            int _code = Convert.ToInt32(txtCode.Text);
-                            var q1 = db.ApAnbars.Where(p => p.ApAnbarId != RowId && p.AnbarCode == _code);
-                            var q2 = db.ApAnbars.Where(p => p.ApAnbarId != RowId && p.AnbarName.Contains(txtName.Text));
-                            if (q1.Any())
-                            {
-                                XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                txtCode.Text = CodeBeforeEdit;
-                                return false;
-                            }
-                            else if (q2.Any())
+                            var q2 = db.MsUsers.Where(p => p.MsUserId != RowId && p.UserName.Contains(txtName.Text));
+                            if (q2.Any())
                             {
                                 XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //txtName.Text = nameBeforeEdit;
@@ -276,4 +312,5 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             HelpClass1.EnterReplaceTab(e);
         }
     }
+
 }

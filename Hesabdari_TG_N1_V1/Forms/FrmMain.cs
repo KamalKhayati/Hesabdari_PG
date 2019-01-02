@@ -25,12 +25,11 @@ using DevExpress.XtraBars.InternalItems;
 using DevExpress.XtraBars.Docking2010;
 using DevExpress.XtraTab;
 using Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala;
-using Hesabdari_TG_N1_V1.HelpClass;
-using Hesabdari_TG_N1_V1.Forms.MS.DafaterMali;
-using Hesabdari_TG_N1_V1.Forms.MS.UsersSystem;
 using Microsoft.Win32;
-using Hesabdari_TG_N1_V1.Models;
 using System.Data.SqlClient;
+using HelpClassLibrary;
+using SystemManagement.DafaterMali;
+using SystemManagement.UsersSystem;
 
 namespace Hesabdari_TG_N1_V1.Forms
 {

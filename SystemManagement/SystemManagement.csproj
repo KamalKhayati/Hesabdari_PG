@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBEDE194-2E2D-4D49-A811-9982B5F4F152}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SystemManagement</RootNamespace>
+    <AssemblyName>SystemManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.2" />
+    <Reference Include="DevExpress.Data.v18.2" />
+    <Reference Include="DevExpress.Utils.v18.2" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.Printing.v18.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DafaterMali\FrmDorehaCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmDorehaCed.Designer.cs">
+      <DependentUpon>FrmDorehaCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DafaterMali\FrmDorehaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmDorehaList.Designer.cs">
+      <DependentUpon>FrmDorehaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DafaterMali\FrmMajmoehaCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmMajmoehaCed.Designer.cs">
+      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DafaterMali\FrmMajmoehaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmMajmoehaList.Designer.cs">
+      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DafaterMali\FrmShoabatCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmShoabatCed.Designer.cs">
+      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DafaterMali\FrmShoabatList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmShoabatList.Designer.cs">
+      <DependentUpon>FrmShoabatList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DafaterMali\FrmVahedhaCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmVahedhaCed.Designer.cs">
+      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DafaterMali\FrmVahedhaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DafaterMali\FrmVahedhaList.Designer.cs">
+      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersSystem\FrmUsersCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersSystem\FrmUsersCed.Designer.cs">
+      <DependentUpon>FrmUsersCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersSystem\FrmUsersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersSystem\FrmUsersList.Designer.cs">
+      <DependentUpon>FrmUsersList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DafaterMali\FrmDorehaList.resx">
+      <DependentUpon>FrmDorehaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DafaterMali\FrmMajmoehaCed.resx">
+      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DafaterMali\FrmMajmoehaList.resx">
+      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DafaterMali\FrmShoabatCed.resx">
+      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DafaterMali\FrmShoabatList.resx">
+      <DependentUpon>FrmShoabatList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DafaterMali\FrmVahedhaCed.resx">
+      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DafaterMali\FrmVahedhaList.resx">
+      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UsersSystem\FrmUsersCed.resx">
+      <DependentUpon>FrmUsersCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersSystem\FrmUsersList.resx">
+      <DependentUpon>FrmUsersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SalMali\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBHesabdari_TG\DBHesabdari_TG.csproj">
+      <Project>{a8821623-3d7b-4298-aaae-c6ad5e96ca5e}</Project>
+      <Name>DBHesabdari_TG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpClassLibrary\HelpClassLibrary.csproj">
+      <Project>{26168114-9431-42db-b60e-8213d68a1e2f}</Project>
+      <Name>HelpClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

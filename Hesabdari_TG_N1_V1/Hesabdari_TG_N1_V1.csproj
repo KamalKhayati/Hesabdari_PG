@@ -103,81 +103,18 @@
     <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaList.Designer.cs">
       <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormKham.Designer.cs">
+      <DependentUpon>FormKham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaList.Designer.cs">
-      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliList.Designer.cs">
-      <DependentUpon>FrmSalMaliList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmShoabatList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmShoabatList.Designer.cs">
-      <DependentUpon>FrmShoabatList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaList.Designer.cs">
-      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmMajmoehaCed.Designer.cs">
-      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmSalMaliCed.Designer.cs">
-      <DependentUpon>FrmSalMaliCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmShoabatCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmShoabatCed.Designer.cs">
-      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\DafaterMali\FrmVahedhaCed.Designer.cs">
-      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmUsersList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmUsersList.Designer.cs">
-      <DependentUpon>FrmUsersList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmUsersCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MS\UsersSystem\FrmUsersCed.Designer.cs">
-      <DependentUpon>FrmUsersCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HelpClass\HelpClass1.cs" />
-    <Compile Include="HelpClass\HelpClass2.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AP\AnbarKala\ApAnbar.cs" />
-    <Compile Include="Models\MS\DafaterMali\MsMajmoe.cs" />
-    <Compile Include="Models\MS\DafaterMali\MsShobe.cs" />
-    <Compile Include="Models\MS\DafaterMali\MsVahed.cs" />
-    <Compile Include="Models\MS\UsersSystem\MsUser.cs" />
-    <Compile Include="Models\MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AP\AnbarKala\FrmAnbarhaCed.resx">
@@ -187,43 +124,11 @@
       <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormKham.resx">
+      <DependentUpon>FormKham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmMajmoehaList.resx">
-      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSalMaliList.resx">
-      <DependentUpon>FrmSalMaliList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmShoabatList.resx">
-      <DependentUpon>FrmShoabatList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmVahedhaList.resx">
-      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmMajmoehaCed.resx">
-      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmSalMaliCed.resx">
-      <DependentUpon>FrmSalMaliCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmShoabatCed.resx">
-      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\DafaterMali\FrmVahedhaCed.resx">
-      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\UsersSystem\FrmUsersList.resx">
-      <DependentUpon>FrmUsersList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MS\UsersSystem\FrmUsersCed.resx">
-      <DependentUpon>FrmUsersCed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -254,17 +159,24 @@
     <Folder Include="Forms\AP\Hesabdari\" />
     <Folder Include="Forms\DP\" />
     <Folder Include="Forms\FT\" />
-    <Folder Include="Forms\MS\SalMali\" />
     <Folder Include="Forms\SH\" />
-    <Folder Include="Models\AK\" />
-    <Folder Include="Models\AP\Hesabdari\" />
-    <Folder Include="Models\DP\" />
-    <Folder Include="Models\FT\" />
-    <Folder Include="Models\MS\SalMali\" />
-    <Folder Include="Models\SH\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TG.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBHesabdari_TG\DBHesabdari_TG.csproj">
+      <Project>{a8821623-3d7b-4298-aaae-c6ad5e96ca5e}</Project>
+      <Name>DBHesabdari_TG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpClassLibrary\HelpClassLibrary.csproj">
+      <Project>{26168114-9431-42db-b60e-8213d68a1e2f}</Project>
+      <Name>HelpClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemManagement\SystemManagement.csproj">
+      <Project>{BBEDE194-2E2D-4D49-A811-9982B5F4F152}</Project>
+      <Name>SystemManagement</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
