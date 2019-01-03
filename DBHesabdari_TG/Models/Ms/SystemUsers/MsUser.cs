@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_TG
 {
-   public class MsUser
+    public class MsUser
     {
         public int MsUserId { get; set; }
         [Required]

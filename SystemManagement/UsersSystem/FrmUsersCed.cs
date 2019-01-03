@@ -63,6 +63,8 @@ namespace SystemManagement.UsersSystem
         {
             if (TextEditValidation())
             {
+                btnCreateClose.Enabled = false;
+                btnCreateNext.Enabled = false;
                 if (this.Text == "ایجاد رکورد جدید")
                 {
                     using (var db = new MyContext())
@@ -86,6 +88,8 @@ namespace SystemManagement.UsersSystem
                                 this.Close();
                             else
                             {
+                                btnCreateClose.Enabled = true;
+                                btnCreateNext.Enabled = true;
                                 btnNewCode_Click(null, null);
                                 txtName.Text = "";
                                 txtUserName.Text = "";

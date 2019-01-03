@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFroosh = new DevExpress.XtraBars.BarButtonItem();
@@ -154,11 +155,11 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -283,7 +284,7 @@
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1483, 206);
+            this.ribbon.Size = new System.Drawing.Size(1100, 206);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -1215,7 +1216,7 @@
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1483, 41);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1100, 41);
             // 
             // barButtonItem30
             // 
@@ -1253,7 +1254,7 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1452, 206);
+            this.hideContainerRight.Location = new System.Drawing.Point(1069, 206);
             this.hideContainerRight.Name = "hideContainerRight";
             this.hideContainerRight.Size = new System.Drawing.Size(31, 391);
             // 
@@ -1308,7 +1309,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1483, 638);
+            this.ClientSize = new System.Drawing.Size(1100, 638);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);

@@ -45,7 +45,18 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMsUserId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserNam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserPassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUserIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsMajmoehaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsVahedhaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsShobehaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -79,11 +90,11 @@
             // bar1
             // 
             this.bar1.BarName = "Tools";
-            this.bar1.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Standalone;
+            this.bar1.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Top;
             this.bar1.DockCol = 0;
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar1.FloatLocation = new System.Drawing.Point(63, 153);
+            this.bar1.FloatLocation = new System.Drawing.Point(61, 150);
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnCreate, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEdit, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -106,6 +117,7 @@
             this.btnCreate.Id = 0;
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
             this.btnCreate.Name = "btnCreate";
+            this.btnCreate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreate_ItemClick);
             // 
             // btnEdit
             // 
@@ -113,6 +125,7 @@
             this.btnEdit.Id = 1;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
             this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
             // btnDelete
             // 
@@ -120,6 +133,7 @@
             this.btnDelete.Id = 2;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
             // 
             // btnDisplyActiveList
             // 
@@ -127,6 +141,7 @@
             this.btnDisplyActiveList.Id = 3;
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
+            this.btnDisplyActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyActiveList_ItemClick);
             // 
             // btnDisplyNotActiveList
             // 
@@ -134,6 +149,7 @@
             this.btnDisplyNotActiveList.Id = 4;
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
+            this.btnDisplyNotActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyNotActiveList_ItemClick);
             // 
             // btnPrintPreview
             // 
@@ -141,6 +157,7 @@
             this.btnPrintPreview.Id = 5;
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
             this.btnPrintPreview.Name = "btnPrintPreview";
+            this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // btnListPrint
             // 
@@ -164,6 +181,7 @@
             this.btnAdvancedSearch.Id = 8;
             this.btnAdvancedSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdvancedSearch.ImageOptions.SvgImage")));
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
+            this.btnAdvancedSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdvancedSearch_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -203,6 +221,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 60);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
@@ -212,8 +231,24 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // pLinqInstantFeedbackSource1
+            // 
+            this.pLinqInstantFeedbackSource1.DefaultSorting = "UserCode ASC";
+            this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsUser);
+            // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMsUserId,
+            this.Line,
+            this.colUserCode,
+            this.colUserName,
+            this.colUserNam,
+            this.colUserPassword,
+            this.colUserIsActive,
+            this.colRmsMajmoehaBmsUserhas,
+            this.colRmsVahedhaBmsUserhas,
+            this.colRmsShobehaBmsUserhas});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -229,6 +264,118 @@
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
+            this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            // 
+            // colMsUserId
+            // 
+            this.colMsUserId.Caption = "آیدی";
+            this.colMsUserId.FieldName = "MsUserId";
+            this.colMsUserId.Name = "colMsUserId";
+            // 
+            // Line
+            // 
+            this.Line.AppearanceCell.Options.UseTextOptions = true;
+            this.Line.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Line.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Line.AppearanceHeader.Options.UseTextOptions = true;
+            this.Line.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Line.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Line.Caption = "ردیف";
+            this.Line.FieldName = "Line";
+            this.Line.Name = "Line";
+            this.Line.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.Line.Visible = true;
+            this.Line.VisibleIndex = 0;
+            this.Line.Width = 60;
+            // 
+            // colUserCode
+            // 
+            this.colUserCode.AppearanceCell.Options.UseTextOptions = true;
+            this.colUserCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserCode.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUserCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserCode.Caption = "کد";
+            this.colUserCode.FieldName = "UserCode";
+            this.colUserCode.Name = "colUserCode";
+            this.colUserCode.Visible = true;
+            this.colUserCode.VisibleIndex = 1;
+            this.colUserCode.Width = 70;
+            // 
+            // colUserName
+            // 
+            this.colUserName.AppearanceCell.Options.UseTextOptions = true;
+            this.colUserName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUserName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserName.Caption = "نام و نام خانوادگی کاربر";
+            this.colUserName.FieldName = "UserName";
+            this.colUserName.Name = "colUserName";
+            this.colUserName.Visible = true;
+            this.colUserName.VisibleIndex = 2;
+            this.colUserName.Width = 300;
+            // 
+            // colUserNam
+            // 
+            this.colUserNam.AppearanceCell.Options.UseTextOptions = true;
+            this.colUserNam.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserNam.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUserNam.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserNam.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserNam.Caption = "نام کاربری";
+            this.colUserNam.FieldName = "UserNam";
+            this.colUserNam.Name = "colUserNam";
+            this.colUserNam.Visible = true;
+            this.colUserNam.VisibleIndex = 3;
+            this.colUserNam.Width = 200;
+            // 
+            // colUserPassword
+            // 
+            this.colUserPassword.AppearanceCell.Options.UseTextOptions = true;
+            this.colUserPassword.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserPassword.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUserPassword.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserPassword.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserPassword.Caption = "رمز عبور";
+            this.colUserPassword.FieldName = "UserPassword";
+            this.colUserPassword.Name = "colUserPassword";
+            this.colUserPassword.Visible = true;
+            this.colUserPassword.VisibleIndex = 4;
+            this.colUserPassword.Width = 200;
+            // 
+            // colUserIsActive
+            // 
+            this.colUserIsActive.AppearanceCell.Options.UseTextOptions = true;
+            this.colUserIsActive.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserIsActive.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserIsActive.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUserIsActive.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserIsActive.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colUserIsActive.Caption = "فعال";
+            this.colUserIsActive.FieldName = "UserIsActive";
+            this.colUserIsActive.Name = "colUserIsActive";
+            this.colUserIsActive.Visible = true;
+            this.colUserIsActive.VisibleIndex = 5;
+            this.colUserIsActive.Width = 60;
+            // 
+            // colRmsMajmoehaBmsUserhas
+            // 
+            this.colRmsMajmoehaBmsUserhas.FieldName = "RmsMajmoehaBmsUserhas";
+            this.colRmsMajmoehaBmsUserhas.Name = "colRmsMajmoehaBmsUserhas";
+            // 
+            // colRmsVahedhaBmsUserhas
+            // 
+            this.colRmsVahedhaBmsUserhas.FieldName = "RmsVahedhaBmsUserhas";
+            this.colRmsVahedhaBmsUserhas.Name = "colRmsVahedhaBmsUserhas";
+            // 
+            // colRmsShobehaBmsUserhas
+            // 
+            this.colRmsShobehaBmsUserhas.FieldName = "RmsShobehaBmsUserhas";
+            this.colRmsShobehaBmsUserhas.Name = "colRmsShobehaBmsUserhas";
             // 
             // FrmUsersList
             // 
@@ -272,5 +419,16 @@
         public DevExpress.XtraBars.BarButtonItem btnListPrint;
         public DevExpress.XtraBars.BarSubItem btnEmkanat;
         public DevExpress.XtraBars.BarButtonItem btnAdvancedSearch;
+        private DevExpress.Data.PLinq.PLinqInstantFeedbackSource pLinqInstantFeedbackSource1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMsUserId;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserName;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserNam;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserPassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserIsActive;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsMajmoehaBmsUserhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsVahedhaBmsUserhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsShobehaBmsUserhas;
+        private DevExpress.XtraGrid.Columns.GridColumn Line;
     }
 }

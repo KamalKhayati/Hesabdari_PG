@@ -57,6 +57,7 @@ namespace DBHesabdari_TG
         public virtual DbSet<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
         public virtual DbSet<MsShobe> MsShobes { get; set; }
         public virtual DbSet<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }
+        public virtual DbSet<MsInfoOther> MsInfoOthers { get; set; }
 
 
 
@@ -80,44 +81,60 @@ namespace DBHesabdari_TG
         //    }
 
         //}
-
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //--------> one - to - zero - or - one relationships < ------------
-        //modelBuilder.Entity<Student>()
-        //     .HasRequired(c => c.Standard)
-        //     .WithRequiredPrincipal(f => f.Student);
-
-
-
-        //--------> one-to-Many relationships <-------------- 
-
-        //modelBuilder.Entity<Student>()
-        //    .HasRequired(c => c.Standard)
-        //    .WithMany(g => g.Student)
-        //    .HasForeignKey(c => c.StandardId);
-
-        //modelBuilder.Entity<Standard>()
-        //    .HasMany(s => s.Student)
-        //    .WithRequired(c => c.Standard)
-        //    .HasForeignKey(c => c.StandardId)
-        //    .WillCascadeOnDelete();
-        //--------> Many-to-Many relationships <------------------
-        //}
         #endregion
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MsMajmoe>().HasMany(m => m.MsVaheds).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsMajmoe>().HasMany(m => m.RmsMajmoehaBmsUserhas).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsMajmoehaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MsVahed>().HasMany(m => m.MsShobes).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsVahed>().HasMany(m => m.RmsVahedhaBmsUserhas).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsVahedhaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MsShobe>().HasMany(m => m.RmsShobehaBmsUserhas).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsShobehaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+
+
+
+            #region
+            //--------> one - to - zero - or - one relationships < ------------
+            //modelBuilder.Entity<Student>()
+            //     .HasRequired(c => c.Standard)
+            //     .WithRequiredPrincipal(f => f.Student);
+
+
+
+            //--------> one-to-Many relationships <-------------- 
+
+            //modelBuilder.Entity<Student>()
+            //    .HasRequired(c => c.Standard)
+            //    .WithMany(g => g.Student)
+            //    .HasForeignKey(c => c.StandardId);
+
+            //modelBuilder.Entity<Standard>()
+            //    .HasMany(s => s.Student)
+            //    .WithRequired(c => c.Standard)
+            //    .HasForeignKey(c => c.StandardId)
+            //    .WillCascadeOnDelete();
+            //--------> Many-to-Many relationships <------------------
+            //}
+            //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+            //{
+            //base.OnModelCreating(modelBuilder);
+            //modelBuilder.Configurations.Add(new RmsUserhaBmsMajmoeha.Configuration());
+            //modelBuilder.HasDefaultSchema("Admin");
+            //modelBuilder.ComplexType<Models.Adress>();
+            //}
+            #endregion
+
+        }
+
+        //public class MyEntity
         //{
-        //base.OnModelCreating(modelBuilder);
-        //modelBuilder.Configurations.Add(new RmsUserhaBmsMajmoeha.Configuration());
-        //modelBuilder.HasDefaultSchema("Admin");
-        //modelBuilder.ComplexType<Models.Adress>();
+        //    public int Id { get; set; }
+        //    public string Name { get; set; }
         //}
-
     }
-
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }

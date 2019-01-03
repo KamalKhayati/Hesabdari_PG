@@ -39,7 +39,8 @@ namespace DBHesabdari_TG.Migrations
                 {
                     context.MsUsers.Add(new MsUser() { UserCode = 101, UserName = "مدیر سیستم", UserNam = "1", UserPassword = "1", UserIsActive = true });
                     context.MsUsers.Add(new MsUser() { UserCode = 102, UserName = "کمال خیاطی", UserNam = "2", UserPassword = "2", UserIsActive = true });
-                    context.MsUsers.Add(new MsUser() { UserCode = 103, UserName = "جمال خیاطی", UserNam = "3", UserPassword = "3", UserIsActive = false });
+                    context.MsUsers.Add(new MsUser() { UserCode = 103, UserName = "جمال خیاطی", UserNam = "3", UserPassword = "3", UserIsActive = true });
+                    context.MsUsers.Add(new MsUser() { UserCode = 104, UserName = "جلال خیاطی", UserNam = "4", UserPassword = "4", UserIsActive = true });
                     context.SaveChanges();
                 }
             }

@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AP\AnbarKala\ApAnbar.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsInfoOther.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsMajmoe.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsShobe.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsVahed.cs" />

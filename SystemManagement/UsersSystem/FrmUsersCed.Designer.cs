@@ -70,6 +70,7 @@
             this.txtCode.Size = new System.Drawing.Size(108, 32);
             this.txtCode.TabIndex = 4;
             this.txtCode.TabStop = false;
+            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // labelControl1
             // 
@@ -86,6 +87,7 @@
             this.txtPassword.Properties.MaxLength = 50;
             this.txtPassword.Size = new System.Drawing.Size(208, 32);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // txtUserName
             // 
@@ -94,6 +96,7 @@
             this.txtUserName.Properties.MaxLength = 50;
             this.txtUserName.Size = new System.Drawing.Size(208, 32);
             this.txtUserName.TabIndex = 1;
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // txtName
             // 
@@ -102,6 +105,7 @@
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Size = new System.Drawing.Size(316, 32);
             this.txtName.TabIndex = 0;
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // labelControl3
             // 
@@ -135,6 +139,7 @@
             this.btnClose.Size = new System.Drawing.Size(143, 40);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "بستن ";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCreateClose
             // 
@@ -144,6 +149,7 @@
             this.btnCreateClose.Size = new System.Drawing.Size(150, 40);
             this.btnCreateClose.TabIndex = 1;
             this.btnCreateClose.Text = "ایجاد و بستن";
+            this.btnCreateClose.Click += new System.EventHandler(this.btnCreateClose_Click);
             // 
             // chkIsActive
             // 
@@ -155,6 +161,7 @@
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(58, 33);
             this.chkIsActive.TabIndex = 3;
+            this.chkIsActive.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // txtId
             // 
@@ -198,6 +205,7 @@
             this.btnNewCode.TabIndex = 5;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
+            this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // btnCreateNext
             // 
@@ -208,6 +216,7 @@
             this.btnCreateNext.Size = new System.Drawing.Size(135, 38);
             this.btnCreateNext.TabIndex = 0;
             this.btnCreateNext.Text = "ایجاد و بعدی";
+            this.btnCreateNext.Click += new System.EventHandler(this.btnCreateNext_Click);
             // 
             // panelControl2
             // 
@@ -234,6 +243,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد کاربر جدید";
+            this.Load += new System.EventHandler(this.FrmUsersCed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
