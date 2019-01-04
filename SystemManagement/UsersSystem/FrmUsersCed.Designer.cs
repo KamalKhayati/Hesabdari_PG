@@ -139,6 +139,8 @@
             this.btnClose.Size = new System.Drawing.Size(143, 40);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "بستن ";
+            this.btnClose.ToolTip = "Escape";
+            this.btnClose.ToolTipTitle = "بستن ";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCreateClose
@@ -149,6 +151,8 @@
             this.btnCreateClose.Size = new System.Drawing.Size(150, 40);
             this.btnCreateClose.TabIndex = 1;
             this.btnCreateClose.Text = "ایجاد و بستن";
+            this.btnCreateClose.ToolTip = "F2";
+            this.btnCreateClose.ToolTipTitle = "ایجاد و بستن";
             this.btnCreateClose.Click += new System.EventHandler(this.btnCreateClose_Click);
             // 
             // chkIsActive
@@ -205,6 +209,8 @@
             this.btnNewCode.TabIndex = 5;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
+            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // btnCreateNext
@@ -216,6 +222,8 @@
             this.btnCreateNext.Size = new System.Drawing.Size(135, 38);
             this.btnCreateNext.TabIndex = 0;
             this.btnCreateNext.Text = "ایجاد و بعدی";
+            this.btnCreateNext.ToolTip = "F3";
+            this.btnCreateNext.ToolTipTitle = "ایجاد و بعدی";
             this.btnCreateNext.Click += new System.EventHandler(this.btnCreateNext_Click);
             // 
             // panelControl2
@@ -236,6 +244,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUsersCed";
@@ -244,6 +253,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد کاربر جدید";
             this.Load += new System.EventHandler(this.FrmUsersCed_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUsersCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();

@@ -162,6 +162,8 @@
             this.btnCreateClose.Size = new System.Drawing.Size(160, 38);
             this.btnCreateClose.TabIndex = 1;
             this.btnCreateClose.Text = "ایجاد و بستن";
+            this.btnCreateClose.ToolTip = "F2";
+            this.btnCreateClose.ToolTipTitle = "ایجاد و بستن";
             this.btnCreateClose.Click += new System.EventHandler(this.btnCreateClose_Click);
             // 
             // btnClose
@@ -172,6 +174,8 @@
             this.btnClose.Size = new System.Drawing.Size(138, 38);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "بستن ";
+            this.btnClose.ToolTip = "Escape";
+            this.btnClose.ToolTipTitle = "بستن ";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCreateNext
@@ -183,6 +187,8 @@
             this.btnCreateNext.Size = new System.Drawing.Size(138, 38);
             this.btnCreateNext.TabIndex = 0;
             this.btnCreateNext.Text = "ایجاد و بعدی";
+            this.btnCreateNext.ToolTip = "F3";
+            this.btnCreateNext.ToolTipTitle = "ایجاد و بعدی";
             this.btnCreateNext.Click += new System.EventHandler(this.btnCreateNext_Click);
             // 
             // panelControl1
@@ -276,6 +282,8 @@
             this.btnNewCode.TabIndex = 6;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
+            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // txtMajmoeCode
@@ -882,6 +890,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(687, 296);
@@ -891,6 +900,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد واحد تجاری / خدماتی جدید";
             this.Load += new System.EventHandler(this.FrmVahedhaCed_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmVahedhaCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).EndInit();

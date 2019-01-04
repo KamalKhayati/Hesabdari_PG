@@ -315,6 +315,28 @@ namespace SystemManagement.UsersSystem
         {
             HelpClass1.EnterReplaceTab(e);
         }
+
+        private void FrmUsersCed_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnCreateClose_Click(sender, null);
+
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                btnCreateNext_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnClose_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F7)
+            {
+                btnNewCode_Click(sender, null);
+            }
+
+        }
     }
 
 }

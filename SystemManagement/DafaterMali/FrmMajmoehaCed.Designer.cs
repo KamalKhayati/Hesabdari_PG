@@ -167,6 +167,8 @@
             this.btnClose.Size = new System.Drawing.Size(138, 38);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "بستن ";
+            this.btnClose.ToolTip = "Escape";
+            this.btnClose.ToolTipTitle = "بستن ";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // chkIsActive
@@ -285,6 +287,8 @@
             this.btnNewCode.TabIndex = 7;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
+            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // btnCreateClose
@@ -295,6 +299,8 @@
             this.btnCreateClose.Size = new System.Drawing.Size(147, 38);
             this.btnCreateClose.TabIndex = 1;
             this.btnCreateClose.Text = "ایجاد و بستن";
+            this.btnCreateClose.ToolTip = "F2";
+            this.btnCreateClose.ToolTipTitle = "ایجاد و بستن";
             this.btnCreateClose.Click += new System.EventHandler(this.btnCreateClose_Click);
             // 
             // btnCreateNext
@@ -306,6 +312,8 @@
             this.btnCreateNext.Size = new System.Drawing.Size(141, 38);
             this.btnCreateNext.TabIndex = 0;
             this.btnCreateNext.Text = "ایجاد و بعدی";
+            this.btnCreateNext.ToolTip = "F3";
+            this.btnCreateNext.ToolTipTitle = "ایجاد و بعدی";
             this.btnCreateNext.Click += new System.EventHandler(this.btnCreateNext_Click);
             // 
             // panelControl2
@@ -831,6 +839,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(679, 259);
@@ -840,6 +849,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد مجتمع / مجموعه جدید";
             this.Load += new System.EventHandler(this.FrmMajmoehaCed_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMajmoehaCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();

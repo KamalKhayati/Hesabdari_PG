@@ -333,6 +333,16 @@ namespace HelpClassLibrary
         {
             TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("00#");
         }
+        public static void ClearTextEditControlsText(Control panel)
+        {
+            foreach (Control item in panel.Controls)
+            {
+                if (item.Name.Contains("txt"))
+                {
+                    item.Text = ""; 
+                }
+            }
+        }
 
     }
 }

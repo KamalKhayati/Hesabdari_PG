@@ -62,6 +62,12 @@ namespace DBHesabdari_TG
         [Required, MaxLength(50)]
         public string UserName { get; set; }
 
+        [Column(Order = 5)]
+        public int MsMajmoeId { get; set; }
+
+        [Column(Order = 6)]
+        public int MsVahedId { get; set; }
+
         public virtual MsShobe MsShobe1 { get; set; }
         public virtual MsUser MsUser1 { get; set; }
 

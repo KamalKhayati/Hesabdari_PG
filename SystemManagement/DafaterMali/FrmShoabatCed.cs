@@ -288,8 +288,8 @@ namespace SystemManagement.DafaterMali
                                 ShobeIsActive = chkIsActive.Checked,
                                 MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue),
                                 MajmoeName = cmbMajmoehaList.Text,
-                                MsVahedId= Convert.ToInt32(cmbVahedhaList.EditValue),
-                                VahedName=cmbVahedhaList.Text,
+                                MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue),
+                                VahedName = cmbVahedhaList.Text,
                                 PermissiveUsers = chkcmbPermissiveUsers.Text,
                             };
                             db.MsShobes.Add(obj);
@@ -312,6 +312,9 @@ namespace SystemManagement.DafaterMali
                                         int id = Convert.ToInt32(item.ToString());
                                         var q1 = db.MsUsers.FirstOrDefault(s => s.MsUserId == id);
                                         obj1.UserName = q1.UserName;
+                                        obj1.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                        obj1.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+
                                         db.RmsShobehaBmsUserhas.Add(obj1);
                                     }
                                 }
@@ -365,6 +368,7 @@ namespace SystemManagement.DafaterMali
                                 btnNewCode_Click(null, null);
                                 txtName.Text = "";
                                 chkcmbPermissiveUsers.SetEditValue("");
+                                HelpClass1.ClearTextEditControlsText(xtraScrollableControl1);
                                 txtName.Focus();
                             }
                         }
@@ -395,13 +399,13 @@ namespace SystemManagement.DafaterMali
                                 q.PermissiveUsers = chkcmbPermissiveUsers.Text;
 
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                var q1 = db.RmsShobehaBmsUserhas.Where(s => s.MsShobeId == RowId).ToList();
-                                if (q1.Count > 0)
-                                    db.RmsShobehaBmsUserhas.RemoveRange(q1);
-                                //////////////////////////////////////////////
                                 if (rmsVahedhaBmsUserhasBindingSource.DataSource != null)
                                 {
                                     var CheckedList = chkcmbPermissiveUsers.Properties.GetItems().GetCheckedValues();
+                                    var q1 = db.RmsShobehaBmsUserhas.Where(s => s.MsShobeId == RowId).ToList();
+                                    if (q1.Count > 0)
+                                        db.RmsShobehaBmsUserhas.RemoveRange(q1);
+                                    //////////////////////////////////////////////
                                     if (CheckedList != null)
                                     {
                                         foreach (var item in CheckedList)
@@ -413,6 +417,8 @@ namespace SystemManagement.DafaterMali
                                             int id = Convert.ToInt32(item.ToString());
                                             var q2 = db.MsUsers.FirstOrDefault(s => s.MsUserId == id);
                                             obj1.UserName = q2.UserName;
+                                            obj1.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                            obj1.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
                                             db.RmsShobehaBmsUserhas.Add(obj1);
                                         }
                                     }
@@ -791,6 +797,27 @@ namespace SystemManagement.DafaterMali
                 txtShenaseMelli.Enabled = true;
                 txtCodeEghtesadi.Enabled = true;
 
+            }
+
+        }
+
+        private void FrmShoabatCed_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnCreateClose_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                btnCreateNext_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnClose_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F7)
+            {
+                btnNewCode_Click(sender, null);
             }
 
         }

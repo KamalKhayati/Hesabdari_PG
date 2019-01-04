@@ -45,6 +45,7 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.cmbVahedhaList = new DevExpress.XtraEditors.LookUpEdit();
             this.chkcmbPermissiveUsers = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.rmsVahedhaBmsUserhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.chkSpecificationOther = new DevExpress.XtraEditors.CheckEdit();
             this.chkIsActive = new DevExpress.XtraEditors.CheckEdit();
@@ -104,7 +105,6 @@
             this.txtNoeFaaliat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.rmsVahedhaBmsUserhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtVahedCode.Properties)).BeginInit();
@@ -113,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedhaList.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmsVahedhaBmsUserhasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkSpecificationOther.Properties)).BeginInit();
@@ -145,7 +146,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSandoghPosti.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeFaaliat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmsVahedhaBmsUserhasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -167,6 +167,8 @@
             this.btnCreateClose.Size = new System.Drawing.Size(166, 46);
             this.btnCreateClose.TabIndex = 1;
             this.btnCreateClose.Text = "ایجاد و بستن";
+            this.btnCreateClose.ToolTip = "F2";
+            this.btnCreateClose.ToolTipTitle = "ایجاد و بستن";
             this.btnCreateClose.Click += new System.EventHandler(this.btnCreateClose_Click);
             // 
             // btnClose
@@ -177,6 +179,8 @@
             this.btnClose.Size = new System.Drawing.Size(138, 46);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "بستن ";
+            this.btnClose.ToolTip = "Escape";
+            this.btnClose.ToolTipTitle = "بستن ";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCreateNext
@@ -188,6 +192,8 @@
             this.btnCreateNext.Size = new System.Drawing.Size(135, 46);
             this.btnCreateNext.TabIndex = 0;
             this.btnCreateNext.Text = "ایجاد و بعدی";
+            this.btnCreateNext.ToolTip = "F3";
+            this.btnCreateNext.ToolTipTitle = "ایجاد و بعدی";
             this.btnCreateNext.Click += new System.EventHandler(this.btnCreateNext_Click);
             // 
             // btnNewCode
@@ -199,6 +205,8 @@
             this.btnNewCode.TabIndex = 6;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
+            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // txtVahedCode
@@ -307,6 +315,10 @@
             this.chkcmbPermissiveUsers.TabIndex = 3;
             this.chkcmbPermissiveUsers.Enter += new System.EventHandler(this.chkcmbPermissiveUsers_Enter);
             this.chkcmbPermissiveUsers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            // 
+            // rmsVahedhaBmsUserhasBindingSource
+            // 
+            this.rmsVahedhaBmsUserhasBindingSource.DataSource = typeof(DBHesabdari_TG.RmsVahedhaBmsUserha);
             // 
             // panelControl1
             // 
@@ -909,10 +921,6 @@
             this.labelControl8.TabIndex = 16;
             this.labelControl8.Text = "نوع فعالیت";
             // 
-            // rmsVahedhaBmsUserhasBindingSource
-            // 
-            this.rmsVahedhaBmsUserhasBindingSource.DataSource = typeof(DBHesabdari_TG.RmsVahedhaBmsUserha);
-            // 
             // FrmShoabatCed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -922,6 +930,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(687, 336);
@@ -931,6 +940,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد شعبه جدید";
             this.Load += new System.EventHandler(this.FrmShobehaCed_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmShoabatCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtVahedCode.Properties)).EndInit();
@@ -939,6 +949,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedhaList.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmsVahedhaBmsUserhasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -973,7 +984,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSandoghPosti.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeFaaliat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmsVahedhaBmsUserhasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
