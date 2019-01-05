@@ -32,6 +32,7 @@ namespace DBHesabdari_TG
         public virtual ICollection<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
         public virtual ICollection<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
         public virtual ICollection<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }
+        public virtual ICollection<RmsDoreMalihaBmsUserha> RmsDoreMalihaBmsUserhas { get; set; }
 
     }
 }

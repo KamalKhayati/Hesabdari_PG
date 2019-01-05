@@ -231,17 +231,17 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(495, 48);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(166, 25);
+            this.labelControl4.Size = new System.Drawing.Size(170, 25);
             this.labelControl4.TabIndex = 5;
-            this.labelControl4.Text = "نام واحد تجاری / خدماتی";
+            this.labelControl4.Text = "نام واحد تجاری یا خدماتی";
             // 
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(495, 125);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(106, 25);
+            this.labelControl5.Size = new System.Drawing.Size(132, 25);
             this.labelControl5.TabIndex = 5;
-            this.labelControl5.Text = "نام شعبه مربوطه";
+            this.labelControl5.Text = "نام شعبه یا نمایندگی";
             // 
             // cmbMajmoehaList
             // 
@@ -516,7 +516,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(365, 7);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(74, 29);
+            this.radioButton2.Size = new System.Drawing.Size(73, 29);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "حقوقی";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -577,7 +577,7 @@
             // 
             this.labelControl25.Location = new System.Drawing.Point(243, 199);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(75, 25);
+            this.labelControl25.Size = new System.Drawing.Size(74, 25);
             this.labelControl25.TabIndex = 58;
             this.labelControl25.Text = "کد اقتصادی";
             // 
@@ -917,7 +917,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(244, 9);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(73, 25);
+            this.labelControl8.Size = new System.Drawing.Size(72, 25);
             this.labelControl8.TabIndex = 16;
             this.labelControl8.Text = "نوع فعالیت";
             // 

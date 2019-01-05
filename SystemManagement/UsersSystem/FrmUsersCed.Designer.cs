@@ -195,9 +195,10 @@
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl5);
-            this.panelControl1.Location = new System.Drawing.Point(12, 12);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(481, 184);
+            this.panelControl1.Size = new System.Drawing.Size(482, 184);
             this.panelControl1.TabIndex = 24;
             // 
             // btnNewCode
@@ -231,16 +232,17 @@
             this.panelControl2.Controls.Add(this.btnClose);
             this.panelControl2.Controls.Add(this.btnCreateNext);
             this.panelControl2.Controls.Add(this.btnCreateClose);
-            this.panelControl2.Location = new System.Drawing.Point(12, 202);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl2.Location = new System.Drawing.Point(0, 188);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(481, 48);
+            this.panelControl2.Size = new System.Drawing.Size(482, 48);
             this.panelControl2.TabIndex = 25;
             // 
             // FrmUsersCed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 259);
+            this.ClientSize = new System.Drawing.Size(482, 236);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

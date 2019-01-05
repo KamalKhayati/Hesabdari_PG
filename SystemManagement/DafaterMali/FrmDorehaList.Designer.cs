@@ -30,26 +30,53 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDorehaList));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMsDoreMaliId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVahedName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colShobeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoreMaliCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoreMaliName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEndDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoreIsDefault = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoreIsClose = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaliat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAvarez = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoreMaliIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPermissiveUsers = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMsMajmoeId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMajmoeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMsVahedId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMsShobeId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMsShobe1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsDoreMalihaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnCreate = new DevExpress.XtraBars.BarButtonItem();
@@ -72,6 +99,27 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMsDoreMaliId,
+            this.Line,
+            this.colVahedName,
+            this.colShobeName,
+            this.colDoreMaliCode,
+            this.colDoreMaliName,
+            this.colStartDoreMali,
+            this.colEndDoreMali,
+            this.colDoreIsDefault,
+            this.colDoreIsClose,
+            this.colMaliat,
+            this.colAvarez,
+            this.colDoreMaliIsActive,
+            this.colPermissiveUsers,
+            this.colMsMajmoeId,
+            this.colMajmoeName,
+            this.colMsVahedId,
+            this.colMsShobeId,
+            this.colMsShobe1,
+            this.colRmsDoreMalihaBmsUserhas});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -87,6 +135,237 @@
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
+            this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
+            // 
+            // colMsDoreMaliId
+            // 
+            this.colMsDoreMaliId.FieldName = "MsDoreMaliId";
+            this.colMsDoreMaliId.Name = "colMsDoreMaliId";
+            // 
+            // Line
+            // 
+            this.Line.AppearanceCell.Options.UseTextOptions = true;
+            this.Line.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Line.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Line.AppearanceHeader.Options.UseTextOptions = true;
+            this.Line.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Line.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Line.Caption = "ردیف";
+            this.Line.FieldName = "Line";
+            this.Line.Name = "Line";
+            this.Line.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.Line.Visible = true;
+            this.Line.VisibleIndex = 0;
+            this.Line.Width = 60;
+            // 
+            // colVahedName
+            // 
+            this.colVahedName.AppearanceCell.Options.UseTextOptions = true;
+            this.colVahedName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colVahedName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colVahedName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colVahedName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colVahedName.Caption = "نام واحد تجاری یا خدماتی";
+            this.colVahedName.FieldName = "VahedName";
+            this.colVahedName.Name = "colVahedName";
+            this.colVahedName.Visible = true;
+            this.colVahedName.VisibleIndex = 1;
+            this.colVahedName.Width = 300;
+            // 
+            // colShobeName
+            // 
+            this.colShobeName.AppearanceCell.Options.UseTextOptions = true;
+            this.colShobeName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colShobeName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colShobeName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colShobeName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colShobeName.Caption = "نام شعبه";
+            this.colShobeName.FieldName = "ShobeName";
+            this.colShobeName.Name = "colShobeName";
+            this.colShobeName.Visible = true;
+            this.colShobeName.VisibleIndex = 2;
+            this.colShobeName.Width = 300;
+            // 
+            // colDoreMaliCode
+            // 
+            this.colDoreMaliCode.AppearanceCell.Options.UseTextOptions = true;
+            this.colDoreMaliCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMaliCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMaliCode.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoreMaliCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMaliCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMaliCode.Caption = "کد";
+            this.colDoreMaliCode.FieldName = "DoreMaliCode";
+            this.colDoreMaliCode.Name = "colDoreMaliCode";
+            this.colDoreMaliCode.Visible = true;
+            this.colDoreMaliCode.VisibleIndex = 3;
+            this.colDoreMaliCode.Width = 120;
+            // 
+            // colDoreMaliName
+            // 
+            this.colDoreMaliName.AppearanceCell.Options.UseTextOptions = true;
+            this.colDoreMaliName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMaliName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMaliName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoreMaliName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMaliName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMaliName.Caption = "دوره مالی";
+            this.colDoreMaliName.FieldName = "DoreMaliName";
+            this.colDoreMaliName.Name = "colDoreMaliName";
+            this.colDoreMaliName.Visible = true;
+            this.colDoreMaliName.VisibleIndex = 4;
+            this.colDoreMaliName.Width = 90;
+            // 
+            // colStartDoreMali
+            // 
+            this.colStartDoreMali.AppearanceCell.Options.UseTextOptions = true;
+            this.colStartDoreMali.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colStartDoreMali.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colStartDoreMali.AppearanceHeader.Options.UseTextOptions = true;
+            this.colStartDoreMali.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colStartDoreMali.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colStartDoreMali.Caption = "تاریخ شروع دوره";
+            this.colStartDoreMali.FieldName = "StartDoreMali";
+            this.colStartDoreMali.Name = "colStartDoreMali";
+            this.colStartDoreMali.Visible = true;
+            this.colStartDoreMali.VisibleIndex = 5;
+            this.colStartDoreMali.Width = 130;
+            // 
+            // colEndDoreMali
+            // 
+            this.colEndDoreMali.AppearanceCell.Options.UseTextOptions = true;
+            this.colEndDoreMali.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEndDoreMali.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colEndDoreMali.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEndDoreMali.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEndDoreMali.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colEndDoreMali.Caption = "تاریخ پایان دوره";
+            this.colEndDoreMali.FieldName = "EndDoreMali";
+            this.colEndDoreMali.Name = "colEndDoreMali";
+            this.colEndDoreMali.Visible = true;
+            this.colEndDoreMali.VisibleIndex = 6;
+            this.colEndDoreMali.Width = 130;
+            // 
+            // colDoreIsDefault
+            // 
+            this.colDoreIsDefault.AppearanceCell.Options.UseTextOptions = true;
+            this.colDoreIsDefault.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreIsDefault.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreIsDefault.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoreIsDefault.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreIsDefault.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreIsDefault.Caption = "دوره پیش فرض";
+            this.colDoreIsDefault.FieldName = "DoreIsDefault";
+            this.colDoreIsDefault.Name = "colDoreIsDefault";
+            this.colDoreIsDefault.Visible = true;
+            this.colDoreIsDefault.VisibleIndex = 7;
+            this.colDoreIsDefault.Width = 130;
+            // 
+            // colDoreIsClose
+            // 
+            this.colDoreIsClose.AppearanceCell.Options.UseTextOptions = true;
+            this.colDoreIsClose.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreIsClose.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreIsClose.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoreIsClose.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreIsClose.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreIsClose.Caption = "بستن دوره مالی";
+            this.colDoreIsClose.FieldName = "DoreIsClose";
+            this.colDoreIsClose.Name = "colDoreIsClose";
+            this.colDoreIsClose.Visible = true;
+            this.colDoreIsClose.VisibleIndex = 8;
+            this.colDoreIsClose.Width = 130;
+            // 
+            // colMaliat
+            // 
+            this.colMaliat.AppearanceCell.Options.UseTextOptions = true;
+            this.colMaliat.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMaliat.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colMaliat.AppearanceHeader.Options.UseTextOptions = true;
+            this.colMaliat.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colMaliat.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colMaliat.Caption = "مالیات ارزش افزوده";
+            this.colMaliat.FieldName = "Maliat";
+            this.colMaliat.Name = "colMaliat";
+            this.colMaliat.Visible = true;
+            this.colMaliat.VisibleIndex = 9;
+            this.colMaliat.Width = 140;
+            // 
+            // colAvarez
+            // 
+            this.colAvarez.AppearanceCell.Options.UseTextOptions = true;
+            this.colAvarez.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAvarez.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colAvarez.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAvarez.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAvarez.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colAvarez.Caption = "عوارض ارزش افزوده";
+            this.colAvarez.FieldName = "Avarez";
+            this.colAvarez.Name = "colAvarez";
+            this.colAvarez.Visible = true;
+            this.colAvarez.VisibleIndex = 10;
+            this.colAvarez.Width = 140;
+            // 
+            // colDoreMaliIsActive
+            // 
+            this.colDoreMaliIsActive.AppearanceCell.Options.UseTextOptions = true;
+            this.colDoreMaliIsActive.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMaliIsActive.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMaliIsActive.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoreMaliIsActive.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMaliIsActive.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMaliIsActive.Caption = "فعال";
+            this.colDoreMaliIsActive.FieldName = "DoreMaliIsActive";
+            this.colDoreMaliIsActive.Name = "colDoreMaliIsActive";
+            this.colDoreMaliIsActive.Visible = true;
+            this.colDoreMaliIsActive.VisibleIndex = 11;
+            this.colDoreMaliIsActive.Width = 60;
+            // 
+            // colPermissiveUsers
+            // 
+            this.colPermissiveUsers.AppearanceCell.Options.UseTextOptions = true;
+            this.colPermissiveUsers.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colPermissiveUsers.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPermissiveUsers.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPermissiveUsers.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colPermissiveUsers.Caption = "کاربران مجاز به ثبت عملیات";
+            this.colPermissiveUsers.FieldName = "PermissiveUsers";
+            this.colPermissiveUsers.Name = "colPermissiveUsers";
+            this.colPermissiveUsers.Visible = true;
+            this.colPermissiveUsers.VisibleIndex = 12;
+            this.colPermissiveUsers.Width = 600;
+            // 
+            // colMsMajmoeId
+            // 
+            this.colMsMajmoeId.FieldName = "MsMajmoeId";
+            this.colMsMajmoeId.Name = "colMsMajmoeId";
+            // 
+            // colMajmoeName
+            // 
+            this.colMajmoeName.FieldName = "MajmoeName";
+            this.colMajmoeName.Name = "colMajmoeName";
+            // 
+            // colMsVahedId
+            // 
+            this.colMsVahedId.FieldName = "MsVahedId";
+            this.colMsVahedId.Name = "colMsVahedId";
+            // 
+            // colMsShobeId
+            // 
+            this.colMsShobeId.FieldName = "MsShobeId";
+            this.colMsShobeId.Name = "colMsShobeId";
+            // 
+            // colMsShobe1
+            // 
+            this.colMsShobe1.FieldName = "MsShobe1";
+            this.colMsShobe1.Name = "colMsShobe1";
+            // 
+            // colRmsDoreMalihaBmsUserhas
+            // 
+            this.colRmsDoreMalihaBmsUserhas.FieldName = "RmsDoreMalihaBmsUserhas";
+            this.colRmsDoreMalihaBmsUserhas.Name = "colRmsDoreMalihaBmsUserhas";
             // 
             // gridControl1
             // 
@@ -95,10 +374,15 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1092, 465);
+            this.gridControl1.Size = new System.Drawing.Size(1094, 465);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // pLinqInstantFeedbackSource1
+            // 
+            this.pLinqInstantFeedbackSource1.DefaultSorting = "DoreMaliCode ASC";
+            this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsDoreMali);
             // 
             // barManager1
             // 
@@ -156,12 +440,13 @@
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
             this.btnCreate.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F4);
             this.btnCreate.Name = "btnCreate";
-            toolTipTitleItem1.Text = "ایجاد";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "F4";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnCreate.SuperTip = superToolTip1;
+            toolTipTitleItem9.Text = "ایجاد";
+            toolTipItem9.LeftIndent = 6;
+            toolTipItem9.Text = "F4";
+            superToolTip9.Items.Add(toolTipTitleItem9);
+            superToolTip9.Items.Add(toolTipItem9);
+            this.btnCreate.SuperTip = superToolTip9;
+            this.btnCreate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreate_ItemClick);
             // 
             // btnEdit
             // 
@@ -170,12 +455,13 @@
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
             this.btnEdit.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnEdit.Name = "btnEdit";
-            toolTipTitleItem2.Text = "ویرایش";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "F5";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnEdit.SuperTip = superToolTip2;
+            toolTipTitleItem10.Text = "ویرایش";
+            toolTipItem10.LeftIndent = 6;
+            toolTipItem10.Text = "F5";
+            superToolTip10.Items.Add(toolTipTitleItem10);
+            superToolTip10.Items.Add(toolTipItem10);
+            this.btnEdit.SuperTip = superToolTip10;
+            this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
             // btnDelete
             // 
@@ -184,21 +470,28 @@
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
             this.btnDelete.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F6);
             this.btnDelete.Name = "btnDelete";
-            toolTipTitleItem3.Text = "حذف";
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "F6";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.btnDelete.SuperTip = superToolTip3;
+            toolTipTitleItem11.Text = "حذف";
+            toolTipItem11.LeftIndent = 6;
+            toolTipItem11.Text = "F6";
+            superToolTip11.Items.Add(toolTipTitleItem11);
+            superToolTip11.Items.Add(toolTipItem11);
+            this.btnDelete.SuperTip = superToolTip11;
+            this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
             // 
             // btnDisplyActiveList
             // 
             this.btnDisplyActiveList.Caption = "نمایش لیست (فعال)";
             this.btnDisplyActiveList.Id = 3;
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.F));
+            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
+            toolTipTitleItem12.Text = "لیست (فعال)";
+            toolTipItem12.LeftIndent = 6;
+            toolTipItem12.Text = "Ctrl+F";
+            superToolTip12.Items.Add(toolTipTitleItem12);
+            superToolTip12.Items.Add(toolTipItem12);
+            this.btnDisplyActiveList.SuperTip = superToolTip12;
+            this.btnDisplyActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyActiveList_ItemClick);
             // 
             // btnDisplyNotActiveList
             // 
@@ -206,8 +499,15 @@
             this.btnDisplyNotActiveList.Id = 4;
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
             this.btnDisplyNotActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.G));
+                | System.Windows.Forms.Keys.F));
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
+            toolTipTitleItem13.Text = "لیست (غیرفعال)";
+            toolTipItem13.LeftIndent = 6;
+            toolTipItem13.Text = "Ctrl+Shift+F";
+            superToolTip13.Items.Add(toolTipTitleItem13);
+            superToolTip13.Items.Add(toolTipItem13);
+            this.btnDisplyNotActiveList.SuperTip = superToolTip13;
+            this.btnDisplyNotActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyNotActiveList_ItemClick);
             // 
             // btnPrintPreview
             // 
@@ -217,12 +517,13 @@
             this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
                 | System.Windows.Forms.Keys.P));
             this.btnPrintPreview.Name = "btnPrintPreview";
-            toolTipTitleItem4.Text = "پیش نمایش";
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Ctrl+Shift+P";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem4);
-            this.btnPrintPreview.SuperTip = superToolTip4;
+            toolTipTitleItem14.Text = "پیش نمایش";
+            toolTipItem14.LeftIndent = 6;
+            toolTipItem14.Text = "Ctrl+Shift+P";
+            superToolTip14.Items.Add(toolTipTitleItem14);
+            superToolTip14.Items.Add(toolTipItem14);
+            this.btnPrintPreview.SuperTip = superToolTip14;
+            this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // btnListPrint
             // 
@@ -231,12 +532,12 @@
             this.btnListPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListPrint.ImageOptions.SvgImage")));
             this.btnListPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.btnListPrint.Name = "btnListPrint";
-            toolTipTitleItem5.Text = "چاپ";
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Ctrl+P";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem5);
-            this.btnListPrint.SuperTip = superToolTip5;
+            toolTipTitleItem15.Text = "چاپ";
+            toolTipItem15.LeftIndent = 6;
+            toolTipItem15.Text = "Ctrl+P";
+            superToolTip15.Items.Add(toolTipTitleItem15);
+            superToolTip15.Items.Add(toolTipItem15);
+            this.btnListPrint.SuperTip = superToolTip15;
             // 
             // btnEmkanat
             // 
@@ -254,12 +555,13 @@
             this.btnAdvancedSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdvancedSearch.ImageOptions.SvgImage")));
             this.btnAdvancedSearch.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
-            toolTipTitleItem6.Text = "جستجو";
-            toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Ctrl+S";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            superToolTip6.Items.Add(toolTipItem6);
-            this.btnAdvancedSearch.SuperTip = superToolTip6;
+            toolTipTitleItem16.Text = "جستجو";
+            toolTipItem16.LeftIndent = 6;
+            toolTipItem16.Text = "Ctrl+S";
+            superToolTip16.Items.Add(toolTipTitleItem16);
+            superToolTip16.Items.Add(toolTipItem16);
+            this.btnAdvancedSearch.SuperTip = superToolTip16;
+            this.btnAdvancedSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdvancedSearch_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -268,7 +570,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1092, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1094, 60);
             // 
             // barDockControlBottom
             // 
@@ -277,7 +579,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 525);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1092, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1094, 0);
             // 
             // barDockControlLeft
             // 
@@ -292,7 +594,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1092, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1094, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 465);
@@ -301,7 +603,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 525);
+            this.ClientSize = new System.Drawing.Size(1094, 525);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -338,5 +640,26 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraGrid.Columns.GridColumn colMsDoreMaliId;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoreMaliCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoreMaliName;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDoreMali;
+        private DevExpress.XtraGrid.Columns.GridColumn colEndDoreMali;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoreMaliIsActive;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoreIsDefault;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoreIsClose;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaliat;
+        private DevExpress.XtraGrid.Columns.GridColumn colAvarez;
+        private DevExpress.XtraGrid.Columns.GridColumn colMsMajmoeId;
+        private DevExpress.XtraGrid.Columns.GridColumn colMajmoeName;
+        private DevExpress.XtraGrid.Columns.GridColumn colMsVahedId;
+        private DevExpress.XtraGrid.Columns.GridColumn colVahedName;
+        private DevExpress.XtraGrid.Columns.GridColumn colMsShobeId;
+        private DevExpress.XtraGrid.Columns.GridColumn colShobeName;
+        private DevExpress.XtraGrid.Columns.GridColumn colMsShobe1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPermissiveUsers;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsDoreMalihaBmsUserhas;
+        private DevExpress.Data.PLinq.PLinqInstantFeedbackSource pLinqInstantFeedbackSource1;
+        private DevExpress.XtraGrid.Columns.GridColumn Line;
     }
 }

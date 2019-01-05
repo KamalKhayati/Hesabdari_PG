@@ -22,9 +22,11 @@ namespace SystemManagement.DafaterMali
 {
     public partial class FrmDorehaCed : DevExpress.XtraEditors.XtraForm
     {
-        public FrmDorehaCed()
+        FrmDorehaList Fm;
+        public FrmDorehaCed(FrmDorehaList fm)
         {
             InitializeComponent();
+            Fm = fm;
         }
     }
 }

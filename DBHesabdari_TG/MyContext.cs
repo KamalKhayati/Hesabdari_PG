@@ -58,6 +58,8 @@ namespace DBHesabdari_TG
         public virtual DbSet<MsShobe> MsShobes { get; set; }
         public virtual DbSet<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }
         public virtual DbSet<MsInfoOther> MsInfoOthers { get; set; }
+        public virtual DbSet<MsDoreMali> MsDoreMalis { get; set; }
+        public virtual DbSet<RmsDoreMalihaBmsUserha> RmsDoreMalihaBmsUserhas { get; set; }
 
 
 
@@ -93,8 +95,12 @@ namespace DBHesabdari_TG
             modelBuilder.Entity<MsVahed>().HasMany(m => m.RmsVahedhaBmsUserhas).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(false);
             modelBuilder.Entity<MsUser>().HasMany(m => m.RmsVahedhaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<MsShobe>().HasMany(m => m.MsDoreMalis).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(false);
             modelBuilder.Entity<MsShobe>().HasMany(m => m.RmsShobehaBmsUserhas).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(false);
             modelBuilder.Entity<MsUser>().HasMany(m => m.RmsShobehaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MsDoreMali>().HasMany(m => m.RmsDoreMalihaBmsUserhas).WithRequired(m => m.MsDoreMali1).HasForeignKey(m => m.MsDoreMaliId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsDoreMalihaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
 
 
 

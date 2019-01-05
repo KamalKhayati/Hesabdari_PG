@@ -197,12 +197,11 @@
             this.btnDisplyActiveList.Caption = "نمایش لیست (فعال)";
             this.btnDisplyActiveList.Id = 3;
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.F));
+            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
             toolTipTitleItem4.Text = "لیست(فعال)";
             toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Ctrl+Shift+F";
+            toolTipItem4.Text = "Ctrl+F";
             superToolTip4.Items.Add(toolTipTitleItem4);
             superToolTip4.Items.Add(toolTipItem4);
             this.btnDisplyActiveList.SuperTip = superToolTip4;
@@ -214,11 +213,11 @@
             this.btnDisplyNotActiveList.Id = 4;
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
             this.btnDisplyNotActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.G));
+                | System.Windows.Forms.Keys.F));
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
             toolTipTitleItem5.Text = "لیست(غیرفعال)";
             toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Ctrl+Shift+G";
+            toolTipItem5.Text = "Ctrl+Shift+F";
             superToolTip5.Items.Add(toolTipTitleItem5);
             superToolTip5.Items.Add(toolTipItem5);
             this.btnDisplyNotActiveList.SuperTip = superToolTip5;

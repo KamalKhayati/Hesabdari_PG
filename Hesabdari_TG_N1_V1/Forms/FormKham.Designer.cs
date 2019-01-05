@@ -47,6 +47,12 @@
             DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -174,9 +180,14 @@
             this.btnDisplyActiveList.Caption = "نمایش لیست (فعال)";
             this.btnDisplyActiveList.Id = 3;
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.F));
+            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
+            toolTipTitleItem4.Text = "لیست (فعال)";
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "Ctrl+F";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.btnDisplyActiveList.SuperTip = superToolTip4;
             // 
             // btnDisplyNotActiveList
             // 
@@ -184,8 +195,14 @@
             this.btnDisplyNotActiveList.Id = 4;
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
             this.btnDisplyNotActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.G));
+                | System.Windows.Forms.Keys.F));
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
+            toolTipTitleItem5.Text = "لیست (غیرفعال)";
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = "Ctrl+Shift+F";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem5);
+            this.btnDisplyNotActiveList.SuperTip = superToolTip5;
             // 
             // btnPrintPreview
             // 
@@ -195,12 +212,12 @@
             this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
                 | System.Windows.Forms.Keys.P));
             this.btnPrintPreview.Name = "btnPrintPreview";
-            toolTipTitleItem4.Text = "پیش نمایش";
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Ctrl+Shift+P";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem4);
-            this.btnPrintPreview.SuperTip = superToolTip4;
+            toolTipTitleItem6.Text = "پیش نمایش";
+            toolTipItem6.LeftIndent = 6;
+            toolTipItem6.Text = "Ctrl+Shift+P";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnPrintPreview.SuperTip = superToolTip6;
             // 
             // btnListPrint
             // 
@@ -209,12 +226,12 @@
             this.btnListPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListPrint.ImageOptions.SvgImage")));
             this.btnListPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.btnListPrint.Name = "btnListPrint";
-            toolTipTitleItem5.Text = "چاپ";
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Ctrl+P";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem5);
-            this.btnListPrint.SuperTip = superToolTip5;
+            toolTipTitleItem7.Text = "چاپ";
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Ctrl+P";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btnListPrint.SuperTip = superToolTip7;
             // 
             // btnEmkanat
             // 
@@ -232,12 +249,12 @@
             this.btnAdvancedSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdvancedSearch.ImageOptions.SvgImage")));
             this.btnAdvancedSearch.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
-            toolTipTitleItem6.Text = "جستجو";
-            toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Ctrl+S";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            superToolTip6.Items.Add(toolTipItem6);
-            this.btnAdvancedSearch.SuperTip = superToolTip6;
+            toolTipTitleItem8.Text = "جستجو";
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Ctrl+S";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            superToolTip8.Items.Add(toolTipItem8);
+            this.btnAdvancedSearch.SuperTip = superToolTip8;
             // 
             // barDockControlTop
             // 

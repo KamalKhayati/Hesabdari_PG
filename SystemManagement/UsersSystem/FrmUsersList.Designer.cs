@@ -30,30 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsersList));
-            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip23 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem23 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip24 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem24 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip25 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem25 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem25 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip26 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem26 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem26 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip27 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem27 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem27 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnCreate = new DevExpress.XtraBars.BarButtonItem();
@@ -143,12 +143,12 @@
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
             this.btnCreate.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F4);
             this.btnCreate.Name = "btnCreate";
-            toolTipTitleItem20.Text = "ایجاد";
-            toolTipItem20.LeftIndent = 6;
-            toolTipItem20.Text = "F4";
-            superToolTip20.Items.Add(toolTipTitleItem20);
-            superToolTip20.Items.Add(toolTipItem20);
-            this.btnCreate.SuperTip = superToolTip20;
+            toolTipTitleItem1.Text = "ایجاد";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "F4";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnCreate.SuperTip = superToolTip1;
             this.btnCreate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreate_ItemClick);
             // 
             // btnEdit
@@ -158,12 +158,12 @@
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
             this.btnEdit.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnEdit.Name = "btnEdit";
-            toolTipTitleItem21.Text = "ویرایش";
-            toolTipItem21.LeftIndent = 6;
-            toolTipItem21.Text = "F5";
-            superToolTip21.Items.Add(toolTipTitleItem21);
-            superToolTip21.Items.Add(toolTipItem21);
-            this.btnEdit.SuperTip = superToolTip21;
+            toolTipTitleItem2.Text = "ویرایش";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "F5";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnEdit.SuperTip = superToolTip2;
             this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
             // btnDelete
@@ -173,12 +173,12 @@
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
             this.btnDelete.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F6);
             this.btnDelete.Name = "btnDelete";
-            toolTipTitleItem22.Text = "حذف";
-            toolTipItem22.LeftIndent = 6;
-            toolTipItem22.Text = "F6";
-            superToolTip22.Items.Add(toolTipTitleItem22);
-            superToolTip22.Items.Add(toolTipItem22);
-            this.btnDelete.SuperTip = superToolTip22;
+            toolTipTitleItem3.Text = "حذف";
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "F6";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.btnDelete.SuperTip = superToolTip3;
             this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
             // 
             // btnDisplyActiveList
@@ -186,15 +186,14 @@
             this.btnDisplyActiveList.Caption = "نمایش لیست (فعال)";
             this.btnDisplyActiveList.Id = 3;
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.F));
+            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            toolTipTitleItem23.Text = "لیست (فعال)";
-            toolTipItem23.LeftIndent = 6;
-            toolTipItem23.Text = "Ctrl+Shift+F";
-            superToolTip23.Items.Add(toolTipTitleItem23);
-            superToolTip23.Items.Add(toolTipItem23);
-            this.btnDisplyActiveList.SuperTip = superToolTip23;
+            toolTipTitleItem4.Text = "لیست (فعال)";
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "Ctrl+F";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.btnDisplyActiveList.SuperTip = superToolTip4;
             this.btnDisplyActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyActiveList_ItemClick);
             // 
             // btnDisplyNotActiveList
@@ -203,14 +202,14 @@
             this.btnDisplyNotActiveList.Id = 4;
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
             this.btnDisplyNotActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.G));
+                | System.Windows.Forms.Keys.F));
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
-            toolTipTitleItem24.Text = "لیست(غیرفعال)";
-            toolTipItem24.LeftIndent = 6;
-            toolTipItem24.Text = "Ctrl+Shift+G";
-            superToolTip24.Items.Add(toolTipTitleItem24);
-            superToolTip24.Items.Add(toolTipItem24);
-            this.btnDisplyNotActiveList.SuperTip = superToolTip24;
+            toolTipTitleItem5.Text = "لیست(غیرفعال)";
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = "Ctrl+Shift+F";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem5);
+            this.btnDisplyNotActiveList.SuperTip = superToolTip5;
             this.btnDisplyNotActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyNotActiveList_ItemClick);
             // 
             // btnPrintPreview
@@ -221,12 +220,12 @@
             this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
                 | System.Windows.Forms.Keys.P));
             this.btnPrintPreview.Name = "btnPrintPreview";
-            toolTipTitleItem25.Text = "پیش نمایش";
-            toolTipItem25.LeftIndent = 6;
-            toolTipItem25.Text = "Ctrl+Shift+P";
-            superToolTip25.Items.Add(toolTipTitleItem25);
-            superToolTip25.Items.Add(toolTipItem25);
-            this.btnPrintPreview.SuperTip = superToolTip25;
+            toolTipTitleItem6.Text = "پیش نمایش";
+            toolTipItem6.LeftIndent = 6;
+            toolTipItem6.Text = "Ctrl+Shift+P";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnPrintPreview.SuperTip = superToolTip6;
             this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // btnListPrint
@@ -236,12 +235,12 @@
             this.btnListPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListPrint.ImageOptions.SvgImage")));
             this.btnListPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
             this.btnListPrint.Name = "btnListPrint";
-            toolTipTitleItem26.Text = "چاپ";
-            toolTipItem26.LeftIndent = 6;
-            toolTipItem26.Text = "Ctrl+P";
-            superToolTip26.Items.Add(toolTipTitleItem26);
-            superToolTip26.Items.Add(toolTipItem26);
-            this.btnListPrint.SuperTip = superToolTip26;
+            toolTipTitleItem7.Text = "چاپ";
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Ctrl+P";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btnListPrint.SuperTip = superToolTip7;
             // 
             // btnEmkanat
             // 
@@ -259,12 +258,12 @@
             this.btnAdvancedSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdvancedSearch.ImageOptions.SvgImage")));
             this.btnAdvancedSearch.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
-            toolTipTitleItem27.Text = "جستجو";
-            toolTipItem27.LeftIndent = 6;
-            toolTipItem27.Text = "Ctrl+S";
-            superToolTip27.Items.Add(toolTipTitleItem27);
-            superToolTip27.Items.Add(toolTipItem27);
-            this.btnAdvancedSearch.SuperTip = superToolTip27;
+            toolTipTitleItem8.Text = "جستجو";
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Ctrl+S";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            superToolTip8.Items.Add(toolTipItem8);
+            this.btnAdvancedSearch.SuperTip = superToolTip8;
             this.btnAdvancedSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdvancedSearch_ItemClick);
             // 
             // barDockControlTop

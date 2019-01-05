@@ -113,5 +113,15 @@ namespace Hesabdari_TG_N1_V1.Forms
             HelpClass1.ActiveForm(fm);
 
         }
+
+        private void btnListDorehaiMali_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmDorehaList fm = new FrmDorehaList
+            {
+                MdiParent = this
+            };
+            HelpClass1.ActiveForm(fm);
+
+        }
     }
 }

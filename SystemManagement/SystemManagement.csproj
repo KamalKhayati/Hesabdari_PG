@@ -125,6 +125,9 @@
     <Compile Include="UsersSystem\FrmUsersList.Designer.cs">
       <DependentUpon>FrmUsersList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DafaterMali\FrmDorehaCed.resx">
+      <DependentUpon>FrmDorehaCed.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DafaterMali\FrmDorehaList.resx">
       <DependentUpon>FrmDorehaList.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFroosh = new DevExpress.XtraBars.BarButtonItem();
@@ -155,11 +154,11 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -917,7 +916,7 @@
             // 
             // btnListShoabat
             // 
-            this.btnListShoabat.Caption = "لیست اسامی شعبات شرکتها یا واحدها ";
+            this.btnListShoabat.Caption = "لیست اسامی شعبات یا نمایندگی شرکتها و یا واحدها ";
             this.btnListShoabat.Id = 107;
             this.btnListShoabat.Name = "btnListShoabat";
             this.btnListShoabat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListShoabat_ItemClick);
@@ -927,6 +926,7 @@
             this.btnListDorehaiMali.Caption = "لیست دوره های مالی";
             this.btnListDorehaiMali.Id = 108;
             this.btnListDorehaiMali.Name = "btnListDorehaiMali";
+            this.btnListDorehaiMali.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListDorehaiMali_ItemClick);
             // 
             // rpKharidFroosh
             // 
