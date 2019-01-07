@@ -42,6 +42,7 @@
             this.chkIsActive = new DevExpress.XtraEditors.CheckEdit();
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.chkEditCode = new DevExpress.XtraEditors.CheckEdit();
             this.btnNewCode = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreateNext = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -53,24 +54,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(213, 8);
+            this.txtCode.EditValue = "101";
+            this.txtCode.EnterMoveNextControl = true;
+            this.txtCode.Location = new System.Drawing.Point(229, 8);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtCode.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtCode.Properties.Mask.EditMask = "f0";
+            this.txtCode.Properties.Mask.EditMask = "000";
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCode.Properties.MaxLength = 3;
-            this.txtCode.Size = new System.Drawing.Size(108, 32);
-            this.txtCode.TabIndex = 4;
-            this.txtCode.TabStop = false;
-            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.txtCode.Properties.ReadOnly = true;
+            this.txtCode.Size = new System.Drawing.Size(92, 32);
+            this.txtCode.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -82,30 +85,30 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.EnterMoveNextControl = true;
             this.txtPassword.Location = new System.Drawing.Point(113, 146);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.MaxLength = 50;
             this.txtPassword.Size = new System.Drawing.Size(208, 32);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.txtPassword.TabIndex = 3;
             // 
             // txtUserName
             // 
+            this.txtUserName.EnterMoveNextControl = true;
             this.txtUserName.Location = new System.Drawing.Point(113, 108);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.MaxLength = 50;
             this.txtUserName.Size = new System.Drawing.Size(208, 32);
-            this.txtUserName.TabIndex = 1;
-            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.txtUserName.TabIndex = 2;
             // 
             // txtName
             // 
+            this.txtName.EnterMoveNextControl = true;
             this.txtName.Location = new System.Drawing.Point(5, 46);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Size = new System.Drawing.Size(316, 32);
-            this.txtName.TabIndex = 0;
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.txtName.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -158,14 +161,14 @@
             // chkIsActive
             // 
             this.chkIsActive.EditValue = true;
+            this.chkIsActive.EnterMoveNextControl = true;
             this.chkIsActive.Location = new System.Drawing.Point(5, 145);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkIsActive.Properties.Caption = "فعال";
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(58, 33);
-            this.chkIsActive.TabIndex = 3;
-            this.chkIsActive.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.chkIsActive.TabIndex = 4;
             // 
             // txtId
             // 
@@ -177,13 +180,14 @@
             this.txtId.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtId.Properties.NullText = "آیدی انبار";
             this.txtId.Properties.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(96, 32);
+            this.txtId.Size = new System.Drawing.Size(86, 32);
             this.txtId.TabIndex = 6;
             this.txtId.TabStop = false;
             this.txtId.Visible = false;
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.chkEditCode);
             this.panelControl1.Controls.Add(this.btnNewCode);
             this.panelControl1.Controls.Add(this.txtCode);
             this.panelControl1.Controls.Add(this.chkIsActive);
@@ -201,10 +205,21 @@
             this.panelControl1.Size = new System.Drawing.Size(482, 184);
             this.panelControl1.TabIndex = 24;
             // 
+            // chkEditCode
+            // 
+            this.chkEditCode.Location = new System.Drawing.Point(203, 7);
+            this.chkEditCode.Name = "chkEditCode";
+            this.chkEditCode.Properties.Caption = "checkEdit1";
+            this.chkEditCode.Size = new System.Drawing.Size(20, 29);
+            this.chkEditCode.TabIndex = 7;
+            this.chkEditCode.TabStop = false;
+            this.chkEditCode.ToolTip = "ویرایش یا تغییر کد بصورت دستی";
+            this.chkEditCode.CheckedChanged += new System.EventHandler(this.chkEditCode_CheckedChanged);
+            // 
             // btnNewCode
             // 
             this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode.ImageOptions.SvgImage")));
-            this.btnNewCode.Location = new System.Drawing.Point(107, 6);
+            this.btnNewCode.Location = new System.Drawing.Point(97, 5);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(100, 35);
             this.btnNewCode.TabIndex = 5;
@@ -265,6 +280,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -289,5 +305,6 @@
         private DevExpress.XtraEditors.SimpleButton btnNewCode;
         public DevExpress.XtraEditors.SimpleButton btnCreateNext;
         public DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.CheckEdit chkEditCode;
     }
 }

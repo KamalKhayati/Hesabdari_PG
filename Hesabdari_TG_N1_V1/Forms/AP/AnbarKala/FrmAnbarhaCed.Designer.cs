@@ -58,6 +58,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.EnterMoveNextControl = true;
             this.txtCode.Location = new System.Drawing.Point(273, 8);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
@@ -69,16 +70,15 @@
             this.txtCode.Size = new System.Drawing.Size(102, 32);
             this.txtCode.TabIndex = 4;
             this.txtCode.TabStop = false;
-            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // txtName
             // 
+            this.txtName.EnterMoveNextControl = true;
             this.txtName.Location = new System.Drawing.Point(5, 46);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Size = new System.Drawing.Size(370, 32);
             this.txtName.TabIndex = 0;
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // btnCreateClose
             // 
@@ -119,6 +119,7 @@
             // chkIsActive
             // 
             this.chkIsActive.EditValue = true;
+            this.chkIsActive.EnterMoveNextControl = true;
             this.chkIsActive.Location = new System.Drawing.Point(313, 123);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
@@ -126,7 +127,6 @@
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(58, 33);
             this.chkIsActive.TabIndex = 2;
-            this.chkIsActive.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // txtId
             // 
@@ -162,6 +162,7 @@
             // 
             // chkcmbPermissiveUsers
             // 
+            this.chkcmbPermissiveUsers.EnterMoveNextControl = true;
             this.chkcmbPermissiveUsers.Location = new System.Drawing.Point(5, 85);
             this.chkcmbPermissiveUsers.Name = "chkcmbPermissiveUsers";
             this.chkcmbPermissiveUsers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -169,7 +170,6 @@
             this.chkcmbPermissiveUsers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkcmbPermissiveUsers.Size = new System.Drawing.Size(370, 32);
             this.chkcmbPermissiveUsers.TabIndex = 1;
-            this.chkcmbPermissiveUsers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // labelControl3
             // 
@@ -192,6 +192,7 @@
             // 
             // chkAllowSupplyNegative
             // 
+            this.chkAllowSupplyNegative.EnterMoveNextControl = true;
             this.chkAllowSupplyNegative.Location = new System.Drawing.Point(113, 123);
             this.chkAllowSupplyNegative.Name = "chkAllowSupplyNegative";
             this.chkAllowSupplyNegative.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
@@ -199,7 +200,6 @@
             this.chkAllowSupplyNegative.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkAllowSupplyNegative.Size = new System.Drawing.Size(191, 33);
             this.chkAllowSupplyNegative.TabIndex = 3;
-            this.chkAllowSupplyNegative.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // btnCreateNext
             // 

@@ -1,6 +1,6 @@
 ﻿namespace SystemManagement.DafaterMali
 {
-    partial class FrmDorehaCed
+    partial class FrmSalhaCed
     {
         /// <summary>
         /// Required designer variable.
@@ -29,31 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDorehaCed));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSalhaCed));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnCreateClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreateNext = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.chkEditCode = new DevExpress.XtraEditors.CheckEdit();
             this.txtAvarez = new DevExpress.XtraEditors.TextEdit();
             this.txtMaliat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.chkDoreIsClose = new DevExpress.XtraEditors.CheckEdit();
-            this.chkDoreIsDefault = new DevExpress.XtraEditors.CheckEdit();
-            this.txtEndDore = new DevExpress.XtraEditors.TextEdit();
-            this.txtDoreMali = new DevExpress.XtraEditors.TextEdit();
+            this.chkSalIsClose = new DevExpress.XtraEditors.CheckEdit();
+            this.chkSalIsDefault = new DevExpress.XtraEditors.CheckEdit();
+            this.txtEndSal = new DevExpress.XtraEditors.TextEdit();
+            this.txtSalMali = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.chkcmbPermissiveUsers = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.rmsShobehaBmsUserhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.chkIsActive = new DevExpress.XtraEditors.CheckEdit();
             this.cmbShobeList = new DevExpress.XtraEditors.LookUpEdit();
+            this.msShobesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbVahedhaList = new DevExpress.XtraEditors.LookUpEdit();
+            this.msVahedsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbMajmoehaList = new DevExpress.XtraEditors.LookUpEdit();
+            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnNewCode = new DevExpress.XtraEditors.SimpleButton();
             this.txtShobeCode = new DevExpress.XtraEditors.TextEdit();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
@@ -61,13 +67,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStartDore = new DevExpress.XtraEditors.TextEdit();
-            this.rmsShobehaBmsUserhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.msShobesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.msVahedsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txtStartSal = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -75,23 +75,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAvarez.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaliat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkDoreIsClose.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkDoreIsDefault.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEndDore.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoreMali.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkSalIsClose.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkSalIsDefault.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndSal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalMali.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmsShobehaBmsUserhasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbShobeList.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msShobesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedhaList.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMajmoehaList.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShobeCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStartDore.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmsShobehaBmsUserhasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msShobesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartSal.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -150,10 +150,10 @@
             this.panelControl1.Controls.Add(this.txtAvarez);
             this.panelControl1.Controls.Add(this.txtMaliat);
             this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.chkDoreIsClose);
-            this.panelControl1.Controls.Add(this.chkDoreIsDefault);
-            this.panelControl1.Controls.Add(this.txtEndDore);
-            this.panelControl1.Controls.Add(this.txtDoreMali);
+            this.panelControl1.Controls.Add(this.chkSalIsClose);
+            this.panelControl1.Controls.Add(this.chkSalIsDefault);
+            this.panelControl1.Controls.Add(this.txtEndSal);
+            this.panelControl1.Controls.Add(this.txtSalMali);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.labelControl9);
             this.panelControl1.Controls.Add(this.labelControl8);
@@ -172,12 +172,28 @@
             this.panelControl1.Controls.Add(this.labelControl4);
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Controls.Add(this.txtStartDore);
+            this.panelControl1.Controls.Add(this.txtStartSal);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(677, 404);
             this.panelControl1.TabIndex = 21;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(61, 366);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(12, 25);
+            this.labelControl12.TabIndex = 28;
+            this.labelControl12.Text = "%";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(61, 328);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(12, 25);
+            this.labelControl3.TabIndex = 28;
+            this.labelControl3.Text = "%";
             // 
             // chkEditCode
             // 
@@ -226,58 +242,58 @@
             this.labelControl2.TabIndex = 26;
             this.labelControl2.Text = "کاربران مجاز به ثبت عملیات";
             // 
-            // chkDoreIsClose
+            // chkSalIsClose
             // 
-            this.chkDoreIsClose.EnterMoveNextControl = true;
-            this.chkDoreIsClose.Location = new System.Drawing.Point(327, 362);
-            this.chkDoreIsClose.Name = "chkDoreIsClose";
-            this.chkDoreIsClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.chkDoreIsClose.Properties.Caption = "بستن سال مالی";
-            this.chkDoreIsClose.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkDoreIsClose.Size = new System.Drawing.Size(163, 33);
-            this.chkDoreIsClose.TabIndex = 10;
+            this.chkSalIsClose.EnterMoveNextControl = true;
+            this.chkSalIsClose.Location = new System.Drawing.Point(327, 362);
+            this.chkSalIsClose.Name = "chkSalIsClose";
+            this.chkSalIsClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.chkSalIsClose.Properties.Caption = "بستن سال مالی";
+            this.chkSalIsClose.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkSalIsClose.Size = new System.Drawing.Size(163, 33);
+            this.chkSalIsClose.TabIndex = 10;
             // 
-            // chkDoreIsDefault
+            // chkSalIsDefault
             // 
-            this.chkDoreIsDefault.EnterMoveNextControl = true;
-            this.chkDoreIsDefault.Location = new System.Drawing.Point(326, 324);
-            this.chkDoreIsDefault.Name = "chkDoreIsDefault";
-            this.chkDoreIsDefault.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.chkDoreIsDefault.Properties.Caption = "سال مالی پیش فرض";
-            this.chkDoreIsDefault.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkDoreIsDefault.Size = new System.Drawing.Size(163, 33);
-            this.chkDoreIsDefault.TabIndex = 9;
+            this.chkSalIsDefault.EnterMoveNextControl = true;
+            this.chkSalIsDefault.Location = new System.Drawing.Point(326, 324);
+            this.chkSalIsDefault.Name = "chkSalIsDefault";
+            this.chkSalIsDefault.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.chkSalIsDefault.Properties.Caption = "سال مالی پیش فرض";
+            this.chkSalIsDefault.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkSalIsDefault.Size = new System.Drawing.Size(163, 33);
+            this.chkSalIsDefault.TabIndex = 9;
             // 
-            // txtEndDore
+            // txtEndSal
             // 
-            this.txtEndDore.EnterMoveNextControl = true;
-            this.txtEndDore.Location = new System.Drawing.Point(366, 235);
-            this.txtEndDore.Name = "txtEndDore";
-            this.txtEndDore.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtEndDore.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtEndDore.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtEndDore.Properties.Mask.BeepOnError = true;
-            this.txtEndDore.Properties.Mask.EditMask = "d";
-            this.txtEndDore.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.txtEndDore.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtEndDore.Size = new System.Drawing.Size(123, 32);
-            this.txtEndDore.TabIndex = 6;
+            this.txtEndSal.EnterMoveNextControl = true;
+            this.txtEndSal.Location = new System.Drawing.Point(366, 235);
+            this.txtEndSal.Name = "txtEndSal";
+            this.txtEndSal.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtEndSal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtEndSal.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtEndSal.Properties.Mask.BeepOnError = true;
+            this.txtEndSal.Properties.Mask.EditMask = "d";
+            this.txtEndSal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.txtEndSal.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtEndSal.Size = new System.Drawing.Size(123, 32);
+            this.txtEndSal.TabIndex = 6;
             // 
-            // txtDoreMali
+            // txtSalMali
             // 
-            this.txtDoreMali.EditValue = "";
-            this.txtDoreMali.EnterMoveNextControl = true;
-            this.txtDoreMali.Location = new System.Drawing.Point(367, 159);
-            this.txtDoreMali.Name = "txtDoreMali";
-            this.txtDoreMali.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtDoreMali.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtDoreMali.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtDoreMali.Properties.Mask.EditMask = "f0";
-            this.txtDoreMali.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtDoreMali.Properties.MaxLength = 4;
-            this.txtDoreMali.Size = new System.Drawing.Size(122, 32);
-            this.txtDoreMali.TabIndex = 4;
-            this.txtDoreMali.Leave += new System.EventHandler(this.txtDoreMali_Leave);
+            this.txtSalMali.EditValue = "";
+            this.txtSalMali.EnterMoveNextControl = true;
+            this.txtSalMali.Location = new System.Drawing.Point(367, 159);
+            this.txtSalMali.Name = "txtSalMali";
+            this.txtSalMali.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSalMali.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSalMali.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtSalMali.Properties.Mask.EditMask = "f0";
+            this.txtSalMali.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtSalMali.Properties.MaxLength = 4;
+            this.txtSalMali.Size = new System.Drawing.Size(122, 32);
+            this.txtSalMali.TabIndex = 4;
+            this.txtSalMali.Leave += new System.EventHandler(this.txtSalMali_Leave);
             // 
             // labelControl10
             // 
@@ -299,17 +315,17 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(496, 238);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(97, 25);
+            this.labelControl8.Size = new System.Drawing.Size(95, 25);
             this.labelControl8.TabIndex = 21;
-            this.labelControl8.Text = "پایان دوره مالی";
+            this.labelControl8.Text = "پایان سال مالی";
             // 
             // labelControl7
             // 
             this.labelControl7.Location = new System.Drawing.Point(493, 200);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(108, 25);
+            this.labelControl7.Size = new System.Drawing.Size(106, 25);
             this.labelControl7.TabIndex = 22;
-            this.labelControl7.Text = "شروع دوره مالی ";
+            this.labelControl7.Text = "شروع سال مالی ";
             // 
             // labelControl11
             // 
@@ -334,6 +350,10 @@
             this.chkcmbPermissiveUsers.Size = new System.Drawing.Size(483, 32);
             this.chkcmbPermissiveUsers.TabIndex = 7;
             this.chkcmbPermissiveUsers.Enter += new System.EventHandler(this.chkcmbPermissiveUsers_Enter);
+            // 
+            // rmsShobehaBmsUserhasBindingSource
+            // 
+            this.rmsShobehaBmsUserhasBindingSource.DataSource = typeof(DBHesabdari_TG.RmsShobehaBmsUserha);
             // 
             // labelControl6
             // 
@@ -377,6 +397,10 @@
             this.cmbShobeList.EditValueChanged += new System.EventHandler(this.cmbShobeList_EditValueChanged);
             this.cmbShobeList.Enter += new System.EventHandler(this.cmbShobehaList_Enter);
             // 
+            // msShobesBindingSource
+            // 
+            this.msShobesBindingSource.DataSource = typeof(DBHesabdari_TG.MsShobe);
+            // 
             // cmbVahedhaList
             // 
             this.cmbVahedhaList.EnterMoveNextControl = true;
@@ -397,6 +421,10 @@
             this.cmbVahedhaList.EditValueChanged += new System.EventHandler(this.cmbVahedhaList_EditValueChanged);
             this.cmbVahedhaList.Enter += new System.EventHandler(this.cmbVahedhaList_Enter);
             // 
+            // msVahedsBindingSource
+            // 
+            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_TG.MsVahed);
+            // 
             // cmbMajmoehaList
             // 
             this.cmbMajmoehaList.EnterMoveNextControl = true;
@@ -416,6 +444,10 @@
             this.cmbMajmoehaList.TabIndex = 0;
             this.cmbMajmoehaList.EditValueChanged += new System.EventHandler(this.cmbListMajmoeha_EditValueChanged);
             this.cmbMajmoehaList.Enter += new System.EventHandler(this.cmbMajmoehaList_Enter);
+            // 
+            // msMajmoesBindingSource
+            // 
+            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_TG.MsMajmoe);
             // 
             // btnNewCode
             // 
@@ -507,54 +539,22 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "کد";
             // 
-            // txtStartDore
+            // txtStartSal
             // 
-            this.txtStartDore.EnterMoveNextControl = true;
-            this.txtStartDore.Location = new System.Drawing.Point(366, 197);
-            this.txtStartDore.Name = "txtStartDore";
-            this.txtStartDore.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtStartDore.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtStartDore.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtStartDore.Properties.Mask.BeepOnError = true;
-            this.txtStartDore.Properties.Mask.EditMask = "d";
-            this.txtStartDore.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.txtStartDore.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtStartDore.Size = new System.Drawing.Size(123, 32);
-            this.txtStartDore.TabIndex = 5;
+            this.txtStartSal.EnterMoveNextControl = true;
+            this.txtStartSal.Location = new System.Drawing.Point(366, 197);
+            this.txtStartSal.Name = "txtStartSal";
+            this.txtStartSal.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtStartSal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtStartSal.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtStartSal.Properties.Mask.BeepOnError = true;
+            this.txtStartSal.Properties.Mask.EditMask = "d";
+            this.txtStartSal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.txtStartSal.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtStartSal.Size = new System.Drawing.Size(123, 32);
+            this.txtStartSal.TabIndex = 5;
             // 
-            // rmsShobehaBmsUserhasBindingSource
-            // 
-            this.rmsShobehaBmsUserhasBindingSource.DataSource = typeof(DBHesabdari_TG.RmsShobehaBmsUserha);
-            // 
-            // msShobesBindingSource
-            // 
-            this.msShobesBindingSource.DataSource = typeof(DBHesabdari_TG.MsShobe);
-            // 
-            // msVahedsBindingSource
-            // 
-            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_TG.MsVahed);
-            // 
-            // msMajmoesBindingSource
-            // 
-            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_TG.MsMajmoe);
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(61, 328);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(12, 25);
-            this.labelControl3.TabIndex = 28;
-            this.labelControl3.Text = "%";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(61, 366);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(12, 25);
-            this.labelControl12.TabIndex = 28;
-            this.labelControl12.Text = "%";
-            // 
-            // FrmDorehaCed
+            // FrmSalhaCed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -566,13 +566,13 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(687, 504);
-            this.Name = "FrmDorehaCed";
+            this.Name = "FrmSalhaCed";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد سال مالی";
-            this.Load += new System.EventHandler(this.FrmDorehaCed_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDorehaCed_KeyDown);
+            this.Load += new System.EventHandler(this.FrmSalhaCed_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmSalhaCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -581,23 +581,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAvarez.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaliat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkDoreIsClose.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkDoreIsDefault.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEndDore.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoreMali.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkSalIsClose.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkSalIsDefault.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndSal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSalMali.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rmsShobehaBmsUserhasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbShobeList.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msShobesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedhaList.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMajmoehaList.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShobeCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStartDore.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmsShobehaBmsUserhasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msShobesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartSal.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -625,10 +625,10 @@
         private DevExpress.XtraEditors.TextEdit txtAvarez;
         private DevExpress.XtraEditors.TextEdit txtMaliat;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        public DevExpress.XtraEditors.CheckEdit chkDoreIsClose;
-        public DevExpress.XtraEditors.CheckEdit chkDoreIsDefault;
-        public DevExpress.XtraEditors.TextEdit txtEndDore;
-        public DevExpress.XtraEditors.TextEdit txtDoreMali;
+        public DevExpress.XtraEditors.CheckEdit chkSalIsClose;
+        public DevExpress.XtraEditors.CheckEdit chkSalIsDefault;
+        public DevExpress.XtraEditors.TextEdit txtEndSal;
+        public DevExpress.XtraEditors.TextEdit txtSalMali;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -639,7 +639,7 @@
         private System.Windows.Forms.BindingSource msShobesBindingSource;
         private System.Windows.Forms.BindingSource rmsShobehaBmsUserhasBindingSource;
         private DevExpress.XtraEditors.CheckEdit chkEditCode;
-        private DevExpress.XtraEditors.TextEdit txtStartDore;
+        private DevExpress.XtraEditors.TextEdit txtStartSal;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl3;
     }

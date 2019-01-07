@@ -26,6 +26,7 @@ namespace DBHesabdari_TG
         public string MajmoeName { get; set; }
         [Required]
         public bool MajmoeIsActive { get; set; }
+        public bool MajmoeIsDefault { get; set; }
         public string PermissiveUsers { get; set; }
         public virtual ICollection<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
         public virtual ICollection<MsVahed> MsVaheds { get; set; }

@@ -271,9 +271,5 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             return true;
         }
 
-        private void txtCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            HelpClass1.EnterReplaceTab(e);
-        }
     }
 }

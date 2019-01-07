@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cultures.cs" />
     <Compile Include="HelpClass1.cs" />
     <Compile Include="HelpClass2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

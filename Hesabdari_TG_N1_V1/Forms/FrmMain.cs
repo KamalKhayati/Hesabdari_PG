@@ -45,8 +45,6 @@ namespace Hesabdari_TG_N1_V1.Forms
         private void FrmMain_Load(object sender, EventArgs e)
         {
 
-            HelpClass1.SwitchToPersianLanguage();
-            HelpClass1.SetRegionAndLanguage();
             // that will manage MDI child windows.
             //documentManager1.View = new NativeMdiView();
             ribbon.Minimized = true;

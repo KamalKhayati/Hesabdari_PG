@@ -16,6 +16,7 @@ using DevExpress.Skins;
 using Hesabdari_TG_N1_V1.Forms;
 using System.Threading;
 using DBHesabdari_TG;
+using HelpClassLibrary;
 
 namespace Hesabdari_TG_N1_V1
 {
@@ -59,6 +60,9 @@ namespace Hesabdari_TG_N1_V1
             //Thread.CurrentThread.CurrentUICulture = cinfo;
             //Application.CurrentCulture = cinfo;
 
+            HelpClass1.SwitchToPersianLanguage();
+            Cultures.InitializePersianCulture();
+            HelpClass1.SetRegionAndLanguage();
 
             BonusSkins.Register();
             Application.Run(new FrmMain());

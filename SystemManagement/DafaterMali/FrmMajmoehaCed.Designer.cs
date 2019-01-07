@@ -37,6 +37,7 @@
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.chkEditCode = new DevExpress.XtraEditors.CheckEdit();
             this.chkInformationOther = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -104,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkInformationOther.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).BeginInit();
@@ -138,26 +140,28 @@
             // 
             // txtName
             // 
+            this.txtName.EnterMoveNextControl = true;
             this.txtName.Location = new System.Drawing.Point(6, 47);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Size = new System.Drawing.Size(474, 32);
-            this.txtName.TabIndex = 0;
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.txtName.TabIndex = 1;
             // 
             // txtCode
             // 
+            this.txtCode.EditValue = "10";
+            this.txtCode.EnterMoveNextControl = true;
             this.txtCode.Location = new System.Drawing.Point(346, 8);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtCode.Properties.Mask.EditMask = "f0";
+            this.txtCode.Properties.Mask.EditMask = "00";
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCode.Properties.MaxLength = 3;
+            this.txtCode.Properties.MaxLength = 2;
+            this.txtCode.Properties.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(133, 32);
             this.txtCode.TabIndex = 0;
-            this.txtCode.TabStop = false;
-            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.txtCode.Leave += new System.EventHandler(this.txtCode_Leave);
             // 
             // btnClose
             // 
@@ -174,14 +178,14 @@
             // chkIsActive
             // 
             this.chkIsActive.EditValue = true;
+            this.chkIsActive.EnterMoveNextControl = true;
             this.chkIsActive.Location = new System.Drawing.Point(5, 123);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkIsActive.Properties.Caption = "فعال";
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(54, 33);
-            this.chkIsActive.TabIndex = 3;
-            this.chkIsActive.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
+            this.chkIsActive.TabIndex = 4;
             // 
             // txtId
             // 
@@ -210,6 +214,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.chkEditCode);
             this.panelControl1.Controls.Add(this.chkInformationOther);
             this.panelControl1.Controls.Add(this.txtName);
             this.panelControl1.Controls.Add(this.labelControl2);
@@ -226,17 +231,28 @@
             this.panelControl1.Size = new System.Drawing.Size(669, 166);
             this.panelControl1.TabIndex = 12;
             // 
+            // chkEditCode
+            // 
+            this.chkEditCode.Location = new System.Drawing.Point(322, 9);
+            this.chkEditCode.Name = "chkEditCode";
+            this.chkEditCode.Properties.Caption = "checkEdit1";
+            this.chkEditCode.Size = new System.Drawing.Size(20, 29);
+            this.chkEditCode.TabIndex = 10;
+            this.chkEditCode.TabStop = false;
+            this.chkEditCode.ToolTip = "ویرایش یا تغییر کد بصورت دستی";
+            this.chkEditCode.CheckedChanged += new System.EventHandler(this.chkEditCode_CheckedChanged);
+            // 
             // chkInformationOther
             // 
+            this.chkInformationOther.EnterMoveNextControl = true;
             this.chkInformationOther.Location = new System.Drawing.Point(357, 123);
             this.chkInformationOther.Name = "chkInformationOther";
             this.chkInformationOther.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkInformationOther.Properties.Caption = "سایر مشخصات";
             this.chkInformationOther.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkInformationOther.Size = new System.Drawing.Size(122, 33);
-            this.chkInformationOther.TabIndex = 2;
+            this.chkInformationOther.TabIndex = 3;
             this.chkInformationOther.CheckedChanged += new System.EventHandler(this.chkSpecificationOther_CheckedChanged);
-            this.chkInformationOther.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // labelControl2
             // 
@@ -260,6 +276,7 @@
             // 
             this.chkcmbPermissiveUsers.AllowDrop = true;
             this.chkcmbPermissiveUsers.EditValue = "";
+            this.chkcmbPermissiveUsers.EnterMoveNextControl = true;
             this.chkcmbPermissiveUsers.Location = new System.Drawing.Point(5, 85);
             this.chkcmbPermissiveUsers.Name = "chkcmbPermissiveUsers";
             this.chkcmbPermissiveUsers.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
@@ -270,9 +287,8 @@
             this.chkcmbPermissiveUsers.Properties.ValueMember = "MsUserId";
             this.chkcmbPermissiveUsers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkcmbPermissiveUsers.Size = new System.Drawing.Size(474, 32);
-            this.chkcmbPermissiveUsers.TabIndex = 1;
+            this.chkcmbPermissiveUsers.TabIndex = 2;
             this.chkcmbPermissiveUsers.Enter += new System.EventHandler(this.chkcmbPermissiveUsers_Enter);
-            this.chkcmbPermissiveUsers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
             // 
             // msUsersBindingSource
             // 
@@ -281,7 +297,7 @@
             // btnNewCode
             // 
             this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode.ImageOptions.SvgImage")));
-            this.btnNewCode.Location = new System.Drawing.Point(236, 7);
+            this.btnNewCode.Location = new System.Drawing.Point(216, 7);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(100, 33);
             this.btnNewCode.TabIndex = 7;
@@ -388,12 +404,12 @@
             // 
             // txtShBimeKargah
             // 
+            this.txtShBimeKargah.EnterMoveNextControl = true;
             this.txtShBimeKargah.Location = new System.Drawing.Point(7, 462);
             this.txtShBimeKargah.Name = "txtShBimeKargah";
             this.txtShBimeKargah.Properties.MaxLength = 50;
             this.txtShBimeKargah.Size = new System.Drawing.Size(211, 32);
             this.txtShBimeKargah.TabIndex = 25;
-            this.txtShBimeKargah.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl30
             // 
@@ -405,12 +421,12 @@
             // 
             // txtShParvandeMaliati
             // 
+            this.txtShParvandeMaliati.EnterMoveNextControl = true;
             this.txtShParvandeMaliati.Location = new System.Drawing.Point(337, 462);
             this.txtShParvandeMaliati.Name = "txtShParvandeMaliati";
             this.txtShParvandeMaliati.Properties.MaxLength = 50;
             this.txtShParvandeMaliati.Size = new System.Drawing.Size(211, 32);
             this.txtShParvandeMaliati.TabIndex = 24;
-            this.txtShParvandeMaliati.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl29
             // 
@@ -429,7 +445,6 @@
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "حقوقی";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // radioButton1
             // 
@@ -443,44 +458,43 @@
             this.radioButton1.Text = "حقیقی";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            this.radioButton1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // txtShomarePlak
             // 
+            this.txtShomarePlak.EnterMoveNextControl = true;
             this.txtShomarePlak.Location = new System.Drawing.Point(337, 120);
             this.txtShomarePlak.Name = "txtShomarePlak";
             this.txtShomarePlak.Properties.MaxLength = 50;
             this.txtShomarePlak.Size = new System.Drawing.Size(234, 32);
             this.txtShomarePlak.TabIndex = 6;
-            this.txtShomarePlak.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // txtCodeEghtesadi
             // 
             this.txtCodeEghtesadi.Enabled = false;
+            this.txtCodeEghtesadi.EnterMoveNextControl = true;
             this.txtCodeEghtesadi.Location = new System.Drawing.Point(7, 196);
             this.txtCodeEghtesadi.Name = "txtCodeEghtesadi";
             this.txtCodeEghtesadi.Properties.MaxLength = 50;
             this.txtCodeEghtesadi.Size = new System.Drawing.Size(234, 32);
             this.txtCodeEghtesadi.TabIndex = 11;
-            this.txtCodeEghtesadi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // txtTell1
             // 
+            this.txtTell1.EnterMoveNextControl = true;
             this.txtTell1.Location = new System.Drawing.Point(337, 234);
             this.txtTell1.Name = "txtTell1";
             this.txtTell1.Properties.MaxLength = 50;
             this.txtTell1.Size = new System.Drawing.Size(234, 32);
             this.txtTell1.TabIndex = 12;
-            this.txtTell1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // txtTell2
             // 
+            this.txtTell2.EnterMoveNextControl = true;
             this.txtTell2.Location = new System.Drawing.Point(7, 234);
             this.txtTell2.Name = "txtTell2";
             this.txtTell2.Properties.MaxLength = 50;
             this.txtTell2.Size = new System.Drawing.Size(234, 32);
             this.txtTell2.TabIndex = 13;
-            this.txtTell2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl25
             // 
@@ -516,39 +530,39 @@
             // 
             // txtEmail2
             // 
+            this.txtEmail2.EnterMoveNextControl = true;
             this.txtEmail2.Location = new System.Drawing.Point(7, 348);
             this.txtEmail2.Name = "txtEmail2";
             this.txtEmail2.Properties.MaxLength = 50;
             this.txtEmail2.Size = new System.Drawing.Size(234, 32);
             this.txtEmail2.TabIndex = 19;
-            this.txtEmail2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // txtWebLog
             // 
+            this.txtWebLog.EnterMoveNextControl = true;
             this.txtWebLog.Location = new System.Drawing.Point(7, 386);
             this.txtWebLog.Name = "txtWebLog";
             this.txtWebLog.Properties.MaxLength = 50;
             this.txtWebLog.Size = new System.Drawing.Size(234, 32);
             this.txtWebLog.TabIndex = 21;
-            this.txtWebLog.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // txtMobile2
             // 
+            this.txtMobile2.EnterMoveNextControl = true;
             this.txtMobile2.Location = new System.Drawing.Point(7, 310);
             this.txtMobile2.Name = "txtMobile2";
             this.txtMobile2.Properties.MaxLength = 50;
             this.txtMobile2.Size = new System.Drawing.Size(234, 32);
             this.txtMobile2.TabIndex = 17;
-            this.txtMobile2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // txtTellFax2
             // 
+            this.txtTellFax2.EnterMoveNextControl = true;
             this.txtTellFax2.Location = new System.Drawing.Point(7, 272);
             this.txtTellFax2.Name = "txtTellFax2";
             this.txtTellFax2.Properties.MaxLength = 50;
             this.txtTellFax2.Size = new System.Drawing.Size(234, 32);
             this.txtTellFax2.TabIndex = 15;
-            this.txtTellFax2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl20
             // 
@@ -584,12 +598,12 @@
             // 
             // txtEmail1
             // 
+            this.txtEmail1.EnterMoveNextControl = true;
             this.txtEmail1.Location = new System.Drawing.Point(337, 348);
             this.txtEmail1.Name = "txtEmail1";
             this.txtEmail1.Properties.MaxLength = 50;
             this.txtEmail1.Size = new System.Drawing.Size(234, 32);
             this.txtEmail1.TabIndex = 18;
-            this.txtEmail1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl19
             // 
@@ -601,12 +615,12 @@
             // 
             // txtShabakeEjtemaee2
             // 
+            this.txtShabakeEjtemaee2.EnterMoveNextControl = true;
             this.txtShabakeEjtemaee2.Location = new System.Drawing.Point(7, 424);
             this.txtShabakeEjtemaee2.Name = "txtShabakeEjtemaee2";
             this.txtShabakeEjtemaee2.Properties.MaxLength = 50;
             this.txtShabakeEjtemaee2.Size = new System.Drawing.Size(211, 32);
             this.txtShabakeEjtemaee2.TabIndex = 23;
-            this.txtShabakeEjtemaee2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl28
             // 
@@ -618,12 +632,12 @@
             // 
             // txtShabakeEjtemaee1
             // 
+            this.txtShabakeEjtemaee1.EnterMoveNextControl = true;
             this.txtShabakeEjtemaee1.Location = new System.Drawing.Point(337, 424);
             this.txtShabakeEjtemaee1.Name = "txtShabakeEjtemaee1";
             this.txtShabakeEjtemaee1.Properties.MaxLength = 50;
             this.txtShabakeEjtemaee1.Size = new System.Drawing.Size(211, 32);
             this.txtShabakeEjtemaee1.TabIndex = 22;
-            this.txtShabakeEjtemaee1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl27
             // 
@@ -635,12 +649,12 @@
             // 
             // txtSite
             // 
+            this.txtSite.EnterMoveNextControl = true;
             this.txtSite.Location = new System.Drawing.Point(337, 386);
             this.txtSite.Name = "txtSite";
             this.txtSite.Properties.MaxLength = 50;
             this.txtSite.Size = new System.Drawing.Size(234, 32);
             this.txtSite.TabIndex = 20;
-            this.txtSite.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl4
             // 
@@ -652,12 +666,12 @@
             // 
             // txtMobile1
             // 
+            this.txtMobile1.EnterMoveNextControl = true;
             this.txtMobile1.Location = new System.Drawing.Point(337, 310);
             this.txtMobile1.Name = "txtMobile1";
             this.txtMobile1.Properties.MaxLength = 50;
             this.txtMobile1.Size = new System.Drawing.Size(234, 32);
             this.txtMobile1.TabIndex = 16;
-            this.txtMobile1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl16
             // 
@@ -669,12 +683,12 @@
             // 
             // txtTellFax1
             // 
+            this.txtTellFax1.EnterMoveNextControl = true;
             this.txtTellFax1.Location = new System.Drawing.Point(337, 272);
             this.txtTellFax1.Name = "txtTellFax1";
             this.txtTellFax1.Properties.MaxLength = 50;
             this.txtTellFax1.Size = new System.Drawing.Size(234, 32);
             this.txtTellFax1.TabIndex = 14;
-            this.txtTellFax1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl14
             // 
@@ -687,12 +701,12 @@
             // txtShomareSabt
             // 
             this.txtShomareSabt.Enabled = false;
+            this.txtShomareSabt.EnterMoveNextControl = true;
             this.txtShomareSabt.Location = new System.Drawing.Point(7, 120);
             this.txtShomareSabt.Name = "txtShomareSabt";
             this.txtShomareSabt.Properties.MaxLength = 50;
             this.txtShomareSabt.Size = new System.Drawing.Size(234, 32);
             this.txtShomareSabt.TabIndex = 7;
-            this.txtShomareSabt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl22
             // 
@@ -704,12 +718,12 @@
             // 
             // txtCodeSenfee
             // 
+            this.txtCodeSenfee.EnterMoveNextControl = true;
             this.txtCodeSenfee.Location = new System.Drawing.Point(337, 196);
             this.txtCodeSenfee.Name = "txtCodeSenfee";
             this.txtCodeSenfee.Properties.MaxLength = 50;
             this.txtCodeSenfee.Size = new System.Drawing.Size(234, 32);
             this.txtCodeSenfee.TabIndex = 10;
-            this.txtCodeSenfee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl12
             // 
@@ -722,12 +736,12 @@
             // txtShenaseMelli
             // 
             this.txtShenaseMelli.Enabled = false;
+            this.txtShenaseMelli.EnterMoveNextControl = true;
             this.txtShenaseMelli.Location = new System.Drawing.Point(7, 158);
             this.txtShenaseMelli.Name = "txtShenaseMelli";
             this.txtShenaseMelli.Properties.MaxLength = 50;
             this.txtShenaseMelli.Size = new System.Drawing.Size(234, 32);
             this.txtShenaseMelli.TabIndex = 9;
-            this.txtShenaseMelli.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl24
             // 
@@ -739,12 +753,12 @@
             // 
             // txtCodeMelli
             // 
+            this.txtCodeMelli.EnterMoveNextControl = true;
             this.txtCodeMelli.Location = new System.Drawing.Point(337, 158);
             this.txtCodeMelli.Name = "txtCodeMelli";
             this.txtCodeMelli.Properties.MaxLength = 50;
             this.txtCodeMelli.Size = new System.Drawing.Size(234, 32);
             this.txtCodeMelli.TabIndex = 8;
-            this.txtCodeMelli.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl18
             // 
@@ -756,12 +770,12 @@
             // 
             // txtCodePosti
             // 
+            this.txtCodePosti.EnterMoveNextControl = true;
             this.txtCodePosti.Location = new System.Drawing.Point(337, 82);
             this.txtCodePosti.Name = "txtCodePosti";
             this.txtCodePosti.Properties.MaxLength = 50;
             this.txtCodePosti.Size = new System.Drawing.Size(234, 32);
             this.txtCodePosti.TabIndex = 4;
-            this.txtCodePosti.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl10
             // 
@@ -773,12 +787,12 @@
             // 
             // txtAdress
             // 
+            this.txtAdress.EnterMoveNextControl = true;
             this.txtAdress.Location = new System.Drawing.Point(7, 44);
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Properties.MaxLength = 300;
             this.txtAdress.Size = new System.Drawing.Size(564, 32);
             this.txtAdress.TabIndex = 3;
-            this.txtAdress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl11
             // 
@@ -790,12 +804,12 @@
             // 
             // txtSandoghPosti
             // 
+            this.txtSandoghPosti.EnterMoveNextControl = true;
             this.txtSandoghPosti.Location = new System.Drawing.Point(6, 82);
             this.txtSandoghPosti.Name = "txtSandoghPosti";
             this.txtSandoghPosti.Properties.MaxLength = 50;
             this.txtSandoghPosti.Size = new System.Drawing.Size(234, 32);
             this.txtSandoghPosti.TabIndex = 5;
-            this.txtSandoghPosti.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl7
             // 
@@ -807,12 +821,12 @@
             // 
             // txtNoeFaaliat
             // 
+            this.txtNoeFaaliat.EnterMoveNextControl = true;
             this.txtNoeFaaliat.Location = new System.Drawing.Point(6, 6);
             this.txtNoeFaaliat.Name = "txtNoeFaaliat";
             this.txtNoeFaaliat.Properties.MaxLength = 50;
             this.txtNoeFaaliat.Size = new System.Drawing.Size(234, 32);
             this.txtNoeFaaliat.TabIndex = 2;
-            this.txtNoeFaaliat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radioButton1_KeyDown);
             // 
             // labelControl21
             // 
@@ -857,6 +871,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkInformationOther.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).EndInit();
@@ -962,5 +977,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl30;
         public DevExpress.XtraEditors.TextEdit txtShParvandeMaliati;
         private DevExpress.XtraEditors.LabelControl labelControl29;
+        private DevExpress.XtraEditors.CheckEdit chkEditCode;
     }
 }

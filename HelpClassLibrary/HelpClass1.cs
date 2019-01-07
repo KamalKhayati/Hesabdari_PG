@@ -18,6 +18,7 @@ using DevExpress.XtraGrid;
 using System.Drawing;
 using Microsoft.Win32;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace HelpClassLibrary
 {
@@ -216,15 +217,15 @@ namespace HelpClassLibrary
             }
         }
 
-        public static void EnterReplaceTab(KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                SendKeys.Send("{tab}");
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-        }
+        //public static void EnterReplaceTab(KeyEventArgs e)
+        //{
+        //    if (e.KeyData == Keys.Enter)
+        //    {
+        //        SendKeys.Send("{tab}");
+        //        e.Handled = true;
+        //        e.SuppressKeyPress = true;
+        //    }
+        //}
 
         public static void SwitchToPersianLanguage()
         {
@@ -329,10 +330,14 @@ namespace HelpClassLibrary
         {
             System.Diagnostics.Process.Start("NotePad.exe");
         }
-        public static void TextBoxFormatDesign_000(TextEdit TextEdit)
-        {
-            TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("00#");
-        }
+        //public static void TextBoxFormatDesign_00(TextEdit TextEdit)
+        //{
+        //    TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("0#");
+        //}
+        //public static void TextBoxFormatDesign_000(TextEdit TextEdit)
+        //{
+        //    TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("00#");
+        //}
         public static void ClearTextEditControlsText(Control panel)
         {
             foreach (Control item in panel.Controls)
@@ -342,6 +347,17 @@ namespace HelpClassLibrary
                     item.Text = ""; 
                 }
             }
+        }
+
+        //public void SetDateTimeNow(MaskedTextBox objMTB)
+        //{
+        //    PersianCalendar objPC = new PersianCalendar();
+        //    objMTB.Text = objPC.GetYear(DateTime.Now).ToString("0000") + objPC.GetMonth(DateTime.Now).ToString("00") + objPC.GetDayOfMonth(DateTime.Now).ToString("00");
+        //}
+        public static void SetCurrentYear(TextEdit TextEdit)
+        {
+            PersianCalendar objPC = new PersianCalendar();
+            TextEdit.Text = objPC.GetYear(DateTime.Now).ToString("0000");
         }
 
     }

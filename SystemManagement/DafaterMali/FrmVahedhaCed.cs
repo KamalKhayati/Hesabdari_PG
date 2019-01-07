@@ -131,11 +131,11 @@ namespace SystemManagement.DafaterMali
                         if (q.Any())
                         {
                             var MaximumCod = q.Max(p => p.VahedCode);
-                            txtCode.Text = (MaximumCod + 1).ToString().Substring(3);
+                            txtCode.Text = (MaximumCod + 1).ToString().Substring(2);
                         }
                         else
                         {
-                            txtCode.Text = "001";
+                            txtCode.Text = "01";
                         }
                     }
                     catch (Exception ex)
@@ -150,6 +150,7 @@ namespace SystemManagement.DafaterMali
 
         string CodeBeforeEdit = "";
         string NameBeforeEdit = "";
+        string PermissiveUsersBeforeEdit = ""; 
         private void FrmVahedhaCed_Load(object sender, EventArgs e)
         {
             FillcmbMajmoehaList();
@@ -158,12 +159,9 @@ namespace SystemManagement.DafaterMali
             {
                 cmbMajmoehaList.EditValue = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
                 txtId.Text = Fm.gridView1.GetFocusedRowCellValue("MsVahedId").ToString();
-                txtCode.Text = Fm.gridView1.GetFocusedRowCellValue("VahedCode").ToString().Substring(3);
+                txtCode.Text = Fm.gridView1.GetFocusedRowCellValue("VahedCode").ToString().Substring(2);
                 txtName.Text = Fm.gridView1.GetFocusedRowCellValue("VahedName").ToString();
                 chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("VahedIsActive"));
-
-                CodeBeforeEdit = txtCode.Text;
-                NameBeforeEdit = txtName.Text;
 
                 int RowId = Convert.ToInt32(txtId.Text);
                 using (var db = new MyContext())
@@ -215,6 +213,11 @@ namespace SystemManagement.DafaterMali
                             "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+
+                CodeBeforeEdit = txtCode.Text;
+                NameBeforeEdit = txtName.Text;
+                PermissiveUsersBeforeEdit = chkcmbPermissiveUsers.Text;
+
             }
 
         }
@@ -353,51 +356,89 @@ namespace SystemManagement.DafaterMali
                                 q.PermissiveUsers = chkcmbPermissiveUsers.Text;
 
 
-                                /////////////////////////// WillCascadeOnUpdate : MsShobes /////////////////////////
-                                var q6 = db.MsShobes.Where(s => s.MsVahedId == RowId).ToList();
-                                if (q6.Count > 0)
+                                /////////////////////////////متد اصلاح کد و نام واحد در زیر شاخه های بالاتر WillCascadeOnUpdate ///////////////////////
+                                if (CodeBeforeEdit != txtCode.Text || NameBeforeEdit != txtName.Text)
                                 {
-                                    foreach (var item in q6)
+                                    /////////////////////////// WillCascadeOnUpdate : MsShobes /////////////////////////
+                                    var q6 = db.MsShobes.Where(s => s.MsVahedId == RowId).ToList();
+                                    if (q6.Count > 0)
                                     {
-                                        string a = item.ShobeCode.ToString().Substring(0, 3);
-                                        string b = item.ShobeCode.ToString().Substring(3, 3);
-                                        string c = item.ShobeCode.ToString().Substring(6, 3);
-                                        string _txtName = item.VahedName.ToString();
-
-                                        if (b != txtCode.Text || txtName.Text != _txtName)
+                                        foreach (var item in q6)
                                         {
-                                            item.ShobeCode = Convert.ToInt32(a + txtCode.Text + c);
-                                            item.VahedName = txtName.Text;
-                                        }
-                                    }
-                                }
-                                ///////////////////////////// WillCascadeOnUpdate : RmsVahedhaBmsUserhas && RmsShobehaBmsUserhas ////////////
-                                if (rmsMajmoehaBmsUserhasBindingSource.DataSource != null)
-                                {
-                                    int _MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                    var CheckedList = chkcmbPermissiveUsers.Properties.GetItems().GetCheckedValues();
-                                    var q8 = db.RmsShobehaBmsUserhas.Where(s => s.MsMajmoeId == _MajmoeId && s.MsVahedId== RowId).ToList();
+                                            string a = item.ShobeCode.ToString().Substring(0, 2);
+                                            string b = item.ShobeCode.ToString().Substring(2, 2);
+                                            string c = item.ShobeCode.ToString().Substring(4, 2);
+                                            string _txtName = item.VahedName.ToString();
 
-                                    if (q8.Count > 0)
-                                    {
-                                        foreach (var item in q8)
-                                        {
-                                            if (!CheckedList.Contains(item.MsUserId))
+                                            if (b != txtCode.Text || _txtName != txtName.Text)
                                             {
-                                                XtraMessageBox.Show("عملیات با خطا مواجه شد \n تغییرات در کاربران مجاز مقدور نیست \n جهت اعمال تغییرات بایستی " +
-                                                    " دسترسی کاربر فوق را در لیست شعبه ها خارج نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                                return;
+                                                item.ShobeCode = Convert.ToInt32(a + txtCode.Text + c);
+                                                item.VahedName = txtName.Text;
                                             }
                                         }
                                     }
-                                /////////////////////////////////////////////////////////////////////////////////////
+                                    /////////////////////////// WillCascadeOnUpdate : MsDoreMalis /////////////////////////
+                                    var q7 = db.MsDoreMalis.Where(s => s.MsVahedId == RowId).ToList();
+                                    if (q7.Count > 0)
+                                    {
+                                        foreach (var item in q7)
+                                        {
+                                            string a = item.DoreMaliCode.ToString().Substring(0, 2);
+                                            string b = item.DoreMaliCode.ToString().Substring(2, 2);
+                                            string c = item.DoreMaliCode.ToString().Substring(4, 5);
+                                            string _txtName = item.VahedName.ToString();
 
-                                    var q1 = db.RmsVahedhaBmsUserhas.Where(s => s.MsVahedId == RowId).ToList();
-                                if (q1.Count > 0)
-                                {
-                                    db.RmsVahedhaBmsUserhas.RemoveRange(q1);
+                                            if (a != txtCode.Text || _txtName != txtName.Text)
+                                            {
+                                                item.DoreMaliCode = Convert.ToInt32(a+txtCode.Text + c);
+                                                item.VahedName = txtName.Text;
+                                            }
+                                        }
+                                    }
                                 }
-                                //////////////////////////////////////////////
+                                /////////////////////////////متد جلوگیری از حذف دسترسی کاربران به زیر شاخه های بالاتر WillCascadeOnUpdate : RmsShobehaBmsUserhas && RmsDoreMalihaBmsUserhas////////////
+                                if (PermissiveUsersBeforeEdit != chkcmbPermissiveUsers.Text && rmsMajmoehaBmsUserhasBindingSource.DataSource != null)
+                                {
+                                    var CheckedList = chkcmbPermissiveUsers.Properties.GetItems().GetCheckedValues();
+                                    var q9 = db.RmsShobehaBmsUserhas.Where(s =>  s.MsVahedId == RowId).ToList();
+                                    var q10 = db.RmsDoreMalihaBmsUserhas.Where(s => s.MsVahedId == RowId).ToList();
+                                    string Error = "عملیات با خطا مواجه شد \n تغییر در کاربران مجاز مقدور نیست \n جهت اعمال تغییر بایستی : \n";
+
+                                    if (q10.Count > 0)
+                                    {
+                                        foreach (var item in q10)
+                                        {
+                                            if (!CheckedList.Contains(item.MsUserId))
+                                            {
+                                                Error += "دسترسی (" + item.UserName + ") را از سال مالی (" + item.DoreMaliName + ") خارج کنید \n";
+                                            }
+                                        }
+                                    }
+                                    if (q9.Count > 0)
+                                    {
+                                        foreach (var item in q9)
+                                        {
+                                            if (!CheckedList.Contains(item.MsUserId))
+                                            {
+                                                Error += "دسترسی (" + item.UserName + ") را از شعبه یا نمایندگی (" + item.ShobeName + ") خارج کنید \n";
+                                            }
+                                        }
+
+                                    }
+
+                                    if (Error != "عملیات با خطا مواجه شد \n تغییر در کاربران مجاز مقدور نیست \n جهت اعمال تغییر بایستی : \n")
+                                    {
+                                        XtraMessageBox.Show(Error, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+                                    //////////////////تغییر و یا ویرایش کاربران مجاز در لیست واحدها بصورت حذف از دیتابیس و درج در دیتابیس/////////////
+                                    ///////////////////////////////////حذف از دیتابیس////////////////////////////////////////
+                                    var q1 = db.RmsVahedhaBmsUserhas.Where(s => s.MsVahedId == RowId).ToList();
+                                    if (q1.Count > 0)
+                                    {
+                                        db.RmsVahedhaBmsUserhas.RemoveRange(q1);
+                                    }
+                                    //////////////////////////////////درج در دیتابیس/////////////////////////////////////////
 
                                     if (CheckedList != null)
                                     {
@@ -575,7 +616,7 @@ namespace SystemManagement.DafaterMali
                         catch (DbUpdateException)
                         {
                             XtraMessageBox.Show("عملیات با خطا مواجه شد \n حذف رکورد جاری مقدور نیست \n" +
-                                " جهت حذف رکورد جاری در ابتدا بایستی زیر شاخه های رکورد جاری  (در لیست واحد ها و لیست شعبه ها) حذف گردد" +
+                                " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری  (در لیست شعبه هاو لیست دوره ها) حذف گردد" +
                                 "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         catch (Exception ex)
@@ -673,10 +714,10 @@ namespace SystemManagement.DafaterMali
                         {
                             if (db.MsVaheds.Any())
                             {
-                                var q1 = db.MsVaheds.Where(p => p.VahedName.Contains(txtName.Text));
+                                var q1 = db.MsVaheds.Where(p => p.MsMajmoeId == _MajmoeId && p.VahedName == txtName.Text);
                                 if (q1.Any())
                                 {
-                                    XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    XtraMessageBox.Show("این واحد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return false;
                                 }
                             }
@@ -684,10 +725,10 @@ namespace SystemManagement.DafaterMali
                         else if (this.Text == "ویرایش رکورد جاری")
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.MsVaheds.Where(p => p.MsVahedId != RowId && p.VahedName.Contains(txtName.Text));
+                            var q1 = db.MsVaheds.Where(p => p.MsMajmoeId == _MajmoeId && p.MsVahedId != RowId && p.VahedName == txtName.Text);
                             if (q1.Any())
                             {
-                                XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                XtraMessageBox.Show("این واحد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //txtName.Text = nameBeforeEdit;
                                 return false;
                             }
@@ -704,13 +745,10 @@ namespace SystemManagement.DafaterMali
             return true;
         }
 
-        private void txtCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            HelpClass1.EnterReplaceTab(e);
-        }
-
+        int _MajmoeId = 0;
         private void cmbListMajmoeha_EditValueChanged(object sender, EventArgs e)
         {
+            _MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
             FillchkcmbPermissiveUsers();
             using (var db = new MyContext())
             {
@@ -731,11 +769,6 @@ namespace SystemManagement.DafaterMali
                         "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void txtCode_Leave(object sender, EventArgs e)
-        {
-            HelpClass1.TextBoxFormatDesign_000(txtCode);
         }
 
         private void cmbMajmoehaList_Enter(object sender, EventArgs e)
@@ -766,11 +799,6 @@ namespace SystemManagement.DafaterMali
         {
             this.Height = chkSpecificationOther.Checked ? 680 : 296;
 
-        }
-
-        private void radioButton1_KeyDown(object sender, KeyEventArgs e)
-        {
-            HelpClass1.EnterReplaceTab(e);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -816,6 +844,13 @@ namespace SystemManagement.DafaterMali
             }
 
         }
+
+        private void chkEditCode_CheckedChanged(object sender, EventArgs e)
+        {
+            txtCode.ReadOnly = chkEditCode.Checked ? false : true;
+
+        }
+
     }
 
 }

@@ -1,5 +1,5 @@
 ﻿/****************************** Ghost.github.io ******************************\
-*	Module Name:	MsDoreMali.cs
+*	Module Name:	MsSalMali.cs
 *	Project:		DBHesabdari_TG
 *	Copyright (C) 2018 Kamal Khayati, All rights reserved.
 *	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
@@ -17,23 +17,23 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_TG
 {
-   public class MsDoreMali
+   public class MsSalMali
     {
-        public int MsDoreMaliId { get; set; }
+        public int MsSalMaliId { get; set; }
         [Required]
-        public int DoreMaliCode { get; set; }
-        [Required]
-        public int DoreMaliName { get; set; }
+        public int SalMaliCode { get; set; }
+        [Required, MaxLength(50)]
+        public string SalMali { get; set; }
         [Required, Column(TypeName = "Date")]
-        public DateTime StartDoreMali { get; set; }
+        public DateTime StartSalMali { get; set; }
         [Required,Column(TypeName = "Date")]
-        public DateTime EndDoreMali { get; set; }
+        public DateTime EndSalMali { get; set; }
         [Required]
-        public bool DoreMaliIsActive { get; set; }
+        public bool SalMaliIsActive { get; set; }
         [Required]
-        public bool DoreIsDefault { get; set; }
+        public bool SalIsDefault { get; set; }
         [Required]
-        public bool DoreIsClose { get; set; }
+        public bool SalIsClose { get; set; }
         public decimal? Maliat { get; set; }
         public decimal? Avarez { get; set; }
         [Required]
@@ -50,10 +50,10 @@ namespace DBHesabdari_TG
         public string ShobeName { get; set; }
         public virtual MsShobe MsShobe1 { get; set; }
         public string PermissiveUsers { get; set; }
-        public virtual ICollection<RmsDoreMalihaBmsUserha> RmsDoreMalihaBmsUserhas { get; set; }
+        public virtual ICollection<RmsSalMalihaBmsUserha> RmsSalMalihaBmsUserhas { get; set; }
     }
 
-    public class RmsDoreMalihaBmsUserha
+    public class RmsSalMalihaBmsUserha
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(Order = 0)]
@@ -61,11 +61,11 @@ namespace DBHesabdari_TG
 
         [Key]
         [Column(Order = 1)]
-        public int MsDoreMaliId { get; set; }
+        public int MsSalMaliId { get; set; }
 
         [Column(Order = 2)]
-        [Required]
-        public int DoreMaliName { get; set; }
+        [Required, MaxLength(50)]
+        public string SalMali { get; set; }
 
         [Key]
         [Column(Order = 3)]
@@ -84,7 +84,7 @@ namespace DBHesabdari_TG
         [Column(Order = 7)]
         public int MsShobeId { get; set; }
 
-        public virtual MsDoreMali MsDoreMali1 { get; set; }
+        public virtual MsSalMali MsSalMali1 { get; set; }
         public virtual MsUser MsUser1 { get; set; }
 
     }
