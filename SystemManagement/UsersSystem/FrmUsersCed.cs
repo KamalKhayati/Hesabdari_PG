@@ -44,14 +44,14 @@ namespace SystemManagement.UsersSystem
             {
                 txtId.Text = Fm.gridView1.GetFocusedRowCellValue("MsUserId").ToString();
                 txtCode.Text = Fm.gridView1.GetFocusedRowCellValue("UserCode").ToString();
-                txtName.Text = Fm.gridView1.GetFocusedRowCellValue("UserName").ToString();
-                txtUserName.Text = Fm.gridView1.GetFocusedRowCellValue("UserNam").ToString();
-                txtPassword.Text = Fm.gridView1.GetFocusedRowCellValue("UserPassword").ToString();
+                txtUserName.Text = Fm.gridView1.GetFocusedRowCellValue("UserName").ToString();
+                txtName.Text = Fm.gridView1.GetFocusedRowCellValue("Name").ToString();
+                txtPassword.Text = Fm.gridView1.GetFocusedRowCellValue("Password").ToString();
                 chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("UserIsActive"));
 
                 CodeBeforeEdit = txtCode.Text;
-                NameBeforeEdit = txtName.Text;
-                UserNameBeforEdit = txtName.Text;
+                NameBeforeEdit = txtUserName.Text;
+                UserNameBeforEdit = txtUserName.Text;
             }
 
         }
@@ -77,10 +77,11 @@ namespace SystemManagement.UsersSystem
                             MsUser obj = new MsUser()
                             {
                                 UserCode = Convert.ToInt32(txtCode.Text),
-                                UserName = txtName.Text,
-                                UserNam = txtUserName.Text,
-                                UserPassword = txtPassword.Text,
-                                UserIsActive = chkIsActive.Checked
+                                UserName = txtUserName.Text,
+                                Name = txtName.Text,
+                                Password = txtPassword.Text,
+                                UserIsActive = chkIsActive.Checked,
+                                DoreMali= Convert.ToInt32(Fm.lblSelectDoreMali.Text),
                             };
                             db.MsUsers.Add(obj);
                             db.SaveChanges();
@@ -94,10 +95,10 @@ namespace SystemManagement.UsersSystem
                                 btnCreateClose.Enabled = true;
                                 btnCreateNext.Enabled = true;
                                 btnNewCode_Click(null, null);
-                                txtName.Text = "";
                                 txtUserName.Text = "";
+                                txtName.Text = "";
                                 txtPassword.Text = "";
-                                txtName.Focus();
+                                txtUserName.Focus();
                             }
                         }
                         catch (Exception ex)
@@ -117,9 +118,9 @@ namespace SystemManagement.UsersSystem
                             if (q != null)
                             {
                                 q.UserCode = Convert.ToInt32(txtCode.Text);
-                                q.UserName = txtName.Text;
-                                q.UserNam = txtUserName.Text;
-                                q.UserPassword = txtPassword.Text;
+                                q.UserName = txtUserName.Text;
+                                q.Name = txtName.Text;
+                                q.Password = txtPassword.Text;
                                 q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
 
                                 db.SaveChanges();
@@ -129,7 +130,7 @@ namespace SystemManagement.UsersSystem
                                 Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
                                 /////////////////////////////////////////  ویرایش نام کاربر  ////////////////////////////////////////////////
 
-                                if (UserNameBeforEdit != txtName.Text)
+                                if (UserNameBeforEdit != txtUserName.Text)
                                 {
                                     var q1 = db.RmsMajmoehaBmsUserhas.Where(s => s.MsUserId == RowId).ToList();
                                     var q2 = db.RmsVahedhaBmsUserhas.Where(s => s.MsUserId == RowId).ToList();
@@ -139,7 +140,7 @@ namespace SystemManagement.UsersSystem
                                     {
                                         foreach (var item in q1)
                                         {
-                                            item.UserName = txtName.Text;
+                                            item.UserName = txtUserName.Text;
                                             ///////////////////////////////////////////////////////////////////////////////
                                             var q11 = db.RmsMajmoehaBmsUserhas.Where(s => s.MsMajmoeId == item.MsMajmoeId).Select(s => s.MsUserId).ToList();
                                             string CheckedItems = string.Empty;
@@ -156,7 +157,7 @@ namespace SystemManagement.UsersSystem
                                     {
                                         foreach (var item in q2)
                                         {
-                                            item.UserName = txtName.Text;
+                                            item.UserName = txtUserName.Text;
                                             ///////////////////////////////////////////////////////////////////////////////
                                             var q11 = db.RmsVahedhaBmsUserhas.Where(s => s.MsVahedId == item.MsVahedId).Select(s => s.MsUserId).ToList();
                                             string CheckedItems = string.Empty;
@@ -173,7 +174,7 @@ namespace SystemManagement.UsersSystem
                                     {
                                         foreach (var item in q3)
                                         {
-                                            item.UserName = txtName.Text;
+                                            item.UserName = txtUserName.Text;
                                             ///////////////////////////////////////////////////////////////////////////////
                                             var q11 = db.RmsShobehaBmsUserhas.Where(s => s.MsShobeId == item.MsShobeId).Select(s => s.MsUserId).ToList();
                                             string CheckedItems = string.Empty;
@@ -190,7 +191,7 @@ namespace SystemManagement.UsersSystem
                                     {
                                         foreach (var item in q4)
                                         {
-                                            item.UserName = txtName.Text;
+                                            item.UserName = txtUserName.Text;
                                             ///////////////////////////////////////////////////////////////////////////////
                                             var q11 = db.RmsDoreMalihaBmsUserhas.Where(s => s.MsDoreMaliId == item.MsDoreMaliId).Select(s => s.MsUserId).ToList();
                                             string CheckedItems = string.Empty;
@@ -225,11 +226,11 @@ namespace SystemManagement.UsersSystem
                             var q = db.MsUsers.FirstOrDefault(p => p.MsUserId == RowId);
                             if (q != null)
                             {
-                                q.UserCode = Convert.ToInt32(txtCode.Text);
-                                q.UserName = txtName.Text;
-                                q.UserNam = txtUserName.Text;
-                                q.UserPassword = txtPassword.Text;
-                                q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                //q.UserCode = Convert.ToInt32(txtCode.Text);
+                                //q.UserName = txtUserName.Text;
+                                //q.Name = txtName.Text;
+                                //q.Password = txtPassword.Text;
+                                //q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
 
                                 db.MsUsers.Remove(q);
                                 db.SaveChanges();
@@ -352,7 +353,7 @@ namespace SystemManagement.UsersSystem
 
             //////////////// اعتبار سنجی تکس باکس///////////////////////////////
 
-            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text) || txtName.Text == "0")
+            if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtPassword.Text) || txtUserName.Text == "0")
             {
                 XtraMessageBox.Show("لطفاً اطلاعات را کامل وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -367,7 +368,7 @@ namespace SystemManagement.UsersSystem
                         {
                             if (db.MsUsers.Any())
                             {
-                                var q2 = db.MsUsers.Where(p => p.UserName == txtName.Text);
+                                var q2 = db.MsUsers.Where(p => p.UserName == txtUserName.Text);
                                 if (q2.Any())
                                 {
                                     XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -378,7 +379,7 @@ namespace SystemManagement.UsersSystem
                         else if (this.Text == "ویرایش رکورد جاری")
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q2 = db.MsUsers.Where(p => p.MsUserId != RowId && p.UserName == txtName.Text);
+                            var q2 = db.MsUsers.Where(p => p.MsUserId != RowId && p.UserName == txtUserName.Text);
                             if (q2.Any())
                             {
                                 XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);

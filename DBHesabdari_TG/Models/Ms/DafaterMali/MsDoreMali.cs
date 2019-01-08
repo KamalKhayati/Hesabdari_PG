@@ -23,16 +23,14 @@ namespace DBHesabdari_TG
         [Required]
         public int DoreMaliCode { get; set; }
         [Required]
-        public int DoreMaliName { get; set; }
+        public int DoreMali { get; set; }
         [Required, Column(TypeName = "Date")]
         public DateTime StartDoreMali { get; set; }
         [Required,Column(TypeName = "Date")]
         public DateTime EndDoreMali { get; set; }
         [Required]
         public bool DoreMaliIsActive { get; set; }
-        [Required]
-        public bool DoreIsDefault { get; set; }
-        [Required]
+        public bool IsDefault { get; set; }
         public bool DoreIsClose { get; set; }
         public decimal? Maliat { get; set; }
         public decimal? Avarez { get; set; }
@@ -65,7 +63,7 @@ namespace DBHesabdari_TG
 
         [Column(Order = 2)]
         [Required]
-        public int DoreMaliName { get; set; }
+        public int DoreMali { get; set; }
 
         [Key]
         [Column(Order = 3)]

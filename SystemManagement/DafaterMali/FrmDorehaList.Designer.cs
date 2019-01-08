@@ -60,10 +60,10 @@
             this.colVahedName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colShobeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoreMaliCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDoreMaliName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStartDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEndDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDoreIsDefault = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIsDefault = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoreIsClose = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaliat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAvarez = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -92,6 +92,7 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
+            this.lblSelectDoreMali = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -105,10 +106,10 @@
             this.colVahedName,
             this.colShobeName,
             this.colDoreMaliCode,
-            this.colDoreMaliName,
+            this.colDoreMali,
             this.colStartDoreMali,
             this.colEndDoreMali,
-            this.colDoreIsDefault,
+            this.colIsDefault,
             this.colDoreIsClose,
             this.colMaliat,
             this.colAvarez,
@@ -203,20 +204,20 @@
             this.colDoreMaliCode.VisibleIndex = 3;
             this.colDoreMaliCode.Width = 120;
             // 
-            // colDoreMaliName
+            // colDoreMali
             // 
-            this.colDoreMaliName.AppearanceCell.Options.UseTextOptions = true;
-            this.colDoreMaliName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colDoreMaliName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colDoreMaliName.AppearanceHeader.Options.UseTextOptions = true;
-            this.colDoreMaliName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colDoreMaliName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colDoreMaliName.Caption = "سال مالی";
-            this.colDoreMaliName.FieldName = "DoreMaliName";
-            this.colDoreMaliName.Name = "colDoreMaliName";
-            this.colDoreMaliName.Visible = true;
-            this.colDoreMaliName.VisibleIndex = 4;
-            this.colDoreMaliName.Width = 90;
+            this.colDoreMali.AppearanceCell.Options.UseTextOptions = true;
+            this.colDoreMali.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMali.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMali.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDoreMali.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDoreMali.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colDoreMali.Caption = "سال مالی";
+            this.colDoreMali.FieldName = "DoreMali";
+            this.colDoreMali.Name = "colDoreMali";
+            this.colDoreMali.Visible = true;
+            this.colDoreMali.VisibleIndex = 4;
+            this.colDoreMali.Width = 90;
             // 
             // colStartDoreMali
             // 
@@ -248,20 +249,20 @@
             this.colEndDoreMali.VisibleIndex = 6;
             this.colEndDoreMali.Width = 130;
             // 
-            // colDoreIsDefault
+            // colIsDefault
             // 
-            this.colDoreIsDefault.AppearanceCell.Options.UseTextOptions = true;
-            this.colDoreIsDefault.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colDoreIsDefault.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colDoreIsDefault.AppearanceHeader.Options.UseTextOptions = true;
-            this.colDoreIsDefault.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colDoreIsDefault.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colDoreIsDefault.Caption = "سال پیش فرض";
-            this.colDoreIsDefault.FieldName = "DoreIsDefault";
-            this.colDoreIsDefault.Name = "colDoreIsDefault";
-            this.colDoreIsDefault.Visible = true;
-            this.colDoreIsDefault.VisibleIndex = 7;
-            this.colDoreIsDefault.Width = 130;
+            this.colIsDefault.AppearanceCell.Options.UseTextOptions = true;
+            this.colIsDefault.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsDefault.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsDefault.AppearanceHeader.Options.UseTextOptions = true;
+            this.colIsDefault.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsDefault.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsDefault.Caption = "سال پیش فرض";
+            this.colIsDefault.FieldName = "IsDefault";
+            this.colIsDefault.Name = "colIsDefault";
+            this.colIsDefault.Visible = true;
+            this.colIsDefault.VisibleIndex = 7;
+            this.colIsDefault.Width = 130;
             // 
             // colDoreIsClose
             // 
@@ -374,7 +375,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1094, 465);
+            this.gridControl1.Size = new System.Drawing.Size(1088, 465);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -419,8 +420,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyActiveList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyNotActiveList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintPreview, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnListPrint, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmkanat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnListPrint, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmkanat, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DisableClose = true;
             this.bar1.OptionsBar.DisableCustomization = true;
@@ -565,7 +566,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1094, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1088, 60);
             // 
             // barDockControlBottom
             // 
@@ -574,7 +575,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 525);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1094, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1088, 0);
             // 
             // barDockControlLeft
             // 
@@ -589,7 +590,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1094, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1088, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 465);
@@ -599,11 +600,23 @@
             this.pLinqInstantFeedbackSource1.DefaultSorting = "DoreMaliCode ASC";
             this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsDoreMali);
             // 
+            // lblSelectDoreMali
+            // 
+            this.lblSelectDoreMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSelectDoreMali.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblSelectDoreMali.Location = new System.Drawing.Point(972, 0);
+            this.lblSelectDoreMali.Name = "lblSelectDoreMali";
+            this.lblSelectDoreMali.Size = new System.Drawing.Size(116, 27);
+            this.lblSelectDoreMali.TabIndex = 10;
+            this.lblSelectDoreMali.Text = "دوره مالی انتخابی";
+            this.lblSelectDoreMali.Visible = false;
+            // 
             // FrmDorehaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 525);
+            this.ClientSize = new System.Drawing.Size(1088, 525);
+            this.Controls.Add(this.lblSelectDoreMali);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -642,11 +655,11 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraGrid.Columns.GridColumn colMsDoreMaliId;
         private DevExpress.XtraGrid.Columns.GridColumn colDoreMaliCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colDoreMaliName;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoreMali;
         private DevExpress.XtraGrid.Columns.GridColumn colStartDoreMali;
         private DevExpress.XtraGrid.Columns.GridColumn colEndDoreMali;
         private DevExpress.XtraGrid.Columns.GridColumn colDoreMaliIsActive;
-        private DevExpress.XtraGrid.Columns.GridColumn colDoreIsDefault;
+        private DevExpress.XtraGrid.Columns.GridColumn colIsDefault;
         private DevExpress.XtraGrid.Columns.GridColumn colDoreIsClose;
         private DevExpress.XtraGrid.Columns.GridColumn colMaliat;
         private DevExpress.XtraGrid.Columns.GridColumn colAvarez;
@@ -661,5 +674,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colRmsDoreMalihaBmsUserhas;
         private DevExpress.Data.PLinq.PLinqInstantFeedbackSource pLinqInstantFeedbackSource1;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
+        public DevExpress.XtraEditors.LabelControl lblSelectDoreMali;
     }
 }

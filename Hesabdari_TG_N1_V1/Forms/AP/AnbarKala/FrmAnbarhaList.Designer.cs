@@ -30,18 +30,17 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnbarhaList));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.entityInstantFeedbackSource1 = new DevExpress.Data.Linq.EntityInstantFeedbackSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colApAnbarId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLine = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.entityInstantFeedbackSource1 = new DevExpress.Data.Linq.EntityInstantFeedbackSource();
             this.entityServerModeSource1 = new DevExpress.Data.Linq.EntityServerModeSource();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnCreate = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
@@ -56,6 +55,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.lblSelectDoreMali = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entityServerModeSource1)).BeginInit();
@@ -73,12 +73,6 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // entityInstantFeedbackSource1
-            // 
-            this.entityInstantFeedbackSource1.DefaultSorting = "AnbarCode ASC";
-            this.entityInstantFeedbackSource1.DesignTimeElementType = typeof(ApAnbar);
-            this.entityInstantFeedbackSource1.KeyExpression = "ApAnbarId";
             // 
             // gridView1
             // 
@@ -181,10 +175,16 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             this.colIsActive.Visible = true;
             this.colIsActive.VisibleIndex = 3;
             // 
+            // entityInstantFeedbackSource1
+            // 
+            this.entityInstantFeedbackSource1.DefaultSorting = "AnbarCode ASC";
+            this.entityInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.ApAnbar);
+            this.entityInstantFeedbackSource1.KeyExpression = "ApAnbarId";
+            // 
             // entityServerModeSource1
             // 
             this.entityServerModeSource1.DefaultSorting = "AnbarCode ASC";
-            this.entityServerModeSource1.ElementType = typeof(ApAnbar);
+            this.entityServerModeSource1.ElementType = typeof(DBHesabdari_TG.ApAnbar);
             this.entityServerModeSource1.KeyExpression = "ApAnbarId";
             // 
             // barManager1
@@ -340,12 +340,24 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 456);
             // 
+            // lblSelectDoreMali
+            // 
+            this.lblSelectDoreMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSelectDoreMali.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblSelectDoreMali.Location = new System.Drawing.Point(997, 0);
+            this.lblSelectDoreMali.Name = "lblSelectDoreMali";
+            this.lblSelectDoreMali.Size = new System.Drawing.Size(116, 27);
+            this.lblSelectDoreMali.TabIndex = 10;
+            this.lblSelectDoreMali.Text = "دوره مالی انتخابی";
+            this.lblSelectDoreMali.Visible = false;
+            // 
             // FrmAnbarhaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1113, 516);
+            this.Controls.Add(this.lblSelectDoreMali);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -390,5 +402,6 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
         public DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraBars.BarSubItem btnEmkanat;
         private DevExpress.XtraBars.BarButtonItem btnAdvancedSearch;
+        public DevExpress.XtraEditors.LabelControl lblSelectDoreMali;
     }
 }

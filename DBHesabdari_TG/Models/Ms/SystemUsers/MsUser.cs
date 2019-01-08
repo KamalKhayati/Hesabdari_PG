@@ -24,11 +24,14 @@ namespace DBHesabdari_TG
         [Required, MaxLength(50)]
         public string UserName { get; set; }
         [Required, MaxLength(50)]
-        public string UserNam { get; set; }
+        public string Name { get; set; }
         [Required, MaxLength(50)]
-        public string UserPassword { get; set; }
+        public string Password { get; set; }
         [Required]
         public bool UserIsActive { get; set; }
+        [Required]
+        public int DoreMali { get; set; }
+
         public virtual ICollection<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
         public virtual ICollection<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
         public virtual ICollection<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }

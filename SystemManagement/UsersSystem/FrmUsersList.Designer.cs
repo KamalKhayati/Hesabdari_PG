@@ -69,6 +69,8 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
+            this.repositoryItemHypertextLabel2 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMsUserId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -82,7 +84,10 @@
             this.colRmsVahedhaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRmsShobehaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
+            this.lblSelectDoreMali = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +114,10 @@
             this.btnListPrint,
             this.btnEmkanat,
             this.btnAdvancedSearch});
-            this.barManager1.MaxItemId = 9;
+            this.barManager1.MaxItemId = 11;
+            this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemHypertextLabel1,
+            this.repositoryItemHypertextLabel2});
             this.barManager1.RightToLeft = DevExpress.Utils.DefaultBoolean.True;
             // 
             // bar1
@@ -127,8 +135,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyActiveList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDisplyNotActiveList, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintPreview, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnListPrint, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmkanat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnListPrint, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEmkanat, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DisableClose = true;
             this.bar1.OptionsBar.DisableCustomization = true;
@@ -273,7 +281,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1102, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1131, 60);
             // 
             // barDockControlBottom
             // 
@@ -282,7 +290,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 535);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1102, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1131, 0);
             // 
             // barDockControlLeft
             // 
@@ -297,10 +305,18 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1102, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1131, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 475);
+            // 
+            // repositoryItemHypertextLabel1
+            // 
+            this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
+            // 
+            // repositoryItemHypertextLabel2
+            // 
+            this.repositoryItemHypertextLabel2.Name = "repositoryItemHypertextLabel2";
             // 
             // gridControl1
             // 
@@ -309,7 +325,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1102, 475);
+            this.gridControl1.Size = new System.Drawing.Size(1131, 475);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -405,7 +421,7 @@
             this.colUserNam.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUserNam.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colUserNam.Caption = "نام کاربری";
-            this.colUserNam.FieldName = "UserNam";
+            this.colUserNam.FieldName = "Name";
             this.colUserNam.Name = "colUserNam";
             this.colUserNam.Visible = true;
             this.colUserNam.VisibleIndex = 3;
@@ -419,7 +435,7 @@
             this.colUserPassword.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUserPassword.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colUserPassword.Caption = "رمز عبور";
-            this.colUserPassword.FieldName = "UserPassword";
+            this.colUserPassword.FieldName = "Password";
             this.colUserPassword.Name = "colUserPassword";
             this.colUserPassword.Visible = true;
             this.colUserPassword.VisibleIndex = 4;
@@ -460,11 +476,23 @@
             this.pLinqInstantFeedbackSource1.DefaultSorting = "UserCode ASC";
             this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsUser);
             // 
+            // lblSelectDoreMali
+            // 
+            this.lblSelectDoreMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSelectDoreMali.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblSelectDoreMali.Location = new System.Drawing.Point(1015, 0);
+            this.lblSelectDoreMali.Name = "lblSelectDoreMali";
+            this.lblSelectDoreMali.Size = new System.Drawing.Size(116, 27);
+            this.lblSelectDoreMali.TabIndex = 9;
+            this.lblSelectDoreMali.Text = "دوره مالی انتخابی";
+            this.lblSelectDoreMali.Visible = false;
+            // 
             // FrmUsersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 535);
+            this.ClientSize = new System.Drawing.Size(1131, 535);
+            this.Controls.Add(this.lblSelectDoreMali);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -476,6 +504,8 @@
             this.ShowIcon = false;
             this.Text = "لیست کاربران سیستم";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -513,5 +543,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colRmsVahedhaBmsUserhas;
         private DevExpress.XtraGrid.Columns.GridColumn colRmsShobehaBmsUserhas;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel2;
+        public DevExpress.XtraEditors.LabelControl lblSelectDoreMali;
     }
 }

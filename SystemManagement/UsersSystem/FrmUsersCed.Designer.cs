@@ -32,8 +32,8 @@
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
-            this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -48,8 +48,8 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -92,23 +92,23 @@
             this.txtPassword.Size = new System.Drawing.Size(208, 32);
             this.txtPassword.TabIndex = 3;
             // 
-            // txtUserName
-            // 
-            this.txtUserName.EnterMoveNextControl = true;
-            this.txtUserName.Location = new System.Drawing.Point(113, 108);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Properties.MaxLength = 50;
-            this.txtUserName.Size = new System.Drawing.Size(208, 32);
-            this.txtUserName.TabIndex = 2;
-            // 
             // txtName
             // 
             this.txtName.EnterMoveNextControl = true;
-            this.txtName.Location = new System.Drawing.Point(5, 46);
+            this.txtName.Location = new System.Drawing.Point(113, 108);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
-            this.txtName.Size = new System.Drawing.Size(316, 32);
-            this.txtName.TabIndex = 1;
+            this.txtName.Size = new System.Drawing.Size(208, 32);
+            this.txtName.TabIndex = 2;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.EnterMoveNextControl = true;
+            this.txtUserName.Location = new System.Drawing.Point(5, 46);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Properties.MaxLength = 50;
+            this.txtUserName.Size = new System.Drawing.Size(316, 32);
+            this.txtUserName.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -194,8 +194,8 @@
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.txtId);
             this.panelControl1.Controls.Add(this.txtPassword);
-            this.panelControl1.Controls.Add(this.txtUserName);
             this.panelControl1.Controls.Add(this.txtName);
+            this.panelControl1.Controls.Add(this.txtUserName);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl5);
@@ -273,8 +273,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUsersCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -292,8 +292,8 @@
         public DevExpress.XtraEditors.TextEdit txtCode;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.TextEdit txtPassword;
-        public DevExpress.XtraEditors.TextEdit txtUserName;
         public DevExpress.XtraEditors.TextEdit txtName;
+        public DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl5;

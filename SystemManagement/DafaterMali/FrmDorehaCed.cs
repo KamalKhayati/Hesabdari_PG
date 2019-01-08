@@ -219,11 +219,11 @@ namespace SystemManagement.DafaterMali
                 cmbShobeList.EditValue = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("MsShobeId").ToString());
                 txtId.Text = Fm.gridView1.GetFocusedRowCellValue("MsDoreMaliId").ToString();
                 txtCode.Text = Fm.gridView1.GetFocusedRowCellValue("DoreMaliCode").ToString().Substring(6);
-                txtDoreMali.Text = Fm.gridView1.GetFocusedRowCellValue("DoreMaliName").ToString();
+                txtDoreMali.Text = Fm.gridView1.GetFocusedRowCellValue("DoreMali").ToString();
                 txtStartDore.EditValue = Fm.gridView1.GetFocusedRowCellValue("StartDoreMali").ToString().Substring(0, 10);
                 txtEndDore.EditValue = Fm.gridView1.GetFocusedRowCellValue("EndDoreMali").ToString().Substring(0, 10);
                 chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("DoreMaliIsActive"));
-                chkDoreIsDefault.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("DoreIsDefault"));
+                chkIsDefault.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("IsDefault"));
                 chkDoreIsClose.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("DoreIsClose"));
                 txtMaliat.Text = Fm.gridView1.GetFocusedRowCellValue("Maliat").ToString();
                 txtAvarez.Text = Fm.gridView1.GetFocusedRowCellValue("Avarez").ToString();
@@ -287,7 +287,7 @@ namespace SystemManagement.DafaterMali
                         {
                             MsDoreMali obj = new MsDoreMali();
                             obj.DoreMaliCode = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                            obj.DoreMaliName = Convert.ToInt32(txtDoreMali.Text);
+                            obj.DoreMali = Convert.ToInt32(txtDoreMali.Text);
                             obj.StartDoreMali = Convert.ToDateTime(txtStartDore.Text);
                             obj.EndDoreMali = Convert.ToDateTime(txtEndDore.Text);
                             obj.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
@@ -298,10 +298,11 @@ namespace SystemManagement.DafaterMali
                             obj.ShobeName = cmbShobeList.Text;
                             obj.PermissiveUsers = chkcmbPermissiveUsers.Text;
                             obj.DoreMaliIsActive = chkIsActive.Checked;
-                            obj.DoreIsDefault = chkDoreIsDefault.Checked;
+                            obj.IsDefault = chkIsDefault.Checked;
                             obj.DoreIsClose = chkDoreIsClose.Checked;
                             obj.Maliat = Convert.ToDecimal(txtMaliat.Text != "" ? txtMaliat.Text : "0");
                             obj.Avarez = Convert.ToDecimal(txtAvarez.Text != "" ? txtAvarez.Text : "0");
+                            obj.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
                             db.MsDoreMalis.Add(obj);
                             db.SaveChanges();
                             /////////////////////////////////////////////////////////////////////////////////////
@@ -317,7 +318,7 @@ namespace SystemManagement.DafaterMali
                                     {
                                         RmsDoreMalihaBmsUserha obj1 = new RmsDoreMalihaBmsUserha();
                                         obj1.MsDoreMaliId = q.MsDoreMaliId;
-                                        obj1.DoreMaliName = q.DoreMaliName;
+                                        obj1.DoreMali = q.DoreMali;
                                         obj1.MsUserId = Convert.ToInt32(item.ToString());
                                         int id = Convert.ToInt32(item.ToString());
                                         var q1 = db.MsUsers.FirstOrDefault(s => s.MsUserId == id);
@@ -325,6 +326,7 @@ namespace SystemManagement.DafaterMali
                                         obj1.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
                                         obj1.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
                                         obj1.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
+                                        obj1.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
 
                                         db.RmsDoreMalihaBmsUserhas.Add(obj1);
                                     }
@@ -347,7 +349,7 @@ namespace SystemManagement.DafaterMali
                                 txtStartDore.Text = "";
                                 txtEndDore.Text = "";
                                 chkcmbPermissiveUsers.SetEditValue("");
-                                chkDoreIsDefault.Checked = false;
+                                chkIsDefault.Checked = false;
                                 chkDoreIsClose.Checked = false;
                                 txtMaliat.Text = "";
                                 txtAvarez.Text = "";
@@ -371,7 +373,7 @@ namespace SystemManagement.DafaterMali
                             if (q != null)
                             {
                                 q.DoreMaliCode = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                                q.DoreMaliName = Convert.ToInt32(txtDoreMali.Text);
+                                q.DoreMali = Convert.ToInt32(txtDoreMali.Text);
                                 q.StartDoreMali = Convert.ToDateTime(txtStartDore.Text);
                                 q.EndDoreMali = Convert.ToDateTime(txtEndDore.Text);
                                 q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
@@ -382,10 +384,11 @@ namespace SystemManagement.DafaterMali
                                 q.ShobeName = cmbShobeList.Text;
                                 q.PermissiveUsers = chkcmbPermissiveUsers.Text;
                                 q.DoreMaliIsActive = chkIsActive.Checked;
-                                q.DoreIsDefault = chkDoreIsDefault.Checked;
+                                q.IsDefault = chkIsDefault.Checked;
                                 q.DoreIsClose = chkDoreIsClose.Checked;
                                 q.Maliat = Convert.ToDecimal(txtMaliat.Text);
                                 q.Avarez = Convert.ToDecimal(txtAvarez.Text);
+                                q.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
                                 /////////////////////////////////////////////////////////////////////////////////////
                                 if (rmsShobehaBmsUserhasBindingSource.DataSource != null)
                                 {
@@ -400,7 +403,7 @@ namespace SystemManagement.DafaterMali
                                         {
                                             RmsDoreMalihaBmsUserha obj1 = new RmsDoreMalihaBmsUserha();
                                             obj1.MsDoreMaliId = q.MsDoreMaliId;
-                                            obj1.DoreMaliName = q.DoreMaliName;
+                                            obj1.DoreMali = q.DoreMali;
                                             obj1.MsUserId = Convert.ToInt32(item.ToString());
                                             int id = Convert.ToInt32(item.ToString());
                                             var q1 = db.MsUsers.FirstOrDefault(s => s.MsUserId == id);
@@ -408,6 +411,7 @@ namespace SystemManagement.DafaterMali
                                             obj1.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
                                             obj1.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
                                             obj1.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
+                                            obj1.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
 
                                             db.RmsDoreMalihaBmsUserhas.Add(obj1);
                                         }
@@ -549,12 +553,12 @@ namespace SystemManagement.DafaterMali
                 {
                     try
                     {
-                        int _DoreMaliName = Convert.ToInt32(txtDoreMali.Text);
+                        int _DoreMali = Convert.ToInt32(txtDoreMali.Text);
                         if (this.Text == "ایجاد رکورد جدید")
                         {
                             if (db.MsDoreMalis.Any())
                             {
-                                var q1 = db.MsDoreMalis.Where(p => p.MsShobeId == _ShobeId && p.DoreMaliName == _DoreMaliName);
+                                var q1 = db.MsDoreMalis.Where(p => p.MsShobeId == _ShobeId && p.DoreMali == _DoreMali);
                                 if (q1.Any())
                                 {
                                     XtraMessageBox.Show("این دوره قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -564,7 +568,7 @@ namespace SystemManagement.DafaterMali
                         }
                         else if (this.Text == "ویرایش رکورد جاری")
                         {
-                            var q1 = db.MsDoreMalis.Where(p => p.MsShobeId == _ShobeId && p.MsDoreMaliId != RowId && p.DoreMaliName == _DoreMaliName);
+                            var q1 = db.MsDoreMalis.Where(p => p.MsShobeId == _ShobeId && p.MsDoreMaliId != RowId && p.DoreMali == _DoreMali);
                             if (q1.Any())
                             {
                                 XtraMessageBox.Show("این دوره قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);

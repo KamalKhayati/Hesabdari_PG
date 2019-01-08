@@ -36,6 +36,10 @@ namespace DBHesabdari_TG
         public string VahedName { get; set; }
         public virtual MsVahed MsVahed1 { get; set; }
         public string PermissiveUsers { get; set; }
+        [Required]
+        public int DoreMali { get; set; }
+        public bool IsDefault { get; set; }
+
         public virtual ICollection<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }
         public virtual ICollection<MsDoreMali> MsDoreMalis { get; set; }
 
@@ -69,6 +73,8 @@ namespace DBHesabdari_TG
         [Column(Order = 6)]
         public int MsVahedId { get; set; }
 
+        [Required]
+        public int DoreMali { get; set; }
         public virtual MsShobe MsShobe1 { get; set; }
         public virtual MsUser MsUser1 { get; set; }
 

@@ -52,7 +52,6 @@ namespace SystemManagement.DafaterMali
                         db.MsMajmoes.Where(s => s.MajmoeIsActive == true).Load();
                         // Bind data to control when loading complete
                         msMajmoesBindingSource.DataSource = db.MsMajmoes.Local.ToBindingList();
-
                     }
                 }
                 catch (Exception ex)
@@ -150,7 +149,7 @@ namespace SystemManagement.DafaterMali
 
         string CodeBeforeEdit = "";
         string NameBeforeEdit = "";
-        string PermissiveUsersBeforeEdit = ""; 
+        string PermissiveUsersBeforeEdit = "";
         private void FrmVahedhaCed_Load(object sender, EventArgs e)
         {
             FillcmbMajmoehaList();
@@ -252,6 +251,7 @@ namespace SystemManagement.DafaterMali
                                 MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue),
                                 MajmoeName = cmbMajmoehaList.Text,
                                 PermissiveUsers = chkcmbPermissiveUsers.Text,
+                                DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text),
                             };
                             db.MsVaheds.Add(obj);
                             db.SaveChanges();
@@ -274,6 +274,7 @@ namespace SystemManagement.DafaterMali
                                         var q1 = db.MsUsers.FirstOrDefault(s => s.MsUserId == id);
                                         obj1.UserName = q1.UserName;
                                         obj1.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                        obj1.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
                                         db.RmsVahedhaBmsUserhas.Add(obj1);
                                     }
 
@@ -310,6 +311,7 @@ namespace SystemManagement.DafaterMali
                                 ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text,
                                 ShParvandeMaliati = txtShParvandeMaliati.Text,
                                 ShBimeKargah = txtShBimeKargah.Text,
+                                DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text),
                             };
                             db.MsInfoOthers.Add(obj2);
 
@@ -354,7 +356,7 @@ namespace SystemManagement.DafaterMali
                                 q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
                                 q.MajmoeName = cmbMajmoehaList.Text;
                                 q.PermissiveUsers = chkcmbPermissiveUsers.Text;
-
+                                q.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
 
                                 /////////////////////////////متد اصلاح کد و نام واحد در زیر شاخه های بالاتر WillCascadeOnUpdate ///////////////////////
                                 if (CodeBeforeEdit != txtCode.Text || NameBeforeEdit != txtName.Text)
@@ -390,7 +392,7 @@ namespace SystemManagement.DafaterMali
 
                                             if (a != txtCode.Text || _txtName != txtName.Text)
                                             {
-                                                item.DoreMaliCode = Convert.ToInt32(a+txtCode.Text + c);
+                                                item.DoreMaliCode = Convert.ToInt32(a + txtCode.Text + c);
                                                 item.VahedName = txtName.Text;
                                             }
                                         }
@@ -400,7 +402,7 @@ namespace SystemManagement.DafaterMali
                                 if (PermissiveUsersBeforeEdit != chkcmbPermissiveUsers.Text && rmsMajmoehaBmsUserhasBindingSource.DataSource != null)
                                 {
                                     var CheckedList = chkcmbPermissiveUsers.Properties.GetItems().GetCheckedValues();
-                                    var q9 = db.RmsShobehaBmsUserhas.Where(s =>  s.MsVahedId == RowId).ToList();
+                                    var q9 = db.RmsShobehaBmsUserhas.Where(s => s.MsVahedId == RowId).ToList();
                                     var q10 = db.RmsDoreMalihaBmsUserhas.Where(s => s.MsVahedId == RowId).ToList();
                                     string Error = "عملیات با خطا مواجه شد \n تغییر در کاربران مجاز مقدور نیست \n جهت اعمال تغییر بایستی : \n";
 
@@ -410,7 +412,7 @@ namespace SystemManagement.DafaterMali
                                         {
                                             if (!CheckedList.Contains(item.MsUserId))
                                             {
-                                                Error += "دسترسی (" + item.UserName + ") را از سال مالی (" + item.DoreMaliName + ") خارج کنید \n";
+                                                Error += "دسترسی (" + item.UserName + ") را از سال مالی (" + item.DoreMali + ") خارج کنید \n";
                                             }
                                         }
                                     }
@@ -452,6 +454,7 @@ namespace SystemManagement.DafaterMali
                                             var q2 = db.MsUsers.FirstOrDefault(s => s.MsUserId == id);
                                             obj1.UserName = q2.UserName;
                                             obj1.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                            obj1.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
                                             db.RmsVahedhaBmsUserhas.Add(obj1);
                                         }
 
@@ -491,6 +494,8 @@ namespace SystemManagement.DafaterMali
                                     q4.ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text;
                                     q4.ShParvandeMaliati = txtShParvandeMaliati.Text;
                                     q4.ShBimeKargah = txtShBimeKargah.Text;
+                                    q4.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
+
                                 }
                                 else
                                 {
@@ -524,6 +529,7 @@ namespace SystemManagement.DafaterMali
                                         ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text,
                                         ShParvandeMaliati = txtShParvandeMaliati.Text,
                                         ShBimeKargah = txtShBimeKargah.Text,
+                                        DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text),
                                     };
                                     db.MsInfoOthers.Add(obj2);
                                 }
@@ -558,12 +564,12 @@ namespace SystemManagement.DafaterMali
                                 if (q1.Count > 0)
                                     db.RmsVahedhaBmsUserhas.RemoveRange(q1);
                                 //////////////////////////////////////////////////////////////////////////////////
-                                q.VahedCode = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text.ToString());
-                                q.VahedName = txtName.Text;
-                                q.VahedIsActive = chkIsActive.Checked;
-                                q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                q.MajmoeName = cmbMajmoehaList.Text;
-                                q.PermissiveUsers = chkcmbPermissiveUsers.Text;
+                                //q.VahedCode = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text.ToString());
+                                //q.VahedName = txtName.Text;
+                                //q.VahedIsActive = chkIsActive.Checked;
+                                //q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                //q.MajmoeName = cmbMajmoehaList.Text;
+                                //q.PermissiveUsers = chkcmbPermissiveUsers.Text;
 
                                 db.MsVaheds.Remove(q);
                                 /////////////////////////////////////////////////////////////////////////////
@@ -571,35 +577,34 @@ namespace SystemManagement.DafaterMali
                                 var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsMajmoeId == RowId);
                                 if (q4 != null)
                                 {
-
-                                    q4.MsVahedId = RowId;
-                                    q4.MsCode = _code;
-                                    q4.MsName = txtName.Text;
-                                    q4.NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی";
-                                    q4.NoeFaaliat = txtNoeFaaliat.Text;
-                                    q4.Adress = txtAdress.Text;
-                                    q4.CodePosti = txtCodePosti.Text;
-                                    q4.SandoghPosti = txtSandoghPosti.Text;
-                                    q4.ShomarePlak = txtShomarePlak.Text;
-                                    q4.ShomareSabt = txtShomareSabt.Text;
-                                    q4.CodeMelli = txtCodeMelli.Text;
-                                    q4.ShenaseMelli = txtShenaseMelli.Text;
-                                    q4.CodeSenfee = txtCodeSenfee.Text;
-                                    q4.CodeEghtesadi = txtCodeEghtesadi.Text;
-                                    q4.Tell1 = txtTell1.Text;
-                                    q4.Tell2 = txtTell2.Text;
-                                    q4.TellFax1 = txtTellFax1.Text;
-                                    q4.TellFax2 = txtTellFax2.Text;
-                                    q4.Mobile1 = txtMobile1.Text;
-                                    q4.Mobile2 = txtMobile2.Text;
-                                    q4.Email1 = txtEmail1.Text;
-                                    q4.Email2 = txtEmail2.Text;
-                                    q4.Site = txtSite.Text;
-                                    q4.WebLog = txtWebLog.Text;
-                                    q4.ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text;
-                                    q4.ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text;
-                                    q4.ShParvandeMaliati = txtShParvandeMaliati.Text;
-                                    q4.ShBimeKargah = txtShBimeKargah.Text;
+                                    //q4.MsVahedId = RowId;
+                                    //q4.MsCode = _code;
+                                    //q4.MsName = txtName.Text;
+                                    //q4.NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی";
+                                    //q4.NoeFaaliat = txtNoeFaaliat.Text;
+                                    //q4.Adress = txtAdress.Text;
+                                    //q4.CodePosti = txtCodePosti.Text;
+                                    //q4.SandoghPosti = txtSandoghPosti.Text;
+                                    //q4.ShomarePlak = txtShomarePlak.Text;
+                                    //q4.ShomareSabt = txtShomareSabt.Text;
+                                    //q4.CodeMelli = txtCodeMelli.Text;
+                                    //q4.ShenaseMelli = txtShenaseMelli.Text;
+                                    //q4.CodeSenfee = txtCodeSenfee.Text;
+                                    //q4.CodeEghtesadi = txtCodeEghtesadi.Text;
+                                    //q4.Tell1 = txtTell1.Text;
+                                    //q4.Tell2 = txtTell2.Text;
+                                    //q4.TellFax1 = txtTellFax1.Text;
+                                    //q4.TellFax2 = txtTellFax2.Text;
+                                    //q4.Mobile1 = txtMobile1.Text;
+                                    //q4.Mobile2 = txtMobile2.Text;
+                                    //q4.Email1 = txtEmail1.Text;
+                                    //q4.Email2 = txtEmail2.Text;
+                                    //q4.Site = txtSite.Text;
+                                    //q4.WebLog = txtWebLog.Text;
+                                    //q4.ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text;
+                                    //q4.ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text;
+                                    //q4.ShParvandeMaliati = txtShParvandeMaliati.Text;
+                                    //q4.ShBimeKargah = txtShBimeKargah.Text;
                                     db.MsInfoOthers.Remove(q4);
                                 };
 
