@@ -32,8 +32,8 @@ namespace DBHesabdari_TG
         public bool DoreMaliIsActive { get; set; }
         public bool IsDefault { get; set; }
         public bool DoreIsClose { get; set; }
-        public decimal? Maliat { get; set; }
-        public decimal? Avarez { get; set; }
+        public float Maliat { get; set; }
+        public float Avarez { get; set; }
         [Required]
         public int MsMajmoeId { get; set; }
         [Required, MaxLength(50)]
@@ -48,42 +48,7 @@ namespace DBHesabdari_TG
         public string ShobeName { get; set; }
         public virtual MsShobe MsShobe1 { get; set; }
         public string PermissiveUsers { get; set; }
-        public virtual ICollection<RmsDoreMalihaBmsUserha> RmsDoreMalihaBmsUserhas { get; set; }
+        public virtual ICollection<RmsUserhaBmsDorehaiMali> RmsUserhaBmsDorehaiMalis { get; set; }
     }
 
-    public class RmsDoreMalihaBmsUserha
-    {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column(Order = 0)]
-        public int Id { get; set; }
-
-        [Key]
-        [Column(Order = 1)]
-        public int MsDoreMaliId { get; set; }
-
-        [Column(Order = 2)]
-        [Required]
-        public int DoreMali { get; set; }
-
-        [Key]
-        [Column(Order = 3)]
-        public int MsUserId { get; set; }
-
-        [Column(Order = 4)]
-        [Required, MaxLength(50)]
-        public string UserName { get; set; }
-
-        [Column(Order = 5)]
-        public int MsMajmoeId { get; set; }
-
-        [Column(Order = 6)]
-        public int MsVahedId { get; set; }
-
-        [Column(Order = 7)]
-        public int MsShobeId { get; set; }
-
-        public virtual MsDoreMali MsDoreMali1 { get; set; }
-        public virtual MsUser MsUser1 { get; set; }
-
-    }
 }

@@ -68,6 +68,7 @@
     <Compile Include="Models\Ms\DafaterMali\MsMajmoe.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsShobe.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsVahed.cs" />
+    <Compile Include="Models\Ms\SystemUsers\MsAccessLevel1.cs" />
     <Compile Include="Models\Ms\SystemUsers\MsUser.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Program.cs" />

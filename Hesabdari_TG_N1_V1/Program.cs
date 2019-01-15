@@ -65,7 +65,24 @@ namespace Hesabdari_TG_N1_V1
             HelpClass1.SetRegionAndLanguage();
 
             BonusSkins.Register();
-            Application.Run(new FrmMain());
+            Application.Run(new AppContext());
         }
+        public class AppContext : ApplicationContext
+        {
+            public AppContext()
+            {
+                Application.Idle += new EventHandler(Application_Idle);
+                new FrmLogin().Show();
+            }
+
+            private void Application_Idle(object sender, EventArgs e)
+            {
+                if (Application.OpenForms.Count == 0)
+                {
+                    Application.Exit();
+                }
+            }
+        }
+
     }
 }

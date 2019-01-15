@@ -132,6 +132,29 @@ namespace SystemManagement.DafaterMali
             // Dispose of the DataContext
             ((DBHesabdari_TG.MyContext)e.Tag).Dispose();
         }
+
+        private void FrmVahedhaList_Load(object sender, EventArgs e)
+        {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    int _UserId = Convert.ToInt32(lblUserId.Text);
+                    var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == _UserId).ToList();
+                    if (q1.Count() > 0)
+                    {
+                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55121) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55122) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55123) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 
 }

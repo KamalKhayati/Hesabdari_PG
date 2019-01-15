@@ -68,13 +68,12 @@
             this.colMaliat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAvarez = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoreMaliIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPermissiveUsers = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsMajmoeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMajmoeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsVahedId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsShobeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsShobe1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRmsDoreMalihaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsUserhaBmsDorehaiMalis = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -92,7 +91,8 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
-            this.lblSelectDoreMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserName = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -114,13 +114,12 @@
             this.colMaliat,
             this.colAvarez,
             this.colDoreMaliIsActive,
-            this.colPermissiveUsers,
             this.colMsMajmoeId,
             this.colMajmoeName,
             this.colMsVahedId,
             this.colMsShobeId,
             this.colMsShobe1,
-            this.colRmsDoreMalihaBmsUserhas});
+            this.colRmsUserhaBmsDorehaiMalis});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -324,20 +323,6 @@
             this.colDoreMaliIsActive.VisibleIndex = 11;
             this.colDoreMaliIsActive.Width = 60;
             // 
-            // colPermissiveUsers
-            // 
-            this.colPermissiveUsers.AppearanceCell.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.Caption = "کاربران مجاز به ثبت عملیات";
-            this.colPermissiveUsers.FieldName = "PermissiveUsers";
-            this.colPermissiveUsers.Name = "colPermissiveUsers";
-            this.colPermissiveUsers.Visible = true;
-            this.colPermissiveUsers.VisibleIndex = 12;
-            this.colPermissiveUsers.Width = 600;
-            // 
             // colMsMajmoeId
             // 
             this.colMsMajmoeId.FieldName = "MsMajmoeId";
@@ -363,10 +348,10 @@
             this.colMsShobe1.FieldName = "MsShobe1";
             this.colMsShobe1.Name = "colMsShobe1";
             // 
-            // colRmsDoreMalihaBmsUserhas
+            // colRmsUserhaBmsDorehaiMalis
             // 
-            this.colRmsDoreMalihaBmsUserhas.FieldName = "RmsDoreMalihaBmsUserhas";
-            this.colRmsDoreMalihaBmsUserhas.Name = "colRmsDoreMalihaBmsUserhas";
+            this.colRmsUserhaBmsDorehaiMalis.FieldName = "RmsUserhaBmsDorehaiMalis";
+            this.colRmsUserhaBmsDorehaiMalis.Name = "colRmsUserhaBmsDorehaiMalis";
             // 
             // gridControl1
             // 
@@ -600,24 +585,32 @@
             this.pLinqInstantFeedbackSource1.DefaultSorting = "DoreMaliCode ASC";
             this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsDoreMali);
             // 
-            // lblSelectDoreMali
+            // lblUserName
             // 
-            this.lblSelectDoreMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSelectDoreMali.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblSelectDoreMali.Location = new System.Drawing.Point(972, 0);
-            this.lblSelectDoreMali.Name = "lblSelectDoreMali";
-            this.lblSelectDoreMali.Size = new System.Drawing.Size(116, 27);
-            this.lblSelectDoreMali.TabIndex = 10;
-            this.lblSelectDoreMali.Text = "دوره مالی انتخابی";
-            this.lblSelectDoreMali.Visible = false;
+            this.lblUserName.Location = new System.Drawing.Point(12, 100);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.TabIndex = 12;
+            this.lblUserName.Text = "نام کاربر";
+            this.lblUserName.Visible = false;
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.Location = new System.Drawing.Point(12, 69);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.TabIndex = 11;
+            this.lblUserId.Text = "آیدی  کاربر";
+            this.lblUserId.Visible = false;
             // 
             // FrmDorehaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 525);
-            this.Controls.Add(this.lblSelectDoreMali);
             this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -626,6 +619,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.Text = "لیست دوره های مالی";
+            this.Load += new System.EventHandler(this.FrmDorehaList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -670,10 +664,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMsShobeId;
         private DevExpress.XtraGrid.Columns.GridColumn colShobeName;
         private DevExpress.XtraGrid.Columns.GridColumn colMsShobe1;
-        private DevExpress.XtraGrid.Columns.GridColumn colPermissiveUsers;
-        private DevExpress.XtraGrid.Columns.GridColumn colRmsDoreMalihaBmsUserhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsDorehaiMalis;
         private DevExpress.Data.PLinq.PLinqInstantFeedbackSource pLinqInstantFeedbackSource1;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
-        public DevExpress.XtraEditors.LabelControl lblSelectDoreMali;
+        public DevExpress.XtraEditors.LabelControl lblUserName;
+        public DevExpress.XtraEditors.LabelControl lblUserId;
     }
 }

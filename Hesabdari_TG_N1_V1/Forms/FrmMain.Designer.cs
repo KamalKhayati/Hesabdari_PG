@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFroosh = new DevExpress.XtraBars.BarButtonItem();
             this.btnBargashtFroosh = new DevExpress.XtraBars.BarButtonItem();
@@ -85,17 +88,20 @@
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
+            this.mbsSystemUsers = new DevExpress.XtraBars.BarSubItem();
             this.btnUsersList = new DevExpress.XtraBars.BarButtonItem();
-            this.btnSatheDastrasi = new DevExpress.XtraBars.BarButtonItem();
-            this.btnTaghirRamzObor = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
+            this.btnDetermineAccessLevel = new DevExpress.XtraBars.BarSubItem();
+            this.btnDetermineAccessLevel1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDetermineAccessLevel2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnChangePassword = new DevExpress.XtraBars.BarButtonItem();
+            this.mbsOperationDoreMali = new DevExpress.XtraBars.BarSubItem();
             this.btnBastanHesabhaMovaghat = new DevExpress.XtraBars.BarButtonItem();
             this.btnBastanHesabhaDaem = new DevExpress.XtraBars.BarButtonItem();
             this.btnGhateeKardanAsnad = new DevExpress.XtraBars.BarButtonItem();
             this.btnAmaliatEbtedaDoreh = new DevExpress.XtraBars.BarButtonItem();
             this.btnHazfeColiEtelaat = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSatheDastrasi = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem11 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem12 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem13 = new DevExpress.XtraBars.BarSubItem();
@@ -109,25 +115,27 @@
             this.barSubItem15 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem45 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem46 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem16 = new DevExpress.XtraBars.BarSubItem();
-            this.btnListMojtamaha = new DevExpress.XtraBars.BarButtonItem();
-            this.btnListSherkatha = new DevExpress.XtraBars.BarButtonItem();
-            this.btnListShoabat = new DevExpress.XtraBars.BarButtonItem();
+            this.mbsListDafaterMali = new DevExpress.XtraBars.BarSubItem();
+            this.btnListMojmoeha = new DevExpress.XtraBars.BarButtonItem();
+            this.btnListVahedha = new DevExpress.XtraBars.BarButtonItem();
+            this.btnListShobeha = new DevExpress.XtraBars.BarButtonItem();
             this.btnListDorehaiMali = new DevExpress.XtraBars.BarButtonItem();
             this.cmbMajmoehaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msMajmoeBindingSource = new System.Windows.Forms.BindingSource();
+            this.msMajmoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbVahedhaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msVahedBindingSource = new System.Windows.Forms.BindingSource();
+            this.msVahedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.cmbShobehaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msShobeBindingSource = new System.Windows.Forms.BindingSource();
+            this.msShobeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbDoreMalihaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msDoreMaliBindingSource = new System.Windows.Forms.BindingSource();
+            this.msDoreMaliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chkDefault = new DevExpress.XtraBars.BarCheckItem();
+            this.txtUserName = new DevExpress.XtraBars.BarStaticItem();
+            this.txtUserId = new DevExpress.XtraBars.BarStaticItem();
             this.rpKharidFroosh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgFroosh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgKharid = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -156,9 +164,9 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.Ms = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgOperationDafaterVaDoreMali = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgUsers = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -174,14 +182,15 @@
             this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemHypertextLabel2 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -202,6 +211,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.hideContainerRight.SuspendLayout();
             this.dockPanel1.SuspendLayout();
@@ -270,8 +280,8 @@
             this.barButtonItem27,
             this.barButtonItem28,
             this.barButtonItem29,
-            this.barSubItem9,
-            this.barSubItem10,
+            this.mbsSystemUsers,
+            this.mbsOperationDoreMali,
             this.barButtonItem33,
             this.btnBastanHesabhaMovaghat,
             this.btnBastanHesabhaDaem,
@@ -280,7 +290,7 @@
             this.btnHazfeColiEtelaat,
             this.btnUsersList,
             this.btnSatheDastrasi,
-            this.btnTaghirRamzObor,
+            this.btnChangePassword,
             this.barSubItem11,
             this.barSubItem12,
             this.barSubItem13,
@@ -294,21 +304,26 @@
             this.barSubItem15,
             this.barButtonItem45,
             this.barButtonItem46,
-            this.barSubItem16,
-            this.btnListMojtamaha,
-            this.btnListSherkatha,
-            this.btnListShoabat,
+            this.mbsListDafaterMali,
+            this.btnListMojmoeha,
+            this.btnListVahedha,
+            this.btnListShobeha,
             this.btnListDorehaiMali,
             this.cmbMajmoehaList,
             this.cmbVahedhaList,
             this.barHeaderItem1,
             this.cmbShobehaList,
             this.cmbDoreMalihaList,
-            this.chkDefault});
+            this.chkDefault,
+            this.btnDetermineAccessLevel,
+            this.btnDetermineAccessLevel1,
+            this.btnDetermineAccessLevel2,
+            this.txtUserName,
+            this.txtUserId});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 125;
+            this.ribbon.MaxItemId = 134;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
             this.ribbon.PageHeaderMinWidth = 50;
@@ -319,7 +334,7 @@
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3,
-            this.ribbonPage4,
+            this.Ms,
             this.ribbonPage5,
             this.ribbonPage6,
             this.ribbonPage8});
@@ -341,14 +356,15 @@
             this.repositoryItemCheckEdit2,
             this.repositoryItemToggleSwitch1,
             this.repositoryItemCheckEdit3,
-            this.repositoryItemCheckEdit4});
+            this.repositoryItemCheckEdit4,
+            this.repositoryItemHypertextLabel2});
             this.ribbon.RibbonCaptionAlignment = DevExpress.XtraBars.Ribbon.RibbonCaptionAlignment.Center;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowCategoryInCaption = false;
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1610, 206);
+            this.ribbon.Size = new System.Drawing.Size(1453, 206);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -765,17 +781,17 @@
             this.barButtonItem29.Id = 70;
             this.barButtonItem29.Name = "barButtonItem29";
             // 
-            // barSubItem9
+            // mbsSystemUsers
             // 
-            this.barSubItem9.Caption = "کاربران سیستم";
-            this.barSubItem9.Id = 73;
-            this.barSubItem9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem9.ImageOptions.SvgImage")));
-            this.barSubItem9.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.mbsSystemUsers.Caption = "کاربران سیستم";
+            this.mbsSystemUsers.Id = 73;
+            this.mbsSystemUsers.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mbsSystemUsers.ImageOptions.SvgImage")));
+            this.mbsSystemUsers.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnUsersList),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnSatheDastrasi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnTaghirRamzObor)});
-            this.barSubItem9.Name = "barSubItem9";
-            this.barSubItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDetermineAccessLevel),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnChangePassword)});
+            this.mbsSystemUsers.Name = "mbsSystemUsers";
+            this.mbsSystemUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnUsersList
             // 
@@ -784,31 +800,47 @@
             this.btnUsersList.Name = "btnUsersList";
             this.btnUsersList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUsersList_ItemClick);
             // 
-            // btnSatheDastrasi
+            // btnDetermineAccessLevel
             // 
-            this.btnSatheDastrasi.Caption = "تعیین سطح دسترسی";
-            this.btnSatheDastrasi.Id = 83;
-            this.btnSatheDastrasi.Name = "btnSatheDastrasi";
+            this.btnDetermineAccessLevel.Caption = "تعیین سطح دسترسی کاربران";
+            this.btnDetermineAccessLevel.Id = 125;
+            this.btnDetermineAccessLevel.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDetermineAccessLevel1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDetermineAccessLevel2)});
+            this.btnDetermineAccessLevel.Name = "btnDetermineAccessLevel";
             // 
-            // btnTaghirRamzObor
+            // btnDetermineAccessLevel1
             // 
-            this.btnTaghirRamzObor.Caption = "تغییر رمز ورود";
-            this.btnTaghirRamzObor.Id = 84;
-            this.btnTaghirRamzObor.Name = "btnTaghirRamzObor";
+            this.btnDetermineAccessLevel1.Caption = "دسترسی به منو ها، زیر منو ها و محتویات فرمها";
+            this.btnDetermineAccessLevel1.Id = 126;
+            this.btnDetermineAccessLevel1.Name = "btnDetermineAccessLevel1";
+            this.btnDetermineAccessLevel1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDetermineAccessLevel1_ItemClick);
             // 
-            // barSubItem10
+            // btnDetermineAccessLevel2
             // 
-            this.barSubItem10.Caption = "عملیات سال مالی";
-            this.barSubItem10.Id = 74;
-            this.barSubItem10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem10.ImageOptions.SvgImage")));
-            this.barSubItem10.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.btnDetermineAccessLevel2.Caption = "دسترسی به داده ها و اطلاعات ایجاد شده";
+            this.btnDetermineAccessLevel2.Id = 127;
+            this.btnDetermineAccessLevel2.Name = "btnDetermineAccessLevel2";
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Caption = "تغییر رمز ورود کاربران";
+            this.btnChangePassword.Id = 84;
+            this.btnChangePassword.Name = "btnChangePassword";
+            // 
+            // mbsOperationDoreMali
+            // 
+            this.mbsOperationDoreMali.Caption = "عملیات سال مالی";
+            this.mbsOperationDoreMali.Id = 74;
+            this.mbsOperationDoreMali.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mbsOperationDoreMali.ImageOptions.SvgImage")));
+            this.mbsOperationDoreMali.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnBastanHesabhaMovaghat, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnBastanHesabhaDaem),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGhateeKardanAsnad),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnAmaliatEbtedaDoreh, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHazfeColiEtelaat)});
-            this.barSubItem10.Name = "barSubItem10";
-            this.barSubItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.mbsOperationDoreMali.Name = "mbsOperationDoreMali";
+            this.mbsOperationDoreMali.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnBastanHesabhaMovaghat
             // 
@@ -845,6 +877,12 @@
             this.barButtonItem33.Caption = "لیست دوره های مالی";
             this.barButtonItem33.Id = 76;
             this.barButtonItem33.Name = "barButtonItem33";
+            // 
+            // btnSatheDastrasi
+            // 
+            this.btnSatheDastrasi.Caption = "تعیین سطح دسترسی";
+            this.btnSatheDastrasi.Id = 83;
+            this.btnSatheDastrasi.Name = "btnSatheDastrasi";
             // 
             // barSubItem11
             // 
@@ -952,39 +990,39 @@
             this.barButtonItem46.Id = 103;
             this.barButtonItem46.Name = "barButtonItem46";
             // 
-            // barSubItem16
+            // mbsListDafaterMali
             // 
-            this.barSubItem16.Caption = "لیست دفاتر مالی";
-            this.barSubItem16.Id = 104;
-            this.barSubItem16.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem16.ImageOptions.SvgImage")));
-            this.barSubItem16.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnListMojtamaha, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnListSherkatha),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnListShoabat),
+            this.mbsListDafaterMali.Caption = "لیست دفاتر مالی";
+            this.mbsListDafaterMali.Id = 104;
+            this.mbsListDafaterMali.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mbsListDafaterMali.ImageOptions.SvgImage")));
+            this.mbsListDafaterMali.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnListMojmoeha, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnListVahedha),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnListShobeha),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnListDorehaiMali)});
-            this.barSubItem16.Name = "barSubItem16";
-            this.barSubItem16.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.mbsListDafaterMali.Name = "mbsListDafaterMali";
+            this.mbsListDafaterMali.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btnListMojtamaha
+            // btnListMojmoeha
             // 
-            this.btnListMojtamaha.Caption = "لیست اسامی مجتمع ها یا مجموعه های زنجیره ای";
-            this.btnListMojtamaha.Id = 105;
-            this.btnListMojtamaha.Name = "btnListMojtamaha";
-            this.btnListMojtamaha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListMojtamaha_ItemClick);
+            this.btnListMojmoeha.Caption = "لیست اسامی مجموعه های زنجیره ای";
+            this.btnListMojmoeha.Id = 105;
+            this.btnListMojmoeha.Name = "btnListMojmoeha";
+            this.btnListMojmoeha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListMojtamaha_ItemClick);
             // 
-            // btnListSherkatha
+            // btnListVahedha
             // 
-            this.btnListSherkatha.Caption = "لیست اسامی شرکتها یا واحدهای تجاری و خدماتی";
-            this.btnListSherkatha.Id = 106;
-            this.btnListSherkatha.Name = "btnListSherkatha";
-            this.btnListSherkatha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListVahedha_ItemClick);
+            this.btnListVahedha.Caption = "لیست اسامی واحدهای تجاری یا خدماتی";
+            this.btnListVahedha.Id = 106;
+            this.btnListVahedha.Name = "btnListVahedha";
+            this.btnListVahedha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListVahedha_ItemClick);
             // 
-            // btnListShoabat
+            // btnListShobeha
             // 
-            this.btnListShoabat.Caption = "لیست اسامی شعبات یا نمایندگی شرکتها و یا واحدها ";
-            this.btnListShoabat.Id = 107;
-            this.btnListShoabat.Name = "btnListShoabat";
-            this.btnListShoabat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListShoabat_ItemClick);
+            this.btnListShobeha.Caption = "لیست اسامی شعبه ها یا نمایندگی های واحدها ";
+            this.btnListShobeha.Id = 107;
+            this.btnListShobeha.Name = "btnListShobeha";
+            this.btnListShobeha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListShoabat_ItemClick);
             // 
             // btnListDorehaiMali
             // 
@@ -1094,6 +1132,7 @@
             this.cmbDoreMalihaList.EditWidth = 80;
             this.cmbDoreMalihaList.Id = 116;
             this.cmbDoreMalihaList.Name = "cmbDoreMalihaList";
+            this.cmbDoreMalihaList.EditValueChanged += new System.EventHandler(this.cmbDoreMalihaList_EditValueChanged);
             // 
             // repositoryItemLookUpEdit5
             // 
@@ -1108,7 +1147,7 @@
             this.repositoryItemLookUpEdit5.DropDownRows = 5;
             this.repositoryItemLookUpEdit5.Name = "repositoryItemLookUpEdit5";
             this.repositoryItemLookUpEdit5.NullText = "";
-            this.repositoryItemLookUpEdit5.ValueMember = "DoreMaliCode";
+            this.repositoryItemLookUpEdit5.ValueMember = "MsDoreMaliId";
             // 
             // msDoreMaliBindingSource
             // 
@@ -1120,7 +1159,23 @@
             this.chkDefault.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.chkDefault.Id = 124;
             this.chkDefault.Name = "chkDefault";
+            toolTipItem1.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
+    "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نخواهید داشت";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.chkDefault.SuperTip = superToolTip1;
             this.chkDefault.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkDefault_CheckedChanged);
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Caption = "نام کاربر";
+            this.txtUserName.Id = 131;
+            this.txtUserName.Name = "txtUserName";
+            // 
+            // txtUserId
+            // 
+            this.txtUserId.Caption = "آیدی کاربر";
+            this.txtUserId.Id = 132;
+            this.txtUserId.Name = "txtUserId";
             // 
             // rpKharidFroosh
             // 
@@ -1341,28 +1396,28 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "تعاریف";
             // 
-            // ribbonPage4
+            // Ms
             // 
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup12,
-            this.ribbonPageGroup5,
+            this.Ms.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgOperationDafaterVaDoreMali,
+            this.rpgUsers,
             this.ribbonPageGroup13});
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "مدیریت سیستم";
+            this.Ms.Name = "Ms";
+            this.Ms.Text = "مدیریت سیستم";
             // 
-            // ribbonPageGroup12
+            // rpgOperationDafaterVaDoreMali
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.barSubItem16, true);
-            this.ribbonPageGroup12.ItemLinks.Add(this.barSubItem10);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            this.ribbonPageGroup12.Text = "عملیات دفتر و سال مالی";
+            this.rpgOperationDafaterVaDoreMali.ItemLinks.Add(this.mbsListDafaterMali, true, "2");
+            this.rpgOperationDafaterVaDoreMali.ItemLinks.Add(this.mbsOperationDoreMali, "3");
+            this.rpgOperationDafaterVaDoreMali.Name = "rpgOperationDafaterVaDoreMali";
+            this.rpgOperationDafaterVaDoreMali.Text = "عملیات دفتر و سال مالی";
             // 
-            // ribbonPageGroup5
+            // rpgUsers
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barSubItem9);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.ShowCaptionButton = false;
-            this.ribbonPageGroup5.Text = "کاربران ";
+            this.rpgUsers.ItemLinks.Add(this.mbsSystemUsers, "4");
+            this.rpgUsers.Name = "rpgUsers";
+            this.rpgUsers.ShowCaptionButton = false;
+            this.rpgUsers.Text = "کاربران ";
             // 
             // ribbonPageGroup13
             // 
@@ -1457,13 +1512,19 @@
             this.repositoryItemCheckEdit4.AutoHeight = false;
             this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
             // 
+            // repositoryItemHypertextLabel2
+            // 
+            this.repositoryItemHypertextLabel2.Name = "repositoryItemHypertextLabel2";
+            // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.txtUserId, true);
+            this.ribbonStatusBar.ItemLinks.Add(this.txtUserName, true);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 597);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1610, 41);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1453, 41);
             // 
             // barButtonItem30
             // 
@@ -1501,7 +1562,7 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1579, 206);
+            this.hideContainerRight.Location = new System.Drawing.Point(1422, 206);
             this.hideContainerRight.Name = "hideContainerRight";
             this.hideContainerRight.Size = new System.Drawing.Size(31, 391);
             // 
@@ -1556,11 +1617,11 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1610, 638);
+            this.ClientSize = new System.Drawing.Size(1453, 638);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
-            this.Font = new System.Drawing.Font("IRANSans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Font = new System.Drawing.Font("IRANSans Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1591,6 +1652,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.hideContainerRight.ResumeLayout(false);
             this.dockPanel1.ResumeLayout(false);
@@ -1601,8 +1663,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpKharidFroosh;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgFroosh;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
@@ -1648,8 +1708,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgUsers;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
@@ -1685,11 +1744,11 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem27;
         private DevExpress.XtraBars.BarButtonItem barButtonItem28;
         private DevExpress.XtraBars.BarButtonItem barButtonItem29;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgOperationDafaterVaDoreMali;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
-        private DevExpress.XtraBars.BarSubItem barSubItem9;
-        private DevExpress.XtraBars.BarSubItem barSubItem10;
+        private DevExpress.XtraBars.BarSubItem mbsSystemUsers;
+        private DevExpress.XtraBars.BarSubItem mbsOperationDoreMali;
         private DevExpress.XtraBars.BarButtonItem barButtonItem33;
         private DevExpress.XtraBars.BarButtonItem btnBastanHesabhaMovaghat;
         private DevExpress.XtraBars.BarButtonItem btnBastanHesabhaDaem;
@@ -1697,7 +1756,7 @@
         private DevExpress.XtraBars.BarButtonItem btnAmaliatEbtedaDoreh;
         private DevExpress.XtraBars.BarButtonItem btnUsersList;
         private DevExpress.XtraBars.BarButtonItem btnSatheDastrasi;
-        private DevExpress.XtraBars.BarButtonItem btnTaghirRamzObor;
+        private DevExpress.XtraBars.BarButtonItem btnChangePassword;
         private DevExpress.XtraBars.BarButtonItem btnHazfeColiEtelaat;
         private DevExpress.XtraBars.BarSubItem barSubItem11;
         private DevExpress.XtraBars.BarSubItem barSubItem12;
@@ -1725,10 +1784,10 @@
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
         private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerRight;
-        private DevExpress.XtraBars.BarSubItem barSubItem16;
-        private DevExpress.XtraBars.BarButtonItem btnListMojtamaha;
-        private DevExpress.XtraBars.BarButtonItem btnListSherkatha;
-        private DevExpress.XtraBars.BarButtonItem btnListShoabat;
+        private DevExpress.XtraBars.BarSubItem mbsListDafaterMali;
+        private DevExpress.XtraBars.BarButtonItem btnListMojmoeha;
+        private DevExpress.XtraBars.BarButtonItem btnListVahedha;
+        private DevExpress.XtraBars.BarButtonItem btnListShobeha;
         private DevExpress.XtraBars.BarButtonItem btnListDorehaiMali;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
@@ -1757,5 +1816,13 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
         private DevExpress.XtraBars.BarCheckItem chkDefault;
         public DevExpress.XtraBars.BarEditItem cmbDoreMalihaList;
+        private DevExpress.XtraBars.BarSubItem btnDetermineAccessLevel;
+        private DevExpress.XtraBars.BarButtonItem btnDetermineAccessLevel1;
+        private DevExpress.XtraBars.BarButtonItem btnDetermineAccessLevel2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel2;
+        public DevExpress.XtraBars.BarStaticItem txtUserName;
+        public DevExpress.XtraBars.BarStaticItem txtUserId;
+        public DevExpress.XtraBars.Ribbon.RibbonPage Ms;
+        public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
     }
 }

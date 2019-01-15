@@ -10,6 +10,7 @@
 namespace DBHesabdari_TG
 {
     using DBHesabdari_TG.Migrations;
+    using DBHesabdari_TG;
     using System;
     using System.Data.Entity;
     using System.Data.SqlClient;
@@ -52,14 +53,16 @@ namespace DBHesabdari_TG
         public virtual DbSet<ApAnbar> ApAnbars { get; set; }
         public virtual DbSet<MsUser> MsUsers { get; set; }
         public virtual DbSet<MsMajmoe> MsMajmoes { get; set; }
-        public virtual DbSet<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
+        public virtual DbSet<RmsUserhaBmsMajmoeha> RmsUserhaBmsMajmoehas { get; set; }
         public virtual DbSet<MsVahed> MsVaheds { get; set; }
-        public virtual DbSet<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
+        public virtual DbSet<RmsUserhaBmsVahedha> RmsUserhaBmsVahedhas { get; set; }
         public virtual DbSet<MsShobe> MsShobes { get; set; }
-        public virtual DbSet<RmsShobehaBmsUserha> RmsShobehaBmsUserhas { get; set; }
+        public virtual DbSet<RmsUserhaBmsShobeha> RmsUserhaBmsShobehas { get; set; }
         public virtual DbSet<MsInfoOther> MsInfoOthers { get; set; }
         public virtual DbSet<MsDoreMali> MsDoreMalis { get; set; }
-        public virtual DbSet<RmsDoreMalihaBmsUserha> RmsDoreMalihaBmsUserhas { get; set; }
+        public virtual DbSet<RmsUserhaBmsDorehaiMali> RmsUserhaBmsDorehaiMalis { get; set; }
+        public virtual DbSet<MsAccessLevel1> MsAccessLevel1s { get; set; }
+        public virtual DbSet<RmsUserhaBmsAccessLevel1ha> RmsUserhaBmsAccessLevel1has { get; set; }
 
 
 
@@ -88,19 +91,22 @@ namespace DBHesabdari_TG
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<MsMajmoe>().HasMany(m => m.MsVaheds).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsMajmoe>().HasMany(m => m.RmsMajmoehaBmsUserhas).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsMajmoehaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsMajmoe>().HasMany(m => m.RmsUserhaBmsMajmoehas).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsMajmoehas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<MsVahed>().HasMany(m => m.MsShobes).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsVahed>().HasMany(m => m.RmsVahedhaBmsUserhas).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsVahedhaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsVahed>().HasMany(m => m.RmsUserhaBmsVahedhas).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsVahedhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<MsShobe>().HasMany(m => m.MsDoreMalis).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsShobe>().HasMany(m => m.RmsShobehaBmsUserhas).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsShobehaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsShobe>().HasMany(m => m.RmsUserhaBmsShobehas).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsShobehas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
 
-            modelBuilder.Entity<MsDoreMali>().HasMany(m => m.RmsDoreMalihaBmsUserhas).WithRequired(m => m.MsDoreMali1).HasForeignKey(m => m.MsDoreMaliId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsDoreMalihaBmsUserhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<MsDoreMali>().HasMany(m => m.RmsUserhaBmsDorehaiMalis).WithRequired(m => m.MsDoreMali1).HasForeignKey(m => m.MsDoreMaliId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsDorehaiMalis).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsAccessLevel1has).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsAccessLevel1>().HasMany(m => m.RmsUserhaBmsAccessLevel1has).WithRequired(m => m.MsAccessLeve11).HasForeignKey(m => m.MsAccessLevel1Id).WillCascadeOnDelete(true);
 
 
 

@@ -78,13 +78,13 @@
             this.colShobeCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colShobeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colShobeIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPermissiveUsers = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsMajmoeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsVahedId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsVahed1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRmsShobehaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsUserhaBmsShobehas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
-            this.lblSelectDoreMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserName = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -327,11 +327,10 @@
             this.colShobeCode,
             this.colShobeName,
             this.colShobeIsActive,
-            this.colPermissiveUsers,
             this.colMsMajmoeId,
             this.colMsVahedId,
             this.colMsVahed1,
-            this.colRmsShobehaBmsUserhas});
+            this.colRmsUserhaBmsShobehas});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -445,20 +444,6 @@
             this.colShobeIsActive.VisibleIndex = 5;
             this.colShobeIsActive.Width = 60;
             // 
-            // colPermissiveUsers
-            // 
-            this.colPermissiveUsers.AppearanceCell.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.Caption = "کاربران مجاز به ثبت عملیات";
-            this.colPermissiveUsers.FieldName = "PermissiveUsers";
-            this.colPermissiveUsers.Name = "colPermissiveUsers";
-            this.colPermissiveUsers.Visible = true;
-            this.colPermissiveUsers.VisibleIndex = 6;
-            this.colPermissiveUsers.Width = 600;
-            // 
             // colMsMajmoeId
             // 
             this.colMsMajmoeId.Caption = "آیدی مجموعه";
@@ -476,34 +461,42 @@
             this.colMsVahed1.FieldName = "MsVahed1";
             this.colMsVahed1.Name = "colMsVahed1";
             // 
-            // colRmsShobehaBmsUserhas
+            // colRmsUserhaBmsShobehas
             // 
-            this.colRmsShobehaBmsUserhas.FieldName = "RmsShobehaBmsUserhas";
-            this.colRmsShobehaBmsUserhas.Name = "colRmsShobehaBmsUserhas";
+            this.colRmsUserhaBmsShobehas.FieldName = "RmsUserhaBmsShobehas";
+            this.colRmsUserhaBmsShobehas.Name = "colRmsUserhaBmsShobehas";
             // 
             // pLinqInstantFeedbackSource1
             // 
             this.pLinqInstantFeedbackSource1.DefaultSorting = "ShobeCode ASC";
             this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsShobe);
             // 
-            // lblSelectDoreMali
+            // lblUserName
             // 
-            this.lblSelectDoreMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSelectDoreMali.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblSelectDoreMali.Location = new System.Drawing.Point(974, 0);
-            this.lblSelectDoreMali.Name = "lblSelectDoreMali";
-            this.lblSelectDoreMali.Size = new System.Drawing.Size(116, 27);
-            this.lblSelectDoreMali.TabIndex = 11;
-            this.lblSelectDoreMali.Text = "دوره مالی انتخابی";
-            this.lblSelectDoreMali.Visible = false;
+            this.lblUserName.Location = new System.Drawing.Point(12, 100);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.TabIndex = 12;
+            this.lblUserName.Text = "نام کاربر";
+            this.lblUserName.Visible = false;
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.Location = new System.Drawing.Point(12, 69);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.TabIndex = 11;
+            this.lblUserId.Text = "آیدی  کاربر";
+            this.lblUserId.Visible = false;
             // 
             // FrmShoabatList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 582);
-            this.Controls.Add(this.lblSelectDoreMali);
             this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -512,6 +505,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.Text = "لیست شعبه ها";
+            this.Load += new System.EventHandler(this.FrmShoabatList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -549,9 +543,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMsVahedId;
         private DevExpress.XtraGrid.Columns.GridColumn colVahedName;
         private DevExpress.XtraGrid.Columns.GridColumn colMsVahed1;
-        private DevExpress.XtraGrid.Columns.GridColumn colPermissiveUsers;
-        private DevExpress.XtraGrid.Columns.GridColumn colRmsShobehaBmsUserhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsShobehas;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
-        public DevExpress.XtraEditors.LabelControl lblSelectDoreMali;
+        public DevExpress.XtraEditors.LabelControl lblUserName;
+        public DevExpress.XtraEditors.LabelControl lblUserId;
     }
 }

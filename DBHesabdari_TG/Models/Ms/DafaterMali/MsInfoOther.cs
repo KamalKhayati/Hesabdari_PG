@@ -75,10 +75,6 @@ namespace DBHesabdari_TG
         public string ShParvandeMaliati { get; set; }
         [MaxLength(50)]
         public string ShBimeKargah { get; set; }
-        [Required]
-        public int DoreMali { get; set; }
 
-        //public virtual ICollection<RmsMajmoehaBmsUserha> RmsMajmoehaBmsUserhas { get; set; }
-        //public virtual ICollection<MsVahed> MsVaheds { get; set; }
     }
 }

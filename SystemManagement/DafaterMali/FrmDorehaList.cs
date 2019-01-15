@@ -19,6 +19,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using HelpClassLibrary;
 using DevExpress.XtraBars;
+using DBHesabdari_TG;
 
 namespace SystemManagement.DafaterMali
 {
@@ -131,5 +132,28 @@ namespace SystemManagement.DafaterMali
             ((DBHesabdari_TG.MyContext)e.Tag).Dispose();
         }
 
+        private void FrmDorehaList_Load(object sender, EventArgs e)
+        {
+
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    int _UserId = Convert.ToInt32(lblUserId.Text);
+                    var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == _UserId).ToList();
+                    if (q1.Count() > 0)
+                    {
+                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55141) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55142) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55143) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

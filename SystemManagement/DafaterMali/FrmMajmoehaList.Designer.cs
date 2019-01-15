@@ -76,11 +76,11 @@
             this.colMajmoeCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMajmoeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMajmoeIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPermissiveUsers = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRmsMajmoehaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsUserhaBmsMajmoehas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsVaheds = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
-            this.lblSelectDoreMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserName = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -90,7 +90,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1096, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1192, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 522);
@@ -281,7 +281,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1096, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1192, 60);
             // 
             // barDockControlBottom
             // 
@@ -290,7 +290,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 582);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1096, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1192, 0);
             // 
             // barDockControlLeft
             // 
@@ -308,7 +308,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1096, 522);
+            this.gridControl1.Size = new System.Drawing.Size(1192, 522);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -321,8 +321,7 @@
             this.colMajmoeCode,
             this.colMajmoeName,
             this.colMajmoeIsActive,
-            this.colPermissiveUsers,
-            this.colRmsMajmoehaBmsUserhas,
+            this.colRmsUserhaBmsMajmoehas,
             this.colMsVaheds});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
@@ -409,24 +408,10 @@
             this.colMajmoeIsActive.VisibleIndex = 3;
             this.colMajmoeIsActive.Width = 60;
             // 
-            // colPermissiveUsers
+            // colRmsUserhaBmsMajmoehas
             // 
-            this.colPermissiveUsers.AppearanceCell.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.Caption = "کاربران مجاز به ثبت عملیات";
-            this.colPermissiveUsers.FieldName = "PermissiveUsers";
-            this.colPermissiveUsers.Name = "colPermissiveUsers";
-            this.colPermissiveUsers.Visible = true;
-            this.colPermissiveUsers.VisibleIndex = 4;
-            this.colPermissiveUsers.Width = 600;
-            // 
-            // colRmsMajmoehaBmsUserhas
-            // 
-            this.colRmsMajmoehaBmsUserhas.FieldName = "RmsMajmoehaBmsUserhas";
-            this.colRmsMajmoehaBmsUserhas.Name = "colRmsMajmoehaBmsUserhas";
+            this.colRmsUserhaBmsMajmoehas.FieldName = "RmsUserhaBmsMajmoehas";
+            this.colRmsUserhaBmsMajmoehas.Name = "colRmsUserhaBmsMajmoehas";
             // 
             // colMsVaheds
             // 
@@ -438,24 +423,32 @@
             this.pLinqInstantFeedbackSource1.DefaultSorting = "MajmoeCode ASC";
             this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsMajmoe);
             // 
-            // lblSelectDoreMali
+            // lblUserName
             // 
-            this.lblSelectDoreMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSelectDoreMali.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblSelectDoreMali.Location = new System.Drawing.Point(980, 0);
-            this.lblSelectDoreMali.Name = "lblSelectDoreMali";
-            this.lblSelectDoreMali.Size = new System.Drawing.Size(116, 27);
-            this.lblSelectDoreMali.TabIndex = 11;
-            this.lblSelectDoreMali.Text = "دوره مالی انتخابی";
-            this.lblSelectDoreMali.Visible = false;
+            this.lblUserName.Location = new System.Drawing.Point(12, 100);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.TabIndex = 12;
+            this.lblUserName.Text = "نام کاربر";
+            this.lblUserName.Visible = false;
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.Location = new System.Drawing.Point(12, 69);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.TabIndex = 11;
+            this.lblUserId.Text = "آیدی  کاربر";
+            this.lblUserId.Visible = false;
             // 
             // FrmMajmoehaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 582);
-            this.Controls.Add(this.lblSelectDoreMali);
+            this.ClientSize = new System.Drawing.Size(1192, 582);
             this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -463,7 +456,8 @@
             this.Name = "FrmMajmoehaList";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
-            this.Text = "لیست مجتمع ها / مجموعه های زنجیره ای";
+            this.Text = "لیست مجموعه های زنجیره ای";
+            this.Load += new System.EventHandler(this.FrmMajmoehaList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -496,10 +490,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMajmoeCode;
         private DevExpress.XtraGrid.Columns.GridColumn colMajmoeName;
         private DevExpress.XtraGrid.Columns.GridColumn colMajmoeIsActive;
-        private DevExpress.XtraGrid.Columns.GridColumn colPermissiveUsers;
-        private DevExpress.XtraGrid.Columns.GridColumn colRmsMajmoehaBmsUserhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsMajmoehas;
         private DevExpress.XtraGrid.Columns.GridColumn colMsVaheds;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
-        public DevExpress.XtraEditors.LabelControl lblSelectDoreMali;
+        public DevExpress.XtraEditors.LabelControl lblUserName;
+        public DevExpress.XtraEditors.LabelControl lblUserId;
     }
 }

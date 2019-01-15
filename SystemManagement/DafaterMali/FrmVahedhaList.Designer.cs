@@ -77,13 +77,13 @@
             this.colVahedCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVahedName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVahedIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPermissiveUsers = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsMajmoeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsMajmoe1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRmsVahedhaBmsUserhas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsUserhaBmsVahedhas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsShobes = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
-            this.lblSelectDoreMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserName = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -93,7 +93,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1118, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1256, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 517);
@@ -284,7 +284,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1118, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1256, 60);
             // 
             // barDockControlBottom
             // 
@@ -293,7 +293,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 577);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1118, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1256, 0);
             // 
             // barDockControlLeft
             // 
@@ -311,7 +311,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1118, 517);
+            this.gridControl1.Size = new System.Drawing.Size(1256, 517);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -325,10 +325,9 @@
             this.colVahedCode,
             this.colVahedName,
             this.colVahedIsActive,
-            this.colPermissiveUsers,
             this.colMsMajmoeId,
             this.colMsMajmoe1,
-            this.colRmsVahedhaBmsUserhas,
+            this.colRmsUserhaBmsVahedhas,
             this.colMsShobes});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
@@ -429,20 +428,6 @@
             this.colVahedIsActive.VisibleIndex = 4;
             this.colVahedIsActive.Width = 60;
             // 
-            // colPermissiveUsers
-            // 
-            this.colPermissiveUsers.AppearanceCell.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.Options.UseTextOptions = true;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colPermissiveUsers.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colPermissiveUsers.Caption = "کاربران مجاز به ثبت عملیات";
-            this.colPermissiveUsers.FieldName = "PermissiveUsers";
-            this.colPermissiveUsers.Name = "colPermissiveUsers";
-            this.colPermissiveUsers.Visible = true;
-            this.colPermissiveUsers.VisibleIndex = 5;
-            this.colPermissiveUsers.Width = 600;
-            // 
             // colMsMajmoeId
             // 
             this.colMsMajmoeId.Caption = "آیدی مجموعه";
@@ -454,10 +439,10 @@
             this.colMsMajmoe1.FieldName = "MsMajmoe1";
             this.colMsMajmoe1.Name = "colMsMajmoe1";
             // 
-            // colRmsVahedhaBmsUserhas
+            // colRmsUserhaBmsVahedhas
             // 
-            this.colRmsVahedhaBmsUserhas.FieldName = "RmsVahedhaBmsUserhas";
-            this.colRmsVahedhaBmsUserhas.Name = "colRmsVahedhaBmsUserhas";
+            this.colRmsUserhaBmsVahedhas.FieldName = "RmsUserhaBmsVahedhas";
+            this.colRmsUserhaBmsVahedhas.Name = "colRmsUserhaBmsVahedhas";
             // 
             // colMsShobes
             // 
@@ -469,24 +454,32 @@
             this.pLinqInstantFeedbackSource1.DefaultSorting = "VahedCode ASC";
             this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsVahed);
             // 
-            // lblSelectDoreMali
+            // lblUserName
             // 
-            this.lblSelectDoreMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSelectDoreMali.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblSelectDoreMali.Location = new System.Drawing.Point(1002, 0);
-            this.lblSelectDoreMali.Name = "lblSelectDoreMali";
-            this.lblSelectDoreMali.Size = new System.Drawing.Size(116, 27);
-            this.lblSelectDoreMali.TabIndex = 11;
-            this.lblSelectDoreMali.Text = "دوره مالی انتخابی";
-            this.lblSelectDoreMali.Visible = false;
+            this.lblUserName.Location = new System.Drawing.Point(12, 100);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.TabIndex = 12;
+            this.lblUserName.Text = "نام کاربر";
+            this.lblUserName.Visible = false;
+            // 
+            // lblUserId
+            // 
+            this.lblUserId.Location = new System.Drawing.Point(12, 69);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.TabIndex = 11;
+            this.lblUserId.Text = "آیدی  کاربر";
+            this.lblUserId.Visible = false;
             // 
             // FrmVahedhaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 577);
-            this.Controls.Add(this.lblSelectDoreMali);
+            this.ClientSize = new System.Drawing.Size(1256, 577);
             this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -494,7 +487,8 @@
             this.Name = "FrmVahedhaList";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
-            this.Text = "لیست واحد های تجاری / خدماتی";
+            this.Text = "لیست واحد های تجاری یا خدماتی";
+            this.Load += new System.EventHandler(this.FrmVahedhaList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -530,10 +524,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMsMajmoeId;
         private DevExpress.XtraGrid.Columns.GridColumn colMajmoeName;
         private DevExpress.XtraGrid.Columns.GridColumn colMsMajmoe1;
-        private DevExpress.XtraGrid.Columns.GridColumn colPermissiveUsers;
-        private DevExpress.XtraGrid.Columns.GridColumn colRmsVahedhaBmsUserhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsVahedhas;
         private DevExpress.XtraGrid.Columns.GridColumn colMsShobes;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
-        public DevExpress.XtraEditors.LabelControl lblSelectDoreMali;
+        public DevExpress.XtraEditors.LabelControl lblUserName;
+        public DevExpress.XtraEditors.LabelControl lblUserId;
     }
 }

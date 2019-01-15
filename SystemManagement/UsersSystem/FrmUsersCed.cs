@@ -81,7 +81,6 @@ namespace SystemManagement.UsersSystem
                                 Name = txtName.Text,
                                 Password = txtPassword.Text,
                                 UserIsActive = chkIsActive.Checked,
-                                DoreMali= Convert.ToInt32(Fm.lblSelectDoreMali.Text),
                             };
                             db.MsUsers.Add(obj);
                             db.SaveChanges();
@@ -128,84 +127,6 @@ namespace SystemManagement.UsersSystem
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
                                 Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
-                                /////////////////////////////////////////  ویرایش نام کاربر  ////////////////////////////////////////////////
-
-                                if (UserNameBeforEdit != txtUserName.Text)
-                                {
-                                    var q1 = db.RmsMajmoehaBmsUserhas.Where(s => s.MsUserId == RowId).ToList();
-                                    var q2 = db.RmsVahedhaBmsUserhas.Where(s => s.MsUserId == RowId).ToList();
-                                    var q3 = db.RmsShobehaBmsUserhas.Where(s => s.MsUserId == RowId).ToList();
-                                    var q4 = db.RmsDoreMalihaBmsUserhas.Where(s => s.MsUserId == RowId).ToList();
-                                    if (q1.Count > 0)
-                                    {
-                                        foreach (var item in q1)
-                                        {
-                                            item.UserName = txtUserName.Text;
-                                            ///////////////////////////////////////////////////////////////////////////////
-                                            var q11 = db.RmsMajmoehaBmsUserhas.Where(s => s.MsMajmoeId == item.MsMajmoeId).Select(s => s.MsUserId).ToList();
-                                            string CheckedItems = string.Empty;
-                                            foreach (var item1 in q11)
-                                            {
-                                                var q12 = db.MsUsers.FirstOrDefault(s => s.MsUserId == item1);
-                                                CheckedItems += q12.UserName.ToString() + ",";
-                                            }
-                                            var q13 = db.MsMajmoes.FirstOrDefault(s => s.MsMajmoeId == item.MsMajmoeId);
-                                            q13.PermissiveUsers = CheckedItems;
-                                        }
-                                    }
-                                    if (q2.Count > 0)
-                                    {
-                                        foreach (var item in q2)
-                                        {
-                                            item.UserName = txtUserName.Text;
-                                            ///////////////////////////////////////////////////////////////////////////////
-                                            var q11 = db.RmsVahedhaBmsUserhas.Where(s => s.MsVahedId == item.MsVahedId).Select(s => s.MsUserId).ToList();
-                                            string CheckedItems = string.Empty;
-                                            foreach (var item1 in q11)
-                                            {
-                                                var q12 = db.MsUsers.FirstOrDefault(s => s.MsUserId == item1);
-                                                CheckedItems += q12.UserName.ToString() + ",";
-                                            }
-                                            var q13 = db.MsVaheds.FirstOrDefault(s => s.MsVahedId == item.MsVahedId);
-                                            q13.PermissiveUsers = CheckedItems;
-                                        }
-                                    }
-                                    if (q3.Count > 0)
-                                    {
-                                        foreach (var item in q3)
-                                        {
-                                            item.UserName = txtUserName.Text;
-                                            ///////////////////////////////////////////////////////////////////////////////
-                                            var q11 = db.RmsShobehaBmsUserhas.Where(s => s.MsShobeId == item.MsShobeId).Select(s => s.MsUserId).ToList();
-                                            string CheckedItems = string.Empty;
-                                            foreach (var item1 in q11)
-                                            {
-                                                var q12 = db.MsUsers.FirstOrDefault(s => s.MsUserId == item1);
-                                                CheckedItems += q12.UserName.ToString() + ",";
-                                            }
-                                            var q13 = db.MsShobes.FirstOrDefault(s => s.MsShobeId == item.MsShobeId);
-                                            q13.PermissiveUsers = CheckedItems;
-                                        }
-                                    }
-                                    if (q4.Count > 0)
-                                    {
-                                        foreach (var item in q4)
-                                        {
-                                            item.UserName = txtUserName.Text;
-                                            ///////////////////////////////////////////////////////////////////////////////
-                                            var q11 = db.RmsDoreMalihaBmsUserhas.Where(s => s.MsDoreMaliId == item.MsDoreMaliId).Select(s => s.MsUserId).ToList();
-                                            string CheckedItems = string.Empty;
-                                            foreach (var item1 in q11)
-                                            {
-                                                var q12 = db.MsUsers.FirstOrDefault(s => s.MsUserId == item1);
-                                                CheckedItems += q12.UserName.ToString() + ",";
-                                            }
-                                            var q13 = db.MsDoreMalis.FirstOrDefault(s => s.MsDoreMaliId == item.MsDoreMaliId);
-                                            q13.PermissiveUsers = CheckedItems;
-                                        }
-                                    }
-                                    db.SaveChanges();
-                                }
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -231,6 +152,7 @@ namespace SystemManagement.UsersSystem
                                 //q.Name = txtName.Text;
                                 //q.Password = txtPassword.Text;
                                 //q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                //q.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
 
                                 db.MsUsers.Remove(q);
                                 db.SaveChanges();
@@ -241,12 +163,6 @@ namespace SystemManagement.UsersSystem
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (DbUpdateException)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد \n حذف رکورد جاری مقدور نیست \n" +
-                                " جهت حذف بایستی دسترسی کاربر فوق را (از  لیست مجموعه ها ،لیست واحد ها ، لیست شعبه هاو لیست دوره ها) خارج کنید" +
-                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         catch (Exception ex)
                         {

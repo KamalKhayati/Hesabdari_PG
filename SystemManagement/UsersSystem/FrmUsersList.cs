@@ -19,6 +19,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using HelpClassLibrary;
 using DBHesabdari_TG;
+using DevExpress.XtraEditors;
 
 namespace SystemManagement.UsersSystem
 {
@@ -131,6 +132,29 @@ namespace SystemManagement.UsersSystem
 
             // Dispose of the DataContext
             ((DBHesabdari_TG.MyContext)e.Tag).Dispose();
+        }
+
+        private void FrmUsersList_Load(object sender, EventArgs e)
+        {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    int _UserId = Convert.ToInt32(lblUserId.Text);
+                    var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == _UserId).ToList();
+                    if (q1.Count() > 0)
+                    {
+                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55311) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55312) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55313) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 

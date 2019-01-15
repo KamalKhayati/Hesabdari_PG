@@ -38,9 +38,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.chkEditCode = new DevExpress.XtraEditors.CheckEdit();
             this.chkSpecificationOther = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.cmbMajmoehaList = new DevExpress.XtraEditors.LookUpEdit();
-            this.chkcmbPermissiveUsers = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.btnNewCode = new DevExpress.XtraEditors.SimpleButton();
             this.txtMajmoeCode = new DevExpress.XtraEditors.TextEdit();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
@@ -102,7 +100,6 @@
             this.txtNoeFaaliat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.rmsMajmoehaBmsUserhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.msMajmoesBindingSource)).BeginInit();
@@ -111,7 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSpecificationOther.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMajmoehaList.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMajmoeCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
@@ -142,7 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSandoghPosti.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeFaaliat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmsMajmoehaBmsUserhasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -151,7 +146,7 @@
             this.panelControl2.Controls.Add(this.btnClose);
             this.panelControl2.Controls.Add(this.btnCreateNext);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 208);
+            this.panelControl2.Location = new System.Drawing.Point(0, 167);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(677, 48);
             this.panelControl2.TabIndex = 16;
@@ -197,9 +192,7 @@
             // 
             this.panelControl1.Controls.Add(this.chkEditCode);
             this.panelControl1.Controls.Add(this.chkSpecificationOther);
-            this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.cmbMajmoehaList);
-            this.panelControl1.Controls.Add(this.chkcmbPermissiveUsers);
             this.panelControl1.Controls.Add(this.btnNewCode);
             this.panelControl1.Controls.Add(this.txtMajmoeCode);
             this.panelControl1.Controls.Add(this.txtCode);
@@ -212,7 +205,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(677, 204);
+            this.panelControl1.Size = new System.Drawing.Size(677, 163);
             this.panelControl1.TabIndex = 15;
             // 
             // chkEditCode
@@ -229,7 +222,7 @@
             // chkSpecificationOther
             // 
             this.chkSpecificationOther.EnterMoveNextControl = true;
-            this.chkSpecificationOther.Location = new System.Drawing.Point(367, 160);
+            this.chkSpecificationOther.Location = new System.Drawing.Point(367, 122);
             this.chkSpecificationOther.Name = "chkSpecificationOther";
             this.chkSpecificationOther.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkSpecificationOther.Properties.Caption = "سایر مشخصات";
@@ -237,14 +230,6 @@
             this.chkSpecificationOther.Size = new System.Drawing.Size(122, 33);
             this.chkSpecificationOther.TabIndex = 4;
             this.chkSpecificationOther.CheckedChanged += new System.EventHandler(this.chkSpecificationOther_CheckedChanged);
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(492, 125);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(176, 25);
-            this.labelControl3.TabIndex = 8;
-            this.labelControl3.Text = "کاربران مجاز به ثبت عملیات";
             // 
             // cmbMajmoehaList
             // 
@@ -264,24 +249,8 @@
             this.cmbMajmoehaList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbMajmoehaList.Size = new System.Drawing.Size(484, 32);
             this.cmbMajmoehaList.TabIndex = 0;
-            this.cmbMajmoehaList.EditValueChanged += new System.EventHandler(this.cmbListMajmoeha_EditValueChanged);
+            this.cmbMajmoehaList.EditValueChanged += new System.EventHandler(this.cmbMajmoehaList_EditValueChanged);
             this.cmbMajmoehaList.Enter += new System.EventHandler(this.cmbMajmoehaList_Enter);
-            // 
-            // chkcmbPermissiveUsers
-            // 
-            this.chkcmbPermissiveUsers.EditValue = "";
-            this.chkcmbPermissiveUsers.EnterMoveNextControl = true;
-            this.chkcmbPermissiveUsers.Location = new System.Drawing.Point(6, 122);
-            this.chkcmbPermissiveUsers.Name = "chkcmbPermissiveUsers";
-            this.chkcmbPermissiveUsers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.chkcmbPermissiveUsers.Properties.DataSource = this.rmsMajmoehaBmsUserhasBindingSource;
-            this.chkcmbPermissiveUsers.Properties.DisplayMember = "UserName";
-            this.chkcmbPermissiveUsers.Properties.ValueMember = "MsUserId";
-            this.chkcmbPermissiveUsers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkcmbPermissiveUsers.Size = new System.Drawing.Size(483, 32);
-            this.chkcmbPermissiveUsers.TabIndex = 3;
-            this.chkcmbPermissiveUsers.Enter += new System.EventHandler(this.chkcmbPermissiveUsers_Enter);
             // 
             // btnNewCode
             // 
@@ -330,7 +299,7 @@
             // 
             this.chkIsActive.EditValue = true;
             this.chkIsActive.EnterMoveNextControl = true;
-            this.chkIsActive.Location = new System.Drawing.Point(5, 160);
+            this.chkIsActive.Location = new System.Drawing.Point(5, 122);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkIsActive.Properties.Caption = "فعال";
@@ -444,7 +413,7 @@
             this.xtraScrollableControl1.Controls.Add(this.labelControl21);
             this.xtraScrollableControl1.Controls.Add(this.labelControl8);
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 204);
+            this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 163);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
             this.xtraScrollableControl1.Size = new System.Drawing.Size(677, 4);
             this.xtraScrollableControl1.TabIndex = 17;
@@ -891,15 +860,11 @@
             this.labelControl8.TabIndex = 16;
             this.labelControl8.Text = "نوع فعالیت";
             // 
-            // rmsMajmoehaBmsUserhasBindingSource
-            // 
-            this.rmsMajmoehaBmsUserhasBindingSource.DataSource = typeof(DBHesabdari_TG.RmsMajmoehaBmsUserha);
-            // 
             // FrmVahedhaCed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 256);
+            this.ClientSize = new System.Drawing.Size(677, 215);
             this.Controls.Add(this.xtraScrollableControl1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -907,7 +872,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(687, 296);
+            this.MinimumSize = new System.Drawing.Size(687, 255);
             this.Name = "FrmVahedhaCed";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
@@ -924,7 +889,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSpecificationOther.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMajmoehaList.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkcmbPermissiveUsers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMajmoeCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();
@@ -956,7 +920,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSandoghPosti.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeFaaliat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rmsMajmoehaBmsUserhasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -969,9 +932,7 @@
         public DevExpress.XtraEditors.SimpleButton btnCreateNext;
         private System.Windows.Forms.BindingSource msMajmoesBindingSource;
         public DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         public DevExpress.XtraEditors.LookUpEdit cmbMajmoehaList;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit chkcmbPermissiveUsers;
         private DevExpress.XtraEditors.SimpleButton btnNewCode;
         public DevExpress.XtraEditors.TextEdit txtMajmoeCode;
         public DevExpress.XtraEditors.TextEdit txtCode;
@@ -981,7 +942,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.BindingSource rmsMajmoehaBmsUserhasBindingSource;
         public DevExpress.XtraEditors.CheckEdit chkSpecificationOther;
         private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
         private System.Windows.Forms.RadioButton radioButton2;

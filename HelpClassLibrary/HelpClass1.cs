@@ -98,7 +98,7 @@ namespace HelpClassLibrary
             //        try
             //        {
             //            int Id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
-            //            var q = db.RmsVahedhaBmsUserhas.Where(s => s.MsVahedId == Id).Select(s => s.UserName).ToList();
+            //            var q = db.RmsUserhaBmsVahedhas.Where(s => s.MsVahedId == Id).Select(s => s.UserName).ToList();
             //            if (q.Count > 0)
             //            {
             //                string a = "";
@@ -240,7 +240,7 @@ namespace HelpClassLibrary
             regkey.SetValue("iCalendarType", "1");
             regkey.SetValue("iCountry", "981");
             regkey.SetValue("iCurrDigits", "0");
-            regkey.SetValue("iCurrency", "0");
+            regkey.SetValue("iCurrency", "2");
             regkey.SetValue("iDate", "2");
             regkey.SetValue("iDigits", "0");
             regkey.SetValue("iFirstDayOfWeek", "5");
@@ -251,6 +251,7 @@ namespace HelpClassLibrary
             regkey.SetValue("iMeasure", "0");
             regkey.SetValue("iNegCurr", "3");
             regkey.SetValue("iNegNumber", "3");
+            regkey.SetValue("iNumShape", "0");
             regkey.SetValue("iPaperSize", "9");
             regkey.SetValue("iTime", "0");
             regkey.SetValue("iTimePrefix", "0");
@@ -263,7 +264,7 @@ namespace HelpClassLibrary
             regkey.SetValue("sCountry", "Iran");
             regkey.SetValue("sCurrency", " ");
             regkey.SetValue("sDate", "/");
-            regkey.SetValue("sDecimal", "/");
+            regkey.SetValue("sDecimal", ".");
             regkey.SetValue("sGrouping", "3;0");
             regkey.SetValue("sLanguage", "FAR");
             regkey.SetValue("sList", ";");
@@ -276,9 +277,10 @@ namespace HelpClassLibrary
             regkey.SetValue("sPositiveSign", "");
             regkey.SetValue("sShortDate", "yyyy/MM/dd");
             regkey.SetValue("sShortTime", "hh:mm tt");
+            regkey.SetValue("sThousand", ",");
             regkey.SetValue("sTime", ":");
             regkey.SetValue("sTimeFormat", "hh:mm:ss tt");
-            regkey.SetValue("sYearMonth", "hh:mm:ss tt");
+            regkey.SetValue("sYearMonth", "MMMM,yyyy");
 
             //Close the Registry
             regkey.Close();
@@ -344,7 +346,7 @@ namespace HelpClassLibrary
             {
                 if (item.Name.Contains("txt"))
                 {
-                    item.Text = ""; 
+                    item.Text = "";
                 }
             }
         }
@@ -359,7 +361,25 @@ namespace HelpClassLibrary
             PersianCalendar objPC = new PersianCalendar();
             TextEdit.Text = objPC.GetYear(DateTime.Now).ToString("0000");
         }
+        public static void CloseAllOpenForms()
+        {
+                List<XtraForm> openForms = new List<XtraForm>();
 
+                foreach (XtraForm f in Application.OpenForms)
+                    openForms.Add(f);
+
+                foreach (XtraForm f in openForms)
+                {
+                    if (f.Name != "FrmMain")
+                        f.Close();
+                }
+
+                //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                //{
+                //    if (Application.OpenForms[i].Name != "FrmMain")
+                //        Application.OpenForms[i].Close();
+                //}
+        }
     }
 }
 

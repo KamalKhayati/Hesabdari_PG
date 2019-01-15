@@ -32,43 +32,9 @@ namespace DBHesabdari_TG
         public string MajmoeName { get; set; }
         public virtual MsMajmoe MsMajmoe1 { get; set; }
         public string PermissiveUsers { get; set; }
-        [Required]
-        public int DoreMali { get; set; }
         public bool IsDefault { get; set; }
 
-        public virtual ICollection<RmsVahedhaBmsUserha> RmsVahedhaBmsUserhas { get; set; }
+        public virtual ICollection<RmsUserhaBmsVahedha> RmsUserhaBmsVahedhas { get; set; }
         public virtual ICollection<MsShobe> MsShobes { get; set; }
-
-    }
-
-    public class RmsVahedhaBmsUserha
-    {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column(Order = 0)]
-        public int Id { get; set; }
-
-        [Key]
-        [Column(Order = 1)]
-        public int MsVahedId { get; set; }
-
-        [Column(Order = 2)]
-        [Required, MaxLength(50)]
-        public string VahedName { get; set; }
-
-        [Key]
-        [Column(Order = 3)]
-        public int MsUserId { get; set; }
-
-        [Column(Order = 4)]
-        [Required, MaxLength(50)]
-        public string UserName { get; set; }
-
-        [Column(Order = 5)]
-        public int MsMajmoeId { get; set; }
-
-        [Required]
-        public int DoreMali { get; set; }
-        public virtual MsVahed MsVahed1 { get; set; }
-        public virtual MsUser MsUser1 { get; set; }
     }
 }
