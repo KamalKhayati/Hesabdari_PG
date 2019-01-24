@@ -144,9 +144,9 @@ namespace SystemManagement.UsersSystem
                     var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == _UserId).ToList();
                     if (q1.Count() > 0)
                     {
-                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55311) ? BarItemVisibility.Always : BarItemVisibility.Never;
-                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55312) ? BarItemVisibility.Always : BarItemVisibility.Never;
-                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55313) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55311) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55312) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55313) ? BarItemVisibility.Never : BarItemVisibility.Always;
                     }
                 }
                 catch (Exception ex)

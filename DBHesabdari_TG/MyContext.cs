@@ -63,8 +63,9 @@ namespace DBHesabdari_TG
         public virtual DbSet<RmsUserhaBmsDorehaiMali> RmsUserhaBmsDorehaiMalis { get; set; }
         public virtual DbSet<MsAccessLevel1> MsAccessLevel1s { get; set; }
         public virtual DbSet<RmsUserhaBmsAccessLevel1ha> RmsUserhaBmsAccessLevel1has { get; set; }
+        public virtual DbSet<MsDefault> MsDefaults { get; set; }
 
-
+        
 
 
         #region

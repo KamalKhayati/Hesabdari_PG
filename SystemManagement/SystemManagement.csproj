@@ -140,6 +140,12 @@
     <Compile Include="UsersSystem\FrmAccesslevel1.Designer.cs">
       <DependentUpon>FrmAccesslevel1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersSystem\FrmAccesslevel2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersSystem\FrmAccesslevel2.Designer.cs">
+      <DependentUpon>FrmAccesslevel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersSystem\FrmUsersCed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <EmbeddedResource Include="UsersSystem\FrmAccesslevel1.resx">
       <DependentUpon>FrmAccesslevel1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsersSystem\FrmAccesslevel2.resx">
+      <DependentUpon>FrmAccesslevel2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsersSystem\FrmUsersCed.resx">
       <DependentUpon>FrmUsersCed.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +237,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

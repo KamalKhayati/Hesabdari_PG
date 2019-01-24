@@ -49,6 +49,13 @@ namespace SystemManagement.UsersSystem
                 txtPassword.Text = Fm.gridView1.GetFocusedRowCellValue("Password").ToString();
                 chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("UserIsActive"));
 
+                if (txtUserName.Text == "مدیر سیستم")
+                {
+                    chkEditCode.Visible = false;
+                    btnNewCode.Visible = false;
+                    txtUserName.ReadOnly = true;
+                    chkIsActive.Visible = false;
+                }
                 CodeBeforeEdit = txtCode.Text;
                 NameBeforeEdit = txtUserName.Text;
                 UserNameBeforEdit = txtUserName.Text;
@@ -147,19 +154,27 @@ namespace SystemManagement.UsersSystem
                             var q = db.MsUsers.FirstOrDefault(p => p.MsUserId == RowId);
                             if (q != null)
                             {
-                                //q.UserCode = Convert.ToInt32(txtCode.Text);
-                                //q.UserName = txtUserName.Text;
-                                //q.Name = txtName.Text;
-                                //q.Password = txtPassword.Text;
-                                //q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
-                                //q.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
+                                if (q.UserName == "مدیر سیستم")
+                                {
+                                    XtraMessageBox.Show("نام کاربر مدیر سیستم قابل حذف نیست فقط میتوان شناسه کاربری و رمز عبور را ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    return;
+                                }
+                                else
+                                {
+                                    //q.UserCode = Convert.ToInt32(txtCode.Text);
+                                    //q.UserName = txtUserName.Text;
+                                    //q.Name = txtName.Text;
+                                    //q.Password = txtPassword.Text;
+                                    //q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                    //q.DoreMali = Convert.ToInt32(Fm.lblSelectDoreMali.Text);
 
-                                db.MsUsers.Remove(q);
-                                db.SaveChanges();
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
-                                XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
+                                    db.MsUsers.Remove(q);
+                                    db.SaveChanges();
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                    XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    this.Close();
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
+                                }
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -269,7 +284,7 @@ namespace SystemManagement.UsersSystem
 
             //////////////// اعتبار سنجی تکس باکس///////////////////////////////
 
-            if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtPassword.Text) || txtUserName.Text == "0")
+            if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtPassword.Text) || txtUserName.Text == "0" || txtName.Text == "0" || txtPassword.Text == "0")
             {
                 XtraMessageBox.Show("لطفاً اطلاعات را کامل وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -285,9 +300,18 @@ namespace SystemManagement.UsersSystem
                             if (db.MsUsers.Any())
                             {
                                 var q2 = db.MsUsers.Where(p => p.UserName == txtUserName.Text);
+                                var q3 = db.MsUsers.Where(p => p.Name == txtName.Text);
                                 if (q2.Any())
                                 {
-                                    XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    XtraMessageBox.Show("کاربر مورد نظر قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtUserName.Focus();
+                                    return false;
+                                }
+                                if (q3.Any())
+                                {
+                                    XtraMessageBox.Show("این شناسه کاربری قبلاً استفاده شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtName.Text = "";
+                                    txtName.Focus();
                                     return false;
                                 }
                             }
@@ -296,10 +320,20 @@ namespace SystemManagement.UsersSystem
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             var q2 = db.MsUsers.Where(p => p.MsUserId != RowId && p.UserName == txtUserName.Text);
+                            var q3 = db.MsUsers.Where(p => p.MsUserId != RowId && p.Name == txtName.Text);
                             if (q2.Any())
                             {
-                                XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                XtraMessageBox.Show("کاربر مورد نظر قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //txtName.Text = nameBeforeEdit;
+                                txtUserName.Focus();
+                                return false;
+                            }
+                            if (q3.Any())
+                            {
+                                XtraMessageBox.Show("این شناسه کاربری قبلاً استفاده شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                //txtName.Text = nameBeforeEdit;
+                                txtName.Text = "";
+                                txtName.Focus();
                                 return false;
                             }
                         }

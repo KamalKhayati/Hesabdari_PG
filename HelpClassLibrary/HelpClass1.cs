@@ -380,6 +380,25 @@ namespace HelpClassLibrary
                 //        Application.OpenForms[i].Close();
                 //}
         }
+
+        ////////////////////////Alt.Control.Shift.F12///////////////////////////////////////////
+        //private void FrmMain_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    //if (e.KeyChar=='b')
+        //    //{
+        //    //    btnTest.Visible = true;
+        //    //}
+        //}
+
+        //private void FrmMain_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    //if (e.Alt && e.Control && e.Shift && e.KeyCode == Keys.F12)
+        //    //{
+        //    //    btnTest.Visible = true;
+        //    //}
+
+        //}
+
     }
 }
 

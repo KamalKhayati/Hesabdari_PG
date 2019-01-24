@@ -177,7 +177,6 @@ namespace SystemManagement.DafaterMali
                 txtStartDore.EditValue = Fm.gridView1.GetFocusedRowCellValue("StartDoreMali").ToString().Substring(0, 10);
                 txtEndDore.EditValue = Fm.gridView1.GetFocusedRowCellValue("EndDoreMali").ToString().Substring(0, 10);
                 chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("DoreMaliIsActive"));
-                chkIsDefault.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("IsDefault"));
                 chkDoreIsClose.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("DoreIsClose"));
                 txtMaliat.Text = Fm.gridView1.GetFocusedRowCellValue("Maliat").ToString();
                 txtAvarez.Text = Fm.gridView1.GetFocusedRowCellValue("Avarez").ToString();
@@ -230,7 +229,6 @@ namespace SystemManagement.DafaterMali
                             obj.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
                             obj.ShobeName = cmbShobeList.Text;
                             obj.DoreMaliIsActive = chkIsActive.Checked;
-                            obj.IsDefault = chkIsDefault.Checked;
                             obj.DoreIsClose = chkDoreIsClose.Checked;
                             obj.Maliat = Convert.ToSingle(txtMaliat.Text.Replace('/', '.') != "" ? txtMaliat.Text.Replace('/', '.') : "0");
                             obj.Avarez = Convert.ToSingle(txtAvarez.Text.Replace('/', '.') != "" ? txtAvarez.Text.Replace('/', '.') : "0");
@@ -250,7 +248,6 @@ namespace SystemManagement.DafaterMali
                                 txtDoreMali.Text = "";
                                 txtStartDore.Text = "";
                                 txtEndDore.Text = "";
-                                chkIsDefault.Checked = false;
                                 chkDoreIsClose.Checked = false;
                                 txtMaliat.Text = "";
                                 txtAvarez.Text = "";
@@ -287,7 +284,6 @@ namespace SystemManagement.DafaterMali
                                 q.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
                                 q.ShobeName = cmbShobeList.Text;
                                 q.DoreMaliIsActive = chkIsActive.Checked;
-                                q.IsDefault = chkIsDefault.Checked;
                                 q.DoreIsClose = chkDoreIsClose.Checked;
                                 q.Maliat = Convert.ToSingle(txtMaliat.Text.Replace('/', '.') != "" ? txtMaliat.Text.Replace('/', '.') : "0");
                                 q.Avarez = Convert.ToSingle(txtAvarez.Text.Replace('/', '.') != "" ? txtAvarez.Text.Replace('/', '.') : "0");

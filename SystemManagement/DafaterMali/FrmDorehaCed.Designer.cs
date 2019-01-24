@@ -41,7 +41,6 @@
             this.txtAvarez = new DevExpress.XtraEditors.TextEdit();
             this.txtMaliat = new DevExpress.XtraEditors.TextEdit();
             this.chkDoreIsClose = new DevExpress.XtraEditors.CheckEdit();
-            this.chkIsDefault = new DevExpress.XtraEditors.CheckEdit();
             this.txtEndDore = new DevExpress.XtraEditors.TextEdit();
             this.txtDoreMali = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -73,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAvarez.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaliat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDoreIsClose.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndDore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDoreMali.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
@@ -145,7 +143,6 @@
             this.panelControl1.Controls.Add(this.txtAvarez);
             this.panelControl1.Controls.Add(this.txtMaliat);
             this.panelControl1.Controls.Add(this.chkDoreIsClose);
-            this.panelControl1.Controls.Add(this.chkIsDefault);
             this.panelControl1.Controls.Add(this.txtEndDore);
             this.panelControl1.Controls.Add(this.txtDoreMali);
             this.panelControl1.Controls.Add(this.labelControl10);
@@ -235,18 +232,6 @@
             this.chkDoreIsClose.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkDoreIsClose.Size = new System.Drawing.Size(163, 33);
             this.chkDoreIsClose.TabIndex = 10;
-            // 
-            // chkIsDefault
-            // 
-            this.chkIsDefault.EnterMoveNextControl = true;
-            this.chkIsDefault.Location = new System.Drawing.Point(507, 311);
-            this.chkIsDefault.Name = "chkIsDefault";
-            this.chkIsDefault.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.chkIsDefault.Properties.Caption = "سال مالی پیش فرض";
-            this.chkIsDefault.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkIsDefault.Size = new System.Drawing.Size(163, 33);
-            this.chkIsDefault.TabIndex = 9;
-            this.chkIsDefault.Visible = false;
             // 
             // txtEndDore
             // 
@@ -546,7 +531,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAvarez.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaliat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDoreIsClose.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndDore.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDoreMali.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();
@@ -584,7 +568,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LookUpEdit cmbShobeList;
         public DevExpress.XtraEditors.CheckEdit chkDoreIsClose;
-        public DevExpress.XtraEditors.CheckEdit chkIsDefault;
         public DevExpress.XtraEditors.TextEdit txtEndDore;
         public DevExpress.XtraEditors.TextEdit txtDoreMali;
         private DevExpress.XtraEditors.LabelControl labelControl10;

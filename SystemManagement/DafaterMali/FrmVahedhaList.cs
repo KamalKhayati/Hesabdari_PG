@@ -143,9 +143,9 @@ namespace SystemManagement.DafaterMali
                     var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == _UserId).ToList();
                     if (q1.Count() > 0)
                     {
-                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55121) ? BarItemVisibility.Always : BarItemVisibility.Never;
-                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55122) ? BarItemVisibility.Always : BarItemVisibility.Never;
-                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55123) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55121) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55122) ?   BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55123) ? BarItemVisibility.Never : BarItemVisibility.Always;
                     }
                 }
                 catch (Exception ex)

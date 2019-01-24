@@ -364,7 +364,7 @@
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1453, 206);
+            this.ribbon.Size = new System.Drawing.Size(1602, 205);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -821,12 +821,14 @@
             this.btnDetermineAccessLevel2.Caption = "دسترسی به داده ها و اطلاعات ایجاد شده";
             this.btnDetermineAccessLevel2.Id = 127;
             this.btnDetermineAccessLevel2.Name = "btnDetermineAccessLevel2";
+            this.btnDetermineAccessLevel2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDetermineAccessLevel2_ItemClick);
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Caption = "تغییر رمز ورود کاربران";
+            this.btnChangePassword.Caption = "تغییر شناسه کاربری و رمز عبور کاربران";
             this.btnChangePassword.Id = 84;
             this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChangePassword_ItemClick);
             // 
             // mbsOperationDoreMali
             // 
@@ -1036,7 +1038,7 @@
             this.cmbMajmoehaList.Caption = "مجموعه";
             this.cmbMajmoehaList.CaptionAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.cmbMajmoehaList.Edit = this.repositoryItemLookUpEdit2;
-            this.cmbMajmoehaList.EditWidth = 200;
+            this.cmbMajmoehaList.EditWidth = 250;
             this.cmbMajmoehaList.Id = 111;
             this.cmbMajmoehaList.Name = "cmbMajmoehaList";
             this.cmbMajmoehaList.EditValueChanged += new System.EventHandler(this.cmbMajmoehaList_EditValueChanged);
@@ -1065,7 +1067,7 @@
             this.cmbVahedhaList.Caption = "واحد ";
             this.cmbVahedhaList.CaptionAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.cmbVahedhaList.Edit = this.repositoryItemLookUpEdit3;
-            this.cmbVahedhaList.EditWidth = 270;
+            this.cmbVahedhaList.EditWidth = 330;
             this.cmbVahedhaList.Id = 112;
             this.cmbVahedhaList.Name = "cmbVahedhaList";
             this.cmbVahedhaList.EditValueChanged += new System.EventHandler(this.cmbVahedhaList_EditValueChanged);
@@ -1100,7 +1102,7 @@
             this.cmbShobehaList.Caption = "شعبه";
             this.cmbShobehaList.CaptionAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.cmbShobehaList.Edit = this.repositoryItemLookUpEdit4;
-            this.cmbShobehaList.EditWidth = 220;
+            this.cmbShobehaList.EditWidth = 280;
             this.cmbShobehaList.Id = 115;
             this.cmbShobehaList.Name = "cmbShobehaList";
             this.cmbShobehaList.EditValueChanged += new System.EventHandler(this.cmbShobehaList_EditValueChanged);
@@ -1160,7 +1162,7 @@
             this.chkDefault.Id = 124;
             this.chkDefault.Name = "chkDefault";
             toolTipItem1.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
-    "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نخواهید داشت";
+    "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نیست";
             superToolTip1.Items.Add(toolTipItem1);
             this.chkDefault.SuperTip = superToolTip1;
             this.chkDefault.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkDefault_CheckedChanged);
@@ -1520,11 +1522,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserId, true);
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserName, true);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 597);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 601);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1453, 41);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1602, 37);
             // 
             // barButtonItem30
             // 
@@ -1562,9 +1564,9 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1422, 206);
+            this.hideContainerRight.Location = new System.Drawing.Point(1571, 205);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(31, 391);
+            this.hideContainerRight.Size = new System.Drawing.Size(31, 396);
             // 
             // dockPanel1
             // 
@@ -1588,7 +1590,7 @@
             this.dockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel1.SavedIndex = 0;
             this.dockPanel1.SavedSizeFactor = 1D;
-            this.dockPanel1.Size = new System.Drawing.Size(150, 391);
+            this.dockPanel1.Size = new System.Drawing.Size(150, 396);
             this.dockPanel1.TabsPosition = DevExpress.XtraBars.Docking.TabsPosition.Right;
             this.dockPanel1.Text = "موارد پرکاربرد";
             this.dockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
@@ -1597,7 +1599,7 @@
             // 
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 33);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(142, 354);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(142, 359);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // ribbonPageGroup8
@@ -1617,7 +1619,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1453, 638);
+            this.ClientSize = new System.Drawing.Size(1602, 638);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -1625,11 +1627,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MdiChildCaptionFormatString = "{0} -----> {1} ";
             this.Name = "FrmMain";
-            this.Ribbon = this.ribbon;
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ShowMdiChildCaptionInParentTitle = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.StatusBar = this.ribbonStatusBar;
             this.Text = "نرم افزار حسابداری تلاشگران";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);

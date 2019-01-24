@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AP\AnbarKala\ApAnbar.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsDefault.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsDoreMali.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsInfoOther.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsMajmoe.cs" />

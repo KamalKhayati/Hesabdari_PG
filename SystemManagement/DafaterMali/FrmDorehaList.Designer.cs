@@ -63,7 +63,6 @@
             this.colDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStartDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEndDoreMali = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIsDefault = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoreIsClose = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaliat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAvarez = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -109,7 +108,6 @@
             this.colDoreMali,
             this.colStartDoreMali,
             this.colEndDoreMali,
-            this.colIsDefault,
             this.colDoreIsClose,
             this.colMaliat,
             this.colAvarez,
@@ -248,21 +246,6 @@
             this.colEndDoreMali.VisibleIndex = 6;
             this.colEndDoreMali.Width = 130;
             // 
-            // colIsDefault
-            // 
-            this.colIsDefault.AppearanceCell.Options.UseTextOptions = true;
-            this.colIsDefault.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colIsDefault.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colIsDefault.AppearanceHeader.Options.UseTextOptions = true;
-            this.colIsDefault.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colIsDefault.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colIsDefault.Caption = "سال پیش فرض";
-            this.colIsDefault.FieldName = "IsDefault";
-            this.colIsDefault.Name = "colIsDefault";
-            this.colIsDefault.Visible = true;
-            this.colIsDefault.VisibleIndex = 7;
-            this.colIsDefault.Width = 130;
-            // 
             // colDoreIsClose
             // 
             this.colDoreIsClose.AppearanceCell.Options.UseTextOptions = true;
@@ -275,7 +258,7 @@
             this.colDoreIsClose.FieldName = "DoreIsClose";
             this.colDoreIsClose.Name = "colDoreIsClose";
             this.colDoreIsClose.Visible = true;
-            this.colDoreIsClose.VisibleIndex = 8;
+            this.colDoreIsClose.VisibleIndex = 7;
             this.colDoreIsClose.Width = 130;
             // 
             // colMaliat
@@ -290,7 +273,7 @@
             this.colMaliat.FieldName = "Maliat";
             this.colMaliat.Name = "colMaliat";
             this.colMaliat.Visible = true;
-            this.colMaliat.VisibleIndex = 9;
+            this.colMaliat.VisibleIndex = 8;
             this.colMaliat.Width = 140;
             // 
             // colAvarez
@@ -305,7 +288,7 @@
             this.colAvarez.FieldName = "Avarez";
             this.colAvarez.Name = "colAvarez";
             this.colAvarez.Visible = true;
-            this.colAvarez.VisibleIndex = 10;
+            this.colAvarez.VisibleIndex = 9;
             this.colAvarez.Width = 140;
             // 
             // colDoreMaliIsActive
@@ -320,7 +303,7 @@
             this.colDoreMaliIsActive.FieldName = "DoreMaliIsActive";
             this.colDoreMaliIsActive.Name = "colDoreMaliIsActive";
             this.colDoreMaliIsActive.Visible = true;
-            this.colDoreMaliIsActive.VisibleIndex = 11;
+            this.colDoreMaliIsActive.VisibleIndex = 10;
             this.colDoreMaliIsActive.Width = 60;
             // 
             // colMsMajmoeId
@@ -653,7 +636,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colStartDoreMali;
         private DevExpress.XtraGrid.Columns.GridColumn colEndDoreMali;
         private DevExpress.XtraGrid.Columns.GridColumn colDoreMaliIsActive;
-        private DevExpress.XtraGrid.Columns.GridColumn colIsDefault;
         private DevExpress.XtraGrid.Columns.GridColumn colDoreIsClose;
         private DevExpress.XtraGrid.Columns.GridColumn colMaliat;
         private DevExpress.XtraGrid.Columns.GridColumn colAvarez;

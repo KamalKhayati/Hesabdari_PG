@@ -116,6 +116,26 @@ namespace HelpClassLibrary
         //        FillDataGrid();
 
 
+        /////////////////////////////////////// چند ستونه کردن checkcombobox در صورت اطلاعات زیاد /////////////////////
+        //private void chkcmbListMajmoeha_Popup(object sender, EventArgs e)
+        //{
+        //    CheckedPopupContainerForm form = chkcmbListMajmoeha.GetPopupEditForm();
+        //    foreach (Control control in form.Controls)
+        //    {
+        //        if (control is PopupContainerControl)
+        //        {
+        //            foreach (Control child in control.Controls)
+        //            {
+        //                if (child is CheckedListBoxControl)
+        //                {
+        //                    (child as CheckedListBoxControl).MultiColumn = true;
+        //                    break;
+        //                }
+        //            }
+        //            break;
+        //        }
+        //    }
+        //}
 
     }
 }

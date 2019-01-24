@@ -217,5 +217,4 @@ namespace DBHesabdari_TG
         public virtual MsUser MsUser1 { get; set; }
 
     }
-
 }

@@ -74,6 +74,7 @@
             this.txtCode.Properties.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(92, 32);
             this.txtCode.TabIndex = 0;
+            this.txtCode.TabStop = false;
             // 
             // labelControl1
             // 
@@ -90,7 +91,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.MaxLength = 50;
             this.txtPassword.Size = new System.Drawing.Size(208, 32);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             // 
             // txtName
             // 
@@ -99,7 +100,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Size = new System.Drawing.Size(208, 32);
-            this.txtName.TabIndex = 2;
+            this.txtName.TabIndex = 1;
             // 
             // txtUserName
             // 
@@ -108,7 +109,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.MaxLength = 50;
             this.txtUserName.Size = new System.Drawing.Size(316, 32);
-            this.txtUserName.TabIndex = 1;
+            this.txtUserName.TabIndex = 0;
             // 
             // labelControl3
             // 
@@ -116,7 +117,7 @@
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(63, 25);
             this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "نام کاربری";
+            this.labelControl3.Text = "شناسه کاربری";
             // 
             // labelControl2
             // 
@@ -168,7 +169,7 @@
             this.chkIsActive.Properties.Caption = "فعال";
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(58, 33);
-            this.chkIsActive.TabIndex = 4;
+            this.chkIsActive.TabIndex = 3;
             // 
             // txtId
             // 

@@ -39,16 +39,16 @@ namespace Hesabdari_TG_N1_V1.Forms
                     if (q != null)
                     {
                         this.Close();
-                        var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == q.MsUserId).ToList();
-                        if (q1.Count==0)
-                        {
-                            XtraMessageBox.Show("برای این کاربر هیچگونه سطح دسترسی تعیین نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-                            {
-                                Application.OpenForms[i].Close();
-                            }
-                            return;
-                        }
+                        //var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == q.MsUserId).ToList();
+                        //if (q1.Count==0)
+                        //{
+                        //    XtraMessageBox.Show("برای این کاربر هیچگونه سطح دسترسی تعیین نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                            //{
+                            //    Application.OpenForms[i].Close();
+                            //}
+                            //return;
+                        //}
                         FrmMain fm = new FrmMain();
                         fm.txtUserId.Caption = q.MsUserId.ToString();
                         fm.txtUserName.Caption = q.UserName.ToString();
@@ -57,9 +57,10 @@ namespace Hesabdari_TG_N1_V1.Forms
                     }
                     else
                     {
-                        XtraMessageBox.Show("نام کاربری یا رمز عبور اشتباه است لطفا اطلاعات را صحیح وارد کنید",
+                        XtraMessageBox.Show("رمز عبور اشتباه است",
                                         "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                        txtPassword.Text = "";
+                        txtPassword.Focus();
                     }
                 }
                 catch (Exception ex)
@@ -73,6 +74,42 @@ namespace Hesabdari_TG_N1_V1.Forms
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            lblSystemDate.Text = DateTime.Now.ToString().Substring(0, 10);
+
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    string _Name = txtName.Text;
+                    var q = db.MsUsers.FirstOrDefault(f => f.Name == _Name);
+                    if (q != null)
+                    {
+                        lblUserName.Visible = true;
+                        lblUserName.Text = q.UserName;
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("شناسه کاربری اشتباه است",
+                                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtName.Text = "";
+                        txtName.Focus();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
     }
 }

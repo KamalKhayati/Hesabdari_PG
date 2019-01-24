@@ -421,7 +421,7 @@
             this.colUserNam.AppearanceHeader.Options.UseTextOptions = true;
             this.colUserNam.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUserNam.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colUserNam.Caption = "نام کاربری";
+            this.colUserNam.Caption = "شناسه کاربری";
             this.colUserNam.FieldName = "Name";
             this.colUserNam.Name = "colUserNam";
             this.colUserNam.Visible = true;

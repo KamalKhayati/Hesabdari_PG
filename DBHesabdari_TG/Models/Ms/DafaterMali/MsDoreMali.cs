@@ -30,7 +30,6 @@ namespace DBHesabdari_TG
         public DateTime EndDoreMali { get; set; }
         [Required]
         public bool DoreMaliIsActive { get; set; }
-        public bool IsDefault { get; set; }
         public bool DoreIsClose { get; set; }
         public float Maliat { get; set; }
         public float Avarez { get; set; }
@@ -47,7 +46,6 @@ namespace DBHesabdari_TG
         [Required, MaxLength(50)]
         public string ShobeName { get; set; }
         public virtual MsShobe MsShobe1 { get; set; }
-        public string PermissiveUsers { get; set; }
         public virtual ICollection<RmsUserhaBmsDorehaiMali> RmsUserhaBmsDorehaiMalis { get; set; }
     }
 

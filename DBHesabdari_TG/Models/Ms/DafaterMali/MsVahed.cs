@@ -31,10 +31,8 @@ namespace DBHesabdari_TG
         [Required, MaxLength(50)]
         public string MajmoeName { get; set; }
         public virtual MsMajmoe MsMajmoe1 { get; set; }
-        public string PermissiveUsers { get; set; }
-        public bool IsDefault { get; set; }
-
         public virtual ICollection<RmsUserhaBmsVahedha> RmsUserhaBmsVahedhas { get; set; }
         public virtual ICollection<MsShobe> MsShobes { get; set; }
+
     }
 }
