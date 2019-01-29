@@ -346,6 +346,7 @@
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(54, 33);
             this.chkIsActive.TabIndex = 6;
+            this.chkIsActive.Visible = false;
             // 
             // txtCode
             // 

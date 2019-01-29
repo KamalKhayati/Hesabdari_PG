@@ -71,26 +71,29 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.repositoryItemHypertextLabel2 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
+            this.lblUserId = new DevExpress.XtraEditors.LabelControl();
+            this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMsUserId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserNam = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUserPassword = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRmsUserhaBmsMajmoehas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRmsUserhaBmsVahedhas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRmsUserhaBmsShobehas = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
-            this.lblUserId = new DevExpress.XtraEditors.LabelControl();
-            this.lblUserName = new DevExpress.XtraEditors.LabelControl();
+            this.colRmsUserhaBmsAccessLevelMenuhas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRmsUserhaBmsDorehaiMalis = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.msUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -319,15 +322,34 @@
             // 
             this.repositoryItemHypertextLabel2.Name = "repositoryItemHypertextLabel2";
             // 
+            // lblUserId
+            // 
+            this.lblUserId.Location = new System.Drawing.Point(8, 69);
+            this.lblUserId.Name = "lblUserId";
+            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.TabIndex = 9;
+            this.lblUserId.Text = "آیدی  کاربر";
+            this.lblUserId.Visible = false;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.Location = new System.Drawing.Point(8, 100);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.TabIndex = 10;
+            this.lblUserName.Text = "نام کاربر";
+            this.lblUserName.Visible = false;
+            // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.msUsersBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 60);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1131, 475);
-            this.gridControl1.TabIndex = 4;
+            this.gridControl1.TabIndex = 15;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -338,12 +360,14 @@
             this.Line,
             this.colUserCode,
             this.colUserName,
-            this.colUserNam,
-            this.colUserPassword,
+            this.colName,
+            this.colPassword,
             this.colUserIsActive,
             this.colRmsUserhaBmsMajmoehas,
             this.colRmsUserhaBmsVahedhas,
-            this.colRmsUserhaBmsShobehas});
+            this.colRmsUserhaBmsShobehas,
+            this.colRmsUserhaBmsDorehaiMalis,
+            this.colRmsUserhaBmsAccessLevelMenuhas});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -359,9 +383,6 @@
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
-            this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // colMsUserId
             // 
@@ -414,33 +435,33 @@
             this.colUserName.VisibleIndex = 2;
             this.colUserName.Width = 300;
             // 
-            // colUserNam
+            // colName
             // 
-            this.colUserNam.AppearanceCell.Options.UseTextOptions = true;
-            this.colUserNam.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colUserNam.AppearanceHeader.Options.UseTextOptions = true;
-            this.colUserNam.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colUserNam.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colUserNam.Caption = "شناسه کاربری";
-            this.colUserNam.FieldName = "Name";
-            this.colUserNam.Name = "colUserNam";
-            this.colUserNam.Visible = true;
-            this.colUserNam.VisibleIndex = 3;
-            this.colUserNam.Width = 200;
+            this.colName.AppearanceCell.Options.UseTextOptions = true;
+            this.colName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colName.Caption = "نام کاربری";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 3;
+            this.colName.Width = 200;
             // 
-            // colUserPassword
+            // colPassword
             // 
-            this.colUserPassword.AppearanceCell.Options.UseTextOptions = true;
-            this.colUserPassword.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colUserPassword.AppearanceHeader.Options.UseTextOptions = true;
-            this.colUserPassword.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colUserPassword.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colUserPassword.Caption = "رمز عبور";
-            this.colUserPassword.FieldName = "Password";
-            this.colUserPassword.Name = "colUserPassword";
-            this.colUserPassword.Visible = true;
-            this.colUserPassword.VisibleIndex = 4;
-            this.colUserPassword.Width = 200;
+            this.colPassword.AppearanceCell.Options.UseTextOptions = true;
+            this.colPassword.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colPassword.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPassword.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPassword.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colPassword.Caption = "رمز عبور";
+            this.colPassword.FieldName = "Password";
+            this.colPassword.Name = "colPassword";
+            this.colPassword.Visible = true;
+            this.colPassword.VisibleIndex = 4;
+            this.colPassword.Width = 200;
             // 
             // colUserIsActive
             // 
@@ -472,28 +493,19 @@
             this.colRmsUserhaBmsShobehas.FieldName = "RmsUserhaBmsShobehas";
             this.colRmsUserhaBmsShobehas.Name = "colRmsUserhaBmsShobehas";
             // 
-            // pLinqInstantFeedbackSource1
+            // colRmsUserhaBmsAccessLevelMenuhas
             // 
-            this.pLinqInstantFeedbackSource1.DefaultSorting = "UserCode ASC";
-            this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsUser);
+            this.colRmsUserhaBmsAccessLevelMenuhas.FieldName = "RmsUserhaBmsAccessLevelMenuhas";
+            this.colRmsUserhaBmsAccessLevelMenuhas.Name = "colRmsUserhaBmsAccessLevelMenuhas";
             // 
-            // lblUserId
+            // colRmsUserhaBmsDorehaiMalis
             // 
-            this.lblUserId.Location = new System.Drawing.Point(8, 69);
-            this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(69, 25);
-            this.lblUserId.TabIndex = 9;
-            this.lblUserId.Text = "آیدی  کاربر";
-            this.lblUserId.Visible = false;
+            this.colRmsUserhaBmsDorehaiMalis.FieldName = "RmsUserhaBmsDorehaiMalis";
+            this.colRmsUserhaBmsDorehaiMalis.Name = "colRmsUserhaBmsDorehaiMalis";
             // 
-            // lblUserName
+            // msUsersBindingSource
             // 
-            this.lblUserName.Location = new System.Drawing.Point(8, 100);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(50, 25);
-            this.lblUserName.TabIndex = 10;
-            this.lblUserName.Text = "نام کاربر";
-            this.lblUserName.Visible = false;
+            this.msUsersBindingSource.DataSource = typeof(DBHesabdari_TG.MsUser);
             // 
             // FrmUsersList
             // 
@@ -518,6 +530,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,8 +544,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         public DevExpress.XtraBars.BarButtonItem btnCreate;
         public DevExpress.XtraBars.BarButtonItem btnEdit;
         public DevExpress.XtraBars.BarButtonItem btnDelete;
@@ -542,20 +553,24 @@
         public DevExpress.XtraBars.BarButtonItem btnListPrint;
         public DevExpress.XtraBars.BarSubItem btnEmkanat;
         public DevExpress.XtraBars.BarButtonItem btnAdvancedSearch;
-        private DevExpress.Data.PLinq.PLinqInstantFeedbackSource pLinqInstantFeedbackSource1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMsUserId;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserCode;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserName;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserNam;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserPassword;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserIsActive;
-        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsMajmoehas;
-        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsVahedhas;
-        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsShobehas;
-        private DevExpress.XtraGrid.Columns.GridColumn Line;
         private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
         private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel2;
         public DevExpress.XtraEditors.LabelControl lblUserName;
         public DevExpress.XtraEditors.LabelControl lblUserId;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMsUserId;
+        private DevExpress.XtraGrid.Columns.GridColumn Line;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserName;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colPassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserIsActive;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsMajmoehas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsVahedhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsShobehas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsAccessLevelMenuhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colRmsUserhaBmsDorehaiMalis;
+        private System.Windows.Forms.BindingSource msUsersBindingSource;
     }
 }

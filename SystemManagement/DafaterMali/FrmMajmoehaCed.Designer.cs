@@ -180,6 +180,7 @@
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(54, 33);
             this.chkIsActive.TabIndex = 4;
+            this.chkIsActive.Visible = false;
             // 
             // txtId
             // 
@@ -300,7 +301,7 @@
             this.panelControl2.Controls.Add(this.btnCreateNext);
             this.panelControl2.Controls.Add(this.btnClose);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 496);
+            this.panelControl2.Location = new System.Drawing.Point(0, 130);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(669, 49);
             this.panelControl2.TabIndex = 13;
@@ -361,7 +362,7 @@
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 126);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(669, 370);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(669, 4);
             this.xtraScrollableControl1.TabIndex = 14;
             // 
             // txtShBimeKargah
@@ -810,7 +811,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 545);
+            this.ClientSize = new System.Drawing.Size(669, 179);
             this.Controls.Add(this.xtraScrollableControl1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);

@@ -70,6 +70,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.msVahedsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMsVahedId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,11 +82,13 @@
             this.colMsMajmoe1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRmsUserhaBmsVahedhas = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMsShobes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.pLinqInstantFeedbackSource1 = new DevExpress.Data.PLinq.PLinqInstantFeedbackSource();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -306,6 +309,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.msVahedsBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 60);
             this.gridControl1.MainView = this.gridView1;
@@ -316,14 +320,18 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // msVahedsBindingSource
+            // 
+            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_TG.MsVahed);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMsVahedId,
             this.Line,
-            this.colMajmoeName,
             this.colVahedCode,
             this.colVahedName,
+            this.colMajmoeName,
             this.colVahedIsActive,
             this.colMsMajmoeId,
             this.colMsMajmoe1,
@@ -381,7 +389,7 @@
             this.colMajmoeName.FieldName = "MajmoeName";
             this.colMajmoeName.Name = "colMajmoeName";
             this.colMajmoeName.Visible = true;
-            this.colMajmoeName.VisibleIndex = 1;
+            this.colMajmoeName.VisibleIndex = 3;
             this.colMajmoeName.Width = 300;
             // 
             // colVahedCode
@@ -396,8 +404,8 @@
             this.colVahedCode.FieldName = "VahedCode";
             this.colVahedCode.Name = "colVahedCode";
             this.colVahedCode.Visible = true;
-            this.colVahedCode.VisibleIndex = 2;
-            this.colVahedCode.Width = 80;
+            this.colVahedCode.VisibleIndex = 1;
+            this.colVahedCode.Width = 100;
             // 
             // colVahedName
             // 
@@ -410,7 +418,7 @@
             this.colVahedName.FieldName = "VahedName";
             this.colVahedName.Name = "colVahedName";
             this.colVahedName.Visible = true;
-            this.colVahedName.VisibleIndex = 3;
+            this.colVahedName.VisibleIndex = 2;
             this.colVahedName.Width = 350;
             // 
             // colVahedIsActive
@@ -449,11 +457,6 @@
             this.colMsShobes.FieldName = "MsShobes";
             this.colMsShobes.Name = "colMsShobes";
             // 
-            // pLinqInstantFeedbackSource1
-            // 
-            this.pLinqInstantFeedbackSource1.DefaultSorting = "VahedCode ASC";
-            this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsVahed);
-            // 
             // lblUserName
             // 
             this.lblUserName.Location = new System.Drawing.Point(12, 100);
@@ -472,11 +475,31 @@
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 501);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(50, 25);
+            this.labelControl1.TabIndex = 18;
+            this.labelControl1.Text = "نام کاربر";
+            this.labelControl1.Visible = false;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(12, 470);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(69, 25);
+            this.labelControl2.TabIndex = 17;
+            this.labelControl2.Text = "آیدی  کاربر";
+            this.labelControl2.Visible = false;
+            // 
             // FrmVahedhaList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1256, 577);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblUserId);
@@ -491,6 +514,7 @@
             this.Load += new System.EventHandler(this.FrmVahedhaList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msVahedsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -516,7 +540,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraGrid.GridControl gridControl1;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.Data.PLinq.PLinqInstantFeedbackSource pLinqInstantFeedbackSource1;
         private DevExpress.XtraGrid.Columns.GridColumn colMsVahedId;
         private DevExpress.XtraGrid.Columns.GridColumn colVahedCode;
         private DevExpress.XtraGrid.Columns.GridColumn colVahedName;
@@ -529,5 +552,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn Line;
         public DevExpress.XtraEditors.LabelControl lblUserName;
         public DevExpress.XtraEditors.LabelControl lblUserId;
+        public DevExpress.XtraEditors.LabelControl labelControl1;
+        public DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.BindingSource msVahedsBindingSource;
     }
 }

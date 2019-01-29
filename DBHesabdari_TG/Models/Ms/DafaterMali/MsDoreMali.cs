@@ -46,7 +46,6 @@ namespace DBHesabdari_TG
         [Required, MaxLength(50)]
         public string ShobeName { get; set; }
         public virtual MsShobe MsShobe1 { get; set; }
-        public virtual ICollection<RmsUserhaBmsDorehaiMali> RmsUserhaBmsDorehaiMalis { get; set; }
     }
 
 }

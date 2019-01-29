@@ -39,15 +39,15 @@ namespace Hesabdari_TG_N1_V1.Forms
                     if (q != null)
                     {
                         this.Close();
-                        //var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == q.MsUserId).ToList();
+                        //var q1 = db.RmsUserhaBmsAccessLevelMenuhas.Where(s => s.MsUserId == q.MsUserId).ToList();
                         //if (q1.Count==0)
                         //{
                         //    XtraMessageBox.Show("برای این کاربر هیچگونه سطح دسترسی تعیین نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-                            //{
-                            //    Application.OpenForms[i].Close();
-                            //}
-                            //return;
+                        //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                        //{
+                        //    Application.OpenForms[i].Close();
+                        //}
+                        //return;
                         //}
                         FrmMain fm = new FrmMain();
                         fm.txtUserId.Caption = q.MsUserId.ToString();
@@ -88,19 +88,22 @@ namespace Hesabdari_TG_N1_V1.Forms
             {
                 try
                 {
-                    string _Name = txtName.Text;
-                    var q = db.MsUsers.FirstOrDefault(f => f.Name == _Name);
-                    if (q != null)
+                    if (!string.IsNullOrEmpty(txtName.Text))
                     {
-                        lblUserName.Visible = true;
-                        lblUserName.Text = q.UserName;
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show("شناسه کاربری اشتباه است",
-                                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtName.Text = "";
-                        txtName.Focus();
+                        string _Name = txtName.Text;
+                        var q = db.MsUsers.FirstOrDefault(f => f.Name == _Name);
+                        if (q != null)
+                        {
+                            lblUserName.Visible = true;
+                            lblUserName.Text = q.UserName;
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("شناسه کاربری اشتباه است",
+                                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtName.Text = "";
+                            txtName.Focus();
+                        }
                     }
                 }
                 catch (Exception ex)

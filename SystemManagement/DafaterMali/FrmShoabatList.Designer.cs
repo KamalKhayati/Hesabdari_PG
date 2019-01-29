@@ -70,6 +70,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.msShobesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMsShobeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,6 +88,7 @@
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msShobesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -307,6 +309,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.msShobesBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 60);
             this.gridControl1.MainView = this.gridView1;
@@ -317,16 +320,20 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // msShobesBindingSource
+            // 
+            this.msShobesBindingSource.DataSource = typeof(DBHesabdari_TG.MsShobe);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMsShobeId,
             this.Line,
-            this.colMajmoeName,
-            this.colVahedName,
             this.colShobeCode,
             this.colShobeName,
+            this.colVahedName,
             this.colShobeIsActive,
+            this.colMajmoeName,
             this.colMsMajmoeId,
             this.colMsVahedId,
             this.colMsVahed1,
@@ -382,9 +389,7 @@
             this.colMajmoeName.Caption = "نام مجموعه";
             this.colMajmoeName.FieldName = "MajmoeName";
             this.colMajmoeName.Name = "colMajmoeName";
-            this.colMajmoeName.Visible = true;
-            this.colMajmoeName.VisibleIndex = 1;
-            this.colMajmoeName.Width = 250;
+            this.colMajmoeName.Width = 300;
             // 
             // colVahedName
             // 
@@ -397,8 +402,8 @@
             this.colVahedName.FieldName = "VahedName";
             this.colVahedName.Name = "colVahedName";
             this.colVahedName.Visible = true;
-            this.colVahedName.VisibleIndex = 2;
-            this.colVahedName.Width = 300;
+            this.colVahedName.VisibleIndex = 3;
+            this.colVahedName.Width = 350;
             // 
             // colShobeCode
             // 
@@ -412,7 +417,7 @@
             this.colShobeCode.FieldName = "ShobeCode";
             this.colShobeCode.Name = "colShobeCode";
             this.colShobeCode.Visible = true;
-            this.colShobeCode.VisibleIndex = 3;
+            this.colShobeCode.VisibleIndex = 1;
             this.colShobeCode.Width = 100;
             // 
             // colShobeName
@@ -426,8 +431,8 @@
             this.colShobeName.FieldName = "ShobeName";
             this.colShobeName.Name = "colShobeName";
             this.colShobeName.Visible = true;
-            this.colShobeName.VisibleIndex = 4;
-            this.colShobeName.Width = 250;
+            this.colShobeName.VisibleIndex = 2;
+            this.colShobeName.Width = 350;
             // 
             // colShobeIsActive
             // 
@@ -441,7 +446,7 @@
             this.colShobeIsActive.FieldName = "ShobeIsActive";
             this.colShobeIsActive.Name = "colShobeIsActive";
             this.colShobeIsActive.Visible = true;
-            this.colShobeIsActive.VisibleIndex = 5;
+            this.colShobeIsActive.VisibleIndex = 4;
             this.colShobeIsActive.Width = 60;
             // 
             // colMsMajmoeId
@@ -508,6 +513,7 @@
             this.Load += new System.EventHandler(this.FrmShoabatList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msShobesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -547,5 +553,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn Line;
         public DevExpress.XtraEditors.LabelControl lblUserName;
         public DevExpress.XtraEditors.LabelControl lblUserId;
+        private System.Windows.Forms.BindingSource msShobesBindingSource;
     }
 }

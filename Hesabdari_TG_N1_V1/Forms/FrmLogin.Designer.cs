@@ -128,7 +128,7 @@
             this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(303, 17);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(94, 25);
+            this.labelControl3.Size = new System.Drawing.Size(95, 25);
             this.labelControl3.TabIndex = 9;
             this.labelControl3.Text = "تاریخ سیستم :";
             // 
@@ -138,7 +138,7 @@
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.Location = new System.Drawing.Point(303, 52);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(59, 25);
+            this.labelControl4.Size = new System.Drawing.Size(60, 25);
             this.labelControl4.TabIndex = 6;
             this.labelControl4.Text = "نام کاربر :";
             // 

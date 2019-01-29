@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVahedhaCed));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnCreateClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreateNext = new DevExpress.XtraEditors.SimpleButton();
-            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.chkEditCode = new DevExpress.XtraEditors.CheckEdit();
             this.chkSpecificationOther = new DevExpress.XtraEditors.CheckEdit();
@@ -306,6 +305,7 @@
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(54, 33);
             this.chkIsActive.TabIndex = 5;
+            this.chkIsActive.Visible = false;
             // 
             // txtId
             // 

@@ -121,8 +121,16 @@ namespace SystemManagement.DafaterMali
                                 ShBimeKargah = txtShBimeKargah.Text,
                             };
                             db.MsInfoOthers.Add(obj2);
+                            ////////////////////////////////////// اضافه کردن مجموعه های زنجیره ای به کلاس سطح دسترسی دفاتر مالی ////////////////////
+                            MsAccessLevelDafaterMali n1 = new MsAccessLevelDafaterMali();
+                            n1.KeyId = _code;
+                            n1.ParentId = _code;
+                            n1.LevelName = txtName.Text;
+                            n1.MajmoeId = q.MsMajmoeId;
+                            n1.IsActive = chkIsActive.Checked;
+                            db.MsAccessLevelDafaterMalis.Add(n1);
+                            /////////////////////////////////////////////////////////////////////////////////////
                             db.SaveChanges();
-
                             Fm.btnDisplyActiveList_ItemClick(null, null);
                             XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             Fm.gridView1.MoveLast();
@@ -154,66 +162,103 @@ namespace SystemManagement.DafaterMali
                             var q = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == RowId);
                             if (q != null)
                             {
-                                q.MajmoeCode = Convert.ToInt32(txtCode.Text);
-                                q.MajmoeName = txtName.Text;
-                                q.MajmoeIsActive = Convert.ToBoolean(chkIsActive.Checked);
+                                if (CodeBeforeEdit != txtCode.Text)
+                                    q.MajmoeCode = Convert.ToInt32(txtCode.Text);
+                                if (NameBeforeEdit != txtName.Text)
+                                    q.MajmoeName = txtName.Text;
+                                if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                    q.MajmoeIsActive = chkIsActive.Checked;
+                                /////////////////////////////متد اصلاح کد و نام مجموعه در لیست واحد ها ، شعبه ها و دوره های مالی WillCascadeOnUpdate ///////////////////////
 
-                                /////////////////////////////متد اصلاح کد و نام مجموعه در زیر شاخه های بالاتر WillCascadeOnUpdate ///////////////////////
-                                if (CodeBeforeEdit != txtCode.Text || NameBeforeEdit != txtName.Text)
+                                ///////////////////////////// WillCascadeOnUpdate : MsVaheds ///////////////////////
+                                var q5 = db.MsVaheds.Where(s => s.MsMajmoeId == RowId).ToList();
+                                if (q5.Count > 0)
                                 {
-                                    ///////////////////////////// WillCascadeOnUpdate : MsVaheds ///////////////////////
-                                    var q5 = db.MsVaheds.Where(s => s.MsMajmoeId == RowId).ToList();
-                                    if (q5.Count > 0)
+                                    q5.ForEach(item =>
                                     {
-                                        foreach (var item in q5)
-                                        {
-                                            string a = item.VahedCode.ToString().Substring(0, 2);
-                                            string b = item.VahedCode.ToString().Substring(2, 2);
-                                            string _txtName = item.MajmoeName.ToString();
-
-                                            if (a != txtCode.Text || _txtName != txtName.Text)
-                                            {
-                                                item.VahedCode = Convert.ToInt32(txtCode.Text + b);
-                                                item.MajmoeName = txtName.Text;
-                                            }
-                                        }
-                                    }
-                                    /////////////////////////// WillCascadeOnUpdate : MsShobes /////////////////////////
-                                    var q6 = db.MsShobes.Where(s => s.MsMajmoeId == RowId).ToList();
-                                    if (q6.Count > 0)
-                                    {
-                                        foreach (var item in q6)
-                                        {
-                                            string a = item.ShobeCode.ToString().Substring(0, 2);
-                                            string b = item.ShobeCode.ToString().Substring(2, 4);
-                                            string _txtName = item.MajmoeName.ToString();
-
-                                            if (a != txtCode.Text || _txtName != txtName.Text)
-                                            {
-                                                item.ShobeCode = Convert.ToInt32(txtCode.Text + b);
-                                                item.MajmoeName = txtName.Text;
-                                            }
-                                        }
-                                    }
-                                    /////////////////////////// WillCascadeOnUpdate : MsDoreMalis /////////////////////////
-                                    var q7 = db.MsDoreMalis.Where(s => s.MsMajmoeId == RowId).ToList();
-                                    if (q7.Count > 0)
-                                    {
-                                        foreach (var item in q7)
-                                        {
-                                            string a = item.DoreMaliCode.ToString().Substring(0, 2);
-                                            string b = item.DoreMaliCode.ToString().Substring(2, 7);
-                                            string _txtName = item.MajmoeName.ToString();
-
-                                            if (a != txtCode.Text || _txtName != txtName.Text)
-                                            {
-                                                item.DoreMaliCode = Convert.ToInt32(txtCode.Text + b);
-                                                item.MajmoeName = txtName.Text;
-                                            }
-                                        }
-                                    }
+                                        if (CodeBeforeEdit != txtCode.Text)
+                                            item.VahedCode = Convert.ToInt32(item.VahedCode.ToString().Substring(0, 2).Replace(item.VahedCode.ToString().Substring(0, 2), txtCode.Text)
+                                            + item.VahedCode.ToString().Substring(2));
+                                        if (NameBeforeEdit != txtName.Text)
+                                            item.MajmoeName = txtName.Text;
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            item.VahedIsActive = chkIsActive.Checked;
+                                    });
                                 }
-                                /////////////////////////////////////////////////////////////////////////////
+                                /////////////////////////// WillCascadeOnUpdate : MsShobes /////////////////////////
+                                var q6 = db.MsShobes.Where(s => s.MsMajmoeId == RowId).ToList();
+                                if (q6.Count > 0)
+                                {
+                                    q6.ForEach(item =>
+                                    {
+                                        if (CodeBeforeEdit != txtCode.Text)
+                                            item.ShobeCode = Convert.ToInt32(item.ShobeCode.ToString().Substring(0, 2).Replace(item.ShobeCode.ToString().Substring(0, 2), txtCode.Text)
+                                            + item.ShobeCode.ToString().Substring(2));
+                                        if (NameBeforeEdit != txtName.Text)
+                                            item.MajmoeName = txtName.Text;
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            item.ShobeIsActive = chkIsActive.Checked;
+                                    });
+                                }
+                                /////////////////////////// WillCascadeOnUpdate : MsDoreMalis /////////////////////////
+                                var q7 = db.MsDoreMalis.Where(s => s.MsMajmoeId == RowId).ToList();
+                                if (q7.Count > 0)
+                                {
+                                    q7.ForEach(item =>
+                                    {
+                                        if (CodeBeforeEdit != txtCode.Text)
+                                            item.DoreMaliCode = Convert.ToInt32(item.DoreMaliCode.ToString().Substring(0, 2).Replace(item.DoreMaliCode.ToString().Substring(0, 2), txtCode.Text)
+                                            + item.DoreMaliCode.ToString().Substring(2));
+                                        if (NameBeforeEdit != txtName.Text)
+                                            item.MajmoeName = txtName.Text;
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            item.DoreMaliIsActive = chkIsActive.Checked;
+                                    });
+                                }
+                                /////////////////////////////متد اصلاح کد و نام مجموعه در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
+                                var q8 = db.MsAccessLevelDafaterMalis.Where(s => s.MajmoeId == RowId).ToList();
+                                if (q8.Count > 0)
+                                {
+                                    q8.ForEach(item =>
+                                    {
+                                        if (item.VahedId == 0)
+                                        {
+                                            if (CodeBeforeEdit != txtCode.Text)
+                                                item.KeyId = Convert.ToInt32(txtCode.Text);
+                                            if (CodeBeforeEdit != txtCode.Text)
+                                                item.ParentId = Convert.ToInt32(txtCode.Text);
+                                            if (NameBeforeEdit != txtName.Text)
+                                                item.LevelName = txtName.Text;
+                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                item.IsActive = chkIsActive.Checked;
+                                        }
+                                        else
+                                        {
+                                            if (CodeBeforeEdit != txtCode.Text)
+                                                item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtCode.Text)
+                                                + item.KeyId.ToString().Substring(2));
+                                            if (CodeBeforeEdit != txtCode.Text)
+                                                item.ParentId = Convert.ToInt32(item.ParentId.ToString().Substring(0, 2).Replace(item.ParentId.ToString().Substring(0, 2), txtCode.Text)
+                                                + item.ParentId.ToString().Substring(2));
+                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                item.IsActive = chkIsActive.Checked;
+                                        }
+                                    });
+                                }
+                                ///////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و سطح دسترسی لیست دفاتر مالی  WillCascadeOnUpdate////////////////////////////////////// 
+                                var q9 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.MajmoeId == RowId).ToList();
+                                if (q9.Count > 0)
+                                {
+                                    q9.ForEach(item =>
+                                    {
+                                        if (CodeBeforeEdit != txtCode.Text)
+                                            item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtCode.Text)
+                                            + item.KeyId.ToString().Substring(2));
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            item.IsActive = chkIsActive.Checked;
+                                    });
+                                }
+                                /////////////////////////////////////////////////////////////////////////////////////////////
                                 var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsMajmoeId == RowId);
                                 if (q4 != null)
                                 {
@@ -308,16 +353,11 @@ namespace SystemManagement.DafaterMali
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             var q = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == RowId);
-                            if (q != null)
+                            var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.MajmoeId == RowId);
+                            if (q != null && q8 != null)
                             {
-                                //////////////////////////////////////////////////////////////////////////////////
-                                //q.MajmoeCode = Convert.ToInt32(txtCode.Text);
-                                //q.MajmoeName = txtName.Text;
-                                //q.MajmoeIsActive = Convert.ToBoolean(chkIsActive.Checked);
-                                //q.PermissiveUsers = chkcmbPermissiveUsers.Text;
-
                                 db.MsMajmoes.Remove(q);
-
+                                db.MsAccessLevelDafaterMalis.Remove(q8);
                                 /////////////////////////////////////////////////////////////////////////////
                                 var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsMajmoeId == RowId);
                                 if (q4 != null)
@@ -498,8 +538,12 @@ namespace SystemManagement.DafaterMali
 
         string CodeBeforeEdit = "";
         string NameBeforeEdit = "";
+        bool IsActiveBeforeEdit;
         private void FrmMajmoehaCed_Load(object sender, EventArgs e)
         {
+            if (Fm.lblUserId.Text == "1")
+                chkIsActive.Visible = true;
+
             if (this.Text == "ایجاد رکورد جدید")
             {
                 btnNewCode_Click(null, null);
@@ -557,6 +601,7 @@ namespace SystemManagement.DafaterMali
 
                 CodeBeforeEdit = txtCode.Text;
                 NameBeforeEdit = txtName.Text;
+                IsActiveBeforeEdit = chkIsActive.Checked;
             }
         }
         private void chkSpecificationOther_CheckedChanged(object sender, EventArgs e)

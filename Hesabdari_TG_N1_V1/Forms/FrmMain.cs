@@ -72,26 +72,26 @@ namespace Hesabdari_TG_N1_V1.Forms
                         //chkDefault.Checked = true;
                     }
                     //////////////////////////////////////////////////////////////////////
-                    var q1 = db.RmsUserhaBmsAccessLevel1has.Where(s => s.MsUserId == _UserId).ToList();
+                    var q1 = db.RmsUserBmsAccessLevelMenus.Where(s => s.MsUserId == _UserId).ToList();
                     if (q1.Count() > 0)
                     {
-                        Ms.Visible = q1.Any(s => s.MsAccessLevel1Id == 55) ? false : true;
-                        rpgOperationDafaterVaDoreMali.Visible = q1.Any(s => s.MsAccessLevel1Id == 55100 || s.MsAccessLevel1Id == 55200) ? false : true;
-                        mbsListDafaterMali.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55100) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListMojmoeha.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55110) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListVahedha.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55120) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListShobeha.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55130) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListDorehaiMali.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55140) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        Ms.Visible = q1.Any(s => s.MsAccessLevelMenuId == 55) ? false : true;
+                        rpgOperationDafaterVaDoreMali.Visible = q1.Any(s => s.MsAccessLevelMenuId == 55100 || s.MsAccessLevelMenuId == 55200) ? false : true;
+                        mbsListDafaterMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55100) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListMojmoeha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55110) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListVahedha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55120) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListShobeha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55130) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListDorehaiMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55140) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         ///////////////////////////
-                        mbsOperationDoreMali.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55200) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        mbsOperationDoreMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55200) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         ///////////////////////////
-                        rpgUsers.Visible = q1.Any(s => s.MsAccessLevel1Id == 55300) ? false : true;
-                        mbsSystemUsers.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55300) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnUsersList.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55310) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55320) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel1.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55330) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel2.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55340) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnChangePassword.Visibility = q1.Any(s => s.MsAccessLevel1Id == 55350) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        rpgUsers.Visible = q1.Any(s => s.MsAccessLevelMenuId == 55300) ? false : true;
+                        mbsSystemUsers.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55300) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnUsersList.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55310) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDetermineAccessLevel.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55320) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDetermineAccessLevel1.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55330) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDetermineAccessLevel2.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55340) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnChangePassword.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55350) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         //////////////////////////
                     }
                 }
@@ -111,25 +111,26 @@ namespace Hesabdari_TG_N1_V1.Forms
                 try
                 {
                     msMajmoeBindingSource.DataSource = null;
-                    List<MsMajmoe> ListMajmoeha = new List<MsMajmoe>();
-                    var q2 = db.MsMajmoes.Where(s => s.MajmoeIsActive == true).ToList();
-                    var q3 = db.RmsUserhaBmsMajmoehas.Where(s => s.MsUserId == _UserId).Select(s => s.MsMajmoeId).ToList();
-                    if (q2.Count > 0)
+                    var q1 = db.MsMajmoes.Where(s => s.MajmoeIsActive == true).ToList();
+                    //var q2 = q1.Select(s => s.MsMajmoeId).ToList();
+                    var q3 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.MsUserId == _UserId && s.VahedId == 0 && s.IsActive == true).Select(s => s.MajmoeId).ToList();
+                    if (q1.Count > 0)
                     {
                         if (q3.Count > 0)
                         {
-                            foreach (var item2 in q2)
+                            //foreach (var item3 in q3)
+                            //{
+                            //    q1.Remove(db.MsMajmoes.FirstOrDefault(s => s.MsMajmoeId != item3));
+                            //}
+                            q3.ForEach(item3 =>
                             {
-                                if (!q3.Contains(item2.MsMajmoeId))
-                                {
-                                    ListMajmoeha.Add(db.MsMajmoes.FirstOrDefault(s => s.MsMajmoeId == item2.MsMajmoeId));
-                                }
-                            }
-                            msMajmoeBindingSource.DataSource = ListMajmoeha;
+                                q1.Remove(db.MsMajmoes.FirstOrDefault(s => s.MsMajmoeId == item3));
+                            });
+                            msMajmoeBindingSource.DataSource = q1;
                         }
                         else
                         {
-                            msMajmoeBindingSource.DataSource = q2;
+                            msMajmoeBindingSource.DataSource = q1;
                         }
                     }
                 }
@@ -155,26 +156,23 @@ namespace Hesabdari_TG_N1_V1.Forms
                 try
                 {
                     msVahedBindingSource.DataSource = null;
-                    List<MsVahed> ListVahedha = new List<MsVahed>();
                     int _MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                    var q2 = db.MsVaheds.Where(s => s.VahedIsActive == true && s.MsMajmoeId == _MajmoeId).ToList();
-                    var q3 = db.RmsUserhaBmsVahedhas.Where(s => s.MsUserId == _UserId).Select(s => s.MsVahedId).ToList();
-                    if (q2.Count > 0)
+                    var q1 = db.MsVaheds.Where(s => s.VahedIsActive == true && s.MsMajmoeId == _MajmoeId).ToList();
+                    //var q2 = q1.Select(s=>s.MsVahedId).ToList(); ;
+                    var q3 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.MsUserId == _UserId && s.ShobeId == 0 && s.IsActive == true).Select(s => s.VahedId).ToList();
+                    if (q1.Count > 0)
                     {
                         if (q3.Count > 0)
                         {
-                            foreach (var item2 in q2)
+                            q3.ForEach(item3 =>
                             {
-                                if (!q3.Contains(item2.MsVahedId))
-                                {
-                                    ListVahedha.Add(db.MsVaheds.FirstOrDefault(s => s.MsVahedId == item2.MsVahedId));
-                                }
-                            }
-                            msVahedBindingSource.DataSource = ListVahedha;
+                                q1.Remove(db.MsVaheds.FirstOrDefault(s => s.MsVahedId == item3));
+                            });
+                            msVahedBindingSource.DataSource = q1;
                         }
                         else
                         {
-                            msVahedBindingSource.DataSource = q2;
+                            msVahedBindingSource.DataSource = q1;
                         }
                     }
                 }
@@ -192,26 +190,24 @@ namespace Hesabdari_TG_N1_V1.Forms
                 try
                 {
                     msShobeBindingSource.DataSource = null;
-                    List<MsShobe> ListShobeha = new List<MsShobe>();
                     int _VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                    var q2 = db.MsShobes.Where(s => s.ShobeIsActive == true && s.MsVahedId == _VahedId).ToList();
-                    var q3 = db.RmsUserhaBmsShobehas.Where(s => s.MsUserId == _UserId).Select(s => s.MsShobeId).ToList();
-                    if (q2.Count > 0)
+                    var q1 = db.MsShobes.Where(s => s.ShobeIsActive == true && s.MsVahedId == _VahedId).ToList();
+                    //var q2 = q1.Select(s=>s.MsShobeId).ToList();
+                    var q3 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.MsUserId == _UserId && s.DoreMaliId == 0 && s.IsActive == true).Select(s => s.ShobeId).ToList();
+                    if (q1.Count > 0)
                     {
                         if (q3.Count > 0)
                         {
-                            foreach (var item2 in q2)
+                            q3.ForEach(item3 =>
                             {
-                                if (!q3.Contains(item2.MsShobeId))
-                                {
-                                    ListShobeha.Add(db.MsShobes.FirstOrDefault(s => s.MsShobeId == item2.MsShobeId));
-                                }
-                            }
-                            msShobeBindingSource.DataSource = ListShobeha;
+                                q1.Remove(db.MsShobes.FirstOrDefault(s => s.MsShobeId == item3));
+
+                            });
+                            msShobeBindingSource.DataSource = q1;
                         }
                         else
                         {
-                            msShobeBindingSource.DataSource = q2;
+                            msShobeBindingSource.DataSource = q1;
                         }
                     }
                 }
@@ -230,26 +226,24 @@ namespace Hesabdari_TG_N1_V1.Forms
                 try
                 {
                     msDoreMaliBindingSource.DataSource = null;
-                    List<MsDoreMali> ListDoreha = new List<MsDoreMali>();
                     int _ShobeId = Convert.ToInt32(cmbShobehaList.EditValue);
-                    var q2 = db.MsDoreMalis.Where(s => s.DoreMaliIsActive == true && s.MsShobeId == _ShobeId).ToList();
-                    var q3 = db.RmsUserhaBmsDorehaiMalis.Where(s => s.MsUserId == _UserId).Select(s => s.MsDoreMaliId).ToList();
-                    if (q2.Count > 0)
+                    var q1 = db.MsDoreMalis.Where(s => s.DoreMaliIsActive == true && s.MsShobeId == _ShobeId).ToList();
+                    //var q2 = q1.Select(s => s.MsDoreMaliId).ToList();
+                    var q3 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.MsUserId == _UserId && s.DoreMaliId > 0 && s.IsActive == true).Select(s => s.DoreMaliId).ToList();
+                    if (q1.Count > 0)
                     {
                         if (q3.Count > 0)
                         {
-                            foreach (var item2 in q2)
+                            q3.ForEach(item3 =>
                             {
-                                if (!q3.Contains(item2.MsDoreMaliId))
-                                {
-                                    ListDoreha.Add(db.MsDoreMalis.FirstOrDefault(s => s.MsDoreMaliId == item2.MsDoreMaliId));
-                                }
-                            }
-                            msDoreMaliBindingSource.DataSource = ListDoreha;
+                                q1.Remove(db.MsDoreMalis.FirstOrDefault(s => s.MsDoreMaliId == item3));
+
+                            });
+                            msDoreMaliBindingSource.DataSource = q1;
                         }
                         else
                         {
-                            msDoreMaliBindingSource.DataSource = q2;
+                            msDoreMaliBindingSource.DataSource = q1;
                         }
                     }
                 }

@@ -53,19 +53,17 @@ namespace DBHesabdari_TG
         public virtual DbSet<ApAnbar> ApAnbars { get; set; }
         public virtual DbSet<MsUser> MsUsers { get; set; }
         public virtual DbSet<MsMajmoe> MsMajmoes { get; set; }
-        public virtual DbSet<RmsUserhaBmsMajmoeha> RmsUserhaBmsMajmoehas { get; set; }
         public virtual DbSet<MsVahed> MsVaheds { get; set; }
-        public virtual DbSet<RmsUserhaBmsVahedha> RmsUserhaBmsVahedhas { get; set; }
         public virtual DbSet<MsShobe> MsShobes { get; set; }
-        public virtual DbSet<RmsUserhaBmsShobeha> RmsUserhaBmsShobehas { get; set; }
         public virtual DbSet<MsInfoOther> MsInfoOthers { get; set; }
         public virtual DbSet<MsDoreMali> MsDoreMalis { get; set; }
-        public virtual DbSet<RmsUserhaBmsDorehaiMali> RmsUserhaBmsDorehaiMalis { get; set; }
-        public virtual DbSet<MsAccessLevel1> MsAccessLevel1s { get; set; }
-        public virtual DbSet<RmsUserhaBmsAccessLevel1ha> RmsUserhaBmsAccessLevel1has { get; set; }
+        public virtual DbSet<MsAccessLevelMenu> MsAccessLevelMenus { get; set; }
+        public virtual DbSet<RmsUserBmsAccessLevelMenu> RmsUserBmsAccessLevelMenus { get; set; }
         public virtual DbSet<MsDefault> MsDefaults { get; set; }
+        public virtual DbSet<MsAccessLevelDafaterMali> MsAccessLevelDafaterMalis { get; set; }
+        public virtual DbSet<RmsUserBmsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
 
-        
+
 
 
         #region
@@ -92,22 +90,18 @@ namespace DBHesabdari_TG
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<MsMajmoe>().HasMany(m => m.MsVaheds).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsMajmoe>().HasMany(m => m.RmsUserhaBmsMajmoehas).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsMajmoehas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<MsVahed>().HasMany(m => m.MsShobes).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsVahed>().HasMany(m => m.RmsUserhaBmsVahedhas).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsVahedhas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<MsShobe>().HasMany(m => m.MsDoreMalis).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<MsShobe>().HasMany(m => m.RmsUserhaBmsShobehas).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsShobehas).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
 
-            modelBuilder.Entity<MsDoreMali>().HasMany(m => m.RmsUserhaBmsDorehaiMalis).WithRequired(m => m.MsDoreMali1).HasForeignKey(m => m.MsDoreMaliId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsDorehaiMalis).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
 
-            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserhaBmsAccessLevel1has).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<MsAccessLevel1>().HasMany(m => m.RmsUserhaBmsAccessLevel1has).WithRequired(m => m.MsAccessLeve11).HasForeignKey(m => m.MsAccessLevel1Id).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserBmsAccessLevelMenus).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsAccessLevelMenu>().HasMany(m => m.RmsUserhaBmsAccessLevelMenuhas).WithRequired(m => m.MsAccessLevelMenu1).HasForeignKey(m => m.MsAccessLevelMenuId).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserBmsAccessLevelDafaterMalis).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsAccessLevelDafaterMali>().HasMany(m => m.RmsUserBmsAccessLevelDafaterMalis).WithRequired(m => m.MsAccessLevelDafaterMali1).HasForeignKey(m => m.MsAccessLevelDafaterMaliId).WillCascadeOnDelete(true);
+
 
 
 
@@ -116,7 +110,6 @@ namespace DBHesabdari_TG
             //modelBuilder.Entity<Student>()
             //     .HasRequired(c => c.Standard)
             //     .WithRequiredPrincipal(f => f.Student);
-
 
 
             //--------> one-to-Many relationships <-------------- 
@@ -131,6 +124,7 @@ namespace DBHesabdari_TG
             //    .WithRequired(c => c.Standard)
             //    .HasForeignKey(c => c.StandardId)
             //    .WillCascadeOnDelete();
+
             //--------> Many-to-Many relationships <------------------
             //}
             //protected override void OnModelCreating(DbModelBuilder modelBuilder)

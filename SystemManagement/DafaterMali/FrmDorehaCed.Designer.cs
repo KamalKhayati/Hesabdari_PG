@@ -232,6 +232,7 @@
             this.chkDoreIsClose.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkDoreIsClose.Size = new System.Drawing.Size(163, 33);
             this.chkDoreIsClose.TabIndex = 10;
+            this.chkDoreIsClose.Visible = false;
             // 
             // txtEndDore
             // 
@@ -325,6 +326,7 @@
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(54, 33);
             this.chkIsActive.TabIndex = 8;
+            this.chkIsActive.Visible = false;
             // 
             // cmbShobeList
             // 
