@@ -62,7 +62,10 @@ namespace DBHesabdari_TG
         public virtual DbSet<MsDefault> MsDefaults { get; set; }
         public virtual DbSet<MsAccessLevelDafaterMali> MsAccessLevelDafaterMalis { get; set; }
         public virtual DbSet<RmsUserBmsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
-
+        public virtual DbSet<EpHesabGroup> EpHesabGroups { get; set; }
+        public virtual DbSet<EpAccessLevelCodingHesabdari> EpAccessLevelCodingHesabdaris { get; set; }
+        public virtual DbSet<RmsUserBepAccessLevelCodingHesabdari> RmsUserBepAccessLevelCodingHesabdaris { get; set; }
+        public virtual DbSet<EpHesabCol> EpHesabCols { get; set; }
 
 
 
@@ -102,8 +105,12 @@ namespace DBHesabdari_TG
             modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserBmsAccessLevelDafaterMalis).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
             modelBuilder.Entity<MsAccessLevelDafaterMali>().HasMany(m => m.RmsUserBmsAccessLevelDafaterMalis).WithRequired(m => m.MsAccessLevelDafaterMali1).HasForeignKey(m => m.MsAccessLevelDafaterMaliId).WillCascadeOnDelete(true);
 
+            modelBuilder.Entity<MsUser>().HasOptional(m => m.MsDefault1).WithRequired(m => m.MsUser1).WillCascadeOnDelete(true);
 
+            modelBuilder.Entity<MsUser>().HasMany(m => m.RmsUserBepAccessLevelCodingHesabdaris).WithRequired(m => m.MsUser1).HasForeignKey(m => m.UserId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpAccessLevelCodingHesabdari>().HasMany(m => m.RmsUserBepAccessLevelCodingHesabdaris).WithRequired(m => m.EpAccessLevelCodingHesabdari1).HasForeignKey(m => m.CodingHesabdariId).WillCascadeOnDelete(true);
 
+            modelBuilder.Entity<EpHesabGroup>().HasMany(m => m.EpHesabCols).WithRequired(m => m.EpHesabGroup1).HasForeignKey(m => m.GroupId).WillCascadeOnDelete(false);
 
             #region
             //--------> one - to - zero - or - one relationships < ------------

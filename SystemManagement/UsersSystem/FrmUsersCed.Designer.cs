@@ -1,4 +1,4 @@
-﻿namespace SystemManagement.UsersSystem
+﻿namespace EtelaatePaye.UsersSystem
 {
     partial class FrmUsersCed
     {

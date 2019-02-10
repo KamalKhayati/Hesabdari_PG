@@ -1,4 +1,4 @@
-﻿namespace SystemManagement.DafaterMali
+﻿namespace EtelaatePaye.DafaterMali
 {
     partial class FrmMajmoehaList
     {

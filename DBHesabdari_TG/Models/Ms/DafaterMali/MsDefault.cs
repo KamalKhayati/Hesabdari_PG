@@ -19,17 +19,18 @@ namespace DBHesabdari_TG
 {
    public class MsDefault
     {
-        public int Id { get; set; }
-
+        [Key]
         public int MsUserId { get; set; }
 
-        public int MsMajmoeId { get; set; }
+        public int MajmoeId { get; set; }
 
-        public int MsVahedId { get; set; }
+        public int VahedId { get; set; }
 
-        public int MsShobeId { get; set; }
+        public int ShobeId { get; set; }
 
-        public int MsDoreMaliId { get; set; }
+        public int DoreMaliId { get; set; }
+
+        public virtual MsUser MsUser1 { get; set; }
 
     }
 }

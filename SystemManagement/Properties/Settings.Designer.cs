@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SystemManagement.Properties {
+namespace EtelaatePaye.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

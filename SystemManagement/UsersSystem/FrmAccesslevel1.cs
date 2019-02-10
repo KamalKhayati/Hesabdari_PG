@@ -22,7 +22,7 @@ using DevExpress.XtraTreeList;
 using DBHesabdari_TG;
 using DevExpress.XtraBars;
 
-namespace SystemManagement.UsersSystem
+namespace EtelaatePaye.UsersSystem
 {
     public partial class FrmAccesslevel1 : DevExpress.XtraEditors.XtraForm
     {
@@ -215,9 +215,9 @@ namespace SystemManagement.UsersSystem
                     var q1 = db.RmsUserBmsAccessLevelMenus.Where(s => s.MsUserId == _UserId).ToList();
                     if (q1.Count() > 0)
                     {
-                        //btnCreate.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55331) ? BarItemVisibility.Always : BarItemVisibility.Never;
-                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55332) ? BarItemVisibility.Always : BarItemVisibility.Never;
-                        //btnDelete.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55333) ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        //btnCreate.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55331) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550302011) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        //btnDelete.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55333) ? BarItemVisibility.Never : BarItemVisibility.Always;
                     }
                 }
                 catch (Exception ex)
@@ -326,6 +326,283 @@ namespace SystemManagement.UsersSystem
         private void btnListPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             treeList1.Print();
+
+        }
+
+        private void treeList1_AfterCheckNode(object sender, NodeEventArgs e)
+        {
+            int a = Convert.ToInt32(e.Node.GetValue(MsAccessLevelMenuId));
+            if (a > 0)
+            {
+                if (a.ToString().Length == 2)
+                {
+                    if (treeList1.FindNodeByKeyID(a).CheckState == CheckState.Checked)
+                    {
+                        treeList1.GetNodeList().ForEach(item =>
+                        {
+                            if (Convert.ToInt32(item[MsAccessLevelMenuId]) > a)
+                            {
+                                if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                }
+                            }
+                        });
+                    }
+                    else
+                    {
+                        treeList1.GetNodeList().ForEach(item =>
+                        {
+                            if (Convert.ToInt32(item[MsAccessLevelMenuId]) > a)
+                            {
+                                if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                                }
+                            }
+                        });
+                    }
+                }
+                else if (a.ToString().Length == 4)
+                {
+                    if (treeList1.FindNodeByKeyID(a).CheckState == CheckState.Checked)
+                    {
+                        treeList1.GetNodeList().ForEach(item =>
+                        {
+                            if (Convert.ToInt32(item[MsAccessLevelMenuId]) > a)
+                            {
+                                if (a.ToString().Substring(0, 4) == item[MsAccessLevelMenuId].ToString().Substring(0, 4))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                }
+                            }
+                            else
+                            {
+                                if (item[MsAccessLevelMenuId].ToString().Length == 2)
+                                {
+                                    if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                                    {
+                                        var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                        treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    else
+                    {
+                        treeList1.GetNodeList().ForEach(item =>
+                        {
+                            if (Convert.ToInt32(item[MsAccessLevelMenuId]) > a)
+                            {
+                                if (a.ToString().Substring(0, 4) == item[MsAccessLevelMenuId].ToString().Substring(0, 4))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                                }
+                            }
+                            //else
+                            //{
+                            //    if (item[MsAccessLevelMenuId].ToString().Length == 2)
+                            //    {
+                            //        if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                            //        {
+                            //            var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                            //            treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                            //        }
+                            //    }
+                            //}
+
+                        });
+                    }
+                }
+                else if (a.ToString().Length == 6)
+                {
+                    if (treeList1.FindNodeByKeyID(a).CheckState == CheckState.Checked)
+                    {
+                        treeList1.GetNodeList().ForEach(item =>
+                        {
+                            if (Convert.ToInt32(item[MsAccessLevelMenuId]) > a)
+                            {
+                                if (a.ToString().Substring(0, 6) == item[MsAccessLevelMenuId].ToString().Substring(0, 6))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                }
+                            }
+                            else
+                            {
+                                if (item[MsAccessLevelMenuId].ToString().Length == 4)
+                                {
+                                    if (a.ToString().Substring(0, 4) == item[MsAccessLevelMenuId].ToString().Substring(0, 4))
+                                    {
+                                        var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                        treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                    }
+                                }
+                                else if (item[MsAccessLevelMenuId].ToString().Length == 2)
+                                {
+                                    if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                                    {
+                                        var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                        treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    else
+                    {
+                        treeList1.GetNodeList().ForEach(item =>
+                        {
+                            if (Convert.ToInt32(item[MsAccessLevelMenuId]) > a)
+                            {
+                                if (a.ToString().Substring(0, 6) == item[MsAccessLevelMenuId].ToString().Substring(0, 6))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                                }
+                            }
+                            //else
+                            //{
+                            //    if (item[MsAccessLevelMenuId].ToString().Length == 4)
+                            //    {
+                            //        if (a.ToString().Substring(0, 4) == item[MsAccessLevelMenuId].ToString().Substring(0, 4))
+                            //        {
+                            //            var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                            //            treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                            //        }
+                            //    }
+                            //    else if (item[MsAccessLevelMenuId].ToString().Length == 2)
+                            //    {
+                            //        if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                            //        {
+                            //            var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                            //            treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                            //        }
+                            //    }
+                            //}
+                        });
+                    }
+                }
+                else if (a.ToString().Length == 8)
+                {
+                    if (treeList1.FindNodeByKeyID(a).CheckState == CheckState.Checked)
+                    {
+                        treeList1.GetNodeList().ForEach(item =>
+                        {
+                            if (Convert.ToInt32(item[MsAccessLevelMenuId]) > a)
+                            {
+                                if (a.ToString().Substring(0, 8) == item[MsAccessLevelMenuId].ToString().Substring(0, 8))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                }
+                            }
+                            else if (item[MsAccessLevelMenuId].ToString().Length == 6)
+                            {
+                                if (a.ToString().Substring(0, 6) == item[MsAccessLevelMenuId].ToString().Substring(0, 6))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                }
+                            }
+                            else if (item[MsAccessLevelMenuId].ToString().Length == 4)
+                            {
+                                if (a.ToString().Substring(0, 4) == item[MsAccessLevelMenuId].ToString().Substring(0, 4))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                }
+                            }
+                            else if (item[MsAccessLevelMenuId].ToString().Length == 2)
+                            {
+                                if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                                {
+                                    var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                    treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                                }
+                            }
+                        });
+                    }
+                    #region
+                    //else
+                    //{
+                    //    treeList1.GetNodeList().ForEach(item =>
+                    //    {
+                    //        if (item[MsAccessLevelMenuId].ToString().Length == 6)
+                    //        {
+                    //            if (a.ToString().Substring(0, 6) == item[MsAccessLevelMenuId].ToString().Substring(0, 6))
+                    //            {
+                    //                var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                    //                treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                    //            }
+                    //        }
+                    //        else if (item[MsAccessLevelMenuId].ToString().Length == 4)
+                    //        {
+                    //            if (a.ToString().Substring(0, 4) == item[MsAccessLevelMenuId].ToString().Substring(0, 4))
+                    //            {
+                    //                var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                    //                treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                    //            }
+                    //        }
+                    //        else if (item[MsAccessLevelMenuId].ToString().Length == 2)
+                    //        {
+                    //            if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                    //            {
+                    //                var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                    //                treeList1.SetNodeCheckState(node1, CheckState.Unchecked, false);
+                    //            }
+                    //        }
+                    //    });
+
+                    //}
+                    #endregion
+
+                }
+                else
+                {
+                    treeList1.GetNodeList().ForEach(item =>
+                    {
+                        if (item[MsAccessLevelMenuId].ToString().Length == 8)
+                        {
+                            if (a.ToString().Substring(0, 8) == item[MsAccessLevelMenuId].ToString().Substring(0, 8))
+                            {
+                                var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                            }
+                        }
+                        else if (item[MsAccessLevelMenuId].ToString().Length == 6)
+                        {
+                            if (a.ToString().Substring(0, 6) == item[MsAccessLevelMenuId].ToString().Substring(0, 6))
+                            {
+                                var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                            }
+                        }
+                        else if (item[MsAccessLevelMenuId].ToString().Length == 4)
+                        {
+                            if (a.ToString().Substring(0, 4) == item[MsAccessLevelMenuId].ToString().Substring(0, 4))
+                            {
+                                var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                            }
+                        }
+                        else if (item[MsAccessLevelMenuId].ToString().Length == 2)
+                        {
+                            if (a.ToString().Substring(0, 2) == item[MsAccessLevelMenuId].ToString().Substring(0, 2))
+                            {
+                                var node1 = treeList1.FindNodeByKeyID(item[MsAccessLevelMenuId]);
+                                treeList1.SetNodeCheckState(node1, CheckState.Checked, false);
+                            }
+                        }
+                    });
+
+                }
+            }
 
         }
     }

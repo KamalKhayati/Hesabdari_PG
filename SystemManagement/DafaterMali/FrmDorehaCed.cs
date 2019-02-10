@@ -22,7 +22,7 @@ using HelpClassLibrary;
 using System.Data.Entity;
 using System.Globalization;
 
-namespace SystemManagement.DafaterMali
+namespace EtelaatePaye.DafaterMali
 {
     public partial class FrmDorehaCed : DevExpress.XtraEditors.XtraForm
     {

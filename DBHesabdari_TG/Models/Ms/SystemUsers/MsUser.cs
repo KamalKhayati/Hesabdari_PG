@@ -31,8 +31,34 @@ namespace DBHesabdari_TG
         public string Password { get; set; }
         [Required]
         public bool UserIsActive { get; set; }
+
+        public virtual MsDefault MsDefault1 { get; set; }
         public virtual ICollection<RmsUserBmsAccessLevelMenu> RmsUserBmsAccessLevelMenus { get; set; }
         public virtual ICollection<RmsUserBmsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
+        public virtual ICollection<RmsUserBepAccessLevelCodingHesabdari> RmsUserBepAccessLevelCodingHesabdaris { get; set; }
+    }
+
+    public class RmsUserBepAccessLevelCodingHesabdari
+    {
+        [Key]
+        [Column(Order = 0)]
+        public int UserId { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        public int CodingHesabdariId { get; set; }
+        [Column(Order = 2)]
+        public int KeyId { get; set; }
+        [Column(Order = 3)]
+        public int HesabGroupId { get; set; }
+        [Column(Order = 4)]
+        public int HesabColId { get; set; }
+        [Column(Order = 5)]
+        public int HesabMoinId { get; set; }
+        [Column(Order = 6)]
+        public bool IsActive { get; set; }
+
+        public virtual MsUser MsUser1 { get; set; }
+        public virtual EpAccessLevelCodingHesabdari EpAccessLevelCodingHesabdari1 { get; set; }
     }
 
     public class RmsUserBmsAccessLevelMenu

@@ -69,5 +69,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBHesabdari_TG\DBHesabdari_TG.csproj">
+      <Project>{A8821623-3D7B-4298-AAAE-C6AD5E96CA5E}</Project>
+      <Name>DBHesabdari_TG</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

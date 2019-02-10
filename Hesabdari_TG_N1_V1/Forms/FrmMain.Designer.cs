@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -69,18 +68,18 @@
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
-            this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
+            this.mbsCodingHesabdari = new DevExpress.XtraBars.BarSubItem();
             this.btnHesabGroup = new DevExpress.XtraBars.BarButtonItem();
             this.btnHesabCol = new DevExpress.XtraBars.BarButtonItem();
             this.btnHesabMoeen = new DevExpress.XtraBars.BarButtonItem();
             this.btnHesabTafzili = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupTafzili = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
+            this.mbsCodingAnbarVaKala = new DevExpress.XtraBars.BarSubItem();
             this.btnListAnbarha = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGroupAsli = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGroupFaree = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNameKala = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVahedKala = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
@@ -122,17 +121,17 @@
             this.btnListDorehaiMali = new DevExpress.XtraBars.BarButtonItem();
             this.cmbMajmoehaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msMajmoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msMajmoeBindingSource = new System.Windows.Forms.BindingSource();
             this.cmbVahedhaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msVahedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msVahedBindingSource = new System.Windows.Forms.BindingSource();
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.cmbShobehaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msShobeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msShobeBindingSource = new System.Windows.Forms.BindingSource();
             this.cmbDoreMalihaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msDoreMaliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msDoreMaliBindingSource = new System.Windows.Forms.BindingSource();
             this.chkDefault = new DevExpress.XtraBars.BarCheckItem();
             this.txtUserName = new DevExpress.XtraBars.BarStaticItem();
             this.txtUserId = new DevExpress.XtraBars.BarStaticItem();
@@ -162,12 +161,11 @@
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.Ap = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgTarifCoding = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Ms = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgOperationDafaterVaDoreMali = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgUsers = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -186,11 +184,11 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -261,18 +259,18 @@
             this.barButtonItem13,
             this.barSubItem3,
             this.barSubItem4,
-            this.barSubItem5,
+            this.mbsCodingHesabdari,
             this.btnHesabGroup,
             this.btnHesabCol,
             this.btnHesabMoeen,
             this.btnHesabTafzili,
             this.btnGroupTafzili,
-            this.barSubItem6,
+            this.mbsCodingAnbarVaKala,
             this.btnListAnbarha,
-            this.barButtonItem20,
-            this.barButtonItem21,
-            this.barButtonItem22,
-            this.barButtonItem23,
+            this.btnGroupAsli,
+            this.btnGroupFaree,
+            this.btnNameKala,
+            this.btnVahedKala,
             this.barButtonItem24,
             this.barSubItem7,
             this.barButtonItem25,
@@ -333,7 +331,7 @@
             this.rpAsnadeHesabdari,
             this.ribbonPage1,
             this.ribbonPage2,
-            this.ribbonPage3,
+            this.Ap,
             this.Ms,
             this.ribbonPage5,
             this.ribbonPage6,
@@ -645,31 +643,33 @@
             this.barSubItem4.Name = "barSubItem4";
             this.barSubItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barSubItem5
+            // mbsCodingHesabdari
             // 
-            this.barSubItem5.Caption = "کدینگ حسابداری";
-            this.barSubItem5.Id = 51;
-            this.barSubItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem5.ImageOptions.SvgImage")));
-            this.barSubItem5.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.mbsCodingHesabdari.Caption = "کدینگ حسابداری";
+            this.mbsCodingHesabdari.Id = 51;
+            this.mbsCodingHesabdari.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mbsCodingHesabdari.ImageOptions.SvgImage")));
+            this.mbsCodingHesabdari.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabGroup),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabCol),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabMoeen),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabTafzili),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupTafzili)});
-            this.barSubItem5.Name = "barSubItem5";
-            this.barSubItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.mbsCodingHesabdari.Name = "mbsCodingHesabdari";
+            this.mbsCodingHesabdari.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnHesabGroup
             // 
             this.btnHesabGroup.Caption = "حسابهای گروه";
             this.btnHesabGroup.Id = 52;
             this.btnHesabGroup.Name = "btnHesabGroup";
+            this.btnHesabGroup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabGroup_ItemClick);
             // 
             // btnHesabCol
             // 
             this.btnHesabCol.Caption = "حسابهای کل";
             this.btnHesabCol.Id = 53;
             this.btnHesabCol.Name = "btnHesabCol";
+            this.btnHesabCol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabCol_ItemClick);
             // 
             // btnHesabMoeen
             // 
@@ -689,19 +689,19 @@
             this.btnGroupTafzili.Id = 56;
             this.btnGroupTafzili.Name = "btnGroupTafzili";
             // 
-            // barSubItem6
+            // mbsCodingAnbarVaKala
             // 
-            this.barSubItem6.Caption = "کدینک انبار و کالا";
-            this.barSubItem6.Id = 57;
-            this.barSubItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem6.ImageOptions.Image")));
-            this.barSubItem6.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.mbsCodingAnbarVaKala.Caption = "کدینک انبار و کالا";
+            this.mbsCodingAnbarVaKala.Id = 57;
+            this.mbsCodingAnbarVaKala.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mbsCodingAnbarVaKala.ImageOptions.Image")));
+            this.mbsCodingAnbarVaKala.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnListAnbarha),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem22),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem23)});
-            this.barSubItem6.Name = "barSubItem6";
-            this.barSubItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupAsli),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupFaree),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnNameKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnVahedKala)});
+            this.mbsCodingAnbarVaKala.Name = "mbsCodingAnbarVaKala";
+            this.mbsCodingAnbarVaKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnListAnbarha
             // 
@@ -710,29 +710,29 @@
             this.btnListAnbarha.Name = "btnListAnbarha";
             this.btnListAnbarha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAnbarha_ItemClick);
             // 
-            // barButtonItem20
+            // btnGroupAsli
             // 
-            this.barButtonItem20.Caption = "گروه اصلی کالاها";
-            this.barButtonItem20.Id = 59;
-            this.barButtonItem20.Name = "barButtonItem20";
+            this.btnGroupAsli.Caption = "گروه اصلی کالاها";
+            this.btnGroupAsli.Id = 59;
+            this.btnGroupAsli.Name = "btnGroupAsli";
             // 
-            // barButtonItem21
+            // btnGroupFaree
             // 
-            this.barButtonItem21.Caption = "گروه فرعی کالاها";
-            this.barButtonItem21.Id = 60;
-            this.barButtonItem21.Name = "barButtonItem21";
+            this.btnGroupFaree.Caption = "گروه فرعی کالاها";
+            this.btnGroupFaree.Id = 60;
+            this.btnGroupFaree.Name = "btnGroupFaree";
             // 
-            // barButtonItem22
+            // btnNameKala
             // 
-            this.barButtonItem22.Caption = "نام کالاها";
-            this.barButtonItem22.Id = 61;
-            this.barButtonItem22.Name = "barButtonItem22";
+            this.btnNameKala.Caption = "نام کالاها";
+            this.btnNameKala.Id = 61;
+            this.btnNameKala.Name = "btnNameKala";
             // 
-            // barButtonItem23
+            // btnVahedKala
             // 
-            this.barButtonItem23.Caption = "واحد کالاها";
-            this.barButtonItem23.Id = 62;
-            this.barButtonItem23.Name = "barButtonItem23";
+            this.btnVahedKala.Caption = "واحد کالاها";
+            this.btnVahedKala.Id = 62;
+            this.btnVahedKala.Name = "btnVahedKala";
             // 
             // barButtonItem24
             // 
@@ -994,7 +994,7 @@
             // 
             // mbsListDafaterMali
             // 
-            this.mbsListDafaterMali.Caption = "لیست دفاتر مالی";
+            this.mbsListDafaterMali.Caption = "عملیات دفاتر مالی";
             this.mbsListDafaterMali.Id = 104;
             this.mbsListDafaterMali.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mbsListDafaterMali.ImageOptions.SvgImage")));
             this.mbsListDafaterMali.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -1384,35 +1384,34 @@
             this.ribbonPage2.Text = "گزارشات";
             this.ribbonPage2.Visible = false;
             // 
-            // ribbonPage3
+            // Ap
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "اطلاعات پایه";
+            this.Ap.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgTarifCoding});
+            this.Ap.Name = "Ap";
+            this.Ap.Text = "اطلاعات پایه";
             // 
-            // ribbonPageGroup4
+            // rpgTarifCoding
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barSubItem5);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barSubItem6, true);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "تعاریف";
+            this.rpgTarifCoding.ItemLinks.Add(this.mbsCodingHesabdari);
+            this.rpgTarifCoding.ItemLinks.Add(this.mbsCodingAnbarVaKala, true);
+            this.rpgTarifCoding.Name = "rpgTarifCoding";
+            this.rpgTarifCoding.Text = " تعریف کدینگ";
             // 
             // Ms
             // 
             this.Ms.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgOperationDafaterVaDoreMali,
-            this.rpgUsers,
-            this.ribbonPageGroup13});
+            this.rpgUsers});
             this.Ms.Name = "Ms";
             this.Ms.Text = "مدیریت سیستم";
             // 
             // rpgOperationDafaterVaDoreMali
             // 
             this.rpgOperationDafaterVaDoreMali.ItemLinks.Add(this.mbsListDafaterMali, true, "2");
-            this.rpgOperationDafaterVaDoreMali.ItemLinks.Add(this.mbsOperationDoreMali, "3");
+            this.rpgOperationDafaterVaDoreMali.ItemLinks.Add(this.mbsOperationDoreMali, true, "3");
             this.rpgOperationDafaterVaDoreMali.Name = "rpgOperationDafaterVaDoreMali";
-            this.rpgOperationDafaterVaDoreMali.Text = "عملیات دفتر و سال مالی";
+            this.rpgOperationDafaterVaDoreMali.Text = "تعریف دفتر و سال مالی";
             // 
             // rpgUsers
             // 
@@ -1420,12 +1419,6 @@
             this.rpgUsers.Name = "rpgUsers";
             this.rpgUsers.ShowCaptionButton = false;
             this.rpgUsers.Text = "کاربران ";
-            // 
-            // ribbonPageGroup13
-            // 
-            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.Text = "عملیات پیاده سازی سیستم";
-            this.ribbonPageGroup13.Visible = false;
             // 
             // ribbonPage5
             // 
@@ -1708,8 +1701,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage Ap;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgTarifCoding;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgUsers;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
@@ -1727,19 +1720,19 @@
         private DevExpress.XtraBars.BarSubItem barSubItem4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
-        private DevExpress.XtraBars.BarSubItem barSubItem5;
+        private DevExpress.XtraBars.BarSubItem mbsCodingHesabdari;
         private DevExpress.XtraBars.BarButtonItem btnHesabGroup;
         private DevExpress.XtraBars.BarButtonItem btnHesabCol;
         private DevExpress.XtraBars.BarButtonItem btnHesabMoeen;
         private DevExpress.XtraBars.BarButtonItem btnHesabTafzili;
         private DevExpress.XtraBars.BarButtonItem btnGroupTafzili;
-        private DevExpress.XtraBars.BarSubItem barSubItem6;
+        private DevExpress.XtraBars.BarSubItem mbsCodingAnbarVaKala;
         private DevExpress.XtraBars.BarButtonItem btnListAnbarha;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+        private DevExpress.XtraBars.BarButtonItem btnGroupAsli;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
+        private DevExpress.XtraBars.BarButtonItem btnGroupFaree;
+        private DevExpress.XtraBars.BarButtonItem btnNameKala;
+        private DevExpress.XtraBars.BarButtonItem btnVahedKala;
         private DevExpress.XtraBars.BarSubItem barSubItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
@@ -1747,7 +1740,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem28;
         private DevExpress.XtraBars.BarButtonItem barButtonItem29;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgOperationDafaterVaDoreMali;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
         private DevExpress.XtraBars.BarSubItem mbsSystemUsers;
         private DevExpress.XtraBars.BarSubItem mbsOperationDoreMali;

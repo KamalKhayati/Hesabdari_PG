@@ -74,7 +74,7 @@ namespace Hesabdari_TG_N1_V1.Forms
                                           "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
-                        else 
+                        else
                         {
 
                             XtraMessageBox.Show("لطفاً شناسه کاربری و رمز عبور جدید را وارد کنید",
@@ -99,92 +99,112 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
-            using (var db = new MyContext())
+            if (!string.IsNullOrEmpty(txtPassword.Text))
             {
-                try
+                using (var db = new MyContext())
                 {
-                    var q = db.MsUsers.FirstOrDefault(s => s.MsUserId == _UserId);
-                    if (q != null)
+                    try
                     {
-                        if (q.Name == txtName.Text && q.Password == txtPassword.Text)
+                        var q = db.MsUsers.FirstOrDefault(s => s.MsUserId == _UserId);
+                        if (q != null)
                         {
-                            txtName.ReadOnly = true;
-                            txtPassword.ReadOnly = true;
-                            panelControl3.Enabled = true;
-                            txtNewName.Focus();
+                            if (q.Name == txtName.Text && q.Password == txtPassword.Text)
+                            {
+                                txtName.ReadOnly = true;
+                                txtPassword.ReadOnly = true;
+                                panelControl3.Enabled = true;
+                                txtNewName.Focus();
+                            }
+                            else
+                            {
+                                XtraMessageBox.Show("رمز عبور فعلی اشتباه است",
+                                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtPassword.Text = "";
+                                txtPassword.Focus();
+                            }
                         }
                         else
-                        {
-                            XtraMessageBox.Show("رمز عبور فعلی اشتباه است",
+                            XtraMessageBox.Show("کاربر جاری در بانک اطلاعاتی یافت نشد",
                                 "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            txtPassword.Text = "";
-                            txtPassword.Focus();
-                        }
                     }
-                    else
-                        XtraMessageBox.Show("کاربر جاری در بانک اطلاعاتی یافت نشد",
-                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
             }
 
         }
 
         private void txtNewName_EditValueChanged(object sender, EventArgs e)
         {
-            btnSaveClose.Enabled = true;
         }
 
         private void txtNewName_Leave(object sender, EventArgs e)
         {
-            using (var db = new MyContext())
+            if (!string.IsNullOrEmpty(txtNewName.Text))
             {
-                try
+                using (var db = new MyContext())
                 {
-                    int RowId = Convert.ToInt32(lblUserId.Text);
-                    var q3 = db.MsUsers.Where(p => p.MsUserId != RowId && p.Name == txtNewName.Text);
-                    if (q3.Any())
+                    try
                     {
-                        XtraMessageBox.Show("این شناسه کاربری قبلاً استفاده شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        //txtName.Text = nameBeforeEdit;
-                        txtNewName.Text="";
-                        txtNewName.Focus();
+                        int RowId = Convert.ToInt32(lblUserId.Text);
+                        var q3 = db.MsUsers.Where(p => p.MsUserId != RowId && p.Name == txtNewName.Text);
+                        if (q3.Any())
+                        {
+                            XtraMessageBox.Show("این شناسه کاربری قبلاً استفاده شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //txtName.Text = nameBeforeEdit;
+                            txtNewName.Text = "";
+                            txtNewName.Focus();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
-
         }
 
         private void txtName_Leave(object sender, EventArgs e)
         {
-            using (var db = new MyContext())
+            if (!string.IsNullOrEmpty(txtName.Text))
             {
-                try
+                using (var db = new MyContext())
                 {
-                    string _Name = txtName.Text;
-                    var q = db.MsUsers.FirstOrDefault(f =>f.MsUserId==_UserId && f.Name == _Name);
-                    if (q == null)
+                    try
                     {
-                        XtraMessageBox.Show("شناسه کاربری فعلی اشتباه است",
-                                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtName.Text = "";
-                        txtName.Focus();
+                        string _Name = txtName.Text;
+                        var q = db.MsUsers.FirstOrDefault(f => f.MsUserId == _UserId && f.Name == _Name);
+                        if (q == null)
+                        {
+                            XtraMessageBox.Show("شناسه کاربری فعلی اشتباه است",
+                                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtName.Text = "";
+                            txtName.Focus();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+        }
+
+        private void txtNewPassword_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtNewName.Text))
+            {
+                btnSaveClose.Enabled = true;
+            }
+            else
+            {
+                btnSaveClose.Enabled = false;
             }
 
         }

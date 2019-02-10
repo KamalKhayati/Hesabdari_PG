@@ -1,4 +1,4 @@
-﻿namespace SystemManagement.DafaterMali
+﻿namespace EtelaatePaye.DafaterMali
 {
     partial class FrmVahedhaCed
     {
@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVahedhaCed));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnCreateClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreateNext = new DevExpress.XtraEditors.SimpleButton();
-            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource();
+            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.chkEditCode = new DevExpress.XtraEditors.CheckEdit();
             this.chkSpecificationOther = new DevExpress.XtraEditors.CheckEdit();
@@ -446,7 +447,7 @@
             this.txtShomarePlak.EnterMoveNextControl = true;
             this.txtShomarePlak.Location = new System.Drawing.Point(337, 120);
             this.txtShomarePlak.Name = "txtShomarePlak";
-            this.txtShomarePlak.Properties.MaxLength = 50;
+            this.txtShomarePlak.Properties.MaxLength = 10;
             this.txtShomarePlak.Size = new System.Drawing.Size(234, 32);
             this.txtShomarePlak.TabIndex = 6;
             // 
@@ -456,7 +457,7 @@
             this.txtCodeEghtesadi.EnterMoveNextControl = true;
             this.txtCodeEghtesadi.Location = new System.Drawing.Point(7, 196);
             this.txtCodeEghtesadi.Name = "txtCodeEghtesadi";
-            this.txtCodeEghtesadi.Properties.MaxLength = 50;
+            this.txtCodeEghtesadi.Properties.MaxLength = 12;
             this.txtCodeEghtesadi.Size = new System.Drawing.Size(234, 32);
             this.txtCodeEghtesadi.TabIndex = 11;
             // 
@@ -465,7 +466,7 @@
             this.txtTell1.EnterMoveNextControl = true;
             this.txtTell1.Location = new System.Drawing.Point(337, 234);
             this.txtTell1.Name = "txtTell1";
-            this.txtTell1.Properties.MaxLength = 50;
+            this.txtTell1.Properties.MaxLength = 25;
             this.txtTell1.Size = new System.Drawing.Size(234, 32);
             this.txtTell1.TabIndex = 12;
             // 
@@ -474,7 +475,7 @@
             this.txtTell2.EnterMoveNextControl = true;
             this.txtTell2.Location = new System.Drawing.Point(7, 234);
             this.txtTell2.Name = "txtTell2";
-            this.txtTell2.Properties.MaxLength = 50;
+            this.txtTell2.Properties.MaxLength = 25;
             this.txtTell2.Size = new System.Drawing.Size(234, 32);
             this.txtTell2.TabIndex = 13;
             // 
@@ -542,7 +543,7 @@
             this.txtMobile2.EnterMoveNextControl = true;
             this.txtMobile2.Location = new System.Drawing.Point(7, 310);
             this.txtMobile2.Name = "txtMobile2";
-            this.txtMobile2.Properties.MaxLength = 50;
+            this.txtMobile2.Properties.MaxLength = 25;
             this.txtMobile2.Size = new System.Drawing.Size(234, 32);
             this.txtMobile2.TabIndex = 17;
             // 
@@ -551,7 +552,7 @@
             this.txtTellFax2.EnterMoveNextControl = true;
             this.txtTellFax2.Location = new System.Drawing.Point(7, 272);
             this.txtTellFax2.Name = "txtTellFax2";
-            this.txtTellFax2.Properties.MaxLength = 50;
+            this.txtTellFax2.Properties.MaxLength = 25;
             this.txtTellFax2.Size = new System.Drawing.Size(234, 32);
             this.txtTellFax2.TabIndex = 15;
             // 
@@ -685,7 +686,7 @@
             this.txtMobile1.EnterMoveNextControl = true;
             this.txtMobile1.Location = new System.Drawing.Point(337, 310);
             this.txtMobile1.Name = "txtMobile1";
-            this.txtMobile1.Properties.MaxLength = 50;
+            this.txtMobile1.Properties.MaxLength = 25;
             this.txtMobile1.Size = new System.Drawing.Size(234, 32);
             this.txtMobile1.TabIndex = 16;
             // 
@@ -702,7 +703,7 @@
             this.txtTellFax1.EnterMoveNextControl = true;
             this.txtTellFax1.Location = new System.Drawing.Point(337, 272);
             this.txtTellFax1.Name = "txtTellFax1";
-            this.txtTellFax1.Properties.MaxLength = 50;
+            this.txtTellFax1.Properties.MaxLength = 25;
             this.txtTellFax1.Size = new System.Drawing.Size(234, 32);
             this.txtTellFax1.TabIndex = 14;
             // 
@@ -720,7 +721,7 @@
             this.txtShomareSabt.EnterMoveNextControl = true;
             this.txtShomareSabt.Location = new System.Drawing.Point(7, 120);
             this.txtShomareSabt.Name = "txtShomareSabt";
-            this.txtShomareSabt.Properties.MaxLength = 50;
+            this.txtShomareSabt.Properties.MaxLength = 10;
             this.txtShomareSabt.Size = new System.Drawing.Size(234, 32);
             this.txtShomareSabt.TabIndex = 7;
             // 
@@ -737,7 +738,7 @@
             this.txtCodeSenfee.EnterMoveNextControl = true;
             this.txtCodeSenfee.Location = new System.Drawing.Point(337, 196);
             this.txtCodeSenfee.Name = "txtCodeSenfee";
-            this.txtCodeSenfee.Properties.MaxLength = 50;
+            this.txtCodeSenfee.Properties.MaxLength = 12;
             this.txtCodeSenfee.Size = new System.Drawing.Size(234, 32);
             this.txtCodeSenfee.TabIndex = 10;
             // 
@@ -755,7 +756,7 @@
             this.txtShenaseMelli.EnterMoveNextControl = true;
             this.txtShenaseMelli.Location = new System.Drawing.Point(7, 158);
             this.txtShenaseMelli.Name = "txtShenaseMelli";
-            this.txtShenaseMelli.Properties.MaxLength = 50;
+            this.txtShenaseMelli.Properties.MaxLength = 11;
             this.txtShenaseMelli.Size = new System.Drawing.Size(234, 32);
             this.txtShenaseMelli.TabIndex = 9;
             // 
@@ -772,7 +773,7 @@
             this.txtCodeMelli.EnterMoveNextControl = true;
             this.txtCodeMelli.Location = new System.Drawing.Point(337, 158);
             this.txtCodeMelli.Name = "txtCodeMelli";
-            this.txtCodeMelli.Properties.MaxLength = 50;
+            this.txtCodeMelli.Properties.MaxLength = 10;
             this.txtCodeMelli.Size = new System.Drawing.Size(234, 32);
             this.txtCodeMelli.TabIndex = 8;
             // 
@@ -789,7 +790,7 @@
             this.txtCodePosti.EnterMoveNextControl = true;
             this.txtCodePosti.Location = new System.Drawing.Point(337, 82);
             this.txtCodePosti.Name = "txtCodePosti";
-            this.txtCodePosti.Properties.MaxLength = 50;
+            this.txtCodePosti.Properties.MaxLength = 15;
             this.txtCodePosti.Size = new System.Drawing.Size(234, 32);
             this.txtCodePosti.TabIndex = 4;
             // 
@@ -806,7 +807,7 @@
             this.txtAdress.EnterMoveNextControl = true;
             this.txtAdress.Location = new System.Drawing.Point(7, 44);
             this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Properties.MaxLength = 50;
+            this.txtAdress.Properties.MaxLength = 300;
             this.txtAdress.Size = new System.Drawing.Size(564, 32);
             this.txtAdress.TabIndex = 3;
             // 
@@ -823,7 +824,7 @@
             this.txtSandoghPosti.EnterMoveNextControl = true;
             this.txtSandoghPosti.Location = new System.Drawing.Point(6, 82);
             this.txtSandoghPosti.Name = "txtSandoghPosti";
-            this.txtSandoghPosti.Properties.MaxLength = 50;
+            this.txtSandoghPosti.Properties.MaxLength = 15;
             this.txtSandoghPosti.Size = new System.Drawing.Size(234, 32);
             this.txtSandoghPosti.TabIndex = 5;
             // 

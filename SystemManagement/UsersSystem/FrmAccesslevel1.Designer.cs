@@ -1,4 +1,4 @@
-﻿namespace SystemManagement.UsersSystem
+﻿namespace EtelaatePaye.UsersSystem
 {
     partial class FrmAccesslevel1
     {
@@ -445,6 +445,7 @@
             this.treeList1.TabIndex = 30;
             this.treeList1.TreeLevelWidth = 25;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
+            this.treeList1.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterCheckNode);
             // 
             // LevelName
             // 

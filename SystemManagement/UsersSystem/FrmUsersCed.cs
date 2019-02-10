@@ -21,7 +21,7 @@ using HelpClassLibrary;
 using DBHesabdari_TG;
 using System.Data.Entity.Infrastructure;
 
-namespace SystemManagement.UsersSystem
+namespace EtelaatePaye.UsersSystem
 {
     public partial class FrmUsersCed : DevExpress.XtraEditors.XtraForm
     {

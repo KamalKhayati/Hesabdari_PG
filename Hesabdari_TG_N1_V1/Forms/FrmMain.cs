@@ -28,13 +28,14 @@ using Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala;
 using Microsoft.Win32;
 using System.Data.SqlClient;
 using HelpClassLibrary;
-using SystemManagement.DafaterMali;
-using SystemManagement.UsersSystem;
+using EtelaatePaye.DafaterMali;
+using EtelaatePaye.UsersSystem;
 using DBHesabdari_TG;
 using System.Data.Entity;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraGrid.Views.Base;
+using EtelaatePaye.CodingHesabdari;
 
 namespace Hesabdari_TG_N1_V1.Forms
 {
@@ -68,7 +69,7 @@ namespace Hesabdari_TG_N1_V1.Forms
                     var q = db.MsDefaults.FirstOrDefault(s => s.MsUserId == _UserId);
                     if (q != null)
                     {
-                        cmbMajmoehaList.EditValue = q.MsMajmoeId;
+                        cmbMajmoehaList.EditValue = q.MajmoeId;
                         //chkDefault.Checked = true;
                     }
                     //////////////////////////////////////////////////////////////////////
@@ -76,22 +77,22 @@ namespace Hesabdari_TG_N1_V1.Forms
                     if (q1.Count() > 0)
                     {
                         Ms.Visible = q1.Any(s => s.MsAccessLevelMenuId == 55) ? false : true;
-                        rpgOperationDafaterVaDoreMali.Visible = q1.Any(s => s.MsAccessLevelMenuId == 55100 || s.MsAccessLevelMenuId == 55200) ? false : true;
-                        mbsListDafaterMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55100) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListMojmoeha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55110) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListVahedha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55120) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListShobeha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55130) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnListDorehaiMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55140) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        rpgOperationDafaterVaDoreMali.Visible = q1.Any(s => s.MsAccessLevelMenuId == 5501 || s.MsAccessLevelMenuId == 5502) ? false : true;
+                        mbsListDafaterMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 5501) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListMojmoeha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550101) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListVahedha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550102) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListShobeha.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550103) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnListDorehaiMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550104) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         ///////////////////////////
-                        mbsOperationDoreMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55200) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        mbsOperationDoreMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 5502) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         ///////////////////////////
-                        rpgUsers.Visible = q1.Any(s => s.MsAccessLevelMenuId == 55300) ? false : true;
-                        mbsSystemUsers.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55300) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnUsersList.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55310) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55320) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel1.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55330) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel2.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55340) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnChangePassword.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55350) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        rpgUsers.Visible = q1.Any(s => s.MsAccessLevelMenuId == 5503) ? false : true;
+                        mbsSystemUsers.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 5503) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnUsersList.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550301) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDetermineAccessLevel.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550302) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDetermineAccessLevel1.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030201) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDetermineAccessLevel2.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030201) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnChangePassword.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550303) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         //////////////////////////
                     }
                 }
@@ -332,7 +333,7 @@ namespace Hesabdari_TG_N1_V1.Forms
                 {
                     var q = db.MsDefaults.FirstOrDefault(s => s.MsUserId == _UserId);
                     if (q != null)
-                        cmbVahedhaList.EditValue = q.MsVahedId;
+                        cmbVahedhaList.EditValue = q.VahedId;
                     else
                     {
                         cmbVahedhaList.EditValue = -1;
@@ -358,7 +359,7 @@ namespace Hesabdari_TG_N1_V1.Forms
                 {
                     var q = db.MsDefaults.FirstOrDefault(s => s.MsUserId == _UserId);
                     if (q != null)
-                        cmbShobehaList.EditValue = q.MsShobeId;
+                        cmbShobehaList.EditValue = q.ShobeId;
                     else
                     {
                         cmbShobehaList.EditValue = -1;
@@ -382,7 +383,7 @@ namespace Hesabdari_TG_N1_V1.Forms
                 {
                     var q = db.MsDefaults.FirstOrDefault(s => s.MsUserId == _UserId);
                     if (q != null)
-                        cmbDoreMalihaList.EditValue = q.MsDoreMaliId;
+                        cmbDoreMalihaList.EditValue = q.DoreMaliId;
                     else
                     {
                         cmbDoreMalihaList.EditValue = -1;
@@ -395,10 +396,6 @@ namespace Hesabdari_TG_N1_V1.Forms
                         "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void chkDefault_ItemClick(object sender, ItemClickEventArgs e)
-        {
         }
 
         private void chkDefault_CheckedChanged(object sender, ItemClickEventArgs e)
@@ -416,28 +413,32 @@ namespace Hesabdari_TG_N1_V1.Forms
                 try
                 {
                     var q = db.MsDefaults.FirstOrDefault(s => s.MsUserId == _UserId);
-                    if (chkDefault.Checked)
+                    if (q != null)
                     {
-                        if (q == null)
+                        if (chkDefault.Checked)
                         {
-                            MsDefault d1 = new MsDefault();
-                            d1.MsUserId = _UserId;
-                            d1.MsMajmoeId = MajmoeId;
-                            d1.MsVahedId = VahedId;
-                            d1.MsShobeId = ShobeId;
-                            d1.MsDoreMaliId = DoreId;
-                            db.MsDefaults.Add(d1);
-                            db.SaveChanges();
+                            q.MsUserId = _UserId;
+                            q.MajmoeId = MajmoeId;
+                            q.VahedId = VahedId;
+                            q.ShobeId = ShobeId;
+                            q.DoreMaliId = DoreId;
+                        }
+                        else
+                        {
+                            db.MsDefaults.Remove(q);
                         }
                     }
                     else
                     {
-                        if (q != null)
-                        {
-                            db.MsDefaults.Remove(q);
-                            db.SaveChanges();
-                        }
+                        MsDefault d1 = new MsDefault();
+                        d1.MsUserId = _UserId;
+                        d1.MajmoeId = MajmoeId;
+                        d1.VahedId = VahedId;
+                        d1.ShobeId = ShobeId;
+                        d1.DoreMaliId = DoreId;
+                        db.MsDefaults.Add(d1);
                     }
+                    db.SaveChanges();
                 }
                 catch (Exception ex)
                 {
@@ -483,6 +484,24 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.lblUserName.Text = txtUserName.Caption;
             HelpClass1.ActiveForm(fm);
 
+        }
+
+        private void btnHesabGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabGroupList fm = new FrmHesabGroupList();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            HelpClass1.ActiveForm(fm);
+        }
+
+        private void btnHesabCol_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabColList fm = new FrmHesabColList();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            HelpClass1.ActiveForm(fm);
         }
     }
 }

@@ -20,44 +20,45 @@ namespace DBHesabdari_TG
    public class MsInfoOther
     {
         public int Id { get; set; }
-        public int? MsMajmoeId { get; set; }
-        public int? MsVahedId { get; set; }
-        public int? MsShobeId { get; set; }
-        public int? MsCode { get; set; }
+        public int MsMajmoeId { get; set; }
+        public int MsVahedId { get; set; }
+        public int MsShobeId { get; set; }
+        public int MsCode { get; set; }
         [MaxLength(50)]
         public string MsName { get; set; }
+        [MaxLength(5)]
         public string NoeShakhs { get; set; }
         [MaxLength(50)]
         public string NoeFaaliat { get; set; }
         [MaxLength(300)]
         public string Adress { get; set; }
-        [MaxLength(50)]
+        [MaxLength(15)]
         public string CodePosti { get; set; }
-        [MaxLength(50)]
+        [MaxLength(15)]
         public string SandoghPosti { get; set; }
-        [MaxLength(50)]
+        [MaxLength(10)]
         public string ShomarePlak { get; set; }
-        [MaxLength(50)]
+        [MaxLength(10)]
         public string ShomareSabt { get; set; }
-        [MaxLength(50)]
+        [MaxLength(10)]
         public string CodeMelli { get; set; }
-        [MaxLength(50)]
+        [MaxLength(11)]
         public string ShenaseMelli { get; set; }
-        [MaxLength(50)]
+        [MaxLength(12)]
         public string CodeSenfee { get; set; }
-        [MaxLength(50)]
+        [MaxLength(12)]
         public string CodeEghtesadi { get; set; }
-        [MaxLength(50)]
+        [MaxLength(25)]
         public string Tell1 { get; set; }
-        [MaxLength(50)]
+        [MaxLength(25)]
         public string Tell2 { get; set; }
-        [MaxLength(50)]
+        [MaxLength(25)]
         public string TellFax1 { get; set; }
-        [MaxLength(50)]
+        [MaxLength(25)]
         public string TellFax2 { get; set; }
-        [MaxLength(50)]
+        [MaxLength(25)]
         public string Mobile1 { get; set; }
-        [MaxLength(50)]
+        [MaxLength(25)]
         public string Mobile2 { get; set; }
         [MaxLength(50)]
         public string Email1 { get; set; }

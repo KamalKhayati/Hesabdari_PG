@@ -22,7 +22,7 @@ using HelpClassLibrary;
 using DBHesabdari_TG;
 using System.Data.Entity.Infrastructure;
 
-namespace SystemManagement.DafaterMali
+namespace EtelaatePaye.DafaterMali
 {
     public partial class FrmShoabatCed : DevExpress.XtraEditors.XtraForm
     {
@@ -575,35 +575,6 @@ namespace SystemManagement.DafaterMali
                                 var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsShobeId == RowId);
                                 if (q4 != null)
                                 {
-
-                                    //q4.MsShobeId = RowId;
-                                    //q4.MsCode = _code;
-                                    //q4.MsName = txtName.Text;
-                                    //q4.NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی";
-                                    //q4.NoeFaaliat = txtNoeFaaliat.Text;
-                                    //q4.Adress = txtAdress.Text;
-                                    //q4.CodePosti = txtCodePosti.Text;
-                                    //q4.SandoghPosti = txtSandoghPosti.Text;
-                                    //q4.ShomarePlak = txtShomarePlak.Text;
-                                    //q4.ShomareSabt = txtShomareSabt.Text;
-                                    //q4.CodeMelli = txtCodeMelli.Text;
-                                    //q4.ShenaseMelli = txtShenaseMelli.Text;
-                                    //q4.CodeSenfee = txtCodeSenfee.Text;
-                                    //q4.CodeEghtesadi = txtCodeEghtesadi.Text;
-                                    //q4.Tell1 = txtTell1.Text;
-                                    //q4.Tell2 = txtTell2.Text;
-                                    //q4.TellFax1 = txtTellFax1.Text;
-                                    //q4.TellFax2 = txtTellFax2.Text;
-                                    //q4.Mobile1 = txtMobile1.Text;
-                                    //q4.Mobile2 = txtMobile2.Text;
-                                    //q4.Email1 = txtEmail1.Text;
-                                    //q4.Email2 = txtEmail2.Text;
-                                    //q4.Site = txtSite.Text;
-                                    //q4.WebLog = txtWebLog.Text;
-                                    //q4.ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text;
-                                    //q4.ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text;
-                                    //q4.ShParvandeMaliati = txtShParvandeMaliati.Text;
-                                    //q4.ShBimeKargah = txtShBimeKargah.Text;
                                     db.MsInfoOthers.Remove(q4);
                                 }
                                 db.SaveChanges();

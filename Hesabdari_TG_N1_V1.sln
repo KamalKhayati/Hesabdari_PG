@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHesabdari_TG", "DBHesabda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemManagement", "SystemManagement\SystemManagement.csproj", "{BBEDE194-2E2D-4D49-A811-9982B5F4F152}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtelaatePaye", "EtelaatePaye\EtelaatePaye.csproj", "{403481DE-962E-43C6-8A5A-24CBF93C75BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BBEDE194-2E2D-4D49-A811-9982B5F4F152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBEDE194-2E2D-4D49-A811-9982B5F4F152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBEDE194-2E2D-4D49-A811-9982B5F4F152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403481DE-962E-43C6-8A5A-24CBF93C75BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403481DE-962E-43C6-8A5A-24CBF93C75BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403481DE-962E-43C6-8A5A-24CBF93C75BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403481DE-962E-43C6-8A5A-24CBF93C75BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

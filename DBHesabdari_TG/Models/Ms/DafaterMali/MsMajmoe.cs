@@ -27,5 +27,6 @@ namespace DBHesabdari_TG
         [Required]
         public bool MajmoeIsActive { get; set; }
         public virtual ICollection<MsVahed> MsVaheds { get; set; }
+
     }
 }

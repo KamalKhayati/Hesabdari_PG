@@ -172,7 +172,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(327, 87);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(99, 25);
+            this.labelControl3.Size = new System.Drawing.Size(123, 25);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "شناسه کاربری فعلی";
             // 
@@ -180,7 +180,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(327, 125);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(85, 25);
+            this.labelControl2.Size = new System.Drawing.Size(86, 25);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "رمز عبور فعلی";
             // 
@@ -213,6 +213,7 @@
             this.txtNewPassword.Properties.MaxLength = 50;
             this.txtNewPassword.Size = new System.Drawing.Size(208, 32);
             this.txtNewPassword.TabIndex = 1;
+            this.txtNewPassword.EditValueChanged += new System.EventHandler(this.txtNewPassword_EditValueChanged);
             // 
             // labelControl6
             // 
@@ -230,14 +231,13 @@
             this.txtNewName.Properties.MaxLength = 50;
             this.txtNewName.Size = new System.Drawing.Size(208, 32);
             this.txtNewName.TabIndex = 0;
-            this.txtNewName.EditValueChanged += new System.EventHandler(this.txtNewName_EditValueChanged);
             this.txtNewName.Leave += new System.EventHandler(this.txtNewName_Leave);
             // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(327, 16);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(103, 25);
+            this.labelControl4.Size = new System.Drawing.Size(126, 25);
             this.labelControl4.TabIndex = 7;
             this.labelControl4.Text = "شناسه کاربری جدید";
             // 

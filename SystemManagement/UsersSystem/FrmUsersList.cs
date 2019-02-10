@@ -22,7 +22,7 @@ using DBHesabdari_TG;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
 
-namespace SystemManagement.UsersSystem
+namespace EtelaatePaye.UsersSystem
 {
     public partial class FrmUsersList : DevExpress.XtraEditors.XtraForm
     {
@@ -156,9 +156,9 @@ namespace SystemManagement.UsersSystem
                     var q1 = db.RmsUserBmsAccessLevelMenus.Where(s => s.MsUserId == _UserId).ToList();
                     if (q1.Count() > 0)
                     {
-                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55311) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55312) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55313) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnCreate.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030101) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030102) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnDelete.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030103) ? BarItemVisibility.Never : BarItemVisibility.Always;
                     }
                 }
                 catch (Exception ex)
