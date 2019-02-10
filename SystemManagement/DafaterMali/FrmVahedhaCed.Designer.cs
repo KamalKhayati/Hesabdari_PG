@@ -294,6 +294,7 @@
             this.txtCode.Properties.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(123, 32);
             this.txtCode.TabIndex = 1;
+            this.txtCode.Leave += new System.EventHandler(this.txtCode_Leave);
             // 
             // chkIsActive
             // 
@@ -338,7 +339,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(495, 87);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(166, 25);
+            this.labelControl4.Size = new System.Drawing.Size(167, 25);
             this.labelControl4.TabIndex = 5;
             this.labelControl4.Text = "نام واحد تجاری / خدماتی";
             // 
@@ -424,7 +425,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(367, 7);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(74, 29);
+            this.radioButton2.Size = new System.Drawing.Size(73, 29);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "حقوقی";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -483,7 +484,7 @@
             // 
             this.labelControl25.Location = new System.Drawing.Point(245, 199);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(75, 25);
+            this.labelControl25.Size = new System.Drawing.Size(74, 25);
             this.labelControl25.TabIndex = 50;
             this.labelControl25.Text = "کد اقتصادی";
             // 
@@ -857,7 +858,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(246, 9);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(73, 25);
+            this.labelControl8.Size = new System.Drawing.Size(72, 25);
             this.labelControl8.TabIndex = 16;
             this.labelControl8.Text = "نوع فعالیت";
             // 

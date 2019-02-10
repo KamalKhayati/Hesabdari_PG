@@ -20,6 +20,7 @@ using DevExpress.XtraEditors;
 using DBHesabdari_TG;
 using DevExpress.XtraBars;
 using HelpClassLibrary;
+using System.Data.Entity;
 
 namespace EtelaatePaye.CodingHesabdari
 {
@@ -31,65 +32,65 @@ namespace EtelaatePaye.CodingHesabdari
         }
 
         public EnumCED En;
-        //public void FillFrmHesabColList()
-        //{
-        //    using (var dataContext = new MyContext())
-        //    {
-        //        try
-        //        {
-        //            if (isActive == true)
-        //            {
-        //                var q1 = dataContext.EpHesabGroups.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
-        //                if (lblUserId.Text == "1")
-        //                {
-        //                    if (q1.Count > 0)
-        //                        epHesabGroupsBindingSource.DataSource = q1;
-        //                }
-        //                else
-        //                {
-        //                    int _UserId = Convert.ToInt32(lblUserId.Text);
-        //                    var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
+        public void FillFrmHesabColList()
+        {
+            using (var dataContext = new MyContext())
+            {
+                try
+                {
+                    if (isActive == true)
+                    {
+                        var q1 = dataContext.EpHesabCols.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
+                        if (lblUserId.Text == "1")
+                        {
+                            if (q1.Count > 0)
+                                epHesabColsBindingSource.DataSource = q1;
+                        }
+                        else
+                        {
+                            int _UserId = Convert.ToInt32(lblUserId.Text);
+                            var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId == 0 && s.IsActive == true).Select(s => s.HesabColId).ToList();
 
-        //                    if (q1.Count > 0)
-        //                    {
-        //                        if (q2.Count > 0)
-        //                        {
-        //                            q2.ForEach(item3 =>
-        //                            {
-        //                                q1.Remove(dataContext.EpHesabGroups.FirstOrDefault(s => s.Id == item3));
-        //                            });
-        //                            epHesabGroupsBindingSource.DataSource = q1;
-        //                        }
-        //                        else
-        //                        {
-        //                            epHesabGroupsBindingSource.DataSource = q1;
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //            else
-        //            {
-        //                if (lblUserId.Text == "1")
-        //                {
-        //                    var q = dataContext.EpHesabGroups.Where(p => p.IsActive == false).OrderBy(s => s.Code);
-        //                    if (q.Count() > 0)
-        //                        epHesabGroupsBindingSource.DataSource = q.ToList();
-        //                    else
-        //                        epHesabGroupsBindingSource.DataSource = null;
-        //                }
-        //                else
-        //                    epHesabGroupsBindingSource.DataSource = null;
-        //            }
+                            if (q1.Count > 0)
+                            {
+                                if (q2.Count > 0)
+                                {
+                                    q2.ForEach(item2 =>
+                                    {
+                                        q1.Remove(dataContext.EpHesabCols.FirstOrDefault(s => s.Id == item2));
+                                    });
+                                    epHesabColsBindingSource.DataSource = q1;
+                                }
+                                else
+                                {
+                                    epHesabColsBindingSource.DataSource = q1;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (lblUserId.Text == "1")
+                        {
+                            var q = dataContext.EpHesabCols.Where(p => p.IsActive == false).OrderBy(s => s.Code);
+                            if (q.Count() > 0)
+                                epHesabColsBindingSource.DataSource = q.ToList();
+                            else
+                                epHesabColsBindingSource.DataSource = null;
+                        }
+                        else
+                            epHesabColsBindingSource.DataSource = null;
+                    }
 
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-        //                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
-        //}
+        }
         public bool isActive = true;
         private void btnCreate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -126,13 +127,13 @@ namespace EtelaatePaye.CodingHesabdari
         public void btnDisplyActiveList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             isActive = true;
-            //FillFrmHesabColList();
+            FillFrmHesabColList();
         }
 
         public void btnDisplyNotActiveList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             isActive = false;
-            //FillFrmHesabColList();
+            FillFrmHesabColList();
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -157,7 +158,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmHesabColList_Load(object sender, EventArgs e)
         {
-            //FillFrmHesabColList();
+            FillFrmHesabColList();
             //using (var db = new MyContext())
             //{
             //    try

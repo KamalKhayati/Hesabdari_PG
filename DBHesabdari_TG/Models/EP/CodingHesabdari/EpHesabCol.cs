@@ -28,6 +28,8 @@ namespace DBHesabdari_TG
         [Required]
         public string GroupName { get; set; }
         [Required]
+        public string MahiatHesab { get; set; }
+        [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }

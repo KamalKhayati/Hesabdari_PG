@@ -31,6 +31,7 @@ namespace EtelaatePaye.CodingHesabdari
             InitializeComponent();
             Fm = fm;
         }
+
         private void btnNewCode_Click(object sender, EventArgs e)
         {
             using (var db = new MyContext())
@@ -44,7 +45,7 @@ namespace EtelaatePaye.CodingHesabdari
                     }
                     else
                     {
-                        txtCode.Text = "1";
+                        txtCode.Text = "11";
                     }
                 }
                 catch (Exception ex)
@@ -70,7 +71,7 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 btnCreateClose.Enabled = false;
                 btnCreateNext.Enabled = false;
-                if (Fm.En==EnumCED.Create)
+                if (Fm.En == EnumCED.Create)
                 {
                     using (var db = new MyContext())
                     {
@@ -119,7 +120,7 @@ namespace EtelaatePaye.CodingHesabdari
                         }
                     }
                 }
-                else if (Fm.En==EnumCED.Edit)
+                else if (Fm.En == EnumCED.Edit)
                 {
                     using (var db = new MyContext())
                     {
@@ -246,7 +247,7 @@ namespace EtelaatePaye.CodingHesabdari
                         }
                     }
                 }
-                else if (Fm.En==EnumCED.Delete)
+                else if (Fm.En == EnumCED.Delete)
                 {
                     using (var db = new MyContext())
                     {
@@ -306,7 +307,7 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     try
                     {
-                        if (Fm.En==EnumCED.Create)
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.EpHesabGroups.Any())
                             {
@@ -320,7 +321,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 }
                             }
                         }
-                        else if (Fm.En==EnumCED.Edit)
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             int _code = Convert.ToInt32(txtCode.Text);
@@ -354,7 +355,7 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     try
                     {
-                        if (Fm.En==EnumCED.Create)
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.EpHesabGroups.Any())
                             {
@@ -366,7 +367,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 }
                             }
                         }
-                        else if (Fm.En==EnumCED.Edit)
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             var q2 = db.EpHesabGroups.Where(p => p.Id != RowId && p.Name == txtName.Text);
@@ -386,7 +387,7 @@ namespace EtelaatePaye.CodingHesabdari
 
             }
 
-            if (Fm.En==EnumCED.Create)
+            if (Fm.En == EnumCED.Create)
             {
                 if (rdbTaraznamei.Checked == false && rdbSodZiani.Checked == false && rdbEntezami.Checked == false)
                 {
@@ -406,7 +407,7 @@ namespace EtelaatePaye.CodingHesabdari
             if (Fm.lblUserId.Text == "1")
                 chkIsActive.Visible = true;
 
-            if (Fm.En==EnumCED.Create)
+            if (Fm.En == EnumCED.Create)
             {
                 btnNewCode_Click(null, null);
             }
@@ -429,6 +430,7 @@ namespace EtelaatePaye.CodingHesabdari
                 IsActiveBeforeEdit = chkIsActive.Checked;
             }
         }
+
         private void FrmHesabGroupCed_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2)
@@ -460,10 +462,10 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (!string.IsNullOrEmpty(txtCode.Text))
             {
-                if (Convert.ToInt32(txtCode.Text) < 1)
+                if (Convert.ToInt32(txtCode.Text) <= 10)
                 {
-                    XtraMessageBox.Show("کد وارده بایستی عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    if (Fm.En==EnumCED.Create)
+                    XtraMessageBox.Show("کد وارده بایستی عددی بزرگتر از 10 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (Fm.En == EnumCED.Create)
                     {
                         btnNewCode_Click(null, null);
                     }
@@ -471,11 +473,8 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         txtCode.Text = CodeBeforeEdit;
                     }
-
                 }
             }
-
         }
-
     }
 }

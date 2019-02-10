@@ -218,7 +218,7 @@
             // 
             // txtCode
             // 
-            this.txtCode.EditValue = "1";
+            this.txtCode.EditValue = "";
             this.txtCode.EnterMoveNextControl = true;
             this.txtCode.Location = new System.Drawing.Point(373, 8);
             this.txtCode.Name = "txtCode";
@@ -226,7 +226,7 @@
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtCode.Properties.Mask.EditMask = "00";
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCode.Properties.MaxLength = 1;
+            this.txtCode.Properties.MaxLength = 2;
             this.txtCode.Properties.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(106, 32);
             this.txtCode.TabIndex = 0;

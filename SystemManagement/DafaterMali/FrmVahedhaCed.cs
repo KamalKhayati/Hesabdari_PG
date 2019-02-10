@@ -549,20 +549,6 @@ namespace EtelaatePaye.DafaterMali
                 XtraMessageBox.Show("لطفا کد را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (Convert.ToInt32(txtCode.Text) == 0)
-            {
-                XtraMessageBox.Show("کد وارده باید عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (this.Text == "ایجاد رکورد جدید")
-                {
-                    btnNewCode_Click(null, null);
-                }
-                else
-                {
-                    txtCode.Text = CodeBeforeEdit;
-                }
-
-                return false;
-            }
             else
             {
                 using (var db = new MyContext())
@@ -743,6 +729,24 @@ namespace EtelaatePaye.DafaterMali
 
         }
 
+        private void txtCode_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtCode.Text))
+            {
+                if (Convert.ToInt32(txtCode.Text) == 0)
+                {
+                    XtraMessageBox.Show("کد وارده باید عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (this.Text == "ایجاد رکورد جدید")
+                    {
+                        btnNewCode_Click(null, null);
+                    }
+                    else
+                    {
+                        txtCode.Text = CodeBeforeEdit;
+                    }
+                }
+            }
+        }
     }
 
 }

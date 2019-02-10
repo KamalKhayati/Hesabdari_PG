@@ -46,12 +46,12 @@
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.cmbListHesabGroup = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtGroupCode = new DevExpress.XtraEditors.TextEdit();
+            this.grbMahiatHesab = new System.Windows.Forms.GroupBox();
+            this.rdbBedVBes = new System.Windows.Forms.RadioButton();
+            this.rdbBes = new System.Windows.Forms.RadioButton();
+            this.rdbBed = new System.Windows.Forms.RadioButton();
             this.epHesabGroupsBindingSource = new System.Windows.Forms.BindingSource();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbEntezami = new System.Windows.Forms.RadioButton();
-            this.rdbSodZiani = new System.Windows.Forms.RadioButton();
-            this.rdbTaraznamei = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,14 +64,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListHesabGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).BeginInit();
+            this.grbMahiatHesab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.groupBox1);
+            this.panelControl1.Controls.Add(this.grbMahiatHesab);
             this.panelControl1.Controls.Add(this.cmbListHesabGroup);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.groupBox2);
@@ -79,7 +79,7 @@
             this.panelControl1.Controls.Add(this.txtName);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.btnNewCode);
-            this.panelControl1.Controls.Add(this.textEdit1);
+            this.panelControl1.Controls.Add(this.txtGroupCode);
             this.panelControl1.Controls.Add(this.txtCode);
             this.panelControl1.Controls.Add(this.chkIsActive);
             this.panelControl1.Controls.Add(this.txtId);
@@ -117,6 +117,7 @@
             this.chkEditCode.TabIndex = 10;
             this.chkEditCode.TabStop = false;
             this.chkEditCode.ToolTip = "ویرایش یا تغییر کد بصورت دستی";
+            this.chkEditCode.CheckedChanged += new System.EventHandler(this.chkEditCode_CheckedChanged);
             // 
             // txtName
             // 
@@ -125,7 +126,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Size = new System.Drawing.Size(475, 32);
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -148,10 +149,11 @@
             this.btnNewCode.Text = "کد جدید";
             this.btnNewCode.ToolTip = "F7";
             this.btnNewCode.ToolTipTitle = "کد جدید";
+            this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // txtCode
             // 
-            this.txtCode.EditValue = "1";
+            this.txtCode.EditValue = "";
             this.txtCode.EnterMoveNextControl = true;
             this.txtCode.Location = new System.Drawing.Point(374, 54);
             this.txtCode.Name = "txtCode";
@@ -159,11 +161,12 @@
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtCode.Properties.Mask.EditMask = "00";
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCode.Properties.MaxLength = 1;
+            this.txtCode.Properties.MaxLength = 2;
             this.txtCode.Properties.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(107, 32);
             this.txtCode.TabIndex = 0;
             this.txtCode.TabStop = false;
+            this.txtCode.Leave += new System.EventHandler(this.txtCode_Leave);
             // 
             // chkIsActive
             // 
@@ -213,6 +216,7 @@
             this.btnCreateClose.Text = "ایجاد و بستن";
             this.btnCreateClose.ToolTip = "F2";
             this.btnCreateClose.ToolTipTitle = "ایجاد و بستن";
+            this.btnCreateClose.Click += new System.EventHandler(this.btnCreateClose_Click);
             // 
             // btnCreateNext
             // 
@@ -225,6 +229,7 @@
             this.btnCreateNext.Text = "ایجاد و بعدی";
             this.btnCreateNext.ToolTip = "F3";
             this.btnCreateNext.ToolTipTitle = "ایجاد و بعدی";
+            this.btnCreateNext.Click += new System.EventHandler(this.btnCreateNext_Click);
             // 
             // panelControl2
             // 
@@ -247,6 +252,7 @@
             this.btnClose.Text = "بستن ";
             this.btnClose.ToolTip = "Escape";
             this.btnClose.ToolTipTitle = "بستن ";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // cmbListHesabGroup
             // 
@@ -256,12 +262,10 @@
             this.cmbListHesabGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbListHesabGroup.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 36, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "Code", 46, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 52, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeHesab", "Noe Hesab", 88, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "Is Active", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SharhHesab", "Sharh Hesab", 101, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "    کد ", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "                          نام حساب     ", 350, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeHesab", "  نوع حساب", 120, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbListHesabGroup.Properties.DataSource = this.epHesabGroupsBindingSource;
             this.cmbListHesabGroup.Properties.DisplayMember = "Name";
             this.cmbListHesabGroup.Properties.DropDownRows = 10;
@@ -270,7 +274,9 @@
             this.cmbListHesabGroup.Properties.ValueMember = "Id";
             this.cmbListHesabGroup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup.Size = new System.Drawing.Size(475, 32);
-            this.cmbListHesabGroup.TabIndex = 13;
+            this.cmbListHesabGroup.TabIndex = 0;
+            this.cmbListHesabGroup.EditValueChanged += new System.EventHandler(this.cmbListHesabGroup_EditValueChanged);
+            this.cmbListHesabGroup.Enter += new System.EventHandler(this.cmbListHesabGroup_Enter);
             // 
             // labelControl3
             // 
@@ -282,70 +288,70 @@
             this.labelControl3.TabIndex = 14;
             this.labelControl3.Text = "نام حساب گروه";
             // 
+            // txtGroupCode
+            // 
+            this.txtGroupCode.EditValue = "کد گروه";
+            this.txtGroupCode.EnterMoveNextControl = true;
+            this.txtGroupCode.Location = new System.Drawing.Point(261, 54);
+            this.txtGroupCode.Name = "txtGroupCode";
+            this.txtGroupCode.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGroupCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtGroupCode.Properties.Mask.EditMask = "00";
+            this.txtGroupCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtGroupCode.Properties.MaxLength = 1;
+            this.txtGroupCode.Properties.ReadOnly = true;
+            this.txtGroupCode.Size = new System.Drawing.Size(107, 32);
+            this.txtGroupCode.TabIndex = 0;
+            this.txtGroupCode.TabStop = false;
+            // 
+            // grbMahiatHesab
+            // 
+            this.grbMahiatHesab.Controls.Add(this.rdbBedVBes);
+            this.grbMahiatHesab.Controls.Add(this.rdbBes);
+            this.grbMahiatHesab.Controls.Add(this.rdbBed);
+            this.grbMahiatHesab.Location = new System.Drawing.Point(281, 136);
+            this.grbMahiatHesab.Name = "grbMahiatHesab";
+            this.grbMahiatHesab.Size = new System.Drawing.Size(310, 62);
+            this.grbMahiatHesab.TabIndex = 15;
+            this.grbMahiatHesab.TabStop = false;
+            this.grbMahiatHesab.Text = "ماهیت حساب";
+            // 
+            // rdbBedVBes
+            // 
+            this.rdbBedVBes.AutoSize = true;
+            this.rdbBedVBes.Location = new System.Drawing.Point(6, 27);
+            this.rdbBedVBes.Name = "rdbBedVBes";
+            this.rdbBedVBes.Size = new System.Drawing.Size(86, 29);
+            this.rdbBedVBes.TabIndex = 2;
+            this.rdbBedVBes.TabStop = true;
+            this.rdbBedVBes.Text = "بد / بس";
+            this.rdbBedVBes.UseVisualStyleBackColor = true;
+            // 
+            // rdbBes
+            // 
+            this.rdbBes.AutoSize = true;
+            this.rdbBes.Location = new System.Drawing.Point(120, 27);
+            this.rdbBes.Name = "rdbBes";
+            this.rdbBes.Size = new System.Drawing.Size(80, 29);
+            this.rdbBes.TabIndex = 1;
+            this.rdbBes.TabStop = true;
+            this.rdbBes.Text = "بستانکار";
+            this.rdbBes.UseVisualStyleBackColor = true;
+            // 
+            // rdbBed
+            // 
+            this.rdbBed.AutoSize = true;
+            this.rdbBed.Location = new System.Drawing.Point(225, 27);
+            this.rdbBed.Name = "rdbBed";
+            this.rdbBed.Size = new System.Drawing.Size(72, 29);
+            this.rdbBed.TabIndex = 0;
+            this.rdbBed.TabStop = true;
+            this.rdbBed.Text = "بدهکار";
+            this.rdbBed.UseVisualStyleBackColor = true;
+            // 
             // epHesabGroupsBindingSource
             // 
             this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabGroup);
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = "کد گروه";
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(261, 54);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit1.Properties.Mask.EditMask = "00";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit1.Properties.MaxLength = 1;
-            this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(107, 32);
-            this.textEdit1.TabIndex = 0;
-            this.textEdit1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdbEntezami);
-            this.groupBox1.Controls.Add(this.rdbSodZiani);
-            this.groupBox1.Controls.Add(this.rdbTaraznamei);
-            this.groupBox1.Location = new System.Drawing.Point(281, 136);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 62);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "نوع حساب";
-            // 
-            // rdbEntezami
-            // 
-            this.rdbEntezami.AutoSize = true;
-            this.rdbEntezami.Location = new System.Drawing.Point(6, 27);
-            this.rdbEntezami.Name = "rdbEntezami";
-            this.rdbEntezami.Size = new System.Drawing.Size(80, 29);
-            this.rdbEntezami.TabIndex = 2;
-            this.rdbEntezami.TabStop = true;
-            this.rdbEntezami.Text = "انتظامی";
-            this.rdbEntezami.UseVisualStyleBackColor = true;
-            // 
-            // rdbSodZiani
-            // 
-            this.rdbSodZiani.AutoSize = true;
-            this.rdbSodZiani.Location = new System.Drawing.Point(92, 27);
-            this.rdbSodZiani.Name = "rdbSodZiani";
-            this.rdbSodZiani.Size = new System.Drawing.Size(108, 29);
-            this.rdbSodZiani.TabIndex = 1;
-            this.rdbSodZiani.TabStop = true;
-            this.rdbSodZiani.Text = "سود و زیانی";
-            this.rdbSodZiani.UseVisualStyleBackColor = true;
-            // 
-            // rdbTaraznamei
-            // 
-            this.rdbTaraznamei.AutoSize = true;
-            this.rdbTaraznamei.Location = new System.Drawing.Point(206, 27);
-            this.rdbTaraznamei.Name = "rdbTaraznamei";
-            this.rdbTaraznamei.Size = new System.Drawing.Size(97, 29);
-            this.rdbTaraznamei.TabIndex = 0;
-            this.rdbTaraznamei.TabStop = true;
-            this.rdbTaraznamei.Text = "ترازنامه ای";
-            this.rdbTaraznamei.UseVisualStyleBackColor = true;
             // 
             // FrmHesabColCed
             // 
@@ -355,6 +361,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmHesabColCed";
@@ -362,6 +369,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد حساب کل";
+            this.Load += new System.EventHandler(this.FrmHesabColCed_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabColCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -375,10 +384,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbListHesabGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).EndInit();
+            this.grbMahiatHesab.ResumeLayout(false);
+            this.grbMahiatHesab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -403,10 +412,10 @@
         public DevExpress.XtraEditors.LookUpEdit cmbListHesabGroup;
         private System.Windows.Forms.BindingSource epHesabGroupsBindingSource;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        public DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbEntezami;
-        private System.Windows.Forms.RadioButton rdbSodZiani;
-        private System.Windows.Forms.RadioButton rdbTaraznamei;
+        public DevExpress.XtraEditors.TextEdit txtGroupCode;
+        private System.Windows.Forms.GroupBox grbMahiatHesab;
+        private System.Windows.Forms.RadioButton rdbBedVBes;
+        private System.Windows.Forms.RadioButton rdbBes;
+        private System.Windows.Forms.RadioButton rdbBed;
     }
 }

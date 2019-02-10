@@ -39,6 +39,8 @@
             this.btnPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.btnListPrint = new DevExpress.XtraBars.BarButtonItem();
             this.btnEmkanat = new DevExpress.XtraBars.BarSubItem();
+            this.btnAdvancedSearch = new DevExpress.XtraBars.BarCheckItem();
+            this.btnSharhHesab = new DevExpress.XtraBars.BarCheckItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -48,6 +50,7 @@
             this.epHesabGroupsBindingSource = new System.Windows.Forms.BindingSource();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNoeHesab = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,8 +58,6 @@
             this.colSharhHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
-            this.btnAdvancedSearch = new DevExpress.XtraBars.BarCheckItem();
-            this.btnSharhHesab = new DevExpress.XtraBars.BarCheckItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).BeginInit();
@@ -186,6 +187,21 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnSharhHesab)});
             this.btnEmkanat.Name = "btnEmkanat";
             // 
+            // btnAdvancedSearch
+            // 
+            this.btnAdvancedSearch.Caption = "جستجوی پیشرفته";
+            this.btnAdvancedSearch.Id = 10;
+            this.btnAdvancedSearch.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
+            this.btnAdvancedSearch.Name = "btnAdvancedSearch";
+            this.btnAdvancedSearch.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdvancedSearch_CheckedChanged);
+            // 
+            // btnSharhHesab
+            // 
+            this.btnSharhHesab.Caption = "تشریح حساب";
+            this.btnSharhHesab.Id = 11;
+            this.btnSharhHesab.Name = "btnSharhHesab";
+            this.btnSharhHesab.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSharhHesab_CheckedChanged);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -254,6 +270,7 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
+            this.Line,
             this.colCode,
             this.colName,
             this.colNoeHesab,
@@ -283,6 +300,22 @@
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             // 
+            // Line
+            // 
+            this.Line.AppearanceCell.Options.UseTextOptions = true;
+            this.Line.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Line.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Line.AppearanceHeader.Options.UseTextOptions = true;
+            this.Line.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Line.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Line.Caption = "ردیف";
+            this.Line.FieldName = "Line";
+            this.Line.Name = "Line";
+            this.Line.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            this.Line.Visible = true;
+            this.Line.VisibleIndex = 0;
+            this.Line.Width = 60;
+            // 
             // colCode
             // 
             this.colCode.AppearanceCell.Options.UseTextOptions = true;
@@ -295,7 +328,8 @@
             this.colCode.FieldName = "Code";
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
-            this.colCode.VisibleIndex = 0;
+            this.colCode.VisibleIndex = 1;
+            this.colCode.Width = 85;
             // 
             // colName
             // 
@@ -308,8 +342,8 @@
             this.colName.FieldName = "Name";
             this.colName.Name = "colName";
             this.colName.Visible = true;
-            this.colName.VisibleIndex = 1;
-            this.colName.Width = 350;
+            this.colName.VisibleIndex = 2;
+            this.colName.Width = 400;
             // 
             // colNoeHesab
             // 
@@ -323,7 +357,7 @@
             this.colNoeHesab.FieldName = "NoeHesab";
             this.colNoeHesab.Name = "colNoeHesab";
             this.colNoeHesab.Visible = true;
-            this.colNoeHesab.VisibleIndex = 2;
+            this.colNoeHesab.VisibleIndex = 3;
             this.colNoeHesab.Width = 100;
             // 
             // colIsActive
@@ -338,7 +372,7 @@
             this.colIsActive.FieldName = "IsActive";
             this.colIsActive.Name = "colIsActive";
             this.colIsActive.Visible = true;
-            this.colIsActive.VisibleIndex = 3;
+            this.colIsActive.VisibleIndex = 4;
             // 
             // colSharhHesab
             // 
@@ -369,21 +403,6 @@
             this.lblUserName.TabIndex = 23;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
-            // 
-            // btnAdvancedSearch
-            // 
-            this.btnAdvancedSearch.Caption = "جستجوی پیشرفته";
-            this.btnAdvancedSearch.Id = 10;
-            this.btnAdvancedSearch.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
-            this.btnAdvancedSearch.Name = "btnAdvancedSearch";
-            this.btnAdvancedSearch.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdvancedSearch_CheckedChanged);
-            // 
-            // btnSharhHesab
-            // 
-            this.btnSharhHesab.Caption = "تشریح حساب";
-            this.btnSharhHesab.Id = 11;
-            this.btnSharhHesab.Name = "btnSharhHesab";
-            this.btnSharhHesab.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSharhHesab_CheckedChanged);
             // 
             // FrmHesabGroupList
             // 
@@ -443,5 +462,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSharhHesab;
         private DevExpress.XtraBars.BarCheckItem btnAdvancedSearch;
         private DevExpress.XtraBars.BarCheckItem btnSharhHesab;
+        private DevExpress.XtraGrid.Columns.GridColumn Line;
     }
 }
