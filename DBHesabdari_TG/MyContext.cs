@@ -66,6 +66,7 @@ namespace DBHesabdari_TG
         public virtual DbSet<EpAccessLevelCodingHesabdari> EpAccessLevelCodingHesabdaris { get; set; }
         public virtual DbSet<RmsUserBepAccessLevelCodingHesabdari> RmsUserBepAccessLevelCodingHesabdaris { get; set; }
         public virtual DbSet<EpHesabCol> EpHesabCols { get; set; }
+        public virtual DbSet<EpHesabMoin> EpHesabMoins { get; set; }
 
 
 
@@ -111,6 +112,7 @@ namespace DBHesabdari_TG
             modelBuilder.Entity<EpAccessLevelCodingHesabdari>().HasMany(m => m.RmsUserBepAccessLevelCodingHesabdaris).WithRequired(m => m.EpAccessLevelCodingHesabdari1).HasForeignKey(m => m.CodingHesabdariId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<EpHesabGroup>().HasMany(m => m.EpHesabCols).WithRequired(m => m.EpHesabGroup1).HasForeignKey(m => m.GroupId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabCol>().HasMany(m => m.EpHesabMoins).WithRequired(m => m.EpHesabCol1).HasForeignKey(m => m.ColId).WillCascadeOnDelete(false);
 
             #region
             //--------> one - to - zero - or - one relationships < ------------

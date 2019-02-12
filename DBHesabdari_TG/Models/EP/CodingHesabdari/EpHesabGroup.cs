@@ -25,6 +25,12 @@ namespace DBHesabdari_TG
         [Required, MaxLength(50)]
         public string Name { get; set; }
         [Required]
+        public int IndexGroupStandard { get; set; }
+        [Required, MaxLength(30)]
+        public string NameGroupStandard { get; set; }
+        [Required]
+        public int IndexNoeHesab { get; set; }
+        [Required, MaxLength(15)]
         public string NoeHesab { get; set; }
         [Required]
         public bool IsActive { get; set; }

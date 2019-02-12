@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -71,7 +72,7 @@
             this.mbsCodingHesabdari = new DevExpress.XtraBars.BarSubItem();
             this.btnHesabGroup = new DevExpress.XtraBars.BarButtonItem();
             this.btnHesabCol = new DevExpress.XtraBars.BarButtonItem();
-            this.btnHesabMoeen = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHesabMoin = new DevExpress.XtraBars.BarButtonItem();
             this.btnHesabTafzili = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupTafzili = new DevExpress.XtraBars.BarButtonItem();
             this.mbsCodingAnbarVaKala = new DevExpress.XtraBars.BarSubItem();
@@ -121,17 +122,17 @@
             this.btnListDorehaiMali = new DevExpress.XtraBars.BarButtonItem();
             this.cmbMajmoehaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msMajmoeBindingSource = new System.Windows.Forms.BindingSource();
+            this.msMajmoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbVahedhaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msVahedBindingSource = new System.Windows.Forms.BindingSource();
+            this.msVahedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.cmbShobehaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msShobeBindingSource = new System.Windows.Forms.BindingSource();
+            this.msShobeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbDoreMalihaList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msDoreMaliBindingSource = new System.Windows.Forms.BindingSource();
+            this.msDoreMaliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chkDefault = new DevExpress.XtraBars.BarCheckItem();
             this.txtUserName = new DevExpress.XtraBars.BarStaticItem();
             this.txtUserId = new DevExpress.XtraBars.BarStaticItem();
@@ -184,11 +185,11 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerRight = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -262,7 +263,7 @@
             this.mbsCodingHesabdari,
             this.btnHesabGroup,
             this.btnHesabCol,
-            this.btnHesabMoeen,
+            this.btnHesabMoin,
             this.btnHesabTafzili,
             this.btnGroupTafzili,
             this.mbsCodingAnbarVaKala,
@@ -651,7 +652,7 @@
             this.mbsCodingHesabdari.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabGroup),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabCol),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabMoeen),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabMoin),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabTafzili),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupTafzili)});
             this.mbsCodingHesabdari.Name = "mbsCodingHesabdari";
@@ -671,11 +672,12 @@
             this.btnHesabCol.Name = "btnHesabCol";
             this.btnHesabCol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabCol_ItemClick);
             // 
-            // btnHesabMoeen
+            // btnHesabMoin
             // 
-            this.btnHesabMoeen.Caption = "حسابهای معین";
-            this.btnHesabMoeen.Id = 54;
-            this.btnHesabMoeen.Name = "btnHesabMoeen";
+            this.btnHesabMoin.Caption = "حسابهای معین";
+            this.btnHesabMoin.Id = 54;
+            this.btnHesabMoin.Name = "btnHesabMoin";
+            this.btnHesabMoin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabMoin_ItemClick);
             // 
             // btnHesabTafzili
             // 
@@ -1723,7 +1725,7 @@
         private DevExpress.XtraBars.BarSubItem mbsCodingHesabdari;
         private DevExpress.XtraBars.BarButtonItem btnHesabGroup;
         private DevExpress.XtraBars.BarButtonItem btnHesabCol;
-        private DevExpress.XtraBars.BarButtonItem btnHesabMoeen;
+        private DevExpress.XtraBars.BarButtonItem btnHesabMoin;
         private DevExpress.XtraBars.BarButtonItem btnHesabTafzili;
         private DevExpress.XtraBars.BarButtonItem btnGroupTafzili;
         private DevExpress.XtraBars.BarSubItem mbsCodingAnbarVaKala;

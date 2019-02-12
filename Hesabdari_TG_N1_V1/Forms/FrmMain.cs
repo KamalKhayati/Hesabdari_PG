@@ -503,5 +503,14 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.lblUserName.Text = txtUserName.Caption;
             HelpClass1.ActiveForm(fm);
         }
+
+        private void btnHesabMoin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabMoinList fm = new FrmHesabMoinList();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            HelpClass1.ActiveForm(fm);
+        }
     }
 }

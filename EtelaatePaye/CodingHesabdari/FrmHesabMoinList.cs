@@ -1,10 +1,10 @@
 ﻿/****************************** Ghost.github.io ******************************\
-*	Module Name:	FrmHesabColList.cs
+*	Module Name:	FrmHesabMoinList.cs
 *	Project:		EtelaatePaye
 *	Copyright (C) 2018 Kamal Khayati, All rights reserved.
 *	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
 *
-*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 9   06:06 ب.ظ
+*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 10   14:02
 *	
 ***********************************************************************************/
 using System;
@@ -18,21 +18,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DBHesabdari_TG;
-using DevExpress.XtraBars;
-using HelpClassLibrary;
 using System.Data.Entity;
+using HelpClassLibrary;
+using DevExpress.XtraBars;
 
 namespace EtelaatePaye.CodingHesabdari
 {
-    public partial class FrmHesabColList : DevExpress.XtraEditors.XtraForm
+    public partial class FrmHesabMoinList : DevExpress.XtraEditors.XtraForm
     {
-        public FrmHesabColList()
+        public FrmHesabMoinList()
         {
             InitializeComponent();
         }
-
         public EnumCED En;
-        public void FillFrmHesabColList()
+        public void FillFrmHesabMoinList()
         {
             using (var dataContext = new MyContext())
             {
@@ -40,18 +39,18 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     if (isActive == true)
                     {
-                        var q1 = dataContext.EpHesabCols.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
+                        var q1 = dataContext.EpHesabMoins.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
                         if (lblUserId.Text == "1")
                         {
                             if (q1.Count > 0)
-                                epHesabColsBindingSource.DataSource = q1;
+                                epHesabMoinsBindingSource.DataSource = q1;
                             else
-                                epHesabColsBindingSource.DataSource = null;
+                                epHesabMoinsBindingSource.DataSource = null;
                         }
                         else
                         {
                             int _UserId = Convert.ToInt32(lblUserId.Text);
-                            var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId == 0 && s.IsActive == true).Select(s => s.HesabColId).ToList();
+                            var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 && s.IsActive == true).Select(s => s.HesabMoinId).ToList();
 
                             if (q1.Count > 0)
                             {
@@ -59,31 +58,31 @@ namespace EtelaatePaye.CodingHesabdari
                                 {
                                     q2.ForEach(item2 =>
                                     {
-                                        q1.Remove(dataContext.EpHesabCols.FirstOrDefault(s => s.Id == item2));
+                                        q1.Remove(dataContext.EpHesabMoins.FirstOrDefault(s => s.Id == item2));
                                     });
-                                    epHesabColsBindingSource.DataSource = q1;
+                                    epHesabMoinsBindingSource.DataSource = q1;
                                 }
                                 else
                                 {
-                                    epHesabColsBindingSource.DataSource = q1;
+                                    epHesabMoinsBindingSource.DataSource = q1;
                                 }
                             }
                             else
-                                epHesabColsBindingSource.DataSource = null;
+                                epHesabMoinsBindingSource.DataSource = null;
                         }
                     }
                     else
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q = dataContext.EpHesabCols.Where(p => p.IsActive == false).OrderBy(s => s.Code);
+                            var q = dataContext.EpHesabMoins.Where(p => p.IsActive == false).OrderBy(s => s.Code);
                             if (q.Count() > 0)
-                                epHesabColsBindingSource.DataSource = q.ToList();
+                                epHesabMoinsBindingSource.DataSource = q.ToList();
                             else
-                                epHesabColsBindingSource.DataSource = null;
+                                epHesabMoinsBindingSource.DataSource = null;
                         }
                         else
-                            epHesabColsBindingSource.DataSource = null;
+                            epHesabMoinsBindingSource.DataSource = null;
                     }
 
                 }
@@ -99,7 +98,7 @@ namespace EtelaatePaye.CodingHesabdari
         public bool isActive = true;
         private void btnCreate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmHesabColCed fm = new FrmHesabColCed(this);
+            FrmHesabMoinCed fm = new FrmHesabMoinCed(this);
             En = EnumCED.Create;
             HelpClass1.FormNewRecordCreate(fm);
         }
@@ -108,7 +107,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (gridView1.SelectedRowsCount > 0 && btnEdit.Visibility == BarItemVisibility.Always)
             {
-                FrmHesabColCed fm = new FrmHesabColCed(this);
+                FrmHesabMoinCed fm = new FrmHesabMoinCed(this);
                 En = EnumCED.Edit;
                 HelpClass1.FormCurrentRecordEdit(gridView1, fm);
             }
@@ -118,7 +117,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (gridView1.SelectedRowsCount > 0)
             {
-                FrmHesabColCed fm = new FrmHesabColCed(this);
+                FrmHesabMoinCed fm = new FrmHesabMoinCed(this);
                 En = EnumCED.Delete;
                 HelpClass1.FormCurrentRecordDelete(gridView1, fm);
             }
@@ -132,13 +131,13 @@ namespace EtelaatePaye.CodingHesabdari
         public void btnDisplyActiveList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             isActive = true;
-            FillFrmHesabColList();
+            FillFrmHesabMoinList();
         }
 
         public void btnDisplyNotActiveList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             isActive = false;
-            FillFrmHesabColList();
+            FillFrmHesabMoinList();
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -161,9 +160,9 @@ namespace EtelaatePaye.CodingHesabdari
             HelpClass1.SetNumberRowsColumnUnboundGirdView(sender, e);
         }
 
-        private void FrmHesabColList_Load(object sender, EventArgs e)
+        private void FrmHesabMoinList_Load(object sender, EventArgs e)
         {
-            FillFrmHesabColList();
+            FillFrmHesabMoinList();
             //using (var db = new MyContext())
             //{
             //    try
@@ -196,4 +195,5 @@ namespace EtelaatePaye.CodingHesabdari
         }
 
     }
+
 }

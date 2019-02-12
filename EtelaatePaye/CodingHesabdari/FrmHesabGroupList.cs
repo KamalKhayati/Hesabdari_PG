@@ -26,7 +26,7 @@ namespace EtelaatePaye.CodingHesabdari
 {
     public partial class FrmHesabGroupList : DevExpress.XtraEditors.XtraForm
     {
-       public EnumCED En;
+        public EnumCED En;
         public FrmHesabGroupList()
         {
             InitializeComponent();
@@ -44,6 +44,8 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             if (q1.Count > 0)
                                 epHesabGroupsBindingSource.DataSource = q1;
+                            else
+                                epHesabGroupsBindingSource.DataSource = null;
                         }
                         else
                         {
@@ -65,6 +67,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     epHesabGroupsBindingSource.DataSource = q1;
                                 }
                             }
+                            else
+                                epHesabGroupsBindingSource.DataSource = null;
                         }
                     }
                     else
@@ -186,7 +190,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnSharhHesab_CheckedChanged(object sender, ItemClickEventArgs e)
         {
-            gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible==false ? true : false;
+            gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
         }
     }
 }

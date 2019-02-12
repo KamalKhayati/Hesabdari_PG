@@ -67,6 +67,7 @@
     <Compile Include="Models\EP\CodingHesabdari\EpHesabCol.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabGroup.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpAccessLevelCodingHesabdari.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabMoin.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsDefault.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsDoreMali.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsInfoOther.cs" />

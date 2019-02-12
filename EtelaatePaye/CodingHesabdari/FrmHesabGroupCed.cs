@@ -41,11 +41,15 @@ namespace EtelaatePaye.CodingHesabdari
                     if (db.EpHesabGroups.Any())
                     {
                         var MaximumCod = db.EpHesabGroups.Max(p => p.Code);
-                        txtCode.Text = (MaximumCod + 1).ToString();
+                        if (MaximumCod != 9)
+                            txtCode.Text = (MaximumCod + 1).ToString();
+                        else
+                            XtraMessageBox.Show("اعمال محدودیت تعریف 9 حساب گروه ..." + "\n" + "توجه : نمیتوان بیشتر از 9 حساب گروه تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین 1 تا 9 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     }
                     else
                     {
-                        txtCode.Text = "11";
+                        txtCode.Text = "1";
                     }
                 }
                 catch (Exception ex)
@@ -81,7 +85,10 @@ namespace EtelaatePaye.CodingHesabdari
                             obj.Code = Convert.ToInt32(txtCode.Text);
                             obj.Name = txtName.Text;
                             obj.IsActive = chkIsActive.Checked;
-                            obj.NoeHesab = rdbTaraznamei.Checked ? "ترازنامه ای" : rdbSodZiani.Checked ? "سود و زیانی" : "انتظامی";
+                            obj.IndexGroupStandard = cmbStandardGroups.SelectedIndex;
+                            obj.NameGroupStandard = cmbStandardGroups.Text;
+                            obj.IndexNoeHesab = cmbNoeHesab.SelectedIndex;
+                            obj.NoeHesab = cmbNoeHesab.Text;
                             obj.SharhHesab = txtSharhHesab.Text;
                             db.EpHesabGroups.Add(obj);
                             db.SaveChanges();
@@ -108,10 +115,11 @@ namespace EtelaatePaye.CodingHesabdari
                                 btnCreateClose.Enabled = true;
                                 btnCreateNext.Enabled = true;
                                 btnNewCode_Click(null, null);
-                                txtName.Text = "";
-                                txtSharhHesab.Text = "";
-                                rdbTaraznamei.Checked = rdbSodZiani.Checked = rdbEntezami.Checked = false;
-                                txtName.Focus();
+                                cmbStandardGroups.EditValue = string.Empty;
+                                txtName.Text = string.Empty;
+                                cmbNoeHesab.EditValue = string.Empty;
+                                txtSharhHesab.Text = string.Empty;
+                                cmbStandardGroups.Focus();
                             }
                         }
                         catch (Exception ex)
@@ -130,13 +138,13 @@ namespace EtelaatePaye.CodingHesabdari
                             var q = db.EpHesabGroups.FirstOrDefault(p => p.Id == RowId);
                             if (q != null)
                             {
-                                if (CodeBeforeEdit != txtCode.Text)
-                                    q.Code = Convert.ToInt32(txtCode.Text);
-                                if (NameBeforeEdit != txtName.Text)
-                                    q.Name = txtName.Text;
-                                if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                    q.IsActive = chkIsActive.Checked;
-                                q.NoeHesab = rdbTaraznamei.Checked ? "ترازنامه ای" : rdbSodZiani.Checked ? "سود و زیانی" : "انتظامی";
+                                q.Code = Convert.ToInt32(txtCode.Text);
+                                q.Name = txtName.Text;
+                                q.IsActive = chkIsActive.Checked;
+                                q.IndexGroupStandard = cmbStandardGroups.SelectedIndex;
+                                q.NameGroupStandard = cmbStandardGroups.Text;
+                                q.IndexNoeHesab = cmbNoeHesab.SelectedIndex;
+                                q.NoeHesab = cmbNoeHesab.Text;
                                 q.SharhHesab = txtSharhHesab.Text;
 
                                 ///////////////////////////////متد اصلاح کد و نام مجموعه در لیست واحد ها ، شعبه ها و دوره های مالی WillCascadeOnUpdate ///////////////////////
@@ -389,12 +397,16 @@ namespace EtelaatePaye.CodingHesabdari
 
             if (Fm.En == EnumCED.Create)
             {
-                if (rdbTaraznamei.Checked == false && rdbSodZiani.Checked == false && rdbEntezami.Checked == false)
+                if (cmbStandardGroups.Text==string.Empty)
+                {
+                    XtraMessageBox.Show("لطفاً از لیست انتخابی گروه مربوطه را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (cmbNoeHesab.Text == string.Empty)
                 {
                     XtraMessageBox.Show("لطفاً نوع حساب را مشخص کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
-
             }
             return true;
         }
@@ -416,18 +428,16 @@ namespace EtelaatePaye.CodingHesabdari
                 txtId.Text = Fm.gridView1.GetFocusedRowCellValue("Id").ToString();
                 txtCode.Text = Fm.gridView1.GetFocusedRowCellValue("Code").ToString();
                 txtName.Text = Fm.gridView1.GetFocusedRowCellValue("Name").ToString();
-                switch (Fm.gridView1.GetFocusedRowCellValue("NoeHesab").ToString())
-                {
-                    case "ترازنامه ای": { rdbTaraznamei.Checked = true; break; }
-                    case "سود و زیانی": { rdbSodZiani.Checked = true; break; }
-                    case "انتظامی": { rdbEntezami.Checked = true; break; }
-                }
+                cmbStandardGroups.SelectedIndex = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("IndexGroupStandard"));
+                cmbNoeHesab.SelectedIndex = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("IndexNoeHesab"));
                 chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("IsActive"));
                 txtSharhHesab.Text = Fm.gridView1.GetFocusedRowCellValue("SharhHesab").ToString();
 
                 CodeBeforeEdit = txtCode.Text;
                 NameBeforeEdit = txtName.Text;
                 IsActiveBeforeEdit = chkIsActive.Checked;
+                if (txtCode.Text == "9")
+                    btnNewCode.Enabled = false;
             }
         }
 
@@ -462,9 +472,9 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (!string.IsNullOrEmpty(txtCode.Text))
             {
-                if (Convert.ToInt32(txtCode.Text) <= 10)
+                if (Convert.ToInt32(txtCode.Text) == 0 || Convert.ToInt32(txtCode.Text) > 9)
                 {
-                    XtraMessageBox.Show("کد وارده بایستی عددی بزرگتر از 10 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    XtraMessageBox.Show("کد وارده بایستی عددی بزرگتر از صفر و کمتر از 10 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     if (Fm.En == EnumCED.Create)
                     {
                         btnNewCode_Click(null, null);
@@ -474,6 +484,33 @@ namespace EtelaatePaye.CodingHesabdari
                         txtCode.Text = CodeBeforeEdit;
                     }
                 }
+            }
+        }
+
+        private void cmbStandardGroups_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtName.Text = cmbStandardGroups.SelectedItem.ToString();
+        }
+
+        private void cmbNoeHesab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblNoeHesab.Text = (cmbNoeHesab.SelectedIndex == 0 || cmbNoeHesab.SelectedIndex == 2) ? "دائم" : "موقت";
+
+        }
+
+        private void cmbNoeHesab_Enter(object sender, EventArgs e)
+        {
+            if (Fm.En == EnumCED.Create)
+            {
+                cmbNoeHesab.ShowPopup();
+            }
+        }
+
+        private void cmbStandardGroups_Enter(object sender, EventArgs e)
+        {
+            if (Fm.En == EnumCED.Create)
+            {
+                cmbStandardGroups.ShowPopup();
             }
         }
     }

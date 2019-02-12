@@ -1,10 +1,10 @@
 ﻿/****************************** Ghost.github.io ******************************\
-*	Module Name:	EpHesabCol.cs
+*	Module Name:	EpHesabMoin.cs
 *	Project:		DBHesabdari_TG
 *	Copyright (C) 2018 Kamal Khayati, All rights reserved.
 *	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
 *
-*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 9   07:13 ب.ظ
+*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 10   14:16
 *	
 ***********************************************************************************/
 using System;
@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_TG
 {
-   public class EpHesabCol
+   public class EpHesabMoin
     {
         public int Id { get; set; }
         [Required]
@@ -28,6 +28,10 @@ namespace DBHesabdari_TG
         [Required, MaxLength(50)]
         public string GroupName { get; set; }
         [Required]
+        public int ColId { get; set; }
+        [Required, MaxLength(50)]
+        public string ColName { get; set; }
+        [Required]
         public int IndexMahiatHesab { get; set; }
         [Required, MaxLength(10)]
         public string MahiatHesab { get; set; }
@@ -35,8 +39,6 @@ namespace DBHesabdari_TG
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
-        public virtual EpHesabGroup EpHesabGroup1 { get; set; }
-        public virtual ICollection<EpHesabMoin> EpHesabMoins { get; set; }
-
+        public virtual EpHesabCol EpHesabCol1 { get; set; }
     }
 }
