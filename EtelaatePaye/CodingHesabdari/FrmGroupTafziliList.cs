@@ -1,10 +1,10 @@
 ﻿/****************************** Ghost.github.io ******************************\
-*	Module Name:	FrmHesabGroupList.cs
+*	Module Name:	FrmGroupTafziliList.cs
 *	Project:		EtelaatePaye
 *	Copyright (C) 2018 Kamal Khayati, All rights reserved.
 *	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
 *
-*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 7   10:36 ب.ظ
+*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 17   11:55 ق.ظ
 *	
 ***********************************************************************************/
 using System;
@@ -17,21 +17,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using HelpClassLibrary;
+using System.Data.Entity;
 using DevExpress.XtraBars;
 using DBHesabdari_TG;
-using System.Data.Entity;
+using HelpClassLibrary;
 
 namespace EtelaatePaye.CodingHesabdari
 {
-    public partial class FrmHesabGroupList : DevExpress.XtraEditors.XtraForm
+    public partial class FrmGroupTafziliList : DevExpress.XtraEditors.XtraForm
     {
-        public FrmHesabGroupList()
+        public FrmGroupTafziliList()
         {
             InitializeComponent();
         }
+
         public EnumCED En;
-        public void FillHesabGroupList()
+        public bool isActive = true;
+        public void FillGroupTafziliList()
         {
             using (var dataContext = new MyContext())
             {
@@ -39,50 +41,50 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     if (isActive == true)
                     {
-                        var q1 = dataContext.EpHesabGroups.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
+                        var q1 = dataContext.EpGroupTafzilis.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
                         if (lblUserId.Text == "1")
                         {
                             if (q1.Count > 0)
-                                epHesabGroupsBindingSource.DataSource = q1;
+                                epGroupTafzilisBindingSource.DataSource = q1;
                             else
-                                epHesabGroupsBindingSource.DataSource = null;
+                                epGroupTafzilisBindingSource.DataSource = null;
                         }
-                        else
-                        {
-                            int _UserId = Convert.ToInt32(lblUserId.Text);
-                            var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
+                        //else
+                        //{
+                        //    int _UserId = Convert.ToInt32(lblUserId.Text);
+                        //    var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
 
-                            if (q1.Count > 0)
-                            {
-                                if (q2.Count > 0)
-                                {
-                                    q2.ForEach(item3 =>
-                                    {
-                                        q1.Remove(dataContext.EpHesabGroups.FirstOrDefault(s => s.Id == item3));
-                                    });
-                                    epHesabGroupsBindingSource.DataSource = q1;
-                                }
-                                else
-                                {
-                                    epHesabGroupsBindingSource.DataSource = q1;
-                                }
-                            }
-                            else
-                                epHesabGroupsBindingSource.DataSource = null;
-                        }
+                        //    if (q1.Count > 0)
+                        //    {
+                        //        if (q2.Count > 0)
+                        //        {
+                        //            q2.ForEach(item3 =>
+                        //            {
+                        //                q1.Remove(dataContext.EpGroupTafzilis.FirstOrDefault(s => s.Id == item3));
+                        //            });
+                        //            epGroupTafzilisBindingSource.DataSource = q1;
+                        //        }
+                        //        else
+                        //        {
+                        //            epGroupTafzilisBindingSource.DataSource = q1;
+                        //        }
+                        //    }
+                        //    else
+                        //        epGroupTafzilisBindingSource.DataSource = null;
+                        //}
                     }
                     else
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q = dataContext.EpHesabGroups.Where(p => p.IsActive == false).OrderBy(s => s.Code);
+                            var q = dataContext.EpGroupTafzilis.Where(p => p.IsActive == false).OrderBy(s => s.Code);
                             if (q.Count() > 0)
-                                epHesabGroupsBindingSource.DataSource = q.ToList();
+                                epGroupTafzilisBindingSource.DataSource = q.ToList();
                             else
-                                epHesabGroupsBindingSource.DataSource = null;
+                                epGroupTafzilisBindingSource.DataSource = null;
                         }
                         else
-                            epHesabGroupsBindingSource.DataSource = null;
+                            epGroupTafzilisBindingSource.DataSource = null;
                     }
 
                 }
@@ -94,10 +96,9 @@ namespace EtelaatePaye.CodingHesabdari
             }
 
         }
-        public bool isActive = true;
         private void btnCreate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmHesabGroupCed fm = new FrmHesabGroupCed(this);
+            FrmGroupTafziliCed fm = new FrmGroupTafziliCed(this);
             En = EnumCED.Create;
             HelpClass1.FormNewRecordCreate(fm);
         }
@@ -106,7 +107,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (gridView1.SelectedRowsCount > 0 && btnEdit.Visibility == BarItemVisibility.Always)
             {
-                FrmHesabGroupCed fm = new FrmHesabGroupCed(this);
+                FrmGroupTafziliCed fm = new FrmGroupTafziliCed(this);
                 En = EnumCED.Edit;
                 HelpClass1.FormCurrentRecordEdit(gridView1, fm);
             }
@@ -116,7 +117,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (gridView1.SelectedRowsCount > 0)
             {
-                FrmHesabGroupCed fm = new FrmHesabGroupCed(this);
+                FrmGroupTafziliCed fm = new FrmGroupTafziliCed(this);
                 En = EnumCED.Delete;
                 HelpClass1.FormCurrentRecordDelete(gridView1, fm);
             }
@@ -130,13 +131,13 @@ namespace EtelaatePaye.CodingHesabdari
         public void btnDisplyActiveList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             isActive = true;
-            FillHesabGroupList();
+            FillGroupTafziliList();
         }
 
         public void btnDisplyNotActiveList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             isActive = false;
-            FillHesabGroupList();
+            FillGroupTafziliList();
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -161,7 +162,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmHesabGroupList_Load(object sender, EventArgs e)
         {
-            FillHesabGroupList();
+            FillGroupTafziliList();
             //using (var db = new MyContext())
             //{
             //    try
@@ -192,5 +193,6 @@ namespace EtelaatePaye.CodingHesabdari
         {
             gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
         }
+
     }
 }

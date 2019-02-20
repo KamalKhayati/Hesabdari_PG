@@ -92,9 +92,11 @@ namespace EtelaatePaye.DafaterMali
 
         }
         public bool isActive = true;
+        public EnumCED En;
         private void btnCreate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmShoabatCed fm = new FrmShoabatCed(this);
+            En = EnumCED.Create;
             HelpClass1.FormNewRecordCreate(fm);
         }
 
@@ -103,6 +105,7 @@ namespace EtelaatePaye.DafaterMali
             if (gridView1.SelectedRowsCount > 0 && btnEdit.Visibility == BarItemVisibility.Always)
             {
                 FrmShoabatCed fm = new FrmShoabatCed(this);
+                En = EnumCED.Edit;
                 HelpClass1.FormCurrentRecordEdit(gridView1, fm);
             }
         }
@@ -112,6 +115,7 @@ namespace EtelaatePaye.DafaterMali
             if (gridView1.SelectedRowsCount > 0)
             {
                 FrmShoabatCed fm = new FrmShoabatCed(this);
+                En = EnumCED.Delete;
                 HelpClass1.FormCurrentRecordDelete(gridView1, fm);
             }
         }

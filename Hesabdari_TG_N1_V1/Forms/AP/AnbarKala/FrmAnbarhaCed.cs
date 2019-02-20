@@ -39,7 +39,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
         string NameBeforeEdit = "";
         private void FrmAnbarhaCed_Load(object sender, EventArgs e)
         {
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 btnNewCode_Click(null, null);
             }
@@ -61,7 +61,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
         {
             if (TextEditValidation())
             {
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     using (var db = new MyContext())
                     {
@@ -93,7 +93,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                         }
                     }
                 }
-                else if (this.Text == "ویرایش رکورد جاری")
+                else if (Fm.En == EnumCED.Edit)
                 {
                     using (var db = new MyContext())
                     {
@@ -122,7 +122,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                         }
                     }
                 }
-                else if (this.Text == "حذف رکورد جاری")
+                else if (Fm.En == EnumCED.Delete)
                 {
                     using (var db = new MyContext())
                     {
@@ -195,7 +195,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
             else if (Convert.ToInt32(txtCode.Text) <= 100)
             {
                 XtraMessageBox.Show("کد وارده باید عددی بزرگتر از 100 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     btnNewCode_Click(null, null);
                 }
@@ -220,7 +220,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                 {
                     try
                     {
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.ApAnbars.Any())
                             {
@@ -240,7 +240,7 @@ namespace Hesabdari_TG_N1_V1.Forms.Ap.AnbarKala
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             int _code = Convert.ToInt32(txtCode.Text);

@@ -24,9 +24,9 @@ using DevExpress.XtraBars;
 
 namespace EtelaatePaye.UsersSystem
 {
-    public partial class FrmAccesslevel1 : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAccesslevelMenuh : DevExpress.XtraEditors.XtraForm
     {
-        public FrmAccesslevel1()
+        public FrmAccesslevelMenuh()
         {
             InitializeComponent();
         }
@@ -198,7 +198,7 @@ namespace EtelaatePaye.UsersSystem
 
         }
 
-        private void FrmAccesslevel1_Load(object sender, EventArgs e)
+        private void FrmAccesslevelMenuh_Load(object sender, EventArgs e)
         {
             FillcmbUsersList();
             FillTreeList();

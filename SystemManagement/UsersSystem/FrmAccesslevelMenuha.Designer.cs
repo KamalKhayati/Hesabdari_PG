@@ -1,6 +1,6 @@
 ﻿namespace EtelaatePaye.UsersSystem
 {
-    partial class FrmAccesslevel1
+    partial class FrmAccesslevelMenuh
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccesslevel1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccesslevelMenuh));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -489,7 +489,7 @@
             // 
             this.msAccessLevelMenusBindingSource.DataSource = typeof(DBHesabdari_TG.MsAccessLevelMenu);
             // 
-            // FrmAccesslevel1
+            // FrmAccesslevelMenuh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -503,12 +503,12 @@
             this.Controls.Add(this.barDockControlTop);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmAccesslevel1";
+            this.Name = "FrmAccesslevelMenuh";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تعیین سطح دسترسی کاربران به منو ها، زیر منو ها و محتویات فرمها";
-            this.Load += new System.EventHandler(this.FrmAccesslevel1_Load);
+            this.Load += new System.EventHandler(this.FrmAccesslevelMenuh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msUserBindingSource)).EndInit();

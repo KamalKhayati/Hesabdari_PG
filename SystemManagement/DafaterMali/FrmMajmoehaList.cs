@@ -39,7 +39,7 @@ namespace EtelaatePaye.DafaterMali
                 {
                     if (isActive == true)
                     {
-                        var q1 = dataContext.MsMajmoes.Where(s => s.MajmoeIsActive == true).OrderBy(s=>s.MajmoeCode).ToList();
+                        var q1 = dataContext.MsMajmoes.Where(s => s.MajmoeIsActive == true).OrderBy(s => s.MajmoeCode).ToList();
                         if (lblUserId.Text == "1")
                         {
                             if (q1.Count > 0)
@@ -72,8 +72,8 @@ namespace EtelaatePaye.DafaterMali
                         if (lblUserId.Text == "1")
                         {
                             var q = dataContext.MsMajmoes.Where(p => p.MajmoeIsActive == false).OrderBy(s => s.MajmoeCode);
-                            if(q.ToList().Count()>0)
-                            msMajmoesBindingSource.DataSource = q.ToList();
+                            if (q.ToList().Count() > 0)
+                                msMajmoesBindingSource.DataSource = q.ToList();
                             else
                                 msMajmoesBindingSource.DataSource = null;
                         }
@@ -90,10 +90,13 @@ namespace EtelaatePaye.DafaterMali
             }
 
         }
-       public bool isActive = true;
+        public bool isActive = true;
+        public EnumCED En;
+
         private void btnCreate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmMajmoehaCed fm = new FrmMajmoehaCed(this);
+            En = EnumCED.Create;
             HelpClass1.FormNewRecordCreate(fm);
         }
 
@@ -102,6 +105,7 @@ namespace EtelaatePaye.DafaterMali
             if (gridView1.SelectedRowsCount > 0 && btnEdit.Visibility == BarItemVisibility.Always)
             {
                 FrmMajmoehaCed fm = new FrmMajmoehaCed(this);
+                En = EnumCED.Edit;
                 HelpClass1.FormCurrentRecordEdit(gridView1, fm);
             }
         }
@@ -111,6 +115,7 @@ namespace EtelaatePaye.DafaterMali
             if (gridView1.SelectedRowsCount > 0)
             {
                 FrmMajmoehaCed fm = new FrmMajmoehaCed(this);
+                En = EnumCED.Delete;
                 HelpClass1.FormCurrentRecordDelete(gridView1, fm);
             }
         }
@@ -170,7 +175,7 @@ namespace EtelaatePaye.DafaterMali
                     if (q1.Count() > 0)
                     {
                         btnCreate.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55010101) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55010102) ?   BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55010102) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         btnDelete.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55010103) ? BarItemVisibility.Never : BarItemVisibility.Always;
                     }
                 }

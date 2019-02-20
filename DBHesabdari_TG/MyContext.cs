@@ -67,6 +67,11 @@ namespace DBHesabdari_TG
         public virtual DbSet<RmsUserBepAccessLevelCodingHesabdari> RmsUserBepAccessLevelCodingHesabdaris { get; set; }
         public virtual DbSet<EpHesabCol> EpHesabCols { get; set; }
         public virtual DbSet<EpHesabMoin> EpHesabMoins { get; set; }
+        public virtual DbSet<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
+        public virtual DbSet<MsActiveSystem> MsActiveSystems { get; set; }
+        public virtual DbSet<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }
+        public virtual DbSet<EpGroupTafzili> EpGroupTafzilis { get; set; }
+        public virtual DbSet<REpHesabMoinBEpGroupTafziliLevel1> REpHesabMoinBEpGroupTafziliLevel1s { get; set; }
 
 
 
@@ -113,6 +118,11 @@ namespace DBHesabdari_TG
 
             modelBuilder.Entity<EpHesabGroup>().HasMany(m => m.EpHesabCols).WithRequired(m => m.EpHesabGroup1).HasForeignKey(m => m.GroupId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpHesabCol>().HasMany(m => m.EpHesabMoins).WithRequired(m => m.EpHesabCol1).HasForeignKey(m => m.ColId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabMoin>().HasMany(m => m.EpSharhStandardMoins).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpHesabMoin>().HasMany(m => m.RMsActiveSystemBEpHesabMoins).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MsActiveSystem>().HasMany(m => m.RMsActiveSystemBEpHesabMoins).WithRequired(m => m.MsActiveSystem1).HasForeignKey(m => m.ActiveSystemId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpHesabMoin>().HasMany(m => m.REpHesabMoinBEpGroupTafziliLevel1s).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpGroupTafzili>().HasMany(m => m.REpHesabMoinBEpGroupTafziliLevel1s).WithRequired(m => m.EpGroupTafzili1).HasForeignKey(m => m.GroupTafziliId).WillCascadeOnDelete(false);
 
             #region
             //--------> one - to - zero - or - one relationships < ------------

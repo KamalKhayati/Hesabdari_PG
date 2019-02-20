@@ -62,6 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliCed.Designer.cs">
+      <DependentUpon>FrmGroupTafziliCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliList.Designer.cs">
+      <DependentUpon>FrmGroupTafziliList.cs</DependentUpon>
+    </Compile>
     <Compile Include="CodingHesabdari\FrmHesabColCed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CodingHesabdari\FrmGroupTafziliCed.resx">
+      <DependentUpon>FrmGroupTafziliCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmGroupTafziliList.resx">
+      <DependentUpon>FrmGroupTafziliList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmHesabColCed.resx">
       <DependentUpon>FrmHesabColCed.cs</DependentUpon>
     </EmbeddedResource>

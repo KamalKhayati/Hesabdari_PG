@@ -39,6 +39,14 @@ namespace DBHesabdari_TG.Migrations
             {
                 try
                 {
+                    if (!context.MsActiveSystems.Any())
+                    {
+                        context.MsActiveSystems.Add(new MsActiveSystem() { Id = 1, Code = 10, Name = "فروش و خرید", IsActive = true });
+                        context.MsActiveSystems.Add(new MsActiveSystem() { Id = 2, Code = 15, Name = "دریافت و پرداخت", IsActive = true });
+                        context.MsActiveSystems.Add(new MsActiveSystem() { Id = 3, Code = 20, Name = "اسناد حسابداری", IsActive = true });
+                        context.MsActiveSystems.Add(new MsActiveSystem() { Id = 4, Code = 25, Name = "انبار و کالا", IsActive = false });
+                    }
+
                     if (!context.MsUsers.Any())
                     {
                         context.MsUsers.Add(new MsUser() { MsUserId = 1, UserCode = 101, UserName = "مدیر سیستم", Name = "1", Password = "1", UserIsActive = true });

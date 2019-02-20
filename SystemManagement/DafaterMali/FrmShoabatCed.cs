@@ -241,7 +241,7 @@ namespace EtelaatePaye.DafaterMali
             {
                 btnCreateClose.Enabled = false;
                 btnCreateNext.Enabled = false;
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     using (var db = new MyContext())
                     {
@@ -329,7 +329,7 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (this.Text == "ویرایش رکورد جاری")
+                else if (Fm.En == EnumCED.Edit)
                 {
                     using (var db = new MyContext())
                     {
@@ -340,23 +340,17 @@ namespace EtelaatePaye.DafaterMali
                             string _MajmoeName = cmbMajmoehaList.Text;
                             int _VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
                             string _VahedName = cmbVahedhaList.Text;
+                            int _ShobeCode = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
                             var q = db.MsShobes.FirstOrDefault(p => p.MsShobeId == RowId);
                             if (q != null)
                             {
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                    q.MsMajmoeId = _MajmoeId;
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                    q.MajmoeName = _MajmoeName;
-                                if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
-                                    q.MsVahedId = _VahedId;
-                                if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
-                                    q.VahedName = _VahedName;
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                    q.ShobeCode = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
-                                if (NameBeforeEdit != txtName.Text)
-                                    q.ShobeName = txtName.Text;
-                                if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                    q.ShobeIsActive = chkIsActive.Checked;
+                                q.MsMajmoeId = _MajmoeId;
+                                q.MajmoeName = _MajmoeName;
+                                q.MsVahedId = _VahedId;
+                                q.VahedName = _VahedName;
+                                q.ShobeCode = _ShobeCode;
+                                q.ShobeName = txtName.Text;
+                                q.ShobeIsActive = chkIsActive.Checked;
                                 /////////////////////////////متد اصلاح کد و نام مجموعه در لیست دوره های مالی WillCascadeOnUpdate ///////////////////////
 
                                 /////////////////////////// WillCascadeOnUpdate : MsDoreMalis /////////////////////////
@@ -367,11 +361,9 @@ namespace EtelaatePaye.DafaterMali
                                     {
                                         if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
                                             item.MsMajmoeId = _MajmoeId;
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
                                             item.MajmoeName = _MajmoeName;
                                         if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
                                             item.MsVahedId = _VahedId;
-                                        if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
                                             item.VahedName = _VahedName;
                                         if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || CodeBeforeEdit != txtCode.Text)
                                             item.DoreMaliCode = Convert.ToInt32(item.DoreMaliCode.ToString().Substring(0, 2).Replace(item.DoreMaliCode.ToString().Substring(0, 2), txtVahedCode.Text.Substring(0, 2))
@@ -519,10 +511,10 @@ namespace EtelaatePaye.DafaterMali
                                     var v = db.MsVaheds.FirstOrDefault(p => p.MsVahedId == VahedId);
                                     var a1 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
                                     var a2 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
-                                    var a3 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == RowId && p.DoreMaliId == 0);
+                                    //var a3 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == RowId && p.DoreMaliId == 0);
                                     var b1 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
                                     var b2 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
-                                    var b3 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == RowId && p.DoreMaliId == 0);
+                                    //var b3 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == RowId && p.DoreMaliId == 0);
                                     if (m != null)
                                         m.MajmoeIsActive = true;
                                     if (v != null)
@@ -531,14 +523,14 @@ namespace EtelaatePaye.DafaterMali
                                         a1.IsActive = true;
                                     if (a2 != null)
                                         a2.IsActive = true;
-                                    if (a3 != null)
-                                        a3.IsActive = true;
+                                    //if (a3 != null)
+                                    //    a3.IsActive = true;
                                     if (b1 != null)
                                         b1.IsActive = true;
                                     if (b2 != null)
                                         b2.IsActive = true;
-                                    if (b3 != null)
-                                        b3.IsActive = true;
+                                    //if (b3 != null)
+                                    //    b3.IsActive = true;
                                 }
 
                                 db.SaveChanges();
@@ -557,7 +549,7 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (this.Text == "حذف رکورد جاری")
+                else if (Fm.En == EnumCED.Delete)
                 {
                     using (var db = new MyContext())
                     {
@@ -620,7 +612,7 @@ namespace EtelaatePaye.DafaterMali
             else if (Convert.ToInt32(txtCode.Text) == 0)
             {
                 XtraMessageBox.Show("کد وارده باید عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     btnNewCode_Click(null, null);
                 }
@@ -637,7 +629,7 @@ namespace EtelaatePaye.DafaterMali
                 {
                     try
                     {
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsShobes.Any())
                             {
@@ -651,7 +643,7 @@ namespace EtelaatePaye.DafaterMali
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             int _code = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
@@ -684,7 +676,7 @@ namespace EtelaatePaye.DafaterMali
                 {
                     try
                     {
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsShobes.Any())
                             {
@@ -696,7 +688,7 @@ namespace EtelaatePaye.DafaterMali
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             var q1 = db.MsShobes.Where(p => p.MsVahedId == _VahedId && p.MsShobeId != RowId && p.ShobeName == txtName.Text);
@@ -733,7 +725,7 @@ namespace EtelaatePaye.DafaterMali
 
         private void cmbMajmoehaList_Enter(object sender, EventArgs e)
         {
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 cmbMajmoehaList.ShowPopup();
             }
@@ -746,7 +738,7 @@ namespace EtelaatePaye.DafaterMali
 
         private void cmbVahedhaList_Enter(object sender, EventArgs e)
         {
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 cmbVahedhaList.ShowPopup();
             }

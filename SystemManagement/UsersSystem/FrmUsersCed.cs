@@ -36,7 +36,7 @@ namespace EtelaatePaye.UsersSystem
         string UserNameBeforEdit = "";
         private void FrmUsersCed_Load(object sender, EventArgs e)
         {
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 btnNewCode_Click(null, null);
             }
@@ -75,7 +75,7 @@ namespace EtelaatePaye.UsersSystem
             {
                 btnCreateClose.Enabled = false;
                 btnCreateNext.Enabled = false;
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     using (var db = new MyContext())
                     {
@@ -113,7 +113,7 @@ namespace EtelaatePaye.UsersSystem
                         }
                     }
                 }
-                else if (this.Text == "ویرایش رکورد جاری")
+                else if (Fm.En == EnumCED.Edit)
                 {
                     using (var db = new MyContext())
                     {
@@ -144,7 +144,7 @@ namespace EtelaatePaye.UsersSystem
                         }
                     }
                 }
-                else if (this.Text == "حذف رکورد جاری")
+                else if (Fm.En == EnumCED.Delete)
                 {
                     using (var db = new MyContext())
                     {
@@ -230,7 +230,7 @@ namespace EtelaatePaye.UsersSystem
             else if (Convert.ToInt32(txtCode.Text) <= 100)
             {
                 XtraMessageBox.Show("کد وارده باید عددی بزرگتر از 100 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     btnNewCode_Click(null, null);
                 }
@@ -247,7 +247,7 @@ namespace EtelaatePaye.UsersSystem
                 {
                     try
                     {
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsUsers.Any())
                             {
@@ -261,7 +261,7 @@ namespace EtelaatePaye.UsersSystem
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             int _code = Convert.ToInt32(txtCode.Text);
@@ -295,7 +295,7 @@ namespace EtelaatePaye.UsersSystem
                 {
                     try
                     {
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsUsers.Any())
                             {
@@ -316,7 +316,7 @@ namespace EtelaatePaye.UsersSystem
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             var q2 = db.MsUsers.Where(p => p.MsUserId != RowId && p.UserName == txtUserName.Text);

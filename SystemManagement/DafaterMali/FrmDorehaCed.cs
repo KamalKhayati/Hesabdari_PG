@@ -245,7 +245,7 @@ namespace EtelaatePaye.DafaterMali
             {
                 btnCreateClose.Enabled = false;
                 btnCreateNext.Enabled = false;
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     using (var db = new MyContext())
                     {
@@ -310,7 +310,7 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (this.Text == "ویرایش رکورد جاری")
+                else if (Fm.En == EnumCED.Edit)
                 {
                     using (var db = new MyContext())
                     {
@@ -337,7 +337,7 @@ namespace EtelaatePaye.DafaterMali
                                 q.DoreIsClose = chkDoreIsClose.Checked;
                                 q.Maliat = Convert.ToSingle(txtMaliat.Text.Replace('/', '.') != "" ? txtMaliat.Text.Replace('/', '.') : "0");
                                 q.Avarez = Convert.ToSingle(txtAvarez.Text.Replace('/', '.') != "" ? txtAvarez.Text.Replace('/', '.') : "0");
-                                /////////////////////////////متد اصلاح کد و نام مجموعه در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
+                                /////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
                                 var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.DoreMaliId == RowId);
                                 if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue)|| ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue) || CodeBeforeEdit != txtCode.Text)
                                     q8.KeyId = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
@@ -377,11 +377,11 @@ namespace EtelaatePaye.DafaterMali
                                     var a1 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
                                     var a2 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
                                     var a3 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == 0);
-                                    var a4 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
+                                    //var a4 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
                                     var b1 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
                                     var b2 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
                                     var b3 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == 0);
-                                    var b4 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
+                                    //var b4 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
                                     if (m != null)
                                         m.MajmoeIsActive = true;
                                     if (v != null)
@@ -394,16 +394,16 @@ namespace EtelaatePaye.DafaterMali
                                         a2.IsActive = true;
                                     if (a3 != null)
                                         a3.IsActive = true;
-                                    if (a4 != null)
-                                        a4.IsActive = true;
+                                    //if (a4 != null)
+                                    //    a4.IsActive = true;
                                     if (b1 != null)
                                         b1.IsActive = true;
                                     if (b2 != null)
                                         b2.IsActive = true;
                                     if (b3 != null)
                                         b3.IsActive = true;
-                                    if (b4 != null)
-                                        b4.IsActive = true;
+                                    //if (b4 != null)
+                                    //    b4.IsActive = true;
                                 }
                                 db.SaveChanges();
 
@@ -421,7 +421,7 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (this.Text == "حذف رکورد جاری")
+                else if (Fm.En == EnumCED.Delete)
                 {
                     int RowId = Convert.ToInt32(txtId.Text);
                     using (var db = new MyContext())
@@ -474,7 +474,7 @@ namespace EtelaatePaye.DafaterMali
             else if (Convert.ToInt32(txtCode.Text) == 0)
             {
                 XtraMessageBox.Show("کد وارده باید عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     btnNewCode_Click(null, null);
                 }
@@ -492,7 +492,7 @@ namespace EtelaatePaye.DafaterMali
                     try
                     {
                         int _code = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsDoreMalis.Any())
                             {
@@ -505,7 +505,7 @@ namespace EtelaatePaye.DafaterMali
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             var q1 = db.MsDoreMalis.Where(p => p.MsDoreMaliId != RowId && p.DoreMaliCode == _code);
@@ -542,7 +542,7 @@ namespace EtelaatePaye.DafaterMali
                     try
                     {
                         int _DoreMali = Convert.ToInt32(txtDoreMali.Text);
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsDoreMalis.Any())
                             {
@@ -554,7 +554,7 @@ namespace EtelaatePaye.DafaterMali
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             var q1 = db.MsDoreMalis.Where(p => p.MsShobeId == _ShobeId && p.MsDoreMaliId != RowId && p.DoreMali == _DoreMali);
                             if (q1.Any())
@@ -588,7 +588,7 @@ namespace EtelaatePaye.DafaterMali
 
         private void cmbMajmoehaList_Enter(object sender, EventArgs e)
         {
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 cmbMajmoehaList.ShowPopup();
             }
@@ -601,7 +601,7 @@ namespace EtelaatePaye.DafaterMali
 
         private void cmbVahedhaList_Enter(object sender, EventArgs e)
         {
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 cmbVahedhaList.ShowPopup();
             }
@@ -614,7 +614,7 @@ namespace EtelaatePaye.DafaterMali
 
         private void cmbShobehaList_Enter(object sender, EventArgs e)
         {
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 cmbShobeList.ShowPopup();
             }

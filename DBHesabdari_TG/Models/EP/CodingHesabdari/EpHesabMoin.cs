@@ -10,6 +10,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,5 +41,25 @@ namespace DBHesabdari_TG
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         public virtual EpHesabCol EpHesabCol1 { get; set; }
+        public virtual ICollection<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
+        public virtual ICollection<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }
+        public virtual ICollection<REpHesabMoinBEpGroupTafziliLevel1> REpHesabMoinBEpGroupTafziliLevel1s { get; set; }
+    }
+
+    public class REpHesabMoinBEpGroupTafziliLevel1
+    {
+        [Key]
+        [Column(Order = 0)]
+        public int MoinId { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        public int GroupTafziliId { get; set; }
+
+        [Column(Order = 2)]
+        public int NumberLevel { get; set; }
+
+        public virtual EpHesabMoin EpHesabMoin1 { get; set; }
+        public virtual EpGroupTafzili EpGroupTafzili1 { get; set; }
     }
 }

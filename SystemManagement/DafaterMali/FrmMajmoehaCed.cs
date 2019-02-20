@@ -72,7 +72,7 @@ namespace EtelaatePaye.DafaterMali
             {
                 btnCreateClose.Enabled = false;
                 btnCreateNext.Enabled = false;
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     using (var db = new MyContext())
                     {
@@ -141,7 +141,7 @@ namespace EtelaatePaye.DafaterMali
                                 btnCreateClose.Enabled = true;
                                 btnCreateNext.Enabled = true;
                                 btnNewCode_Click(null, null);
-                                txtName.Text = "";
+                                txtName.Text = string.Empty;
                                 HelpClass1.ClearTextEditControlsText(xtraScrollableControl1);
                                 txtName.Focus();
                             }
@@ -152,7 +152,7 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (this.Text == "ویرایش رکورد جاری")
+                else if (Fm.En == EnumCED.Edit)
                 {
                     using (var db = new MyContext())
                     {
@@ -345,7 +345,7 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (this.Text == "حذف رکورد جاری")
+                else if (Fm.En == EnumCED.Delete)
                 {
                     using (var db = new MyContext())
                     {
@@ -408,7 +408,7 @@ namespace EtelaatePaye.DafaterMali
             else if (Convert.ToInt32(txtCode.Text) <= 9)
             {
                 XtraMessageBox.Show("کد وارده باید عددی بزرگتر از 9 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     btnNewCode_Click(null, null);
                 }
@@ -425,7 +425,7 @@ namespace EtelaatePaye.DafaterMali
                 {
                     try
                     {
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsMajmoes.Any())
                             {
@@ -439,7 +439,7 @@ namespace EtelaatePaye.DafaterMali
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             int _code = Convert.ToInt32(txtCode.Text);
@@ -473,7 +473,7 @@ namespace EtelaatePaye.DafaterMali
                 {
                     try
                     {
-                        if (this.Text == "ایجاد رکورد جدید")
+                        if (Fm.En == EnumCED.Create)
                         {
                             if (db.MsMajmoes.Any())
                             {
@@ -485,7 +485,7 @@ namespace EtelaatePaye.DafaterMali
                                 }
                             }
                         }
-                        else if (this.Text == "ویرایش رکورد جاری")
+                        else if (Fm.En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             var q2 = db.MsMajmoes.Where(p => p.MsMajmoeId != RowId && p.MajmoeName == txtName.Text);
@@ -516,7 +516,7 @@ namespace EtelaatePaye.DafaterMali
             if (Fm.lblUserId.Text == "1")
                 chkIsActive.Visible = true;
 
-            if (this.Text == "ایجاد رکورد جدید")
+            if (Fm.En == EnumCED.Create)
             {
                 btnNewCode_Click(null, null);
             }
@@ -637,7 +637,7 @@ namespace EtelaatePaye.DafaterMali
             if (Convert.ToInt32(txtCode.Text) <= 9)
             {
                 XtraMessageBox.Show("کد وارده باید عددی بزرگتر از 9 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (this.Text == "ایجاد رکورد جدید")
+                if (Fm.En == EnumCED.Create)
                 {
                     btnNewCode_Click(null, null);
                 }

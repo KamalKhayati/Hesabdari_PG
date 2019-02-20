@@ -187,7 +187,6 @@ namespace EtelaatePaye.CodingHesabdari
                             {
                                 btnCreateClose.Enabled = true;
                                 btnCreateNext.Enabled = true;
-                                //cmbListHesabGroup.EditValue = Convert.ToInt32(cmbListHesabGroup.EditValue);
                                 btnNewCode_Click(null, null);
                                 txtSharhHesab.Text = string.Empty;
                                 cmbMahiatHesab.EditValue = string.Empty;
@@ -208,13 +207,14 @@ namespace EtelaatePaye.CodingHesabdari
                         try
                         {
                             int _GroupId = Convert.ToInt32(cmbListHesabGroup.EditValue);
+                            int _Code = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
                             string _GroupName = cmbListHesabGroup.Text;
                             string _Name = txtName.Text;
-                            int _Id = Convert.ToInt32(txtId.Text);
-                            var q = db.EpHesabCols.FirstOrDefault(p => p.Id == _Id);
+                            int RowId = Convert.ToInt32(txtId.Text);
+                            var q = db.EpHesabCols.FirstOrDefault(p => p.Id == RowId);
                             if (q != null)
                             {
-                                q.Code = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
+                                q.Code = _Code;
                                 q.Name = _Name;
                                 q.GroupId = _GroupId;
                                 q.GroupName = _GroupName;
@@ -223,117 +223,91 @@ namespace EtelaatePaye.CodingHesabdari
                                 q.MahiatHesab = cmbMahiatHesab.Text;
                                 q.SharhHesab = txtSharhHesab.Text;
 
-                                ///////////////////////////////متد اصلاح کد و نام در لیست شعبه ها و دوره های مالی WillCascadeOnUpdate ///////////////////////
+                                ///////////////////////////////متد اصلاح کد و نام در لیست حساب معین WillCascadeOnUpdate ///////////////////////
 
-                                ///////////////////////////// WillCascadeOnUpdate : MsShobes /////////////////////////
-                                //var q6 = db.MsShobes.Where(s => s.Id == _Id).ToList();
-                                //if (q6.Count > 0)
-                                //{
-                                //    q6.ForEach(item =>
-                                //    {
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //            item.GroupId = _GroupId;
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //            item.GroupName = _GroupName;
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                //            item.ShobeCode = Convert.ToInt32(item.ShobeCode.ToString().Substring(0, 2).Replace(item.ShobeCode.ToString().Substring(0, 2), txtGroupCode.Text)
-                                //            + item.ShobeCode.ToString().Substring(2, 2).Replace(item.ShobeCode.ToString().Substring(2, 2), txtCode.Text)
-                                //            + item.ShobeCode.ToString().Substring(4));
-                                //        if (NameBeforeEdit != txtName.Text)
-                                //            item.Name = _Name;
-                                //        if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                //            item.ShobeIsActive = chkIsActive.Checked;
-                                //    });
-                                //}
-                                ///////////////////////////// WillCascadeOnUpdate : MsDoreMalis /////////////////////////
-                                //var q7 = db.MsDoreMalis.Where(s => s.Id == _Id).ToList();
-                                //if (q7.Count > 0)
-                                //{
-                                //    q7.ForEach(item =>
-                                //    {
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //            item.GroupId = _GroupId;
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //            item.GroupName = _GroupName;
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                //            item.DoreMaliCode = Convert.ToInt32(item.DoreMaliCode.ToString().Substring(0, 2).Replace(item.DoreMaliCode.ToString().Substring(0, 2), txtGroupCode.Text)
-                                //            + item.DoreMaliCode.ToString().Substring(2, 2).Replace(item.DoreMaliCode.ToString().Substring(2, 2), txtCode.Text)
-                                //            + item.DoreMaliCode.ToString().Substring(4));
-                                //        if (NameBeforeEdit != txtName.Text)
-                                //            item.Name = _Name;
-                                //        if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                //            item.DoreMaliIsActive = chkIsActive.Checked;
-                                //    });
-                                //}
-                                ///////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
-                                //var q8 = db.MsAccessLevelDafaterMalis.Where(s => s.VahedId == _Id).ToList();
-                                //if (q8.Count > 0)
-                                //{
-                                //    q8.ForEach(item =>
-                                //    {
-                                //        if (item.ShobeId == 0)
-                                //        {
-                                //            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                //                item.KeyId = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
-                                //            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //                item.ParentId = Convert.ToInt32(txtGroupCode.Text);
-                                //            if (NameBeforeEdit != txtName.Text)
-                                //                item.LevelName = txtName.Text;
-                                //            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //                item.MajmoeId = _GroupId;
-                                //            if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                //                item.IsActive = chkIsActive.Checked;
-                                //        }
-                                //        else
-                                //        {
-                                //            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                //                item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtGroupCode.Text)
-                                //                + item.KeyId.ToString().Substring(2, 2).Replace(item.KeyId.ToString().Substring(2, 2), txtCode.Text) + item.KeyId.ToString().Substring(4));
-                                //            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                //                item.ParentId = Convert.ToInt32(item.ParentId.ToString().Substring(0, 2).Replace(item.ParentId.ToString().Substring(0, 2), txtGroupCode.Text)
-                                //                + item.ParentId.ToString().Substring(2, 2).Replace(item.ParentId.ToString().Substring(2, 2), txtCode.Text) + item.ParentId.ToString().Substring(4));
-                                //            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //                item.MajmoeId = _GroupId;
-                                //            if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                //                item.IsActive = chkIsActive.Checked;
-                                //        }
-                                //    });
-                                //}
-                                /////////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و سطح دسترسی لیست دفاتر مالی  WillCascadeOnUpdate////////////////////////////////////// 
-                                //var q9 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.VahedId == _Id).ToList();
-                                //if (q9.Count > 0)
-                                //{
-                                //    q9.ForEach(item =>
-                                //    {
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                //            item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtGroupCode.Text)
-                                //            + item.KeyId.ToString().Substring(2, 2).Replace(item.KeyId.ToString().Substring(2, 2), txtCode.Text) + item.KeyId.ToString().Substring(4));
-                                //        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                //            item.MajmoeId = _GroupId;
-                                //        if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                //            item.IsActive = chkIsActive.Checked;
-                                //    });
-                                //}
+                                ///////////////////////////// WillCascadeOnUpdate : EpHesabMoins /////////////////////////
+                                var q6 = db.EpHesabMoins.Where(s => s.ColId == RowId).ToList();
+                                if (q6.Count > 0)
+                                {
+                                    q6.ForEach(item =>
+                                    {
+                                        if (CodeBeforeEdit != txtCode.Text)
+                                            item.Code = Convert.ToInt32(item.Code.ToString().Substring(0, 2).Replace(item.Code.ToString().Substring(0, 2), _Code.ToString())
+                                                + item.Code.ToString().Substring(2));
+                                        if (NameBeforeEdit != txtName.Text)
+                                            item.ColName = txtName.Text;
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            item.IsActive = chkIsActive.Checked;
+                                    });
+                                }
+                                ///////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
+                                var q8 = db.EpAccessLevelCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
+                                if (q8.Count > 0)
+                                {
+                                    q8.ForEach(item =>
+                                    {
+                                        if (item.HesabMoinId == 0)
+                                        {
+                                            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                item.KeyId = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
+                                            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
+                                                item.ParentId = Convert.ToInt32(txtGroupCode.Text);
+                                            if (NameBeforeEdit != txtName.Text)
+                                                item.LevelName = txtName.Text;
+                                            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
+                                                item.HesabGroupId = _GroupId;
+                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                item.IsActive = chkIsActive.Checked;
+                                        }
+                                        else
+                                        {
+                                            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), _Code.ToString())
+                                                + item.KeyId.ToString().Substring(2));
+                                            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                item.ParentId = Convert.ToInt32(item.ParentId.ToString().Substring(0, 2).Replace(item.ParentId.ToString().Substring(0, 2), _Code.ToString())
+                                                + item.ParentId.ToString().Substring(2));
+                                            if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
+                                                item.HesabGroupId = _GroupId;
+                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                item.IsActive = chkIsActive.Checked;
+                                        }
+                                    });
+                                }
+                                /////////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate////////////////////////////////////// 
+                                var q9 = db.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
+                                if (q9.Count > 0)
+                                {
+                                    q9.ForEach(item =>
+                                    {
+                                        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                            item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), _Code.ToString())
+                                            + item.KeyId.ToString().Substring(2));
+                                        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
+                                            item.HesabGroupId = _GroupId;
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            item.IsActive = chkIsActive.Checked;
+                                    });
+                                }
                                 //////////////////////////////////////////////////////////////////////////////////////
-                                //if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
-                                //{
-                                //    int MajmoeId = Convert.ToInt32(cmbListHesabGroup.EditValue);
-                                //    var m = db.MsMajmoes.FirstOrDefault(p => p.GroupId == MajmoeId);
-                                //    var a1 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
-                                //    var a2 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == _Id && p.ShobeId == 0);
-                                //    var b1 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
-                                //    var b2 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == _Id && p.ShobeId == 0);
-                                //    if (m != null)
-                                //        m.MajmoeIsActive = true;
-                                //    if (a1 != null)
-                                //        a1.IsActive = true;
-                                //    if (a2 != null)
-                                //        a2.IsActive = true;
-                                //    if (b1 != null)
-                                //        b1.IsActive = true;
-                                //    if (b2 != null)
-                                //        b2.IsActive = true;
-                                //}
+                                if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
+                                {
+                                    var m = db.EpHesabGroups.FirstOrDefault(p => p.Id == _GroupId);
+                                    var a1 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
+                                    //var a2 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
+                                    var b1 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
+                                    //var b2 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
+                                    if (m != null)
+                                        m.IsActive = true;
+                                    if (a1 != null)
+                                        a1.IsActive = true;
+                                    //if (a2 != null)
+                                    //    a2.IsActive = true;
+                                    if (b1 != null)
+                                        b1.IsActive = true;
+                                    //if (b2 != null)
+                                    //    b2.IsActive = true;
+                                }
 
                                 db.SaveChanges();
 
@@ -377,8 +351,8 @@ namespace EtelaatePaye.CodingHesabdari
                         }
                         catch (DbUpdateException)
                         {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد \n حذف رکورد جاری مقدور نیست \n" +
-                                " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری  (در لیست شعبه هاو لیست دوره ها) حذف گردد" +
+                            XtraMessageBox.Show("عملیات با خطا مواجه شد \n حذف این حساب کل مقدور نیست \n" +
+                                " جهت حذف حساب کل در ابتدا بایستی زیر مجموعه های این حساب (در لیست حسابهای معین و گروه تفضیلی) حذف گردد" +
                                 "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         catch (Exception ex)

@@ -54,15 +54,23 @@
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.tbpSharhStandard = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.EpSharhStandardMoinsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMoinId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEpHesabMoin1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tbpSharhHesab = new DevExpress.XtraTab.XtraTabPage();
+            this.txtSharhHesab = new DevExpress.XtraEditors.MemoEdit();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chkListBoxActiveSystem = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.msActiveSystemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tbpLevel1 = new DevExpress.XtraTab.XtraTabPage();
             this.chkListBoxLevel1 = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.epGroupTafzilisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbpLevel2 = new DevExpress.XtraTab.XtraTabPage();
             this.chkListBoxLevel2 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.tbpLevel3 = new DevExpress.XtraTab.XtraTabPage();
@@ -72,8 +80,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.tbpSharhHesab = new DevExpress.XtraTab.XtraTabPage();
-            this.txtSharhHesab = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListHesabGroup.Properties)).BeginInit();
@@ -93,22 +99,25 @@
             this.xtraTabControl2.SuspendLayout();
             this.tbpSharhStandard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpSharhStandardMoinsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.tbpSharhHesab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxActiveSystem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msActiveSystemsBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tbpLevel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxLevel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epGroupTafzilisBindingSource)).BeginInit();
             this.tbpLevel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxLevel2)).BeginInit();
             this.tbpLevel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxLevel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListHesabCol.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epHesabColsBindingSource)).BeginInit();
-            this.tbpSharhHesab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -403,6 +412,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.EpSharhStandardMoinsBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -416,11 +426,18 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // EpSharhStandardMoinsBindingSource
+            // 
+            this.EpSharhStandardMoinsBindingSource.DataSource = typeof(DBHesabdari_TG.EpSharhStandardMoin);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
-            this.Line});
+            this.Line,
+            this.colName,
+            this.colMoinId,
+            this.colEpHesabMoin1});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.IndicatorWidth = 25;
@@ -430,8 +447,10 @@
             this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
             this.gridView1.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.gridView1.OptionsView.RowAutoHeight = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridView1_CustomDrawRowIndicator);
             // 
             // colId
             // 
@@ -452,9 +471,48 @@
             this.Line.MinWidth = 19;
             this.Line.Name = "Line";
             this.Line.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
-            this.Line.Visible = true;
-            this.Line.VisibleIndex = 0;
             this.Line.Width = 60;
+            // 
+            // colName
+            // 
+            this.colName.AppearanceCell.Options.UseTextOptions = true;
+            this.colName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colName.Caption = "شرح";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 0;
+            this.colName.Width = 600;
+            // 
+            // colMoinId
+            // 
+            this.colMoinId.FieldName = "MoinId";
+            this.colMoinId.Name = "colMoinId";
+            // 
+            // colEpHesabMoin1
+            // 
+            this.colEpHesabMoin1.FieldName = "EpHesabMoin1";
+            this.colEpHesabMoin1.Name = "colEpHesabMoin1";
+            // 
+            // tbpSharhHesab
+            // 
+            this.tbpSharhHesab.Controls.Add(this.txtSharhHesab);
+            this.tbpSharhHesab.Name = "tbpSharhHesab";
+            this.tbpSharhHesab.Size = new System.Drawing.Size(575, 174);
+            this.tbpSharhHesab.Text = "توضیح یا تشریح حساب (اختیاری)";
+            // 
+            // txtSharhHesab
+            // 
+            this.txtSharhHesab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSharhHesab.Location = new System.Drawing.Point(0, 0);
+            this.txtSharhHesab.Name = "txtSharhHesab";
+            this.txtSharhHesab.Properties.MaxLength = 50;
+            this.txtSharhHesab.Size = new System.Drawing.Size(575, 174);
+            this.txtSharhHesab.TabIndex = 1;
+            this.txtSharhHesab.TabStop = false;
             // 
             // groupBox3
             // 
@@ -464,20 +522,26 @@
             this.groupBox3.Size = new System.Drawing.Size(416, 174);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "ارتباط معین با سیستمهای فعال";
+            this.groupBox3.Text = "تعیین دسترسی سیستمهای فعال به معین";
             // 
             // chkListBoxActiveSystem
             // 
+            this.chkListBoxActiveSystem.CheckOnClick = true;
+            this.chkListBoxActiveSystem.DataSource = this.msActiveSystemsBindingSource;
+            this.chkListBoxActiveSystem.DisplayMember = "Name";
             this.chkListBoxActiveSystem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkListBoxActiveSystem.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "فروش و خرید", System.Windows.Forms.CheckState.Checked),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "دریافت و پرداخت", System.Windows.Forms.CheckState.Checked),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "انبار و کالا", System.Windows.Forms.CheckState.Checked)});
+            this.chkListBoxActiveSystem.HorizontalScrollbar = true;
             this.chkListBoxActiveSystem.Location = new System.Drawing.Point(3, 29);
+            this.chkListBoxActiveSystem.MultiColumn = true;
             this.chkListBoxActiveSystem.Name = "chkListBoxActiveSystem";
             this.chkListBoxActiveSystem.Size = new System.Drawing.Size(410, 142);
             this.chkListBoxActiveSystem.TabIndex = 0;
             this.chkListBoxActiveSystem.TabStop = false;
+            this.chkListBoxActiveSystem.ValueMember = "Id";
+            // 
+            // msActiveSystemsBindingSource
+            // 
+            this.msActiveSystemsBindingSource.DataSource = typeof(DBHesabdari_TG.MsActiveSystem);
             // 
             // groupBox1
             // 
@@ -512,11 +576,21 @@
             // 
             // chkListBoxLevel1
             // 
+            this.chkListBoxLevel1.CheckOnClick = true;
+            this.chkListBoxLevel1.DataSource = this.epGroupTafzilisBindingSource;
+            this.chkListBoxLevel1.DisplayMember = "Name";
             this.chkListBoxLevel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkListBoxLevel1.HorizontalScrollbar = true;
             this.chkListBoxLevel1.Location = new System.Drawing.Point(0, 0);
+            this.chkListBoxLevel1.MultiColumn = true;
             this.chkListBoxLevel1.Name = "chkListBoxLevel1";
             this.chkListBoxLevel1.Size = new System.Drawing.Size(404, 156);
             this.chkListBoxLevel1.TabIndex = 0;
+            this.chkListBoxLevel1.ValueMember = "Id";
+            // 
+            // epGroupTafzilisBindingSource
+            // 
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_TG.EpGroupTafzili);
             // 
             // tbpLevel2
             // 
@@ -596,23 +670,6 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(288, 99);
             // 
-            // tbpSharhHesab
-            // 
-            this.tbpSharhHesab.Controls.Add(this.txtSharhHesab);
-            this.tbpSharhHesab.Name = "tbpSharhHesab";
-            this.tbpSharhHesab.Size = new System.Drawing.Size(575, 174);
-            this.tbpSharhHesab.Text = "توضیح یا تشریح حساب (اختیاری)";
-            // 
-            // txtSharhHesab
-            // 
-            this.txtSharhHesab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSharhHesab.Location = new System.Drawing.Point(0, 0);
-            this.txtSharhHesab.Name = "txtSharhHesab";
-            this.txtSharhHesab.Properties.MaxLength = 50;
-            this.txtSharhHesab.Size = new System.Drawing.Size(575, 174);
-            this.txtSharhHesab.TabIndex = 1;
-            this.txtSharhHesab.TabStop = false;
-            // 
             // FrmHesabMoinCed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -627,6 +684,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ایجاد حساب معین جدید";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHesabMoinCed_FormClosing);
             this.Load += new System.EventHandler(this.FrmHesabColCed_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabMoinCed_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -649,22 +707,25 @@
             this.xtraTabControl2.ResumeLayout(false);
             this.tbpSharhStandard.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpSharhStandardMoinsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.tbpSharhHesab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxActiveSystem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msActiveSystemsBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.tbpLevel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxLevel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epGroupTafzilisBindingSource)).EndInit();
             this.tbpLevel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxLevel2)).EndInit();
             this.tbpLevel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chkListBoxLevel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListHesabCol.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epHesabColsBindingSource)).EndInit();
-            this.tbpSharhHesab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -715,5 +776,11 @@
         private System.Windows.Forms.BindingSource epHesabColsBindingSource;
         private DevExpress.XtraTab.XtraTabPage tbpSharhHesab;
         private DevExpress.XtraEditors.MemoEdit txtSharhHesab;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colMoinId;
+        private DevExpress.XtraGrid.Columns.GridColumn colEpHesabMoin1;
+        private System.Windows.Forms.BindingSource msActiveSystemsBindingSource;
+        private System.Windows.Forms.BindingSource EpSharhStandardMoinsBindingSource;
+        private System.Windows.Forms.BindingSource epGroupTafzilisBindingSource;
     }
 }

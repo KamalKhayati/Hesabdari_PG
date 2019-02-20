@@ -36,6 +36,8 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraGrid.Views.Base;
 using EtelaatePaye.CodingHesabdari;
+using SystemManagement.UsersSystem;
+using SystemManagement.ActiveSystem;
 
 namespace Hesabdari_TG_N1_V1.Forms
 {
@@ -53,7 +55,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             _UserId = Convert.ToInt32(txtUserId.Caption.ToString());
             // that will manage MDI child windows.
             //documentManager1.View = new NativeMdiView();
-            ribbon.Minimized = true;
+            //ribbon.Minimized = true;
             //xtraTabbedMdiManager1 = new XtraTabbedMdiManager();
             //xtraTabbedMdiManager1.MdiParent = this;     
             documentManager1 = new DocumentManager
@@ -90,8 +92,8 @@ namespace Hesabdari_TG_N1_V1.Forms
                         mbsSystemUsers.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 5503) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         btnUsersList.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550301) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         btnDetermineAccessLevel.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550302) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel1.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030201) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnDetermineAccessLevel2.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030201) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnTaeenAccessLevelSystemVMenu.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030201) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnTaeenAcecessLevelDafaterMali.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55030201) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         btnChangePassword.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550303) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         //////////////////////////
                     }
@@ -458,9 +460,9 @@ namespace Hesabdari_TG_N1_V1.Forms
             FirstRunFrmMain = false;
         }
 
-        private void btnDetermineAccessLevel1_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnTaeenAccessLevelSystemVMenu_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmAccesslevel1 fm = new FrmAccesslevel1();
+            FrmAccesslevelMenuh fm = new FrmAccesslevelMenuh();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -468,9 +470,9 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         }
 
-        private void btnDetermineAccessLevel2_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnTaeenAcecessLevelDafaterMali_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmAccesslevel2 fm = new FrmAccesslevel2();
+            FrmAccesslevelDafaterMali fm = new FrmAccesslevelDafaterMali();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -507,6 +509,34 @@ namespace Hesabdari_TG_N1_V1.Forms
         private void btnHesabMoin_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmHesabMoinList fm = new FrmHesabMoinList();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            HelpClass1.ActiveForm(fm);
+        }
+
+        private void btnTaeenAcecessLevelCodingHesabdari_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmAccesslevelCodingHesabdari fm = new FrmAccesslevelCodingHesabdari();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            HelpClass1.ActiveForm(fm);
+
+        }
+
+        private void btnTaeenAcecessLevelActiveSystem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmAccesslevelActiveSystem fm = new FrmAccesslevelActiveSystem();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            HelpClass1.ActiveForm(fm);
+        }
+
+        private void btnGroupTafzili_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmGroupTafziliList fm = new FrmGroupTafziliList();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;

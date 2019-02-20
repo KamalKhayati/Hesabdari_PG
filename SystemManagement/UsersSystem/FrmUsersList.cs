@@ -30,7 +30,7 @@ namespace EtelaatePaye.UsersSystem
         {
             InitializeComponent();
         }
-
+        public EnumCED En;
         public void FillUsersList()
         {
             using (var dbContext = new MyContext())
@@ -77,6 +77,7 @@ namespace EtelaatePaye.UsersSystem
         private void btnCreate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmUsersCed fm = new FrmUsersCed(this);
+            En = EnumCED.Create;
             HelpClass1.FormNewRecordCreate(fm);
 
         }
@@ -86,6 +87,7 @@ namespace EtelaatePaye.UsersSystem
             if (gridView1.SelectedRowsCount > 0 && btnEdit.Visibility == BarItemVisibility.Always)
             {
                 FrmUsersCed fm = new FrmUsersCed(this);
+                En = EnumCED.Edit;
                 HelpClass1.FormCurrentRecordEdit(gridView1, fm);
             }
 
@@ -96,6 +98,7 @@ namespace EtelaatePaye.UsersSystem
             if (gridView1.SelectedRowsCount > 0)
             {
                 FrmUsersCed fm = new FrmUsersCed(this);
+                En = EnumCED.Delete;
                 HelpClass1.FormCurrentRecordDelete(gridView1, fm);
             }
 
