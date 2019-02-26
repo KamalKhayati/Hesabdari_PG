@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccesslevelActiveSystem));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -58,10 +62,10 @@
             this.colId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colGroupId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colGroupName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colColId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colColName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colGroupName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colGroupId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colColId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIndexMahiatHesab = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colMahiatHesab = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIsActive = new DevExpress.XtraTreeList.Columns.TreeListColumn();
@@ -151,7 +155,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 551);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 473);
             // 
             // barManager1
             // 
@@ -244,7 +248,11 @@
             this.btnSave.Caption = "ذخیره کردن";
             this.btnSave.Id = 34;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
             this.btnSave.Name = "btnSave";
+            toolTipTitleItem1.Text = "F2";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnSave.SuperTip = superToolTip1;
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // chkSelectAll
@@ -268,7 +276,11 @@
             this.btnPrintPreview.Caption = "پیش نمایش چاپ";
             this.btnPrintPreview.Id = 31;
             this.btnPrintPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPreview.ImageOptions.Image")));
+            this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.btnPrintPreview.Name = "btnPrintPreview";
+            toolTipTitleItem2.Text = "F9";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnPrintPreview.SuperTip = superToolTip2;
             this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // barDockControlTop
@@ -278,25 +290,25 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1388, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1223, 60);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 611);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 533);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1388, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1223, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1388, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1223, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 551);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 473);
             // 
             // repositoryItemComboBox1
             // 
@@ -346,7 +358,7 @@
             this.treeListHesabMoin.OptionsView.ShowIndicator = false;
             this.treeListHesabMoin.ParentFieldName = "Id";
             this.treeListHesabMoin.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeListHesabMoin.Size = new System.Drawing.Size(1388, 551);
+            this.treeListHesabMoin.Size = new System.Drawing.Size(1223, 473);
             this.treeListHesabMoin.TabIndex = 45;
             this.treeListHesabMoin.TreeLevelWidth = 25;
             this.treeListHesabMoin.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
@@ -387,10 +399,20 @@
             this.colName.VisibleIndex = 1;
             this.colName.Width = 485;
             // 
-            // colGroupId
+            // colColName
             // 
-            this.colGroupId.FieldName = "GroupId";
-            this.colGroupId.Name = "colGroupId";
+            this.colColName.AppearanceCell.Options.UseTextOptions = true;
+            this.colColName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colColName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colColName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colColName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colColName.Caption = "حساب کل";
+            this.colColName.FieldName = "ColName";
+            this.colColName.MaxWidth = 450;
+            this.colColName.Name = "colColName";
+            this.colColName.Visible = true;
+            this.colColName.VisibleIndex = 2;
+            this.colColName.Width = 450;
             // 
             // colGroupName
             // 
@@ -407,25 +429,15 @@
             this.colGroupName.VisibleIndex = 3;
             this.colGroupName.Width = 336;
             // 
+            // colGroupId
+            // 
+            this.colGroupId.FieldName = "GroupId";
+            this.colGroupId.Name = "colGroupId";
+            // 
             // colColId
             // 
             this.colColId.FieldName = "ColId";
             this.colColId.Name = "colColId";
-            // 
-            // colColName
-            // 
-            this.colColName.AppearanceCell.Options.UseTextOptions = true;
-            this.colColName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colColName.AppearanceHeader.Options.UseTextOptions = true;
-            this.colColName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colColName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colColName.Caption = "حساب کل";
-            this.colColName.FieldName = "ColName";
-            this.colColName.MaxWidth = 450;
-            this.colColName.Name = "colColName";
-            this.colColName.Visible = true;
-            this.colColName.VisibleIndex = 2;
-            this.colColName.Width = 450;
             // 
             // colIndexMahiatHesab
             // 
@@ -470,7 +482,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1388, 611);
+            this.ClientSize = new System.Drawing.Size(1223, 533);
             this.Controls.Add(this.treeListHesabMoin);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblUserId);
@@ -478,12 +490,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmAccesslevelActiveSystem";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "تعیین سطح دسترسی سیستمهای فعال به حسابهای معین";
             this.Load += new System.EventHandler(this.FrmAccesslevelActiveSystem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();

@@ -30,6 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHesabGroupList));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnCreate = new DevExpress.XtraBars.BarButtonItem();
@@ -121,71 +135,90 @@
             // 
             this.btnCreate.Caption = "ایجاد کردن";
             this.btnCreate.Id = 0;
-            this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
+            this.btnCreate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.ImageOptions.Image")));
             this.btnCreate.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F4);
             this.btnCreate.Name = "btnCreate";
+            toolTipTitleItem1.Text = "F4";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnCreate.SuperTip = superToolTip1;
             this.btnCreate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreate_ItemClick);
             // 
             // btnEdit
             // 
             this.btnEdit.Caption = "ویرایش کردن";
             this.btnEdit.Id = 1;
-            this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
+            this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnEdit.Name = "btnEdit";
+            toolTipTitleItem2.Text = "F5";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnEdit.SuperTip = superToolTip2;
             this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
             // btnDelete
             // 
             this.btnDelete.Caption = "حذف کردن";
             this.btnDelete.Id = 2;
-            this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F6);
             this.btnDelete.Name = "btnDelete";
+            toolTipTitleItem3.Text = "F6";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnDelete.SuperTip = superToolTip3;
             this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
             // 
             // btnDisplyActiveList
             // 
             this.btnDisplyActiveList.Caption = "نمایش لیست (فعال)";
             this.btnDisplyActiveList.Id = 3;
-            this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
+            this.btnDisplyActiveList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDisplyActiveList.ImageOptions.Image")));
+            this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F7);
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
+            toolTipTitleItem4.Text = "F7";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnDisplyActiveList.SuperTip = superToolTip4;
             this.btnDisplyActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyActiveList_ItemClick);
             // 
             // btnDisplyNotActiveList
             // 
             this.btnDisplyNotActiveList.Caption = "نمایش لیست (غیرفعال)";
             this.btnDisplyNotActiveList.Id = 4;
-            this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyNotActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.F));
+            this.btnDisplyNotActiveList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.Image")));
+            this.btnDisplyNotActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
+            toolTipTitleItem5.Text = "F8";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            this.btnDisplyNotActiveList.SuperTip = superToolTip5;
             this.btnDisplyNotActiveList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDisplyNotActiveList_ItemClick);
             // 
             // btnPrintPreview
             // 
             this.btnPrintPreview.Caption = "پیش نمایش چاپ";
             this.btnPrintPreview.Id = 5;
-            this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-                | System.Windows.Forms.Keys.P));
+            this.btnPrintPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPreview.ImageOptions.Image")));
+            this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.btnPrintPreview.Name = "btnPrintPreview";
+            toolTipTitleItem6.Text = "F9";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            this.btnPrintPreview.SuperTip = superToolTip6;
             this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // btnListPrint
             // 
             this.btnListPrint.Caption = "چاپ لیست";
             this.btnListPrint.Id = 6;
-            this.btnListPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListPrint.ImageOptions.SvgImage")));
-            this.btnListPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P));
+            this.btnListPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListPrint.ImageOptions.Image")));
+            this.btnListPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F10);
             this.btnListPrint.Name = "btnListPrint";
+            toolTipTitleItem7.Text = "F10";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            this.btnListPrint.SuperTip = superToolTip7;
             // 
             // btnEmkanat
             // 
             this.btnEmkanat.Caption = "امکانات";
             this.btnEmkanat.Id = 7;
-            this.btnEmkanat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEmkanat.ImageOptions.SvgImage")));
+            this.btnEmkanat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmkanat.ImageOptions.Image")));
             this.btnEmkanat.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnAdvancedSearch),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnSharhHesab)});
@@ -201,7 +234,7 @@
             // 
             // btnSharhHesab
             // 
-            this.btnSharhHesab.Caption = "تشریح حساب";
+            this.btnSharhHesab.Caption = "توضیح یا تشریح حساب";
             this.btnSharhHesab.Id = 11;
             this.btnSharhHesab.Name = "btnSharhHesab";
             this.btnSharhHesab.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSharhHesab_CheckedChanged);
@@ -212,15 +245,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1117, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1223, 60);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 565);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 533);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1117, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1223, 0);
             // 
             // barDockControlLeft
             // 
@@ -228,15 +261,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 505);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 473);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1117, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1223, 60);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 505);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 473);
             // 
             // bar4
             // 
@@ -261,7 +294,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1117, 505);
+            this.gridControl1.Size = new System.Drawing.Size(1223, 473);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -430,7 +463,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 565);
+            this.ClientSize = new System.Drawing.Size(1223, 533);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.gridControl1);
@@ -439,14 +472,13 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.KeyPreview = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmHesabGroupList";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "لیست حسابهای گروه ";
             this.Load += new System.EventHandler(this.FrmHesabGroupList_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabGroupList_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).EndInit();

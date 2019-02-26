@@ -50,6 +50,20 @@ namespace Hesabdari_TG_N1_V1.Forms
             InitializeComponent();
         }
         int _UserId = 0;
+
+        public new void ActiveForm(XtraForm form)
+        {
+            if (Application.OpenForms[form.Name] == null)
+            {
+                form.Show();
+            }
+            else
+            {
+                Application.OpenForms[form.Name].Activate();
+            }
+
+        }
+
         private void FrmMain_Load(object sender, EventArgs e)
         {
             _UserId = Convert.ToInt32(txtUserId.Caption.ToString());
@@ -270,7 +284,7 @@ namespace Hesabdari_TG_N1_V1.Forms
                 return;
             }
             fm.MdiParent = this;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnListMojtamaha_ItemClick(object sender, ItemClickEventArgs e)
@@ -279,7 +293,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnUsersList_ItemClick(object sender, ItemClickEventArgs e)
@@ -288,7 +302,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -303,7 +317,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnListShoabat_ItemClick(object sender, ItemClickEventArgs e)
@@ -312,7 +326,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnListDorehaiMali_ItemClick(object sender, ItemClickEventArgs e)
@@ -321,7 +335,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void cmbMajmoehaList_EditValueChanged(object sender, EventArgs e)
@@ -466,7 +480,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
 
         }
 
@@ -476,7 +490,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnChangePassword_ItemClick(object sender, ItemClickEventArgs e)
@@ -484,7 +498,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             FrmChangPassword fm = new FrmChangPassword();
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
 
         }
 
@@ -494,7 +508,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnHesabCol_ItemClick(object sender, ItemClickEventArgs e)
@@ -503,7 +517,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnHesabMoin_ItemClick(object sender, ItemClickEventArgs e)
@@ -512,7 +526,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnTaeenAcecessLevelCodingHesabdari_ItemClick(object sender, ItemClickEventArgs e)
@@ -521,7 +535,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
 
         }
 
@@ -531,7 +545,7 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
         }
 
         private void btnGroupTafzili_ItemClick(object sender, ItemClickEventArgs e)
@@ -540,7 +554,17 @@ namespace Hesabdari_TG_N1_V1.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
-            HelpClass1.ActiveForm(fm);
+            ActiveForm(fm);
+        }
+
+        private void btnTafziliSandogh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmTafziliSandoghList fm = new FrmTafziliSandoghList();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
         }
     }
 }

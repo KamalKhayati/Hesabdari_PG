@@ -172,7 +172,7 @@
             this.btnNewCode.TabIndex = 6;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTip = "F11";
             this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
@@ -299,9 +299,9 @@
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl4.Location = new System.Drawing.Point(482, 51);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(85, 32);
+            this.labelControl4.Size = new System.Drawing.Size(111, 32);
             this.labelControl4.TabIndex = 17;
-            this.labelControl4.Text = "انتخاب گروه";
+            this.labelControl4.Text = "انتخاب نوع گروه";
             // 
             // cmbStandardGroups
             // 
@@ -349,8 +349,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmHesabGroupCed";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ایجاد حساب گروه ";
             this.Load += new System.EventHandler(this.FrmHesabGroupCed_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabGroupCed_KeyDown);

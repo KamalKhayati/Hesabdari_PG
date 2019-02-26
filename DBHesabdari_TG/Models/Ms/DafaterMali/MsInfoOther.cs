@@ -38,10 +38,6 @@ namespace DBHesabdari_TG
         public string SandoghPosti { get; set; }
         [MaxLength(10)]
         public string ShomarePlak { get; set; }
-        [MaxLength(10)]
-        public string ShomareSabt { get; set; }
-        [MaxLength(10)]
-        public string CodeMelli { get; set; }
         [MaxLength(11)]
         public string ShenaseMelli { get; set; }
         [MaxLength(12)]

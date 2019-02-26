@@ -178,7 +178,10 @@ namespace EtelaatePaye.CodingHesabdari
                             db.EpAccessLevelCodingHesabdaris.Add(n1);
                             /////////////////////////////////////////////////////////////////////////////////////
                             db.SaveChanges();
-                            Fm.btnDisplyActiveList_ItemClick(null, null);
+                            if (chkIsActive.Checked)
+                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                            else
+                                Fm.btnDisplyNotActiveList_ItemClick(null, null);
                             XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             Fm.gridView1.MoveLast();
                             if (btnCreateCloseClicked)
@@ -311,10 +314,14 @@ namespace EtelaatePaye.CodingHesabdari
 
                                 db.SaveChanges();
 
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -341,10 +348,14 @@ namespace EtelaatePaye.CodingHesabdari
                                 /////////////////////////////////////////////////////////////////////////////
                                 db.SaveChanges();
 
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -525,7 +536,7 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 btnClose_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
+            else if (e.KeyCode == Keys.F11)
             {
                 btnNewCode_Click(sender, null);
             }

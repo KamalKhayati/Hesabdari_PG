@@ -115,7 +115,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(327, 111);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(63, 25);
+            this.labelControl3.Size = new System.Drawing.Size(86, 25);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "شناسه کاربری";
             // 
@@ -226,7 +226,7 @@
             this.btnNewCode.TabIndex = 5;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTip = "F11";
             this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 

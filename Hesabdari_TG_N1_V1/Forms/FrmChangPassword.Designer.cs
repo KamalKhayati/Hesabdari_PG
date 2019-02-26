@@ -172,7 +172,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(327, 87);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(123, 25);
+            this.labelControl3.Size = new System.Drawing.Size(122, 25);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "شناسه کاربری فعلی";
             // 
@@ -180,7 +180,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(327, 125);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(86, 25);
+            this.labelControl2.Size = new System.Drawing.Size(85, 25);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "رمز عبور فعلی";
             // 
@@ -274,10 +274,10 @@
             this.MinimizeBox = false;
             this.Name = "FrmChangPassword";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "فرم تغییر شناسه کاربری و رمز عبور کاربران";
             this.Load += new System.EventHandler(this.FrmChangPassword_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmChangPassword_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

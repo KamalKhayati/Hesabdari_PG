@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccesslevelDafaterMali));
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemRadioGroup1 = new DevExpress.XtraEditors.Repository.RepositoryItemRadioGroup();
@@ -212,7 +216,11 @@
             this.btnSave.Caption = "ذخیره کردن";
             this.btnSave.Id = 34;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
             this.btnSave.Name = "btnSave";
+            toolTipTitleItem4.Text = "F2";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnSave.SuperTip = superToolTip4;
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // chkSelectAll
@@ -236,7 +244,11 @@
             this.btnPrintPreview.Caption = "پیش نمایش چاپ";
             this.btnPrintPreview.Id = 31;
             this.btnPrintPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPreview.ImageOptions.Image")));
+            this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.btnPrintPreview.Name = "btnPrintPreview";
+            toolTipTitleItem3.Text = "F9";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnPrintPreview.SuperTip = superToolTip3;
             this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // barDockControlTop
@@ -400,6 +412,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmAccesslevelDafaterMali";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "دسترسی کاربران به دفاتر و دوره های مالی ایجاد شده";
             this.Load += new System.EventHandler(this.FrmAccesslevelDafaterMali_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();

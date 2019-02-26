@@ -195,5 +195,12 @@ namespace EtelaatePaye.CodingHesabdari
             gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
         }
 
+        private void FrmHesabColList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

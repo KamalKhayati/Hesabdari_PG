@@ -40,6 +40,11 @@ namespace DBHesabdari_TG
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        [MaxLength(500)]
+        public string SelectedGroupTafziliLevel1 { get; set; }
+        [MaxLength(500)]
+        public string SelectedActivesystem { get; set; }
+
         public virtual EpHesabCol EpHesabCol1 { get; set; }
         public virtual ICollection<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
         public virtual ICollection<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }

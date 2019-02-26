@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccesslevelCodingHesabdari));
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             this.treeListCodingHesabdari = new DevExpress.XtraTreeList.TreeList();
             this.colLevelName2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colKeyId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
@@ -101,7 +105,7 @@
             this.treeListCodingHesabdari.OptionsView.ShowIndicator = false;
             this.treeListCodingHesabdari.ParentFieldName = "ParentId";
             this.treeListCodingHesabdari.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeListCodingHesabdari.Size = new System.Drawing.Size(1361, 547);
+            this.treeListCodingHesabdari.Size = new System.Drawing.Size(1223, 473);
             this.treeListCodingHesabdari.TabIndex = 37;
             this.treeListCodingHesabdari.TreeLevelWidth = 25;
             this.treeListCodingHesabdari.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
@@ -262,7 +266,11 @@
             this.btnSave.Caption = "ذخیره کردن";
             this.btnSave.Id = 34;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
             this.btnSave.Name = "btnSave";
+            toolTipTitleItem4.Text = "F2";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnSave.SuperTip = superToolTip4;
             this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // chkSelectAll
@@ -286,7 +294,11 @@
             this.btnPrintPreview.Caption = "پیش نمایش چاپ";
             this.btnPrintPreview.Id = 31;
             this.btnPrintPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPreview.ImageOptions.Image")));
+            this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.btnPrintPreview.Name = "btnPrintPreview";
+            toolTipTitleItem3.Text = "F9";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnPrintPreview.SuperTip = superToolTip3;
             this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // barDockControlTop
@@ -296,16 +308,16 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1361, 60);
+            this.barDockControlTop.Size = new System.Drawing.Size(1223, 60);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 607);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 533);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1361, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1223, 0);
             // 
             // barDockControlLeft
             // 
@@ -314,16 +326,16 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 547);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 473);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1361, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1223, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 547);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 473);
             // 
             // repositoryItemTextEdit1
             // 
@@ -383,7 +395,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1361, 607);
+            this.ClientSize = new System.Drawing.Size(1223, 533);
             this.Controls.Add(this.treeListCodingHesabdari);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblUserName);
@@ -393,8 +405,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmAccesslevelCodingHesabdari";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "دسترسی کاربران به کدینگ حسابداری (گروه،کل،معین";
             this.Load += new System.EventHandler(this.FrmAccesslevelCodingHesabdari_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingHesabdari)).EndInit();

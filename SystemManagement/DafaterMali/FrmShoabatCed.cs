@@ -188,8 +188,6 @@ namespace EtelaatePaye.DafaterMali
                             txtCodePosti.Text = q4.CodePosti.ToString();
                             txtSandoghPosti.Text = q4.SandoghPosti.ToString();
                             txtShomarePlak.Text = q4.ShomarePlak.ToString();
-                            txtShomareSabt.Text = q4.ShomareSabt.ToString();
-                            txtCodeMelli.Text = q4.CodeMelli.ToString();
                             txtShenaseMelli.Text = q4.ShenaseMelli.ToString();
                             txtCodeSenfee.Text = q4.CodeSenfee.ToString();
                             txtCodeEghtesadi.Text = q4.CodeEghtesadi.ToString();
@@ -274,8 +272,6 @@ namespace EtelaatePaye.DafaterMali
                                 CodePosti = txtCodePosti.Text,
                                 SandoghPosti = txtSandoghPosti.Text,
                                 ShomarePlak = txtShomarePlak.Text,
-                                ShomareSabt = txtShomareSabt.Text,
-                                CodeMelli = txtCodeMelli.Text,
                                 ShenaseMelli = txtShenaseMelli.Text,
                                 CodeSenfee = txtCodeSenfee.Text,
                                 CodeEghtesadi = txtCodeEghtesadi.Text,
@@ -307,7 +303,10 @@ namespace EtelaatePaye.DafaterMali
                             db.MsAccessLevelDafaterMalis.Add(n1);
                             /////////////////////////////////////////////////////////////////////////////////////
                             db.SaveChanges();
-                            Fm.btnDisplyActiveList_ItemClick(null, null);
+                            if (chkIsActive.Checked)
+                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                            else
+                                Fm.btnDisplyNotActiveList_ItemClick(null, null);
                             XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             Fm.gridView1.MoveLast();
                             if (btnCreateClose_Clicked)
@@ -447,8 +446,6 @@ namespace EtelaatePaye.DafaterMali
                                     q4.CodePosti = txtCodePosti.Text;
                                     q4.SandoghPosti = txtSandoghPosti.Text;
                                     q4.ShomarePlak = txtShomarePlak.Text;
-                                    q4.ShomareSabt = txtShomareSabt.Text;
-                                    q4.CodeMelli = txtCodeMelli.Text;
                                     q4.ShenaseMelli = txtShenaseMelli.Text;
                                     q4.CodeSenfee = txtCodeSenfee.Text;
                                     q4.CodeEghtesadi = txtCodeEghtesadi.Text;
@@ -480,8 +477,6 @@ namespace EtelaatePaye.DafaterMali
                                         CodePosti = txtCodePosti.Text,
                                         SandoghPosti = txtSandoghPosti.Text,
                                         ShomarePlak = txtShomarePlak.Text,
-                                        ShomareSabt = txtShomareSabt.Text,
-                                        CodeMelli = txtCodeMelli.Text,
                                         ShenaseMelli = txtShenaseMelli.Text,
                                         CodeSenfee = txtCodeSenfee.Text,
                                         CodeEghtesadi = txtCodeEghtesadi.Text,
@@ -535,10 +530,14 @@ namespace EtelaatePaye.DafaterMali
 
                                 db.SaveChanges();
 
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -571,10 +570,14 @@ namespace EtelaatePaye.DafaterMali
                                 }
                                 db.SaveChanges();
 
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -755,30 +758,6 @@ namespace EtelaatePaye.DafaterMali
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
-                txtShomarePlak.Enabled = true;
-                txtCodeMelli.Enabled = true;
-                txtCodeSenfee.Enabled = true;
-                txtShomareSabt.Enabled = false;
-                txtShenaseMelli.Enabled = false;
-                txtCodeEghtesadi.Enabled = false;
-            }
-            else
-            {
-                txtShomarePlak.Enabled = false;
-                txtCodeMelli.Enabled = false;
-                txtCodeSenfee.Enabled = false;
-                txtShomareSabt.Enabled = true;
-                txtShenaseMelli.Enabled = true;
-                txtCodeEghtesadi.Enabled = true;
-
-            }
-
-        }
-
         private void FrmShoabatCed_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2)
@@ -793,7 +772,7 @@ namespace EtelaatePaye.DafaterMali
             {
                 btnClose_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
+            else if (e.KeyCode == Keys.F11)
             {
                 btnNewCode_Click(sender, null);
             }
@@ -804,6 +783,11 @@ namespace EtelaatePaye.DafaterMali
         {
             txtCode.ReadOnly = chkEditCode.Checked ? false : true;
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtShenaseMelli.Properties.MaxLength = radioButton1.Checked ? 10 : 11;
         }
     }
 

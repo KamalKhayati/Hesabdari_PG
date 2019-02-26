@@ -73,7 +73,18 @@
             this.btnHesabCol = new DevExpress.XtraBars.BarButtonItem();
             this.btnHesabMoin = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupTafzili = new DevExpress.XtraBars.BarButtonItem();
-            this.btnHesabTafzili = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHesabhaTafzili = new DevExpress.XtraBars.BarSubItem();
+            this.btnTafziliSandogh = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliHesabBanki = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliAshkhas = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
             this.mbsCodingAnbarVaKala = new DevExpress.XtraBars.BarSubItem();
             this.btnListAnbarha = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupAsli = new DevExpress.XtraBars.BarButtonItem();
@@ -269,7 +280,6 @@
             this.btnHesabGroup,
             this.btnHesabCol,
             this.btnHesabMoin,
-            this.btnHesabTafzili,
             this.btnGroupTafzili,
             this.mbsCodingAnbarVaKala,
             this.btnListAnbarha,
@@ -328,11 +338,23 @@
             this.btnTaeenAcecessLevelAnbarVCodingKala,
             this.barSubItem5,
             this.barSubItem6,
-            this.btnTaeenAcecessLevelActiveSystem});
+            this.btnTaeenAcecessLevelActiveSystem,
+            this.btnHesabhaTafzili,
+            this.btnTafziliSandogh,
+            this.btnTafziliHesabBanki,
+            this.btnTafziliAshkhas,
+            this.barButtonItem18,
+            this.barButtonItem19,
+            this.barButtonItem20,
+            this.barButtonItem21,
+            this.barButtonItem22,
+            this.barButtonItem23,
+            this.barButtonItem32,
+            this.barButtonItem34});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 140;
+            this.ribbon.MaxItemId = 153;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
             this.ribbon.PageHeaderMinWidth = 50;
@@ -663,8 +685,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabGroup),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabCol),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabMoin),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupTafzili),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabTafzili)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.btnGroupTafzili, false),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabhaTafzili)});
             this.mbsCodingHesabdari.Name = "mbsCodingHesabdari";
             this.mbsCodingHesabdari.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -696,11 +718,90 @@
             this.btnGroupTafzili.Name = "btnGroupTafzili";
             this.btnGroupTafzili.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupTafzili_ItemClick);
             // 
-            // btnHesabTafzili
+            // btnHesabhaTafzili
             // 
-            this.btnHesabTafzili.Caption = "حسابهای تفضیلی";
-            this.btnHesabTafzili.Id = 55;
-            this.btnHesabTafzili.Name = "btnHesabTafzili";
+            this.btnHesabhaTafzili.Caption = "حسابهای تفضیلی";
+            this.btnHesabhaTafzili.Id = 140;
+            this.btnHesabhaTafzili.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliSandogh),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliHesabBanki),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliAshkhas),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem18),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem22),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem23),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem32),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34)});
+            this.btnHesabhaTafzili.Name = "btnHesabhaTafzili";
+            // 
+            // btnTafziliSandogh
+            // 
+            this.btnTafziliSandogh.Caption = "صندوق";
+            this.btnTafziliSandogh.Id = 141;
+            this.btnTafziliSandogh.Name = "btnTafziliSandogh";
+            this.btnTafziliSandogh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliSandogh_ItemClick);
+            // 
+            // btnTafziliHesabBanki
+            // 
+            this.btnTafziliHesabBanki.Caption = "حسابهای بانکی";
+            this.btnTafziliHesabBanki.Id = 142;
+            this.btnTafziliHesabBanki.Name = "btnTafziliHesabBanki";
+            // 
+            // btnTafziliAshkhas
+            // 
+            this.btnTafziliAshkhas.Caption = "اشخاص";
+            this.btnTafziliAshkhas.Id = 143;
+            this.btnTafziliAshkhas.Name = "btnTafziliAshkhas";
+            // 
+            // barButtonItem18
+            // 
+            this.barButtonItem18.Caption = "داراییها";
+            this.barButtonItem18.Id = 145;
+            this.barButtonItem18.Name = "barButtonItem18";
+            // 
+            // barButtonItem19
+            // 
+            this.barButtonItem19.Caption = "پروژه ها";
+            this.barButtonItem19.Id = 146;
+            this.barButtonItem19.Name = "barButtonItem19";
+            // 
+            // barButtonItem20
+            // 
+            this.barButtonItem20.Caption = "وامها";
+            this.barButtonItem20.Id = 147;
+            this.barButtonItem20.Name = "barButtonItem20";
+            // 
+            // barButtonItem21
+            // 
+            this.barButtonItem21.Caption = "مواد";
+            this.barButtonItem21.Id = 148;
+            this.barButtonItem21.Name = "barButtonItem21";
+            // 
+            // barButtonItem22
+            // 
+            this.barButtonItem22.Caption = "قطعات";
+            this.barButtonItem22.Id = 149;
+            this.barButtonItem22.Name = "barButtonItem22";
+            // 
+            // barButtonItem23
+            // 
+            this.barButtonItem23.Caption = "محصول";
+            this.barButtonItem23.Id = 150;
+            this.barButtonItem23.Name = "barButtonItem23";
+            // 
+            // barButtonItem32
+            // 
+            this.barButtonItem32.Caption = "مراکز هزینه";
+            this.barButtonItem32.Id = 151;
+            this.barButtonItem32.Name = "barButtonItem32";
+            // 
+            // barButtonItem34
+            // 
+            this.barButtonItem34.Caption = "سایر";
+            this.barButtonItem34.Id = 152;
+            this.barButtonItem34.Name = "barButtonItem34";
             // 
             // mbsCodingAnbarVaKala
             // 
@@ -1479,6 +1580,7 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.barSubItem5);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "سیستمهای فعال";
+            this.ribbonPageGroup4.Visible = false;
             // 
             // ribbonPage5
             // 
@@ -1784,7 +1886,6 @@
         private DevExpress.XtraBars.BarButtonItem btnHesabGroup;
         private DevExpress.XtraBars.BarButtonItem btnHesabCol;
         private DevExpress.XtraBars.BarButtonItem btnHesabMoin;
-        private DevExpress.XtraBars.BarButtonItem btnHesabTafzili;
         private DevExpress.XtraBars.BarButtonItem btnGroupTafzili;
         private DevExpress.XtraBars.BarSubItem mbsCodingAnbarVaKala;
         private DevExpress.XtraBars.BarButtonItem btnListAnbarha;
@@ -1884,5 +1985,17 @@
         private DevExpress.XtraBars.BarSubItem barSubItem6;
         private DevExpress.XtraBars.BarButtonItem btnTaeenAcecessLevelActiveSystem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarSubItem btnHesabhaTafzili;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliSandogh;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliHesabBanki;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliAshkhas;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem32;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem34;
     }
 }

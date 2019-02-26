@@ -208,5 +208,18 @@ namespace Hesabdari_TG_N1_V1.Forms
             }
 
         }
+
+        private void FrmChangPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnSaveClose_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                btnClose_Click(sender, null);
+            }
+
+        }
     }
 }

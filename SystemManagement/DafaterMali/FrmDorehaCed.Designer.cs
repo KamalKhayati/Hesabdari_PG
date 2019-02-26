@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDorehaCed));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnCreateClose = new DevExpress.XtraEditors.SimpleButton();
@@ -51,11 +50,11 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.chkIsActive = new DevExpress.XtraEditors.CheckEdit();
             this.cmbShobeList = new DevExpress.XtraEditors.LookUpEdit();
-            this.msShobesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msShobesBindingSource = new System.Windows.Forms.BindingSource();
             this.cmbVahedhaList = new DevExpress.XtraEditors.LookUpEdit();
-            this.msVahedsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msVahedsBindingSource = new System.Windows.Forms.BindingSource();
             this.cmbMajmoehaList = new DevExpress.XtraEditors.LookUpEdit();
-            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.msMajmoesBindingSource = new System.Windows.Forms.BindingSource();
             this.btnNewCode = new DevExpress.XtraEditors.SimpleButton();
             this.txtShobeCode = new DevExpress.XtraEditors.TextEdit();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
@@ -269,7 +268,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(162, 315);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(127, 25);
+            this.labelControl10.Size = new System.Drawing.Size(126, 25);
             this.labelControl10.TabIndex = 19;
             this.labelControl10.Text = "عوارض ارزش افزوده";
             // 
@@ -277,7 +276,7 @@
             // 
             this.labelControl9.Location = new System.Drawing.Point(162, 277);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(123, 25);
+            this.labelControl9.Size = new System.Drawing.Size(122, 25);
             this.labelControl9.TabIndex = 20;
             this.labelControl9.Text = "مالیات ارزش افزوده";
             // 
@@ -409,7 +408,7 @@
             this.btnNewCode.TabIndex = 6;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTip = "F11";
             this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             this.btnNewCode.Leave += new System.EventHandler(this.btnNewCode_Click);

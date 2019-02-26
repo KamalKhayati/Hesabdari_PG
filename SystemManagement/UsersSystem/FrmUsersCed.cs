@@ -34,6 +34,7 @@ namespace EtelaatePaye.UsersSystem
         string CodeBeforeEdit = "";
         string NameBeforeEdit = "";
         string UserNameBeforEdit = "";
+        bool IsActiveBeforeEdit;
         private void FrmUsersCed_Load(object sender, EventArgs e)
         {
             if (Fm.En == EnumCED.Create)
@@ -59,6 +60,7 @@ namespace EtelaatePaye.UsersSystem
                 CodeBeforeEdit = txtCode.Text;
                 NameBeforeEdit = txtUserName.Text;
                 UserNameBeforEdit = txtUserName.Text;
+                IsActiveBeforeEdit = chkIsActive.Checked;
             }
 
         }
@@ -91,7 +93,10 @@ namespace EtelaatePaye.UsersSystem
                             };
                             db.MsUsers.Add(obj);
                             db.SaveChanges();
-                            Fm.btnDisplyActiveList_ItemClick(null, null);
+                            if (chkIsActive.Checked)
+                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                            else
+                                Fm.btnDisplyNotActiveList_ItemClick(null, null);
                             XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             Fm.gridView1.MoveLast();
                             if (btnCreateClose_Clicked)
@@ -130,10 +135,14 @@ namespace EtelaatePaye.UsersSystem
                                 q.UserIsActive = Convert.ToBoolean(chkIsActive.Checked);
 
                                 db.SaveChanges();
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -170,10 +179,14 @@ namespace EtelaatePaye.UsersSystem
 
                                     db.MsUsers.Remove(q);
                                     db.SaveChanges();
-                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                    if (IsActiveBeforeEdit)
+                                        Fm.btnDisplyActiveList_ItemClick(null, null);
+                                    else
+                                        Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                     XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     this.Close();
-                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
+                                    if (Fm.gridView1.RowCount > 0)
+                                        Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
                                 }
                             }
                             else
@@ -365,7 +378,7 @@ namespace EtelaatePaye.UsersSystem
             {
                 btnClose_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
+            else if (e.KeyCode == Keys.F11)
             {
                 btnNewCode_Click(sender, null);
             }

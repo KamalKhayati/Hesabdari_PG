@@ -72,6 +72,7 @@ namespace DBHesabdari_TG
         public virtual DbSet<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }
         public virtual DbSet<EpGroupTafzili> EpGroupTafzilis { get; set; }
         public virtual DbSet<REpHesabMoinBEpGroupTafziliLevel1> REpHesabMoinBEpGroupTafziliLevel1s { get; set; }
+        public virtual DbSet<EpHesabTafziliSandogh> EpHesabTafziliSandoghs { get; set; }
 
 
 

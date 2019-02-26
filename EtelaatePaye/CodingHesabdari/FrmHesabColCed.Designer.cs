@@ -34,6 +34,7 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.chkIsActive = new DevExpress.XtraEditors.CheckEdit();
             this.cmbListHesabGroup = new DevExpress.XtraEditors.LookUpEdit();
+            this.epHesabGroupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSharhHesab = new DevExpress.XtraEditors.MemoEdit();
@@ -51,11 +52,11 @@
             this.btnCreateNext = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
-            this.epHesabGroupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListHesabGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).BeginInit();
@@ -66,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbMahiatHesab.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -139,6 +139,10 @@
             this.cmbListHesabGroup.TabIndex = 0;
             this.cmbListHesabGroup.EditValueChanged += new System.EventHandler(this.cmbListHesabGroup_EditValueChanged);
             this.cmbListHesabGroup.Enter += new System.EventHandler(this.cmbListHesabGroup_Enter);
+            // 
+            // epHesabGroupsBindingSource
+            // 
+            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabGroup);
             // 
             // labelControl3
             // 
@@ -219,7 +223,7 @@
             this.btnNewCode.TabIndex = 7;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTip = "F11";
             this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
@@ -343,10 +347,6 @@
             this.btnClose.ToolTipTitle = "بستن ";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // epHesabGroupsBindingSource
-            // 
-            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabGroup);
-            // 
             // FrmHesabColCed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -360,8 +360,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmHesabColCed";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ایجاد حساب کل";
             this.Load += new System.EventHandler(this.FrmHesabColCed_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabColCed_KeyDown);
@@ -370,6 +369,7 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListHesabGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode.Properties)).EndInit();
@@ -380,7 +380,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbMahiatHesab.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.epHesabGroupsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

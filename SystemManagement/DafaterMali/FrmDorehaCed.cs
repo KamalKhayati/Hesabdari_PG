@@ -285,7 +285,10 @@ namespace EtelaatePaye.DafaterMali
                             db.SaveChanges();
                             /////////////////////////////////////////////////////////////////////////////////////
 
-                            Fm.btnDisplyActiveList_ItemClick(null, null);
+                            if (chkIsActive.Checked)
+                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                            else
+                                Fm.btnDisplyNotActiveList_ItemClick(null, null);
                             XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             Fm.gridView1.MoveLast();
                             if (btnCreateCloseClicked)
@@ -407,10 +410,14 @@ namespace EtelaatePaye.DafaterMali
                                 }
                                 db.SaveChanges();
 
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -438,10 +445,14 @@ namespace EtelaatePaye.DafaterMali
                                 if (XtraMessageBox.Show("در صورت وجود اطلاعات در سال مالی انتخابی کلیه اطلاعات سال مالی فوق از سیستم حذف خواهد شد و قابل برگشت نمی باشد", "پیغام", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                                 {
                                     db.SaveChanges();
-                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                    if (IsActiveBeforeEdit)
+                                        Fm.btnDisplyActiveList_ItemClick(null, null);
+                                    else
+                                        Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                     XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     this.Close();
-                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
+                                    if (Fm.gridView1.RowCount > 0)
+                                        Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
                                 }
                             }
                             else
@@ -639,7 +650,7 @@ namespace EtelaatePaye.DafaterMali
             {
                 btnClose_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
+            else if (e.KeyCode == Keys.F11)
             {
                 btnNewCode_Click(sender, null);
             }

@@ -110,6 +110,24 @@
     <Compile Include="CodingHesabdari\FrmHesabMoinList.Designer.cs">
       <DependentUpon>FrmHesabMoinList.cs</DependentUpon>
     </Compile>
+    <Compile Include="CodingHesabdari\FrmTafziliHesabBamkiCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmTafziliHesabBamkiCed.Designer.cs">
+      <DependentUpon>FrmTafziliHesabBamkiCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmTafziliSandoghCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmTafziliSandoghCed.Designer.cs">
+      <DependentUpon>FrmTafziliSandoghCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmTafziliSandoghList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmTafziliSandoghList.Designer.cs">
+      <DependentUpon>FrmTafziliSandoghList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CodingHesabdari\FrmGroupTafziliCed.resx">
@@ -135,6 +153,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmHesabMoinList.resx">
       <DependentUpon>FrmHesabMoinList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmTafziliHesabBamkiCed.resx">
+      <DependentUpon>FrmTafziliHesabBamkiCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmTafziliSandoghCed.resx">
+      <DependentUpon>FrmTafziliSandoghCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmTafziliSandoghList.resx">
+      <DependentUpon>FrmTafziliSandoghList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

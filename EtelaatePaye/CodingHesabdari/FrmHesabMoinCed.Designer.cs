@@ -245,7 +245,7 @@
             this.btnNewCode.TabIndex = 7;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTip = "F11";
             this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
@@ -679,11 +679,12 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmHesabMoinCed";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ایجاد حساب معین جدید";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = " حساب معین";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHesabMoinCed_FormClosing);
             this.Load += new System.EventHandler(this.FrmHesabColCed_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabMoinCed_KeyDown);

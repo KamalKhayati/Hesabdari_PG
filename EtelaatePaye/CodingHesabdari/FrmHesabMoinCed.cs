@@ -197,15 +197,13 @@ namespace EtelaatePaye.CodingHesabdari
         {
             FillcmbHesabGroupList();
             FillListBoxLevel1();
+            FillListBoxActiveSystem();
+            chkListBoxActiveSystem.CheckAll();
             if (Fm.lblUserId.Text == "1")
                 chkIsActive.Visible = true;
 
-            if (Fm.En == EnumCED.Create)
-            {
-                btnNewCode_Click(null, null);
-            }
-            else
-            {
+            if (Fm.En != EnumCED.Create)
+            { 
                 cmbListHesabGroup.EditValue = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("GroupId").ToString());
                 cmbListHesabCol.EditValue = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("ColId").ToString());
                 txtId.Text = Fm.gridView1.GetFocusedRowCellValue("Id").ToString();
@@ -225,8 +223,6 @@ namespace EtelaatePaye.CodingHesabdari
                     btnNewCode.Enabled = false;
 
                 FillGridViewSharhStandard();
-                FillListBoxActiveSystem();
-                chkListBoxActiveSystem.CheckAll();
                 using (var db = new MyContext())
                 {
                     try
@@ -307,6 +303,24 @@ namespace EtelaatePaye.CodingHesabdari
                             obj.IndexMahiatHesab = cmbMahiatHesab.SelectedIndex;
                             obj.MahiatHesab = cmbMahiatHesab.Text;
                             obj.SharhHesab = txtSharhHesab.Text;
+                            string ActiveSystem = string.Empty;
+                            for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
+                            {
+                                if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Checked)
+                                {
+                                    ActiveSystem += chkListBoxActiveSystem.GetDisplayItemValue(i).ToString() + ",";
+                                }
+                            }
+                            obj.SelectedActivesystem = ActiveSystem;
+                            string GroupTafzili = string.Empty;
+                            for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                            {
+                                if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                {
+                                    GroupTafzili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                }
+                            }
+                            obj.SelectedGroupTafziliLevel1 = GroupTafzili;
 
                             db.EpHesabMoins.Add(obj);
                             db.SaveChanges();
@@ -356,7 +370,10 @@ namespace EtelaatePaye.CodingHesabdari
                             db.EpAccessLevelCodingHesabdaris.Add(n1);
                             /////////////////////////////////////////////////////////////////////////////////////
                             db.SaveChanges();
-                            Fm.btnDisplyActiveList_ItemClick(null, null);
+                            if (chkIsActive.Checked)
+                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                            else
+                                Fm.btnDisplyNotActiveList_ItemClick(null, null);
                             XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             Fm.gridView1.MoveLast();
                             if (btnCreateCloseClicked)
@@ -404,6 +421,25 @@ namespace EtelaatePaye.CodingHesabdari
                                 q.IndexMahiatHesab = cmbMahiatHesab.SelectedIndex;
                                 q.MahiatHesab = cmbMahiatHesab.Text;
                                 q.SharhHesab = txtSharhHesab.Text;
+
+                                string ActiveSystem = string.Empty;
+                                for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
+                                {
+                                    if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Checked)
+                                    {
+                                        ActiveSystem += chkListBoxActiveSystem.GetDisplayItemValue(i).ToString() + ",";
+                                    }
+                                }
+                                q.SelectedActivesystem = ActiveSystem;
+                                string GroupTafzili = string.Empty;
+                                for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                {
+                                    if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                    {
+                                        GroupTafzili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                    }
+                                }
+                                q.SelectedGroupTafziliLevel1 = GroupTafzili;
                                 ////////////////////////////////////////////////////////////////////////////////
                                 var q1 = db.EpSharhStandardMoins.Where(s => s.MoinId == RowId).ToList();
                                 if (q1.Count > 0)
@@ -506,10 +542,14 @@ namespace EtelaatePaye.CodingHesabdari
 
                                 db.SaveChanges();
 
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -536,10 +576,14 @@ namespace EtelaatePaye.CodingHesabdari
                                 /////////////////////////////////////////////////////////////////////////////
                                 db.SaveChanges();
 
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                if (IsActiveBeforeEdit)
+                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                else
+                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
                                 XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 this.Close();
-                                Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
+                                if (Fm.gridView1.RowCount > 0)
+                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -732,7 +776,7 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 btnClose_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
+            else if (e.KeyCode == Keys.F11)
             {
                 btnNewCode_Click(sender, null);
             }

@@ -107,7 +107,7 @@
             this.btnNewCode.TabIndex = 6;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "F7";
+            this.btnNewCode.ToolTip = "F11";
             this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
@@ -266,8 +266,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmGroupTafziliCed";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ایجاد گروه تفضیلی جدید";
             this.Load += new System.EventHandler(this.FrmGroupTafziliCed_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGroupTafziliCed_KeyDown);
