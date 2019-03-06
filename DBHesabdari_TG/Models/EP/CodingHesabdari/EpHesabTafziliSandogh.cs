@@ -32,5 +32,9 @@ namespace DBHesabdari_TG
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        [Required]
+        public int GroupTafziliId { get; set; }
+        public virtual EpGroupTafzili EpGroupTafzili1 { get; set; }
+
     }
 }

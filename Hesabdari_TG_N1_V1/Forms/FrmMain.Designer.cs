@@ -748,6 +748,7 @@
             this.btnTafziliHesabBanki.Caption = "حسابهای بانکی";
             this.btnTafziliHesabBanki.Id = 142;
             this.btnTafziliHesabBanki.Name = "btnTafziliHesabBanki";
+            this.btnTafziliHesabBanki.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliHesabBanki_ItemClick);
             // 
             // btnTafziliAshkhas
             // 

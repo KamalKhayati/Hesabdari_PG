@@ -22,7 +22,7 @@ namespace DBHesabdari_TG
         public int Id { get; set; }
         [Required]
         public int Code { get; set; }
-        [Required, MaxLength(50)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required]
         public int GroupId { get; set; }

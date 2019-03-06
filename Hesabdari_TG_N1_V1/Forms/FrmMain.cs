@@ -55,7 +55,7 @@ namespace Hesabdari_TG_N1_V1.Forms
         {
             if (Application.OpenForms[form.Name] == null)
             {
-                form.Show();
+                form.Show(this);
             }
             else
             {
@@ -504,8 +504,8 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void btnHesabGroup_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmHesabGroupList fm = new FrmHesabGroupList();
-            fm.MdiParent = this;
+            FrmHesabGroup fm = new FrmHesabGroup();
+            //fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -513,8 +513,8 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void btnHesabCol_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmHesabColList fm = new FrmHesabColList();
-            fm.MdiParent = this;
+            FrmHesabCol fm = new FrmHesabCol();
+            //fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -522,8 +522,8 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void btnHesabMoin_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmHesabMoinList fm = new FrmHesabMoinList();
-            fm.MdiParent = this;
+            FrmHesabMoin fm = new FrmHesabMoin();
+            //fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -551,7 +551,7 @@ namespace Hesabdari_TG_N1_V1.Forms
         private void btnGroupTafzili_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmGroupTafziliList fm = new FrmGroupTafziliList();
-            fm.MdiParent = this;
+            //fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -559,8 +559,18 @@ namespace Hesabdari_TG_N1_V1.Forms
 
         private void btnTafziliSandogh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmTafziliSandoghList fm = new FrmTafziliSandoghList();
-            fm.MdiParent = this;
+            FrmHesabTafziliSandogh fm = new FrmHesabTafziliSandogh();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliHesabBanki_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliHesabBamki fm = new FrmHesabTafziliHesabBamki();
+            //fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);

@@ -73,7 +73,11 @@ namespace DBHesabdari_TG
         public virtual DbSet<EpGroupTafzili> EpGroupTafzilis { get; set; }
         public virtual DbSet<REpHesabMoinBEpGroupTafziliLevel1> REpHesabMoinBEpGroupTafziliLevel1s { get; set; }
         public virtual DbSet<EpHesabTafziliSandogh> EpHesabTafziliSandoghs { get; set; }
-
+        public virtual DbSet<EpHesabTafziliHesabBanki> EpHesabTafziliHesabBankis { get; set; }
+        public virtual DbSet<EpNameBank> EpNameBanks { get; set; }
+        public virtual DbSet<EpNoeHesab> EpNoeHesabs { get; set; }
+        public virtual DbSet<EpNoeArz> EpNoeArzs { get; set; }
+        
 
 
         #region
@@ -124,6 +128,11 @@ namespace DBHesabdari_TG
             modelBuilder.Entity<MsActiveSystem>().HasMany(m => m.RMsActiveSystemBEpHesabMoins).WithRequired(m => m.MsActiveSystem1).HasForeignKey(m => m.ActiveSystemId).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpHesabMoin>().HasMany(m => m.REpHesabMoinBEpGroupTafziliLevel1s).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpGroupTafzili>().HasMany(m => m.REpHesabMoinBEpGroupTafziliLevel1s).WithRequired(m => m.EpGroupTafzili1).HasForeignKey(m => m.GroupTafziliId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpGroupTafzili>().HasMany(m => m.EpHesabTafziliSandoghs).WithRequired(m => m.EpGroupTafzili1).HasForeignKey(m => m.GroupTafziliId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpGroupTafzili>().HasMany(m => m.EpHesabTafziliHesabBankis).WithRequired(m => m.EpGroupTafzili1).HasForeignKey(m => m.GroupTafziliId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNameBank>().HasMany(m => m.EpHesabTafziliHesabBankis).WithRequired(m => m.EpNameBank1).HasForeignKey(m => m.NameBankId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNoeHesab>().HasMany(m => m.EpHesabTafziliHesabBankis).WithRequired(m => m.EpNoeHesab1).HasForeignKey(m => m.NoeHesaId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNoeArz>().HasMany(m => m.EpHesabTafziliHesabBankis).WithRequired(m => m.EpNoeArz1).HasForeignKey(m => m.NoeArzId).WillCascadeOnDelete(false);
 
             #region
             //--------> one - to - zero - or - one relationships < ------------
