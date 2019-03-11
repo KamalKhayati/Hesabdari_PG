@@ -146,7 +146,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1003, 351);
+            this.panelControl4.Size = new System.Drawing.Size(1003, 356);
             this.panelControl4.TabIndex = 23;
             // 
             // gridControl1
@@ -158,7 +158,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(999, 347);
+            this.gridControl1.Size = new System.Drawing.Size(999, 352);
             this.gridControl1.TabIndex = 32;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -560,9 +560,9 @@
             this.xtraScrollableControl2.Controls.Add(this.labelControl3);
             this.xtraScrollableControl2.Controls.Add(this.labelControl1);
             this.xtraScrollableControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.xtraScrollableControl2.Location = new System.Drawing.Point(0, 351);
+            this.xtraScrollableControl2.Location = new System.Drawing.Point(0, 356);
             this.xtraScrollableControl2.Name = "xtraScrollableControl2";
-            this.xtraScrollableControl2.Size = new System.Drawing.Size(1003, 241);
+            this.xtraScrollableControl2.Size = new System.Drawing.Size(1003, 203);
             this.xtraScrollableControl2.TabIndex = 24;
             // 
             // panelControl2
@@ -591,7 +591,7 @@
             // cmbListGroupTafzili
             // 
             this.cmbListGroupTafzili.EnterMoveNextControl = true;
-            this.cmbListGroupTafzili.Location = new System.Drawing.Point(633, 50);
+            this.cmbListGroupTafzili.Location = new System.Drawing.Point(651, 50);
             this.cmbListGroupTafzili.Name = "cmbListGroupTafzili";
             this.cmbListGroupTafzili.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -608,14 +608,14 @@
             this.cmbListGroupTafzili.Properties.ReadOnly = true;
             this.cmbListGroupTafzili.Properties.ValueMember = "Id";
             this.cmbListGroupTafzili.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbListGroupTafzili.Size = new System.Drawing.Size(276, 32);
+            this.cmbListGroupTafzili.Size = new System.Drawing.Size(258, 32);
             this.cmbListGroupTafzili.TabIndex = 36;
             this.cmbListGroupTafzili.TabStop = false;
             // 
             // txtStartDate
             // 
             this.txtStartDate.EnterMoveNextControl = true;
-            this.txtStartDate.Location = new System.Drawing.Point(770, 202);
+            this.txtStartDate.Location = new System.Drawing.Point(417, 164);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.Properties.Appearance.Options.UseTextOptions = true;
             this.txtStartDate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -632,17 +632,18 @@
             // 
             this.labelControl6.AutoEllipsis = true;
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl6.Location = new System.Drawing.Point(480, 201);
+            this.labelControl6.Location = new System.Drawing.Point(473, 87);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(101, 32);
             this.labelControl6.TabIndex = 35;
             this.labelControl6.Text = "وضعیت حساب";
+            this.labelControl6.Visible = false;
             // 
             // chkIsActive
             // 
             this.chkIsActive.EditValue = true;
             this.chkIsActive.EnterMoveNextControl = true;
-            this.chkIsActive.Location = new System.Drawing.Point(424, 201);
+            this.chkIsActive.Location = new System.Drawing.Point(417, 87);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkIsActive.Properties.Caption = "فعال";
@@ -658,7 +659,7 @@
             this.groupBox2.Controls.Add(this.txtSharhHesab);
             this.groupBox2.Location = new System.Drawing.Point(6, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(408, 182);
+            this.groupBox2.Size = new System.Drawing.Size(408, 144);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "توضیح یا تشریح حساب (اختیاری)";
@@ -670,13 +671,13 @@
             this.txtSharhHesab.Name = "txtSharhHesab";
             this.txtSharhHesab.Properties.MaxLength = 500;
             this.txtSharhHesab.Properties.ReadOnly = true;
-            this.txtSharhHesab.Size = new System.Drawing.Size(402, 150);
+            this.txtSharhHesab.Size = new System.Drawing.Size(402, 112);
             this.txtSharhHesab.TabIndex = 0;
             this.txtSharhHesab.TabStop = false;
             // 
             // chkEditCode
             // 
-            this.chkEditCode.Location = new System.Drawing.Point(739, 91);
+            this.chkEditCode.Location = new System.Drawing.Point(757, 89);
             this.chkEditCode.Name = "chkEditCode";
             this.chkEditCode.Properties.Caption = "checkEdit1";
             this.chkEditCode.Properties.ReadOnly = true;
@@ -689,28 +690,28 @@
             // txtNameMasol
             // 
             this.txtNameMasol.EnterMoveNextControl = true;
-            this.txtNameMasol.Location = new System.Drawing.Point(423, 164);
+            this.txtNameMasol.Location = new System.Drawing.Point(651, 164);
             this.txtNameMasol.Name = "txtNameMasol";
             this.txtNameMasol.Properties.MaxLength = 50;
             this.txtNameMasol.Properties.ReadOnly = true;
-            this.txtNameMasol.Size = new System.Drawing.Size(486, 32);
+            this.txtNameMasol.Size = new System.Drawing.Size(258, 32);
             this.txtNameMasol.TabIndex = 1;
             // 
             // txtName
             // 
             this.txtName.EnterMoveNextControl = true;
-            this.txtName.Location = new System.Drawing.Point(423, 126);
+            this.txtName.Location = new System.Drawing.Point(417, 126);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Properties.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(486, 32);
+            this.txtName.Size = new System.Drawing.Size(492, 32);
             this.txtName.TabIndex = 0;
             // 
             // labelControl7
             // 
             this.labelControl7.AutoEllipsis = true;
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(915, 201);
+            this.labelControl7.Location = new System.Drawing.Point(555, 163);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(83, 32);
             this.labelControl7.TabIndex = 30;
@@ -728,6 +729,8 @@
             // 
             // labelControl2
             // 
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.AutoEllipsis = true;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl2.Location = new System.Drawing.Point(915, 125);
@@ -740,7 +743,7 @@
             // 
             this.btnNewCode.Enabled = false;
             this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode.ImageOptions.SvgImage")));
-            this.btnNewCode.Location = new System.Drawing.Point(633, 87);
+            this.btnNewCode.Location = new System.Drawing.Point(651, 87);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(100, 33);
             toolTipTitleItem1.Text = "Alt+N";
@@ -755,7 +758,7 @@
             // 
             this.txtCodeGroupTafzili.EditValue = "";
             this.txtCodeGroupTafzili.EnterMoveNextControl = true;
-            this.txtCodeGroupTafzili.Location = new System.Drawing.Point(770, 88);
+            this.txtCodeGroupTafzili.Location = new System.Drawing.Point(783, 88);
             this.txtCodeGroupTafzili.Name = "txtCodeGroupTafzili";
             this.txtCodeGroupTafzili.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCodeGroupTafzili.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -763,7 +766,7 @@
             this.txtCodeGroupTafzili.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCodeGroupTafzili.Properties.MaxLength = 2;
             this.txtCodeGroupTafzili.Properties.ReadOnly = true;
-            this.txtCodeGroupTafzili.Size = new System.Drawing.Size(64, 32);
+            this.txtCodeGroupTafzili.Size = new System.Drawing.Size(41, 32);
             this.txtCodeGroupTafzili.TabIndex = 21;
             this.txtCodeGroupTafzili.TabStop = false;
             // 
@@ -771,7 +774,7 @@
             // 
             this.txtCode.EditValue = "";
             this.txtCode.EnterMoveNextControl = true;
-            this.txtCode.Location = new System.Drawing.Point(840, 88);
+            this.txtCode.Location = new System.Drawing.Point(830, 88);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -779,14 +782,14 @@
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCode.Properties.MaxLength = 5;
             this.txtCode.Properties.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(69, 32);
+            this.txtCode.Size = new System.Drawing.Size(79, 32);
             this.txtCode.TabIndex = 20;
             this.txtCode.TabStop = false;
             // 
             // txtId
             // 
             this.txtId.EditValue = "آیدی صندوق";
-            this.txtId.Location = new System.Drawing.Point(423, 88);
+            this.txtId.Location = new System.Drawing.Point(417, 50);
             this.txtId.Name = "txtId";
             this.txtId.Properties.Appearance.Options.UseTextOptions = true;
             this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -802,6 +805,8 @@
             // 
             // labelControl3
             // 
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(915, 53);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(82, 25);
@@ -810,6 +815,8 @@
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(921, 91);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(63, 25);
@@ -821,7 +828,7 @@
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.gridControl2);
-            this.panelControl1.Location = new System.Drawing.Point(1005, 351);
+            this.panelControl1.Location = new System.Drawing.Point(1005, 318);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(0, 241);
             this.panelControl1.TabIndex = 25;
@@ -1018,7 +1025,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 592);
+            this.ClientSize = new System.Drawing.Size(1003, 559);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.xtraScrollableControl2);

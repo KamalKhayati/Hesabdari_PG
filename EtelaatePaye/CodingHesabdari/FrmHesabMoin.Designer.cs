@@ -329,6 +329,7 @@
             this.labelControl5.Size = new System.Drawing.Size(101, 27);
             this.labelControl5.TabIndex = 44;
             this.labelControl5.Text = "وضعیت حساب";
+            this.labelControl5.Visible = false;
             // 
             // chkIsActive
             // 

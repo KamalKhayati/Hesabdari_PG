@@ -268,7 +268,10 @@ namespace EtelaatePaye.CodingHesabdari
         {
             FillDataGridHesabMoin();
             if (lblUserId.Text == "1")
+            {
                 chkIsActive.Visible = true;
+                labelControl5.Visible = true;
+            }
             //using (var db = new MyContext())
             //{
             //    try
@@ -680,8 +683,6 @@ namespace EtelaatePaye.CodingHesabdari
             FillListBoxLevel1();
             FillListBoxActiveSystem();
             chkListBoxActiveSystem.CheckAll();
-            if (lblUserId.Text == "1")
-                chkIsActive.Visible = true;
 
             FillcmbHesabGroupList();
             cmbListHesabGroup.Focus();
@@ -750,8 +751,6 @@ namespace EtelaatePaye.CodingHesabdari
                 FillListBoxLevel1();
                 FillListBoxActiveSystem();
                 chkListBoxActiveSystem.CheckAll();
-                if (lblUserId.Text == "1")
-                    chkIsActive.Visible = true;
 
                 cmbListHesabGroup.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupId").ToString());
                 cmbListHesabCol.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ColId").ToString());

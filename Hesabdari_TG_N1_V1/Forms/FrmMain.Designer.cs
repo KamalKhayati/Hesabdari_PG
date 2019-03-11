@@ -77,7 +77,7 @@
             this.btnTafziliSandogh = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliHesabBanki = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliAshkhas = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliDaraeha = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
@@ -343,7 +343,7 @@
             this.btnTafziliSandogh,
             this.btnTafziliHesabBanki,
             this.btnTafziliAshkhas,
-            this.barButtonItem18,
+            this.btnTafziliDaraeha,
             this.barButtonItem19,
             this.barButtonItem20,
             this.barButtonItem21,
@@ -726,7 +726,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliSandogh),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliHesabBanki),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliAshkhas),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem18),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliDaraeha),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
@@ -755,12 +755,14 @@
             this.btnTafziliAshkhas.Caption = "اشخاص";
             this.btnTafziliAshkhas.Id = 143;
             this.btnTafziliAshkhas.Name = "btnTafziliAshkhas";
+            this.btnTafziliAshkhas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliAshkhas_ItemClick);
             // 
-            // barButtonItem18
+            // btnTafziliDaraeha
             // 
-            this.barButtonItem18.Caption = "داراییها";
-            this.barButtonItem18.Id = 145;
-            this.barButtonItem18.Name = "barButtonItem18";
+            this.btnTafziliDaraeha.Caption = "داراییها";
+            this.btnTafziliDaraeha.Id = 145;
+            this.btnTafziliDaraeha.Name = "btnTafziliDaraeha";
+            this.btnTafziliDaraeha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliDaraeha_ItemClick);
             // 
             // barButtonItem19
             // 
@@ -1990,7 +1992,7 @@
         private DevExpress.XtraBars.BarButtonItem btnTafziliSandogh;
         private DevExpress.XtraBars.BarButtonItem btnTafziliHesabBanki;
         private DevExpress.XtraBars.BarButtonItem btnTafziliAshkhas;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliDaraeha;
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
         private DevExpress.XtraBars.BarButtonItem barButtonItem20;
         private DevExpress.XtraBars.BarButtonItem barButtonItem21;

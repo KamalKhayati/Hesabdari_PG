@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHesabTafziliHesabBamki));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
@@ -92,6 +92,32 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.EpHesabTafziliHesabBankisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn3 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn4 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn7 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn8 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn10 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn11 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn12 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn13 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn14 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn15 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
+            this.layoutViewField_gridColumn16 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             this.colSharhHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEpGroupTafzili1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -112,35 +138,9 @@
             this.colShomareMoshtari = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNoeArz = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.EpHesabTafziliHesabBankisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn16 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
-            this.layoutViewField_gridColumn3 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn4 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn7 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn8 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn10 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn11 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn12 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn13 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn14 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn15 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
-            this.layoutViewField_gridColumn16 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
             this.xtraScrollableControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -169,14 +169,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EpHesabTafziliHesabBankisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpHesabTafziliHesabBankisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn7)).BeginInit();
@@ -188,6 +183,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPrint
@@ -305,7 +305,7 @@
             this.xtraScrollableControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.xtraScrollableControl2.Location = new System.Drawing.Point(0, 319);
             this.xtraScrollableControl2.Name = "xtraScrollableControl2";
-            this.xtraScrollableControl2.Size = new System.Drawing.Size(1003, 320);
+            this.xtraScrollableControl2.Size = new System.Drawing.Size(1005, 320);
             this.xtraScrollableControl2.TabIndex = 27;
             // 
             // panelControl2
@@ -629,6 +629,7 @@
             this.labelControl6.Size = new System.Drawing.Size(101, 32);
             this.labelControl6.TabIndex = 35;
             this.labelControl6.Text = "وضعیت حساب";
+            this.labelControl6.Visible = false;
             // 
             // chkIsActive
             // 
@@ -881,9 +882,9 @@
             this.btnNewCode.Location = new System.Drawing.Point(633, 87);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(100, 33);
-            toolTipTitleItem2.Text = "Alt+N";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnNewCode.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Alt+N";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnNewCode.SuperTip = superToolTip1;
             this.btnNewCode.TabIndex = 29;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
@@ -901,7 +902,7 @@
             this.txtCodeGroupTafzili.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCodeGroupTafzili.Properties.MaxLength = 2;
             this.txtCodeGroupTafzili.Properties.ReadOnly = true;
-            this.txtCodeGroupTafzili.Size = new System.Drawing.Size(64, 32);
+            this.txtCodeGroupTafzili.Size = new System.Drawing.Size(45, 32);
             this.txtCodeGroupTafzili.TabIndex = 21;
             this.txtCodeGroupTafzili.TabStop = false;
             // 
@@ -909,7 +910,7 @@
             // 
             this.txtCode.EditValue = "";
             this.txtCode.EnterMoveNextControl = true;
-            this.txtCode.Location = new System.Drawing.Point(840, 88);
+            this.txtCode.Location = new System.Drawing.Point(821, 88);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -917,7 +918,7 @@
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCode.Properties.MaxLength = 5;
             this.txtCode.Properties.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(69, 32);
+            this.txtCode.Size = new System.Drawing.Size(88, 32);
             this.txtCode.TabIndex = 20;
             this.txtCode.TabStop = false;
             // 
@@ -940,6 +941,8 @@
             // 
             // labelControl3
             // 
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(915, 53);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(82, 25);
@@ -948,6 +951,8 @@
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(921, 91);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(63, 25);
@@ -961,8 +966,318 @@
             this.panelControl1.Controls.Add(this.gridControl2);
             this.panelControl1.Location = new System.Drawing.Point(1005, 319);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(0, 320);
+            this.panelControl1.Size = new System.Drawing.Size(2, 320);
             this.panelControl1.TabIndex = 28;
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.DataSource = this.EpHesabTafziliHesabBankisBindingSource;
+            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl2.Location = new System.Drawing.Point(2, 2);
+            this.gridControl2.MainView = this.layoutView1;
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(0, 316);
+            this.gridControl2.TabIndex = 33;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.layoutView1});
+            // 
+            // EpHesabTafziliHesabBankisBindingSource
+            // 
+            this.EpHesabTafziliHesabBankisBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabTafziliHesabBanki);
+            // 
+            // layoutView1
+            // 
+            this.layoutView1.CardMinSize = new System.Drawing.Size(566, 416);
+            this.layoutView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15,
+            this.gridColumn16});
+            this.layoutView1.GridControl = this.gridControl2;
+            this.layoutView1.Name = "layoutView1";
+            this.layoutView1.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.layoutView1.OptionsBehavior.Editable = false;
+            this.layoutView1.OptionsFind.AllowFindPanel = false;
+            this.layoutView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.layoutView1.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.layoutView1.OptionsItemText.AlignMode = DevExpress.XtraGrid.Views.Layout.FieldTextAlignMode.AutoSize;
+            this.layoutView1.OptionsView.ShowCardBorderIfCaptionHidden = false;
+            this.layoutView1.OptionsView.ShowCardCaption = false;
+            this.layoutView1.OptionsView.ShowHeaderPanel = false;
+            this.layoutView1.TemplateCard = this.layoutViewCard1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn3.Caption = "کد حساب";
+            this.gridColumn3.FieldName = "Code";
+            this.gridColumn3.LayoutViewField = this.layoutViewField_gridColumn3;
+            this.gridColumn3.MinWidth = 19;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Width = 110;
+            // 
+            // layoutViewField_gridColumn3
+            // 
+            this.layoutViewField_gridColumn3.EditorPreferredWidth = 470;
+            this.layoutViewField_gridColumn3.Location = new System.Drawing.Point(0, 0);
+            this.layoutViewField_gridColumn3.Name = "layoutViewField_gridColumn3";
+            this.layoutViewField_gridColumn3.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn3.TextSize = new System.Drawing.Size(67, 25);
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn4.Caption = "نام حساب ";
+            this.gridColumn4.FieldName = "Name";
+            this.gridColumn4.LayoutViewField = this.layoutViewField_gridColumn4;
+            this.gridColumn4.MinWidth = 19;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Width = 400;
+            // 
+            // layoutViewField_gridColumn4
+            // 
+            this.layoutViewField_gridColumn4.EditorPreferredWidth = 463;
+            this.layoutViewField_gridColumn4.Location = new System.Drawing.Point(0, 36);
+            this.layoutViewField_gridColumn4.Name = "layoutViewField_gridColumn4";
+            this.layoutViewField_gridColumn4.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn4.TextSize = new System.Drawing.Size(74, 25);
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn7.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn7.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn7.Caption = "کد شعبه";
+            this.gridColumn7.FieldName = "CodeShobe";
+            this.gridColumn7.LayoutViewField = this.layoutViewField_gridColumn7;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Width = 130;
+            // 
+            // layoutViewField_gridColumn7
+            // 
+            this.layoutViewField_gridColumn7.EditorPreferredWidth = 479;
+            this.layoutViewField_gridColumn7.Location = new System.Drawing.Point(0, 72);
+            this.layoutViewField_gridColumn7.Name = "layoutViewField_gridColumn7";
+            this.layoutViewField_gridColumn7.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn7.TextSize = new System.Drawing.Size(58, 25);
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn8.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn8.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn8.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn8.Caption = "نوع حساب";
+            this.gridColumn8.FieldName = "NoeHesab";
+            this.gridColumn8.LayoutViewField = this.layoutViewField_gridColumn8;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Width = 150;
+            // 
+            // layoutViewField_gridColumn8
+            // 
+            this.layoutViewField_gridColumn8.EditorPreferredWidth = 463;
+            this.layoutViewField_gridColumn8.Location = new System.Drawing.Point(0, 108);
+            this.layoutViewField_gridColumn8.Name = "layoutViewField_gridColumn8";
+            this.layoutViewField_gridColumn8.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn8.TextSize = new System.Drawing.Size(74, 25);
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn10.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn10.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn10.Caption = "شماره کارت";
+            this.gridColumn10.FieldName = "ShomareKart";
+            this.gridColumn10.LayoutViewField = this.layoutViewField_gridColumn10;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Width = 180;
+            // 
+            // layoutViewField_gridColumn10
+            // 
+            this.layoutViewField_gridColumn10.EditorPreferredWidth = 462;
+            this.layoutViewField_gridColumn10.Location = new System.Drawing.Point(0, 144);
+            this.layoutViewField_gridColumn10.Name = "layoutViewField_gridColumn10";
+            this.layoutViewField_gridColumn10.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn10.TextSize = new System.Drawing.Size(75, 25);
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn11.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn11.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn11.Caption = "شماره شبا";
+            this.gridColumn11.FieldName = "ShomareShaba";
+            this.gridColumn11.LayoutViewField = this.layoutViewField_gridColumn11;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Width = 180;
+            // 
+            // layoutViewField_gridColumn11
+            // 
+            this.layoutViewField_gridColumn11.EditorPreferredWidth = 471;
+            this.layoutViewField_gridColumn11.Location = new System.Drawing.Point(0, 180);
+            this.layoutViewField_gridColumn11.Name = "layoutViewField_gridColumn11";
+            this.layoutViewField_gridColumn11.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn11.TextSize = new System.Drawing.Size(66, 25);
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn12.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn12.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn12.Caption = "شماره مشتری";
+            this.gridColumn12.FieldName = "ShomareMoshtari";
+            this.gridColumn12.LayoutViewField = this.layoutViewField_gridColumn12;
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Width = 150;
+            // 
+            // layoutViewField_gridColumn12
+            // 
+            this.layoutViewField_gridColumn12.EditorPreferredWidth = 446;
+            this.layoutViewField_gridColumn12.Location = new System.Drawing.Point(0, 216);
+            this.layoutViewField_gridColumn12.Name = "layoutViewField_gridColumn12";
+            this.layoutViewField_gridColumn12.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn12.TextSize = new System.Drawing.Size(91, 25);
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn13.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn13.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn13.Caption = "تاریخ افتتاح ";
+            this.gridColumn13.FieldName = "StartDate";
+            this.gridColumn13.LayoutViewField = this.layoutViewField_gridColumn13;
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Width = 150;
+            // 
+            // layoutViewField_gridColumn13
+            // 
+            this.layoutViewField_gridColumn13.EditorPreferredWidth = 452;
+            this.layoutViewField_gridColumn13.Location = new System.Drawing.Point(0, 252);
+            this.layoutViewField_gridColumn13.Name = "layoutViewField_gridColumn13";
+            this.layoutViewField_gridColumn13.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn13.TextSize = new System.Drawing.Size(85, 25);
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn14.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn14.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn14.Caption = "نوع ارز";
+            this.gridColumn14.FieldName = "NoeArz";
+            this.gridColumn14.LayoutViewField = this.layoutViewField_gridColumn14;
+            this.gridColumn14.Name = "gridColumn14";
+            // 
+            // layoutViewField_gridColumn14
+            // 
+            this.layoutViewField_gridColumn14.EditorPreferredWidth = 491;
+            this.layoutViewField_gridColumn14.Location = new System.Drawing.Point(0, 288);
+            this.layoutViewField_gridColumn14.Name = "layoutViewField_gridColumn14";
+            this.layoutViewField_gridColumn14.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn14.TextSize = new System.Drawing.Size(46, 25);
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn15.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn15.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn15.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn15.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn15.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn15.Caption = "فعال";
+            this.gridColumn15.FieldName = "IsActive";
+            this.gridColumn15.LayoutViewField = this.layoutViewField_gridColumn15;
+            this.gridColumn15.MinWidth = 19;
+            this.gridColumn15.Name = "gridColumn15";
+            // 
+            // layoutViewField_gridColumn15
+            // 
+            this.layoutViewField_gridColumn15.EditorPreferredWidth = 505;
+            this.layoutViewField_gridColumn15.Location = new System.Drawing.Point(0, 324);
+            this.layoutViewField_gridColumn15.Name = "layoutViewField_gridColumn15";
+            this.layoutViewField_gridColumn15.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn15.TextSize = new System.Drawing.Size(32, 25);
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.gridColumn16.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn16.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn16.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn16.Caption = "تشریح حساب";
+            this.gridColumn16.FieldName = "SharhHesab";
+            this.gridColumn16.LayoutViewField = this.layoutViewField_gridColumn16;
+            this.gridColumn16.MinWidth = 19;
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Width = 400;
+            // 
+            // layoutViewField_gridColumn16
+            // 
+            this.layoutViewField_gridColumn16.EditorPreferredWidth = 442;
+            this.layoutViewField_gridColumn16.Location = new System.Drawing.Point(0, 360);
+            this.layoutViewField_gridColumn16.Name = "layoutViewField_gridColumn16";
+            this.layoutViewField_gridColumn16.Size = new System.Drawing.Size(546, 36);
+            this.layoutViewField_gridColumn16.TextSize = new System.Drawing.Size(95, 25);
+            // 
+            // layoutViewCard1
+            // 
+            this.layoutViewCard1.CustomizationFormText = "TemplateCard";
+            this.layoutViewCard1.GroupBordersVisible = false;
+            this.layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            this.layoutViewCard1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutViewField_gridColumn3,
+            this.layoutViewField_gridColumn4,
+            this.layoutViewField_gridColumn7,
+            this.layoutViewField_gridColumn8,
+            this.layoutViewField_gridColumn10,
+            this.layoutViewField_gridColumn11,
+            this.layoutViewField_gridColumn12,
+            this.layoutViewField_gridColumn13,
+            this.layoutViewField_gridColumn14,
+            this.layoutViewField_gridColumn15,
+            this.layoutViewField_gridColumn16});
+            this.layoutViewCard1.Name = "layoutViewCard1";
+            this.layoutViewCard1.OptionsItemText.TextToControlDistance = 5;
+            this.layoutViewCard1.Text = "TemplateCard";
             // 
             // colSharhHesab
             // 
@@ -1256,14 +1571,10 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(999, 315);
+            this.gridControl1.Size = new System.Drawing.Size(1001, 315);
             this.gridControl1.TabIndex = 32;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // EpHesabTafziliHesabBankisBindingSource
-            // 
-            this.EpHesabTafziliHesabBankisBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabTafziliHesabBanki);
             // 
             // panelControl4
             // 
@@ -1273,7 +1584,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1003, 319);
+            this.panelControl4.Size = new System.Drawing.Size(1005, 319);
             this.panelControl4.TabIndex = 26;
             // 
             // lblUserName
@@ -1296,317 +1607,11 @@
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
             // 
-            // gridControl2
-            // 
-            this.gridControl2.DataSource = this.EpHesabTafziliHesabBankisBindingSource;
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl2.Location = new System.Drawing.Point(1, 2);
-            this.gridControl2.MainView = this.layoutView1;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(0, 316);
-            this.gridControl2.TabIndex = 33;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.layoutView1});
-            // 
-            // layoutView1
-            // 
-            this.layoutView1.CardMinSize = new System.Drawing.Size(566, 416);
-            this.layoutView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.LayoutViewColumn[] {
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn7,
-            this.gridColumn8,
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn12,
-            this.gridColumn13,
-            this.gridColumn14,
-            this.gridColumn15,
-            this.gridColumn16});
-            this.layoutView1.GridControl = this.gridControl2;
-            this.layoutView1.Name = "layoutView1";
-            this.layoutView1.OptionsBehavior.AutoSelectAllInEditor = false;
-            this.layoutView1.OptionsBehavior.Editable = false;
-            this.layoutView1.OptionsFind.AllowFindPanel = false;
-            this.layoutView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
-            this.layoutView1.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
-            this.layoutView1.OptionsItemText.AlignMode = DevExpress.XtraGrid.Views.Layout.FieldTextAlignMode.AutoSize;
-            this.layoutView1.OptionsView.ShowCardBorderIfCaptionHidden = false;
-            this.layoutView1.OptionsView.ShowCardCaption = false;
-            this.layoutView1.OptionsView.ShowHeaderPanel = false;
-            this.layoutView1.TemplateCard = this.layoutViewCard1;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn3.Caption = "کد حساب";
-            this.gridColumn3.FieldName = "Code";
-            this.gridColumn3.LayoutViewField = this.layoutViewField_gridColumn3;
-            this.gridColumn3.MinWidth = 19;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Width = 110;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn4.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn4.Caption = "نام حساب ";
-            this.gridColumn4.FieldName = "Name";
-            this.gridColumn4.LayoutViewField = this.layoutViewField_gridColumn4;
-            this.gridColumn4.MinWidth = 19;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Width = 400;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn7.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn7.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn7.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn7.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn7.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn7.Caption = "کد شعبه";
-            this.gridColumn7.FieldName = "CodeShobe";
-            this.gridColumn7.LayoutViewField = this.layoutViewField_gridColumn7;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Width = 130;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn8.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn8.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn8.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn8.Caption = "نوع حساب";
-            this.gridColumn8.FieldName = "NoeHesab";
-            this.gridColumn8.LayoutViewField = this.layoutViewField_gridColumn8;
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Width = 150;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn10.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn10.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn10.Caption = "شماره کارت";
-            this.gridColumn10.FieldName = "ShomareKart";
-            this.gridColumn10.LayoutViewField = this.layoutViewField_gridColumn10;
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Width = 180;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn11.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn11.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn11.Caption = "شماره شبا";
-            this.gridColumn11.FieldName = "ShomareShaba";
-            this.gridColumn11.LayoutViewField = this.layoutViewField_gridColumn11;
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Width = 180;
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn12.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn12.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn12.Caption = "شماره مشتری";
-            this.gridColumn12.FieldName = "ShomareMoshtari";
-            this.gridColumn12.LayoutViewField = this.layoutViewField_gridColumn12;
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Width = 150;
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn13.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn13.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn13.Caption = "تاریخ افتتاح ";
-            this.gridColumn13.FieldName = "StartDate";
-            this.gridColumn13.LayoutViewField = this.layoutViewField_gridColumn13;
-            this.gridColumn13.Name = "gridColumn13";
-            this.gridColumn13.Width = 150;
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn14.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn14.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn14.Caption = "نوع ارز";
-            this.gridColumn14.FieldName = "NoeArz";
-            this.gridColumn14.LayoutViewField = this.layoutViewField_gridColumn14;
-            this.gridColumn14.Name = "gridColumn14";
-            // 
-            // gridColumn15
-            // 
-            this.gridColumn15.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn15.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn15.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn15.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn15.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn15.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn15.Caption = "فعال";
-            this.gridColumn15.FieldName = "IsActive";
-            this.gridColumn15.LayoutViewField = this.layoutViewField_gridColumn15;
-            this.gridColumn15.MinWidth = 19;
-            this.gridColumn15.Name = "gridColumn15";
-            // 
-            // gridColumn16
-            // 
-            this.gridColumn16.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn16.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.gridColumn16.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn16.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn16.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn16.Caption = "تشریح حساب";
-            this.gridColumn16.FieldName = "SharhHesab";
-            this.gridColumn16.LayoutViewField = this.layoutViewField_gridColumn16;
-            this.gridColumn16.MinWidth = 19;
-            this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.Width = 400;
-            // 
-            // layoutViewCard1
-            // 
-            this.layoutViewCard1.CustomizationFormText = "TemplateCard";
-            this.layoutViewCard1.GroupBordersVisible = false;
-            this.layoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
-            this.layoutViewCard1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutViewField_gridColumn3,
-            this.layoutViewField_gridColumn4,
-            this.layoutViewField_gridColumn7,
-            this.layoutViewField_gridColumn8,
-            this.layoutViewField_gridColumn10,
-            this.layoutViewField_gridColumn11,
-            this.layoutViewField_gridColumn12,
-            this.layoutViewField_gridColumn13,
-            this.layoutViewField_gridColumn14,
-            this.layoutViewField_gridColumn15,
-            this.layoutViewField_gridColumn16});
-            this.layoutViewCard1.Name = "layoutViewCard1";
-            this.layoutViewCard1.OptionsItemText.TextToControlDistance = 5;
-            this.layoutViewCard1.Text = "TemplateCard";
-            // 
-            // layoutViewField_gridColumn3
-            // 
-            this.layoutViewField_gridColumn3.EditorPreferredWidth = 470;
-            this.layoutViewField_gridColumn3.Location = new System.Drawing.Point(0, 0);
-            this.layoutViewField_gridColumn3.Name = "layoutViewField_gridColumn3";
-            this.layoutViewField_gridColumn3.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn3.TextSize = new System.Drawing.Size(67, 25);
-            // 
-            // layoutViewField_gridColumn4
-            // 
-            this.layoutViewField_gridColumn4.EditorPreferredWidth = 463;
-            this.layoutViewField_gridColumn4.Location = new System.Drawing.Point(0, 36);
-            this.layoutViewField_gridColumn4.Name = "layoutViewField_gridColumn4";
-            this.layoutViewField_gridColumn4.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn4.TextSize = new System.Drawing.Size(74, 25);
-            // 
-            // layoutViewField_gridColumn7
-            // 
-            this.layoutViewField_gridColumn7.EditorPreferredWidth = 479;
-            this.layoutViewField_gridColumn7.Location = new System.Drawing.Point(0, 72);
-            this.layoutViewField_gridColumn7.Name = "layoutViewField_gridColumn7";
-            this.layoutViewField_gridColumn7.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn7.TextSize = new System.Drawing.Size(58, 25);
-            // 
-            // layoutViewField_gridColumn8
-            // 
-            this.layoutViewField_gridColumn8.EditorPreferredWidth = 463;
-            this.layoutViewField_gridColumn8.Location = new System.Drawing.Point(0, 108);
-            this.layoutViewField_gridColumn8.Name = "layoutViewField_gridColumn8";
-            this.layoutViewField_gridColumn8.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn8.TextSize = new System.Drawing.Size(74, 25);
-            // 
-            // layoutViewField_gridColumn10
-            // 
-            this.layoutViewField_gridColumn10.EditorPreferredWidth = 462;
-            this.layoutViewField_gridColumn10.Location = new System.Drawing.Point(0, 144);
-            this.layoutViewField_gridColumn10.Name = "layoutViewField_gridColumn10";
-            this.layoutViewField_gridColumn10.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn10.TextSize = new System.Drawing.Size(75, 25);
-            // 
-            // layoutViewField_gridColumn11
-            // 
-            this.layoutViewField_gridColumn11.EditorPreferredWidth = 471;
-            this.layoutViewField_gridColumn11.Location = new System.Drawing.Point(0, 180);
-            this.layoutViewField_gridColumn11.Name = "layoutViewField_gridColumn11";
-            this.layoutViewField_gridColumn11.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn11.TextSize = new System.Drawing.Size(66, 25);
-            // 
-            // layoutViewField_gridColumn12
-            // 
-            this.layoutViewField_gridColumn12.EditorPreferredWidth = 446;
-            this.layoutViewField_gridColumn12.Location = new System.Drawing.Point(0, 216);
-            this.layoutViewField_gridColumn12.Name = "layoutViewField_gridColumn12";
-            this.layoutViewField_gridColumn12.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn12.TextSize = new System.Drawing.Size(91, 25);
-            // 
-            // layoutViewField_gridColumn13
-            // 
-            this.layoutViewField_gridColumn13.EditorPreferredWidth = 452;
-            this.layoutViewField_gridColumn13.Location = new System.Drawing.Point(0, 252);
-            this.layoutViewField_gridColumn13.Name = "layoutViewField_gridColumn13";
-            this.layoutViewField_gridColumn13.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn13.TextSize = new System.Drawing.Size(85, 25);
-            // 
-            // layoutViewField_gridColumn14
-            // 
-            this.layoutViewField_gridColumn14.EditorPreferredWidth = 491;
-            this.layoutViewField_gridColumn14.Location = new System.Drawing.Point(0, 288);
-            this.layoutViewField_gridColumn14.Name = "layoutViewField_gridColumn14";
-            this.layoutViewField_gridColumn14.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn14.TextSize = new System.Drawing.Size(46, 25);
-            // 
-            // layoutViewField_gridColumn15
-            // 
-            this.layoutViewField_gridColumn15.EditorPreferredWidth = 505;
-            this.layoutViewField_gridColumn15.Location = new System.Drawing.Point(0, 324);
-            this.layoutViewField_gridColumn15.Name = "layoutViewField_gridColumn15";
-            this.layoutViewField_gridColumn15.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn15.TextSize = new System.Drawing.Size(32, 25);
-            // 
-            // layoutViewField_gridColumn16
-            // 
-            this.layoutViewField_gridColumn16.EditorPreferredWidth = 442;
-            this.layoutViewField_gridColumn16.Location = new System.Drawing.Point(0, 360);
-            this.layoutViewField_gridColumn16.Name = "layoutViewField_gridColumn16";
-            this.layoutViewField_gridColumn16.Size = new System.Drawing.Size(546, 36);
-            this.layoutViewField_gridColumn16.TextSize = new System.Drawing.Size(95, 25);
-            // 
             // FrmHesabTafziliHesabBamki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 639);
+            this.ClientSize = new System.Drawing.Size(1005, 639);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.xtraScrollableControl2);
@@ -1614,7 +1619,7 @@
             this.Name = "FrmHesabTafziliHesabBamki";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " حساب بانکی";
+            this.Text = " حساب تفضیلی حساب بانکی";
             this.Load += new System.EventHandler(this.FrmHesabTafziliHesabBamki_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabTafziliHesabBamki_KeyDown);
             this.xtraScrollableControl2.ResumeLayout(false);
@@ -1646,15 +1651,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EpHesabTafziliHesabBankisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpHesabTafziliHesabBankisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn7)).EndInit();
@@ -1666,6 +1665,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
             this.ResumeLayout(false);
 
         }

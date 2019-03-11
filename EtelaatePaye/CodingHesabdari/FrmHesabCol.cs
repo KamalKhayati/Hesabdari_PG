@@ -177,7 +177,10 @@ namespace EtelaatePaye.CodingHesabdari
         {
             FillDataGridHesabCol();
             if (lblUserId.Text == "1")
+            {
                 chkIsActive.Visible = true;
+                labelControl6.Visible = true;
+            }
             //using (var db = new MyContext())
             //{
             //    try
@@ -512,8 +515,6 @@ namespace EtelaatePaye.CodingHesabdari
             InActiveButtons();
             ClearControls();
             ActiveControls();
-            if (lblUserId.Text == "1")
-                chkIsActive.Visible = true;
             FillcmbHesabGroup();
             cmbListHesabGroup.Focus();
 
@@ -579,9 +580,6 @@ namespace EtelaatePaye.CodingHesabdari
                 InActiveButtons();
                 FillcmbHesabGroup();
 
-                if (lblUserId.Text == "1")
-                    chkIsActive.Visible = true;
-
                 cmbListHesabGroup.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupId").ToString());
                 txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
                 txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(1);
@@ -594,9 +592,9 @@ namespace EtelaatePaye.CodingHesabdari
                 NameBeforeEdit = txtName.Text;
                 GroupIdBeforeEdit = Convert.ToInt32(cmbListHesabGroup.EditValue);
                 IsActiveBeforeEdit = chkIsActive.Checked;
+                ActiveControls();
                 if (txtCode.Text == "9")
                     btnNewCode.Enabled = false;
-                ActiveControls();
                 txtName.Focus();
             }
         }

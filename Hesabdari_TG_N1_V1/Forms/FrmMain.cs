@@ -576,5 +576,24 @@ namespace Hesabdari_TG_N1_V1.Forms
             ActiveForm(fm);
 
         }
+
+        private void btnTafziliAshkhas_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliAshkhas fm = new FrmHesabTafziliAshkhas();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliDaraeha_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmEtelaateAshkhas fm = new FrmEtelaateAshkhas();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+        }
     }
 }

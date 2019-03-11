@@ -390,7 +390,10 @@ namespace EtelaatePaye.CodingHesabdari
         private void FrmGroupTafziliCed_Load(object sender, EventArgs e)
         {
             if (Fm.lblUserId.Text == "1")
+            {
                 chkIsActive.Visible = true;
+                labelControl3.Visible = true;
+            }
 
             if (Fm.En == EnumCED.Create)
             {

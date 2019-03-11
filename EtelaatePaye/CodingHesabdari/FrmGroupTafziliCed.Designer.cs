@@ -97,6 +97,7 @@
             this.labelControl3.Size = new System.Drawing.Size(101, 32);
             this.labelControl3.TabIndex = 9;
             this.labelControl3.Text = "وضعیت حساب";
+            this.labelControl3.Visible = false;
             // 
             // btnNewCode
             // 

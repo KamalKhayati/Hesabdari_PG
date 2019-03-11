@@ -84,16 +84,16 @@
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.layoutView1 = new DevExpress.XtraGrid.Views.Layout.LayoutView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
-            this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             this.layoutViewField_gridColumn3 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_gridColumn4 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_gridColumn5 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_gridColumn6 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.LayoutViewColumn();
             this.layoutViewField_gridColumn7 = new DevExpress.XtraGrid.Views.Layout.LayoutViewField();
+            this.layoutViewCard1 = new DevExpress.XtraGrid.Views.Layout.LayoutViewCard();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -115,12 +115,12 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -686,6 +686,7 @@
             this.labelControl3.Size = new System.Drawing.Size(101, 32);
             this.labelControl3.TabIndex = 46;
             this.labelControl3.Text = "وضعیت حساب";
+            this.labelControl3.Visible = false;
             // 
             // btnNewCode
             // 
@@ -812,6 +813,14 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Width = 85;
             // 
+            // layoutViewField_gridColumn3
+            // 
+            this.layoutViewField_gridColumn3.EditorPreferredWidth = 514;
+            this.layoutViewField_gridColumn3.Location = new System.Drawing.Point(0, 0);
+            this.layoutViewField_gridColumn3.Name = "layoutViewField_gridColumn3";
+            this.layoutViewField_gridColumn3.Size = new System.Drawing.Size(543, 36);
+            this.layoutViewField_gridColumn3.TextSize = new System.Drawing.Size(20, 25);
+            // 
             // gridColumn4
             // 
             this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
@@ -825,6 +834,14 @@
             this.gridColumn4.LayoutViewField = this.layoutViewField_gridColumn4;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Width = 400;
+            // 
+            // layoutViewField_gridColumn4
+            // 
+            this.layoutViewField_gridColumn4.EditorPreferredWidth = 465;
+            this.layoutViewField_gridColumn4.Location = new System.Drawing.Point(0, 36);
+            this.layoutViewField_gridColumn4.Name = "layoutViewField_gridColumn4";
+            this.layoutViewField_gridColumn4.Size = new System.Drawing.Size(543, 36);
+            this.layoutViewField_gridColumn4.TextSize = new System.Drawing.Size(69, 25);
             // 
             // gridColumn5
             // 
@@ -840,6 +857,14 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Width = 130;
             // 
+            // layoutViewField_gridColumn5
+            // 
+            this.layoutViewField_gridColumn5.EditorPreferredWidth = 460;
+            this.layoutViewField_gridColumn5.Location = new System.Drawing.Point(0, 72);
+            this.layoutViewField_gridColumn5.Name = "layoutViewField_gridColumn5";
+            this.layoutViewField_gridColumn5.Size = new System.Drawing.Size(543, 36);
+            this.layoutViewField_gridColumn5.TextSize = new System.Drawing.Size(74, 25);
+            // 
             // gridColumn6
             // 
             this.gridColumn6.AppearanceCell.Options.UseTextOptions = true;
@@ -852,6 +877,14 @@
             this.gridColumn6.FieldName = "IsActive";
             this.gridColumn6.LayoutViewField = this.layoutViewField_gridColumn6;
             this.gridColumn6.Name = "gridColumn6";
+            // 
+            // layoutViewField_gridColumn6
+            // 
+            this.layoutViewField_gridColumn6.EditorPreferredWidth = 502;
+            this.layoutViewField_gridColumn6.Location = new System.Drawing.Point(0, 108);
+            this.layoutViewField_gridColumn6.Name = "layoutViewField_gridColumn6";
+            this.layoutViewField_gridColumn6.Size = new System.Drawing.Size(543, 36);
+            this.layoutViewField_gridColumn6.TextSize = new System.Drawing.Size(32, 25);
             // 
             // gridColumn7
             // 
@@ -867,6 +900,14 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Width = 400;
             // 
+            // layoutViewField_gridColumn7
+            // 
+            this.layoutViewField_gridColumn7.EditorPreferredWidth = 439;
+            this.layoutViewField_gridColumn7.Location = new System.Drawing.Point(0, 144);
+            this.layoutViewField_gridColumn7.Name = "layoutViewField_gridColumn7";
+            this.layoutViewField_gridColumn7.Size = new System.Drawing.Size(543, 36);
+            this.layoutViewField_gridColumn7.TextSize = new System.Drawing.Size(95, 25);
+            // 
             // layoutViewCard1
             // 
             this.layoutViewCard1.CustomizationFormText = "TemplateCard";
@@ -881,46 +922,6 @@
             this.layoutViewCard1.Name = "layoutViewCard1";
             this.layoutViewCard1.OptionsItemText.TextToControlDistance = 5;
             this.layoutViewCard1.Text = "TemplateCard";
-            // 
-            // layoutViewField_gridColumn3
-            // 
-            this.layoutViewField_gridColumn3.EditorPreferredWidth = 514;
-            this.layoutViewField_gridColumn3.Location = new System.Drawing.Point(0, 0);
-            this.layoutViewField_gridColumn3.Name = "layoutViewField_gridColumn3";
-            this.layoutViewField_gridColumn3.Size = new System.Drawing.Size(543, 36);
-            this.layoutViewField_gridColumn3.TextSize = new System.Drawing.Size(20, 25);
-            // 
-            // layoutViewField_gridColumn4
-            // 
-            this.layoutViewField_gridColumn4.EditorPreferredWidth = 465;
-            this.layoutViewField_gridColumn4.Location = new System.Drawing.Point(0, 36);
-            this.layoutViewField_gridColumn4.Name = "layoutViewField_gridColumn4";
-            this.layoutViewField_gridColumn4.Size = new System.Drawing.Size(543, 36);
-            this.layoutViewField_gridColumn4.TextSize = new System.Drawing.Size(69, 25);
-            // 
-            // layoutViewField_gridColumn5
-            // 
-            this.layoutViewField_gridColumn5.EditorPreferredWidth = 460;
-            this.layoutViewField_gridColumn5.Location = new System.Drawing.Point(0, 72);
-            this.layoutViewField_gridColumn5.Name = "layoutViewField_gridColumn5";
-            this.layoutViewField_gridColumn5.Size = new System.Drawing.Size(543, 36);
-            this.layoutViewField_gridColumn5.TextSize = new System.Drawing.Size(74, 25);
-            // 
-            // layoutViewField_gridColumn6
-            // 
-            this.layoutViewField_gridColumn6.EditorPreferredWidth = 502;
-            this.layoutViewField_gridColumn6.Location = new System.Drawing.Point(0, 108);
-            this.layoutViewField_gridColumn6.Name = "layoutViewField_gridColumn6";
-            this.layoutViewField_gridColumn6.Size = new System.Drawing.Size(543, 36);
-            this.layoutViewField_gridColumn6.TextSize = new System.Drawing.Size(32, 25);
-            // 
-            // layoutViewField_gridColumn7
-            // 
-            this.layoutViewField_gridColumn7.EditorPreferredWidth = 439;
-            this.layoutViewField_gridColumn7.Location = new System.Drawing.Point(0, 144);
-            this.layoutViewField_gridColumn7.Name = "layoutViewField_gridColumn7";
-            this.layoutViewField_gridColumn7.Size = new System.Drawing.Size(543, 36);
-            this.layoutViewField_gridColumn7.TextSize = new System.Drawing.Size(95, 25);
             // 
             // FrmHesabGroup
             // 
@@ -959,12 +960,12 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutViewField_gridColumn7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutViewCard1)).EndInit();
             this.ResumeLayout(false);
 
         }

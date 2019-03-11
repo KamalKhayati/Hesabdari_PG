@@ -30,6 +30,7 @@ namespace DBHesabdari_TG
         public virtual ICollection<REpHesabMoinBEpGroupTafziliLevel1> REpHesabMoinBEpGroupTafziliLevel1s { get; set; }
         public virtual ICollection<EpHesabTafziliSandogh> EpHesabTafziliSandoghs { get; set; }
         public virtual ICollection<EpHesabTafziliHesabBanki> EpHesabTafziliHesabBankis { get; set; }
+        public virtual ICollection<EpHesabTafziliAshkhas> EpHesabTafziliAshkhass { get; set; }
 
     }
 }

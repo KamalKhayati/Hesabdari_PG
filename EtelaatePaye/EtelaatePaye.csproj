@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodingHesabdari\FrmEtelaateAshkhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmEtelaateAshkhas.Designer.cs">
+      <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
+    </Compile>
     <Compile Include="CodingHesabdari\FrmGroupTafziliCed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,18 @@
     </Compile>
     <Compile Include="CodingHesabdari\FrmHesabMoin.Designer.cs">
       <DependentUpon>FrmHesabMoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas.Designer.cs">
+      <DependentUpon>FrmHesabTafziliAshkhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas_1.Designer.cs">
+      <DependentUpon>FrmHesabTafziliAshkhas_1.cs</DependentUpon>
     </Compile>
     <Compile Include="CodingHesabdari\FrmNameBank.cs">
       <SubType>Form</SubType>
@@ -124,6 +142,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CodingHesabdari\FrmEtelaateAshkhas.resx">
+      <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmGroupTafziliCed.resx">
       <DependentUpon>FrmGroupTafziliCed.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmHesabMoin.resx">
       <DependentUpon>FrmHesabMoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafziliAshkhas.resx">
+      <DependentUpon>FrmHesabTafziliAshkhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafziliAshkhas_1.resx">
+      <DependentUpon>FrmHesabTafziliAshkhas_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmNameBank.resx">
       <DependentUpon>FrmNameBank.cs</DependentUpon>

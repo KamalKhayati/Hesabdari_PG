@@ -169,7 +169,12 @@ namespace EtelaatePaye.CodingHesabdari
         {
             FillDataGridTafziliSandogh();
             if (lblUserId.Text == "1")
+            {
                 chkIsActive.Visible = true;
+                labelControl6.Visible = true;
+            }
+            //labelControl1.Text = "کد صندوق";
+            //labelControl2.Text = "نام صندوق";
             //using (var db = new MyContext())
             //{
             //    try
@@ -496,11 +501,8 @@ namespace EtelaatePaye.CodingHesabdari
             FillcmbGroupTafzili();
             cmbListGroupTafzili.EditValue = 1;
             txtCodeGroupTafzili.Text = "10";
-            btnNewCode_Click(null, null);
             ActiveControls();
-            if (lblUserId.Text == "1")
-                chkIsActive.Visible = true;
-
+            btnNewCode_Click(null, null);
             txtName.Focus();
         }
 
@@ -563,9 +565,6 @@ namespace EtelaatePaye.CodingHesabdari
                 InActiveButtons();
                 FillcmbGroupTafzili();
 
-                if (lblUserId.Text == "1")
-                    chkIsActive.Visible = true;
-
                 cmbListGroupTafzili.EditValue = 1;
                 txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
                 txtCodeGroupTafzili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
@@ -579,9 +578,9 @@ namespace EtelaatePaye.CodingHesabdari
                 CodeBeforeEdit = txtCode.Text;
                 NameBeforeEdit = txtName.Text;
                 IsActiveBeforeEdit = chkIsActive.Checked;
+                ActiveControls();
                 if (txtCode.Text == "99999")
                     btnNewCode.Enabled = false;
-                ActiveControls();
                 txtName.Focus();
             }
         }
