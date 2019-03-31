@@ -43,8 +43,8 @@ namespace DBHesabdari_TG
         //[Required]
         //public bool IsActive { get; set; }
         //public bool IsDefault { get; set; }
-        [MaxLength(350)]
-        public string SharhHesab { get; set; }
+        [MaxLength(400)]
+        public string Molahezat { get; set; }
         public virtual EpHesabTafziliAshkhas EpHesabTafziliAshkhas1 { get; set; }
 
     }

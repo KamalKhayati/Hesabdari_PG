@@ -80,6 +80,9 @@ namespace DBHesabdari_TG
         public virtual DbSet<EpHesabTafziliAshkhas> EpHesabTafziliAshkhass { get; set; }
         public virtual DbSet<EpMoshakhasat_A> EpMoshakhasat_As { get; set; }
         public virtual DbSet<EpAdress_A> EpAdress_As { get; set; }
+        public virtual DbSet<EpNameAdress> EpNameAdresss { get; set; }
+        public virtual DbSet<EpNameOstan> EpNameOstans { get; set; }
+        public virtual DbSet<EpNameShahrstan> EpNameShahrstans { get; set; }
         
 
 
@@ -141,6 +144,10 @@ namespace DBHesabdari_TG
             modelBuilder.Entity<EpNoeArz>().HasMany(m => m.EpHesabTafziliHesabBankis).WithRequired(m => m.EpNoeArz1).HasForeignKey(m => m.NoeArzId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpHesabTafziliAshkhas>().HasOptional(m => m.EpMoshakhasat_A1).WithRequired(m => m.EpHesabTafziliAshkhas1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpHesabTafziliAshkhas>().HasMany(m => m.EpAdress_As).WithRequired(m => m.EpHesabTafziliAshkhas1).HasForeignKey(m=>m.AshkhasId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpNameAdress>().HasMany(m => m.EpAdress_As).WithRequired(m => m.EpNameAdress1).HasForeignKey(m => m.NameAdressId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNameOstan>().HasMany(m => m.EpAdress_As).WithRequired(m => m.EpNameOstan1).HasForeignKey(m => m.NameOstanId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNameShahrstan>().HasMany(m => m.EpAdress_As).WithRequired(m => m.EpNameShahrstan1).HasForeignKey(m => m.NameShahrstanId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNameOstan>().HasMany(m => m.EpNameShahrstans).WithRequired(m => m.EpNameOstan1).HasForeignKey(m => m.NameOstanId).WillCascadeOnDelete(false);
 
             #region
             //--------> one - to - zero - or - one relationships < ------------

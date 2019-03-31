@@ -10,6 +10,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,11 +31,11 @@ namespace DBHesabdari_TG
         //[Required, MaxLength(100)]
         //public string AshkhasName { get; set; }
         [MaxLength(50)]
-        public string Adress { get; set; }
+        public string NameAdress { get; set; }
         [MaxLength(50)]
-        public string Ostan { get; set; }
+        public string NameOstan { get; set; }
         [MaxLength(50)]
-        public string Shahrstan { get; set; }
+        public string NameShahrstan { get; set; }
         [MaxLength(400)]
         public string SharhAdress { get; set; }
         [MaxLength(12)]
@@ -43,7 +44,15 @@ namespace DBHesabdari_TG
         public string SandoghPosti { get; set; }
         public bool IsDefault { get; set; }
         [MaxLength(400)]
-        public string SharhHesab { get; set; }
+        public string Molahezat { get; set; }
+        public int? NameAdressId { get; set; }
+        public virtual EpNameAdress EpNameAdress1 { get; set; }
+        public int? NameOstanId { get; set; }
+        public virtual EpNameOstan EpNameOstan1 { get; set; }
+        public int? NameShahrstanId { get; set; }
+        public virtual EpNameShahrstan EpNameShahrstan1 { get; set; }
         public virtual EpHesabTafziliAshkhas EpHesabTafziliAshkhas1 { get; set; }
+
     }
+
 }

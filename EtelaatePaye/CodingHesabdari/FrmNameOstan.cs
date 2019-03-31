@@ -1,10 +1,10 @@
 ﻿/****************************** Ghost.github.io ******************************\
-*	Module Name:	FrmNoeArz.cs
+*	Module Name:	FrmOstan.cs
 *	Project:		EtelaatePaye
 *	Copyright (C) 2018 Kamal Khayati, All rights reserved.
 *	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
 *
-*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 3 / 6   08:05 ق.ظ
+*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 3 / 13   12:04 ق.ظ
 *	
 ***********************************************************************************/
 using System;
@@ -24,27 +24,38 @@ using System.Data.Entity.Infrastructure;
 
 namespace EtelaatePaye.CodingHesabdari
 {
-    public partial class FrmNoeArz : DevExpress.XtraEditors.XtraForm
+    public partial class FrmNameOstan : DevExpress.XtraEditors.XtraForm
     {
-        FrmHesabTafziliHesabBamki Fm;
-        public FrmNoeArz(FrmHesabTafziliHesabBamki fm)
+        FrmEtelaateAshkhas Fm;
+        public FrmNameOstan(FrmEtelaateAshkhas fm)
         {
             InitializeComponent();
             Fm = fm;
         }
 
+        FrmNameShahrstan Fm1;
+        public FrmNameOstan(FrmNameShahrstan fm1)
+        {
+            InitializeComponent();
+            Fm1 = fm1;
+        }
+
+
         public EnumCED En;
-        public void FillDataGridNoeArz()
+        public bool IsActiveFrmNameOstan = false;
+        public bool IsActiveFrmNameSharstan = false;
+
+        public void FillDataGridNameOstan()
         {
             using (var dataContext = new MyContext())
             {
                 try
                 {
-                    var q1 = dataContext.EpNoeArzs.ToList();
+                    var q1 = dataContext.EpNameOstans.ToList();
                     if (q1.Count > 0)
-                        epNoeArzsBindingSource.DataSource = q1;
+                        epNameOstansBindingSource.DataSource = q1;
                     else
-                        epNoeArzsBindingSource.DataSource = null;
+                        epNameOstansBindingSource.DataSource = null;
                 }
                 catch (Exception ex)
                 {
@@ -55,9 +66,9 @@ namespace EtelaatePaye.CodingHesabdari
 
         }
 
-        private void FrmNoeArz_Load(object sender, EventArgs e)
+        private void FrmNameOstan_Load(object sender, EventArgs e)
         {
-            FillDataGridNoeArz();
+            FillDataGridNameOstan();
             //using (var db = new MyContext())
             //{
             //    try
@@ -91,7 +102,7 @@ namespace EtelaatePaye.CodingHesabdari
 
             if (string.IsNullOrEmpty(txtName.Text) || txtName.Text == "0")
             {
-                XtraMessageBox.Show("لطفاً نام ارز را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("لطفاً نام استان را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else
@@ -102,12 +113,12 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            if (db.EpNoeArzs.Any())
+                            if (db.EpNameOstans.Any())
                             {
-                                var q1 = db.EpNoeArzs.FirstOrDefault(p => p.Name == txtName.Text);
+                                var q1 = db.EpNameOstans.FirstOrDefault(p => p.Name == txtName.Text);
                                 if (q1 != null)
                                 {
-                                    XtraMessageBox.Show("این ارز قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return false;
                                 }
                             }
@@ -115,10 +126,10 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.EpNoeArzs.FirstOrDefault(p => p.Id != RowId && p.Name == txtName.Text);
+                            var q1 = db.EpNameOstans.FirstOrDefault(p => p.Id != RowId && p.Name == txtName.Text);
                             if (q1 != null)
                             {
-                                XtraMessageBox.Show("این ارز قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //txtName.Text = nameBeforeEdit;
                                 return false;
                             }
@@ -133,7 +144,7 @@ namespace EtelaatePaye.CodingHesabdari
             return true;
         }
 
-        private void FrmNoeArz_KeyDown(object sender, KeyEventArgs e)
+        private void FrmNameOstan_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2)
             {
@@ -190,7 +201,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         public void btnDisplyActiveList_Click(object sender, EventArgs e)
         {
-            FillDataGridNoeArz();
+            FillDataGridNameOstan();
         }
 
         private void gridView1_KeyPress(object sender, KeyPressEventArgs e)
@@ -277,17 +288,17 @@ namespace EtelaatePaye.CodingHesabdari
                         try
                         {
                             int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                            var q = db.EpNoeArzs.FirstOrDefault(p => p.Id == RowId);
+                            var q = db.EpNameOstans.FirstOrDefault(p => p.Id == RowId);
                             //var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
                             if (q != null /*&& q8 != null*/)
                             {
-                                db.EpNoeArzs.Remove(q);
+                                db.EpNameOstans.Remove(q);
                                 //db.EpAccessLevelCodingHesabdaris.Remove(q8);
                                 /////////////////////////////////////////////////////////////////////////////
                                 db.SaveChanges();
 
                                 btnDisplyActiveList_Click(null, null);
-                                //XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 if (gridView1.RowCount > 0)
                                     gridView1.FocusedRowHandle = EditRowIndex - 1;
                             }
@@ -296,8 +307,8 @@ namespace EtelaatePaye.CodingHesabdari
                         }
                         catch (DbUpdateException)
                         {
-                            XtraMessageBox.Show("عملیات حذف با خطا مواجه شد \n حذف ارز انتخابی مقدور نیست \n" +
-                                " جهت حذف ارز مورد نظر در ابتدا بایستی ارتباط این ارز با حساب تفضیلی بانکها حذف گردد" +
+                            XtraMessageBox.Show("عملیات حذف با خطا مواجه شد \n حذف این ردیف مقدور نیست \n" +
+                                " جهت حذف ردیف مورد نظر در ابتدا بایستی زیر مجموعه های این ردیف در قسمت آدرس اشخاص حذف شود" +
                                 "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         catch (Exception ex)
@@ -337,14 +348,14 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         try
                         {
-                            EpNoeArz obj = new EpNoeArz();
+                            EpNameOstan obj = new EpNameOstan();
                             obj.Name = txtName.Text;
 
-                            db.EpNoeArzs.Add(obj);
+                            db.EpNameOstans.Add(obj);
                             db.SaveChanges();
                             /////////////////////////////////////////////////////////////////////////////////////
                             //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                            //var q = db.EpNoeArzs.FirstOrDefault(s => s.Code == _Code);
+                            //var q = db.EpAdressNames.FirstOrDefault(s => s.Code == _Code);
                             //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                             //EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
                             //n1.KeyId = _Code;
@@ -378,7 +389,7 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             string _Name = txtName.Text;
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q = db.EpNoeArzs.FirstOrDefault(p => p.Id == RowId);
+                            var q = db.EpNameOstans.FirstOrDefault(p => p.Id == RowId);
                             if (q != null)
                             {
                                 q.Name = _Name;
@@ -510,9 +521,19 @@ namespace EtelaatePaye.CodingHesabdari
             btnDelete.Enabled = btnEdit.Enabled = gridView1.RowCount > 0 ? true : false;
         }
 
-        private void FrmNoeArz_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmNameOstan_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Fm.FillcmbNoeArz();
+            if (IsActiveFrmNameOstan == true)
+            {
+                Fm.FillcmbNameOstan();
+                IsActiveFrmNameOstan = false;
+            }
+            if (IsActiveFrmNameSharstan == true)
+            {
+                Fm1.FillcmbNameOstan();
+                IsActiveFrmNameSharstan = false;
+            }
         }
+
     }
 }

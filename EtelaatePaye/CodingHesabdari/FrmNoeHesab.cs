@@ -269,7 +269,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (gridView1.SelectedRowsCount > 0)
             {
-                if (XtraMessageBox.Show("آیا حساب بانکی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (XtraMessageBox.Show("آیا ردیف جاری حذف شود؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     EditRowIndex = gridView1.FocusedRowHandle;
                     using (var db = new MyContext())
@@ -287,7 +287,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 db.SaveChanges();
 
                                 btnDisplyActiveList_Click(null, null);
-                                XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                //XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 if (gridView1.RowCount > 0)
                                     gridView1.FocusedRowHandle = EditRowIndex - 1;
                             }
@@ -358,7 +358,7 @@ namespace EtelaatePaye.CodingHesabdari
                             //db.SaveChanges();
                             btnDisplyActiveList_Click(null, null);
 
-                            XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                           // XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                             gridView1.MoveLast();
                             ActiveButtons();
                             ClearControls();
@@ -472,7 +472,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 db.SaveChanges();
                                 btnDisplyActiveList_Click(null, null);
 
-                                XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                               // XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 if (gridView1.RowCount > 0)
                                     gridView1.FocusedRowHandle = EditRowIndex;
                                 gridControl1.Enabled = true;

@@ -1,6 +1,6 @@
 ﻿namespace EtelaatePaye.CodingHesabdari
 {
-    partial class FrmNoeArz
+    partial class FrmNameOstan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNoeArz));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNameOstan));
             this.xtraScrollableControl2 = new DevExpress.XtraEditors.XtraScrollableControl();
-            this.txtName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
@@ -46,77 +43,41 @@
             this.btnDisplyActiveList = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
+            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Line = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.epNoeArzsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.epNameOstansBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.xtraScrollableControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epNoeArzsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNameOstansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // xtraScrollableControl2
             // 
+            this.xtraScrollableControl2.Controls.Add(this.panelControl2);
             this.xtraScrollableControl2.Controls.Add(this.txtName);
             this.xtraScrollableControl2.Controls.Add(this.labelControl2);
             this.xtraScrollableControl2.Controls.Add(this.txtId);
-            this.xtraScrollableControl2.Controls.Add(this.panelControl2);
             this.xtraScrollableControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.xtraScrollableControl2.Location = new System.Drawing.Point(0, 348);
+            this.xtraScrollableControl2.Location = new System.Drawing.Point(0, 344);
             this.xtraScrollableControl2.Name = "xtraScrollableControl2";
             this.xtraScrollableControl2.Size = new System.Drawing.Size(330, 129);
             this.xtraScrollableControl2.TabIndex = 31;
-            // 
-            // txtName
-            // 
-            this.txtName.EnterMoveNextControl = true;
-            this.txtName.Location = new System.Drawing.Point(3, 91);
-            this.txtName.Name = "txtName";
-            this.txtName.Properties.MaxLength = 50;
-            this.txtName.Properties.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(273, 32);
-            this.txtName.TabIndex = 0;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.AutoEllipsis = true;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(277, 90);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(46, 32);
-            this.labelControl2.TabIndex = 32;
-            this.labelControl2.Text = "نوع ارز";
-            // 
-            // txtId
-            // 
-            this.txtId.EditValue = "آیدی صندوق";
-            this.txtId.Location = new System.Drawing.Point(3, 91);
-            this.txtId.Name = "txtId";
-            this.txtId.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtId.Properties.Mask.EditMask = "f0";
-            this.txtId.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtId.Properties.NullText = "آیدی انبار";
-            this.txtId.Properties.ReadOnly = true;
-            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId.Size = new System.Drawing.Size(69, 32);
-            this.txtId.TabIndex = 28;
-            this.txtId.TabStop = false;
-            this.txtId.Visible = false;
             // 
             // panelControl2
             // 
@@ -271,6 +232,45 @@
             this.btnCreate.ToolTipTitle = "ایجاد";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
+            // txtName
+            // 
+            this.txtName.EnterMoveNextControl = true;
+            this.txtName.Location = new System.Drawing.Point(3, 91);
+            this.txtName.Name = "txtName";
+            this.txtName.Properties.MaxLength = 50;
+            this.txtName.Properties.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(273, 32);
+            this.txtName.TabIndex = 0;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.AutoEllipsis = true;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Location = new System.Drawing.Point(277, 90);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(44, 32);
+            this.labelControl2.TabIndex = 32;
+            this.labelControl2.Text = "استان";
+            // 
+            // txtId
+            // 
+            this.txtId.EditValue = "آیدی صندوق";
+            this.txtId.Location = new System.Drawing.Point(3, 91);
+            this.txtId.Name = "txtId";
+            this.txtId.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtId.Properties.Mask.EditMask = "f0";
+            this.txtId.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtId.Properties.NullText = "آیدی انبار";
+            this.txtId.Properties.ReadOnly = true;
+            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtId.Size = new System.Drawing.Size(69, 32);
+            this.txtId.TabIndex = 28;
+            this.txtId.TabStop = false;
+            this.txtId.Visible = false;
+            // 
             // lblUserName
             // 
             this.lblUserName.Location = new System.Drawing.Point(23, 80);
@@ -288,7 +288,7 @@
             this.colName.AppearanceHeader.Options.UseTextOptions = true;
             this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colName.Caption = "نوع ارز";
+            this.colName.Caption = "نام استان";
             this.colName.FieldName = "Name";
             this.colName.MinWidth = 19;
             this.colName.Name = "colName";
@@ -348,21 +348,21 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.epNoeArzsBindingSource;
+            this.gridControl1.DataSource = this.epNameOstansBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(326, 344);
+            this.gridControl1.Size = new System.Drawing.Size(326, 340);
             this.gridControl1.TabIndex = 32;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // epNoeArzsBindingSource
+            // epNameOstansBindingSource
             // 
-            this.epNoeArzsBindingSource.DataSource = typeof(DBHesabdari_TG.EpNoeArz);
+            this.epNameOstansBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameOstan);
             // 
             // panelControl4
             // 
@@ -372,7 +372,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(330, 348);
+            this.panelControl4.Size = new System.Drawing.Size(330, 344);
             this.panelControl4.TabIndex = 30;
             // 
             // lblUserId
@@ -385,32 +385,31 @@
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
             // 
-            // FrmNoeArz
+            // FrmNameOstan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 477);
+            this.ClientSize = new System.Drawing.Size(330, 473);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.xtraScrollableControl2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmNoeArz";
+            this.Name = "FrmNameOstan";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "نام ارز";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmNoeArz_FormClosing);
-            this.Load += new System.EventHandler(this.FrmNoeArz_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmNoeArz_KeyDown);
+            this.Text = "نام استان";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmNameOstan_FormClosing);
+            this.Load += new System.EventHandler(this.FrmNameOstan_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmNameOstan_KeyDown);
             this.xtraScrollableControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epNoeArzsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNameOstansBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
@@ -444,6 +443,6 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         public DevExpress.XtraEditors.LabelControl lblUserId;
-        private System.Windows.Forms.BindingSource epNoeArzsBindingSource;
+        private System.Windows.Forms.BindingSource epNameOstansBindingSource;
     }
 }

@@ -239,18 +239,20 @@
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Properties.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(259, 32);
+            this.txtName.Size = new System.Drawing.Size(273, 32);
             this.txtName.TabIndex = 0;
             // 
             // labelControl2
             // 
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.AutoEllipsis = true;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(268, 90);
+            this.labelControl2.Location = new System.Drawing.Point(277, 90);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(60, 32);
+            this.labelControl2.Size = new System.Drawing.Size(41, 32);
             this.labelControl2.TabIndex = 32;
-            this.labelControl2.Text = "نام بانک";
+            this.labelControl2.Text = "بانک";
             // 
             // txtId
             // 

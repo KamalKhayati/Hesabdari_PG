@@ -64,6 +64,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AP\AnbarKala\ApAnbar.cs" />
     <Compile Include="Models\EnumCED.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameAdress.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpAdress_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpGroupTafzili.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabCol.cs" />
@@ -75,6 +76,8 @@
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafziliSandogh.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpMoshakhasat_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpNameBank.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameOstan.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameShahrstan.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpNoeArz.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpNoeHesab.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpSharhStandardMoin.cs" />
