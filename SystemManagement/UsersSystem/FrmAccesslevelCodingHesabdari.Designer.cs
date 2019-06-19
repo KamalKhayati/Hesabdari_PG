@@ -174,7 +174,7 @@
             // 
             // epAccessLevelCodingHesabdarisBindingSource
             // 
-            this.epAccessLevelCodingHesabdarisBindingSource.DataSource = typeof(DBHesabdari_TG.EpAccessLevelCodingHesabdari);
+            this.epAccessLevelCodingHesabdarisBindingSource.DataSource = typeof(DBHesabdari_PG.EpAccessLevelCodingHesabdari);
             // 
             // barManager1
             // 
@@ -259,7 +259,7 @@
             // 
             // msUserBindingSource
             // 
-            this.msUserBindingSource.DataSource = typeof(DBHesabdari_TG.MsUser);
+            this.msUserBindingSource.DataSource = typeof(DBHesabdari_PG.MsUser);
             // 
             // btnSave
             // 

@@ -319,7 +319,7 @@
             // 
             // msShobesBindingSource
             // 
-            this.msShobesBindingSource.DataSource = typeof(DBHesabdari_TG.MsShobe);
+            this.msShobesBindingSource.DataSource = typeof(DBHesabdari_PG.MsShobe);
             // 
             // gridView1
             // 
@@ -471,7 +471,7 @@
             // pLinqInstantFeedbackSource1
             // 
             this.pLinqInstantFeedbackSource1.DefaultSorting = "ShobeCode ASC";
-            this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_TG.MsShobe);
+            this.pLinqInstantFeedbackSource1.DesignTimeElementType = typeof(DBHesabdari_PG.MsShobe);
             // 
             // lblUserName
             // 

@@ -181,7 +181,7 @@
             // 
             // epHesabGroupsBindingSource
             // 
-            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabGroup);
+            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabGroup);
             // 
             // gridView1
             // 

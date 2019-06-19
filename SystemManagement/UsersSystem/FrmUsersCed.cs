@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using HelpClassLibrary;
-using DBHesabdari_TG;
+using DBHesabdari_PG;
 using System.Data.Entity.Infrastructure;
 
 namespace EtelaatePaye.UsersSystem

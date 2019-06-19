@@ -104,7 +104,7 @@
             // 
             // epNoeHesabsBindingSource
             // 
-            this.epNoeHesabsBindingSource.DataSource = typeof(DBHesabdari_TG.EpNoeHesab);
+            this.epNoeHesabsBindingSource.DataSource = typeof(DBHesabdari_PG.EpNoeHesab);
             // 
             // gridView1
             // 

@@ -352,7 +352,7 @@
             // 
             // epNameBanksBindingSource
             // 
-            this.epNameBanksBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameBank);
+            this.epNameBanksBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameBank);
             // 
             // panelControl4
             // 

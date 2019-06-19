@@ -351,7 +351,7 @@
             // 
             // msDoreMalisBindingSource
             // 
-            this.msDoreMalisBindingSource.DataSource = typeof(DBHesabdari_TG.MsDoreMali);
+            this.msDoreMalisBindingSource.DataSource = typeof(DBHesabdari_PG.MsDoreMali);
             // 
             // barManager1
             // 

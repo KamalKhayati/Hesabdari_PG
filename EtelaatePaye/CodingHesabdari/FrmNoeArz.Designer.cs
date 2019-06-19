@@ -362,7 +362,7 @@
             // 
             // epNoeArzsBindingSource
             // 
-            this.epNoeArzsBindingSource.DataSource = typeof(DBHesabdari_TG.EpNoeArz);
+            this.epNoeArzsBindingSource.DataSource = typeof(DBHesabdari_PG.EpNoeArz);
             // 
             // panelControl4
             // 

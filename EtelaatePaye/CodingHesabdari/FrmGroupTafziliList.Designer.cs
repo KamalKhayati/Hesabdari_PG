@@ -206,7 +206,7 @@
             // 
             // epGroupTafzilisBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_TG.EpGroupTafzili);
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.EpGroupTafzili);
             // 
             // barManager1
             // 

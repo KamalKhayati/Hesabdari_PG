@@ -479,7 +479,7 @@
             // 
             // epNoeArzsBindingSource
             // 
-            this.epNoeArzsBindingSource.DataSource = typeof(DBHesabdari_TG.EpNoeArz);
+            this.epNoeArzsBindingSource.DataSource = typeof(DBHesabdari_PG.EpNoeArz);
             // 
             // cmbNoeHesab
             // 
@@ -506,7 +506,7 @@
             // 
             // epNoeHesabsBindingSource
             // 
-            this.epNoeHesabsBindingSource.DataSource = typeof(DBHesabdari_TG.EpNoeHesab);
+            this.epNoeHesabsBindingSource.DataSource = typeof(DBHesabdari_PG.EpNoeHesab);
             // 
             // cmbNameBank
             // 
@@ -534,7 +534,7 @@
             // 
             // epNameBanksBindingSource
             // 
-            this.epNameBanksBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameBank);
+            this.epNameBanksBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameBank);
             // 
             // cmbListGroupTafzili
             // 
@@ -563,7 +563,7 @@
             // 
             // epGroupTafzilisBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_TG.EpGroupTafzili);
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.EpGroupTafzili);
             // 
             // txtStartDate
             // 
@@ -985,7 +985,7 @@
             // 
             // EpHesabTafziliHesabBankisBindingSource
             // 
-            this.EpHesabTafziliHesabBankisBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabTafziliHesabBanki);
+            this.EpHesabTafziliHesabBankisBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabTafziliHesabBanki);
             // 
             // layoutView1
             // 

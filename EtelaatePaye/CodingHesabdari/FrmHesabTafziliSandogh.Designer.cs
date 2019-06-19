@@ -136,7 +136,7 @@
             // 
             // epGroupTafzilisBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_TG.EpGroupTafzili);
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.EpGroupTafzili);
             // 
             // panelControl4
             // 
@@ -165,7 +165,7 @@
             // 
             // epHesabTafziliSandoghsBindingSource
             // 
-            this.epHesabTafziliSandoghsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabTafziliSandogh);
+            this.epHesabTafziliSandoghsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabTafziliSandogh);
             // 
             // gridView1
             // 

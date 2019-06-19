@@ -392,7 +392,7 @@
             // 
             // epSharhStandardMoinsBindingSource
             // 
-            this.epSharhStandardMoinsBindingSource.DataSource = typeof(DBHesabdari_TG.EpSharhStandardMoin);
+            this.epSharhStandardMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.EpSharhStandardMoin);
             // 
             // gridView2
             // 
@@ -506,7 +506,7 @@
             // 
             // msActiveSystemsBindingSource
             // 
-            this.msActiveSystemsBindingSource.DataSource = typeof(DBHesabdari_TG.MsActiveSystem);
+            this.msActiveSystemsBindingSource.DataSource = typeof(DBHesabdari_PG.MsActiveSystem);
             // 
             // groupBox1
             // 
@@ -556,7 +556,7 @@
             // 
             // epGroupTafzilisBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_TG.EpGroupTafzili);
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.EpGroupTafzili);
             // 
             // tbpLevel2
             // 
@@ -615,7 +615,7 @@
             // 
             // epHesabColsBindingSource
             // 
-            this.epHesabColsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabCol);
+            this.epHesabColsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabCol);
             // 
             // labelControl4
             // 
@@ -654,7 +654,7 @@
             // 
             // epHesabGroupsBindingSource
             // 
-            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabGroup);
+            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabGroup);
             // 
             // labelControl3
             // 
@@ -938,7 +938,7 @@
             // 
             // epHesabMoinsBindingSource
             // 
-            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabMoin);
+            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabMoin);
             // 
             // layoutView1
             // 

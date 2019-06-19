@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8821623-3D7B-4298-AAAE-C6AD5E96CA5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBHesabdari_PG</RootNamespace>
+    <AssemblyName>DBHesabdari_PG</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AP\AnbarKala\ApAnbar.cs" />
+    <Compile Include="Models\EnumCED.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameAdress.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAdress_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpGroupTafzili.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabCol.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabGroup.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAccessLevelCodingHesabdari.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabMoin.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafziliAshkhas.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafziliHesabBanki.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafziliSandogh.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpMoshakhasat_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameBank.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameOstan.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameShahrstan.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNoeArz.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNoeHesab.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpSharhStandardMoin.cs" />
+    <Compile Include="Models\Ms\ActiveSystem\MsActiveSystem.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsDefault.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsDoreMali.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsInfoOther.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsMajmoe.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsShobe.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsVahed.cs" />
+    <Compile Include="Models\Ms\SystemUsers\MsAccessLevelDafaterMali.cs" />
+    <Compile Include="Models\Ms\SystemUsers\MsAccessLevelMenu.cs" />
+    <Compile Include="Models\Ms\SystemUsers\MsUser.cs" />
+    <Compile Include="MyContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\AK\" />
+    <Folder Include="Models\AP\Hesabdari\" />
+    <Folder Include="Models\DP\" />
+    <Folder Include="Models\FT\" />
+    <Folder Include="Models\Ms\SalMali\" />
+    <Folder Include="Models\SH\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

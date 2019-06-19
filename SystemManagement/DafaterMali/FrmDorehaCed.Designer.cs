@@ -349,7 +349,7 @@
             // 
             // msShobesBindingSource
             // 
-            this.msShobesBindingSource.DataSource = typeof(DBHesabdari_TG.MsShobe);
+            this.msShobesBindingSource.DataSource = typeof(DBHesabdari_PG.MsShobe);
             // 
             // cmbVahedhaList
             // 
@@ -373,7 +373,7 @@
             // 
             // msVahedsBindingSource
             // 
-            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_TG.MsVahed);
+            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_PG.MsVahed);
             // 
             // cmbMajmoehaList
             // 
@@ -397,7 +397,7 @@
             // 
             // msMajmoesBindingSource
             // 
-            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_TG.MsMajmoe);
+            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_PG.MsMajmoe);
             // 
             // btnNewCode
             // 

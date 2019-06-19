@@ -297,7 +297,7 @@
             // 
             // epHesabGroupsBindingSource
             // 
-            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabGroup);
+            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabGroup);
             // 
             // labelControl3
             // 
@@ -446,7 +446,7 @@
             // 
             // epHesabColsBindingSource
             // 
-            this.epHesabColsBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabCol);
+            this.epHesabColsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabCol);
             // 
             // layoutView1
             // 

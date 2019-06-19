@@ -301,7 +301,7 @@
             // 
             // epGroupTafzilisBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_TG.EpGroupTafzili);
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.EpGroupTafzili);
             // 
             // cmbTafziliAshkhas
             // 
@@ -328,7 +328,7 @@
             // 
             // epHesabTafziliAshkhassBindingSource
             // 
-            this.epHesabTafziliAshkhassBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabTafziliAshkhas);
+            this.epHesabTafziliAshkhassBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabTafziliAshkhas);
             // 
             // txtGroupTafziliId
             // 
@@ -693,7 +693,7 @@
             // 
             // epMoshakhasat_AsBindingSource
             // 
-            this.epMoshakhasat_AsBindingSource.DataSource = typeof(DBHesabdari_TG.EpMoshakhasat_A);
+            this.epMoshakhasat_AsBindingSource.DataSource = typeof(DBHesabdari_PG.EpMoshakhasat_A);
             // 
             // gridViewMoshkhasat1
             // 
@@ -1246,7 +1246,7 @@
             // 
             // epAdress_AsBindingSource
             // 
-            this.epAdress_AsBindingSource.DataSource = typeof(DBHesabdari_TG.EpAdress_A);
+            this.epAdress_AsBindingSource.DataSource = typeof(DBHesabdari_PG.EpAdress_A);
             // 
             // gridViewAdress1
             // 
@@ -1826,7 +1826,7 @@
             // 
             // epNameShahrstansBindingSource
             // 
-            this.epNameShahrstansBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameShahrstan);
+            this.epNameShahrstansBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameShahrstan);
             // 
             // btnShahrstan
             // 
@@ -1866,7 +1866,7 @@
             // 
             // epAdressNamesBindingSource
             // 
-            this.epAdressNamesBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameAdress);
+            this.epAdressNamesBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameAdress);
             // 
             // btnAdress
             // 
@@ -1907,7 +1907,7 @@
             // 
             // epNameOstansBindingSource
             // 
-            this.epNameOstansBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameOstan);
+            this.epNameOstansBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameOstan);
             // 
             // btnOstan
             // 

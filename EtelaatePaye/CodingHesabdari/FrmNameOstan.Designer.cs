@@ -362,7 +362,7 @@
             // 
             // epNameOstansBindingSource
             // 
-            this.epNameOstansBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameOstan);
+            this.epNameOstansBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameOstan);
             // 
             // panelControl4
             // 

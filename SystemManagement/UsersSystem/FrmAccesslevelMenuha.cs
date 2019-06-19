@@ -19,7 +19,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
 using DevExpress.XtraTreeList;
-using DBHesabdari_TG;
+using DBHesabdari_PG;
 using DevExpress.XtraBars;
 
 namespace EtelaatePaye.UsersSystem

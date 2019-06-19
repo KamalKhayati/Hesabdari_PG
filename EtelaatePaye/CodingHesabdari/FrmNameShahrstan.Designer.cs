@@ -245,11 +245,11 @@
             // 
             // epNameShahrstansBindingSource
             // 
-            this.epNameShahrstansBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameShahrstan);
+            this.epNameShahrstansBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameShahrstan);
             // 
             // epNameOstansBindingSource
             // 
-            this.epNameOstansBindingSource.DataSource = typeof(DBHesabdari_TG.EpNameOstan);
+            this.epNameOstansBindingSource.DataSource = typeof(DBHesabdari_PG.EpNameOstan);
             // 
             // btnPreview
             // 

@@ -272,7 +272,7 @@
             // 
             // epHesabTafziliAshkhassBindingSource
             // 
-            this.epHesabTafziliAshkhassBindingSource.DataSource = typeof(DBHesabdari_TG.EpHesabTafziliAshkhas);
+            this.epHesabTafziliAshkhassBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabTafziliAshkhas);
             // 
             // layoutView1
             // 
@@ -662,7 +662,7 @@
             // 
             // epGroupTafzilisBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_TG.EpGroupTafzili);
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.EpGroupTafzili);
             // 
             // labelControl7
             // 

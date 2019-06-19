@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{403481DE-962E-43C6-8A5A-24CBF93C75BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EtelaatePaye</RootNamespace>
+    <AssemblyName>EtelaatePaye</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.2" />
+    <Reference Include="DevExpress.Data.v18.2" />
+    <Reference Include="DevExpress.Utils.v18.2" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.Printing.v18.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodingHesabdari\FrmNameShahrstan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNameShahrstan.Designer.cs">
+      <DependentUpon>FrmNameShahrstan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNameAdress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNameAdress.Designer.cs">
+      <DependentUpon>FrmNameAdress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmEtelaateAshkhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmEtelaateAshkhas.Designer.cs">
+      <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliCed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliCed.Designer.cs">
+      <DependentUpon>FrmGroupTafziliCed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmGroupTafziliList.Designer.cs">
+      <DependentUpon>FrmGroupTafziliList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabCol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabCol.Designer.cs">
+      <DependentUpon>FrmHesabCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabGroup.Designer.cs">
+      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabMoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabMoin.Designer.cs">
+      <DependentUpon>FrmHesabMoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas.Designer.cs">
+      <DependentUpon>FrmHesabTafziliAshkhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliAshkhas_1.Designer.cs">
+      <DependentUpon>FrmHesabTafziliAshkhas_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNameBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNameBank.Designer.cs">
+      <DependentUpon>FrmNameBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNoeArz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNoeArz.Designer.cs">
+      <DependentUpon>FrmNoeArz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNoeHesab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNoeHesab.Designer.cs">
+      <DependentUpon>FrmNoeHesab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliHesabBamki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliHesabBamki.Designer.cs">
+      <DependentUpon>FrmHesabTafziliHesabBamki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliSandogh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmHesabTafziliSandogh.Designer.cs">
+      <DependentUpon>FrmHesabTafziliSandogh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNameOstan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmNameOstan.Designer.cs">
+      <DependentUpon>FrmNameOstan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CodingHesabdari\FrmNameShahrstan.resx">
+      <DependentUpon>FrmNameShahrstan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmNameAdress.resx">
+      <DependentUpon>FrmNameAdress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmEtelaateAshkhas.resx">
+      <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmGroupTafziliCed.resx">
+      <DependentUpon>FrmGroupTafziliCed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmGroupTafziliList.resx">
+      <DependentUpon>FrmGroupTafziliList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabCol.resx">
+      <DependentUpon>FrmHesabCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabGroup.resx">
+      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabMoin.resx">
+      <DependentUpon>FrmHesabMoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafziliAshkhas.resx">
+      <DependentUpon>FrmHesabTafziliAshkhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafziliAshkhas_1.resx">
+      <DependentUpon>FrmHesabTafziliAshkhas_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmNameBank.resx">
+      <DependentUpon>FrmNameBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmNoeArz.resx">
+      <DependentUpon>FrmNoeArz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmNoeHesab.resx">
+      <DependentUpon>FrmNoeHesab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafziliHesabBamki.resx">
+      <DependentUpon>FrmHesabTafziliHesabBamki.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafziliSandogh.resx">
+      <DependentUpon>FrmHesabTafziliSandogh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmNameOstan.resx">
+      <DependentUpon>FrmNameOstan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CodingAnbar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBHesabdari_TG\DBHesabdari_TG.csproj">
+      <Project>{A8821623-3D7B-4298-AAAE-C6AD5E96CA5E}</Project>
+      <Name>DBHesabdari_TG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpClassLibrary\HelpClassLibrary.csproj">
+      <Project>{26168114-9431-42DB-B60E-8213D68A1E2F}</Project>
+      <Name>HelpClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

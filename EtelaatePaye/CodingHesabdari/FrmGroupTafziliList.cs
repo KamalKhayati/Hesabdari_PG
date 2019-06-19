@@ -19,7 +19,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
 using DevExpress.XtraBars;
-using DBHesabdari_TG;
+using DBHesabdari_PG;
 using HelpClassLibrary;
 
 namespace EtelaatePaye.CodingHesabdari

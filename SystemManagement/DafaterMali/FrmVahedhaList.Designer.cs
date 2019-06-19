@@ -319,7 +319,7 @@
             // 
             // msVahedsBindingSource
             // 
-            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_TG.MsVahed);
+            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_PG.MsVahed);
             // 
             // gridView1
             // 

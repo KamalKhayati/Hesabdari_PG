@@ -352,7 +352,7 @@
             // 
             // msUsersBindingSource
             // 
-            this.msUsersBindingSource.DataSource = typeof(DBHesabdari_TG.MsUser);
+            this.msUsersBindingSource.DataSource = typeof(DBHesabdari_PG.MsUser);
             // 
             // gridView1
             // 

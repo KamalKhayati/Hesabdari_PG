@@ -314,7 +314,7 @@
             // 
             // msMajmoesBindingSource
             // 
-            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_TG.MsMajmoe);
+            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_PG.MsMajmoe);
             // 
             // gridView1
             // 

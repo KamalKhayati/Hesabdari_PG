@@ -19,7 +19,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using HelpClassLibrary;
 using DevExpress.XtraBars;
-using DBHesabdari_TG;
+using DBHesabdari_PG;
 using System.Data.Entity;
 
 namespace EtelaatePaye.DafaterMali
