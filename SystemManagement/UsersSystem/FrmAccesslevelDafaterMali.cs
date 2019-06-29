@@ -22,7 +22,7 @@ using DBHesabdari_PG;
 using DevExpress.XtraEditors.Popup;
 using DevExpress.XtraBars;
 
-namespace EtelaatePaye.UsersSystem
+namespace SystemManagement.UsersSystem
 {
     public partial class FrmAccesslevelDafaterMali : DevExpress.XtraEditors.XtraForm
     {
@@ -396,7 +396,7 @@ namespace EtelaatePaye.UsersSystem
                         {
                             RmsUserBmsAccessLevelDafaterMali obj1 = new RmsUserBmsAccessLevelDafaterMali();
                             obj1.MsUserId = _UserId;
-                            obj1.UserName = cmbUsersList.Edit.GetDisplayText(cmbUsersList.EditValue);
+                            obj1.Name = cmbUsersList.Edit.GetDisplayText(cmbUsersList.EditValue);
                             obj1.MsAccessLevelDafaterMaliId = Convert.ToInt32(item.GetValue(colMsAccessLevelDafaterMaliId1));
                             obj1.KeyId = Convert.ToInt32(item.GetValue(colKeyId1));
                             obj1.MajmoeId = Convert.ToInt32(item.GetValue(colMajmoeId1));

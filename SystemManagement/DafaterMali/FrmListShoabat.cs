@@ -1,13 +1,4 @@
-﻿/****************************** Ghost.github.io ******************************\
-*	Module Name:	FrmShoabatCed.cs
-*	Project:		SystemManagement
-*	Copyright (C) 2018 Kamal Khayati, All rights reserved.
-*	This software may be modified and distributed under the terms of the MIT license.  See LICENSE file for details.
-*
-*	Written by Kamal Khayati <Kamal1355@gmail.com>,  2018 / 12 / 31   04:11 ب.ظ
-*	
-***********************************************************************************/
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,21 +8,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DBHesabdari_PG;
 using System.Data.Entity;
 using HelpClassLibrary;
-using DBHesabdari_PG;
 using System.Data.Entity.Infrastructure;
 
-namespace EtelaatePaye.DafaterMali
+namespace SystemManagement.DafaterMali
 {
-    public partial class FrmShoabatCed : DevExpress.XtraEditors.XtraForm
+    public partial class FrmListShoabat : DevExpress.XtraEditors.XtraForm
     {
-        FrmShoabatList Fm;
-        public FrmShoabatCed(FrmShoabatList fm)
+        public FrmListShoabat()
         {
             InitializeComponent();
-            Fm = fm;
         }
+
+        public EnumCED En;
+        public bool IsActiveList = true;
+
         public void FillcmbMajmoehaList()
         {
             //var db = new MyContext();
@@ -46,7 +39,7 @@ namespace EtelaatePaye.DafaterMali
                 {
                     if (db.MsMajmoes.Any())
                     {
-                        if (Fm.isActive == true)
+                        if (IsActiveList == true)
                         {
                             db.MsMajmoes.Where(s => s.MajmoeIsActive == true).Load();
                             msMajmoesBindingSource.DataSource = db.MsMajmoes.Local.ToBindingList();
@@ -56,8 +49,6 @@ namespace EtelaatePaye.DafaterMali
                             db.MsMajmoes.Load();
                             msMajmoesBindingSource.DataSource = db.MsMajmoes.Local.ToBindingList();
                         }
-
-
                     }
                 }
                 catch (Exception ex)
@@ -68,6 +59,7 @@ namespace EtelaatePaye.DafaterMali
             }
 
         }
+
         public void FillcmbVahedhaList()
         {
             using (var db = new MyContext())
@@ -76,7 +68,7 @@ namespace EtelaatePaye.DafaterMali
                 {
                     if (db.MsVaheds.Any())
                     {
-                        if (Fm.isActive == true)
+                        if (IsActiveList == true)
                         {
                             int _MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
                             db.MsVaheds.Where(s => s.VahedIsActive == true && s.MsMajmoeId == _MajmoeId).Load();
@@ -99,20 +91,55 @@ namespace EtelaatePaye.DafaterMali
             }
 
         }
-        public void FilltxtVahedCode()
+
+        public void Fillgridview1()
         {
             using (var db = new MyContext())
             {
                 try
                 {
-                    if (db.MsVaheds.Any())
+                    if (IsActiveList == true)
                     {
-                        int _VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                        var q = db.MsVaheds.FirstOrDefault(s => s.MsVahedId == _VahedId).VahedCode;
-                        if (q > 0)
-                            txtVahedCode.Text = q.ToString();
-
-                        btnNewCode_Click(null, null);
+                        var q1 = db.MsShobes.Where(s => s.ShobeIsActive == true).OrderBy(s => s.ShobeCode).ToList();
+                        if (lblUserId.Text == "1")
+                        {
+                            if (q1.Count > 0)
+                                msShobesBindingSource.DataSource = q1;
+                        }
+                        else
+                        {
+                            int _UserId = Convert.ToInt32(lblUserId.Text);
+                            //var q2 = q1.Select(s => s.MsShobeId).ToList(); ;
+                            var q3 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.MsUserId == _UserId && s.DoreMaliId == 0 && s.IsActive == true).Select(s => s.ShobeId).ToList();
+                            if (q1.Count > 0)
+                            {
+                                if (q3.Count > 0)
+                                {
+                                    q3.ForEach(item3 =>
+                                    {
+                                        q1.Remove(db.MsShobes.FirstOrDefault(s => s.MsShobeId == item3));
+                                    });
+                                    msShobesBindingSource.DataSource = q1;
+                                }
+                                else
+                                {
+                                    msShobesBindingSource.DataSource = q1;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (lblUserId.Text == "1")
+                        {
+                            var q = db.MsShobes.Where(p => p.ShobeIsActive == false).OrderBy(s => s.ShobeCode);
+                            if (q.ToList().Count() > 0)
+                                msShobesBindingSource.DataSource = q.ToList();
+                            else
+                                msShobesBindingSource.DataSource = null;
+                        }
+                        else
+                            msShobesBindingSource.DataSource = null;
                     }
                 }
                 catch (Exception ex)
@@ -121,7 +148,9 @@ namespace EtelaatePaye.DafaterMali
                         "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
         }
+
         private void btnNewCode_Click(object sender, EventArgs e)
         {
             if (cmbVahedhaList.EditValue != null)
@@ -131,8 +160,8 @@ namespace EtelaatePaye.DafaterMali
                     try
                     {
                         int _VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                        var q = db.MsShobes.Where(s => s.MsVahedId == _VahedId);
-                        if (q.Any())
+                        var q = db.MsShobes.Where(s => s.MsVahedId == _VahedId).ToList();
+                        if (q.Count>0)
                         {
                             var MaximumCod = q.Max(p => p.ShobeCode);
                             txtCode.Text = (MaximumCod + 1).ToString().Substring(4);
@@ -149,7 +178,6 @@ namespace EtelaatePaye.DafaterMali
                 }
 
             }
-
         }
 
         int MajmoeIdBeforeEdit = 0;
@@ -157,21 +185,368 @@ namespace EtelaatePaye.DafaterMali
         string CodeBeforeEdit = "";
         string NameBeforeEdit = "";
         bool IsActiveBeforeEdit;
-        private void FrmShobehaCed_Load(object sender, EventArgs e)
+        private void FrmListShoabat_Load(object sender, EventArgs e)
         {
-            FillcmbMajmoehaList();
-            if (Fm.lblUserId.Text == "1")
-                chkIsActive.Visible = true;
-
-            if (this.Text != "ایجاد رکورد جدید")
+            Fillgridview1();
+            if (lblUserId.Text == "1")
             {
-                cmbMajmoehaList.EditValue = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
-                cmbVahedhaList.EditValue = Convert.ToInt32(Fm.gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
-                txtId.Text = Fm.gridView1.GetFocusedRowCellValue("MsShobeId").ToString();
-                txtCode.Text = Fm.gridView1.GetFocusedRowCellValue("ShobeCode").ToString().Substring(4);
-                txtName.Text = Fm.gridView1.GetFocusedRowCellValue("ShobeName").ToString();
-                chkIsActive.Checked = Convert.ToBoolean(Fm.gridView1.GetFocusedRowCellValue("ShobeIsActive"));
+                chkIsActive.Visible = true;
+                labelControl5.Visible = true;
+            }
+            HelpClass1.InActiveControls(xtraTabPage1);
+            HelpClass1.InActiveControls(xtraTabPage2);
+            HelpClass1.InActiveControls(xtraTabPage3);
+            HelpClass1.InActiveControls(xtraTabPage4);
+            //using (var db = new MyContext())
+            //{
+            //    try
+            //    {
+            //        int _UserId = Convert.ToInt32(lblUserId.Text);
+            //        var q1 = db.RmsUserBmsAccessLevelMenus.Where(s => s.MsUserId == _UserId).ToList();
+            //        if (q1.Count() > 0)
+            //        {
+            //            //btnCreate.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55010201) ? BarItemVisibility.Never : BarItemVisibility.Always;
+            //            //btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55010202) ? BarItemVisibility.Never : BarItemVisibility.Always;
+            //            //btnDelete.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55010203) ? BarItemVisibility.Never : BarItemVisibility.Always;
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+            //            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private bool TextEditValidation()
+        {
+            ///////////////// اعتبار سنجی کد////////////////////////////////////
+            if (string.IsNullOrEmpty(cmbMajmoehaList.Text))
+            {
+                XtraMessageBox.Show("لطفاً نام مجموعه را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+           else if (string.IsNullOrEmpty(cmbVahedhaList.Text))
+            {
+                XtraMessageBox.Show("لطفاً نام واحد را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrEmpty(txtCode.Text))
+            {
+                XtraMessageBox.Show("لطفا کد را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (Convert.ToInt32(txtCode.Text) <= 0)
+            {
+                XtraMessageBox.Show("کد وارده باید عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (En == EnumCED.Create)
+                {
+                    btnNewCode_Click(null, null);
+                }
+                else
+                {
+                    txtCode.Text = CodeBeforeEdit;
+                }
+
+                return false;
+            }
+            else
+            {
+                using (var db = new MyContext())
+                {
+                    try
+                    {
+                        if (En == EnumCED.Create)
+                        {
+                            if (db.MsShobes.Any())
+                            {
+                                int _code = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
+                                var q1 = db.MsShobes.Where(p => p.ShobeCode == _code);
+                                if (q1.Any())
+                                {
+                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    btnNewCode_Click(null, null);
+                                    return false;
+                                }
+                            }
+                        }
+                        else if (En == EnumCED.Edit)
+                        {
+                            int RowId = Convert.ToInt32(txtId.Text);
+                            int _code = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
+                            var q1 = db.MsShobes.Where(p => p.MsShobeId != RowId && p.ShobeCode == _code);
+                            if (q1.Any())
+                            {
+                                XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                txtCode.Text = CodeBeforeEdit;
+                                return false;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+
+            //////////////// اعتبار سنجی تکس باکس///////////////////////////////
+
+            if (string.IsNullOrEmpty(txtName.Text) || txtName.Text == "0"  )
+            {
+                XtraMessageBox.Show("لطفاً نام شعبه را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                using (var db = new MyContext())
+                {
+                    try
+                    {
+                        int _VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+                        if (En == EnumCED.Create)
+                        {
+                            if (db.MsShobes.Any())
+                            {
+                                var q1 = db.MsShobes.Where(p => p.MsVahedId == _VahedId && p.ShobeName == txtName.Text);
+                                if (q1.Any())
+                                {
+                                    XtraMessageBox.Show("این شعبه قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return false;
+                                }
+                            }
+                        }
+                        else if (En == EnumCED.Edit)
+                        {
+                            int RowId = Convert.ToInt32(txtId.Text);
+                            var q1 = db.MsShobes.Where(p => p.MsVahedId == _VahedId && p.MsShobeId != RowId && p.ShobeName == txtName.Text);
+                            if (q1.Any())
+                            {
+                                XtraMessageBox.Show("این شعبه قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                //txtName.Text = nameBeforeEdit;
+                                return false;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+
+            return true;
+        }
+
+        private void FrmListShoabat_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnCreate_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F3 && btnDelete.Enabled == true)
+            {
+                btnDelete_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F4 && btnEdit.Enabled == true)
+            {
+                btnEdit_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F5 && btnSave.Enabled == true)
+            {
+                btnSave_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F6 && btnSaveNext.Enabled == true)
+            {
+                btnSaveNext_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F7 && btnCancel.Enabled == true)
+            {
+                btnCancel_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F8)
+            {
+                btnDisplyActiveList_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F9)
+            {
+                btnDisplyNotActiveList_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F10 && btnPrintPreview.Visible == true)
+            {
+                btnPrintPreview_Click(sender, null);
+            }
+            else if (e.Alt && e.KeyCode == Keys.N && btnNewCode.Enabled == true)
+            {
+                btnNewCode_Click(sender, null);
+            }
+            else if (e.KeyCode == Keys.F12)
+            {
+                btnClose_Click(sender, null);
+            }
+
+        }
+
+        private void chkEditCode_CheckedChanged(object sender, EventArgs e)
+        {
+            btnNewCode.Enabled = txtCode.Enabled = chkEditCode.Checked ? true : false;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            HelpClass1.MoveLast(gridView1);
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            HelpClass1.MoveNext(gridView1);
+
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            HelpClass1.MovePrev(gridView1);
+
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            HelpClass1.MoveFirst(gridView1);
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+            HelpClass1.PrintPreview(gridControl1, gridView1);
+        }
+
+        public void btnDisplyActiveList_Click(object sender, EventArgs e)
+        {
+            IsActiveList = true;
+            Fillgridview1();
+        }
+
+        public void btnDisplyNotActiveList_Click(object sender, EventArgs e)
+        {
+            IsActiveList = false;
+            Fillgridview1();
+        }
+
+        private void gridView1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnEdit_Click(null, null);
+            }
+
+        }
+
+        private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            HelpClass1.SetNumberRowsColumnUnboundGirdView(sender, e);
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            En = EnumCED.Create;
+            gridControl1.Enabled = false;
+            FillcmbMajmoehaList();
+            HelpClass1.InActiveButtons(panelControl2);
+            HelpClass1.ClearControls(xtraTabPage1);
+            HelpClass1.ClearControls(xtraTabPage2);
+            HelpClass1.ClearControls(xtraTabPage3);
+            HelpClass1.ClearControls(xtraTabPage4);
+            HelpClass1.ActiveControls(xtraTabPage1);
+            HelpClass1.ActiveControls(xtraTabPage2);
+            HelpClass1.ActiveControls(xtraTabPage3);
+            HelpClass1.ActiveControls(xtraTabPage4);
+            //txtCode.ReadOnly = true;
+            xtraTabControl1.SelectedTabPageIndex = 0;
+            cmbMajmoehaList.Focus();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (gridView1.SelectedRowsCount > 0)
+            {
+                if (XtraMessageBox.Show("آیا رکورد انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    EditRowIndex = gridView1.FocusedRowHandle;
+                    using (var db = new MyContext())
+                    {
+                        try
+                        {
+                            int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsShobeId"));
+                            var q = db.MsShobes.FirstOrDefault(p => p.MsShobeId == RowId);
+                            var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.ShobeId == RowId);
+                            if (q != null && q8 != null)
+                            {
+                                db.MsShobes.Remove(q);
+                                db.MsAccessLevelDafaterMalis.Remove(q8);
+                                /////////////////////////////////////////////////////////////////////////////
+                                var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsShobeId == RowId);
+                                if (q4 != null)
+                                {
+                                    db.MsInfoOthers.Remove(q4);
+                                }
+                                db.SaveChanges();
+
+                                if (IsActiveList)
+                                    btnDisplyActiveList_Click(null, null);
+                                else
+                                    btnDisplyNotActiveList_Click(null, null);
+                                //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                if (gridView1.RowCount > 0)
+                                    gridView1.FocusedRowHandle = EditRowIndex - 1;
+                            }
+                            else
+                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        catch (DbUpdateException)
+                        {
+                            XtraMessageBox.Show("حذف رکورد جاری مقدور نیست \n" +
+                                " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری  (در لیست دوره ها) حذف گردد" +
+                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        catch (Exception ex)
+                        {
+                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+        }
+
+        public int EditRowIndex = 0;
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (gridView1.RowCount > 0 && btnEdit.Visible == true)
+            {
+                gridControl1.Enabled = false;
+                EditRowIndex = gridView1.FocusedRowHandle;
+                En = EnumCED.Edit;
+                HelpClass1.InActiveButtons(panelControl2);
+                HelpClass1.ActiveControls(xtraTabPage1);
+                HelpClass1.ActiveControls(xtraTabPage2);
+                HelpClass1.ActiveControls(xtraTabPage3);
+                HelpClass1.ActiveControls(xtraTabPage4);
+                FillcmbMajmoehaList();
+                xtraTabControl1.SelectedTabPageIndex = 0;
+
+                cmbMajmoehaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
+                cmbVahedhaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
+                txtVahedCode.Text = gridView1.GetFocusedRowCellValue("ShobeCode").ToString().Substring(0, 4);
+                txtId.Text = gridView1.GetFocusedRowCellValue("MsShobeId").ToString();
+                txtCode.Text = gridView1.GetFocusedRowCellValue("ShobeCode").ToString().Substring(4);
+                txtName.Text = gridView1.GetFocusedRowCellValue("ShobeName").ToString();
+                chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("ShobeIsActive"));
 
                 int RowId = Convert.ToInt32(txtId.Text);
                 using (var db = new MyContext())
@@ -215,31 +590,21 @@ namespace EtelaatePaye.DafaterMali
                     }
                 }
 
+                VahedIdBeforeEdit = Convert.ToInt32(cmbVahedhaList.EditValue);
+                MajmoeIdBeforeEdit = Convert.ToInt32(cmbMajmoehaList.EditValue);
                 CodeBeforeEdit = txtCode.Text;
                 NameBeforeEdit = txtName.Text;
-                MajmoeIdBeforeEdit = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                VahedIdBeforeEdit = Convert.ToInt32(cmbVahedhaList.EditValue);
                 IsActiveBeforeEdit = chkIsActive.Checked;
+               // txtCode.ReadOnly = true;
+                cmbMajmoehaList.Focus();
             }
-
         }
 
-        private void btnCreateNext_Click(object sender, EventArgs e)
-        {
-            btnCreateClose_Clicked = false;
-            btnCreateClose_Click(null, null);
-            btnCreateClose_Clicked = true;
-
-        }
-
-        bool btnCreateClose_Clicked = true;
-        private void btnCreateClose_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             if (TextEditValidation())
             {
-                btnCreateClose.Enabled = false;
-                btnCreateNext.Enabled = false;
-                if (Fm.En == EnumCED.Create)
+                if (En == EnumCED.Create)
                 {
                     using (var db = new MyContext())
                     {
@@ -304,23 +669,14 @@ namespace EtelaatePaye.DafaterMali
                             /////////////////////////////////////////////////////////////////////////////////////
                             db.SaveChanges();
                             if (chkIsActive.Checked)
-                                Fm.btnDisplyActiveList_ItemClick(null, null);
+                                btnDisplyActiveList_Click(null, null);
                             else
-                                Fm.btnDisplyNotActiveList_ItemClick(null, null);
-                            XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                            Fm.gridView1.MoveLast();
-                            if (btnCreateClose_Clicked)
-                                this.Close();
-                            else
-                            {
-                                btnCreateClose.Enabled = true;
-                                btnCreateNext.Enabled = true;
-                                cmbMajmoehaList.EditValue = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                btnNewCode_Click(null, null);
-                                txtName.Text = "";
-                                HelpClass1.ClearTextEditControlsText(xtraScrollableControl1);
-                                txtName.Focus();
-                            }
+                                btnDisplyNotActiveList_Click(null, null);
+                            //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+
+                            En = EnumCED.Save;
+                            btnCancel_Click(null, null);
+
                         }
                         catch (Exception ex)
                         {
@@ -328,7 +684,7 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (Fm.En == EnumCED.Edit)
+                else if (En == EnumCED.Edit)
                 {
                     using (var db = new MyContext())
                     {
@@ -360,10 +716,10 @@ namespace EtelaatePaye.DafaterMali
                                     {
                                         if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
                                             item.MsMajmoeId = _MajmoeId;
-                                            item.MajmoeName = _MajmoeName;
+                                        item.MajmoeName = _MajmoeName;
                                         if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
                                             item.MsVahedId = _VahedId;
-                                            item.VahedName = _VahedName;
+                                        item.VahedName = _VahedName;
                                         if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || CodeBeforeEdit != txtCode.Text)
                                             item.DoreMaliCode = Convert.ToInt32(item.DoreMaliCode.ToString().Substring(0, 2).Replace(item.DoreMaliCode.ToString().Substring(0, 2), txtVahedCode.Text.Substring(0, 2))
                                             + item.DoreMaliCode.ToString().Substring(2, 2).Replace(item.DoreMaliCode.ToString().Substring(2, 2), txtVahedCode.Text.Substring(2, 2))
@@ -531,13 +887,16 @@ namespace EtelaatePaye.DafaterMali
                                 db.SaveChanges();
 
                                 if (IsActiveBeforeEdit)
-                                    Fm.btnDisplyActiveList_ItemClick(null, null);
+                                    btnDisplyActiveList_Click(null, null);
                                 else
-                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
-                                XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                this.Close();
-                                if (Fm.gridView1.RowCount > 0)
-                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex;
+                                    btnDisplyNotActiveList_Click(null, null);
+                                //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (gridView1.RowCount > 0)
+                                    gridView1.FocusedRowHandle = EditRowIndex;
+
+                                En = EnumCED.Save;
+                                btnCancel_Click(null, null);
+
                             }
                             else
                                 XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -548,247 +907,235 @@ namespace EtelaatePaye.DafaterMali
                         }
                     }
                 }
-                else if (Fm.En == EnumCED.Delete)
-                {
-                    using (var db = new MyContext())
-                    {
-                        try
-                        {
-                            int RowId = Convert.ToInt32(txtId.Text);
-                            var q = db.MsShobes.FirstOrDefault(p => p.MsShobeId == RowId);
-                            var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.ShobeId == RowId);
-                            if (q != null && q8 != null)
-                            {
-                                db.MsShobes.Remove(q);
-                                db.MsAccessLevelDafaterMalis.Remove(q8);
-                                /////////////////////////////////////////////////////////////////////////////
-                                int _code = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
-                                var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsShobeId == RowId);
-                                if (q4 != null)
-                                {
-                                    db.MsInfoOthers.Remove(q4);
-                                }
-                                db.SaveChanges();
+            }
+        }
 
-                                if (IsActiveBeforeEdit)
-                                    Fm.btnDisplyActiveList_ItemClick(null, null);
-                                else
-                                    Fm.btnDisplyNotActiveList_ItemClick(null, null);
-                                XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                this.Close();
-                                if (Fm.gridView1.RowCount > 0)
-                                    Fm.gridView1.FocusedRowHandle = HelpClass1.EditRowIndex - 1;
-                            }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (DbUpdateException)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد \n حذف رکورد جاری مقدور نیست \n" +
-                                " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری (در لیست دوره ها) حذف گردد" +
-                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+        private void btnSaveNext_Click(object sender, EventArgs e)
+        {
+            //gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
+            btnSave_Click(null, null);
+            if (En == EnumCED.Save)
+                btnCreate_Click(null, null);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            gridControl1.Enabled = true;
+            HelpClass1.ActiveButtons(panelControl2);
+            HelpClass1.ClearControls(xtraTabPage1);
+            HelpClass1.ClearControls(xtraTabPage2);
+            HelpClass1.ClearControls(xtraTabPage3);
+            HelpClass1.ClearControls(xtraTabPage4);
+            HelpClass1.InActiveControls(xtraTabPage1);
+            HelpClass1.InActiveControls(xtraTabPage2);
+            HelpClass1.InActiveControls(xtraTabPage3);
+            HelpClass1.InActiveControls(xtraTabPage4);
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            btnEdit_Click(null, null);
+        }
+
+        public void Fillgridview2()
+        {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    int _MsShobeId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsShobeId"));
+                    var qq1 = db.MsInfoOthers.Where(f => f.MsShobeId == _MsShobeId).ToList();
+                    if (qq1.Count > 0)
+                    {
+                        msInfoOthersBindingSource.DataSource = qq1;
                     }
+                    else
+                        msInfoOthersBindingSource.DataSource = null;
+
+
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            this.Close();
-
+            btnDelete.Enabled = btnEdit.Enabled = gridView1.RowCount > 0 ? true : false;
+            Fillgridview2();
         }
 
-        private bool TextEditValidation()
+        private void txtCode_Leave(object sender, EventArgs e)
         {
-            ///////////////// اعتبار سنجی کد ////////////////////////////////////
-            if (string.IsNullOrEmpty(txtCode.Text))
+            if (!string.IsNullOrEmpty(txtCode.Text))
             {
-                XtraMessageBox.Show("لطفا کد را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            else if (Convert.ToInt32(txtCode.Text) == 0)
-            {
-                XtraMessageBox.Show("کد وارده باید عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (Fm.En == EnumCED.Create)
+                if (Convert.ToInt32(txtCode.Text) <= 0)
                 {
-                    btnNewCode_Click(null, null);
-                }
-                else
-                {
-                    txtCode.Text = CodeBeforeEdit;
-                }
-
-                return false;
-            }
-            else
-            {
-                using (var db = new MyContext())
-                {
-                    try
+                    XtraMessageBox.Show("کد وارده باید عددی بزرگتر از صفر باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (En == EnumCED.Create)
                     {
-                        if (Fm.En == EnumCED.Create)
-                        {
-                            if (db.MsShobes.Any())
-                            {
-                                int _code = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
-                                var q1 = db.MsShobes.Where(p => p.ShobeCode == _code);
-                                if (q1.Any())
-                                {
-                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    btnNewCode_Click(null, null);
-                                    return false;
-                                }
-                            }
-                        }
-                        else if (Fm.En == EnumCED.Edit)
-                        {
-                            int RowId = Convert.ToInt32(txtId.Text);
-                            int _code = Convert.ToInt32(txtVahedCode.Text + txtCode.Text);
-                            var q1 = db.MsShobes.Where(p => p.MsShobeId != RowId && p.ShobeCode == _code);
-                            if (q1.Any())
-                            {
-                                XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                txtCode.Text = CodeBeforeEdit;
-                                return false;
-                            }
-                        }
+                        btnNewCode_Click(null, null);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtCode.Text = CodeBeforeEdit;
                     }
                 }
-
             }
-            ////////////////// اعتبار سنجی تکس باکس و کمبوباکس ها////////////
-
-            if (string.IsNullOrEmpty(txtName.Text) || txtName.Text == "0" || string.IsNullOrEmpty(cmbMajmoehaList.EditValue.ToString()) || string.IsNullOrEmpty(cmbVahedhaList.EditValue.ToString()))
-            {
-                XtraMessageBox.Show("لطفاً اطلاعات را کامل وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            else
-            {
-                using (var db = new MyContext())
-                {
-                    try
-                    {
-                        if (Fm.En == EnumCED.Create)
-                        {
-                            if (db.MsShobes.Any())
-                            {
-                                var q1 = db.MsShobes.Where(p => p.MsVahedId == _VahedId && p.ShobeName == txtName.Text);
-                                if (q1.Any())
-                                {
-                                    XtraMessageBox.Show("این شعبه قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    return false;
-                                }
-                            }
-                        }
-                        else if (Fm.En == EnumCED.Edit)
-                        {
-                            int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.MsShobes.Where(p => p.MsVahedId == _VahedId && p.MsShobeId != RowId && p.ShobeName == txtName.Text);
-                            if (q1.Any())
-                            {
-                                XtraMessageBox.Show("این شعبه قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //txtName.Text = nameBeforeEdit;
-                                return false;
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-
-            }
-
-            return true;
-        }
-
-        private void cmbListMajmoeha_EditValueChanged(object sender, EventArgs e)
-        {
-            FillcmbVahedhaList();
-        }
-
-        int _VahedId = 0;
-        private void cmbVahedhaList_EditValueChanged(object sender, EventArgs e)
-        {
-            _VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-            FilltxtVahedCode();
-        }
-
-        private void cmbMajmoehaList_Enter(object sender, EventArgs e)
-        {
-            if (Fm.En == EnumCED.Create)
-            {
-                cmbMajmoehaList.ShowPopup();
-            }
-            else
-            {
-                cmbMajmoehaList.ClosePopup();
-            }
-
-        }
-
-        private void cmbVahedhaList_Enter(object sender, EventArgs e)
-        {
-            if (Fm.En == EnumCED.Create)
-            {
-                cmbVahedhaList.ShowPopup();
-            }
-            else
-            {
-                cmbVahedhaList.ClosePopup();
-            }
-
-        }
-
-        private void chkSpecificationOther_CheckedChanged(object sender, EventArgs e)
-        {
-            this.Height = chkSpecificationOther.Checked ? 687 : 336;
-
-        }
-
-        private void FrmShoabatCed_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F2)
-            {
-                btnCreateClose_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F3)
-            {
-                btnCreateNext_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.Escape)
-            {
-                btnClose_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F11)
-            {
-                btnNewCode_Click(sender, null);
-            }
-
-        }
-
-        private void chkEditCode_CheckedChanged(object sender, EventArgs e)
-        {
-            txtCode.ReadOnly = chkEditCode.Checked ? false : true;
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             txtShenaseMelli.Properties.MaxLength = radioButton1.Checked ? 10 : 11;
+
+        }
+
+        private void chkIsActive_Leave(object sender, EventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = 1;
+            txtAdress.Focus();
+        }
+
+        private void txtTellFax2_Leave(object sender, EventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = 2;
+            txtSite.Focus();
+        }
+
+        private void txtShabakeEjtemaee2_Leave(object sender, EventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = 3;
+            txtNoeFaaliat.Focus();
+        }
+
+        private void txtShBimeKargah_Leave(object sender, EventArgs e)
+        {
+            btnSave.Focus();
+        }
+
+        private void cmbMajmoehaList_EditValueChanged(object sender, EventArgs e)
+        {
+            FillcmbVahedhaList();
+        }
+
+        private void cmbVahedhaList_EditValueChanged(object sender, EventArgs e)
+        {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    if (db.MsVaheds.Any())
+                    {
+                        int _VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+                        var q = db.MsVaheds.FirstOrDefault(s => s.MsVahedId == _VahedId);
+                        if (q!=null)
+                        {
+                            txtVahedCode.Text = q.VahedCode.ToString();
+                            btnNewCode_Click(null, null);
+                        }
+                        else
+                            txtVahedCode.Text = "";
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void cmbMajmoehaList_Enter(object sender, EventArgs e)
+        {
+            if (En == EnumCED.Create)
+            {
+                cmbMajmoehaList.ShowPopup();
+
+            }
+        }
+
+        private void cmbVahedhaList_Enter(object sender, EventArgs e)
+        {
+            if (En == EnumCED.Create)
+            {
+                cmbVahedhaList.ShowPopup();
+
+            }
+        }
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            if (gridView1.RowCount > 0 )
+            {
+                FillcmbMajmoehaList();
+
+                cmbMajmoehaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
+                cmbVahedhaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
+                txtVahedCode.Text = gridView1.GetFocusedRowCellValue("ShobeCode").ToString().Substring(0, 4);
+                txtId.Text = gridView1.GetFocusedRowCellValue("MsShobeId").ToString();
+                txtCode.Text = gridView1.GetFocusedRowCellValue("ShobeCode").ToString().Substring(4);
+                txtName.Text = gridView1.GetFocusedRowCellValue("ShobeName").ToString();
+                chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("ShobeIsActive"));
+
+                int RowId = Convert.ToInt32(txtId.Text);
+                using (var db = new MyContext())
+                {
+                    try
+                    {
+                        /////////////////////////////////////////////////////////////////////
+                        var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsShobeId == RowId);
+                        if (q4 != null)
+                        {
+                            if (q4.NoeShakhs == "حقیقی") radioButton1.Checked = true; else radioButton2.Checked = true;
+                            txtNoeFaaliat.Text = q4.NoeFaaliat.ToString();
+                            txtAdress.Text = q4.Adress.ToString();
+                            txtCodePosti.Text = q4.CodePosti.ToString();
+                            txtSandoghPosti.Text = q4.SandoghPosti.ToString();
+                            txtShomarePlak.Text = q4.ShomarePlak.ToString();
+                            txtShenaseMelli.Text = q4.ShenaseMelli.ToString();
+                            txtCodeSenfee.Text = q4.CodeSenfee.ToString();
+                            txtCodeEghtesadi.Text = q4.CodeEghtesadi.ToString();
+                            txtTell1.Text = q4.Tell1.ToString();
+                            txtTell2.Text = q4.Tell2.ToString();
+                            txtTellFax1.Text = q4.TellFax1.ToString();
+                            txtTellFax2.Text = q4.TellFax2.ToString();
+                            txtMobile1.Text = q4.Mobile1.ToString();
+                            txtMobile2.Text = q4.Mobile2.ToString();
+                            txtEmail1.Text = q4.Email1.ToString();
+                            txtEmail2.Text = q4.Email2.ToString();
+                            txtSite.Text = q4.Site.ToString();
+                            txtWebLog.Text = q4.WebLog.ToString();
+                            txtShabakeEjtemaee1.Text = q4.ShabakeEjtemaee1.ToString();
+                            txtShabakeEjtemaee2.Text = q4.ShabakeEjtemaee2.ToString();
+                            txtShParvandeMaliati.Text = q4.ShParvandeMaliati.ToString();
+                            txtShBimeKargah.Text = q4.ShBimeKargah.ToString();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            gridView1_RowClick(null, null);
+
+        }
+
+        private void gridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            gridView1_RowClick(null, null);
+
         }
     }
-
 }

@@ -90,53 +90,29 @@
     <Compile Include="ActiveSystem\FrmAccesslevelActiveSystem.Designer.cs">
       <DependentUpon>FrmAccesslevelActiveSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="DafaterMali\FrmDorehaCed.cs">
+    <Compile Include="DafaterMali\FrmListDoreha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DafaterMali\FrmDorehaCed.Designer.cs">
-      <DependentUpon>FrmDorehaCed.cs</DependentUpon>
+    <Compile Include="DafaterMali\FrmListDoreha.Designer.cs">
+      <DependentUpon>FrmListDoreha.cs</DependentUpon>
     </Compile>
-    <Compile Include="DafaterMali\FrmDorehaList.cs">
+    <Compile Include="DafaterMali\FrmListMajmoeha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DafaterMali\FrmDorehaList.Designer.cs">
-      <DependentUpon>FrmDorehaList.cs</DependentUpon>
+    <Compile Include="DafaterMali\FrmListMajmoeha.Designer.cs">
+      <DependentUpon>FrmListMajmoeha.cs</DependentUpon>
     </Compile>
-    <Compile Include="DafaterMali\FrmMajmoehaCed.cs">
+    <Compile Include="DafaterMali\FrmListShoabat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DafaterMali\FrmMajmoehaCed.Designer.cs">
-      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
+    <Compile Include="DafaterMali\FrmListShoabat.Designer.cs">
+      <DependentUpon>FrmListShoabat.cs</DependentUpon>
     </Compile>
-    <Compile Include="DafaterMali\FrmMajmoehaList.cs">
+    <Compile Include="DafaterMali\FrmListVahedha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DafaterMali\FrmMajmoehaList.Designer.cs">
-      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DafaterMali\FrmShoabatCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DafaterMali\FrmShoabatCed.Designer.cs">
-      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DafaterMali\FrmShoabatList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DafaterMali\FrmShoabatList.Designer.cs">
-      <DependentUpon>FrmShoabatList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DafaterMali\FrmVahedhaCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DafaterMali\FrmVahedhaCed.Designer.cs">
-      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DafaterMali\FrmVahedhaList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DafaterMali\FrmVahedhaList.Designer.cs">
-      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
+    <Compile Include="DafaterMali\FrmListVahedha.Designer.cs">
+      <DependentUpon>FrmListVahedha.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,44 +134,26 @@
     <Compile Include="UsersSystem\FrmAccesslevelDafaterMali.Designer.cs">
       <DependentUpon>FrmAccesslevelDafaterMali.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersSystem\FrmUsersCed.cs">
+    <Compile Include="UsersSystem\FrmListUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersSystem\FrmUsersCed.Designer.cs">
-      <DependentUpon>FrmUsersCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsersSystem\FrmUsersList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsersSystem\FrmUsersList.Designer.cs">
-      <DependentUpon>FrmUsersList.cs</DependentUpon>
+    <Compile Include="UsersSystem\FrmListUsers.Designer.cs">
+      <DependentUpon>FrmListUsers.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ActiveSystem\FrmAccesslevelActiveSystem.resx">
       <DependentUpon>FrmAccesslevelActiveSystem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmDorehaCed.resx">
-      <DependentUpon>FrmDorehaCed.cs</DependentUpon>
+    <EmbeddedResource Include="DafaterMali\FrmListDoreha.resx">
+      <DependentUpon>FrmListDoreha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmDorehaList.resx">
-      <DependentUpon>FrmDorehaList.cs</DependentUpon>
+    <EmbeddedResource Include="DafaterMali\FrmListMajmoeha.resx">
+      <DependentUpon>FrmListMajmoeha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmMajmoehaCed.resx">
-      <DependentUpon>FrmMajmoehaCed.cs</DependentUpon>
+    <EmbeddedResource Include="DafaterMali\FrmListShoabat.resx">
+      <DependentUpon>FrmListShoabat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmMajmoehaList.resx">
-      <DependentUpon>FrmMajmoehaList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmShoabatCed.resx">
-      <DependentUpon>FrmShoabatCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmShoabatList.resx">
-      <DependentUpon>FrmShoabatList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmVahedhaCed.resx">
-      <DependentUpon>FrmVahedhaCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DafaterMali\FrmVahedhaList.resx">
-      <DependentUpon>FrmVahedhaList.cs</DependentUpon>
+    <EmbeddedResource Include="DafaterMali\FrmListVahedha.resx">
+      <DependentUpon>FrmListVahedha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -217,11 +175,8 @@
     <EmbeddedResource Include="UsersSystem\FrmAccesslevelDafaterMali.resx">
       <DependentUpon>FrmAccesslevelDafaterMali.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersSystem\FrmUsersCed.resx">
-      <DependentUpon>FrmUsersCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsersSystem\FrmUsersList.resx">
-      <DependentUpon>FrmUsersList.cs</DependentUpon>
+    <EmbeddedResource Include="UsersSystem\FrmListUsers.resx">
+      <DependentUpon>FrmListUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

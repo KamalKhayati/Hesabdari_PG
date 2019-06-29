@@ -518,6 +518,7 @@ namespace EtelaatePaye.CodingHesabdari
             FillcmbHesabGroup();
             cmbListHesabGroup.Focus();
 
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

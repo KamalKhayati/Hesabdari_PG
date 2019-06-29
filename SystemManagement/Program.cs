@@ -6,7 +6,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 
-namespace EtelaatePaye
+namespace SystemManagement
 {
     static class Program
     {

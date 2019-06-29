@@ -22,7 +22,7 @@ using DevExpress.XtraTreeList;
 using DBHesabdari_PG;
 using DevExpress.XtraBars;
 
-namespace EtelaatePaye.UsersSystem
+namespace SystemManagement.UsersSystem
 {
     public partial class FrmAccesslevelMenuh : DevExpress.XtraEditors.XtraForm
     {
@@ -254,7 +254,7 @@ namespace EtelaatePaye.UsersSystem
                             {
                                 RmsUserBmsAccessLevelMenu obj1 = new RmsUserBmsAccessLevelMenu();
                                 obj1.MsUserId = _UserId;
-                                obj1.UserName = cmbUsersList.Edit.GetDisplayText(cmbUsersList.EditValue);
+                                obj1.Name = cmbUsersList.Edit.GetDisplayText(cmbUsersList.EditValue);
                                 obj1.MsAccessLevelMenuId = Convert.ToInt32(item.GetValue(MsAccessLevelMenuId));
                                 obj1.LevelName = item.GetDisplayText(LevelName);
                                 db.RmsUserBmsAccessLevelMenus.Add(obj1);

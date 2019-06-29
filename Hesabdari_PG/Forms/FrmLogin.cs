@@ -35,7 +35,7 @@ namespace Hesabdari_PG.Forms
             {
                 try
                 {
-                    var q = db.MsUsers.FirstOrDefault(f => f.Name == txtName.Text && f.Password == txtPassword.Text);
+                    var q = db.MsUsers.FirstOrDefault(f => f.Shenase == txtName.Text && f.Password == txtPassword.Text);
                     if (q != null)
                     {
                         this.Close();
@@ -51,7 +51,7 @@ namespace Hesabdari_PG.Forms
                         //}
                         FrmMain fm = new FrmMain();
                         fm.txtUserId.Caption = q.MsUserId.ToString();
-                        fm.txtUserName.Caption = q.UserName.ToString();
+                        fm.txtUserName.Caption = q.Name.ToString();
                         fm.Show();
 
                     }
@@ -91,11 +91,11 @@ namespace Hesabdari_PG.Forms
                     if (!string.IsNullOrEmpty(txtName.Text))
                     {
                         string _Name = txtName.Text;
-                        var q = db.MsUsers.FirstOrDefault(f => f.Name == _Name);
+                        var q = db.MsUsers.FirstOrDefault(f => f.Shenase == _Name);
                         if (q != null)
                         {
                             lblUserName.Visible = true;
-                            lblUserName.Text = q.UserName;
+                            lblUserName.Text = q.Name;
                         }
                         else
                         {

@@ -1,4 +1,4 @@
-﻿namespace EtelaatePaye.UsersSystem
+﻿namespace SystemManagement.UsersSystem
 {
     partial class FrmAccesslevelDafaterMali
     {

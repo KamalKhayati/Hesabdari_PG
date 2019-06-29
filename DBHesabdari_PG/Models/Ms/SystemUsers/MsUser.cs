@@ -24,9 +24,9 @@ namespace DBHesabdari_PG
         [Required]
         public int UserCode { get; set; }
         [Required, MaxLength(50)]
-        public string UserName { get; set; }
-        [Required, MaxLength(50)]
         public string Name { get; set; }
+        [Required, MaxLength(50)]
+        public string Shenase { get; set; }
         [Required, MaxLength(50)]
         public string Password { get; set; }
         [Required]
@@ -73,7 +73,7 @@ namespace DBHesabdari_PG
 
         [Column(Order = 2)]
         [Required, MaxLength(50)]
-        public string UserName { get; set; }
+        public string Name { get; set; }
 
         [Key]
         [Column(Order = 3)]
@@ -98,7 +98,7 @@ namespace DBHesabdari_PG
 
         [Column(Order = 2)]
         [Required, MaxLength(50)]
-        public string UserName { get; set; }
+        public string Name { get; set; }
 
         [Key]
         [Column(Order = 3)]

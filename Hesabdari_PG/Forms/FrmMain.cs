@@ -28,8 +28,6 @@ using Hesabdari_PG.Forms.Ap.AnbarKala;
 using Microsoft.Win32;
 using System.Data.SqlClient;
 using HelpClassLibrary;
-using EtelaatePaye.DafaterMali;
-using EtelaatePaye.UsersSystem;
 using DBHesabdari_PG;
 using System.Data.Entity;
 using DevExpress.XtraEditors;
@@ -38,6 +36,7 @@ using DevExpress.XtraGrid.Views.Base;
 using EtelaatePaye.CodingHesabdari;
 using SystemManagement.UsersSystem;
 using SystemManagement.ActiveSystem;
+using SystemManagement.DafaterMali;
 
 namespace Hesabdari_PG.Forms
 {
@@ -289,7 +288,7 @@ namespace Hesabdari_PG.Forms
 
         private void btnListMojtamaha_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmMajmoehaList fm = new FrmMajmoehaList();
+            FrmListMajmoeha fm = new FrmListMajmoeha();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -298,7 +297,7 @@ namespace Hesabdari_PG.Forms
 
         private void btnUsersList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmUsersList fm = new FrmUsersList();
+            FrmListUsers fm = new FrmListUsers();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -313,7 +312,7 @@ namespace Hesabdari_PG.Forms
 
         private void btnListVahedha_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmVahedhaList fm = new FrmVahedhaList();
+            FrmListVahedha fm = new FrmListVahedha();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -322,7 +321,7 @@ namespace Hesabdari_PG.Forms
 
         private void btnListShoabat_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmShoabatList fm = new FrmShoabatList();
+            FrmListShoabat fm = new FrmListShoabat();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -331,7 +330,7 @@ namespace Hesabdari_PG.Forms
 
         private void btnListDorehaiMali_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmDorehaList fm = new FrmDorehaList();
+            FrmListDoreha fm = new FrmListDoreha();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;

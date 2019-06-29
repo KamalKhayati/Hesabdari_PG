@@ -62,11 +62,11 @@ namespace DBHesabdari_PG.Migrations
 
                     if (!context.MsUsers.Any())
                     {
-                        context.MsUsers.Add(new MsUser() { MsUserId = 1, UserCode = 101, UserName = "مدیر سیستم", Name = "1", Password = "1", UserIsActive = true });
-                        context.MsUsers.Add(new MsUser() { MsUserId = 2, UserCode = 102, UserName = "کمال خیاطی", Name = "2", Password = "2", UserIsActive = true });
-                        context.MsUsers.Add(new MsUser() { MsUserId = 3, UserCode = 103, UserName = "جمال خیاطی", Name = "3", Password = "3", UserIsActive = true });
-                        context.MsUsers.Add(new MsUser() { MsUserId = 4, UserCode = 104, UserName = "جلال خیاطی", Name = "4", Password = "4", UserIsActive = true });
-                        context.MsUsers.Add(new MsUser() { MsUserId = 5, UserCode = 105, UserName = "کاوه خیاطی", Name = "5", Password = "5", UserIsActive = true });
+                        context.MsUsers.Add(new MsUser() { MsUserId = 1, UserCode = 101, Name = "مدیر سیستم", Shenase = "1", Password = "1", UserIsActive = true });
+                        context.MsUsers.Add(new MsUser() { MsUserId = 2, UserCode = 102, Name = "کمال خیاطی", Shenase = "2", Password = "2", UserIsActive = true });
+                        context.MsUsers.Add(new MsUser() { MsUserId = 3, UserCode = 103, Name = "جمال خیاطی", Shenase = "3", Password = "3", UserIsActive = true });
+                        context.MsUsers.Add(new MsUser() { MsUserId = 4, UserCode = 104, Name = "جلال خیاطی", Shenase = "4", Password = "4", UserIsActive = true });
+                        context.MsUsers.Add(new MsUser() { MsUserId = 5, UserCode = 105, Name = "کاوه خیاطی", Shenase = "5", Password = "5", UserIsActive = true });
                     }
                     if (!context.MsMajmoes.Any())
                     {

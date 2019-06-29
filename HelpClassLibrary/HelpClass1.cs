@@ -20,6 +20,14 @@ using Microsoft.Win32;
 using System.Windows.Forms;
 using System.Globalization;
 using DBHesabdari_PG;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.Data;
+using System.Data;
+using System.IO;
+using System.Security.Cryptography;
+using System.Data.SqlClient;
+using System.Data.Entity;
+using static DevExpress.DataAccess.UI.XPObjectSource.PropertyCollectionEditor;
 
 namespace HelpClassLibrary
 {
@@ -73,7 +81,7 @@ namespace HelpClassLibrary
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public static void SetNumberRowsColumnUnboundGirdView(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        public static void SetNumberRowsColumnUnboundGirdView(object sender, CustomColumnDataEventArgs e)
         {
             GridView view = (GridView)sender;
             if (view == null) return;
@@ -89,54 +97,37 @@ namespace HelpClassLibrary
 
         }
 
-        public void AddPermissiveUsersNameToColumnUnboundGirdView()
-        {
-            //for (int i = 0; i < gridView1.RowCount; i++)
-            //{
-
-            //    using (var db = new MyContext())
-            //    {
-            //        try
-            //        {
-            //            int Id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
-            //            var q = db.RmsUserhaBmsVahedhas.Where(s => s.MsVahedId == Id).Select(s => s.UserName).ToList();
-            //            if (q.Count > 0)
-            //            {
-            //                string a = "";
-            //                foreach (var item in q)
-            //                {
-            //                    a += item + ",";
-
-            //                }
-            //                gridView1.SetRowCellValue(i, "PermissiveUsersName", a);
-            //            }
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-            //                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //    }
-            //}
-        }
-
-        #region // متد ایجاد کد جدید به فرم بصورت اتومات
-        //using (var db = new MyContext())
+        //public void AddPermissiveUsersNameToColumnUnboundGirdView()
         //{
-        //    try
-        //    {
-        //        var q = db.MyEntitys.Max(p => p.Code);
-        //        txtName.Text = q != 0 ? (q + 1).ToString() : "";
-        //    }
+        //    //for (int i = 0; i < gridView1.RowCount; i++)
+        //    //{
 
-        //    catch (Exception ex)
-        //    {
-        //        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-        //            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
+        //    //    using (var db = new MyContext())
+        //    //    {
+        //    //        try
+        //    //        {
+        //    //            int Id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
+        //    //            var q = db.RmsUserhaBmsVahedhas.Where(s => s.MsVahedId == Id).Select(s => s.UserName).ToList();
+        //    //            if (q.Count > 0)
+        //    //            {
+        //    //                string a = "";
+        //    //                foreach (var item in q)
+        //    //                {
+        //    //                    a += item + ",";
+
+        //    //                }
+        //    //                gridView1.SetRowCellValue(i, "PermissiveUsersName", a);
+        //    //            }
+        //    //        }
+        //    //        catch (Exception ex)
+        //    //        {
+        //    //            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+        //    //                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    //        }
+        //    //    }
+        //    //}
         //}
-        // متاسفانه درست اجرا نشد    
-        #endregion
+
 
         #region //اضافه کردن رکورد جدید به دیتاگرید ویو
         //private void gridView1_InitNewRow(object sender, InitNewRowEventArgs e)
@@ -228,11 +219,198 @@ namespace HelpClassLibrary
         //    }
         //}
 
+
+        public static void StartCalculater()
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+        public static void StartWordPad()
+        {
+            System.Diagnostics.Process.Start("WordPad.exe");
+        }
+        public static void StartNotePad()
+        {
+            System.Diagnostics.Process.Start("NotePad.exe");
+        }
+        //public static void TextBoxFormatDesign_00(TextEdit TextEdit)
+        //{
+        //    TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("0#");
+        //}
+        //public static void TextBoxFormatDesign_000(TextEdit TextEdit)
+        //{
+        //    TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("00#");
+        //}
+        public static void InActiveButtons(Control panel)
+        {
+            foreach (Control item in panel.Controls)
+            {
+                if (item is SimpleButton)
+                {
+                    if (item.Name == "btnSave" || item.Name == "btnSaveNext" || item.Name == "btnCancel" || item.Name == "btnClose")
+                    {
+                        item.Enabled = true;
+                    }
+                    else
+                        item.Enabled = false;
+
+                }
+            }
+        }
+
+        public static void ActiveButtons(Control panel)
+        {
+            foreach (Control item in panel.Controls)
+            {
+                if (item is SimpleButton)
+                {
+                    if (item.Name == "btnSave" || item.Name == "btnSaveNext" || item.Name == "btnCancel")
+                    {
+                        item.Enabled = false;
+                    }
+                    else
+                        item.Enabled = true;
+                }
+
+            }
+        }
+
+        public static void ClearControls(Control panel)
+        {
+            foreach (Control item in panel.Controls)
+            {
+                var _Type = item.GetType();
+                if (_Type.Name == "TextEdit")
+                    item.Text = "";
+                else if (_Type.Name == "LookUpEdit")
+                {
+                    LookUpEdit item1 = (LookUpEdit)item;
+                    item1.EditValue = 0;
+                }
+                else if (_Type.Name == "CheckEdit")
+                {
+                    CheckEdit item1 = (CheckEdit)item;
+                    item1.Checked = false;
+                }
+            }
+        }
+
+        public static void ActiveControls(Control panel)
+        {
+            panel.Enabled = true;
+
+            //foreach (Control item in panel.Controls)
+            //{
+            //    //if (item is TextEdit)
+            //    //{
+            //    //    TextEdit item2 = (TextEdit)item;
+            //    //    item2.ReadOnly = false;
+            //    //}
+            //    //else
+            //    //var _Type = item.GetType();
+            //    //if (_Type.Name == "TextEdit" || _Type.Name == "LookUpEdit")
+            //        item.Enabled = true;
+            //}
+        }
+
+        public static void InActiveControls(Control panel)
+        {
+            panel.Enabled = false;
+            //foreach (Control item in panel.Controls)
+            //{
+            //    //if (item is TextEdit)
+            //    //{
+            //    //    TextEdit item2 = (TextEdit)item;
+            //    //    item2.ReadOnly = false;
+            //    //}
+            //    //else
+            //    //var _Type = item.GetType();
+            //    //if (_Type.Name == "TextEdit" || _Type.Name == "LookUpEdit")
+            //    //    //item.Enabled = true;
+            //        item.Enabled = false;
+            //}
+        }
+
+
+        //public void SetDateTimeNow(MaskedTextBox objMTB)
+        //{
+        //    PersianCalendar objPC = new PersianCalendar();
+        //    objMTB.Text = objPC.GetYear(DateTime.Now).ToString("0000") + objPC.GetMonth(DateTime.Now).ToString("00") + objPC.GetDayOfMonth(DateTime.Now).ToString("00");
+        //}
+        public static void SetCurrentYear(TextEdit TextEdit)
+        {
+            PersianCalendar objPC = new PersianCalendar();
+            TextEdit.Text = objPC.GetYear(DateTime.Now).ToString("0000");
+        }
+        public static void CloseAllOpenForms()
+        {
+            List<XtraForm> openForms = new List<XtraForm>();
+
+            foreach (XtraForm f in Application.OpenForms)
+                openForms.Add(f);
+
+            foreach (XtraForm f in openForms)
+            {
+                if (f.Name != "FrmMain")
+                    f.Close();
+            }
+
+            //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            //{
+            //    if (Application.OpenForms[i].Name != "FrmMain")
+            //        Application.OpenForms[i].Close();
+            //}
+        }
+
+        ////////////////////////Alt.Control.Shift.F12///////////////////////////////////////////
+        //private void FrmMain_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    //if (e.KeyChar=='b')
+        //    //{
+        //    //    btnTest.Visible = true;
+        //    //}
+        //}
+
+        //private void FrmMain_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    //if (e.Alt && e.Control && e.Shift && e.KeyCode == Keys.F12)
+        //    //{
+        //    //    btnTest.Visible = true;
+        //    //}
+
+        //}
+
+
+        ///////////////////////////////**************************************************//////////////////////////////////////////
+
+
+        //تنظیم EditMask تکس باکس تاریخ
+        //RightToLeft=No
+        //RegEx
+        //([1-9][3-9][0-9][0-9])/(((0[1-6])/([012][1-9]|[123]0|31))|((0[7-9]|1[01])/([012][1-9]|[123]0))|((1[2])/([012][1-9])))
+        //Show Placeholdes=true
+
+
+        public static void AddZerooToTextBox(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '+')
+            {
+                TextEdit TextEdit1 = (TextEdit)sender;
+                if (TextEdit1 == null) return;
+                TextEdit1.Text = TextEdit1.Text + "000";
+            }
+            //else if (e.KeyChar == '-')
+            //{
+            //    TextEdit TextEdit1 = (TextEdit)sender;
+            //    if (TextEdit1 == null) return;
+            //    string Text1 = TextEdit1.Text.Replace("-", "+");
+            //    string Text2 = Text1 + "00";
+            //    TextEdit1.Text = Text2.Replace("-", "+");
+            //}
+        }
         public static void SwitchToPersianLanguage()
         {
             InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(System.Globalization.CultureInfo.CreateSpecificCulture("fa-IR"));
         }
-
         public static void SetRegionAndLanguage()
         {
             RegistryKey regkey = Registry.CurrentUser.OpenSubKey(@"Control Panel\International", true);
@@ -320,85 +498,316 @@ namespace HelpClassLibrary
             //rkey.Close();
             /////////////////////////////////////////////////////////////
         }
+        public static void MoveLast(GridView gridView)
+        {
+            gridView.MoveLast();
+        }
+        public static void MoveNext(GridView gridView)
+        {
+            gridView.MoveNext();
+        }
+        public static void MovePrev(GridView gridView)
+        {
+            gridView.MovePrev();
+        }
+        public static void MoveFirst(GridView gridView)
+        {
+            gridView.MoveFirst();
+        }
 
-        public static void StartCalculater()
-        {
-            System.Diagnostics.Process.Start("Calc.exe");
-        }
-        public static void StartWordPad()
-        {
-            System.Diagnostics.Process.Start("WordPad.exe");
-        }
-        public static void StartNotePad()
-        {
-            System.Diagnostics.Process.Start("NotePad.exe");
-        }
-        //public static void TextBoxFormatDesign_00(TextEdit TextEdit)
+        #region عملیات مربوط به PictuerBox
+        //private void btnBrowse_Click(object sender, EventArgs e)
         //{
-        //    TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("0#");
+        //    if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+        //        return;
+        //    pictureBox1.ImageLocation = openFileDialog1.FileName;
         //}
-        //public static void TextBoxFormatDesign_000(TextEdit TextEdit)
+
+        //string copyPictuer(string sourcefile, string key)
         //{
-        //    TextEdit.Text = Convert.ToInt32(TextEdit.Text).ToString("00#");
+        //    if (sourcefile == "")
+        //        return null;
+        //    string curentPath;
+        //    string newPath;
+        //    curentPath = Application.StartupPath + @"\image\";
+        //    if (Directory.Exists(curentPath) == false)
+        //    {
+        //        Directory.CreateDirectory(curentPath);
+        //    }
+
+        //    newPath = curentPath + key + sourcefile.Substring(sourcefile.LastIndexOf("."));
+        //    if (File.Exists(newPath))
+        //    {
+        //        File.Delete(newPath);
+        //    }
+        //    File.Copy(sourcefile, newPath);
+        //    return newPath;
         //}
-        public static void ClearTextEditControlsText(Control panel)
+
+        //private Region r = new Region();
+        //private void pictureBox1_Click(object sender, EventArgs e)
+        //{
+        //    if (pictureBox1.SizeMode == PictureBoxSizeMode.StretchImage)
+        //    {
+        //        r = pictureBox1.Region;
+        //        pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+        //    }
+        //    else
+        //    {
+        //        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        //        pictureBox1.Region = r;
+        //    }
+        //}
+
+        //private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        //{
+        //    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    pictureBox1.Region = r;
+
+        //}
+
+        //private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        //{
+        //    r = pictureBox1.Region;
+        //    pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+
+        //}
+        #endregion
+
+
+        public static void gridView_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e, GridView gridView1, string Bed = "Bed", string Bes = "Bes", string Mande = "Mande")
         {
-            foreach (Control item in panel.Controls)
+            if (gridView1.RowCount == 0)
+                return;
+
+            decimal SumBed = Convert.ToDecimal(gridView1.Columns[Bed].SummaryItem.SummaryValue);
+            decimal SumBes = Convert.ToDecimal(gridView1.Columns[Bes].SummaryItem.SummaryValue);
+            decimal _Mande = SumBed - SumBes;
+
+            var item = e.Item as GridColumnSummaryItem;
+
+            if (item == null || item.FieldName != Mande)
+                return;
+
+            if (e.SummaryProcess == CustomSummaryProcess.Finalize)
+                e.TotalValue = _Mande;
+        }
+
+        public static List<decimal> Result2;
+        public static int IndexAkharinDaruaft = -1;
+        public static void gridView_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e, GridView gridView1, string Bed = "Bed", string Bes = "Bes", string Mande = "Mande")
+        {
+            if (gridView1.RowCount == 0)
+                return;
+
+            SetNumberRowsColumnUnboundGirdView(sender, e);
+            int rowIndex = e.ListSourceRowIndex;
+            decimal bed = Convert.ToDecimal(gridView1.GetListSourceRowCellValue(rowIndex, Bed));
+            decimal bes = Convert.ToDecimal(gridView1.GetListSourceRowCellValue(rowIndex, Bes));
+            if (e.Column.FieldName != Mande) return;
+            if (e.IsGetData)
             {
-                if (item.Name.Contains("txt"))
+                if (rowIndex == 0)
                 {
-                    item.Text = "";
+                    Result2.Add(bed - bes);
+                    e.Value = Result2[rowIndex];
+                    if (Convert.ToDecimal(e.Value) == 0)
+                    {
+                        IndexAkharinDaruaft = rowIndex;
+                    }
+                }
+                else
+                {
+                    Result2.Add(Result2[rowIndex - 1] + bed - bes);
+                    e.Value = Result2[rowIndex];
+                    if (Convert.ToDecimal(e.Value) == 0)
+                    {
+                        IndexAkharinDaruaft = rowIndex;
+                    }
+                }
+            }
+
+        }
+
+        public static void ControlAltShift_KeyDown(object sender, KeyEventArgs e, params Control[] btn)
+        {
+            if (e.Alt && e.Control && e.Shift && e.KeyCode == Keys.F12)
+            {
+                for (int i = 0; i < btn.Length; i++)
+                {
+                    btn[i].Visible = btn[i].Visible == true ? false : true;
                 }
             }
         }
 
-        //public void SetDateTimeNow(MaskedTextBox objMTB)
+        //public static void LoadReportDesigner(string FilePath, string FileName)
         //{
-        //    PersianCalendar objPC = new PersianCalendar();
-        //    objMTB.Text = objPC.GetYear(DateTime.Now).ToString("0000") + objPC.GetMonth(DateTime.Now).ToString("00") + objPC.GetDayOfMonth(DateTime.Now).ToString("00");
+        //    if (System.IO.File.Exists(FilePath + FileName))
+        //    {
+        //        //ساخت فرم طراحی گزارش و ارسال فرم طراحی شده قبلی به فرم طراحی جهت ویرایش
+        //        FrmReportDesigner frd = new FrmReportDesigner();
+        //        frd.reportDesigner1.OpenReport(FilePath + FileName);
+        //        frd.Show();
+
+        //    }
+        //    else
+        //    {
+        //        NewReportDesigner(FilePath, FileName);
+        //    }
         //}
-        public static void SetCurrentYear(TextEdit TextEdit)
-        {
-            PersianCalendar objPC = new PersianCalendar();
-            TextEdit.Text = objPC.GetYear(DateTime.Now).ToString("0000");
-        }
-        public static void CloseAllOpenForms()
-        {
-                List<XtraForm> openForms = new List<XtraForm>();
 
-                foreach (XtraForm f in Application.OpenForms)
-                    openForms.Add(f);
+        //public static void NewReportDesigner(string FilePath, string FileName)
+        //{
+        //    XtraMessageBox.Show("چاپ فوق قبلاً طراحی نشده است لذا در صورت طراحی چاپ ، فایل مربوطه را با نام " + FileName + " در مسیر \n" + FilePath + " ذخیره فرمایید.", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+        //    //ساخت فرم طراحی گزارش و ارسال فرم طراحی شده قبلی به فرم طراحی جهت ویرایش
+        //    XtraReport XtraReport1 = new XtraReport();
+        //    XtraReport1.DisplayName = FileName;
+        //    XtraReport1.PaperName = FileName;
+        //    XtraReport1.PaperKind = System.Drawing.Printing.PaperKind.Letter;
+        //    XtraReport1.Name = FileName;
+        //    //XtraReport1.PrinterName = FileName;
+        //    XtraReport1.Margins = new System.Drawing.Printing.Margins(25, 25, 25, 25);
+        //    FrmReportDesigner frd = new FrmReportDesigner();
+        //    frd.reportDesigner1.OpenReport(XtraReport1);
+        //    frd.Show();
 
-                foreach (XtraForm f in openForms)
+
+        //}
+
+        public static DataSet ConvettDatagridviewToDataSet(GridView gridView)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            for (int ColumnCounter = 0; ColumnCounter < gridView.Columns.Count; ColumnCounter++)
+                dt.Columns.Add(gridView.Columns[ColumnCounter].FieldName);
+
+            for (int RowCounter = 0; RowCounter < gridView.RowCount; RowCounter++)
+            {
+                DataRow DataRow1 = dt.NewRow();
+                for (int j = 0; j < gridView.Columns.Count; j++)
                 {
-                    if (f.Name != "FrmMain")
-                        f.Close();
+                    //DataRow1[j] = gridView.Rows[RowCounter].Cells[j].Value.ToString();
+                    DataRow1[j] = gridView.GetRowCellDisplayText(RowCounter, gridView.Columns[j]);
                 }
-
-                //for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-                //{
-                //    if (Application.OpenForms[i].Name != "FrmMain")
-                //        Application.OpenForms[i].Close();
-                //}
+                dt.Rows.Add(DataRow1);
+            }
+            ds.Tables.Add(dt);
+            return ds;
         }
 
-        ////////////////////////Alt.Control.Shift.F12///////////////////////////////////////////
-        //private void FrmMain_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    //if (e.KeyChar=='b')
-        //    //{
-        //    //    btnTest.Visible = true;
-        //    //}
-        //}
+        /////Encryption یا رمزنگاری
+        public static byte[] AES_Encrypt(byte[] bytesToBeEncrypted, byte[] passwordBytes)
+        {
+            byte[] encryptedBytes = null;
 
-        //private void FrmMain_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    //if (e.Alt && e.Control && e.Shift && e.KeyCode == Keys.F12)
-        //    //{
-        //    //    btnTest.Visible = true;
-        //    //}
+            byte[] saltBytes = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-        //}
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (RijndaelManaged AES = new RijndaelManaged())
+                {
+                    AES.KeySize = 256;
+                    AES.BlockSize = 128;
+
+                    var key = new Rfc2898DeriveBytes(passwordBytes, saltBytes, 1000);
+                    AES.Key = key.GetBytes(AES.KeySize / 8);
+                    AES.IV = key.GetBytes(AES.BlockSize / 8);
+
+                    AES.Mode = CipherMode.CBC;
+
+                    using (var cs = new CryptoStream(ms, AES.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(bytesToBeEncrypted, 0, bytesToBeEncrypted.Length);
+                        cs.Close();
+                    }
+                    encryptedBytes = ms.ToArray();
+                }
+            }
+
+            return encryptedBytes;
+        }
+
+        /////Decryption یا رمزگشایی
+        public static byte[] AES_Decrypt(byte[] bytesToBeDecrypted, byte[] passwordBytes)
+        {
+            byte[] decryptedBytes = null;
+
+
+            byte[] saltBytes = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (RijndaelManaged AES = new RijndaelManaged())
+                {
+                    AES.KeySize = 256;
+                    AES.BlockSize = 128;
+
+                    var key = new Rfc2898DeriveBytes(passwordBytes, saltBytes, 1000);
+                    AES.Key = key.GetBytes(AES.KeySize / 8);
+                    AES.IV = key.GetBytes(AES.BlockSize / 8);
+
+                    AES.Mode = CipherMode.CBC;
+
+                    using (var cs = new CryptoStream(ms, AES.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(bytesToBeDecrypted, 0, bytesToBeDecrypted.Length);
+                        cs.Close();
+                    }
+                    decryptedBytes = ms.ToArray();
+                }
+            }
+
+            return decryptedBytes;
+        }
+
+        /////خب حالا باید دو تا void درست کنیم تا Encrypt و Decrypt را ساده تر برامون انجام دهند.
+        ///ابتدا void مربوط به Encrypt
+        public static string EncryptText(string input, string password = "km113012")
+        {
+            byte[] bytesToBeEncrypted = Encoding.UTF8.GetBytes(input);
+            byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
+
+            passwordBytes = SHA256.Create().ComputeHash(passwordBytes);
+
+            byte[] bytesEncrypted = AES_Encrypt(bytesToBeEncrypted, passwordBytes);
+
+            string result = Convert.ToBase64String(bytesEncrypted);
+
+            return result;
+        }
+
+        ///////سپس void دوم یا Decrypt همانند زیر می شود.
+        ///نحوه استفاده از آن هم بسیار ساده است متد ها هرکدام دو مقدار ورودی دارد که اولی استرینگ است که می خواهید کد شود و دومی کلید شما است.
+        public static string DecryptText(string input, string password = "km113012")
+        {
+            byte[] bytesToBeDecrypted = Convert.FromBase64String(input);
+            byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
+            passwordBytes = SHA256.Create().ComputeHash(passwordBytes);
+
+            byte[] bytesDecrypted = AES_Decrypt(bytesToBeDecrypted, passwordBytes);
+
+            string result = Encoding.UTF8.GetString(bytesDecrypted);
+
+            return result;
+        }
+
+        ////////////////////////////جلوگیری از خارج شدن برنامه //////////////////////////////////////
+        public static void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (XtraMessageBox.Show("آیا میخواهید از برنامه خارج شود ؟", "پیغام ", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
+            {
+                e.Cancel = true;
+                return;
+                // Application.OpenForms["FrmMain"].Activate();
+            }
+            else
+            {
+                SqlConnection.ClearAllPools();
+                Application.ExitThread();
+                Application.Exit();
+            }
+        }
+
 
     }
 }
