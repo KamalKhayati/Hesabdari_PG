@@ -315,23 +315,23 @@ namespace SystemManagement.DafaterMali
             {
                 btnCreate_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F3 && btnDelete.Enabled == true)
+            else if (e.KeyCode == Keys.F3)
             {
                 btnDelete_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F4 && btnEdit.Enabled == true)
+            else if (e.KeyCode == Keys.F4)
             {
                 btnEdit_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F5 && btnSave.Enabled == true)
+            else if (e.KeyCode == Keys.F5)
             {
                 btnSave_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F6 && btnSaveNext.Enabled == true)
+            else if (e.KeyCode == Keys.F6)
             {
                 btnSaveNext_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7 && btnCancel.Enabled == true)
+            else if (e.KeyCode == Keys.F7)
             {
                 btnCancel_Click(sender, null);
             }
@@ -343,13 +343,9 @@ namespace SystemManagement.DafaterMali
             {
                 btnDisplyNotActiveList_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F10 && btnPrintPreview.Visible == true)
+            else if (e.KeyCode == Keys.F10)
             {
                 btnPrintPreview_Click(sender, null);
-            }
-            else if (e.Alt && e.KeyCode == Keys.N && btnNewCode.Enabled == true)
-            {
-                btnNewCode_Click(sender, null);
             }
             else if (e.KeyCode == Keys.F12)
             {
@@ -386,6 +382,7 @@ namespace SystemManagement.DafaterMali
 
         private void btnPrintPreview_Click(object sender, EventArgs e)
         {
+            if(btnPrintPreview.Visible)
             HelpClass1.PrintPreview(gridControl1, gridView1);
         }
 
@@ -415,477 +412,494 @@ namespace SystemManagement.DafaterMali
             HelpClass1.SetNumberRowsColumnUnboundGirdView(sender, e);
         }
 
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            En = EnumCED.Create;
-            gridControl1.Enabled = false;
-            HelpClass1.InActiveButtons(panelControl2);
-            HelpClass1.ClearControls(xtraTabPage1);
-            HelpClass1.ClearControls(xtraTabPage2);
-            HelpClass1.ClearControls(xtraTabPage3);
-            HelpClass1.ClearControls(xtraTabPage4);
-            HelpClass1.ActiveControls(xtraTabPage1);
-            HelpClass1.ActiveControls(xtraTabPage2);
-            HelpClass1.ActiveControls(xtraTabPage3);
-            HelpClass1.ActiveControls(xtraTabPage4);
-            //txtCode.ReadOnly = true;
-            xtraTabControl1.SelectedTabPageIndex = 0;
-            FillcmbMajmoehaList();
-            cmbMajmoehaList.Focus();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (gridView1.SelectedRowsCount > 0)
+            if (btnCreate.Visible)
             {
-                if (XtraMessageBox.Show("آیا رکورد انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
-                    EditRowIndex = gridView1.FocusedRowHandle;
-                    using (var db = new MyContext())
-                    {
-                        try
-                        {
-                            int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId"));
-                            var q = db.MsVaheds.FirstOrDefault(p => p.MsVahedId == RowId);
-                            var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.VahedId == RowId);
-                            if (q != null && q8 != null)
-                            {
-                                db.MsVaheds.Remove(q);
-                                db.MsAccessLevelDafaterMalis.Remove(q8);
-                                /////////////////////////////////////////////////////////////////////////////
-                                var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsVahedId == RowId);
-                                if (q4 != null)
-                                {
-                                    db.MsInfoOthers.Remove(q4);
-                                };
-
-                                db.SaveChanges();
-
-                                if (IsActiveList)
-                                    btnDisplyActiveList_Click(null, null);
-                                else
-                                    btnDisplyNotActiveList_Click(null, null);
-                                //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                if (gridView1.RowCount > 0)
-                                    gridView1.FocusedRowHandle = EditRowIndex - 1;
-                            }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (DbUpdateException)
-                        {
-                            XtraMessageBox.Show("حذف رکورد جاری مقدور نیست \n" +
-                                " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری  (در لیست شعبه ها و لیست دوره ها) حذف گردد" +
-                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
-        }
-
-        public int EditRowIndex = 0;
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (gridView1.RowCount > 0 && btnEdit.Visible == true)
-            {
+                En = EnumCED.Create;
                 gridControl1.Enabled = false;
-                EditRowIndex = gridView1.FocusedRowHandle;
-                En = EnumCED.Edit;
                 HelpClass1.InActiveButtons(panelControl2);
+                HelpClass1.ClearControls(xtraTabPage1);
+                HelpClass1.ClearControls(xtraTabPage2);
+                HelpClass1.ClearControls(xtraTabPage3);
+                HelpClass1.ClearControls(xtraTabPage4);
                 HelpClass1.ActiveControls(xtraTabPage1);
                 HelpClass1.ActiveControls(xtraTabPage2);
                 HelpClass1.ActiveControls(xtraTabPage3);
                 HelpClass1.ActiveControls(xtraTabPage4);
-                FillcmbMajmoehaList();
+                //txtCode.ReadOnly = true;
                 xtraTabControl1.SelectedTabPageIndex = 0;
+                FillcmbMajmoehaList();
+                cmbMajmoehaList.Focus();
 
-                cmbMajmoehaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
-                txtId.Text = gridView1.GetFocusedRowCellValue("MsVahedId").ToString();
-                txtMajmoeCode.Text = gridView1.GetFocusedRowCellValue("VahedCode").ToString().Substring(0,2);
-                txtCode.Text = gridView1.GetFocusedRowCellValue("VahedCode").ToString().Substring(2);
-                txtName.Text = gridView1.GetFocusedRowCellValue("VahedName").ToString();
-                chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("VahedIsActive"));
+            }        }
 
-                int RowId = Convert.ToInt32(txtId.Text);
-                using (var db = new MyContext())
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (btnDelete.Visible)
+            {
+                if (gridView1.SelectedRowsCount > 0)
                 {
-                    try
+                    if (XtraMessageBox.Show("آیا رکورد انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        /////////////////////////////////////////////////////////////////////
-                        var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsVahedId == RowId);
-                        if (q4 != null)
+                        EditRowIndex = gridView1.FocusedRowHandle;
+                        using (var db = new MyContext())
                         {
-                            if (q4.NoeShakhs == "حقیقی") radioButton1.Checked = true; else radioButton2.Checked = true;
-                            txtNoeFaaliat.Text = q4.NoeFaaliat.ToString();
-                            txtAdress.Text = q4.Adress.ToString();
-                            txtCodePosti.Text = q4.CodePosti.ToString();
-                            txtSandoghPosti.Text = q4.SandoghPosti.ToString();
-                            txtShomarePlak.Text = q4.ShomarePlak.ToString();
-                            txtShenaseMelli.Text = q4.ShenaseMelli.ToString();
-                            txtCodeSenfee.Text = q4.CodeSenfee.ToString();
-                            txtCodeEghtesadi.Text = q4.CodeEghtesadi.ToString();
-                            txtTell1.Text = q4.Tell1.ToString();
-                            txtTell2.Text = q4.Tell2.ToString();
-                            txtTellFax1.Text = q4.TellFax1.ToString();
-                            txtTellFax2.Text = q4.TellFax2.ToString();
-                            txtMobile1.Text = q4.Mobile1.ToString();
-                            txtMobile2.Text = q4.Mobile2.ToString();
-                            txtEmail1.Text = q4.Email1.ToString();
-                            txtEmail2.Text = q4.Email2.ToString();
-                            txtSite.Text = q4.Site.ToString();
-                            txtWebLog.Text = q4.WebLog.ToString();
-                            txtShabakeEjtemaee1.Text = q4.ShabakeEjtemaee1.ToString();
-                            txtShabakeEjtemaee2.Text = q4.ShabakeEjtemaee2.ToString();
-                            txtShParvandeMaliati.Text = q4.ShParvandeMaliati.ToString();
-                            txtShBimeKargah.Text = q4.ShBimeKargah.ToString();
-                        }
+                            try
+                            {
+                                int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId"));
+                                var q = db.MsVaheds.FirstOrDefault(p => p.MsVahedId == RowId);
+                                var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.VahedId == RowId);
+                                if (q != null && q8 != null)
+                                {
+                                    db.MsVaheds.Remove(q);
+                                    db.MsAccessLevelDafaterMalis.Remove(q8);
+                                    /////////////////////////////////////////////////////////////////////////////
+                                    var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsVahedId == RowId);
+                                    if (q4 != null)
+                                    {
+                                        db.MsInfoOthers.Remove(q4);
+                                    };
 
-                    }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    db.SaveChanges();
+
+                                    if (IsActiveList)
+                                        btnDisplyActiveList_Click(null, null);
+                                    else
+                                        btnDisplyNotActiveList_Click(null, null);
+                                    //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    if (gridView1.RowCount > 0)
+                                        gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                }
+                                else
+                                    XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (DbUpdateException)
+                            {
+                                XtraMessageBox.Show("حذف رکورد جاری مقدور نیست \n" +
+                                    " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری  (در لیست شعبه ها و لیست دوره ها) حذف گردد" +
+                                    "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                 }
 
-                MajmoeIdBeforeEdit = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                CodeBeforeEdit = txtCode.Text;
-                NameBeforeEdit = txtName.Text;
-                IsActiveBeforeEdit = chkIsActive.Checked;
-                //txtCode.ReadOnly = true;
-                cmbMajmoehaList.Focus();
-            }
-        }
+            }        }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public int EditRowIndex = 0;
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (TextEditValidation())
+            if (btnEdit.Visible)
             {
-                if (En == EnumCED.Create)
+                if (gridView1.RowCount > 0 )
                 {
+                    gridControl1.Enabled = false;
+                    EditRowIndex = gridView1.FocusedRowHandle;
+                    En = EnumCED.Edit;
+                    HelpClass1.InActiveButtons(panelControl2);
+                    HelpClass1.ActiveControls(xtraTabPage1);
+                    HelpClass1.ActiveControls(xtraTabPage2);
+                    HelpClass1.ActiveControls(xtraTabPage3);
+                    HelpClass1.ActiveControls(xtraTabPage4);
+                    FillcmbMajmoehaList();
+                    xtraTabControl1.SelectedTabPageIndex = 0;
+
+                    cmbMajmoehaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
+                    txtId.Text = gridView1.GetFocusedRowCellValue("MsVahedId").ToString();
+                    txtMajmoeCode.Text = gridView1.GetFocusedRowCellValue("VahedCode").ToString().Substring(0, 2);
+                    txtCode.Text = gridView1.GetFocusedRowCellValue("VahedCode").ToString().Substring(2);
+                    txtName.Text = gridView1.GetFocusedRowCellValue("VahedName").ToString();
+                    chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("VahedIsActive"));
+
+                    int RowId = Convert.ToInt32(txtId.Text);
                     using (var db = new MyContext())
                     {
                         try
                         {
-                            MsVahed obj = new MsVahed()
+                            /////////////////////////////////////////////////////////////////////
+                            var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsVahedId == RowId);
+                            if (q4 != null)
                             {
-                                VahedCode = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text),
-                                VahedName = txtName.Text,
-                                VahedIsActive = chkIsActive.Checked,
-                                MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue),
-                                MajmoeName = cmbMajmoehaList.Text,
-                            };
-                            db.MsVaheds.Add(obj);
-                            db.SaveChanges();
-                            /////////////////////////////////////////////////////////////////////////////////////
-                            int _code = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text);
-                            var q = db.MsVaheds.FirstOrDefault(s => s.VahedCode == _code);
-
-                            MsInfoOther obj2 = new MsInfoOther()
-                            {
-                                MsVahedId = q.MsVahedId,
-                                MsCode = _code,
-                                MsName = txtName.Text,
-                                NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی",
-                                NoeFaaliat = txtNoeFaaliat.Text,
-                                Adress = txtAdress.Text,
-                                CodePosti = txtCodePosti.Text,
-                                SandoghPosti = txtSandoghPosti.Text,
-                                ShomarePlak = txtShomarePlak.Text,
-                                ShenaseMelli = txtShenaseMelli.Text,
-                                CodeSenfee = txtCodeSenfee.Text,
-                                CodeEghtesadi = txtCodeEghtesadi.Text,
-                                Tell1 = txtTell1.Text,
-                                Tell2 = txtTell2.Text,
-                                TellFax1 = txtTellFax1.Text,
-                                TellFax2 = txtTellFax2.Text,
-                                Mobile1 = txtMobile1.Text,
-                                Mobile2 = txtMobile2.Text,
-                                Email1 = txtEmail1.Text,
-                                Email2 = txtEmail2.Text,
-                                Site = txtSite.Text,
-                                WebLog = txtWebLog.Text,
-                                ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text,
-                                ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text,
-                                ShParvandeMaliati = txtShParvandeMaliati.Text,
-                                ShBimeKargah = txtShBimeKargah.Text,
-                            };
-                            db.MsInfoOthers.Add(obj2);
-                            ////////////////////////////////////// اضافه کردن واحد های تجاری به کلاس سطح دسترسی دفاتر مالی ////////////////////
-                            MsAccessLevelDafaterMali n1 = new MsAccessLevelDafaterMali();
-                            n1.KeyId = _code;
-                            n1.ParentId = Convert.ToInt32(_code.ToString().Substring(0, 2));
-                            n1.LevelName = txtName.Text;
-                            n1.MajmoeId = q.MsMajmoeId;
-                            n1.VahedId = q.MsVahedId;
-                            n1.IsActive = chkIsActive.Checked;
-                            db.MsAccessLevelDafaterMalis.Add(n1);
-                            /////////////////////////////////////////////////////////////////////////////////////
-                            db.SaveChanges();
-                            if (chkIsActive.Checked)
-                                btnDisplyActiveList_Click(null, null);
-                            else
-                                btnDisplyNotActiveList_Click(null, null);
-                            //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-
-                            En = EnumCED.Save;
-                            btnCancel_Click(null, null);
+                                if (q4.NoeShakhs == "حقیقی") radioButton1.Checked = true; else radioButton2.Checked = true;
+                                txtNoeFaaliat.Text = q4.NoeFaaliat.ToString();
+                                txtAdress.Text = q4.Adress.ToString();
+                                txtCodePosti.Text = q4.CodePosti.ToString();
+                                txtSandoghPosti.Text = q4.SandoghPosti.ToString();
+                                txtShomarePlak.Text = q4.ShomarePlak.ToString();
+                                txtShenaseMelli.Text = q4.ShenaseMelli.ToString();
+                                txtCodeSenfee.Text = q4.CodeSenfee.ToString();
+                                txtCodeEghtesadi.Text = q4.CodeEghtesadi.ToString();
+                                txtTell1.Text = q4.Tell1.ToString();
+                                txtTell2.Text = q4.Tell2.ToString();
+                                txtTellFax1.Text = q4.TellFax1.ToString();
+                                txtTellFax2.Text = q4.TellFax2.ToString();
+                                txtMobile1.Text = q4.Mobile1.ToString();
+                                txtMobile2.Text = q4.Mobile2.ToString();
+                                txtEmail1.Text = q4.Email1.ToString();
+                                txtEmail2.Text = q4.Email2.ToString();
+                                txtSite.Text = q4.Site.ToString();
+                                txtWebLog.Text = q4.WebLog.ToString();
+                                txtShabakeEjtemaee1.Text = q4.ShabakeEjtemaee1.ToString();
+                                txtShabakeEjtemaee2.Text = q4.ShabakeEjtemaee2.ToString();
+                                txtShParvandeMaliati.Text = q4.ShParvandeMaliati.ToString();
+                                txtShBimeKargah.Text = q4.ShBimeKargah.ToString();
+                            }
 
                         }
                         catch (Exception ex)
                         {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+
+                    MajmoeIdBeforeEdit = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                    CodeBeforeEdit = txtCode.Text;
+                    NameBeforeEdit = txtName.Text;
+                    IsActiveBeforeEdit = chkIsActive.Checked;
+                    //txtCode.ReadOnly = true;
+                    cmbMajmoehaList.Focus();
                 }
-                else if (En == EnumCED.Edit)
+
+            }        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (btnSave.Enabled)
+            {
+                if (TextEditValidation())
                 {
-                    using (var db = new MyContext())
+                    if (En == EnumCED.Create)
                     {
-                        try
+                        using (var db = new MyContext())
                         {
-                            int _MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                            string _MajmoeName = cmbMajmoehaList.Text;
-                            int _VahedId = Convert.ToInt32(txtId.Text);
-                            string _VahedName = txtName.Text;
-                            int _VahedCode = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text);
-                            //var q9 = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == _MajmoeId);
-                            var q = db.MsVaheds.FirstOrDefault(p => p.MsVahedId == _VahedId);
-                            if (q != null)
+                            try
                             {
-                                q.MsMajmoeId = _MajmoeId;
-                                q.MajmoeName = _MajmoeName;
-                                q.VahedCode = _VahedCode;
-                                q.VahedName = _VahedName;
-                                q.VahedIsActive = chkIsActive.Checked;
-                                /////////////////////////////متد اصلاح کد و نام در لیست شعبه ها و دوره های مالی WillCascadeOnUpdate ///////////////////////
-
-                                /////////////////////////// WillCascadeOnUpdate : MsShobes /////////////////////////
-                                var q6 = db.MsShobes.Where(s => s.MsVahedId == _VahedId).ToList();
-                                if (q6.Count > 0)
+                                MsVahed obj = new MsVahed()
                                 {
-                                    q6.ForEach(item =>
-                                    {
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                            item.MsMajmoeId = _MajmoeId;
-                                        item.MajmoeName = _MajmoeName;
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                            item.ShobeCode = Convert.ToInt32(item.ShobeCode.ToString().Substring(0, 2).Replace(item.ShobeCode.ToString().Substring(0, 2), txtMajmoeCode.Text)
-                                            + item.ShobeCode.ToString().Substring(2, 2).Replace(item.ShobeCode.ToString().Substring(2, 2), txtCode.Text)
-                                            + item.ShobeCode.ToString().Substring(4));
-                                        if (NameBeforeEdit != txtName.Text)
-                                            item.VahedName = _VahedName;
-                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                            item.ShobeIsActive = chkIsActive.Checked;
-                                    });
-                                }
-                                /////////////////////////// WillCascadeOnUpdate : MsDoreMalis /////////////////////////
-                                var q7 = db.MsDoreMalis.Where(s => s.MsVahedId == _VahedId).ToList();
-                                if (q7.Count > 0)
-                                {
-                                    q7.ForEach(item =>
-                                    {
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                            item.MsMajmoeId = _MajmoeId;
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                            item.MajmoeName = _MajmoeName;
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                            item.DoreMaliCode = Convert.ToInt32(item.DoreMaliCode.ToString().Substring(0, 2).Replace(item.DoreMaliCode.ToString().Substring(0, 2), txtMajmoeCode.Text)
-                                            + item.DoreMaliCode.ToString().Substring(2, 2).Replace(item.DoreMaliCode.ToString().Substring(2, 2), txtCode.Text)
-                                            + item.DoreMaliCode.ToString().Substring(4));
-                                        if (NameBeforeEdit != txtName.Text)
-                                            item.VahedName = _VahedName;
-                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                            item.DoreMaliIsActive = chkIsActive.Checked;
-                                    });
-                                }
-                                /////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
-                                var q8 = db.MsAccessLevelDafaterMalis.Where(s => s.VahedId == _VahedId).ToList();
-                                if (q8.Count > 0)
-                                {
-                                    q8.ForEach(item =>
-                                    {
-                                        if (item.ShobeId == 0)
-                                        {
-                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                                item.KeyId = _VahedCode;
-                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                                item.ParentId = Convert.ToInt32(txtMajmoeCode.Text);
-                                            if (NameBeforeEdit != txtName.Text)
-                                                item.LevelName = txtName.Text;
-                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                                item.MajmoeId = _MajmoeId;
-                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                                item.IsActive = chkIsActive.Checked;
-                                        }
-                                        else
-                                        {
-                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                                item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtMajmoeCode.Text)
-                                                + item.KeyId.ToString().Substring(2, 2).Replace(item.KeyId.ToString().Substring(2, 2), txtCode.Text) + item.KeyId.ToString().Substring(4));
-                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                                item.ParentId = Convert.ToInt32(item.ParentId.ToString().Substring(0, 2).Replace(item.ParentId.ToString().Substring(0, 2), txtMajmoeCode.Text)
-                                                + item.ParentId.ToString().Substring(2, 2).Replace(item.ParentId.ToString().Substring(2, 2), txtCode.Text) + item.ParentId.ToString().Substring(4));
-                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                                item.MajmoeId = _MajmoeId;
-                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                                item.IsActive = chkIsActive.Checked;
-                                        }
-                                    });
-                                }
-                                ///////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و سطح دسترسی لیست دفاتر مالی  WillCascadeOnUpdate////////////////////////////////////// 
-                                var q9 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.VahedId == _VahedId).ToList();
-                                if (q9.Count > 0)
-                                {
-                                    q9.ForEach(item =>
-                                    {
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                            item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtMajmoeCode.Text)
-                                            + item.KeyId.ToString().Substring(2, 2).Replace(item.KeyId.ToString().Substring(2, 2), txtCode.Text) + item.KeyId.ToString().Substring(4));
-                                        if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                            item.MajmoeId = _MajmoeId;
-                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                            item.IsActive = chkIsActive.Checked;
-                                    });
-                                }
-                                /////////////////////////////////////////////////////////////////////////////
-                                int _code = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text);
-                                var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsVahedId == _VahedId);
-                                if (q4 != null)
-                                {
-                                    q4.MsVahedId = _VahedId;
-                                    q4.MsCode = _code;
-                                    q4.MsName = txtName.Text;
-                                    q4.NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی";
-                                    q4.NoeFaaliat = txtNoeFaaliat.Text;
-                                    q4.Adress = txtAdress.Text;
-                                    q4.CodePosti = txtCodePosti.Text;
-                                    q4.SandoghPosti = txtSandoghPosti.Text;
-                                    q4.ShomarePlak = txtShomarePlak.Text;
-                                    q4.ShenaseMelli = txtShenaseMelli.Text;
-                                    q4.CodeSenfee = txtCodeSenfee.Text;
-                                    q4.CodeEghtesadi = txtCodeEghtesadi.Text;
-                                    q4.Tell1 = txtTell1.Text;
-                                    q4.Tell2 = txtTell2.Text;
-                                    q4.TellFax1 = txtTellFax1.Text;
-                                    q4.TellFax2 = txtTellFax2.Text;
-                                    q4.Mobile1 = txtMobile1.Text;
-                                    q4.Mobile2 = txtMobile2.Text;
-                                    q4.Email1 = txtEmail1.Text;
-                                    q4.Email2 = txtEmail2.Text;
-                                    q4.Site = txtSite.Text;
-                                    q4.WebLog = txtWebLog.Text;
-                                    q4.ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text;
-                                    q4.ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text;
-                                    q4.ShParvandeMaliati = txtShParvandeMaliati.Text;
-                                    q4.ShBimeKargah = txtShBimeKargah.Text;
-                                }
-                                else
-                                {
-                                    MsInfoOther obj2 = new MsInfoOther()
-                                    {
-                                        MsVahedId = _VahedId,
-                                        MsCode = _code,
-                                        MsName = txtName.Text,
-                                        NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی",
-                                        NoeFaaliat = txtNoeFaaliat.Text,
-                                        Adress = txtAdress.Text,
-                                        CodePosti = txtCodePosti.Text,
-                                        SandoghPosti = txtSandoghPosti.Text,
-                                        ShomarePlak = txtShomarePlak.Text,
-                                        ShenaseMelli = txtShenaseMelli.Text,
-                                        CodeSenfee = txtCodeSenfee.Text,
-                                        CodeEghtesadi = txtCodeEghtesadi.Text,
-                                        Tell1 = txtTell1.Text,
-                                        Tell2 = txtTell2.Text,
-                                        TellFax1 = txtTellFax1.Text,
-                                        TellFax2 = txtTellFax2.Text,
-                                        Mobile1 = txtMobile1.Text,
-                                        Mobile2 = txtMobile2.Text,
-                                        Email1 = txtEmail1.Text,
-                                        Email2 = txtEmail2.Text,
-                                        Site = txtSite.Text,
-                                        WebLog = txtWebLog.Text,
-                                        ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text,
-                                        ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text,
-                                        ShParvandeMaliati = txtShParvandeMaliati.Text,
-                                        ShBimeKargah = txtShBimeKargah.Text,
-                                    };
-                                    db.MsInfoOthers.Add(obj2);
-                                }
-                                ////////////////////////////////////////////////////////////////////////////////////
-                                if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
-                                {
-                                    int MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                    var m = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == MajmoeId);
-                                    var a1 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
-                                    //var a2 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == _VahedId && p.ShobeId == 0);
-                                    var b1 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
-                                    //var b2 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == _VahedId && p.ShobeId == 0);
-                                    if (m != null)
-                                        m.MajmoeIsActive = true;
-                                    if (a1 != null)
-                                        a1.IsActive = true;
-                                    //if (a2 != null)
-                                    //    a2.IsActive = true;
-                                    if (b1 != null)
-                                        b1.IsActive = true;
-                                    //if (b2 != null)
-                                    //    b2.IsActive = true;
-                                }
-
+                                    VahedCode = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text),
+                                    VahedName = txtName.Text,
+                                    VahedIsActive = chkIsActive.Checked,
+                                    MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue),
+                                    MajmoeName = cmbMajmoehaList.Text,
+                                };
+                                db.MsVaheds.Add(obj);
                                 db.SaveChanges();
+                                /////////////////////////////////////////////////////////////////////////////////////
+                                int _code = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text);
+                                var q = db.MsVaheds.FirstOrDefault(s => s.VahedCode == _code);
 
-                                if (IsActiveBeforeEdit)
+                                MsInfoOther obj2 = new MsInfoOther()
+                                {
+                                    MsVahedId = q.MsVahedId,
+                                    MsCode = _code,
+                                    MsName = txtName.Text,
+                                    NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی",
+                                    NoeFaaliat = txtNoeFaaliat.Text,
+                                    Adress = txtAdress.Text,
+                                    CodePosti = txtCodePosti.Text,
+                                    SandoghPosti = txtSandoghPosti.Text,
+                                    ShomarePlak = txtShomarePlak.Text,
+                                    ShenaseMelli = txtShenaseMelli.Text,
+                                    CodeSenfee = txtCodeSenfee.Text,
+                                    CodeEghtesadi = txtCodeEghtesadi.Text,
+                                    Tell1 = txtTell1.Text,
+                                    Tell2 = txtTell2.Text,
+                                    TellFax1 = txtTellFax1.Text,
+                                    TellFax2 = txtTellFax2.Text,
+                                    Mobile1 = txtMobile1.Text,
+                                    Mobile2 = txtMobile2.Text,
+                                    Email1 = txtEmail1.Text,
+                                    Email2 = txtEmail2.Text,
+                                    Site = txtSite.Text,
+                                    WebLog = txtWebLog.Text,
+                                    ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text,
+                                    ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text,
+                                    ShParvandeMaliati = txtShParvandeMaliati.Text,
+                                    ShBimeKargah = txtShBimeKargah.Text,
+                                };
+                                db.MsInfoOthers.Add(obj2);
+                                ////////////////////////////////////// اضافه کردن واحد های تجاری به کلاس سطح دسترسی دفاتر مالی ////////////////////
+                                MsAccessLevelDafaterMali n1 = new MsAccessLevelDafaterMali();
+                                n1.KeyId = _code;
+                                n1.ParentId = Convert.ToInt32(_code.ToString().Substring(0, 2));
+                                n1.LevelName = txtName.Text;
+                                n1.MajmoeId = q.MsMajmoeId;
+                                n1.VahedId = q.MsVahedId;
+                                n1.IsActive = chkIsActive.Checked;
+                                db.MsAccessLevelDafaterMalis.Add(n1);
+                                /////////////////////////////////////////////////////////////////////////////////////
+                                db.SaveChanges();
+                                if (chkIsActive.Checked)
                                     btnDisplyActiveList_Click(null, null);
                                 else
                                     btnDisplyNotActiveList_Click(null, null);
-                                //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                if (gridView1.RowCount > 0)
-                                    gridView1.FocusedRowHandle = EditRowIndex;
+                                //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
 
                                 En = EnumCED.Save;
                                 btnCancel_Click(null, null);
 
                             }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        catch (Exception ex)
+                    }
+                    else if (En == EnumCED.Edit)
+                    {
+                        using (var db = new MyContext())
                         {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                int _MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                string _MajmoeName = cmbMajmoehaList.Text;
+                                int _VahedId = Convert.ToInt32(txtId.Text);
+                                string _VahedName = txtName.Text;
+                                int _VahedCode = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text);
+                                //var q9 = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == _MajmoeId);
+                                var q = db.MsVaheds.FirstOrDefault(p => p.MsVahedId == _VahedId);
+                                if (q != null)
+                                {
+                                    q.MsMajmoeId = _MajmoeId;
+                                    q.MajmoeName = _MajmoeName;
+                                    q.VahedCode = _VahedCode;
+                                    q.VahedName = _VahedName;
+                                    q.VahedIsActive = chkIsActive.Checked;
+                                    /////////////////////////////متد اصلاح کد و نام در لیست شعبه ها و دوره های مالی WillCascadeOnUpdate ///////////////////////
+
+                                    /////////////////////////// WillCascadeOnUpdate : MsShobes /////////////////////////
+                                    var q6 = db.MsShobes.Where(s => s.MsVahedId == _VahedId).ToList();
+                                    if (q6.Count > 0)
+                                    {
+                                        q6.ForEach(item =>
+                                        {
+                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                                item.MsMajmoeId = _MajmoeId;
+                                            item.MajmoeName = _MajmoeName;
+                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                item.ShobeCode = Convert.ToInt32(item.ShobeCode.ToString().Substring(0, 2).Replace(item.ShobeCode.ToString().Substring(0, 2), txtMajmoeCode.Text)
+                                                + item.ShobeCode.ToString().Substring(2, 2).Replace(item.ShobeCode.ToString().Substring(2, 2), txtCode.Text)
+                                                + item.ShobeCode.ToString().Substring(4));
+                                            if (NameBeforeEdit != txtName.Text)
+                                                item.VahedName = _VahedName;
+                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                item.ShobeIsActive = chkIsActive.Checked;
+                                        });
+                                    }
+                                    /////////////////////////// WillCascadeOnUpdate : MsDoreMalis /////////////////////////
+                                    var q7 = db.MsDoreMalis.Where(s => s.MsVahedId == _VahedId).ToList();
+                                    if (q7.Count > 0)
+                                    {
+                                        q7.ForEach(item =>
+                                        {
+                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                                item.MsMajmoeId = _MajmoeId;
+                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                                item.MajmoeName = _MajmoeName;
+                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                item.DoreMaliCode = Convert.ToInt32(item.DoreMaliCode.ToString().Substring(0, 2).Replace(item.DoreMaliCode.ToString().Substring(0, 2), txtMajmoeCode.Text)
+                                                + item.DoreMaliCode.ToString().Substring(2, 2).Replace(item.DoreMaliCode.ToString().Substring(2, 2), txtCode.Text)
+                                                + item.DoreMaliCode.ToString().Substring(4));
+                                            if (NameBeforeEdit != txtName.Text)
+                                                item.VahedName = _VahedName;
+                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                item.DoreMaliIsActive = chkIsActive.Checked;
+                                        });
+                                    }
+                                    /////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
+                                    var q8 = db.MsAccessLevelDafaterMalis.Where(s => s.VahedId == _VahedId).ToList();
+                                    if (q8.Count > 0)
+                                    {
+                                        q8.ForEach(item =>
+                                        {
+                                            if (item.ShobeId == 0)
+                                            {
+                                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                    item.KeyId = _VahedCode;
+                                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                                    item.ParentId = Convert.ToInt32(txtMajmoeCode.Text);
+                                                if (NameBeforeEdit != txtName.Text)
+                                                    item.LevelName = txtName.Text;
+                                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                                    item.MajmoeId = _MajmoeId;
+                                                if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                    item.IsActive = chkIsActive.Checked;
+                                            }
+                                            else
+                                            {
+                                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                    item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtMajmoeCode.Text)
+                                                    + item.KeyId.ToString().Substring(2, 2).Replace(item.KeyId.ToString().Substring(2, 2), txtCode.Text) + item.KeyId.ToString().Substring(4));
+                                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                    item.ParentId = Convert.ToInt32(item.ParentId.ToString().Substring(0, 2).Replace(item.ParentId.ToString().Substring(0, 2), txtMajmoeCode.Text)
+                                                    + item.ParentId.ToString().Substring(2, 2).Replace(item.ParentId.ToString().Substring(2, 2), txtCode.Text) + item.ParentId.ToString().Substring(4));
+                                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                                    item.MajmoeId = _MajmoeId;
+                                                if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                    item.IsActive = chkIsActive.Checked;
+                                            }
+                                        });
+                                    }
+                                    ///////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و سطح دسترسی لیست دفاتر مالی  WillCascadeOnUpdate////////////////////////////////////// 
+                                    var q9 = db.RmsUserBmsAccessLevelDafaterMalis.Where(s => s.VahedId == _VahedId).ToList();
+                                    if (q9.Count > 0)
+                                    {
+                                        q9.ForEach(item =>
+                                        {
+                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                                item.KeyId = Convert.ToInt32(item.KeyId.ToString().Substring(0, 2).Replace(item.KeyId.ToString().Substring(0, 2), txtMajmoeCode.Text)
+                                                + item.KeyId.ToString().Substring(2, 2).Replace(item.KeyId.ToString().Substring(2, 2), txtCode.Text) + item.KeyId.ToString().Substring(4));
+                                            if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                                item.MajmoeId = _MajmoeId;
+                                            if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                                item.IsActive = chkIsActive.Checked;
+                                        });
+                                    }
+                                    /////////////////////////////////////////////////////////////////////////////
+                                    int _code = Convert.ToInt32(txtMajmoeCode.Text + txtCode.Text);
+                                    var q4 = db.MsInfoOthers.FirstOrDefault(s => s.MsVahedId == _VahedId);
+                                    if (q4 != null)
+                                    {
+                                        q4.MsVahedId = _VahedId;
+                                        q4.MsCode = _code;
+                                        q4.MsName = txtName.Text;
+                                        q4.NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی";
+                                        q4.NoeFaaliat = txtNoeFaaliat.Text;
+                                        q4.Adress = txtAdress.Text;
+                                        q4.CodePosti = txtCodePosti.Text;
+                                        q4.SandoghPosti = txtSandoghPosti.Text;
+                                        q4.ShomarePlak = txtShomarePlak.Text;
+                                        q4.ShenaseMelli = txtShenaseMelli.Text;
+                                        q4.CodeSenfee = txtCodeSenfee.Text;
+                                        q4.CodeEghtesadi = txtCodeEghtesadi.Text;
+                                        q4.Tell1 = txtTell1.Text;
+                                        q4.Tell2 = txtTell2.Text;
+                                        q4.TellFax1 = txtTellFax1.Text;
+                                        q4.TellFax2 = txtTellFax2.Text;
+                                        q4.Mobile1 = txtMobile1.Text;
+                                        q4.Mobile2 = txtMobile2.Text;
+                                        q4.Email1 = txtEmail1.Text;
+                                        q4.Email2 = txtEmail2.Text;
+                                        q4.Site = txtSite.Text;
+                                        q4.WebLog = txtWebLog.Text;
+                                        q4.ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text;
+                                        q4.ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text;
+                                        q4.ShParvandeMaliati = txtShParvandeMaliati.Text;
+                                        q4.ShBimeKargah = txtShBimeKargah.Text;
+                                    }
+                                    else
+                                    {
+                                        MsInfoOther obj2 = new MsInfoOther()
+                                        {
+                                            MsVahedId = _VahedId,
+                                            MsCode = _code,
+                                            MsName = txtName.Text,
+                                            NoeShakhs = radioButton1.Checked ? "حقیقی" : "حقوقی",
+                                            NoeFaaliat = txtNoeFaaliat.Text,
+                                            Adress = txtAdress.Text,
+                                            CodePosti = txtCodePosti.Text,
+                                            SandoghPosti = txtSandoghPosti.Text,
+                                            ShomarePlak = txtShomarePlak.Text,
+                                            ShenaseMelli = txtShenaseMelli.Text,
+                                            CodeSenfee = txtCodeSenfee.Text,
+                                            CodeEghtesadi = txtCodeEghtesadi.Text,
+                                            Tell1 = txtTell1.Text,
+                                            Tell2 = txtTell2.Text,
+                                            TellFax1 = txtTellFax1.Text,
+                                            TellFax2 = txtTellFax2.Text,
+                                            Mobile1 = txtMobile1.Text,
+                                            Mobile2 = txtMobile2.Text,
+                                            Email1 = txtEmail1.Text,
+                                            Email2 = txtEmail2.Text,
+                                            Site = txtSite.Text,
+                                            WebLog = txtWebLog.Text,
+                                            ShabakeEjtemaee1 = txtShabakeEjtemaee1.Text,
+                                            ShabakeEjtemaee2 = txtShabakeEjtemaee2.Text,
+                                            ShParvandeMaliati = txtShParvandeMaliati.Text,
+                                            ShBimeKargah = txtShBimeKargah.Text,
+                                        };
+                                        db.MsInfoOthers.Add(obj2);
+                                    }
+                                    ////////////////////////////////////////////////////////////////////////////////////
+                                    if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
+                                    {
+                                        int MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                        var m = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == MajmoeId);
+                                        var a1 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
+                                        //var a2 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == _VahedId && p.ShobeId == 0);
+                                        var b1 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
+                                        //var b2 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == _VahedId && p.ShobeId == 0);
+                                        if (m != null)
+                                            m.MajmoeIsActive = true;
+                                        if (a1 != null)
+                                            a1.IsActive = true;
+                                        //if (a2 != null)
+                                        //    a2.IsActive = true;
+                                        if (b1 != null)
+                                            b1.IsActive = true;
+                                        //if (b2 != null)
+                                        //    b2.IsActive = true;
+                                    }
+
+                                    db.SaveChanges();
+
+                                    if (IsActiveBeforeEdit)
+                                        btnDisplyActiveList_Click(null, null);
+                                    else
+                                        btnDisplyNotActiveList_Click(null, null);
+                                    //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    if (gridView1.RowCount > 0)
+                                        gridView1.FocusedRowHandle = EditRowIndex;
+
+                                    En = EnumCED.Save;
+                                    btnCancel_Click(null, null);
+
+                                }
+                                else
+                                    XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
-            }
-        }
+
+            }        }
 
         private void btnSaveNext_Click(object sender, EventArgs e)
         {
-            //gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
-            btnSave_Click(null, null);
-            if (En == EnumCED.Save)
-                btnCreate_Click(null, null);
-        }
+            if (btnSaveNext.Enabled)
+            {
+                //gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
+                btnSave_Click(null, null);
+                if (En == EnumCED.Save)
+                    btnCreate_Click(null, null);
+
+            }        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            gridControl1.Enabled = true;
-            HelpClass1.ActiveButtons(panelControl2);
-            HelpClass1.ClearControls(xtraTabPage1);
-            HelpClass1.ClearControls(xtraTabPage2);
-            HelpClass1.ClearControls(xtraTabPage3);
-            HelpClass1.ClearControls(xtraTabPage4);
-            HelpClass1.InActiveControls(xtraTabPage1);
-            HelpClass1.InActiveControls(xtraTabPage2);
-            HelpClass1.InActiveControls(xtraTabPage3);
-            HelpClass1.InActiveControls(xtraTabPage4);
-        }
+            if (btnCancel.Enabled)
+            {
+                gridControl1.Enabled = true;
+                HelpClass1.ActiveButtons(panelControl2);
+                HelpClass1.ClearControls(xtraTabPage1);
+                HelpClass1.ClearControls(xtraTabPage2);
+                HelpClass1.ClearControls(xtraTabPage3);
+                HelpClass1.ClearControls(xtraTabPage4);
+                HelpClass1.InActiveControls(xtraTabPage1);
+                HelpClass1.InActiveControls(xtraTabPage2);
+                HelpClass1.InActiveControls(xtraTabPage3);
+                HelpClass1.InActiveControls(xtraTabPage4);
+
+            }        }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {

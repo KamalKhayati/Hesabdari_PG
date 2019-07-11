@@ -30,6 +30,7 @@ namespace SystemManagement.UsersSystem
         {
             InitializeComponent();
         }
+
         public void FillcmbUsersList()
         {
             using (var dbContext = new MyContext())
@@ -59,6 +60,7 @@ namespace SystemManagement.UsersSystem
                 }
             }
         }
+
         public void FilltreeList_DafaterMali()
         {
             using (var dbContext = new MyContext())

@@ -397,7 +397,7 @@
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1811, 231);
+            this.ribbon.Size = new System.Drawing.Size(1811, 249);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -687,7 +687,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabGroup),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabCol),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabMoin),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.btnGroupTafzili, false),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupTafzili),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabhaTafzili)});
             this.mbsCodingHesabdari.Name = "mbsCodingHesabdari";
             this.mbsCodingHesabdari.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -1682,11 +1682,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserId, true);
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserName, true);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 618);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 615);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1811, 42);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1811, 45);
             // 
             // barButtonItem30
             // 
@@ -1724,9 +1724,9 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1776, 231);
+            this.hideContainerRight.Location = new System.Drawing.Point(1773, 249);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(35, 387);
+            this.hideContainerRight.Size = new System.Drawing.Size(38, 366);
             // 
             // dockPanel1
             // 

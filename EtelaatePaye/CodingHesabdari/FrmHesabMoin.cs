@@ -78,9 +78,9 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q = dataContext.EpHesabMoins.Where(p => p.IsActive == false).OrderBy(s => s.Code);
-                            if (q.Count() > 0)
-                                epHesabMoinsBindingSource.DataSource = q.ToList();
+                            var q = dataContext.EpHesabMoins.Where(p => p.IsActive == false).OrderBy(s => s.Code).ToList();
+                            if (q.Count > 0)
+                                epHesabMoinsBindingSource.DataSource = q;
                             else
                                 epHesabMoinsBindingSource.DataSource = null;
                         }
@@ -167,6 +167,8 @@ namespace EtelaatePaye.CodingHesabdari
                     db1.EpSharhStandardMoins.Where(s => s.MoinId == RowId).Load();
                     epSharhStandardMoinsBindingSource.DataSource = db1.EpSharhStandardMoins.Local.ToBindingList();
                 }
+                else
+                    epSharhStandardMoinsBindingSource.DataSource = null;
             }
             catch (Exception ex)
             {
@@ -187,6 +189,8 @@ namespace EtelaatePaye.CodingHesabdari
                         db.MsActiveSystems.Where(s => s.IsActive == true).Load();
                         msActiveSystemsBindingSource.DataSource = db.MsActiveSystems.Local.ToBindingList();
                     }
+                    else
+                        msActiveSystemsBindingSource.DataSource = null;
                 }
                 catch (Exception ex)
                 {
@@ -207,6 +211,8 @@ namespace EtelaatePaye.CodingHesabdari
                         db.EpGroupTafzilis.Where(s => s.IsActive == true).Load();
                         epGroupTafzilisBindingSource.DataSource = db.EpGroupTafzilis.Local.ToBindingList();
                     }
+                    else
+                        epGroupTafzilisBindingSource.DataSource = null;
                 }
                 catch (Exception ex)
                 {
@@ -227,21 +233,21 @@ namespace EtelaatePaye.CodingHesabdari
                     try
                     {
                         _ColId = Convert.ToInt32(cmbListHesabCol.EditValue);
-                        var q = db.EpHesabMoins.Where(s => s.ColId == _ColId);
-                        if (q.Any())
+                        var q = db.EpHesabMoins.Where(s => s.ColId == _ColId).ToList();
+                        if (q.Count > 0)
                         {
                             var MaximumCod = q.Max(p => p.Code);
                             if (MaximumCod.ToString().Substring(2) != "99")
                             {
                                 txtCode.Text = (MaximumCod + 1).ToString().Substring(2);
-                                btnNewCode.Enabled = true;
+                                //btnNewCode.Enabled = true;
                             }
                             else
                             {
                                 if (En == EnumCED.Create)
                                     XtraMessageBox.Show("اعمال محدودیت تعریف 99 حساب معین برای هر حساب کل ..." + "\n" +
                                         "توجه : نمیتوان بیشتر از 99 حساب معین برای هر حساب کل تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین 1 تا 99 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                btnNewCode.Enabled = false;
+                                //btnNewCode.Enabled = false;
                             }
                         }
                         else
@@ -267,11 +273,20 @@ namespace EtelaatePaye.CodingHesabdari
         private void FrmHesabMoin_Load(object sender, EventArgs e)
         {
             FillDataGridHesabMoin();
-            if (lblUserId.Text == "1")
-            {
-                chkIsActive.Visible = true;
-                labelControl5.Visible = true;
-            }
+            HelpClass1.InActiveControls(xtraTabPage1);
+            HelpClass1.InActiveControls(xtraTabPage2);
+            HelpClass1.InActiveControls(xtraTabPage3);
+            HelpClass1.InActiveControls(xtraTabPage4);
+            FillListBoxLevel1();
+            FillListBoxActiveSystem();
+            //FillListBoxLevel1();
+            //FillListBoxActiveSystem();
+            //chkListBoxActiveSystem.CheckAll();
+            //if (lblUserId.Text == "1")
+            //{
+            //    chkIsActive.Visible = true;
+            //    labelControl5.Visible = true;
+            //}
             //using (var db = new MyContext())
             //{
             //    try
@@ -355,9 +370,19 @@ namespace EtelaatePaye.CodingHesabdari
             }
             ////////////////// اعتبار سنجی تکس باکس و کمبوباکس ها////////////
 
-            if (string.IsNullOrEmpty(txtName.Text) || txtName.Text == "0" || string.IsNullOrEmpty(cmbListHesabGroup.Text) || string.IsNullOrEmpty(cmbListHesabCol.Text))
+            if (string.IsNullOrEmpty(cmbListHesabGroup.Text))
             {
-                XtraMessageBox.Show("لطفاً اطلاعات را کامل وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("لطفاً حساب گروه را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrEmpty(cmbListHesabCol.Text))
+            {
+                XtraMessageBox.Show("لطفاً حساب کل را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrEmpty(txtName.Text) || txtName.Text == "0")
+            {
+                XtraMessageBox.Show("لطفاً نام حساب معین را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else
@@ -416,87 +441,75 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 btnCreate_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F3 && btnDelete.Enabled == true)
+            else if (e.KeyCode == Keys.F3)
             {
                 btnDelete_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F4 && btnEdit.Enabled == true)
+            else if (e.KeyCode == Keys.F4)
             {
                 btnEdit_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F5 && btnSave.Enabled == true)
+            else if (e.KeyCode == Keys.F5)
             {
                 btnSave_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F6 && btnCancel.Enabled == true)
+            else if (e.KeyCode == Keys.F6)
             {
-                btnCancel_Click(sender, null);
+                btnSaveNext_Click(sender, null);
             }
             else if (e.KeyCode == Keys.F7)
             {
-                btnDisplyActiveList_Click(sender, null);
+                btnCancel_Click(sender, null);
             }
             else if (e.KeyCode == Keys.F8)
             {
-                btnDisplyNotActiveList_Click(sender, null);
+                btnDisplyActiveList_Click(sender, null);
             }
             else if (e.KeyCode == Keys.F9)
             {
-                btnSharhHesab_Click(sender, null);
+                btnDisplyNotActiveList_Click(sender, null);
             }
             else if (e.KeyCode == Keys.F10)
             {
-                btnAdvancedSearch_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F11)
-            {
                 btnPrintPreview_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F12 && btnPrint.Enabled == true)
-            {
-                btnPrint_Click(sender, null);
-            }
-            else if (e.Alt && e.KeyCode == Keys.N && btnNewCode.Enabled == true)
-            {
-                btnNewCode_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.Escape)
+            else if (e.KeyCode == Keys.F12)
             {
                 btnClose_Click(sender, null);
             }
-
         }
 
         private void chkEditCode_CheckedChanged(object sender, EventArgs e)
         {
-            txtCode.ReadOnly = chkEditCode.Checked ? false : true;
+            btnNewCode.Enabled = txtCode.Enabled = chkEditCode.Checked ? true : false;
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            gridView1.MoveLast();
+            HelpClass1.MoveLast(gridView1);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            gridView1.MoveNext();
+            HelpClass1.MoveNext(gridView1);
 
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            gridView1.MovePrev();
+            HelpClass1.MovePrev(gridView1);
 
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            gridView1.MoveFirst();
+            HelpClass1.MoveFirst(gridView1);
         }
 
         private void btnPrintPreview_Click(object sender, EventArgs e)
         {
-            HelpClass1.PrintPreview(gridControl1, gridView1);
+            if (btnPrintPreview.Visible)
+                HelpClass1.PrintPreview(gridControl1, gridView1);
         }
 
         public void btnDisplyActiveList_Click(object sender, EventArgs e)
@@ -525,100 +538,6 @@ namespace EtelaatePaye.CodingHesabdari
             HelpClass1.SetNumberRowsColumnUnboundGirdView(sender, e);
         }
 
-        private void btnAdvancedSearch_Click(object sender, EventArgs e)
-        {
-            gridView1.OptionsFind.AlwaysVisible = gridView1.OptionsFind.AlwaysVisible ? false : true;
-        }
-
-        private void btnSharhHesab_Click(object sender, EventArgs e)
-        {
-            gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
-        }
-
-        public void InActiveButtons()
-        {
-            if (En == EnumCED.Create || En == EnumCED.Edit)
-            {
-                foreach (SimpleButton item in panelControl2.Controls)
-                {
-                    item.Enabled = false;
-                }
-                btnSave.Enabled = true;
-                btnCancel.Enabled = true;
-                btnClose.Enabled = true;
-            }
-        }
-
-        public void ActiveButtons()
-        {
-            if (En == EnumCED.Create || En == EnumCED.Edit)
-            {
-                foreach (SimpleButton item in panelControl2.Controls)
-                {
-                    item.Enabled = true;
-                }
-                btnSave.Enabled = false;
-                btnCancel.Enabled = false;
-            }
-        }
-
-        public void ClearControls()
-        {
-            cmbListHesabGroup.EditValue = 0;
-            cmbListHesabCol.EditValue = 0;
-            cmbMahiatHesab.SelectedIndex = -1;
-            txtColCode.Text = string.Empty;
-            txtCode.Text = string.Empty;
-            txtId.Text = string.Empty;
-            txtName.Text = string.Empty;
-            txtSharhHesab.Text = string.Empty;
-            epHesabGroupsBindingSource.DataSource = null;
-            epHesabColsBindingSource.DataSource = null;
-            epSharhStandardMoinsBindingSource.Clear();
-            epGroupTafzilisBindingSource.DataSource = null;
-            msActiveSystemsBindingSource.DataSource = null;
-        }
-
-        public void ActiveControls()
-        {
-            if (En == EnumCED.Create || En == EnumCED.Edit)
-            {
-                cmbListHesabGroup.ReadOnly = false;
-                cmbListHesabCol.ReadOnly = false;
-                cmbMahiatHesab.ReadOnly = false;
-                btnNewCode.Enabled = true;
-                chkEditCode.ReadOnly = false;
-                txtName.ReadOnly = false;
-                chkIsActive.ReadOnly = false;
-                txtSharhHesab.ReadOnly = false;
-                gridControl2.Enabled = true;
-                chkListBoxLevel1.Enabled = true;
-                chkListBoxLevel2.Enabled = true;
-                chkListBoxLevel3.Enabled = true;
-                chkListBoxActiveSystem.Enabled = true;
-            }
-        }
-
-        public void InActiveControls()
-        {
-            if (En == EnumCED.Create || En == EnumCED.Edit)
-            {
-                cmbListHesabGroup.ReadOnly = true;
-                cmbListHesabCol.ReadOnly = true;
-                cmbMahiatHesab.ReadOnly = true;
-                btnNewCode.Enabled = false;
-                chkEditCode.ReadOnly = true;
-                txtName.ReadOnly = true;
-                chkIsActive.ReadOnly = true;
-                txtSharhHesab.ReadOnly = true;
-                gridControl2.Enabled = false;
-                chkListBoxLevel1.Enabled = false;
-                chkListBoxLevel2.Enabled = false;
-                chkListBoxLevel3.Enabled = false;
-                chkListBoxActiveSystem.Enabled = false;
-            }
-        }
-
         private void cmbListHesabGroup_EditValueChanged(object sender, EventArgs e)
         {
             if (Convert.ToInt32(cmbListHesabGroup.EditValue) != 0)
@@ -635,10 +554,6 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    if (true)
-                    {
-
-                    }
                     _ColId = Convert.ToInt32(cmbListHesabCol.EditValue);
                     var q = db.EpHesabCols.FirstOrDefault(s => s.Id == _ColId);
                     if (q != null)
@@ -676,282 +591,201 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            En = EnumCED.Create;
-            InActiveButtons();
-            ActiveControls();
-            ClearControls();
-            FillListBoxLevel1();
-            FillListBoxActiveSystem();
-            chkListBoxActiveSystem.CheckAll();
+            if (btnCreate.Visible)
+            {
+                En = EnumCED.Create;
+                gridControl1.Enabled = false;
+                HelpClass1.InActiveButtons(panelControl2);
+                HelpClass1.ActiveControls(xtraTabPage1);
+                HelpClass1.ActiveControls(xtraTabPage2);
+                HelpClass1.ActiveControls(xtraTabPage3);
+                HelpClass1.ActiveControls(xtraTabPage4);
+                //HelpClass1.ClearControls(xtraTabPage1);
+                //epHesabGroupsBindingSource.DataSource = null;
+                //epHesabColsBindingSource.DataSource = null;
+                //epSharhStandardMoinsBindingSource.Clear();
+                //epGroupTafzilisBindingSource.DataSource = null;
+                //msActiveSystemsBindingSource.DataSource = null;
+                FillListBoxLevel1();
+                xtraTabControl3.SelectedTabPageIndex = 1;
+                chkListBoxLevel1.UnCheckAll();
+                FillListBoxActiveSystem();
+                xtraTabControl3.SelectedTabPageIndex = 2;
+                chkListBoxActiveSystem.CheckAll();
+                FillcmbHesabGroupList();
+                xtraTabControl3.SelectedTabPageIndex = 0;
+                cmbListHesabGroup.Focus();
 
-            FillcmbHesabGroupList();
-            cmbListHesabGroup.Focus();
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (gridView1.SelectedRowsCount > 0)
+            if (btnDelete.Visible)
             {
-                if (XtraMessageBox.Show("آیا حساب معین انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (gridView1.SelectedRowsCount > 0)
                 {
-                    IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
-                    EditRowIndex = gridView1.FocusedRowHandle; 
-                    using (var db = new MyContext())
+                    if (XtraMessageBox.Show("آیا حساب معین انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        try
+                        IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                        EditRowIndex = gridView1.FocusedRowHandle;
+                        using (var db = new MyContext())
                         {
-                            int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
-                            var q = db.EpHesabMoins.FirstOrDefault(p => p.Id == RowId);
-                            var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId);
-                            if (q != null && q8 != null)
+                            try
                             {
-                                db.EpHesabMoins.Remove(q);
-                                db.EpAccessLevelCodingHesabdaris.Remove(q8);
-                                /////////////////////////////////////////////////////////////////////////////
-                                db.SaveChanges();
+                                int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
+                                var q = db.EpHesabMoins.FirstOrDefault(p => p.Id == RowId);
+                                var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId);
+                                if (q != null && q8 != null)
+                                {
+                                    db.EpHesabMoins.Remove(q);
+                                    db.EpAccessLevelCodingHesabdaris.Remove(q8);
+                                    /////////////////////////////////////////////////////////////////////////////
+                                    db.SaveChanges();
 
-                                if (IsActiveBeforeEdit)
-                                    btnDisplyActiveList_Click(null, null);
+                                    if (IsActiveBeforeEdit)
+                                        btnDisplyActiveList_Click(null, null);
+                                    else
+                                        btnDisplyNotActiveList_Click(null, null);
+                                    // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    if (gridView1.RowCount > 0)
+                                        gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                }
                                 else
-                                    btnDisplyNotActiveList_Click(null, null);
-                                XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                if (gridView1.RowCount > 0)
-                                    gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                    XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (DbUpdateException)
-                        {
-                            XtraMessageBox.Show("عملیات حذف با خطا مواجه شد \n حذف این حساب معین مقدور نیست \n" +
-                                " جهت حذف حساب معین در ابتدا بایستی ارتباط این حساب با گروه های سطوح تفضیلی حذف گردد" +
-                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            catch (DbUpdateException)
+                            {
+                                XtraMessageBox.Show("حذف این حساب معین مقدور نیست \n" +
+                                    " جهت حذف حساب معین در ابتدا بایستی ارتباط این حساب با گروه های سطوح تفضیلی حذف گردد" +
+                                    "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
+
             }
         }
 
         public int EditRowIndex = 0;
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (gridView1.SelectedRowsCount > 0 && btnEdit.Visible == true)
+            if (btnEdit.Visible)
             {
-                gridControl1.Enabled = false;
-                EditRowIndex = gridView1.FocusedRowHandle;
-                En = EnumCED.Edit;
-                InActiveButtons();
-                ActiveControls();
-                FillcmbHesabGroupList();
-                FillcmbHesabColList();
-                FillListBoxLevel1();
-                FillListBoxActiveSystem();
-                chkListBoxActiveSystem.CheckAll();
-
-                cmbListHesabGroup.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupId").ToString());
-                cmbListHesabCol.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ColId").ToString());
-                txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                txtColCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
-                txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(2);
-                txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
-                cmbMahiatHesab.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("IndexMahiatHesab").ToString());
-                chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
-                txtSharhHesab.Text = gridView1.GetFocusedRowCellValue("SharhHesab").ToString();
-
-                GroupIdBeforeEdit = Convert.ToInt32(cmbListHesabGroup.EditValue);
-                ColIdBeforeEdit = Convert.ToInt32(cmbListHesabCol.EditValue);
-                CodeBeforeEdit = txtCode.Text;
-                NameBeforeEdit = txtName.Text;
-                IsActiveBeforeEdit = chkIsActive.Checked;
-
-                if (txtCode.Text == "99")
-                    btnNewCode.Enabled = false;
-
-                FillDataGridSharhStandard();
-                using (var db = new MyContext())
+                if (gridView1.SelectedRowsCount > 0)
                 {
-                    try
-                    {
-                        int RowId = Convert.ToInt32(txtId.Text);
-                        var q = db.RMsActiveSystemBEpHesabMoins.Where(f => f.MoinId == RowId).Select(f => f.ActiveSystemId).ToList();
-                        if (q.Count > 0)
-                        {
-                            if (chkListBoxActiveSystem.DataSource != null)
-                            {
-                                q.ForEach(item =>
-                                {
-                                    for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
-                                    {
-                                        if (Convert.ToInt32(chkListBoxActiveSystem.GetItemValue(i)) == item)
+                    gridControl1.Enabled = false;
+                    EditRowIndex = gridView1.FocusedRowHandle;
+                    En = EnumCED.Edit;
+                    HelpClass1.InActiveButtons(panelControl2);
+                    HelpClass1.ActiveControls(xtraTabPage1);
+                    HelpClass1.ActiveControls(xtraTabPage2);
+                    HelpClass1.ActiveControls(xtraTabPage3);
+                    HelpClass1.ActiveControls(xtraTabPage4);
+                    FillcmbHesabGroupList();
+                    //FillcmbHesabColList();
 
-                                            chkListBoxActiveSystem.SetItemCheckState(i, CheckState.Unchecked);
-                                    }
-                                });
+                    cmbListHesabGroup.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupId").ToString());
+                    cmbListHesabCol.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ColId").ToString());
+                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                    txtColCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                    txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(2);
+                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    cmbMahiatHesab.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("IndexMahiatHesab").ToString());
+                    chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                    txtSharhHesab.Text = gridView1.GetFocusedRowCellValue("SharhHesab").ToString();
+
+                    GroupIdBeforeEdit = Convert.ToInt32(cmbListHesabGroup.EditValue);
+                    ColIdBeforeEdit = Convert.ToInt32(cmbListHesabCol.EditValue);
+                    CodeBeforeEdit = txtCode.Text;
+                    NameBeforeEdit = txtName.Text;
+                    IsActiveBeforeEdit = chkIsActive.Checked;
+
+
+                    FillDataGridSharhStandard();
+                    using (var db = new MyContext())
+                    {
+                        try
+                        {
+                            FillListBoxActiveSystem();
+                            xtraTabControl3.SelectedTabPageIndex = 2;
+                            chkListBoxActiveSystem.CheckAll();
+                            int RowId = Convert.ToInt32(txtId.Text);
+                            var q = db.RMsActiveSystemBEpHesabMoins.Where(f => f.MoinId == RowId).Select(f => f.ActiveSystemId).ToList();
+                            if (q.Count > 0)
+                            {
+                                if (chkListBoxActiveSystem.DataSource != null)
+                                {
+                                    q.ForEach(item =>
+                                    {
+                                        for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
+                                        {
+                                            if (Convert.ToInt32(chkListBoxActiveSystem.GetItemValue(i)) == item)
+
+                                                chkListBoxActiveSystem.SetItemCheckState(i, CheckState.Unchecked);
+                                        }
+                                    });
+                                }
+                            }
+                            ////////////////////////////////////////////////////////////////
+                            FillListBoxLevel1();
+                            xtraTabControl3.SelectedTabPageIndex = 1;
+                            var q1 = db.REpHesabMoinBEpGroupTafziliLevel1s.Where(f => f.MoinId == RowId && f.NumberLevel == 1).Select(f => f.GroupTafziliId).ToList();
+                            if (q1.Count > 0)
+                            {
+                                if (chkListBoxLevel1.DataSource != null)
+                                {
+                                    q1.ForEach(item =>
+                                    {
+                                        for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                        {
+                                            if (Convert.ToInt32(chkListBoxLevel1.GetItemValue(i)) == item)
+
+                                                chkListBoxLevel1.SetItemCheckState(i, CheckState.Checked);
+                                        }
+                                    });
+                                }
                             }
                         }
-                        ////////////////////////////////////////////////////////////////
-                        var q1 = db.REpHesabMoinBEpGroupTafziliLevel1s.Where(f => f.MoinId == RowId && f.NumberLevel == 1).Select(f => f.GroupTafziliId).ToList();
-                        if (q1.Count > 0)
+                        catch (Exception ex)
                         {
-                            if (chkListBoxLevel1.DataSource != null)
-                            {
-                                q1.ForEach(item =>
-                                {
-                                    for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
-                                    {
-                                        if (Convert.ToInt32(chkListBoxLevel1.GetItemValue(i)) == item)
-
-                                            chkListBoxLevel1.SetItemCheckState(i, CheckState.Checked);
-                                    }
-                                });
-                            }
+                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    xtraTabControl3.SelectedTabPageIndex = 0;
+                    cmbListHesabGroup.Focus();
                 }
-
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (TextEditValidation())
+            if (btnSave.Enabled)
             {
-                if (En == EnumCED.Create)
+                if (TextEditValidation())
                 {
-                    using (var db = new MyContext())
+                    if (En == EnumCED.Create)
                     {
-                        try
+                        using (var db = new MyContext())
                         {
-                            EpHesabMoin obj = new EpHesabMoin();
-                            obj.Code = Convert.ToInt32(txtColCode.Text + txtCode.Text);
-                            obj.Name = txtName.Text;
-                            obj.IsActive = chkIsActive.Checked;
-                            obj.GroupId = Convert.ToInt32(cmbListHesabGroup.EditValue);
-                            obj.GroupName = cmbListHesabGroup.Text;
-                            obj.ColId = Convert.ToInt32(cmbListHesabCol.EditValue);
-                            obj.ColName = cmbListHesabCol.Text;
-                            obj.IndexMahiatHesab = cmbMahiatHesab.SelectedIndex;
-                            obj.MahiatHesab = cmbMahiatHesab.Text;
-                            obj.SharhHesab = txtSharhHesab.Text;
-                            string ActiveSystem = string.Empty;
-                            for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
+                            try
                             {
-                                if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Checked)
-                                {
-                                    ActiveSystem += chkListBoxActiveSystem.GetDisplayItemValue(i).ToString() + ",";
-                                }
-                            }
-                            obj.SelectedActivesystem = ActiveSystem;
-                            string GroupTafzili = string.Empty;
-                            for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
-                            {
-                                if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
-                                {
-                                    GroupTafzili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
-                                }
-                            }
-                            obj.SelectedGroupTafziliLevel1 = GroupTafzili;
-
-                            db.EpHesabMoins.Add(obj);
-                            db.SaveChanges();
-                            //////////////////////////////////////////////////////////////////////////////////////
-                            int _code = Convert.ToInt32(txtColCode.Text + txtCode.Text);
-                            var q = db.EpHesabMoins.FirstOrDefault(s => s.Code == _code);
-                            int RowId = q.Id;
-                            for (int i = 0; i < gridView2.RowCount; i++)
-                            {
-                                EpSharhStandardMoin obj1 = new EpSharhStandardMoin();
-                                obj1.Name = gridView2.GetRowCellDisplayText(i, "Name");
-                                obj1.MoinId = RowId;
-                                db.EpSharhStandardMoins.Add(obj1);
-                            }
-                            /////////////////////////////////////////////////////////////////////////////////////
-                            for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
-                            {
-                                if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Unchecked)
-                                {
-                                    RMsActiveSystemBEpHesabMoin obj1 = new RMsActiveSystemBEpHesabMoin();
-                                    obj1.ActiveSystemId = Convert.ToInt32(chkListBoxActiveSystem.GetItemValue(i));
-                                    obj1.MoinId = RowId;
-                                    db.RMsActiveSystemBEpHesabMoins.Add(obj1);
-                                }
-                            }
-                            /////////////////////////////////////////////////////////////////////////////////////
-                            for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
-                            {
-                                if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
-                                {
-                                    REpHesabMoinBEpGroupTafziliLevel1 obj1 = new REpHesabMoinBEpGroupTafziliLevel1();
-                                    obj1.GroupTafziliId = Convert.ToInt32(chkListBoxLevel1.GetItemValue(i));
-                                    obj1.MoinId = RowId;
-                                    obj1.NumberLevel = 1;
-                                    db.REpHesabMoinBEpGroupTafziliLevel1s.Add(obj1);
-                                }
-                            }
-                            ////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
-                            EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
-                            n1.KeyId = _code;
-                            n1.ParentId = Convert.ToInt32(txtColCode.Text);
-                            n1.LevelName = txtName.Text;
-                            n1.HesabGroupId = q.GroupId;
-                            n1.HesabColId = q.ColId;
-                            n1.HesabMoinId = q.Id;
-                            n1.IsActive = chkIsActive.Checked;
-                            db.EpAccessLevelCodingHesabdaris.Add(n1);
-                            /////////////////////////////////////////////////////////////////////////////////////
-                            db.SaveChanges();
-                            if (chkIsActive.Checked)
-                                btnDisplyActiveList_Click(null, null);
-                            else
-                                btnDisplyNotActiveList_Click(null, null);
-
-                            XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                            gridView1.MoveLast();
-                            ActiveButtons();
-                            ClearControls();
-                            InActiveControls();
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                else if (En == EnumCED.Edit)
-                {
-                    using (var db = new MyContext())
-                    {
-                        try
-                        {
-                            int _GroupId = Convert.ToInt32(cmbListHesabGroup.EditValue);
-                            string _GroupName = cmbListHesabGroup.Text;
-                            int _ColId = Convert.ToInt32(cmbListHesabCol.EditValue);
-                            string _ColName = cmbListHesabCol.Text;
-                            string _Name = txtName.Text;
-                            int RowId = Convert.ToInt32(txtId.Text);
-                            var q = db.EpHesabMoins.FirstOrDefault(p => p.Id == RowId);
-                            if (q != null)
-                            {
-                                q.Code = Convert.ToInt32(txtColCode.Text + txtCode.Text);
-                                q.Name = _Name;
-                                q.GroupId = _GroupId;
-                                q.GroupName = _GroupName;
-                                q.ColId = _ColId;
-                                q.ColName = _ColName;
-                                q.IsActive = chkIsActive.Checked;
-                                q.IndexMahiatHesab = cmbMahiatHesab.SelectedIndex;
-                                q.MahiatHesab = cmbMahiatHesab.Text;
-                                q.SharhHesab = txtSharhHesab.Text;
-
+                                EpHesabMoin obj = new EpHesabMoin();
+                                obj.Code = Convert.ToInt32(txtColCode.Text + txtCode.Text);
+                                obj.Name = txtName.Text;
+                                obj.IsActive = chkIsActive.Checked;
+                                obj.GroupId = Convert.ToInt32(cmbListHesabGroup.EditValue);
+                                obj.GroupName = cmbListHesabGroup.Text;
+                                obj.ColId = Convert.ToInt32(cmbListHesabCol.EditValue);
+                                obj.ColName = cmbListHesabCol.Text;
+                                obj.IndexMahiatHesab = cmbMahiatHesab.SelectedIndex;
+                                obj.MahiatHesab = cmbMahiatHesab.Text;
+                                obj.SharhHesab = txtSharhHesab.Text;
                                 string ActiveSystem = string.Empty;
                                 for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
                                 {
@@ -960,7 +794,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         ActiveSystem += chkListBoxActiveSystem.GetDisplayItemValue(i).ToString() + ",";
                                     }
                                 }
-                                q.SelectedActivesystem = ActiveSystem;
+                                obj.SelectedActivesystem = ActiveSystem;
                                 string GroupTafzili = string.Empty;
                                 for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
                                 {
@@ -969,14 +803,14 @@ namespace EtelaatePaye.CodingHesabdari
                                         GroupTafzili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
                                     }
                                 }
-                                q.SelectedGroupTafziliLevel1 = GroupTafzili;
-                                ////////////////////////////////////////////////////////////////////////////////
-                                var q1 = db.EpSharhStandardMoins.Where(s => s.MoinId == RowId).ToList();
-                                if (q1.Count > 0)
-                                {
-                                    db.EpSharhStandardMoins.RemoveRange(q1);
-                                }
+                                obj.SelectedGroupTafziliLevel1 = GroupTafzili;
 
+                                db.EpHesabMoins.Add(obj);
+                                db.SaveChanges();
+                                //////////////////////////////////////////////////////////////////////////////////////
+                                int _code = Convert.ToInt32(txtColCode.Text + txtCode.Text);
+                                var q = db.EpHesabMoins.FirstOrDefault(s => s.Code == _code);
+                                int RowId = q.Id;
                                 for (int i = 0; i < gridView2.RowCount; i++)
                                 {
                                     EpSharhStandardMoin obj1 = new EpSharhStandardMoin();
@@ -985,11 +819,6 @@ namespace EtelaatePaye.CodingHesabdari
                                     db.EpSharhStandardMoins.Add(obj1);
                                 }
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                var q2 = db.RMsActiveSystemBEpHesabMoins.Where(s => s.MoinId == RowId).ToList();
-                                if (q2.Count > 0)
-                                {
-                                    db.RMsActiveSystemBEpHesabMoins.RemoveRange(q2);
-                                }
                                 for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
                                 {
                                     if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Unchecked)
@@ -1001,11 +830,6 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
                                 }
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                var q3 = db.REpHesabMoinBEpGroupTafziliLevel1s.Where(s => s.MoinId == RowId && s.NumberLevel == 1).ToList();
-                                if (q3.Count > 0)
-                                {
-                                    db.REpHesabMoinBEpGroupTafziliLevel1s.RemoveRange(q3);
-                                }
                                 for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
                                 {
                                     if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
@@ -1017,96 +841,236 @@ namespace EtelaatePaye.CodingHesabdari
                                         db.REpHesabMoinBEpGroupTafziliLevel1s.Add(obj1);
                                     }
                                 }
-                                ///////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
-                                var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId);
-                                if (q8 != null)
-                                {
-                                    if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                        q8.KeyId = Convert.ToInt32(txtColCode.Text + txtCode.Text);
-                                    if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                        q8.ParentId = Convert.ToInt32(txtColCode.Text);
-                                    if (NameBeforeEdit != txtName.Text)
-                                        q8.LevelName = txtName.Text;
-                                    if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                        q8.HesabGroupId = _GroupId;
-                                    if (ColIdBeforeEdit != Convert.ToInt32(cmbListHesabCol.EditValue))
-                                        q8.HesabColId = _ColId;
-                                    if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                        q8.IsActive = chkIsActive.Checked;
-                                }
-                                /////////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate////////////////////////////////////// 
-                                var q9 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId);
-                                if (q9 != null)
-                                {
-                                    if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                        q9.KeyId = Convert.ToInt32(txtColCode.Text + txtCode.Text);
-                                    if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
-                                        q9.HesabGroupId = _GroupId;
-                                    if (ColIdBeforeEdit != Convert.ToInt32(cmbListHesabCol.EditValue))
-                                        q9.HesabColId = _ColId;
-                                    if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                        q9.IsActive = chkIsActive.Checked;
-                                }
-                                //////////////////////////////////////////////////////////////////////////////////////
-                                if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
-                                {
-                                    var m1 = db.EpHesabGroups.FirstOrDefault(p => p.Id == _GroupId);
-                                    var m2 = db.EpHesabCols.FirstOrDefault(p => p.Id == _ColId);
-                                    var a1 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
-                                    var a2 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == _ColId && p.HesabMoinId == 0);
-                                    var b1 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
-                                    var b2 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == _ColId && p.HesabMoinId == 0);
-                                    if (m1 != null)
-                                        m1.IsActive = true;
-                                    if (m2 != null)
-                                        m2.IsActive = true;
-                                    if (a1 != null)
-                                        a1.IsActive = true;
-                                    if (a2 != null)
-                                        a2.IsActive = true;
-                                    if (b1 != null)
-                                        b1.IsActive = true;
-                                    if (b2 != null)
-                                        b2.IsActive = true;
-                                }
-
+                                ////////////////////////////////////// اضافه کردن حساب معین به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
+                                EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
+                                n1.KeyId = _code;
+                                n1.ParentId = Convert.ToInt32(txtColCode.Text);
+                                n1.LevelName = txtName.Text;
+                                n1.HesabGroupId = q.GroupId;
+                                n1.HesabColId = q.ColId;
+                                n1.HesabMoinId = q.Id;
+                                n1.IsActive = chkIsActive.Checked;
+                                db.EpAccessLevelCodingHesabdaris.Add(n1);
+                                /////////////////////////////////////////////////////////////////////////////////////
                                 db.SaveChanges();
-                                if (IsActiveBeforeEdit)
+                                if (chkIsActive.Checked)
                                     btnDisplyActiveList_Click(null, null);
                                 else
                                     btnDisplyNotActiveList_Click(null, null);
 
-                                XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                if (gridView1.RowCount > 0)
-                                    gridView1.FocusedRowHandle = EditRowIndex;
-                                gridControl1.Enabled = true;
-                                ActiveButtons();
-                                ClearControls();
-                                InActiveControls();
+                                //XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                btnLast_Click(null, null);
+                                btnCancel_Click(null, null);
+                                En = EnumCED.Save;
                             }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        catch (Exception ex)
+                    }
+                    else if (En == EnumCED.Edit)
+                    {
+                        using (var db = new MyContext())
                         {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                int _GroupId = Convert.ToInt32(cmbListHesabGroup.EditValue);
+                                string _GroupName = cmbListHesabGroup.Text;
+                                int _ColId = Convert.ToInt32(cmbListHesabCol.EditValue);
+                                string _ColName = cmbListHesabCol.Text;
+                                string _Name = txtName.Text;
+                                int RowId = Convert.ToInt32(txtId.Text);
+                                var q = db.EpHesabMoins.FirstOrDefault(p => p.Id == RowId);
+                                if (q != null)
+                                {
+                                    q.Code = Convert.ToInt32(txtColCode.Text + txtCode.Text);
+                                    q.Name = _Name;
+                                    q.GroupId = _GroupId;
+                                    q.GroupName = _GroupName;
+                                    q.ColId = _ColId;
+                                    q.ColName = _ColName;
+                                    q.IsActive = chkIsActive.Checked;
+                                    q.IndexMahiatHesab = cmbMahiatHesab.SelectedIndex;
+                                    q.MahiatHesab = cmbMahiatHesab.Text;
+                                    q.SharhHesab = txtSharhHesab.Text;
+
+                                    string ActiveSystem = string.Empty;
+                                    for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
+                                    {
+                                        if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Checked)
+                                        {
+                                            ActiveSystem += chkListBoxActiveSystem.GetDisplayItemValue(i).ToString() + ",";
+                                        }
+                                    }
+                                    q.SelectedActivesystem = ActiveSystem;
+                                    string GroupTafzili = string.Empty;
+                                    for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                    {
+                                        if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                        {
+                                            GroupTafzili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                        }
+                                    }
+                                    q.SelectedGroupTafziliLevel1 = GroupTafzili;
+                                    ////////////////////////////////////////////////////////////////////////////////
+                                    var q1 = db.EpSharhStandardMoins.Where(s => s.MoinId == RowId).ToList();
+                                    if (q1.Count > 0)
+                                    {
+                                        db.EpSharhStandardMoins.RemoveRange(q1);
+                                    }
+
+                                    for (int i = 0; i < gridView2.RowCount; i++)
+                                    {
+                                        EpSharhStandardMoin obj1 = new EpSharhStandardMoin();
+                                        obj1.Name = gridView2.GetRowCellDisplayText(i, "Name");
+                                        obj1.MoinId = RowId;
+                                        db.EpSharhStandardMoins.Add(obj1);
+                                    }
+                                    /////////////////////////////////////////////////////////////////////////////////////
+                                    var q2 = db.RMsActiveSystemBEpHesabMoins.Where(s => s.MoinId == RowId).ToList();
+                                    if (q2.Count > 0)
+                                    {
+                                        db.RMsActiveSystemBEpHesabMoins.RemoveRange(q2);
+                                    }
+                                    for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
+                                    {
+                                        if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Unchecked)
+                                        {
+                                            RMsActiveSystemBEpHesabMoin obj1 = new RMsActiveSystemBEpHesabMoin();
+                                            obj1.ActiveSystemId = Convert.ToInt32(chkListBoxActiveSystem.GetItemValue(i));
+                                            obj1.MoinId = RowId;
+                                            db.RMsActiveSystemBEpHesabMoins.Add(obj1);
+                                        }
+                                    }
+                                    /////////////////////////////////////////////////////////////////////////////////////
+                                    var q3 = db.REpHesabMoinBEpGroupTafziliLevel1s.Where(s => s.MoinId == RowId && s.NumberLevel == 1).ToList();
+                                    if (q3.Count > 0)
+                                    {
+                                        db.REpHesabMoinBEpGroupTafziliLevel1s.RemoveRange(q3);
+                                    }
+                                    for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                    {
+                                        if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                        {
+                                            REpHesabMoinBEpGroupTafziliLevel1 obj1 = new REpHesabMoinBEpGroupTafziliLevel1();
+                                            obj1.GroupTafziliId = Convert.ToInt32(chkListBoxLevel1.GetItemValue(i));
+                                            obj1.MoinId = RowId;
+                                            obj1.NumberLevel = 1;
+                                            db.REpHesabMoinBEpGroupTafziliLevel1s.Add(obj1);
+                                        }
+                                    }
+                                    ///////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
+                                    var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId);
+                                    if (q8 != null)
+                                    {
+                                        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                            q8.KeyId = Convert.ToInt32(txtColCode.Text + txtCode.Text);
+                                        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
+                                            q8.ParentId = Convert.ToInt32(txtColCode.Text);
+                                        if (NameBeforeEdit != txtName.Text)
+                                            q8.LevelName = txtName.Text;
+                                        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
+                                            q8.HesabGroupId = _GroupId;
+                                        if (ColIdBeforeEdit != Convert.ToInt32(cmbListHesabCol.EditValue))
+                                            q8.HesabColId = _ColId;
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            q8.IsActive = chkIsActive.Checked;
+                                    }
+                                    /////////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate////////////////////////////////////// 
+                                    var q9 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId);
+                                    if (q9 != null)
+                                    {
+                                        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                            q9.KeyId = Convert.ToInt32(txtColCode.Text + txtCode.Text);
+                                        if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue))
+                                            q9.HesabGroupId = _GroupId;
+                                        if (ColIdBeforeEdit != Convert.ToInt32(cmbListHesabCol.EditValue))
+                                            q9.HesabColId = _ColId;
+                                        if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                            q9.IsActive = chkIsActive.Checked;
+                                    }
+                                    //////////////////////////////////////////////////////////////////////////////////////
+                                    if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
+                                    {
+                                        var m1 = db.EpHesabGroups.FirstOrDefault(p => p.Id == _GroupId);
+                                        var m2 = db.EpHesabCols.FirstOrDefault(p => p.Id == _ColId);
+                                        var a1 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
+                                        var a2 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == _ColId && p.HesabMoinId == 0);
+                                        var b1 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
+                                        var b2 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == _ColId && p.HesabMoinId == 0);
+                                        if (m1 != null)
+                                            m1.IsActive = true;
+                                        if (m2 != null)
+                                            m2.IsActive = true;
+                                        if (a1 != null)
+                                            a1.IsActive = true;
+                                        if (a2 != null)
+                                            a2.IsActive = true;
+                                        if (b1 != null)
+                                            b1.IsActive = true;
+                                        if (b2 != null)
+                                            b2.IsActive = true;
+                                    }
+
+                                    db.SaveChanges();
+                                    if (IsActiveBeforeEdit)
+                                        btnDisplyActiveList_Click(null, null);
+                                    else
+                                        btnDisplyNotActiveList_Click(null, null);
+
+                                    //XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    if (gridView1.RowCount > 0)
+                                        gridView1.FocusedRowHandle = EditRowIndex;
+                                    gridControl1.Enabled = true;
+                                    btnCancel_Click(null, null);
+                                    En = EnumCED.Save;
+                                }
+                                else
+                                    XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
+
+            }
+        }
+
+        private void btnSaveNext_Click(object sender, EventArgs e)
+        {
+            if (btnSaveNext.Enabled)
+            {
+                //gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
+                btnSave_Click(null, null);
+                if (En == EnumCED.Save)
+                    btnCreate_Click(null, null);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            gridControl1.Enabled = true;
-            ActiveButtons();
-            ClearControls();
-            InActiveControls();
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
+            if (btnCancel.Enabled)
+            {
+                gridControl1.Enabled = true;
+                HelpClass1.ActiveButtons(panelControl2);
+                HelpClass1.InActiveControls(xtraTabPage1);
+                HelpClass1.InActiveControls(xtraTabPage2);
+                HelpClass1.InActiveControls(xtraTabPage3);
+                HelpClass1.InActiveControls(xtraTabPage4);
+                HelpClass1.ClearControls(xtraTabPage1);
+                //epHesabGroupsBindingSource.DataSource = null;
+                //epHesabColsBindingSource.DataSource = null;
+                //epGroupTafzilisBindingSource.DataSource = null;
+                //msActiveSystemsBindingSource.DataSource = null;
+                chkListBoxLevel1.UnCheckAll();
+                chkListBoxActiveSystem.UnCheckAll();
+                epSharhStandardMoinsBindingSource.Clear();
+                btnCreate.Focus();
+            }
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -1127,11 +1091,98 @@ namespace EtelaatePaye.CodingHesabdari
             }
         }
 
-        private void FrmHesabMoinCed_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmHesabMoin_FormClosing(object sender, FormClosingEventArgs e)
         {
             db1.Dispose();
         }
 
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            FillcmbHesabGroupList();
+            //FillcmbHesabColList();
 
+            cmbListHesabGroup.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupId").ToString());
+            cmbListHesabCol.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ColId").ToString());
+            txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+            txtColCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+            txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(2);
+            txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+            cmbMahiatHesab.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("IndexMahiatHesab").ToString());
+            chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+            txtSharhHesab.Text = gridView1.GetFocusedRowCellValue("SharhHesab").ToString();
+
+            FillDataGridSharhStandard();
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    FillListBoxActiveSystem();
+                    xtraTabControl3.SelectedTabPageIndex = 2;
+                    chkListBoxActiveSystem.CheckAll();
+                    int RowId = Convert.ToInt32(txtId.Text);
+                    var q = db.RMsActiveSystemBEpHesabMoins.Where(f => f.MoinId == RowId).Select(f => f.ActiveSystemId).ToList();
+                    if (q.Count > 0)
+                    {
+                        if (chkListBoxActiveSystem.DataSource != null)
+                        {
+                            q.ForEach(item =>
+                            {
+                                for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
+                                {
+                                    if (Convert.ToInt32(chkListBoxActiveSystem.GetItemValue(i)) == item)
+
+                                        chkListBoxActiveSystem.SetItemCheckState(i, CheckState.Unchecked);
+                                }
+                            });
+                        }
+                    }
+                    ////////////////////////////////////////////////////////////////
+                    FillListBoxLevel1();
+                    xtraTabControl3.SelectedTabPageIndex = 1;
+                    var q1 = db.REpHesabMoinBEpGroupTafziliLevel1s.Where(f => f.MoinId == RowId && f.NumberLevel == 1).Select(f => f.GroupTafziliId).ToList();
+                    if (q1.Count > 0)
+                    {
+                        if (chkListBoxLevel1.DataSource != null)
+                        {
+                            q1.ForEach(item =>
+                            {
+                                for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                {
+                                    if (Convert.ToInt32(chkListBoxLevel1.GetItemValue(i)) == item)
+
+                                        chkListBoxLevel1.SetItemCheckState(i, CheckState.Checked);
+                                }
+                            });
+                        }
+                    }
+                    xtraTabControl3.SelectedTabPageIndex = _Index;
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            gridView1_RowClick(null, null);
+        }
+
+        private void gridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            gridView1_RowClick(null, null);
+
+        }
+
+        int _Index = 0;
+
+        private void xtraTabControl3_MouseClick(object sender, MouseEventArgs e)
+        {
+            _Index = xtraTabControl3.SelectedTabPageIndex;
+
+        }
     }
 }

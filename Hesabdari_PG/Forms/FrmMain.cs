@@ -504,7 +504,7 @@ namespace Hesabdari_PG.Forms
         private void btnHesabGroup_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmHesabGroup fm = new FrmHesabGroup();
-            //fm.MdiParent = this;
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -513,7 +513,7 @@ namespace Hesabdari_PG.Forms
         private void btnHesabCol_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmHesabCol fm = new FrmHesabCol();
-            //fm.MdiParent = this;
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -522,7 +522,7 @@ namespace Hesabdari_PG.Forms
         private void btnHesabMoin_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmHesabMoin fm = new FrmHesabMoin();
-            //fm.MdiParent = this;
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -549,8 +549,8 @@ namespace Hesabdari_PG.Forms
 
         private void btnGroupTafzili_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmGroupTafziliList fm = new FrmGroupTafziliList();
-            //fm.MdiParent = this;
+            FrmListGroupTafzili fm = new FrmListGroupTafzili();
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);

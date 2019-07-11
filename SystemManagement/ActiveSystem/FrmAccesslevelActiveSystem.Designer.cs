@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccesslevelActiveSystem));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -43,12 +44,12 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.cmbActiveSystem = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msActiveSystemBindingSource = new System.Windows.Forms.BindingSource();
+            this.msActiveSystemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.chkSelectAll = new DevExpress.XtraBars.BarCheckItem();
             this.chkOpenClose = new DevExpress.XtraBars.BarCheckItem();
@@ -73,7 +74,7 @@
             this.colEpHesabCol1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colEpSharhStandardMoins = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colRMsActiveSystemBEpHesabMoins = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.epHesabMoinsBindingSource = new System.Windows.Forms.BindingSource();
+            this.epHesabMoinsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -91,9 +92,10 @@
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(12, 50);
+            this.lblUserName.Location = new System.Drawing.Point(15, 62);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.Size = new System.Drawing.Size(61, 31);
             this.lblUserName.TabIndex = 39;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
@@ -154,8 +156,8 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 473);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 601);
             // 
             // barManager1
             // 
@@ -231,8 +233,8 @@
             this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام سیستم", 120, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام سیستم", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.repositoryItemLookUpEdit2.DataSource = this.msActiveSystemBindingSource;
             this.repositoryItemLookUpEdit2.DisplayMember = "Name";
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
@@ -289,26 +291,26 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1223, 60);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlTop.Size = new System.Drawing.Size(1495, 60);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 533);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 661);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1223, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1495, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1223, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1495, 60);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 473);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 601);
             // 
             // repositoryItemComboBox1
             // 
@@ -319,9 +321,10 @@
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(12, 19);
+            this.lblUserId.Location = new System.Drawing.Point(15, 24);
+            this.lblUserId.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.Size = new System.Drawing.Size(85, 31);
             this.lblUserId.TabIndex = 38;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
@@ -348,6 +351,8 @@
             this.treeListHesabMoin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeListHesabMoin.KeyFieldName = "Id";
             this.treeListHesabMoin.Location = new System.Drawing.Point(0, 60);
+            this.treeListHesabMoin.Margin = new System.Windows.Forms.Padding(4);
+            this.treeListHesabMoin.MinWidth = 24;
             this.treeListHesabMoin.Name = "treeListHesabMoin";
             this.treeListHesabMoin.OptionsBehavior.Editable = false;
             this.treeListHesabMoin.OptionsFilter.ExpandNodesOnFiltering = true;
@@ -358,15 +363,17 @@
             this.treeListHesabMoin.OptionsView.ShowIndicator = false;
             this.treeListHesabMoin.ParentFieldName = "Id";
             this.treeListHesabMoin.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeListHesabMoin.Size = new System.Drawing.Size(1223, 473);
+            this.treeListHesabMoin.Size = new System.Drawing.Size(1495, 601);
             this.treeListHesabMoin.TabIndex = 45;
-            this.treeListHesabMoin.TreeLevelWidth = 25;
+            this.treeListHesabMoin.TreeLevelWidth = 31;
             this.treeListHesabMoin.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
             // 
             // colId
             // 
             this.colId.FieldName = "Id";
+            this.colId.MinWidth = 24;
             this.colId.Name = "colId";
+            this.colId.Width = 92;
             // 
             // colCode
             // 
@@ -378,11 +385,12 @@
             this.colCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colCode.Caption = "کد معین";
             this.colCode.FieldName = "Code";
-            this.colCode.MaxWidth = 130;
+            this.colCode.MaxWidth = 159;
+            this.colCode.MinWidth = 24;
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
             this.colCode.VisibleIndex = 0;
-            this.colCode.Width = 115;
+            this.colCode.Width = 141;
             // 
             // colName
             // 
@@ -393,11 +401,12 @@
             this.colName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colName.Caption = "حساب معین";
             this.colName.FieldName = "Name";
-            this.colName.MaxWidth = 500;
+            this.colName.MaxWidth = 611;
+            this.colName.MinWidth = 24;
             this.colName.Name = "colName";
             this.colName.Visible = true;
             this.colName.VisibleIndex = 1;
-            this.colName.Width = 485;
+            this.colName.Width = 593;
             // 
             // colColName
             // 
@@ -408,11 +417,12 @@
             this.colColName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colColName.Caption = "حساب کل";
             this.colColName.FieldName = "ColName";
-            this.colColName.MaxWidth = 450;
+            this.colColName.MaxWidth = 550;
+            this.colColName.MinWidth = 24;
             this.colColName.Name = "colColName";
             this.colColName.Visible = true;
             this.colColName.VisibleIndex = 2;
-            this.colColName.Width = 450;
+            this.colColName.Width = 550;
             // 
             // colGroupName
             // 
@@ -423,56 +433,75 @@
             this.colGroupName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colGroupName.Caption = "حساب گروه";
             this.colGroupName.FieldName = "GroupName";
-            this.colGroupName.MaxWidth = 400;
+            this.colGroupName.MaxWidth = 489;
+            this.colGroupName.MinWidth = 24;
             this.colGroupName.Name = "colGroupName";
             this.colGroupName.Visible = true;
             this.colGroupName.VisibleIndex = 3;
-            this.colGroupName.Width = 336;
+            this.colGroupName.Width = 411;
             // 
             // colGroupId
             // 
             this.colGroupId.FieldName = "GroupId";
+            this.colGroupId.MinWidth = 24;
             this.colGroupId.Name = "colGroupId";
+            this.colGroupId.Width = 92;
             // 
             // colColId
             // 
             this.colColId.FieldName = "ColId";
+            this.colColId.MinWidth = 24;
             this.colColId.Name = "colColId";
+            this.colColId.Width = 92;
             // 
             // colIndexMahiatHesab
             // 
             this.colIndexMahiatHesab.FieldName = "IndexMahiatHesab";
+            this.colIndexMahiatHesab.MinWidth = 24;
             this.colIndexMahiatHesab.Name = "colIndexMahiatHesab";
+            this.colIndexMahiatHesab.Width = 92;
             // 
             // colMahiatHesab
             // 
             this.colMahiatHesab.FieldName = "MahiatHesab";
+            this.colMahiatHesab.MinWidth = 24;
             this.colMahiatHesab.Name = "colMahiatHesab";
+            this.colMahiatHesab.Width = 92;
             // 
             // colIsActive
             // 
             this.colIsActive.FieldName = "IsActive";
+            this.colIsActive.MinWidth = 24;
             this.colIsActive.Name = "colIsActive";
+            this.colIsActive.Width = 92;
             // 
             // colSharhHesab
             // 
             this.colSharhHesab.FieldName = "SharhHesab";
+            this.colSharhHesab.MinWidth = 24;
             this.colSharhHesab.Name = "colSharhHesab";
+            this.colSharhHesab.Width = 92;
             // 
             // colEpHesabCol1
             // 
             this.colEpHesabCol1.FieldName = "EpHesabCol1";
+            this.colEpHesabCol1.MinWidth = 24;
             this.colEpHesabCol1.Name = "colEpHesabCol1";
+            this.colEpHesabCol1.Width = 92;
             // 
             // colEpSharhStandardMoins
             // 
             this.colEpSharhStandardMoins.FieldName = "EpSharhStandardMoins";
+            this.colEpSharhStandardMoins.MinWidth = 24;
             this.colEpSharhStandardMoins.Name = "colEpSharhStandardMoins";
+            this.colEpSharhStandardMoins.Width = 92;
             // 
             // colRMsActiveSystemBEpHesabMoins
             // 
             this.colRMsActiveSystemBEpHesabMoins.FieldName = "RMsActiveSystemBEpHesabMoins";
+            this.colRMsActiveSystemBEpHesabMoins.MinWidth = 24;
             this.colRMsActiveSystemBEpHesabMoins.Name = "colRMsActiveSystemBEpHesabMoins";
+            this.colRMsActiveSystemBEpHesabMoins.Width = 92;
             // 
             // epHesabMoinsBindingSource
             // 
@@ -480,9 +509,9 @@
             // 
             // FrmAccesslevelActiveSystem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 533);
+            this.ClientSize = new System.Drawing.Size(1495, 661);
             this.Controls.Add(this.treeListHesabMoin);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblUserId);
@@ -490,6 +519,8 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAccesslevelActiveSystem";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

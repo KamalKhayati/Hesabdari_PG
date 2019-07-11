@@ -263,7 +263,7 @@ namespace HelpClassLibrary
             {
                 if (item is SimpleButton)
                 {
-                    if (item.Name == "btnSave" || item.Name == "btnSaveNext" || item.Name == "btnCancel")
+                    if (item.Name == "btnSave" || item.Name == "btnSaveNext" || item.Name == "btnCancel" )
                     {
                         item.Enabled = false;
                     }
@@ -286,10 +286,16 @@ namespace HelpClassLibrary
                     LookUpEdit item1 = (LookUpEdit)item;
                     item1.EditValue = 0;
                 }
+                else if (_Type.Name == "ComboBoxEdit")
+                {
+                    ComboBoxEdit item1 = (ComboBoxEdit)item;
+                    item1.SelectedIndex = -1;
+                }
                 else if (_Type.Name == "CheckEdit")
                 {
                     CheckEdit item1 = (CheckEdit)item;
-                    item1.Checked = false;
+                    if (item1.Name == "chkEditCode")
+                        item1.Checked = false;
                 }
             }
         }
@@ -388,7 +394,6 @@ namespace HelpClassLibrary
         //RegEx
         //([1-9][3-9][0-9][0-9])/(((0[1-6])/([012][1-9]|[123]0|31))|((0[7-9]|1[01])/([012][1-9]|[123]0))|((1[2])/([012][1-9])))
         //Show Placeholdes=true
-
 
         public static void AddZerooToTextBox(object sender, KeyPressEventArgs e)
         {

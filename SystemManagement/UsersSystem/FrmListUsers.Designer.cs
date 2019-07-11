@@ -182,8 +182,6 @@
             this.btnNewCode.TabIndex = 41;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "F11";
-            this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // txtCode
@@ -327,13 +325,13 @@
             this.btnSaveNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveNext.Enabled = false;
             this.btnSaveNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveNext.ImageOptions.SvgImage")));
-            this.btnSaveNext.Location = new System.Drawing.Point(861, 6);
+            this.btnSaveNext.Location = new System.Drawing.Point(856, 6);
             this.btnSaveNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveNext.Name = "btnSaveNext";
-            this.btnSaveNext.Size = new System.Drawing.Size(50, 46);
+            this.btnSaveNext.Size = new System.Drawing.Size(52, 46);
             this.btnSaveNext.TabIndex = 4;
-            this.btnSaveNext.ToolTip = "F6";
-            this.btnSaveNext.ToolTipTitle = "ذخیره و بعدی";
+            this.btnSaveNext.ToolTip = "ذخیره و بعدی";
+            this.btnSaveNext.ToolTipTitle = "F6";
             this.btnSaveNext.Click += new System.EventHandler(this.btnSaveNext_Click);
             // 
             // panelControl2
@@ -363,14 +361,13 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(28, 6);
+            this.btnClose.Location = new System.Drawing.Point(316, 6);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(113, 46);
+            this.btnClose.Size = new System.Drawing.Size(52, 46);
             this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "بستن ";
-            this.btnClose.ToolTip = "F12";
-            this.btnClose.ToolTipTitle = "بستن ";
+            this.btnClose.ToolTip = "بستن ";
+            this.btnClose.ToolTipTitle = "F12";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnNext
@@ -378,25 +375,25 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(619, 6);
+            this.btnNext.Location = new System.Drawing.Point(676, 6);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(50, 46);
+            this.btnNext.Size = new System.Drawing.Size(52, 46);
             this.btnNext.TabIndex = 7;
-            this.btnNext.ToolTipTitle = "بعدی";
+            this.btnNext.ToolTip = "بعدی";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrintPreview
             // 
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(272, 6);
+            this.btnPrintPreview.Location = new System.Drawing.Point(376, 6);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintPreview.Name = "btnPrintPreview";
-            this.btnPrintPreview.Size = new System.Drawing.Size(50, 46);
+            this.btnPrintPreview.Size = new System.Drawing.Size(52, 46);
             this.btnPrintPreview.TabIndex = 12;
-            this.btnPrintPreview.ToolTip = "F10";
-            this.btnPrintPreview.ToolTipTitle = "نمایش چاپ";
+            this.btnPrintPreview.ToolTip = "نمایش چاپ";
+            this.btnPrintPreview.ToolTipTitle = "F10";
             this.btnPrintPreview.Visible = false;
             this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
             // 
@@ -405,13 +402,13 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(969, 6);
+            this.btnEdit.Location = new System.Drawing.Point(976, 6);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(50, 46);
+            this.btnEdit.Size = new System.Drawing.Size(52, 46);
             this.btnEdit.TabIndex = 3;
-            this.btnEdit.ToolTip = "F4";
-            this.btnEdit.ToolTipTitle = "ویرایش";
+            this.btnEdit.ToolTip = "ویرایش";
+            this.btnEdit.ToolTipTitle = "F4";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
@@ -419,13 +416,13 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(1023, 6);
+            this.btnDelete.Location = new System.Drawing.Point(1036, 6);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(50, 46);
+            this.btnDelete.Size = new System.Drawing.Size(52, 46);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.ToolTip = "F3";
-            this.btnDelete.ToolTipTitle = "حذف";
+            this.btnDelete.ToolTip = "حذف";
+            this.btnDelete.ToolTipTitle = "F3";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnFirst
@@ -433,12 +430,12 @@
             this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(512, 6);
+            this.btnFirst.Location = new System.Drawing.Point(556, 6);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(50, 46);
+            this.btnFirst.Size = new System.Drawing.Size(52, 46);
             this.btnFirst.TabIndex = 9;
-            this.btnFirst.ToolTipTitle = "اولین رکورد";
+            this.btnFirst.ToolTip = "اولین رکورد";
             this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // btnSave
@@ -446,13 +443,13 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Enabled = false;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(915, 6);
+            this.btnSave.Location = new System.Drawing.Point(916, 6);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(50, 46);
+            this.btnSave.Size = new System.Drawing.Size(52, 46);
             this.btnSave.TabIndex = 0;
-            this.btnSave.ToolTip = "F5";
-            this.btnSave.ToolTipTitle = "ذخیره";
+            this.btnSave.ToolTip = "ذخیره";
+            this.btnSave.ToolTipTitle = "F5";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnPreview
@@ -460,50 +457,50 @@
             this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(565, 6);
+            this.btnPreview.Location = new System.Drawing.Point(616, 6);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(50, 46);
+            this.btnPreview.Size = new System.Drawing.Size(52, 46);
             this.btnPreview.TabIndex = 8;
-            this.btnPreview.ToolTipTitle = "قبلی";
+            this.btnPreview.ToolTip = "قبلی";
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // btnLast
             // 
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(673, 6);
+            this.btnLast.Location = new System.Drawing.Point(736, 6);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(50, 46);
+            this.btnLast.Size = new System.Drawing.Size(52, 46);
             this.btnLast.TabIndex = 6;
-            this.btnLast.ToolTipTitle = "آخرین رکورد";
+            this.btnLast.ToolTip = "آخرین رکورد";
             this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // btnDisplyActiveList
             // 
             this.btnDisplyActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(381, 6);
+            this.btnDisplyActiveList.Location = new System.Drawing.Point(496, 6);
             this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            this.btnDisplyActiveList.Size = new System.Drawing.Size(50, 46);
+            this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyActiveList.TabIndex = 10;
-            this.btnDisplyActiveList.ToolTip = "F8";
-            this.btnDisplyActiveList.ToolTipTitle = "لیست فعال";
+            this.btnDisplyActiveList.ToolTip = "لیست فعال";
+            this.btnDisplyActiveList.ToolTipTitle = "F8";
             this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyActiveList_Click);
             // 
             // btnDisplyNotActiveList
             // 
             this.btnDisplyNotActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(327, 6);
+            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(436, 6);
             this.btnDisplyNotActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
-            this.btnDisplyNotActiveList.Size = new System.Drawing.Size(50, 46);
+            this.btnDisplyNotActiveList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyNotActiveList.TabIndex = 11;
-            this.btnDisplyNotActiveList.ToolTip = "F9";
-            this.btnDisplyNotActiveList.ToolTipTitle = " لیست غیرفعال";
+            this.btnDisplyNotActiveList.ToolTip = " لیست غیرفعال";
+            this.btnDisplyNotActiveList.ToolTipTitle = "F9";
             this.btnDisplyNotActiveList.Click += new System.EventHandler(this.btnDisplyNotActiveList_Click);
             // 
             // btnCancel
@@ -511,26 +508,26 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(807, 6);
+            this.btnCancel.Location = new System.Drawing.Point(796, 6);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(50, 46);
+            this.btnCancel.Size = new System.Drawing.Size(52, 46);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.ToolTip = "F7";
-            this.btnCancel.ToolTipTitle = "انصراف";
+            this.btnCancel.ToolTip = "انصراف";
+            this.btnCancel.ToolTipTitle = "F7";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreate
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(1077, 6);
+            this.btnCreate.Location = new System.Drawing.Point(1096, 6);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(50, 46);
+            this.btnCreate.Size = new System.Drawing.Size(52, 46);
             this.btnCreate.TabIndex = 1;
-            this.btnCreate.ToolTip = "F2";
-            this.btnCreate.ToolTipTitle = "جدید";
+            this.btnCreate.ToolTip = "جدید";
+            this.btnCreate.ToolTipTitle = "F2";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // xtraScrollableControl2

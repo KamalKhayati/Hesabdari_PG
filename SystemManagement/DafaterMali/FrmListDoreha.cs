@@ -388,27 +388,27 @@ namespace SystemManagement.DafaterMali
             {
                 btnCreate_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F3 && btnDelete.Enabled == true)
+            else if (e.KeyCode == Keys.F3)
             {
                 btnDelete_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F4 && btnEdit.Enabled == true)
+            else if (e.KeyCode == Keys.F4)
             {
                 btnEdit_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F5 && btnSave.Enabled == true)
+            else if (e.KeyCode == Keys.F5)
             {
                 btnSave_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F6 && btnSaveNext.Enabled == true)
+            else if (e.KeyCode == Keys.F6)
             {
                 btnSaveNext_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7 && btnCancel.Enabled == true)
+            else if (e.KeyCode == Keys.F7)
             {
                 btnCancel_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F8 )
+            else if (e.KeyCode == Keys.F8)
             {
                 btnDisplyActiveList_Click(sender, null);
             }
@@ -416,19 +416,14 @@ namespace SystemManagement.DafaterMali
             {
                 btnDisplyNotActiveList_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F10 && btnPrintPreview.Visible == true)
+            else if (e.KeyCode == Keys.F10)
             {
                 btnPrintPreview_Click(sender, null);
-            }
-            else if (e.Alt && e.KeyCode == Keys.N && btnNewCode.Enabled == true)
-            {
-                btnNewCode_Click(sender, null);
             }
             else if (e.KeyCode == Keys.F12)
             {
                 btnClose_Click(sender, null);
             }
-
         }
 
         private void chkEditCode_CheckedChanged(object sender, EventArgs e)
@@ -460,8 +455,11 @@ namespace SystemManagement.DafaterMali
 
         private void btnPrintPreview_Click(object sender, EventArgs e)
         {
-            HelpClass1.PrintPreview(gridControl1, gridView1);
-        }
+            if (btnPrintPreview.Visible)
+            {
+                HelpClass1.PrintPreview(gridControl1, gridView1);
+
+            }        }
 
         public void btnDisplyActiveList_Click(object sender, EventArgs e)
         {
@@ -491,299 +489,317 @@ namespace SystemManagement.DafaterMali
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            En = EnumCED.Create;
-            gridControl1.Enabled = false;
-            FillcmbMajmoehaList();
-            HelpClass1.InActiveButtons(panelControl2);
-            HelpClass1.ClearControls(xtraTabPage1);
-            HelpClass1.ActiveControls(xtraTabPage1);
-           // txtCode.ReadOnly = true;
-            // xtraTabControl1.SelectedTabPageIndex = 0;
-            cmbMajmoehaList.Focus();
-        }
+            if (btnCreate.Visible)
+            {
+                En = EnumCED.Create;
+                gridControl1.Enabled = false;
+                FillcmbMajmoehaList();
+                HelpClass1.InActiveButtons(panelControl2);
+                HelpClass1.ClearControls(xtraTabPage1);
+                HelpClass1.ActiveControls(xtraTabPage1);
+                // txtCode.ReadOnly = true;
+                // xtraTabControl1.SelectedTabPageIndex = 0;
+                cmbMajmoehaList.Focus();
+
+            }        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (gridView1.SelectedRowsCount > 0)
+            if (btnDelete.Visible)
             {
-                if (XtraMessageBox.Show("آیا دوره مالی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (gridView1.SelectedRowsCount > 0)
                 {
-                    EditRowIndex = gridView1.FocusedRowHandle;
-                    using (var db = new MyContext())
+                    if (XtraMessageBox.Show("آیا دوره مالی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        try
+                        EditRowIndex = gridView1.FocusedRowHandle;
+                        using (var db = new MyContext())
                         {
-                            int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsDoreMaliId"));
-                            var q = db.MsDoreMalis.FirstOrDefault(p => p.MsDoreMaliId == RowId);
-                            var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.DoreMaliId == RowId);
-                            if (q != null && q8 != null)
+                            try
                             {
-                                db.MsDoreMalis.Remove(q);
-                                db.MsAccessLevelDafaterMalis.Remove(q8);
-                                /////////////////////////////////////////////////////////////////////////////
-                                if (XtraMessageBox.Show("در صورت وجود اطلاعات در سال مالی انتخابی کلیه اطلاعات سال مالی فوق حذف خواهد شد و قابل برگشت نمی باشد \n آیا برای حذف مطمئن هستید؟", "پیغام", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                                int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsDoreMaliId"));
+                                var q = db.MsDoreMalis.FirstOrDefault(p => p.MsDoreMaliId == RowId);
+                                var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.DoreMaliId == RowId);
+                                if (q != null && q8 != null)
                                 {
-                                    db.SaveChanges();
+                                    db.MsDoreMalis.Remove(q);
+                                    db.MsAccessLevelDafaterMalis.Remove(q8);
+                                    /////////////////////////////////////////////////////////////////////////////
+                                    if (XtraMessageBox.Show("در صورت وجود اطلاعات در سال مالی انتخابی کلیه اطلاعات سال مالی فوق حذف خواهد شد و قابل برگشت نمی باشد \n آیا برای حذف مطمئن هستید؟", "پیغام", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                                    {
+                                        db.SaveChanges();
 
-                                    if (IsActiveList)
-                                        btnDisplyActiveList_Click(null, null);
-                                    else
-                                        btnDisplyNotActiveList_Click(null, null);
-                                    //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                    if (gridView1.RowCount > 0)
-                                        gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                        if (IsActiveList)
+                                            btnDisplyActiveList_Click(null, null);
+                                        else
+                                            btnDisplyNotActiveList_Click(null, null);
+                                        //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                        if (gridView1.RowCount > 0)
+                                            gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                    }
                                 }
+                                else
+                                    XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        //catch (DbUpdateException)
-                        //{
-                        //    XtraMessageBox.Show("حذف رکورد جاری مقدور نیست \n" +
-                        //        " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری  (در لیست دوره ها) حذف گردد" +
-                        //        "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //}
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //catch (DbUpdateException)
+                            //{
+                            //    XtraMessageBox.Show("حذف رکورد جاری مقدور نیست \n" +
+                            //        " جهت حذف رکورد جاری در ابتدا بایستی زیر مجموعه های رکورد جاری  (در لیست دوره ها) حذف گردد" +
+                            //        "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //}
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
-            }
-        }
+
+            }        }
 
         public int EditRowIndex = 0;
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (gridView1.RowCount > 0 && btnEdit.Visible == true)
+            if (btnEdit.Visible)
             {
-                gridControl1.Enabled = false;
-                EditRowIndex = gridView1.FocusedRowHandle;
-                En = EnumCED.Edit;
-                HelpClass1.InActiveButtons(panelControl2);
-                HelpClass1.ActiveControls(xtraTabPage1);
-                FillcmbMajmoehaList();
-                // xtraTabControl1.SelectedTabPageIndex = 0;
+                if (gridView1.RowCount > 0)
+                {
+                    gridControl1.Enabled = false;
+                    EditRowIndex = gridView1.FocusedRowHandle;
+                    En = EnumCED.Edit;
+                    HelpClass1.InActiveButtons(panelControl2);
+                    HelpClass1.ActiveControls(xtraTabPage1);
+                    FillcmbMajmoehaList();
+                    // xtraTabControl1.SelectedTabPageIndex = 0;
 
-                cmbMajmoehaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
-                cmbVahedhaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
-                cmbShobeList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsShobeId").ToString());
-                txtShobeCode.Text = gridView1.GetFocusedRowCellValue("DoreMaliCode").ToString().Substring(0, 6);
-                txtId.Text = gridView1.GetFocusedRowCellValue("MsDoreMaliId").ToString();
-                txtCode.Text = gridView1.GetFocusedRowCellValue("DoreMaliCode").ToString().Substring(6);
-                txtDoreMali.Text = gridView1.GetFocusedRowCellValue("DoreMali").ToString();
-                txtStartDore.EditValue = gridView1.GetFocusedRowCellValue("StartDoreMali").ToString().Substring(0, 10);
-                txtEndDore.EditValue = gridView1.GetFocusedRowCellValue("EndDoreMali").ToString().Substring(0, 10);
-                chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("DoreMaliIsActive"));
-                chkDoreIsClose.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("DoreIsClose"));
-                txtMaliat.Text = gridView1.GetFocusedRowCellValue("Maliat").ToString();
-                txtAvarez.Text = gridView1.GetFocusedRowCellValue("Avarez").ToString();
+                    cmbMajmoehaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsMajmoeId").ToString());
+                    cmbVahedhaList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsVahedId").ToString());
+                    cmbShobeList.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("MsShobeId").ToString());
+                    txtShobeCode.Text = gridView1.GetFocusedRowCellValue("DoreMaliCode").ToString().Substring(0, 6);
+                    txtId.Text = gridView1.GetFocusedRowCellValue("MsDoreMaliId").ToString();
+                    txtCode.Text = gridView1.GetFocusedRowCellValue("DoreMaliCode").ToString().Substring(6);
+                    txtDoreMali.Text = gridView1.GetFocusedRowCellValue("DoreMali").ToString();
+                    txtStartDore.EditValue = gridView1.GetFocusedRowCellValue("StartDoreMali").ToString().Substring(0, 10);
+                    txtEndDore.EditValue = gridView1.GetFocusedRowCellValue("EndDoreMali").ToString().Substring(0, 10);
+                    chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("DoreMaliIsActive"));
+                    chkDoreIsClose.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("DoreIsClose"));
+                    txtMaliat.Text = gridView1.GetFocusedRowCellValue("Maliat").ToString();
+                    txtAvarez.Text = gridView1.GetFocusedRowCellValue("Avarez").ToString();
 
-                txtDoreMali.ReadOnly = false;
+                    txtDoreMali.ReadOnly = false;
 
-                MajmoeIdBeforeEdit = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                VahedIdBeforeEdit = Convert.ToInt32(cmbVahedhaList.EditValue);
-                ShobeIdBeforeEdit = Convert.ToInt32(cmbShobeList.EditValue);
-                CodeBeforeEdit = txtCode.Text;
-                NameBeforeEdit = txtDoreMali.Text;
-                IsActiveBeforeEdit = chkIsActive.Checked;
-               // txtCode.ReadOnly = true;
-                cmbMajmoehaList.Focus();
-            }
-        }
+                    MajmoeIdBeforeEdit = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                    VahedIdBeforeEdit = Convert.ToInt32(cmbVahedhaList.EditValue);
+                    ShobeIdBeforeEdit = Convert.ToInt32(cmbShobeList.EditValue);
+                    CodeBeforeEdit = txtCode.Text;
+                    NameBeforeEdit = txtDoreMali.Text;
+                    IsActiveBeforeEdit = chkIsActive.Checked;
+                    // txtCode.ReadOnly = true;
+                    cmbMajmoehaList.Focus();
+                }
+
+            }        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (TextEditValidation())
+            if (btnSave.Enabled)
             {
-                if (En == EnumCED.Create)
+                if (TextEditValidation())
                 {
-                    using (var db = new MyContext())
+                    if (En == EnumCED.Create)
                     {
-                        try
+                        using (var db = new MyContext())
                         {
-                            MsDoreMali obj = new MsDoreMali();
-                            obj.DoreMaliCode = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                            obj.DoreMali = Convert.ToInt32(txtDoreMali.Text);
-                            obj.StartDoreMali = Convert.ToDateTime(txtStartDore.Text);
-                            obj.EndDoreMali = Convert.ToDateTime(txtEndDore.Text);
-                            obj.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                            obj.MajmoeName = cmbMajmoehaList.Text;
-                            obj.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                            obj.VahedName = cmbVahedhaList.Text;
-                            obj.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
-                            obj.ShobeName = cmbShobeList.Text;
-                            obj.DoreMaliIsActive = chkIsActive.Checked;
-                            obj.DoreIsClose = chkDoreIsClose.Checked;
-                            obj.Maliat = Convert.ToSingle(txtMaliat.Text.Replace('/', '.') != "" ? txtMaliat.Text.Replace('/', '.') : "0");
-                            obj.Avarez = Convert.ToSingle(txtAvarez.Text.Replace('/', '.') != "" ? txtAvarez.Text.Replace('/', '.') : "0");
-                            db.MsDoreMalis.Add(obj);
-                            db.SaveChanges();
-                            ////////////////////////////////////// اضافه کردن دوره های مالی به کلاس سطح دسترسی دفاتر مالی ////////////////////
-                            int _code = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                            var q = db.MsDoreMalis.FirstOrDefault(s => s.DoreMaliCode == _code);
-
-                            MsAccessLevelDafaterMali n1 = new MsAccessLevelDafaterMali();
-                            n1.KeyId = _code;
-                            n1.ParentId = Convert.ToInt32(_code.ToString().Substring(0, 6));
-                            n1.LevelName = txtDoreMali.Text;
-                            n1.MajmoeId = q.MsMajmoeId;
-                            n1.VahedId = q.MsVahedId;
-                            n1.ShobeId = q.MsShobeId;
-                            n1.DoreMaliId = q.MsDoreMaliId;
-                            n1.IsActive = chkIsActive.Checked;
-                            db.MsAccessLevelDafaterMalis.Add(n1);
-                            db.SaveChanges();
-                            /////////////////////////////////////////////////////////////////////////////////////
-                            if (chkIsActive.Checked)
-                                btnDisplyActiveList_Click(null, null);
-                            else
-                                btnDisplyNotActiveList_Click(null, null);
-                            //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-
-                            En = EnumCED.Save;
-                            btnCancel_Click(null, null);
-
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                else if (En == EnumCED.Edit)
-                {
-                    using (var db = new MyContext())
-                    {
-                        try
-                        {
-                            int RowId = Convert.ToInt32(txtId.Text);
-                            var q = db.MsDoreMalis.FirstOrDefault(p => p.MsDoreMaliId == RowId);
-                            if (q != null)
+                            try
                             {
-                                q.DoreMaliCode = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                                q.DoreMali = Convert.ToInt32(txtDoreMali.Text);
-                                q.StartDoreMali = Convert.ToDateTime(txtStartDore.Text);
-                                q.EndDoreMali = Convert.ToDateTime(txtEndDore.Text);
-                                q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                q.MajmoeName = cmbMajmoehaList.Text;
-                                q.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                                q.VahedName = cmbVahedhaList.Text;
-                                q.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
-                                q.ShobeName = cmbShobeList.Text;
-                                q.DoreMaliIsActive = chkIsActive.Checked;
-                                q.DoreIsClose = chkDoreIsClose.Checked;
-                                q.Maliat = Convert.ToSingle(txtMaliat.Text.Replace('/', '.') != "" ? txtMaliat.Text.Replace('/', '.') : "0");
-                                q.Avarez = Convert.ToSingle(txtAvarez.Text.Replace('/', '.') != "" ? txtAvarez.Text.Replace('/', '.') : "0");
-                                /////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
-                                var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.DoreMaliId == RowId);
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                    q8.KeyId = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue))
-                                    q8.ParentId = Convert.ToInt32(txtShobeCode.Text);
-                                if (NameBeforeEdit != txtDoreMali.Text)
-                                    q8.LevelName = txtDoreMali.Text;
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                    q8.MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
-                                    q8.VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                                if (ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue))
-                                    q8.ShobeId = Convert.ToInt32(cmbShobeList.EditValue);
-                                if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                    q8.IsActive = chkIsActive.Checked;
-                                ///////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و سطح دسترسی لیست دفاتر مالی  WillCascadeOnUpdate////////////////////////////////////// 
-                                var q9 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(s => s.DoreMaliId == RowId);
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue) || CodeBeforeEdit != txtCode.Text)
-                                    q9.KeyId = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
-                                if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
-                                    q9.MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
-                                    q9.VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                                if (ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue))
-                                    q9.ShobeId = Convert.ToInt32(cmbShobeList.EditValue);
-                                if (IsActiveBeforeEdit != chkIsActive.Checked)
-                                    q9.IsActive = chkIsActive.Checked;
-                                /////////////////////////////////////////////////////////////////////////////
-                                if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
-                                {
-                                    int MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
-                                    int VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
-                                    int ShobeId = Convert.ToInt32(cmbShobeList.EditValue);
-                                    var m = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == MajmoeId);
-                                    var v = db.MsVaheds.FirstOrDefault(p => p.MsVahedId == VahedId);
-                                    var s = db.MsShobes.FirstOrDefault(p => p.MsShobeId == ShobeId);
-                                    var a1 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
-                                    var a2 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
-                                    var a3 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == 0);
-                                    //var a4 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
-                                    var b1 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
-                                    var b2 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
-                                    var b3 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == 0);
-                                    //var b4 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
-                                    if (m != null)
-                                        m.MajmoeIsActive = true;
-                                    if (v != null)
-                                        v.VahedIsActive = true;
-                                    if (s != null)
-                                        s.ShobeIsActive = true;
-                                    if (a1 != null)
-                                        a1.IsActive = true;
-                                    if (a2 != null)
-                                        a2.IsActive = true;
-                                    if (a3 != null)
-                                        a3.IsActive = true;
-                                    //if (a4 != null)
-                                    //    a4.IsActive = true;
-                                    if (b1 != null)
-                                        b1.IsActive = true;
-                                    if (b2 != null)
-                                        b2.IsActive = true;
-                                    if (b3 != null)
-                                        b3.IsActive = true;
-                                    //if (b4 != null)
-                                    //    b4.IsActive = true;
-                                }
+                                MsDoreMali obj = new MsDoreMali();
+                                obj.DoreMaliCode = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
+                                obj.DoreMali = Convert.ToInt32(txtDoreMali.Text);
+                                obj.StartDoreMali = Convert.ToDateTime(txtStartDore.Text);
+                                obj.EndDoreMali = Convert.ToDateTime(txtEndDore.Text);
+                                obj.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                obj.MajmoeName = cmbMajmoehaList.Text;
+                                obj.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+                                obj.VahedName = cmbVahedhaList.Text;
+                                obj.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
+                                obj.ShobeName = cmbShobeList.Text;
+                                obj.DoreMaliIsActive = chkIsActive.Checked;
+                                obj.DoreIsClose = chkDoreIsClose.Checked;
+                                obj.Maliat = Convert.ToSingle(txtMaliat.Text.Replace('/', '.') != "" ? txtMaliat.Text.Replace('/', '.') : "0");
+                                obj.Avarez = Convert.ToSingle(txtAvarez.Text.Replace('/', '.') != "" ? txtAvarez.Text.Replace('/', '.') : "0");
+                                db.MsDoreMalis.Add(obj);
                                 db.SaveChanges();
+                                ////////////////////////////////////// اضافه کردن دوره های مالی به کلاس سطح دسترسی دفاتر مالی ////////////////////
+                                int _code = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
+                                var q = db.MsDoreMalis.FirstOrDefault(s => s.DoreMaliCode == _code);
 
-                                if (IsActiveBeforeEdit)
+                                MsAccessLevelDafaterMali n1 = new MsAccessLevelDafaterMali();
+                                n1.KeyId = _code;
+                                n1.ParentId = Convert.ToInt32(_code.ToString().Substring(0, 6));
+                                n1.LevelName = txtDoreMali.Text;
+                                n1.MajmoeId = q.MsMajmoeId;
+                                n1.VahedId = q.MsVahedId;
+                                n1.ShobeId = q.MsShobeId;
+                                n1.DoreMaliId = q.MsDoreMaliId;
+                                n1.IsActive = chkIsActive.Checked;
+                                db.MsAccessLevelDafaterMalis.Add(n1);
+                                db.SaveChanges();
+                                /////////////////////////////////////////////////////////////////////////////////////
+                                if (chkIsActive.Checked)
                                     btnDisplyActiveList_Click(null, null);
                                 else
                                     btnDisplyNotActiveList_Click(null, null);
-                                //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                if (gridView1.RowCount > 0)
-                                    gridView1.FocusedRowHandle = EditRowIndex;
-
+                                //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                btnLast_Click(null, null);
                                 En = EnumCED.Save;
                                 btnCancel_Click(null, null);
 
                             }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        catch (Exception ex)
+                    }
+                    else if (En == EnumCED.Edit)
+                    {
+                        using (var db = new MyContext())
                         {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try
+                            {
+                                int RowId = Convert.ToInt32(txtId.Text);
+                                var q = db.MsDoreMalis.FirstOrDefault(p => p.MsDoreMaliId == RowId);
+                                if (q != null)
+                                {
+                                    q.DoreMaliCode = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
+                                    q.DoreMali = Convert.ToInt32(txtDoreMali.Text);
+                                    q.StartDoreMali = Convert.ToDateTime(txtStartDore.Text);
+                                    q.EndDoreMali = Convert.ToDateTime(txtEndDore.Text);
+                                    q.MsMajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                    q.MajmoeName = cmbMajmoehaList.Text;
+                                    q.MsVahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+                                    q.VahedName = cmbVahedhaList.Text;
+                                    q.MsShobeId = Convert.ToInt32(cmbShobeList.EditValue);
+                                    q.ShobeName = cmbShobeList.Text;
+                                    q.DoreMaliIsActive = chkIsActive.Checked;
+                                    q.DoreIsClose = chkDoreIsClose.Checked;
+                                    q.Maliat = Convert.ToSingle(txtMaliat.Text.Replace('/', '.') != "" ? txtMaliat.Text.Replace('/', '.') : "0");
+                                    q.Avarez = Convert.ToSingle(txtAvarez.Text.Replace('/', '.') != "" ? txtAvarez.Text.Replace('/', '.') : "0");
+                                    /////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به دفاتر مالی  WillCascadeOnUpdate ///////////////////////
+                                    var q8 = db.MsAccessLevelDafaterMalis.FirstOrDefault(s => s.DoreMaliId == RowId);
+                                    if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                        q8.KeyId = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
+                                    if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue))
+                                        q8.ParentId = Convert.ToInt32(txtShobeCode.Text);
+                                    if (NameBeforeEdit != txtDoreMali.Text)
+                                        q8.LevelName = txtDoreMali.Text;
+                                    if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                        q8.MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                    if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
+                                        q8.VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+                                    if (ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue))
+                                        q8.ShobeId = Convert.ToInt32(cmbShobeList.EditValue);
+                                    if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                        q8.IsActive = chkIsActive.Checked;
+                                    ///////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و سطح دسترسی لیست دفاتر مالی  WillCascadeOnUpdate////////////////////////////////////// 
+                                    var q9 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(s => s.DoreMaliId == RowId);
+                                    if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue) || VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue) || ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue) || CodeBeforeEdit != txtCode.Text)
+                                        q9.KeyId = Convert.ToInt32(txtShobeCode.Text + txtCode.Text);
+                                    if (MajmoeIdBeforeEdit != Convert.ToInt32(cmbMajmoehaList.EditValue))
+                                        q9.MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                    if (VahedIdBeforeEdit != Convert.ToInt32(cmbVahedhaList.EditValue))
+                                        q9.VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+                                    if (ShobeIdBeforeEdit != Convert.ToInt32(cmbShobeList.EditValue))
+                                        q9.ShobeId = Convert.ToInt32(cmbShobeList.EditValue);
+                                    if (IsActiveBeforeEdit != chkIsActive.Checked)
+                                        q9.IsActive = chkIsActive.Checked;
+                                    /////////////////////////////////////////////////////////////////////////////
+                                    if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
+                                    {
+                                        int MajmoeId = Convert.ToInt32(cmbMajmoehaList.EditValue);
+                                        int VahedId = Convert.ToInt32(cmbVahedhaList.EditValue);
+                                        int ShobeId = Convert.ToInt32(cmbShobeList.EditValue);
+                                        var m = db.MsMajmoes.FirstOrDefault(p => p.MsMajmoeId == MajmoeId);
+                                        var v = db.MsVaheds.FirstOrDefault(p => p.MsVahedId == VahedId);
+                                        var s = db.MsShobes.FirstOrDefault(p => p.MsShobeId == ShobeId);
+                                        var a1 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
+                                        var a2 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
+                                        var a3 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == 0);
+                                        //var a4 = db.MsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
+                                        var b1 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == 0);
+                                        var b2 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == 0);
+                                        var b3 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == 0);
+                                        //var b4 = db.RmsUserBmsAccessLevelDafaterMalis.FirstOrDefault(p => p.MajmoeId == MajmoeId && p.VahedId == VahedId && p.ShobeId == ShobeId && p.DoreMaliId == RowId);
+                                        if (m != null)
+                                            m.MajmoeIsActive = true;
+                                        if (v != null)
+                                            v.VahedIsActive = true;
+                                        if (s != null)
+                                            s.ShobeIsActive = true;
+                                        if (a1 != null)
+                                            a1.IsActive = true;
+                                        if (a2 != null)
+                                            a2.IsActive = true;
+                                        if (a3 != null)
+                                            a3.IsActive = true;
+                                        //if (a4 != null)
+                                        //    a4.IsActive = true;
+                                        if (b1 != null)
+                                            b1.IsActive = true;
+                                        if (b2 != null)
+                                            b2.IsActive = true;
+                                        if (b3 != null)
+                                            b3.IsActive = true;
+                                        //if (b4 != null)
+                                        //    b4.IsActive = true;
+                                    }
+                                    db.SaveChanges();
+
+                                    if (IsActiveBeforeEdit)
+                                        btnDisplyActiveList_Click(null, null);
+                                    else
+                                        btnDisplyNotActiveList_Click(null, null);
+                                    //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    if (gridView1.RowCount > 0)
+                                        gridView1.FocusedRowHandle = EditRowIndex;
+
+                                    En = EnumCED.Save;
+                                    btnCancel_Click(null, null);
+
+                                }
+                                else
+                                    XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
-            }
-        }
+
+            }        }
 
         private void btnSaveNext_Click(object sender, EventArgs e)
         {
-            //gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
-            btnSave_Click(null, null);
-            if (En == EnumCED.Save)
-                btnCreate_Click(null, null);
-        }
+            if (btnSaveNext.Enabled)
+            {
+                //gridView1.Columns["SharhHesab"].Visible = gridView1.Columns["SharhHesab"].Visible == false ? true : false;
+                btnSave_Click(null, null);
+                if (En == EnumCED.Save)
+                    btnCreate_Click(null, null);
+
+            }        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            gridControl1.Enabled = true;
-            HelpClass1.ActiveButtons(panelControl2);
-            HelpClass1.ClearControls(xtraTabPage1);
-            HelpClass1.InActiveControls(xtraTabPage1);
-        }
+            if (btnCancel.Enabled)
+            {
+                gridControl1.Enabled = true;
+                HelpClass1.ActiveButtons(panelControl2);
+                HelpClass1.ClearControls(xtraTabPage1);
+                HelpClass1.InActiveControls(xtraTabPage1);
+
+            }        }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {

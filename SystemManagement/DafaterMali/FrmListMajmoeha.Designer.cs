@@ -580,7 +580,7 @@
             // layoutViewField_colMsCode
             // 
             this.layoutViewField_colMsCode.EditorPreferredWidth = 498;
-            this.layoutViewField_colMsCode.Location = new System.Drawing.Point(26, 0);
+            this.layoutViewField_colMsCode.Location = new System.Drawing.Point(-26, 0);
             this.layoutViewField_colMsCode.Name = "layoutViewField_colMsCode";
             this.layoutViewField_colMsCode.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMsCode.Size = new System.Drawing.Size(485, 40);
@@ -604,7 +604,7 @@
             // layoutViewField_colMsName
             // 
             this.layoutViewField_colMsName.EditorPreferredWidth = 496;
-            this.layoutViewField_colMsName.Location = new System.Drawing.Point(26, 40);
+            this.layoutViewField_colMsName.Location = new System.Drawing.Point(-26, 40);
             this.layoutViewField_colMsName.Name = "layoutViewField_colMsName";
             this.layoutViewField_colMsName.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMsName.Size = new System.Drawing.Size(485, 40);
@@ -628,7 +628,7 @@
             // layoutViewField_colNoeShakhs
             // 
             this.layoutViewField_colNoeShakhs.EditorPreferredWidth = 425;
-            this.layoutViewField_colNoeShakhs.Location = new System.Drawing.Point(26, 80);
+            this.layoutViewField_colNoeShakhs.Location = new System.Drawing.Point(-26, 80);
             this.layoutViewField_colNoeShakhs.Name = "layoutViewField_colNoeShakhs";
             this.layoutViewField_colNoeShakhs.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colNoeShakhs.Size = new System.Drawing.Size(485, 40);
@@ -652,7 +652,7 @@
             // layoutViewField_colNoeFaaliat
             // 
             this.layoutViewField_colNoeFaaliat.EditorPreferredWidth = 422;
-            this.layoutViewField_colNoeFaaliat.Location = new System.Drawing.Point(26, 120);
+            this.layoutViewField_colNoeFaaliat.Location = new System.Drawing.Point(-26, 120);
             this.layoutViewField_colNoeFaaliat.Name = "layoutViewField_colNoeFaaliat";
             this.layoutViewField_colNoeFaaliat.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colNoeFaaliat.Size = new System.Drawing.Size(485, 40);
@@ -676,7 +676,7 @@
             // layoutViewField_colAdress
             // 
             this.layoutViewField_colAdress.EditorPreferredWidth = 471;
-            this.layoutViewField_colAdress.Location = new System.Drawing.Point(26, 160);
+            this.layoutViewField_colAdress.Location = new System.Drawing.Point(-26, 160);
             this.layoutViewField_colAdress.Name = "layoutViewField_colAdress";
             this.layoutViewField_colAdress.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colAdress.Size = new System.Drawing.Size(485, 40);
@@ -700,7 +700,7 @@
             // layoutViewField_colCodePosti
             // 
             this.layoutViewField_colCodePosti.EditorPreferredWidth = 442;
-            this.layoutViewField_colCodePosti.Location = new System.Drawing.Point(26, 200);
+            this.layoutViewField_colCodePosti.Location = new System.Drawing.Point(-26, 200);
             this.layoutViewField_colCodePosti.Name = "layoutViewField_colCodePosti";
             this.layoutViewField_colCodePosti.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colCodePosti.Size = new System.Drawing.Size(485, 40);
@@ -724,7 +724,7 @@
             // layoutViewField_colSandoghPosti
             // 
             this.layoutViewField_colSandoghPosti.EditorPreferredWidth = 401;
-            this.layoutViewField_colSandoghPosti.Location = new System.Drawing.Point(26, 240);
+            this.layoutViewField_colSandoghPosti.Location = new System.Drawing.Point(-26, 240);
             this.layoutViewField_colSandoghPosti.Name = "layoutViewField_colSandoghPosti";
             this.layoutViewField_colSandoghPosti.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colSandoghPosti.Size = new System.Drawing.Size(485, 40);
@@ -748,7 +748,7 @@
             // layoutViewField_colShomarePlak
             // 
             this.layoutViewField_colShomarePlak.EditorPreferredWidth = 423;
-            this.layoutViewField_colShomarePlak.Location = new System.Drawing.Point(26, 280);
+            this.layoutViewField_colShomarePlak.Location = new System.Drawing.Point(-26, 280);
             this.layoutViewField_colShomarePlak.Name = "layoutViewField_colShomarePlak";
             this.layoutViewField_colShomarePlak.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShomarePlak.Size = new System.Drawing.Size(485, 40);
@@ -772,7 +772,7 @@
             // layoutViewField_colShenaseMelli
             // 
             this.layoutViewField_colShenaseMelli.EditorPreferredWidth = 378;
-            this.layoutViewField_colShenaseMelli.Location = new System.Drawing.Point(26, 320);
+            this.layoutViewField_colShenaseMelli.Location = new System.Drawing.Point(-26, 320);
             this.layoutViewField_colShenaseMelli.Name = "layoutViewField_colShenaseMelli";
             this.layoutViewField_colShenaseMelli.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShenaseMelli.Size = new System.Drawing.Size(485, 40);
@@ -796,7 +796,7 @@
             // layoutViewField_colCodeSenfee
             // 
             this.layoutViewField_colCodeSenfee.EditorPreferredWidth = 440;
-            this.layoutViewField_colCodeSenfee.Location = new System.Drawing.Point(26, 360);
+            this.layoutViewField_colCodeSenfee.Location = new System.Drawing.Point(-26, 360);
             this.layoutViewField_colCodeSenfee.Name = "layoutViewField_colCodeSenfee";
             this.layoutViewField_colCodeSenfee.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colCodeSenfee.Size = new System.Drawing.Size(485, 40);
@@ -820,7 +820,7 @@
             // layoutViewField_colCodeEghtesadi
             // 
             this.layoutViewField_colCodeEghtesadi.EditorPreferredWidth = 417;
-            this.layoutViewField_colCodeEghtesadi.Location = new System.Drawing.Point(26, 400);
+            this.layoutViewField_colCodeEghtesadi.Location = new System.Drawing.Point(-26, 400);
             this.layoutViewField_colCodeEghtesadi.Name = "layoutViewField_colCodeEghtesadi";
             this.layoutViewField_colCodeEghtesadi.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colCodeEghtesadi.Size = new System.Drawing.Size(485, 40);
@@ -844,7 +844,7 @@
             // layoutViewField_colTell1
             // 
             this.layoutViewField_colTell1.EditorPreferredWidth = 466;
-            this.layoutViewField_colTell1.Location = new System.Drawing.Point(26, 440);
+            this.layoutViewField_colTell1.Location = new System.Drawing.Point(-26, 440);
             this.layoutViewField_colTell1.Name = "layoutViewField_colTell1";
             this.layoutViewField_colTell1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTell1.Size = new System.Drawing.Size(485, 40);
@@ -868,7 +868,7 @@
             // layoutViewField_colTell2
             // 
             this.layoutViewField_colTell2.EditorPreferredWidth = 462;
-            this.layoutViewField_colTell2.Location = new System.Drawing.Point(26, 480);
+            this.layoutViewField_colTell2.Location = new System.Drawing.Point(-26, 480);
             this.layoutViewField_colTell2.Name = "layoutViewField_colTell2";
             this.layoutViewField_colTell2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTell2.Size = new System.Drawing.Size(485, 40);
@@ -892,7 +892,7 @@
             // layoutViewField_colTellFax1
             // 
             this.layoutViewField_colTellFax1.EditorPreferredWidth = 440;
-            this.layoutViewField_colTellFax1.Location = new System.Drawing.Point(26, 520);
+            this.layoutViewField_colTellFax1.Location = new System.Drawing.Point(-26, 520);
             this.layoutViewField_colTellFax1.Name = "layoutViewField_colTellFax1";
             this.layoutViewField_colTellFax1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTellFax1.Size = new System.Drawing.Size(485, 40);
@@ -916,7 +916,7 @@
             // layoutViewField_colTellFax2
             // 
             this.layoutViewField_colTellFax2.EditorPreferredWidth = 436;
-            this.layoutViewField_colTellFax2.Location = new System.Drawing.Point(26, 560);
+            this.layoutViewField_colTellFax2.Location = new System.Drawing.Point(-26, 560);
             this.layoutViewField_colTellFax2.Name = "layoutViewField_colTellFax2";
             this.layoutViewField_colTellFax2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTellFax2.Size = new System.Drawing.Size(485, 40);
@@ -940,7 +940,7 @@
             // layoutViewField_colMobile1
             // 
             this.layoutViewField_colMobile1.EditorPreferredWidth = 452;
-            this.layoutViewField_colMobile1.Location = new System.Drawing.Point(26, 600);
+            this.layoutViewField_colMobile1.Location = new System.Drawing.Point(-26, 600);
             this.layoutViewField_colMobile1.Name = "layoutViewField_colMobile1";
             this.layoutViewField_colMobile1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMobile1.Size = new System.Drawing.Size(485, 40);
@@ -964,7 +964,7 @@
             // layoutViewField_colMobile2
             // 
             this.layoutViewField_colMobile2.EditorPreferredWidth = 448;
-            this.layoutViewField_colMobile2.Location = new System.Drawing.Point(26, 640);
+            this.layoutViewField_colMobile2.Location = new System.Drawing.Point(-26, 640);
             this.layoutViewField_colMobile2.Name = "layoutViewField_colMobile2";
             this.layoutViewField_colMobile2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMobile2.Size = new System.Drawing.Size(485, 40);
@@ -988,7 +988,7 @@
             // layoutViewField_colEmail1
             // 
             this.layoutViewField_colEmail1.EditorPreferredWidth = 461;
-            this.layoutViewField_colEmail1.Location = new System.Drawing.Point(26, 680);
+            this.layoutViewField_colEmail1.Location = new System.Drawing.Point(-26, 680);
             this.layoutViewField_colEmail1.Name = "layoutViewField_colEmail1";
             this.layoutViewField_colEmail1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colEmail1.Size = new System.Drawing.Size(485, 40);
@@ -1012,7 +1012,7 @@
             // layoutViewField_colEmail2
             // 
             this.layoutViewField_colEmail2.EditorPreferredWidth = 456;
-            this.layoutViewField_colEmail2.Location = new System.Drawing.Point(26, 720);
+            this.layoutViewField_colEmail2.Location = new System.Drawing.Point(-26, 720);
             this.layoutViewField_colEmail2.Name = "layoutViewField_colEmail2";
             this.layoutViewField_colEmail2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colEmail2.Size = new System.Drawing.Size(485, 40);
@@ -1036,7 +1036,7 @@
             // layoutViewField_colSite
             // 
             this.layoutViewField_colSite.EditorPreferredWidth = 463;
-            this.layoutViewField_colSite.Location = new System.Drawing.Point(26, 760);
+            this.layoutViewField_colSite.Location = new System.Drawing.Point(-26, 760);
             this.layoutViewField_colSite.Name = "layoutViewField_colSite";
             this.layoutViewField_colSite.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colSite.Size = new System.Drawing.Size(485, 40);
@@ -1060,7 +1060,7 @@
             // layoutViewField_colWebLog
             // 
             this.layoutViewField_colWebLog.EditorPreferredWidth = 470;
-            this.layoutViewField_colWebLog.Location = new System.Drawing.Point(26, 800);
+            this.layoutViewField_colWebLog.Location = new System.Drawing.Point(-26, 800);
             this.layoutViewField_colWebLog.Name = "layoutViewField_colWebLog";
             this.layoutViewField_colWebLog.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colWebLog.Size = new System.Drawing.Size(485, 40);
@@ -1084,7 +1084,7 @@
             // layoutViewField_colShabakeEjtemaee1
             // 
             this.layoutViewField_colShabakeEjtemaee1.EditorPreferredWidth = 385;
-            this.layoutViewField_colShabakeEjtemaee1.Location = new System.Drawing.Point(26, 840);
+            this.layoutViewField_colShabakeEjtemaee1.Location = new System.Drawing.Point(-26, 840);
             this.layoutViewField_colShabakeEjtemaee1.Name = "layoutViewField_colShabakeEjtemaee1";
             this.layoutViewField_colShabakeEjtemaee1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShabakeEjtemaee1.Size = new System.Drawing.Size(485, 40);
@@ -1108,7 +1108,7 @@
             // layoutViewField_colShabakeEjtemaee2
             // 
             this.layoutViewField_colShabakeEjtemaee2.EditorPreferredWidth = 381;
-            this.layoutViewField_colShabakeEjtemaee2.Location = new System.Drawing.Point(26, 880);
+            this.layoutViewField_colShabakeEjtemaee2.Location = new System.Drawing.Point(-26, 880);
             this.layoutViewField_colShabakeEjtemaee2.Name = "layoutViewField_colShabakeEjtemaee2";
             this.layoutViewField_colShabakeEjtemaee2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShabakeEjtemaee2.Size = new System.Drawing.Size(485, 40);
@@ -1132,7 +1132,7 @@
             // layoutViewField_colShParvandeMaliati
             // 
             this.layoutViewField_colShParvandeMaliati.EditorPreferredWidth = 368;
-            this.layoutViewField_colShParvandeMaliati.Location = new System.Drawing.Point(26, 920);
+            this.layoutViewField_colShParvandeMaliati.Location = new System.Drawing.Point(-26, 920);
             this.layoutViewField_colShParvandeMaliati.Name = "layoutViewField_colShParvandeMaliati";
             this.layoutViewField_colShParvandeMaliati.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShParvandeMaliati.Size = new System.Drawing.Size(485, 40);
@@ -1156,7 +1156,7 @@
             // layoutViewField_colShBimeKargah
             // 
             this.layoutViewField_colShBimeKargah.EditorPreferredWidth = 400;
-            this.layoutViewField_colShBimeKargah.Location = new System.Drawing.Point(26, 960);
+            this.layoutViewField_colShBimeKargah.Location = new System.Drawing.Point(-26, 960);
             this.layoutViewField_colShBimeKargah.Name = "layoutViewField_colShBimeKargah";
             this.layoutViewField_colShBimeKargah.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShBimeKargah.Size = new System.Drawing.Size(485, 40);
@@ -1227,27 +1227,26 @@
             this.btnSaveNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveNext.Enabled = false;
             this.btnSaveNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveNext.ImageOptions.SvgImage")));
-            this.btnSaveNext.Location = new System.Drawing.Point(866, 6);
+            this.btnSaveNext.Location = new System.Drawing.Point(856, 6);
             this.btnSaveNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveNext.Name = "btnSaveNext";
-            this.btnSaveNext.Size = new System.Drawing.Size(50, 46);
+            this.btnSaveNext.Size = new System.Drawing.Size(52, 46);
             this.btnSaveNext.TabIndex = 4;
-            this.btnSaveNext.ToolTip = "F6";
-            this.btnSaveNext.ToolTipTitle = "ذخیره و بعدی";
+            this.btnSaveNext.ToolTip = "ذخیره و بعدی";
+            this.btnSaveNext.ToolTipTitle = "F6";
             this.btnSaveNext.Click += new System.EventHandler(this.btnSaveNext_Click);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(24, 6);
+            this.btnClose.Location = new System.Drawing.Point(316, 6);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(121, 46);
+            this.btnClose.Size = new System.Drawing.Size(52, 46);
             this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "بستن ";
-            this.btnClose.ToolTip = "F12";
-            this.btnClose.ToolTipTitle = "بستن ";
+            this.btnClose.ToolTip = "بستن ";
+            this.btnClose.ToolTipTitle = "F12";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnNext
@@ -1255,25 +1254,25 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(636, 6);
+            this.btnNext.Location = new System.Drawing.Point(676, 6);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(50, 46);
+            this.btnNext.Size = new System.Drawing.Size(52, 46);
             this.btnNext.TabIndex = 7;
-            this.btnNext.ToolTipTitle = "بعدی";
+            this.btnNext.ToolTip = "بعدی";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrintPreview
             // 
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(281, 6);
+            this.btnPrintPreview.Location = new System.Drawing.Point(376, 6);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintPreview.Name = "btnPrintPreview";
-            this.btnPrintPreview.Size = new System.Drawing.Size(50, 46);
+            this.btnPrintPreview.Size = new System.Drawing.Size(52, 46);
             this.btnPrintPreview.TabIndex = 12;
-            this.btnPrintPreview.ToolTip = "F10";
-            this.btnPrintPreview.ToolTipTitle = "نمایش چاپ";
+            this.btnPrintPreview.ToolTip = "نمایش چاپ";
+            this.btnPrintPreview.ToolTipTitle = "F10";
             this.btnPrintPreview.Visible = false;
             this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
             // 
@@ -1285,10 +1284,10 @@
             this.btnEdit.Location = new System.Drawing.Point(976, 6);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(50, 46);
+            this.btnEdit.Size = new System.Drawing.Size(52, 46);
             this.btnEdit.TabIndex = 3;
-            this.btnEdit.ToolTip = "F4";
-            this.btnEdit.ToolTipTitle = "ویرایش";
+            this.btnEdit.ToolTip = "ویرایش";
+            this.btnEdit.ToolTipTitle = "F4";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
@@ -1296,13 +1295,13 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(1030, 6);
+            this.btnDelete.Location = new System.Drawing.Point(1036, 6);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(50, 46);
+            this.btnDelete.Size = new System.Drawing.Size(52, 46);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.ToolTip = "F3";
-            this.btnDelete.ToolTipTitle = "حذف";
+            this.btnDelete.ToolTip = "حذف";
+            this.btnDelete.ToolTipTitle = "F3";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnFirst
@@ -1310,12 +1309,12 @@
             this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(526, 6);
+            this.btnFirst.Location = new System.Drawing.Point(556, 6);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(50, 46);
+            this.btnFirst.Size = new System.Drawing.Size(52, 46);
             this.btnFirst.TabIndex = 9;
-            this.btnFirst.ToolTipTitle = "اولین رکورد";
+            this.btnFirst.ToolTip = "اولین رکورد";
             this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // btnSave
@@ -1323,13 +1322,13 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Enabled = false;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(921, 6);
+            this.btnSave.Location = new System.Drawing.Point(916, 6);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(50, 46);
+            this.btnSave.Size = new System.Drawing.Size(52, 46);
             this.btnSave.TabIndex = 0;
-            this.btnSave.ToolTip = "F5";
-            this.btnSave.ToolTipTitle = "ذخیره";
+            this.btnSave.ToolTip = "ذخیره";
+            this.btnSave.ToolTipTitle = "F5";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnPreview
@@ -1337,50 +1336,50 @@
             this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(581, 6);
+            this.btnPreview.Location = new System.Drawing.Point(616, 6);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(50, 46);
+            this.btnPreview.Size = new System.Drawing.Size(52, 46);
             this.btnPreview.TabIndex = 8;
-            this.btnPreview.ToolTipTitle = "قبلی";
+            this.btnPreview.ToolTip = "قبلی";
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // btnLast
             // 
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(689, 6);
+            this.btnLast.Location = new System.Drawing.Point(736, 6);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(50, 46);
+            this.btnLast.Size = new System.Drawing.Size(52, 46);
             this.btnLast.TabIndex = 6;
-            this.btnLast.ToolTipTitle = "آخرین رکورد";
+            this.btnLast.ToolTip = "آخرین رکورد";
             this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // btnDisplyActiveList
             // 
             this.btnDisplyActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(391, 6);
+            this.btnDisplyActiveList.Location = new System.Drawing.Point(496, 6);
             this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            this.btnDisplyActiveList.Size = new System.Drawing.Size(50, 46);
+            this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyActiveList.TabIndex = 10;
-            this.btnDisplyActiveList.ToolTip = "F8";
-            this.btnDisplyActiveList.ToolTipTitle = "لیست فعال";
+            this.btnDisplyActiveList.ToolTip = "لیست فعال";
+            this.btnDisplyActiveList.ToolTipTitle = "F8";
             this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyActiveList_Click);
             // 
             // btnDisplyNotActiveList
             // 
             this.btnDisplyNotActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(336, 6);
+            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(436, 6);
             this.btnDisplyNotActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
-            this.btnDisplyNotActiveList.Size = new System.Drawing.Size(50, 46);
+            this.btnDisplyNotActiveList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyNotActiveList.TabIndex = 11;
-            this.btnDisplyNotActiveList.ToolTip = "F9";
-            this.btnDisplyNotActiveList.ToolTipTitle = " لیست غیرفعال";
+            this.btnDisplyNotActiveList.ToolTip = " لیست غیرفعال";
+            this.btnDisplyNotActiveList.ToolTipTitle = "F9";
             this.btnDisplyNotActiveList.Click += new System.EventHandler(this.btnDisplyNotActiveList_Click);
             // 
             // btnCancel
@@ -1388,26 +1387,26 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(812, 6);
+            this.btnCancel.Location = new System.Drawing.Point(796, 6);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(50, 46);
+            this.btnCancel.Size = new System.Drawing.Size(52, 46);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.ToolTip = "F7";
-            this.btnCancel.ToolTipTitle = "انصراف";
+            this.btnCancel.ToolTip = "انصراف";
+            this.btnCancel.ToolTipTitle = "F7";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreate
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(1085, 6);
+            this.btnCreate.Location = new System.Drawing.Point(1096, 6);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(50, 46);
+            this.btnCreate.Size = new System.Drawing.Size(52, 46);
             this.btnCreate.TabIndex = 1;
-            this.btnCreate.ToolTip = "F2";
-            this.btnCreate.ToolTipTitle = "جدید";
+            this.btnCreate.ToolTip = "جدید";
+            this.btnCreate.ToolTipTitle = "F2";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // panelControl3
@@ -1530,8 +1529,6 @@
             this.btnNewCode.TabIndex = 17;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
-            this.btnNewCode.ToolTip = "Alt+N";
-            this.btnNewCode.ToolTipTitle = "کد جدید";
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
             // 
             // txtCode

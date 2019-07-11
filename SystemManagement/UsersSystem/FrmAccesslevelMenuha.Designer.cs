@@ -28,39 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccesslevelMenuh));
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.cmbUsersList = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.msUserBindingSource = new System.Windows.Forms.BindingSource();
+            this.msUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCreate = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
             this.btnCheckAll = new DevExpress.XtraBars.BarCheckItem();
             this.btnOpenClose = new DevExpress.XtraBars.BarCheckItem();
@@ -86,7 +87,7 @@
             this.MsAccessLevelMenuId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colParentId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colRmsUserhaBmsAccessLevelMenuhas = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.msAccessLevelMenusBindingSource = new System.Windows.Forms.BindingSource();
+            this.msAccessLevelMenusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msUserBindingSource)).BeginInit();
@@ -112,7 +113,7 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnCreate,
-            this.btnEdit,
+            this.btnSave,
             this.btnDelete,
             this.btnDisplyActiveList,
             this.btnDisplyNotActiveList,
@@ -145,7 +146,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.cmbUsersList),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnCreate, "", true, true, false, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEdit, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSave, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDelete, "", true, true, false, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnCheckAll, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnOpenClose, true),
@@ -179,9 +180,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MsUserId", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", "نام کاربر", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام کاربر", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.repositoryItemLookUpEdit1.DataSource = this.msUserBindingSource;
-            this.repositoryItemLookUpEdit1.DisplayMember = "UserName";
+            this.repositoryItemLookUpEdit1.DisplayMember = "Name";
             this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
             this.repositoryItemLookUpEdit1.NullText = "";
             this.repositoryItemLookUpEdit1.ValueMember = "MsUserId";
@@ -197,29 +198,29 @@
             this.btnCreate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.ImageOptions.Image")));
             this.btnCreate.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F4);
             this.btnCreate.Name = "btnCreate";
-            toolTipTitleItem9.Text = "ایجاد";
-            toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "F4";
-            superToolTip9.Items.Add(toolTipTitleItem9);
-            superToolTip9.Items.Add(toolTipItem9);
-            this.btnCreate.SuperTip = superToolTip9;
+            toolTipTitleItem1.Text = "ایجاد";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "F4";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnCreate.SuperTip = superToolTip1;
             this.btnCreate.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnCreate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCreate_ItemClick);
             // 
-            // btnEdit
+            // btnSave
             // 
-            this.btnEdit.Caption = "ویرایش کردن";
-            this.btnEdit.Id = 1;
-            this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
-            this.btnEdit.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
-            this.btnEdit.Name = "btnEdit";
-            toolTipTitleItem10.Text = "ویرایش";
-            toolTipItem10.LeftIndent = 6;
-            toolTipItem10.Text = "F5";
-            superToolTip10.Items.Add(toolTipTitleItem10);
-            superToolTip10.Items.Add(toolTipItem10);
-            this.btnEdit.SuperTip = superToolTip10;
-            this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
+            this.btnSave.Caption = "ویرایش کردن";
+            this.btnSave.Id = 1;
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
+            this.btnSave.Name = "btnSave";
+            toolTipTitleItem2.Text = "ویرایش";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "F5";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnSave.SuperTip = superToolTip2;
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // btnDelete
             // 
@@ -228,12 +229,12 @@
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F6);
             this.btnDelete.Name = "btnDelete";
-            toolTipTitleItem11.Text = "حذف";
-            toolTipItem11.LeftIndent = 6;
-            toolTipItem11.Text = "F6";
-            superToolTip11.Items.Add(toolTipTitleItem11);
-            superToolTip11.Items.Add(toolTipItem11);
-            this.btnDelete.SuperTip = superToolTip11;
+            toolTipTitleItem3.Text = "حذف";
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "F6";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.btnDelete.SuperTip = superToolTip3;
             this.btnDelete.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
             // 
@@ -262,12 +263,12 @@
             this.btnPrintPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPreview.ImageOptions.Image")));
             this.btnPrintPreview.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.btnPrintPreview.Name = "btnPrintPreview";
-            toolTipTitleItem14.Text = "پیش نمایش";
-            toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "F9";
-            superToolTip14.Items.Add(toolTipTitleItem14);
-            superToolTip14.Items.Add(toolTipItem14);
-            this.btnPrintPreview.SuperTip = superToolTip14;
+            toolTipTitleItem4.Text = "پیش نمایش";
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "F9";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.btnPrintPreview.SuperTip = superToolTip4;
             this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
             // btnListPrint
@@ -277,12 +278,12 @@
             this.btnListPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListPrint.ImageOptions.Image")));
             this.btnListPrint.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F10);
             this.btnListPrint.Name = "btnListPrint";
-            toolTipTitleItem15.Text = "چاپ";
-            toolTipItem15.LeftIndent = 6;
-            toolTipItem15.Text = "F10";
-            superToolTip15.Items.Add(toolTipTitleItem15);
-            superToolTip15.Items.Add(toolTipItem15);
-            this.btnListPrint.SuperTip = superToolTip15;
+            toolTipTitleItem5.Text = "چاپ";
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = "F10";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem5);
+            this.btnListPrint.SuperTip = superToolTip5;
             this.btnListPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListPrint_ItemClick);
             // 
             // barDockControlTop
@@ -291,17 +292,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlTop.Size = new System.Drawing.Size(1223, 60);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlTop.Size = new System.Drawing.Size(1495, 60);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 533);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 661);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1223, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1495, 0);
             // 
             // barDockControlLeft
             // 
@@ -309,17 +310,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 473);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 601);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1223, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1495, 60);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 473);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 601);
             // 
             // btnDisplyActiveList
             // 
@@ -328,12 +329,12 @@
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
             this.btnDisplyActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            toolTipTitleItem12.Text = "لیست (فعال)";
-            toolTipItem12.LeftIndent = 6;
-            toolTipItem12.Text = "Ctrl+F";
-            superToolTip12.Items.Add(toolTipTitleItem12);
-            superToolTip12.Items.Add(toolTipItem12);
-            this.btnDisplyActiveList.SuperTip = superToolTip12;
+            toolTipTitleItem6.Text = "لیست (فعال)";
+            toolTipItem6.LeftIndent = 6;
+            toolTipItem6.Text = "Ctrl+F";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnDisplyActiveList.SuperTip = superToolTip6;
             // 
             // btnDisplyNotActiveList
             // 
@@ -343,12 +344,12 @@
             this.btnDisplyNotActiveList.ItemShortcut = new DevExpress.XtraBars.BarShortcut(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
                 | System.Windows.Forms.Keys.F));
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
-            toolTipTitleItem13.Text = "لیست (غیرفعال)";
-            toolTipItem13.LeftIndent = 6;
-            toolTipItem13.Text = "Ctrl+Shift+F";
-            superToolTip13.Items.Add(toolTipTitleItem13);
-            superToolTip13.Items.Add(toolTipItem13);
-            this.btnDisplyNotActiveList.SuperTip = superToolTip13;
+            toolTipTitleItem7.Text = "لیست (غیرفعال)";
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Ctrl+Shift+F";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btnDisplyNotActiveList.SuperTip = superToolTip7;
             // 
             // btnEmkanat
             // 
@@ -366,12 +367,12 @@
             this.btnAdvancedSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdvancedSearch.ImageOptions.SvgImage")));
             this.btnAdvancedSearch.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
-            toolTipTitleItem16.Text = "جستجو";
-            toolTipItem16.LeftIndent = 6;
-            toolTipItem16.Text = "Ctrl+S";
-            superToolTip16.Items.Add(toolTipTitleItem16);
-            superToolTip16.Items.Add(toolTipItem16);
-            this.btnAdvancedSearch.SuperTip = superToolTip16;
+            toolTipTitleItem8.Text = "جستجو";
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Ctrl+S";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            superToolTip8.Items.Add(toolTipItem8);
+            this.btnAdvancedSearch.SuperTip = superToolTip8;
             // 
             // repositoryItemTextEdit1
             // 
@@ -394,18 +395,20 @@
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(12, 100);
+            this.lblUserName.Location = new System.Drawing.Point(15, 124);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.Size = new System.Drawing.Size(61, 31);
             this.lblUserName.TabIndex = 25;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(12, 69);
+            this.lblUserId.Location = new System.Drawing.Point(15, 86);
+            this.lblUserId.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.Size = new System.Drawing.Size(85, 31);
             this.lblUserId.TabIndex = 24;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
@@ -429,6 +432,8 @@
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeList1.KeyFieldName = "MsAccessLevelMenuId";
             this.treeList1.Location = new System.Drawing.Point(0, 60);
+            this.treeList1.Margin = new System.Windows.Forms.Padding(4);
+            this.treeList1.MinWidth = 24;
             this.treeList1.Name = "treeList1";
             this.treeList1.OptionsBehavior.Editable = false;
             this.treeList1.OptionsFilter.ExpandNodesOnFiltering = true;
@@ -439,9 +444,9 @@
             this.treeList1.OptionsView.ShowIndicator = false;
             this.treeList1.ParentFieldName = "ParentId";
             this.treeList1.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeList1.Size = new System.Drawing.Size(1223, 473);
+            this.treeList1.Size = new System.Drawing.Size(1495, 601);
             this.treeList1.TabIndex = 30;
-            this.treeList1.TreeLevelWidth = 25;
+            this.treeList1.TreeLevelWidth = 31;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
             this.treeList1.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterCheckNode);
             // 
@@ -451,11 +456,12 @@
             this.LevelName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.LevelName.Caption = "تعیین سطح دسترسی کاربران به منو ها، زیر منو ها و محتویات فرمها";
             this.LevelName.FieldName = "LevelName";
-            this.LevelName.MaxWidth = 700;
+            this.LevelName.MaxWidth = 856;
+            this.LevelName.MinWidth = 24;
             this.LevelName.Name = "LevelName";
             this.LevelName.Visible = true;
             this.LevelName.VisibleIndex = 0;
-            this.LevelName.Width = 700;
+            this.LevelName.Width = 856;
             // 
             // MsAccessLevelMenuId
             // 
@@ -467,21 +473,26 @@
             this.MsAccessLevelMenuId.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.MsAccessLevelMenuId.Caption = "آیدی";
             this.MsAccessLevelMenuId.FieldName = "MsAccessLevelMenuId";
-            this.MsAccessLevelMenuId.MaxWidth = 100;
+            this.MsAccessLevelMenuId.MaxWidth = 122;
+            this.MsAccessLevelMenuId.MinWidth = 24;
             this.MsAccessLevelMenuId.Name = "MsAccessLevelMenuId";
             this.MsAccessLevelMenuId.Visible = true;
             this.MsAccessLevelMenuId.VisibleIndex = 1;
-            this.MsAccessLevelMenuId.Width = 20;
+            this.MsAccessLevelMenuId.Width = 24;
             // 
             // colParentId
             // 
             this.colParentId.FieldName = "ParentId";
+            this.colParentId.MinWidth = 24;
             this.colParentId.Name = "colParentId";
+            this.colParentId.Width = 92;
             // 
             // colRmsUserhaBmsAccessLevelMenuhas
             // 
             this.colRmsUserhaBmsAccessLevelMenuhas.FieldName = "RmsUserhaBmsAccessLevelMenuhas";
+            this.colRmsUserhaBmsAccessLevelMenuhas.MinWidth = 24;
             this.colRmsUserhaBmsAccessLevelMenuhas.Name = "colRmsUserhaBmsAccessLevelMenuhas";
+            this.colRmsUserhaBmsAccessLevelMenuhas.Width = 92;
             // 
             // msAccessLevelMenusBindingSource
             // 
@@ -489,9 +500,9 @@
             // 
             // FrmAccesslevelMenuh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 533);
+            this.ClientSize = new System.Drawing.Size(1495, 661);
             this.Controls.Add(this.treeList1);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblUserId);
@@ -499,6 +510,8 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAccesslevelMenuh";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -525,7 +538,7 @@
         private DevExpress.XtraBars.BarEditItem cmbUsersList;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         public DevExpress.XtraBars.BarButtonItem btnCreate;
-        public DevExpress.XtraBars.BarButtonItem btnEdit;
+        public DevExpress.XtraBars.BarButtonItem btnSave;
         public DevExpress.XtraBars.BarButtonItem btnDelete;
         public DevExpress.XtraBars.BarButtonItem btnPrintPreview;
         public DevExpress.XtraBars.BarButtonItem btnListPrint;

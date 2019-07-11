@@ -83,24 +83,26 @@
             this.colName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colName.Caption = "نام شهرستان";
             this.colName.FieldName = "Name";
-            this.colName.MinWidth = 19;
+            this.colName.MinWidth = 23;
             this.colName.Name = "colName";
             this.colName.Visible = true;
             this.colName.VisibleIndex = 2;
-            this.colName.Width = 238;
+            this.colName.Width = 291;
             // 
             // colId
             // 
             this.colId.FieldName = "Id";
-            this.colId.MinWidth = 19;
+            this.colId.MinWidth = 23;
             this.colId.Name = "colId";
+            this.colId.Width = 92;
             // 
             // btnClose
             // 
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(5, 5);
+            this.btnClose.Location = new System.Drawing.Point(6, 6);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(87, 33);
+            this.btnClose.Size = new System.Drawing.Size(106, 41);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "بستن ";
             this.btnClose.ToolTip = "Escape";
@@ -111,9 +113,10 @@
             // 
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(246, 5);
+            this.btnNext.Location = new System.Drawing.Point(301, 6);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(38, 33);
+            this.btnNext.Size = new System.Drawing.Size(46, 41);
             this.btnNext.TabIndex = 7;
             this.btnNext.Text = "simpleButton1";
             this.btnNext.ToolTipTitle = "بعدی";
@@ -123,9 +126,10 @@
             // 
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(435, 5);
+            this.btnEdit.Location = new System.Drawing.Point(532, 6);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(38, 33);
+            this.btnEdit.Size = new System.Drawing.Size(46, 41);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "simpleButton1";
             this.btnEdit.ToolTip = "F4";
@@ -136,9 +140,10 @@
             // 
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(479, 5);
+            this.btnDelete.Location = new System.Drawing.Point(585, 6);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(38, 33);
+            this.btnDelete.Size = new System.Drawing.Size(46, 41);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "simpleButton1";
             this.btnDelete.ToolTip = "F3";
@@ -149,9 +154,10 @@
             // 
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(158, 5);
+            this.btnFirst.Location = new System.Drawing.Point(193, 6);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(38, 33);
+            this.btnFirst.Size = new System.Drawing.Size(46, 41);
             this.btnFirst.TabIndex = 9;
             this.btnFirst.Text = "simpleButton1";
             this.btnFirst.ToolTipTitle = "اولین رکورد";
@@ -161,9 +167,10 @@
             // 
             this.btnSave.Enabled = false;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(391, 5);
+            this.btnSave.Location = new System.Drawing.Point(478, 6);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 33);
+            this.btnSave.Size = new System.Drawing.Size(46, 41);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "simpleButton1";
             this.btnSave.ToolTip = "F5";
@@ -177,9 +184,10 @@
             this.Line,
             this.colNameOstan,
             this.colName});
+            this.gridView1.DetailHeight = 434;
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.IndicatorWidth = 25;
+            this.gridView1.IndicatorWidth = 31;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridView1.OptionsBehavior.Editable = false;
@@ -208,12 +216,12 @@
             this.Line.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Line.Caption = "ردیف";
             this.Line.FieldName = "Line";
-            this.Line.MinWidth = 19;
+            this.Line.MinWidth = 23;
             this.Line.Name = "Line";
             this.Line.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.Line.Visible = true;
             this.Line.VisibleIndex = 0;
-            this.Line.Width = 60;
+            this.Line.Width = 73;
             // 
             // colNameOstan
             // 
@@ -224,21 +232,22 @@
             this.colNameOstan.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colNameOstan.Caption = "نام استان";
             this.colNameOstan.FieldName = "NameOstan";
+            this.colNameOstan.MinWidth = 24;
             this.colNameOstan.Name = "colNameOstan";
             this.colNameOstan.Visible = true;
             this.colNameOstan.VisibleIndex = 1;
-            this.colNameOstan.Width = 238;
+            this.colNameOstan.Width = 291;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.epNameShahrstansBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(565, 412);
+            this.gridControl1.Size = new System.Drawing.Size(691, 512);
             this.gridControl1.TabIndex = 32;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -255,9 +264,10 @@
             // 
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(202, 5);
+            this.btnPreview.Location = new System.Drawing.Point(247, 6);
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(38, 33);
+            this.btnPreview.Size = new System.Drawing.Size(46, 41);
             this.btnPreview.TabIndex = 8;
             this.btnPreview.Text = "simpleButton1";
             this.btnPreview.ToolTipTitle = "قبلی";
@@ -266,9 +276,10 @@
             // btnLast
             // 
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(290, 5);
+            this.btnLast.Location = new System.Drawing.Point(354, 6);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(38, 33);
+            this.btnLast.Size = new System.Drawing.Size(46, 41);
             this.btnLast.TabIndex = 6;
             this.btnLast.Text = "simpleButton1";
             this.btnLast.ToolTipTitle = "آخرین رکورد";
@@ -278,9 +289,10 @@
             // 
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(347, 5);
+            this.btnCancel.Location = new System.Drawing.Point(424, 6);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(38, 33);
+            this.btnCancel.Size = new System.Drawing.Size(46, 41);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "simpleButton1";
             this.btnCancel.ToolTip = "F6";
@@ -290,9 +302,10 @@
             // btnDisplyActiveList
             // 
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(114, 5);
+            this.btnDisplyActiveList.Location = new System.Drawing.Point(139, 6);
+            this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            this.btnDisplyActiveList.Size = new System.Drawing.Size(38, 33);
+            this.btnDisplyActiveList.Size = new System.Drawing.Size(46, 41);
             this.btnDisplyActiveList.TabIndex = 10;
             this.btnDisplyActiveList.Text = "simpleButton1";
             this.btnDisplyActiveList.ToolTip = "F7";
@@ -301,10 +314,10 @@
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(23, 47);
-            this.lblUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblUserId.Location = new System.Drawing.Point(28, 58);
+            this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(69, 25);
+            this.lblUserId.Size = new System.Drawing.Size(85, 31);
             this.lblUserId.TabIndex = 30;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
@@ -312,9 +325,10 @@
             // btnCreate
             // 
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(523, 5);
+            this.btnCreate.Location = new System.Drawing.Point(639, 6);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(38, 33);
+            this.btnCreate.Size = new System.Drawing.Size(46, 41);
             this.btnCreate.TabIndex = 1;
             this.btnCreate.Text = "simpleButton1";
             this.btnCreate.ToolTip = "F2";
@@ -324,11 +338,12 @@
             // txtName
             // 
             this.txtName.EnterMoveNextControl = true;
-            this.txtName.Location = new System.Drawing.Point(3, 50);
+            this.txtName.Location = new System.Drawing.Point(4, 62);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
             this.txtName.Properties.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(215, 32);
+            this.txtName.Size = new System.Drawing.Size(263, 38);
             this.txtName.TabIndex = 0;
             // 
             // labelControl2
@@ -337,16 +352,18 @@
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.AutoEllipsis = true;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(224, 49);
+            this.labelControl2.Location = new System.Drawing.Point(274, 61);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(63, 32);
+            this.labelControl2.Size = new System.Drawing.Size(77, 40);
             this.labelControl2.TabIndex = 32;
             this.labelControl2.Text = "شهرستان";
             // 
             // txtId
             // 
             this.txtId.EditValue = "آیدی صندوق";
-            this.txtId.Location = new System.Drawing.Point(8, 50);
+            this.txtId.Location = new System.Drawing.Point(10, 62);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
             this.txtId.Properties.Appearance.Options.UseTextOptions = true;
             this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -355,7 +372,7 @@
             this.txtId.Properties.NullText = "آیدی انبار";
             this.txtId.Properties.ReadOnly = true;
             this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId.Size = new System.Drawing.Size(69, 32);
+            this.txtId.Size = new System.Drawing.Size(84, 38);
             this.txtId.TabIndex = 28;
             this.txtId.TabStop = false;
             this.txtId.Visible = false;
@@ -367,16 +384,17 @@
             this.panelControl4.Controls.Add(this.lblUserId);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(569, 416);
+            this.panelControl4.Size = new System.Drawing.Size(695, 516);
             this.panelControl4.TabIndex = 32;
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(23, 80);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblUserName.Location = new System.Drawing.Point(28, 99);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(50, 25);
+            this.lblUserName.Size = new System.Drawing.Size(61, 31);
             this.lblUserName.TabIndex = 31;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
@@ -394,9 +412,10 @@
             this.panelControl2.Controls.Add(this.btnDisplyActiveList);
             this.panelControl2.Controls.Add(this.btnCancel);
             this.panelControl2.Controls.Add(this.btnCreate);
-            this.panelControl2.Location = new System.Drawing.Point(3, 0);
+            this.panelControl2.Location = new System.Drawing.Point(4, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(566, 43);
+            this.panelControl2.Size = new System.Drawing.Size(692, 53);
             this.panelControl2.TabIndex = 26;
             // 
             // xtraScrollableControl2
@@ -409,15 +428,17 @@
             this.xtraScrollableControl2.Controls.Add(this.labelControl2);
             this.xtraScrollableControl2.Controls.Add(this.txtId);
             this.xtraScrollableControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.xtraScrollableControl2.Location = new System.Drawing.Point(0, 416);
+            this.xtraScrollableControl2.Location = new System.Drawing.Point(0, 516);
+            this.xtraScrollableControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.xtraScrollableControl2.Name = "xtraScrollableControl2";
-            this.xtraScrollableControl2.Size = new System.Drawing.Size(569, 89);
+            this.xtraScrollableControl2.Size = new System.Drawing.Size(695, 110);
             this.xtraScrollableControl2.TabIndex = 33;
             // 
             // cmbNameOstan
             // 
             this.cmbNameOstan.EnterMoveNextControl = true;
-            this.cmbNameOstan.Location = new System.Drawing.Point(339, 50);
+            this.cmbNameOstan.Location = new System.Drawing.Point(414, 62);
+            this.cmbNameOstan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbNameOstan.Name = "cmbNameOstan";
             this.cmbNameOstan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -433,16 +454,17 @@
             this.cmbNameOstan.Properties.ReadOnly = true;
             this.cmbNameOstan.Properties.ValueMember = "Id";
             this.cmbNameOstan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameOstan.Size = new System.Drawing.Size(181, 32);
+            this.cmbNameOstan.Size = new System.Drawing.Size(221, 38);
             this.cmbNameOstan.TabIndex = 168;
             // 
             // btnOstan
             // 
             this.btnOstan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOstan.ImageOptions.Image")));
             this.btnOstan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOstan.ImageOptions.SvgImage")));
-            this.btnOstan.Location = new System.Drawing.Point(295, 50);
+            this.btnOstan.Location = new System.Drawing.Point(361, 62);
+            this.btnOstan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOstan.Name = "btnOstan";
-            this.btnOstan.Size = new System.Drawing.Size(38, 32);
+            this.btnOstan.Size = new System.Drawing.Size(46, 40);
             this.btnOstan.TabIndex = 169;
             this.btnOstan.TabStop = false;
             this.btnOstan.Text = "simpleButton1";
@@ -455,20 +477,23 @@
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.AutoEllipsis = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(526, 49);
+            this.labelControl1.Location = new System.Drawing.Point(643, 61);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(40, 32);
+            this.labelControl1.Size = new System.Drawing.Size(49, 40);
             this.labelControl1.TabIndex = 32;
             this.labelControl1.Text = "استان";
             // 
             // FrmNameShahrstan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 505);
+            this.ClientSize = new System.Drawing.Size(695, 626);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.xtraScrollableControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmNameShahrstan";

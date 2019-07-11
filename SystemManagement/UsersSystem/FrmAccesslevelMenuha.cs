@@ -45,7 +45,7 @@ namespace SystemManagement.UsersSystem
         //    //    e.Graphics.DrawString(e.CellText, treeList1.Font, SystemBrushes.HighlightText, rect);
         //    //    e.Handled = true;
         //    //}
-        //}
+        //} 
 
         public void FillTreeList()
         {
@@ -68,6 +68,7 @@ namespace SystemManagement.UsersSystem
                 }
             }
         }
+
         public void FillcmbUsersList()
         {
             using (var db = new MyContext())
@@ -216,7 +217,7 @@ namespace SystemManagement.UsersSystem
                     if (q1.Count() > 0)
                     {
                         //btnCreate.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55331) ? BarItemVisibility.Never : BarItemVisibility.Always;
-                        btnEdit.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550302011) ? BarItemVisibility.Never : BarItemVisibility.Always;
+                        btnSave.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 550302011) ? BarItemVisibility.Never : BarItemVisibility.Always;
                         //btnDelete.Visibility = q1.Any(s => s.MsAccessLevelMenuId == 55333) ? BarItemVisibility.Never : BarItemVisibility.Always;
                     }
                 }
@@ -228,9 +229,9 @@ namespace SystemManagement.UsersSystem
             }
         }
 
-        private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (cmbUsersList.EditValue == null)
+            if (Convert.ToInt32(cmbUsersList.EditValue) == 0)
             {
                 XtraMessageBox.Show("لطفا نام کاربر مورد نظر را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
