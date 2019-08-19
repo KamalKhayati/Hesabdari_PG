@@ -213,7 +213,7 @@
             // 
             // msUserBindingSource
             // 
-            this.msUserBindingSource.DataSource = typeof(DBHesabdari_PG.MsUser);
+            this.msUserBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.SystemUsers.MsUser);
             // 
             // btnSave
             // 
@@ -411,7 +411,7 @@
             // 
             // msAccessLevelDafaterMalisBindingSource
             // 
-            this.msAccessLevelDafaterMalisBindingSource.DataSource = typeof(DBHesabdari_PG.MsAccessLevelDafaterMali);
+            this.msAccessLevelDafaterMalisBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.SystemUsers.MsAccessLevelDafaterMali);
             // 
             // barEditItem1
             // 

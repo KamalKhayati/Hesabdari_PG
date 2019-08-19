@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using System.Data.Entity;
 using DBHesabdari_PG;
 using HelpClassLibrary;
+using DBHesabdari_PG.Models.Ms.SystemUsers;
 
 namespace SystemManagement.UsersSystem
 {
@@ -419,6 +420,7 @@ namespace SystemManagement.UsersSystem
                                         //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView1.RowCount > 0)
                                             gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                        HelpClass1.ClearControls(xtraTabPage1);
                                     }
                                 }
                                 else
@@ -608,9 +610,21 @@ namespace SystemManagement.UsersSystem
             btnSave.Focus();
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (gridView1.RowCount > 0 )
+            gridView1_RowCellClick(null, null);
+
+        }
+
+        private void gridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            gridView1_RowCellClick(null, null);
+
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            if (gridView1.RowCount > 0)
             {
                 txtId.Text = gridView1.GetFocusedRowCellValue("MsUserId").ToString();
                 txtCode.Text = gridView1.GetFocusedRowCellValue("UserCode").ToString();
@@ -620,19 +634,7 @@ namespace SystemManagement.UsersSystem
                 chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("UserIsActive"));
             }
 
-        }
-
-        private void gridView1_KeyDown(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
 
         }
-
-        private void gridView1_KeyUp(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
-
-        }
-
     }
 }

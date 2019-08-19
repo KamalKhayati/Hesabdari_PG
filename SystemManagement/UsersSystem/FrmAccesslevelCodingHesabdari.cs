@@ -19,6 +19,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DBHesabdari_PG;
 using System.Data.Entity;
+using DBHesabdari_PG.Models.Ms.SystemUsers;
 
 namespace SystemManagement.UsersSystem
 {

@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBHesabdari_PG
+namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpHesabGroup
     {

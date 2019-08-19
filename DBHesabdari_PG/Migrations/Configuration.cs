@@ -16,6 +16,10 @@ namespace DBHesabdari_PG.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using System.Windows.Forms;
+    using DBHesabdari_PG.Models.EP.CodingHesabdari;
+    using DBHesabdari_PG.Models.Ms.ActiveSystem;
+    using DBHesabdari_PG.Models.Ms.DafaterMali;
+    using DBHesabdari_PG.Models.Ms.SystemUsers;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DBHesabdari_PG.MyContext>
     {
@@ -51,7 +55,7 @@ namespace DBHesabdari_PG.Migrations
                     context.Entry(new EpGroupTafzili() { Id = 10, Code = 82, Name = "محصول", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 10) ? EntityState.Modified : EntityState.Added;
                     context.Entry(new EpGroupTafzili() { Id = 11, Code = 83, Name = "کالا", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 11) ? EntityState.Modified : EntityState.Added;
                     context.Entry(new EpGroupTafzili() { Id = 12, Code = 90, Name = "مراکز هزینه", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 12) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 13, Code = 91, Name = "سایر", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 13) ? EntityState.Modified : EntityState.Added;
+                    context.Entry(new EpGroupTafzili() { Id = 13, Code = 99, Name = "سایر", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 13) ? EntityState.Modified : EntityState.Added;
 
 
                     context.Entry(new MsActiveSystem() { Id = 1, Code = 10, Name = "فروش و خرید", IsActive = true }).State = context.MsActiveSystems.Any(s => s.Id == 1) ? EntityState.Unchanged : EntityState.Added;

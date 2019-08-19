@@ -20,6 +20,7 @@ using DevExpress.XtraEditors;
 using DBHesabdari_PG;
 using System.Data.Entity;
 using DevExpress.XtraTreeList;
+using DBHesabdari_PG.Models.Ms.ActiveSystem;
 
 namespace SystemManagement.ActiveSystem
 {

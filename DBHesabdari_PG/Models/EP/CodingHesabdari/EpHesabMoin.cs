@@ -7,6 +7,7 @@
 *	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 10   14:16
 *	
 ***********************************************************************************/
+using DBHesabdari_PG.Models.Ms.ActiveSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBHesabdari_PG
+namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpHesabMoin
     {

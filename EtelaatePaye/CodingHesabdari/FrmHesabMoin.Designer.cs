@@ -278,7 +278,7 @@
             // 
             // epSharhStandardMoinsBindingSource
             // 
-            this.epSharhStandardMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.EpSharhStandardMoin);
+            this.epSharhStandardMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpSharhStandardMoin);
             // 
             // gridView2
             // 
@@ -371,7 +371,7 @@
             // 
             // msActiveSystemsBindingSource
             // 
-            this.msActiveSystemsBindingSource.DataSource = typeof(DBHesabdari_PG.MsActiveSystem);
+            this.msActiveSystemsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.ActiveSystem.MsActiveSystem);
             // 
             // xtraTabControl1
             // 
@@ -413,7 +413,7 @@
             // 
             // epGroupTafzilisBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.EpGroupTafzili);
+            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpGroupTafzili);
             // 
             // tbpLevel2
             // 
@@ -477,7 +477,7 @@
             // 
             // epHesabColsBindingSource
             // 
-            this.epHesabColsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabCol);
+            this.epHesabColsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabCol);
             // 
             // labelControl4
             // 
@@ -518,7 +518,7 @@
             // 
             // epHesabGroupsBindingSource
             // 
-            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabGroup);
+            this.epHesabGroupsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabGroup);
             // 
             // labelControl3
             // 
@@ -551,7 +551,7 @@
             this.txtName.Location = new System.Drawing.Point(487, 159);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Properties.MaxLength = 70;
+            this.txtName.Properties.MaxLength = 50;
             this.txtName.Size = new System.Drawing.Size(520, 38);
             this.txtName.TabIndex = 2;
             // 
@@ -804,7 +804,7 @@
             // 
             // epHesabMoinsBindingSource
             // 
-            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabMoin);
+            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin);
             // 
             // panelControl4
             // 
@@ -865,7 +865,7 @@
             this.gridView1.OptionsView.RowAutoHeight = true;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
@@ -1184,6 +1184,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1171, 700);
             this.Name = "FrmHesabMoin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -21,6 +21,8 @@ using DBHesabdari_PG;
 using System.Data.Entity;
 using HelpClassLibrary;
 using System.Data.Entity.Infrastructure;
+using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using DBHesabdari_PG.Models.Ms.ActiveSystem;
 
 namespace EtelaatePaye.CodingHesabdari
 {
@@ -623,7 +625,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (btnDelete.Visible)
             {
-                if (gridView1.SelectedRowsCount > 0)
+                if (gridView1.RowCount > 0)
                 {
                     if (XtraMessageBox.Show("آیا حساب معین انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
@@ -650,6 +652,10 @@ namespace EtelaatePaye.CodingHesabdari
                                     // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     if (gridView1.RowCount > 0)
                                         gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                    HelpClass1.ClearControls(xtraTabPage1);
+                                    chkListBoxLevel1.UnCheckAll();
+                                    chkListBoxActiveSystem.UnCheckAll();
+                                    epSharhStandardMoinsBindingSource.Clear();
                                 }
                                 else
                                     XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -676,7 +682,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (btnEdit.Visible)
             {
-                if (gridView1.SelectedRowsCount > 0)
+                if (gridView1.RowCount > 0)
                 {
                     gridControl1.Enabled = false;
                     EditRowIndex = gridView1.FocusedRowHandle;
@@ -1022,7 +1028,6 @@ namespace EtelaatePaye.CodingHesabdari
                                     //XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     if (gridView1.RowCount > 0)
                                         gridView1.FocusedRowHandle = EditRowIndex;
-                                    gridControl1.Enabled = true;
                                     btnCancel_Click(null, null);
                                     En = EnumCED.Save;
                                 }
@@ -1096,7 +1101,26 @@ namespace EtelaatePaye.CodingHesabdari
             db1.Dispose();
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            gridView1_RowCellClick(null, null);
+        }
+
+        private void gridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            gridView1_RowCellClick(null, null);
+
+        }
+
+        int _Index = 0;
+
+        private void xtraTabControl3_MouseClick(object sender, MouseEventArgs e)
+        {
+            _Index = xtraTabControl3.SelectedTabPageIndex;
+
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             FillcmbHesabGroupList();
             //FillcmbHesabColList();
@@ -1163,25 +1187,6 @@ namespace EtelaatePaye.CodingHesabdari
                         "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-        }
-
-        private void gridView1_KeyDown(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
-        }
-
-        private void gridView1_KeyUp(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
-
-        }
-
-        int _Index = 0;
-
-        private void xtraTabControl3_MouseClick(object sender, MouseEventArgs e)
-        {
-            _Index = xtraTabControl3.SelectedTabPageIndex;
 
         }
     }

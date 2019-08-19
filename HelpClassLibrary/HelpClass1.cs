@@ -294,8 +294,18 @@ namespace HelpClassLibrary
                 else if (_Type.Name == "CheckEdit")
                 {
                     CheckEdit item1 = (CheckEdit)item;
-                    if (item1.Name == "chkEditCode")
+                    if (item1.Name != "chkIsActive")
                         item1.Checked = false;
+                }
+                else if (_Type.Name == "GroupBox")
+                {
+                    GroupBox item1 = (GroupBox)item;
+                    item1.Controls[0].Text = "";
+                }
+                else if (_Type.Name == "PictureEdit")
+                {
+                    PictureEdit item1 = (PictureEdit)item;
+                    item1.Image=null;
                 }
             }
         }

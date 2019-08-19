@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBHesabdari_PG
+namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpHesabTafziliHesabBanki
     {
@@ -40,7 +40,7 @@ namespace DBHesabdari_PG
         [MaxLength(40)]
         public string ShomareMoshtari { get; set; }
         [Column(TypeName = "Date")]
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         [Required, MaxLength(40)]
         public string NoeArz { get; set; }
         [Required]

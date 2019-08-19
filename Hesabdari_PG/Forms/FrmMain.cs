@@ -37,6 +37,8 @@ using EtelaatePaye.CodingHesabdari;
 using SystemManagement.UsersSystem;
 using SystemManagement.ActiveSystem;
 using SystemManagement.DafaterMali;
+using DBHesabdari_PG.Models.Ms.DafaterMali;
+using EtelaatePaye.CodingAnbar;
 
 namespace Hesabdari_PG.Forms
 {
@@ -275,14 +277,10 @@ namespace Hesabdari_PG.Forms
 
         private void btnListAnbarha_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmAnbarhaList fm = new FrmAnbarhaList();
-            fm.lblSelectDoreMali.Text = cmbDoreMalihaList.Edit.GetDisplayText(cmbDoreMalihaList.EditValue);
-            if (fm.lblSelectDoreMali.Text == "")
-            {
-                XtraMessageBox.Show("لطفاً سال مالی مورد نظر را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            FrmListAnbarha fm = new FrmListAnbarha();
             fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
         }
 
@@ -559,7 +557,7 @@ namespace Hesabdari_PG.Forms
         private void btnTafziliSandogh_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmHesabTafziliSandogh fm = new FrmHesabTafziliSandogh();
-            //fm.MdiParent = this;
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -568,8 +566,8 @@ namespace Hesabdari_PG.Forms
 
         private void btnTafziliHesabBanki_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmHesabTafziliHesabBamki fm = new FrmHesabTafziliHesabBamki();
-            //fm.MdiParent = this;
+            FrmHesabTafziliHesabBanki fm = new FrmHesabTafziliHesabBanki();
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -579,7 +577,7 @@ namespace Hesabdari_PG.Forms
         private void btnTafziliAshkhas_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmHesabTafziliAshkhas fm = new FrmHesabTafziliAshkhas();
-            //fm.MdiParent = this;
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
@@ -588,8 +586,137 @@ namespace Hesabdari_PG.Forms
 
         private void btnTafziliDaraeha_ItemClick(object sender, ItemClickEventArgs e)
         {
+            FrmHesabTafziliDaraeha fm = new FrmHesabTafziliDaraeha();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnJoziatEtelaatAshkhas_ItemClick(object sender, ItemClickEventArgs e)
+        {
             FrmEtelaateAshkhas fm = new FrmEtelaateAshkhas();
             //fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.ShowDialog();
+
+        }
+
+        private void btnTafziliProjhe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliProjhe fm = new FrmHesabTafziliProjhe();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliVam_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliVam fm = new FrmHesabTafziliVam();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliMavad_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliMavad fm = new FrmHesabTafziliMavad();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliGhataat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliGhataat fm = new FrmHesabTafziliGhataat();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliMahsol_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliMahsol fm = new FrmHesabTafziliMahsol();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliKala fm = new FrmHesabTafziliKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliMarakezHazine_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliMarakezHazine fm = new FrmHesabTafziliMarakezHazine();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnTafziliSayer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliSayer fm = new FrmHesabTafziliSayer();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnGroupAsliKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmGroupAsliKala fm = new FrmGroupAsliKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnGroupFareeKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmGroupFareeKala fm = new FrmGroupFareeKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+
+        }
+
+        private void btnNameKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmNameKala fm = new FrmNameKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            ActiveForm(fm);
+        }
+
+        private void btnVahedKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmVahedKala fm = new FrmVahedKala();
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);

@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DBHesabdari_PG;
 using HelpClassLibrary;
 using System.Data.Entity.Infrastructure;
+using DBHesabdari_PG.Models.EP.CodingHesabdari;
 
 namespace EtelaatePaye.CodingHesabdari
 {
@@ -381,7 +382,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (btnDelete.Visible)
             {
-                if (gridView1.SelectedRowsCount > 0)
+                if (gridView1.RowCount > 0)
                 {
                     if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
@@ -409,6 +410,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     if (gridView1.RowCount > 0)
                                         gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                    HelpClass1.ClearControls(panelControl1);
                                 }
                                 else
                                     XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -435,7 +437,7 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (btnEdit.Visible)
             {
-                if (gridView1.SelectedRowsCount > 0)
+                if (gridView1.RowCount > 0)
                 {
                     gridControl1.Enabled = false;
                     EditRowIndex = gridView1.FocusedRowHandle;
@@ -449,7 +451,7 @@ namespace EtelaatePaye.CodingHesabdari
                     txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
                     txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                     chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
-                    txtSharhHesab.Text = gridView1.GetFocusedRowCellValue("SharhHesab").ToString();
+                    txtSharhHesab.Text = gridView1.GetFocusedRowCellValue("SharhHesab") != null ? gridView1.GetFocusedRowCellValue("SharhHesab").ToString() :"";
 
                     CodeBeforeEdit = txtCode.Text;
                     IsActiveBeforeEdit = chkIsActive.Checked;
@@ -661,9 +663,20 @@ namespace EtelaatePaye.CodingHesabdari
             btnDelete.Enabled = btnEdit.Enabled = gridView1.RowCount > 0 ? true : false;
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (gridView1.SelectedRowsCount > 0)
+            gridView1_RowCellClick(null, null);
+        }
+
+        private void gridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            gridView1_RowCellClick(null, null);
+
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            if (gridView1.RowCount > 0)
             {
                 txtId.Text = gridView1.GetFocusedRowCellDisplayText("Id");
                 txtCode.Text = gridView1.GetFocusedRowCellDisplayText("Code");
@@ -672,18 +685,7 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharhHesab.Text = gridView1.GetFocusedRowCellDisplayText("SharhHesab");
             }
 
-        }
-
-        private void gridView1_KeyDown(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
-        }
-
-        private void gridView1_KeyUp(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
 
         }
-
     }
 }

@@ -7,6 +7,7 @@
 *	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 8   11:41 ق.ظ
 *	
 ***********************************************************************************/
+using DBHesabdari_PG.Models.Ms.SystemUsers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBHesabdari_PG
+namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpAccessLevelCodingHesabdari
     {

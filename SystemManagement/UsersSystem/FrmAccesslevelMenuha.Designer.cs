@@ -189,7 +189,7 @@
             // 
             // msUserBindingSource
             // 
-            this.msUserBindingSource.DataSource = typeof(DBHesabdari_PG.MsUser);
+            this.msUserBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.SystemUsers.MsUser);
             // 
             // btnCreate
             // 
@@ -496,7 +496,7 @@
             // 
             // msAccessLevelMenusBindingSource
             // 
-            this.msAccessLevelMenusBindingSource.DataSource = typeof(DBHesabdari_PG.MsAccessLevelMenu);
+            this.msAccessLevelMenusBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.SystemUsers.MsAccessLevelMenu);
             // 
             // FrmAccesslevelMenuh
             // 

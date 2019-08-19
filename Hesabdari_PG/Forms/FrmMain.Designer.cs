@@ -78,18 +78,20 @@
             this.btnTafziliSandogh = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliHesabBanki = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliAshkhas = new DevExpress.XtraBars.BarButtonItem();
+            this.btnJoziatEtelaatAshkhas = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliDaraeha = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliProjhe = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliVam = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliMavad = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliGhataat = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliMahsol = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliKala = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliMarakezHazine = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliSayer = new DevExpress.XtraBars.BarButtonItem();
             this.mbsCodingAnbarVaKala = new DevExpress.XtraBars.BarSubItem();
             this.btnListAnbarha = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGroupAsli = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGroupFaree = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGroupAsliKala = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGroupFareeKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnNameKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnVahedKala = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
@@ -285,8 +287,8 @@
             this.btnGroupTafzili,
             this.mbsCodingAnbarVaKala,
             this.btnListAnbarha,
-            this.btnGroupAsli,
-            this.btnGroupFaree,
+            this.btnGroupAsliKala,
+            this.btnGroupFareeKala,
             this.btnNameKala,
             this.btnVahedKala,
             this.barButtonItem24,
@@ -346,17 +348,19 @@
             this.btnTafziliHesabBanki,
             this.btnTafziliAshkhas,
             this.btnTafziliDaraeha,
-            this.barButtonItem19,
-            this.barButtonItem20,
-            this.barButtonItem21,
-            this.barButtonItem22,
-            this.barButtonItem23,
-            this.barButtonItem32,
-            this.barButtonItem34});
+            this.btnTafziliProjhe,
+            this.btnTafziliVam,
+            this.btnTafziliMavad,
+            this.btnTafziliGhataat,
+            this.btnTafziliMahsol,
+            this.btnTafziliMarakezHazine,
+            this.btnTafziliSayer,
+            this.btnJoziatEtelaatAshkhas,
+            this.btnTafziliKala});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 153;
+            this.ribbon.MaxItemId = 155;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
             this.ribbon.PageHeaderMinWidth = 50;
@@ -728,14 +732,16 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliSandogh),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliHesabBanki),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliAshkhas),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnJoziatEtelaatAshkhas),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliDaraeha),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem22),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem23),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem32),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliProjhe),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliVam),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliMavad),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliGhataat),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliMahsol),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliMarakezHazine),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliSayer)});
             this.btnHesabhaTafzili.Name = "btnHesabhaTafzili";
             // 
             // btnTafziliSandogh
@@ -759,6 +765,13 @@
             this.btnTafziliAshkhas.Name = "btnTafziliAshkhas";
             this.btnTafziliAshkhas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliAshkhas_ItemClick);
             // 
+            // btnJoziatEtelaatAshkhas
+            // 
+            this.btnJoziatEtelaatAshkhas.Caption = "جزئیات اطلاعات اشخاص";
+            this.btnJoziatEtelaatAshkhas.Id = 153;
+            this.btnJoziatEtelaatAshkhas.Name = "btnJoziatEtelaatAshkhas";
+            this.btnJoziatEtelaatAshkhas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnJoziatEtelaatAshkhas_ItemClick);
+            // 
             // btnTafziliDaraeha
             // 
             this.btnTafziliDaraeha.Caption = "داراییها";
@@ -766,47 +779,61 @@
             this.btnTafziliDaraeha.Name = "btnTafziliDaraeha";
             this.btnTafziliDaraeha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliDaraeha_ItemClick);
             // 
-            // barButtonItem19
+            // btnTafziliProjhe
             // 
-            this.barButtonItem19.Caption = "پروژه ها";
-            this.barButtonItem19.Id = 146;
-            this.barButtonItem19.Name = "barButtonItem19";
+            this.btnTafziliProjhe.Caption = "پروژه ها";
+            this.btnTafziliProjhe.Id = 146;
+            this.btnTafziliProjhe.Name = "btnTafziliProjhe";
+            this.btnTafziliProjhe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliProjhe_ItemClick);
             // 
-            // barButtonItem20
+            // btnTafziliVam
             // 
-            this.barButtonItem20.Caption = "وامها";
-            this.barButtonItem20.Id = 147;
-            this.barButtonItem20.Name = "barButtonItem20";
+            this.btnTafziliVam.Caption = "وامها";
+            this.btnTafziliVam.Id = 147;
+            this.btnTafziliVam.Name = "btnTafziliVam";
+            this.btnTafziliVam.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliVam_ItemClick);
             // 
-            // barButtonItem21
+            // btnTafziliMavad
             // 
-            this.barButtonItem21.Caption = "مواد";
-            this.barButtonItem21.Id = 148;
-            this.barButtonItem21.Name = "barButtonItem21";
+            this.btnTafziliMavad.Caption = "مواد";
+            this.btnTafziliMavad.Id = 148;
+            this.btnTafziliMavad.Name = "btnTafziliMavad";
+            this.btnTafziliMavad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliMavad_ItemClick);
             // 
-            // barButtonItem22
+            // btnTafziliGhataat
             // 
-            this.barButtonItem22.Caption = "قطعات";
-            this.barButtonItem22.Id = 149;
-            this.barButtonItem22.Name = "barButtonItem22";
+            this.btnTafziliGhataat.Caption = "قطعات";
+            this.btnTafziliGhataat.Id = 149;
+            this.btnTafziliGhataat.Name = "btnTafziliGhataat";
+            this.btnTafziliGhataat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliGhataat_ItemClick);
             // 
-            // barButtonItem23
+            // btnTafziliMahsol
             // 
-            this.barButtonItem23.Caption = "محصول";
-            this.barButtonItem23.Id = 150;
-            this.barButtonItem23.Name = "barButtonItem23";
+            this.btnTafziliMahsol.Caption = "محصول";
+            this.btnTafziliMahsol.Id = 150;
+            this.btnTafziliMahsol.Name = "btnTafziliMahsol";
+            this.btnTafziliMahsol.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliMahsol_ItemClick);
             // 
-            // barButtonItem32
+            // btnTafziliKala
             // 
-            this.barButtonItem32.Caption = "مراکز هزینه";
-            this.barButtonItem32.Id = 151;
-            this.barButtonItem32.Name = "barButtonItem32";
+            this.btnTafziliKala.Caption = "کالا";
+            this.btnTafziliKala.Id = 154;
+            this.btnTafziliKala.Name = "btnTafziliKala";
+            this.btnTafziliKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliKala_ItemClick);
             // 
-            // barButtonItem34
+            // btnTafziliMarakezHazine
             // 
-            this.barButtonItem34.Caption = "سایر";
-            this.barButtonItem34.Id = 152;
-            this.barButtonItem34.Name = "barButtonItem34";
+            this.btnTafziliMarakezHazine.Caption = "مراکز هزینه";
+            this.btnTafziliMarakezHazine.Id = 151;
+            this.btnTafziliMarakezHazine.Name = "btnTafziliMarakezHazine";
+            this.btnTafziliMarakezHazine.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliMarakezHazine_ItemClick);
+            // 
+            // btnTafziliSayer
+            // 
+            this.btnTafziliSayer.Caption = "سایر";
+            this.btnTafziliSayer.Id = 152;
+            this.btnTafziliSayer.Name = "btnTafziliSayer";
+            this.btnTafziliSayer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliSayer_ItemClick);
             // 
             // mbsCodingAnbarVaKala
             // 
@@ -815,8 +842,8 @@
             this.mbsCodingAnbarVaKala.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mbsCodingAnbarVaKala.ImageOptions.Image")));
             this.mbsCodingAnbarVaKala.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnListAnbarha),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupAsli),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupFaree),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupAsliKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupFareeKala),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnNameKala),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnVahedKala)});
             this.mbsCodingAnbarVaKala.Name = "mbsCodingAnbarVaKala";
@@ -829,29 +856,33 @@
             this.btnListAnbarha.Name = "btnListAnbarha";
             this.btnListAnbarha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAnbarha_ItemClick);
             // 
-            // btnGroupAsli
+            // btnGroupAsliKala
             // 
-            this.btnGroupAsli.Caption = "گروه اصلی کالاها";
-            this.btnGroupAsli.Id = 59;
-            this.btnGroupAsli.Name = "btnGroupAsli";
+            this.btnGroupAsliKala.Caption = "گروه اصلی کالاها";
+            this.btnGroupAsliKala.Id = 59;
+            this.btnGroupAsliKala.Name = "btnGroupAsliKala";
+            this.btnGroupAsliKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupAsliKala_ItemClick);
             // 
-            // btnGroupFaree
+            // btnGroupFareeKala
             // 
-            this.btnGroupFaree.Caption = "گروه فرعی کالاها";
-            this.btnGroupFaree.Id = 60;
-            this.btnGroupFaree.Name = "btnGroupFaree";
+            this.btnGroupFareeKala.Caption = "گروه فرعی کالاها";
+            this.btnGroupFareeKala.Id = 60;
+            this.btnGroupFareeKala.Name = "btnGroupFareeKala";
+            this.btnGroupFareeKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupFareeKala_ItemClick);
             // 
             // btnNameKala
             // 
             this.btnNameKala.Caption = "نام کالاها";
             this.btnNameKala.Id = 61;
             this.btnNameKala.Name = "btnNameKala";
+            this.btnNameKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNameKala_ItemClick);
             // 
             // btnVahedKala
             // 
             this.btnVahedKala.Caption = "واحد کالاها";
             this.btnVahedKala.Id = 62;
             this.btnVahedKala.Name = "btnVahedKala";
+            this.btnVahedKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVahedKala_ItemClick);
             // 
             // barButtonItem24
             // 
@@ -1194,7 +1225,7 @@
             // 
             // msMajmoeBindingSource
             // 
-            this.msMajmoeBindingSource.DataSource = typeof(DBHesabdari_PG.MsMajmoe);
+            this.msMajmoeBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.DafaterMali.MsMajmoe);
             // 
             // cmbVahedhaList
             // 
@@ -1223,7 +1254,7 @@
             // 
             // msVahedBindingSource
             // 
-            this.msVahedBindingSource.DataSource = typeof(DBHesabdari_PG.MsVahed);
+            this.msVahedBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.DafaterMali.MsVahed);
             // 
             // barHeaderItem1
             // 
@@ -1258,7 +1289,7 @@
             // 
             // msShobeBindingSource
             // 
-            this.msShobeBindingSource.DataSource = typeof(DBHesabdari_PG.MsShobe);
+            this.msShobeBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.DafaterMali.MsShobe);
             // 
             // cmbDoreMalihaList
             // 
@@ -1287,7 +1318,7 @@
             // 
             // msDoreMaliBindingSource
             // 
-            this.msDoreMaliBindingSource.DataSource = typeof(DBHesabdari_PG.MsDoreMali);
+            this.msDoreMaliBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.DafaterMali.MsDoreMali);
             // 
             // chkDefault
             // 
@@ -1893,9 +1924,9 @@
         private DevExpress.XtraBars.BarButtonItem btnGroupTafzili;
         private DevExpress.XtraBars.BarSubItem mbsCodingAnbarVaKala;
         private DevExpress.XtraBars.BarButtonItem btnListAnbarha;
-        private DevExpress.XtraBars.BarButtonItem btnGroupAsli;
+        private DevExpress.XtraBars.BarButtonItem btnGroupAsliKala;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
-        private DevExpress.XtraBars.BarButtonItem btnGroupFaree;
+        private DevExpress.XtraBars.BarButtonItem btnGroupFareeKala;
         private DevExpress.XtraBars.BarButtonItem btnNameKala;
         private DevExpress.XtraBars.BarButtonItem btnVahedKala;
         private DevExpress.XtraBars.BarSubItem barSubItem7;
@@ -1994,12 +2025,14 @@
         private DevExpress.XtraBars.BarButtonItem btnTafziliHesabBanki;
         private DevExpress.XtraBars.BarButtonItem btnTafziliAshkhas;
         private DevExpress.XtraBars.BarButtonItem btnTafziliDaraeha;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem32;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem34;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliProjhe;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliVam;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliMavad;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliGhataat;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliMahsol;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliMarakezHazine;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliSayer;
+        private DevExpress.XtraBars.BarButtonItem btnJoziatEtelaatAshkhas;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliKala;
     }
 }

@@ -510,7 +510,7 @@
             // 
             // msMajmoesBindingSource
             // 
-            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_PG.MsMajmoe);
+            this.msMajmoesBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.DafaterMali.MsMajmoe);
             // 
             // btnNewCode
             // 
@@ -1551,7 +1551,7 @@
             // 
             // msVahedsBindingSource
             // 
-            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_PG.MsVahed);
+            this.msVahedsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.DafaterMali.MsVahed);
             // 
             // gridView1
             // 
@@ -1581,7 +1581,7 @@
             this.gridView1.OptionsView.RowAutoHeight = true;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
@@ -1720,7 +1720,7 @@
             // 
             // msInfoOthersBindingSource
             // 
-            this.msInfoOthersBindingSource.DataSource = typeof(DBHesabdari_PG.MsInfoOther);
+            this.msInfoOthersBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.DafaterMali.MsInfoOther);
             // 
             // layoutView1
             // 
@@ -2270,6 +2270,7 @@
             this.Controls.Add(this.xtraScrollableControl2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MinimumSize = new System.Drawing.Size(1171, 700);
             this.Name = "FrmListVahedha";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

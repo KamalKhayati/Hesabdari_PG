@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBHesabdari_PG
+namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpHesabTafziliAshkhas
     {
@@ -27,7 +27,7 @@ namespace DBHesabdari_PG
         [Required, MaxLength(100)]
         public string Name { get; set; }
         [Column(TypeName = "Date")]
-        public DateTime TarikhEjad { get; set; }
+        public DateTime? TarikhEjad { get; set; }
         [Required]
         public bool IsActive { get; set; }
         public bool IsPersonel { get; set; }
@@ -41,6 +41,15 @@ namespace DBHesabdari_PG
         public virtual EpGroupTafzili EpGroupTafzili1 { get; set; }
         public virtual EpMoshakhasat_A EpMoshakhasat_A1 { get; set; }
         public virtual ICollection<EpAdress_A> EpAdress_As { get; set; }
+        public virtual ICollection<EpShTamas_A> EpShTamas_As { get; set; }
+        public virtual ICollection<EpEetebarat_A> EpEetebarat_As { get; set; }
+        public virtual ICollection<EpFazaMajazi_A> EpFazaMajazi_As { get; set; }
+        public virtual ICollection<EpHesabBanki_A> EpHesabBanki_As { get; set; }
+        public virtual ICollection<EpDarsadTakhfif_A> EpDarsadTakhfif_As { get; set; }
+        public virtual EpMPersoneli_A EpMPersoneli_A1 { get; set; }
+        public virtual ICollection<EpSahmSahamdar_A> EpSahmSahamdar_As { get; set; }
+        public virtual ICollection<EpDarsadVizitor_A> EpDarsadVizitor_As { get; set; }
+        public virtual ICollection<EpDarsadRanande_A> EpDarsadRanande_As { get; set; }
 
     }
 }

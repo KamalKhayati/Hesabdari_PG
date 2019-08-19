@@ -243,7 +243,7 @@
             // 
             // msActiveSystemBindingSource
             // 
-            this.msActiveSystemBindingSource.DataSource = typeof(DBHesabdari_PG.MsActiveSystem);
+            this.msActiveSystemBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.ActiveSystem.MsActiveSystem);
             // 
             // btnSave
             // 
@@ -505,7 +505,7 @@
             // 
             // epHesabMoinsBindingSource
             // 
-            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.EpHesabMoin);
+            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin);
             // 
             // FrmAccesslevelActiveSystem
             // 

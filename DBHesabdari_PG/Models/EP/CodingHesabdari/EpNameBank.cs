@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBHesabdari_PG
+namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
     public class EpNameBank
     {
@@ -22,6 +22,7 @@ namespace DBHesabdari_PG
         [Required, MaxLength(50)]
         public string Name { get; set; }
         public virtual ICollection<EpHesabTafziliHesabBanki> EpHesabTafziliHesabBankis { get; set; }
+        public virtual ICollection<EpHesabBanki_A> EpHesabBanki_As { get; set; }
 
     }
 }

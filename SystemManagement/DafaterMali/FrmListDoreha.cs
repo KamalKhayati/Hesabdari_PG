@@ -12,6 +12,8 @@ using DBHesabdari_PG;
 using System.Data.Entity;
 using HelpClassLibrary;
 using System.Data.Entity.Infrastructure;
+using DBHesabdari_PG.Models.Ms.DafaterMali;
+using DBHesabdari_PG.Models.Ms.SystemUsers;
 
 namespace SystemManagement.DafaterMali
 {
@@ -535,6 +537,7 @@ namespace SystemManagement.DafaterMali
                                         //XtraMessageBox.Show("عملیات باموفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView1.RowCount > 0)
                                             gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                        HelpClass1.ClearControls(xtraTabPage1);
                                     }
                                 }
                                 else
@@ -895,9 +898,21 @@ namespace SystemManagement.DafaterMali
             btnSave.Focus();
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (gridView1.RowCount > 0 )
+            gridView1_RowCellClick(null, null);
+
+        }
+
+        private void gridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            gridView1_RowCellClick(null, null);
+
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            if (gridView1.RowCount > 0)
             {
                 FillcmbMajmoehaList();
 
@@ -917,17 +932,6 @@ namespace SystemManagement.DafaterMali
 
             }
 
-        }
-
-        private void gridView1_KeyDown(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
-
-        }
-
-        private void gridView1_KeyUp(object sender, KeyEventArgs e)
-        {
-            gridView1_RowClick(null, null);
 
         }
     }

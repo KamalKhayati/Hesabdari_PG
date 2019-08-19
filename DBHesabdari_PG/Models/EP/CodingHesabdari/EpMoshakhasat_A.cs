@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBHesabdari_PG
+namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpMoshakhasat_A
     {
@@ -45,6 +45,7 @@ namespace DBHesabdari_PG
         //public bool IsDefault { get; set; }
         [MaxLength(400)]
         public string Molahezat { get; set; }
+        public byte[] Pictuer { get; set; }
         public virtual EpHesabTafziliAshkhas EpHesabTafziliAshkhas1 { get; set; }
 
     }
