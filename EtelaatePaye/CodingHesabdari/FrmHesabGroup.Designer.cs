@@ -47,6 +47,8 @@
             this.colIndexGroupStandard = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndexNoeHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNameGroupStandard = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -138,6 +140,8 @@
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.gridControl1);
+            this.panelControl4.Controls.Add(this.lblSalMali);
+            this.panelControl4.Controls.Add(this.lblSalId);
             this.panelControl4.Controls.Add(this.lblUserName);
             this.panelControl4.Controls.Add(this.lblUserId);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -323,6 +327,26 @@
             this.colNameGroupStandard.MinWidth = 24;
             this.colNameGroupStandard.Name = "colNameGroupStandard";
             this.colNameGroupStandard.Width = 92;
+            // 
+            // lblSalMali
+            // 
+            this.lblSalMali.Location = new System.Drawing.Point(28, 200);
+            this.lblSalMali.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalMali.Name = "lblSalMali";
+            this.lblSalMali.Size = new System.Drawing.Size(73, 31);
+            this.lblSalMali.TabIndex = 34;
+            this.lblSalMali.Text = "سال مالی";
+            this.lblSalMali.Visible = false;
+            // 
+            // lblSalId
+            // 
+            this.lblSalId.Location = new System.Drawing.Point(28, 143);
+            this.lblSalId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalId.Name = "lblSalId";
+            this.lblSalId.Size = new System.Drawing.Size(78, 31);
+            this.lblSalId.TabIndex = 33;
+            this.lblSalId.Text = "آیدی سال";
+            this.lblSalId.Visible = false;
             // 
             // lblUserName
             // 
@@ -671,10 +695,10 @@
             this.btnNewCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNewCode.Enabled = false;
             this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode.ImageOptions.SvgImage")));
-            this.btnNewCode.Location = new System.Drawing.Point(766, 12);
+            this.btnNewCode.Location = new System.Drawing.Point(754, 12);
             this.btnNewCode.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode.Name = "btnNewCode";
-            this.btnNewCode.Size = new System.Drawing.Size(132, 41);
+            this.btnNewCode.Size = new System.Drawing.Size(144, 41);
             this.btnNewCode.TabIndex = 42;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
@@ -776,7 +800,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1066, 637);
+            this.MinimumSize = new System.Drawing.Size(1066, 636);
             this.Name = "FrmHesabGroup";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -856,5 +880,7 @@
         private System.Windows.Forms.BindingSource epHesabGroupsBindingSource;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnSaveNext;
+        public DevExpress.XtraEditors.LabelControl lblSalId;
+        public DevExpress.XtraEditors.LabelControl lblSalMali;
     }
 }

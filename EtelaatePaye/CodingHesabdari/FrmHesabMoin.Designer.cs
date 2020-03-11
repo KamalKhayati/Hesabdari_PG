@@ -100,6 +100,8 @@
             this.colColId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEpHesabCol1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndexMahiatHesab = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -159,7 +161,7 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(676, 6);
+            this.btnNext.Location = new System.Drawing.Point(678, 6);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(52, 46);
@@ -172,7 +174,7 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(976, 6);
+            this.btnEdit.Location = new System.Drawing.Point(977, 6);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(52, 46);
@@ -186,7 +188,7 @@
             this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(556, 6);
+            this.btnFirst.Location = new System.Drawing.Point(557, 6);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(52, 46);
@@ -198,7 +200,7 @@
             // 
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(736, 6);
+            this.btnLast.Location = new System.Drawing.Point(737, 6);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(52, 46);
@@ -210,7 +212,7 @@
             // 
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl6.AutoEllipsis = true;
-            this.labelControl6.Location = new System.Drawing.Point(1011, 209);
+            this.labelControl6.Location = new System.Drawing.Point(1012, 209);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(114, 31);
@@ -221,7 +223,7 @@
             // 
             this.cmbMahiatHesab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbMahiatHesab.EnterMoveNextControl = true;
-            this.cmbMahiatHesab.Location = new System.Drawing.Point(836, 206);
+            this.cmbMahiatHesab.Location = new System.Drawing.Point(837, 206);
             this.cmbMahiatHesab.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMahiatHesab.Name = "cmbMahiatHesab";
             this.cmbMahiatHesab.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -231,7 +233,7 @@
             "بستانکار",
             "بد / بس"});
             this.cmbMahiatHesab.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbMahiatHesab.Size = new System.Drawing.Size(170, 38);
+            this.cmbMahiatHesab.Size = new System.Drawing.Size(171, 38);
             this.cmbMahiatHesab.TabIndex = 3;
             this.cmbMahiatHesab.Enter += new System.EventHandler(this.cmbMahiatHesab_Enter);
             // 
@@ -239,7 +241,7 @@
             // 
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl5.AutoEllipsis = true;
-            this.labelControl5.Location = new System.Drawing.Point(562, 208);
+            this.labelControl5.Location = new System.Drawing.Point(563, 208);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(122, 31);
@@ -251,7 +253,7 @@
             this.chkIsActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsActive.EditValue = true;
             this.chkIsActive.EnterMoveNextControl = true;
-            this.chkIsActive.Location = new System.Drawing.Point(489, 204);
+            this.chkIsActive.Location = new System.Drawing.Point(491, 204);
             this.chkIsActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
@@ -264,12 +266,12 @@
             // 
             this.gridControl2.DataSource = this.epSharhStandardMoinsBindingSource;
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1150, 251);
+            this.gridControl2.Size = new System.Drawing.Size(1151, 251);
             this.gridControl2.TabIndex = 28;
             this.gridControl2.TabStop = false;
             this.gridControl2.UseEmbeddedNavigator = true;
@@ -364,7 +366,7 @@
             this.chkListBoxActiveSystem.Margin = new System.Windows.Forms.Padding(4);
             this.chkListBoxActiveSystem.MultiColumn = true;
             this.chkListBoxActiveSystem.Name = "chkListBoxActiveSystem";
-            this.chkListBoxActiveSystem.Size = new System.Drawing.Size(1150, 251);
+            this.chkListBoxActiveSystem.Size = new System.Drawing.Size(1151, 251);
             this.chkListBoxActiveSystem.TabIndex = 0;
             this.chkListBoxActiveSystem.TabStop = false;
             this.chkListBoxActiveSystem.ValueMember = "Id";
@@ -380,7 +382,7 @@
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tbpLevel1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1150, 251);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1151, 251);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tbpLevel1,
@@ -393,7 +395,7 @@
             this.tbpLevel1.Controls.Add(this.chkListBoxLevel1);
             this.tbpLevel1.Margin = new System.Windows.Forms.Padding(4);
             this.tbpLevel1.Name = "tbpLevel1";
-            this.tbpLevel1.Size = new System.Drawing.Size(1143, 202);
+            this.tbpLevel1.Size = new System.Drawing.Size(1144, 202);
             this.tbpLevel1.Text = "سطح 1";
             // 
             // chkListBoxLevel1
@@ -407,7 +409,7 @@
             this.chkListBoxLevel1.Margin = new System.Windows.Forms.Padding(4);
             this.chkListBoxLevel1.MultiColumn = true;
             this.chkListBoxLevel1.Name = "chkListBoxLevel1";
-            this.chkListBoxLevel1.Size = new System.Drawing.Size(1143, 202);
+            this.chkListBoxLevel1.Size = new System.Drawing.Size(1144, 202);
             this.chkListBoxLevel1.TabIndex = 0;
             this.chkListBoxLevel1.ValueMember = "Id";
             // 
@@ -420,7 +422,7 @@
             this.tbpLevel2.Controls.Add(this.chkListBoxLevel2);
             this.tbpLevel2.Margin = new System.Windows.Forms.Padding(4);
             this.tbpLevel2.Name = "tbpLevel2";
-            this.tbpLevel2.Size = new System.Drawing.Size(1143, 202);
+            this.tbpLevel2.Size = new System.Drawing.Size(1144, 202);
             this.tbpLevel2.Text = "سطح 2";
             // 
             // chkListBoxLevel2
@@ -429,7 +431,7 @@
             this.chkListBoxLevel2.Location = new System.Drawing.Point(0, 0);
             this.chkListBoxLevel2.Margin = new System.Windows.Forms.Padding(4);
             this.chkListBoxLevel2.Name = "chkListBoxLevel2";
-            this.chkListBoxLevel2.Size = new System.Drawing.Size(1143, 202);
+            this.chkListBoxLevel2.Size = new System.Drawing.Size(1144, 202);
             this.chkListBoxLevel2.TabIndex = 0;
             // 
             // tbpLevel3
@@ -437,7 +439,7 @@
             this.tbpLevel3.Controls.Add(this.chkListBoxLevel3);
             this.tbpLevel3.Margin = new System.Windows.Forms.Padding(4);
             this.tbpLevel3.Name = "tbpLevel3";
-            this.tbpLevel3.Size = new System.Drawing.Size(1143, 202);
+            this.tbpLevel3.Size = new System.Drawing.Size(1144, 202);
             this.tbpLevel3.Text = "سطح 3";
             // 
             // chkListBoxLevel3
@@ -446,14 +448,14 @@
             this.chkListBoxLevel3.Location = new System.Drawing.Point(0, 0);
             this.chkListBoxLevel3.Margin = new System.Windows.Forms.Padding(4);
             this.chkListBoxLevel3.Name = "chkListBoxLevel3";
-            this.chkListBoxLevel3.Size = new System.Drawing.Size(1143, 202);
+            this.chkListBoxLevel3.Size = new System.Drawing.Size(1144, 202);
             this.chkListBoxLevel3.TabIndex = 0;
             // 
             // cmbListHesabCol
             // 
             this.cmbListHesabCol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbListHesabCol.EnterMoveNextControl = true;
-            this.cmbListHesabCol.Location = new System.Drawing.Point(487, 63);
+            this.cmbListHesabCol.Location = new System.Drawing.Point(488, 63);
             this.cmbListHesabCol.Margin = new System.Windows.Forms.Padding(4);
             this.cmbListHesabCol.Name = "cmbListHesabCol";
             this.cmbListHesabCol.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -483,7 +485,7 @@
             // 
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.AutoEllipsis = true;
-            this.labelControl4.Location = new System.Drawing.Point(1016, 66);
+            this.labelControl4.Location = new System.Drawing.Point(1017, 66);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(109, 31);
@@ -494,7 +496,7 @@
             // 
             this.cmbListHesabGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbListHesabGroup.EnterMoveNextControl = true;
-            this.cmbListHesabGroup.Location = new System.Drawing.Point(487, 16);
+            this.cmbListHesabGroup.Location = new System.Drawing.Point(488, 15);
             this.cmbListHesabGroup.Margin = new System.Windows.Forms.Padding(4);
             this.cmbListHesabGroup.Name = "cmbListHesabGroup";
             this.cmbListHesabGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -524,7 +526,7 @@
             // 
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.AutoEllipsis = true;
-            this.labelControl3.Location = new System.Drawing.Point(1016, 19);
+            this.labelControl3.Location = new System.Drawing.Point(1017, 19);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(121, 31);
@@ -534,7 +536,7 @@
             // chkEditCode
             // 
             this.chkEditCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkEditCode.Location = new System.Drawing.Point(804, 118);
+            this.chkEditCode.Location = new System.Drawing.Point(805, 118);
             this.chkEditCode.Margin = new System.Windows.Forms.Padding(4);
             this.chkEditCode.Name = "chkEditCode";
             this.chkEditCode.Properties.Caption = "";
@@ -548,7 +550,7 @@
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.EnterMoveNextControl = true;
-            this.txtName.Location = new System.Drawing.Point(487, 159);
+            this.txtName.Location = new System.Drawing.Point(488, 159);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 50;
@@ -559,7 +561,7 @@
             // 
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.AutoEllipsis = true;
-            this.labelControl2.Location = new System.Drawing.Point(1011, 162);
+            this.labelControl2.Location = new System.Drawing.Point(1012, 162);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(129, 31);
@@ -571,10 +573,10 @@
             this.btnNewCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNewCode.Enabled = false;
             this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode.ImageOptions.SvgImage")));
-            this.btnNewCode.Location = new System.Drawing.Point(659, 109);
+            this.btnNewCode.Location = new System.Drawing.Point(660, 108);
             this.btnNewCode.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode.Name = "btnNewCode";
-            this.btnNewCode.Size = new System.Drawing.Size(137, 41);
+            this.btnNewCode.Size = new System.Drawing.Size(138, 41);
             this.btnNewCode.TabIndex = 35;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
@@ -586,7 +588,7 @@
             this.txtColCode.EditValue = "";
             this.txtColCode.Enabled = false;
             this.txtColCode.EnterMoveNextControl = true;
-            this.txtColCode.Location = new System.Drawing.Point(836, 110);
+            this.txtColCode.Location = new System.Drawing.Point(837, 110);
             this.txtColCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtColCode.Name = "txtColCode";
             this.txtColCode.Properties.Appearance.Options.UseTextOptions = true;
@@ -602,7 +604,7 @@
             this.txtCode.EditValue = "";
             this.txtCode.Enabled = false;
             this.txtCode.EnterMoveNextControl = true;
-            this.txtCode.Location = new System.Drawing.Point(929, 110);
+            this.txtCode.Location = new System.Drawing.Point(931, 110);
             this.txtCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
@@ -619,7 +621,7 @@
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.EditValue = "آیدی ";
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(489, 111);
+            this.txtId.Location = new System.Drawing.Point(491, 111);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Properties.Appearance.Options.UseTextOptions = true;
@@ -636,7 +638,7 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl1.Location = new System.Drawing.Point(1015, 114);
+            this.labelControl1.Location = new System.Drawing.Point(1016, 114);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(79, 31);
@@ -663,8 +665,8 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 292);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1161, 58);
-            this.panelControl2.TabIndex = 26;
+            this.panelControl2.Size = new System.Drawing.Size(1162, 58);
+            this.panelControl2.TabIndex = 25;
             // 
             // btnSaveNext
             // 
@@ -672,7 +674,7 @@
             this.btnSaveNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveNext.Enabled = false;
             this.btnSaveNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveNext.ImageOptions.SvgImage")));
-            this.btnSaveNext.Location = new System.Drawing.Point(856, 6);
+            this.btnSaveNext.Location = new System.Drawing.Point(857, 6);
             this.btnSaveNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveNext.Name = "btnSaveNext";
             this.btnSaveNext.Size = new System.Drawing.Size(52, 46);
@@ -685,7 +687,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(316, 6);
+            this.btnClose.Location = new System.Drawing.Point(317, 6);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(52, 46);
@@ -698,7 +700,7 @@
             // 
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(376, 6);
+            this.btnPrintPreview.Location = new System.Drawing.Point(377, 6);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(52, 46);
@@ -713,7 +715,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(1036, 6);
+            this.btnDelete.Location = new System.Drawing.Point(1037, 6);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(52, 46);
@@ -727,7 +729,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Enabled = false;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(916, 6);
+            this.btnSave.Location = new System.Drawing.Point(917, 6);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(52, 46);
@@ -741,7 +743,7 @@
             this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(616, 6);
+            this.btnPreview.Location = new System.Drawing.Point(617, 6);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(52, 46);
@@ -753,7 +755,7 @@
             // 
             this.btnDisplyActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(496, 6);
+            this.btnDisplyActiveList.Location = new System.Drawing.Point(497, 6);
             this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
             this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
@@ -766,7 +768,7 @@
             // 
             this.btnDisplyNotActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(436, 6);
+            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(437, 6);
             this.btnDisplyNotActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
             this.btnDisplyNotActiveList.Size = new System.Drawing.Size(52, 46);
@@ -780,7 +782,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(796, 6);
+            this.btnCancel.Location = new System.Drawing.Point(798, 6);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(52, 46);
@@ -793,7 +795,7 @@
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(1096, 6);
+            this.btnCreate.Location = new System.Drawing.Point(1097, 6);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(52, 46);
@@ -809,25 +811,27 @@
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.gridControl1);
+            this.panelControl4.Controls.Add(this.lblSalMali);
+            this.panelControl4.Controls.Add(this.lblSalId);
             this.panelControl4.Controls.Add(this.lblUserName);
             this.panelControl4.Controls.Add(this.lblUserId);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1161, 292);
+            this.panelControl4.Size = new System.Drawing.Size(1162, 292);
             this.panelControl4.TabIndex = 26;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.epHesabMoinsBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1157, 288);
+            this.gridControl1.Size = new System.Drawing.Size(1158, 288);
             this.gridControl1.TabIndex = 32;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1061,10 +1065,30 @@
             this.colIndexMahiatHesab.Name = "colIndexMahiatHesab";
             this.colIndexMahiatHesab.Width = 92;
             // 
+            // lblSalMali
+            // 
+            this.lblSalMali.Location = new System.Drawing.Point(28, 208);
+            this.lblSalMali.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalMali.Name = "lblSalMali";
+            this.lblSalMali.Size = new System.Drawing.Size(73, 31);
+            this.lblSalMali.TabIndex = 36;
+            this.lblSalMali.Text = "سال مالی";
+            this.lblSalMali.Visible = false;
+            // 
+            // lblSalId
+            // 
+            this.lblSalId.Location = new System.Drawing.Point(28, 151);
+            this.lblSalId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalId.Name = "lblSalId";
+            this.lblSalId.Size = new System.Drawing.Size(78, 31);
+            this.lblSalId.TabIndex = 35;
+            this.lblSalId.Text = "آیدی سال";
+            this.lblSalId.Visible = false;
+            // 
             // lblUserName
             // 
             this.lblUserName.Location = new System.Drawing.Point(28, 99);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(61, 31);
             this.lblUserName.TabIndex = 31;
@@ -1074,7 +1098,7 @@
             // lblUserId
             // 
             this.lblUserId.Location = new System.Drawing.Point(28, 58);
-            this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lblUserId.Name = "lblUserId";
             this.lblUserId.Size = new System.Drawing.Size(85, 31);
             this.lblUserId.TabIndex = 30;
@@ -1087,7 +1111,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 350);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1161, 304);
+            this.panelControl1.Size = new System.Drawing.Size(1162, 304);
             this.panelControl1.TabIndex = 29;
             // 
             // xtraTabControl3
@@ -1096,7 +1120,7 @@
             this.xtraTabControl3.Location = new System.Drawing.Point(2, 2);
             this.xtraTabControl3.Name = "xtraTabControl3";
             this.xtraTabControl3.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl3.Size = new System.Drawing.Size(1157, 300);
+            this.xtraTabControl3.Size = new System.Drawing.Size(1158, 300);
             this.xtraTabControl3.TabIndex = 0;
             this.xtraTabControl3.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -1125,14 +1149,14 @@
             this.xtraTabPage1.Controls.Add(this.btnNewCode);
             this.xtraTabPage1.Controls.Add(this.txtColCode);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1150, 251);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1151, 251);
             this.xtraTabPage1.Text = "نام حساب";
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txtSharhHesab);
-            this.groupBox2.Location = new System.Drawing.Point(11, 19);
+            this.groupBox2.Location = new System.Drawing.Point(12, 19);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -1156,35 +1180,35 @@
             // 
             this.xtraTabPage2.Controls.Add(this.xtraTabControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1150, 251);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1151, 251);
             this.xtraTabPage2.Text = "ارتباط معین با سطح تفضیلی";
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.chkListBoxActiveSystem);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1150, 251);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1151, 251);
             this.xtraTabPage3.Text = "تعیین دسترسی سیستمهای فعال به معین";
             // 
             // xtraTabPage4
             // 
             this.xtraTabPage4.Controls.Add(this.gridControl2);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1150, 251);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1151, 251);
             this.xtraTabPage4.Text = "شرحهای استاندارد";
             // 
             // FrmHesabMoin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 654);
+            this.ClientSize = new System.Drawing.Size(1162, 654);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1171, 700);
+            this.MinimumSize = new System.Drawing.Size(1066, 637);
             this.Name = "FrmHesabMoin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1321,5 +1345,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.MemoEdit txtSharhHesab;
         private DevExpress.XtraEditors.SimpleButton btnSaveNext;
+        public DevExpress.XtraEditors.LabelControl lblSalMali;
+        public DevExpress.XtraEditors.LabelControl lblSalId;
     }
 }

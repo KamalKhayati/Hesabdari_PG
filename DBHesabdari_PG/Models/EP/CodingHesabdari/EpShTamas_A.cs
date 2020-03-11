@@ -10,6 +10,10 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
     public class EpShTamas_A
     {
         public int Id { get; set; }
+        [Required]
+        public int SalId { get; set; }
+        [Required]
+        public int Code { get; set; }
         //[Required]
         //public int GroupTafziliId { get; set; }
         //[Required, MaxLength(50)]

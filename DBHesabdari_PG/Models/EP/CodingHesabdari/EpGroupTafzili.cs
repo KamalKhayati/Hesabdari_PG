@@ -21,6 +21,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
     {
         public int Id { get; set; }
         [Required]
+        public int SalId { get; set; }
+        [Required]
         public int Code { get; set; }
         [Required, MaxLength(50)]
         public string Name { get; set; }
@@ -41,6 +43,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual ICollection<EpHesabTafziliKala> EpHesabTafziliKalas { get; set; }
         public virtual ICollection<EpHesabTafziliMarakezHazine> EpHesabTafziliMarakezHazines { get; set; }
         public virtual ICollection<EpHesabTafziliSayer> EpHesabTafziliSayers { get; set; }
+        public virtual ICollection<EpAllHesabTafzili> EpAllHesabTafzilis { get; set; }
 
     }
 }

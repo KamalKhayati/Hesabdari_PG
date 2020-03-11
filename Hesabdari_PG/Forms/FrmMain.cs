@@ -462,6 +462,8 @@ namespace Hesabdari_PG.Forms
         }
 
         public bool FirstRunFrmMain = true;
+        public string _SalId = string.Empty;
+        public string _SalMali = string.Empty;
         private void cmbDoreMalihaList_EditValueChanged(object sender, EventArgs e)
         {
             if (Convert.ToInt32(cmbDoreMalihaList.EditValue) > -1)
@@ -469,9 +471,12 @@ namespace Hesabdari_PG.Forms
             if (FirstRunFrmMain == false)
                 HelpClass1.CloseAllOpenForms();
             FirstRunFrmMain = false;
+            _SalId = cmbDoreMalihaList.EditValue.ToString();
+            _SalMali = cmbDoreMalihaList.Edit.GetDisplayText(cmbDoreMalihaList.EditValue);
+
         }
 
-        private void btnTaeenAccessLevelSystemVMenu_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnTaeenAccessLevelSystemVMenu_ItemClick(object sender, ItemClickEventArgs e) 
         {
             FrmAccesslevelMenuh fm = new FrmAccesslevelMenuh();
             fm.MdiParent = this;
@@ -505,6 +510,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
         }
 
@@ -514,6 +521,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
         }
 
@@ -523,6 +532,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
         }
 
@@ -551,6 +562,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
         }
 
@@ -560,6 +573,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -570,6 +585,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -580,6 +597,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -590,6 +609,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -600,6 +621,8 @@ namespace Hesabdari_PG.Forms
             //fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             fm.ShowDialog();
 
         }
@@ -610,6 +633,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -620,6 +645,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -630,6 +657,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -640,6 +669,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -650,6 +681,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -660,6 +693,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -670,6 +705,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }
@@ -680,6 +717,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }

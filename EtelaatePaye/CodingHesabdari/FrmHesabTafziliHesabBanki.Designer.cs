@@ -87,6 +87,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.chkIsDefault = new DevExpress.XtraEditors.CheckEdit();
             this.cmbListGroupTafzili = new DevExpress.XtraEditors.LookUpEdit();
             this.txtStartDate = new DevExpress.XtraEditors.TextEdit();
             this.EpHesabTafziliHesabBankisBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -111,6 +112,8 @@
             this.colNoeArz = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -138,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListGroupTafzili.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpHesabTafziliHesabBankisBindingSource)).BeginInit();
@@ -152,7 +156,7 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(674, 6);
+            this.btnNext.Location = new System.Drawing.Point(675, 6);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(52, 46);
@@ -165,7 +169,7 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(974, 6);
+            this.btnEdit.Location = new System.Drawing.Point(975, 6);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(52, 46);
@@ -179,7 +183,7 @@
             this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(554, 6);
+            this.btnFirst.Location = new System.Drawing.Point(556, 6);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(52, 46);
@@ -191,7 +195,7 @@
             // 
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(734, 6);
+            this.btnLast.Location = new System.Drawing.Point(735, 6);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(52, 46);
@@ -219,7 +223,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 259);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1161, 58);
+            this.panelControl2.Size = new System.Drawing.Size(1162, 58);
             this.panelControl2.TabIndex = 25;
             // 
             // btnSaveNext
@@ -228,7 +232,7 @@
             this.btnSaveNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveNext.Enabled = false;
             this.btnSaveNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveNext.ImageOptions.SvgImage")));
-            this.btnSaveNext.Location = new System.Drawing.Point(854, 6);
+            this.btnSaveNext.Location = new System.Drawing.Point(855, 6);
             this.btnSaveNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveNext.Name = "btnSaveNext";
             this.btnSaveNext.Size = new System.Drawing.Size(52, 46);
@@ -241,7 +245,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(314, 6);
+            this.btnClose.Location = new System.Drawing.Point(315, 6);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(52, 46);
@@ -254,7 +258,7 @@
             // 
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(374, 6);
+            this.btnPrintPreview.Location = new System.Drawing.Point(375, 6);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(52, 46);
@@ -269,7 +273,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(1034, 6);
+            this.btnDelete.Location = new System.Drawing.Point(1035, 6);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(52, 46);
@@ -283,7 +287,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Enabled = false;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(914, 6);
+            this.btnSave.Location = new System.Drawing.Point(915, 6);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(52, 46);
@@ -297,7 +301,7 @@
             this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(614, 6);
+            this.btnPreview.Location = new System.Drawing.Point(615, 6);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(52, 46);
@@ -309,7 +313,7 @@
             // 
             this.btnDisplyActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(494, 6);
+            this.btnDisplyActiveList.Location = new System.Drawing.Point(495, 6);
             this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
             this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
@@ -322,7 +326,7 @@
             // 
             this.btnDisplyNotActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyNotActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyNotActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(434, 6);
+            this.btnDisplyNotActiveList.Location = new System.Drawing.Point(436, 6);
             this.btnDisplyNotActiveList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyNotActiveList.Name = "btnDisplyNotActiveList";
             this.btnDisplyNotActiveList.Size = new System.Drawing.Size(52, 46);
@@ -336,7 +340,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(794, 6);
+            this.btnCancel.Location = new System.Drawing.Point(795, 6);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(52, 46);
@@ -349,7 +353,7 @@
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(1094, 6);
+            this.btnCreate.Location = new System.Drawing.Point(1096, 6);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(52, 46);
@@ -362,7 +366,7 @@
             // 
             this.cmbNoeArz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNoeArz.EnterMoveNextControl = true;
-            this.cmbNoeArz.Location = new System.Drawing.Point(446, 290);
+            this.cmbNoeArz.Location = new System.Drawing.Point(447, 290);
             this.cmbNoeArz.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNoeArz.Name = "cmbNoeArz";
             this.cmbNoeArz.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -378,7 +382,7 @@
             this.cmbNoeArz.Properties.ValueMember = "Id";
             this.cmbNoeArz.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbNoeArz.Size = new System.Drawing.Size(227, 38);
-            this.cmbNoeArz.TabIndex = 11;
+            this.cmbNoeArz.TabIndex = 12;
             this.cmbNoeArz.Enter += new System.EventHandler(this.cmbNoeArz_Enter);
             // 
             // epNoeArzsBindingSource
@@ -389,7 +393,7 @@
             // 
             this.cmbNoeHesab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNoeHesab.EnterMoveNextControl = true;
-            this.cmbNoeHesab.Location = new System.Drawing.Point(446, 194);
+            this.cmbNoeHesab.Location = new System.Drawing.Point(447, 194);
             this.cmbNoeHesab.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNoeHesab.Name = "cmbNoeHesab";
             this.cmbNoeHesab.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -405,7 +409,7 @@
             this.cmbNoeHesab.Properties.ValueMember = "Id";
             this.cmbNoeHesab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbNoeHesab.Size = new System.Drawing.Size(227, 38);
-            this.cmbNoeHesab.TabIndex = 5;
+            this.cmbNoeHesab.TabIndex = 6;
             this.cmbNoeHesab.EditValueChanged += new System.EventHandler(this.txtNoeHesab_EditValueChanged);
             this.cmbNoeHesab.Enter += new System.EventHandler(this.cmbNoeHesab_Enter);
             // 
@@ -417,7 +421,7 @@
             // 
             this.cmbNameBank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameBank.EnterMoveNextControl = true;
-            this.cmbNameBank.Location = new System.Drawing.Point(831, 147);
+            this.cmbNameBank.Location = new System.Drawing.Point(832, 147);
             this.cmbNameBank.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNameBank.Name = "cmbNameBank";
             this.cmbNameBank.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -433,7 +437,7 @@
             this.cmbNameBank.Properties.ValueMember = "Id";
             this.cmbNameBank.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbNameBank.Size = new System.Drawing.Size(208, 38);
-            this.cmbNameBank.TabIndex = 2;
+            this.cmbNameBank.TabIndex = 3;
             this.cmbNameBank.EditValueChanged += new System.EventHandler(this.cmbNameBank_EditValueChanged);
             this.cmbNameBank.Enter += new System.EventHandler(this.cmbNameBank_Enter);
             // 
@@ -450,7 +454,7 @@
             this.btnNoeArz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNoeArz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNoeArz.ImageOptions.Image")));
             this.btnNoeArz.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNoeArz.ImageOptions.SvgImage")));
-            this.btnNoeArz.Location = new System.Drawing.Point(392, 289);
+            this.btnNoeArz.Location = new System.Drawing.Point(393, 289);
             this.btnNoeArz.Margin = new System.Windows.Forms.Padding(4);
             this.btnNoeArz.Name = "btnNoeArz";
             this.btnNoeArz.Size = new System.Drawing.Size(51, 41);
@@ -464,7 +468,7 @@
             this.btnNoeHesab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNoeHesab.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNoeHesab.ImageOptions.Image")));
             this.btnNoeHesab.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNoeHesab.ImageOptions.SvgImage")));
-            this.btnNoeHesab.Location = new System.Drawing.Point(392, 193);
+            this.btnNoeHesab.Location = new System.Drawing.Point(393, 193);
             this.btnNoeHesab.Margin = new System.Windows.Forms.Padding(4);
             this.btnNoeHesab.Name = "btnNoeHesab";
             this.btnNoeHesab.Size = new System.Drawing.Size(51, 41);
@@ -478,7 +482,7 @@
             this.btnNamBank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNamBank.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNamBank.ImageOptions.Image")));
             this.btnNamBank.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNamBank.ImageOptions.SvgImage")));
-            this.btnNamBank.Location = new System.Drawing.Point(777, 146);
+            this.btnNamBank.Location = new System.Drawing.Point(778, 146);
             this.btnNamBank.Margin = new System.Windows.Forms.Padding(4);
             this.btnNamBank.Name = "btnNamBank";
             this.btnNamBank.Size = new System.Drawing.Size(51, 41);
@@ -491,7 +495,7 @@
             // 
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl6.AutoEllipsis = true;
-            this.labelControl6.Location = new System.Drawing.Point(77, 289);
+            this.labelControl6.Location = new System.Drawing.Point(78, 294);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(122, 31);
@@ -503,20 +507,20 @@
             this.chkIsActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsActive.EditValue = true;
             this.chkIsActive.EnterMoveNextControl = true;
-            this.chkIsActive.Location = new System.Drawing.Point(8, 289);
+            this.chkIsActive.Location = new System.Drawing.Point(9, 289);
             this.chkIsActive.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkIsActive.Properties.Caption = "فعال";
             this.chkIsActive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive.Size = new System.Drawing.Size(64, 39);
-            this.chkIsActive.TabIndex = 12;
+            this.chkIsActive.TabIndex = 14;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txtSharhHesab);
-            this.groupBox2.Location = new System.Drawing.Point(6, 8);
+            this.groupBox2.Location = new System.Drawing.Point(7, 8);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -539,7 +543,7 @@
             // chkEditCode
             // 
             this.chkEditCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkEditCode.Location = new System.Drawing.Point(837, 61);
+            this.chkEditCode.Location = new System.Drawing.Point(838, 61);
             this.chkEditCode.Margin = new System.Windows.Forms.Padding(4);
             this.chkEditCode.Name = "chkEditCode";
             this.chkEditCode.Properties.Caption = "";
@@ -553,18 +557,18 @@
             // 
             this.txtShomareShaba.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareShaba.EnterMoveNextControl = true;
-            this.txtShomareShaba.Location = new System.Drawing.Point(392, 243);
+            this.txtShomareShaba.Location = new System.Drawing.Point(393, 242);
             this.txtShomareShaba.Margin = new System.Windows.Forms.Padding(4);
             this.txtShomareShaba.Name = "txtShomareShaba";
             this.txtShomareShaba.Properties.MaxLength = 40;
             this.txtShomareShaba.Size = new System.Drawing.Size(281, 38);
-            this.txtShomareShaba.TabIndex = 8;
+            this.txtShomareShaba.TabIndex = 9;
             // 
             // txtShomareKart
             // 
             this.txtShomareKart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareKart.EnterMoveNextControl = true;
-            this.txtShomareKart.Location = new System.Drawing.Point(777, 243);
+            this.txtShomareKart.Location = new System.Drawing.Point(778, 242);
             this.txtShomareKart.Margin = new System.Windows.Forms.Padding(4);
             this.txtShomareKart.Name = "txtShomareKart";
             this.txtShomareKart.Properties.Mask.BeepOnError = true;
@@ -573,52 +577,52 @@
             this.txtShomareKart.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtShomareKart.Properties.MaxLength = 40;
             this.txtShomareKart.Size = new System.Drawing.Size(262, 38);
-            this.txtShomareKart.TabIndex = 7;
+            this.txtShomareKart.TabIndex = 8;
             // 
             // txtShomareHesab
             // 
             this.txtShomareHesab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareHesab.EnterMoveNextControl = true;
-            this.txtShomareHesab.Location = new System.Drawing.Point(6, 194);
+            this.txtShomareHesab.Location = new System.Drawing.Point(7, 194);
             this.txtShomareHesab.Margin = new System.Windows.Forms.Padding(4);
             this.txtShomareHesab.Name = "txtShomareHesab";
             this.txtShomareHesab.Properties.MaxLength = 40;
             this.txtShomareHesab.Size = new System.Drawing.Size(235, 38);
-            this.txtShomareHesab.TabIndex = 6;
+            this.txtShomareHesab.TabIndex = 7;
             this.txtShomareHesab.EditValueChanged += new System.EventHandler(this.txtShomareHesab_EditValueChanged);
             // 
             // txtShomareMoshtari
             // 
             this.txtShomareMoshtari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareMoshtari.EnterMoveNextControl = true;
-            this.txtShomareMoshtari.Location = new System.Drawing.Point(6, 244);
+            this.txtShomareMoshtari.Location = new System.Drawing.Point(7, 244);
             this.txtShomareMoshtari.Margin = new System.Windows.Forms.Padding(4);
             this.txtShomareMoshtari.Name = "txtShomareMoshtari";
             this.txtShomareMoshtari.Properties.MaxLength = 40;
             this.txtShomareMoshtari.Size = new System.Drawing.Size(235, 38);
-            this.txtShomareMoshtari.TabIndex = 9;
+            this.txtShomareMoshtari.TabIndex = 10;
             // 
             // txtCodeShobe
             // 
             this.txtCodeShobe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodeShobe.EnterMoveNextControl = true;
-            this.txtCodeShobe.Location = new System.Drawing.Point(831, 194);
+            this.txtCodeShobe.Location = new System.Drawing.Point(832, 194);
             this.txtCodeShobe.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodeShobe.Name = "txtCodeShobe";
             this.txtCodeShobe.Properties.MaxLength = 10;
             this.txtCodeShobe.Size = new System.Drawing.Size(208, 38);
-            this.txtCodeShobe.TabIndex = 4;
+            this.txtCodeShobe.TabIndex = 5;
             // 
             // txtNameShobe
             // 
             this.txtNameShobe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameShobe.EnterMoveNextControl = true;
-            this.txtNameShobe.Location = new System.Drawing.Point(445, 147);
+            this.txtNameShobe.Location = new System.Drawing.Point(447, 147);
             this.txtNameShobe.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameShobe.Name = "txtNameShobe";
             this.txtNameShobe.Properties.MaxLength = 40;
             this.txtNameShobe.Size = new System.Drawing.Size(228, 38);
-            this.txtNameShobe.TabIndex = 3;
+            this.txtNameShobe.TabIndex = 4;
             this.txtNameShobe.EditValueChanged += new System.EventHandler(this.txtNameShobe_EditValueChanged);
             // 
             // labelControl14
@@ -627,7 +631,7 @@
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl14.Appearance.Options.UseForeColor = true;
             this.labelControl14.AutoEllipsis = true;
-            this.labelControl14.Location = new System.Drawing.Point(684, 294);
+            this.labelControl14.Location = new System.Drawing.Point(685, 294);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(51, 31);
@@ -638,7 +642,7 @@
             // 
             this.labelControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl12.AutoEllipsis = true;
-            this.labelControl12.Location = new System.Drawing.Point(684, 246);
+            this.labelControl12.Location = new System.Drawing.Point(685, 246);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(75, 31);
@@ -651,7 +655,7 @@
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl9.Appearance.Options.UseForeColor = true;
             this.labelControl9.AutoEllipsis = true;
-            this.labelControl9.Location = new System.Drawing.Point(684, 198);
+            this.labelControl9.Location = new System.Drawing.Point(685, 198);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(87, 31);
@@ -662,7 +666,7 @@
             // 
             this.labelControl13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl13.AutoEllipsis = true;
-            this.labelControl13.Location = new System.Drawing.Point(248, 247);
+            this.labelControl13.Location = new System.Drawing.Point(249, 247);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(107, 31);
@@ -673,7 +677,7 @@
             // 
             this.labelControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl11.AutoEllipsis = true;
-            this.labelControl11.Location = new System.Drawing.Point(1051, 247);
+            this.labelControl11.Location = new System.Drawing.Point(1052, 247);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(88, 31);
@@ -686,7 +690,7 @@
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl10.Appearance.Options.UseForeColor = true;
             this.labelControl10.AutoEllipsis = true;
-            this.labelControl10.Location = new System.Drawing.Point(248, 198);
+            this.labelControl10.Location = new System.Drawing.Point(249, 198);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(103, 31);
@@ -697,7 +701,7 @@
             // 
             this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl8.AutoEllipsis = true;
-            this.labelControl8.Location = new System.Drawing.Point(1051, 198);
+            this.labelControl8.Location = new System.Drawing.Point(1052, 198);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(65, 31);
@@ -708,12 +712,13 @@
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.EnterMoveNextControl = true;
-            this.txtName.Location = new System.Drawing.Point(445, 100);
+            this.txtName.Location = new System.Drawing.Point(447, 100);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 100;
+            this.txtName.Properties.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(594, 38);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 2;
             this.txtName.TabStop = false;
             // 
             // labelControl4
@@ -722,7 +727,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.AutoEllipsis = true;
-            this.labelControl4.Location = new System.Drawing.Point(684, 150);
+            this.labelControl4.Location = new System.Drawing.Point(685, 149);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(67, 31);
@@ -733,7 +738,7 @@
             // 
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl7.AutoEllipsis = true;
-            this.labelControl7.Location = new System.Drawing.Point(1051, 294);
+            this.labelControl7.Location = new System.Drawing.Point(1052, 294);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(93, 31);
@@ -746,7 +751,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl5.Appearance.Options.UseForeColor = true;
             this.labelControl5.AutoEllipsis = true;
-            this.labelControl5.Location = new System.Drawing.Point(1051, 151);
+            this.labelControl5.Location = new System.Drawing.Point(1052, 151);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(65, 31);
@@ -757,7 +762,7 @@
             // 
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.AutoEllipsis = true;
-            this.labelControl2.Location = new System.Drawing.Point(1051, 104);
+            this.labelControl2.Location = new System.Drawing.Point(1052, 104);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(81, 31);
@@ -769,7 +774,7 @@
             this.btnNewCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNewCode.Enabled = false;
             this.btnNewCode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode.ImageOptions.SvgImage")));
-            this.btnNewCode.Location = new System.Drawing.Point(702, 52);
+            this.btnNewCode.Location = new System.Drawing.Point(703, 52);
             this.btnNewCode.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(127, 41);
@@ -787,7 +792,7 @@
             this.txtCodeGroupTafzili.EditValue = "";
             this.txtCodeGroupTafzili.Enabled = false;
             this.txtCodeGroupTafzili.EnterMoveNextControl = true;
-            this.txtCodeGroupTafzili.Location = new System.Drawing.Point(869, 53);
+            this.txtCodeGroupTafzili.Location = new System.Drawing.Point(870, 53);
             this.txtCodeGroupTafzili.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodeGroupTafzili.Name = "txtCodeGroupTafzili";
             this.txtCodeGroupTafzili.Properties.Appearance.Options.UseTextOptions = true;
@@ -805,16 +810,16 @@
             this.txtCode.EditValue = "";
             this.txtCode.Enabled = false;
             this.txtCode.EnterMoveNextControl = true;
-            this.txtCode.Location = new System.Drawing.Point(931, 53);
+            this.txtCode.Location = new System.Drawing.Point(932, 53);
             this.txtCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtCode.Properties.Mask.EditMask = "00000";
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCode.Properties.MaxLength = 5;
+            this.txtCode.Properties.MaxLength = 6;
             this.txtCode.Size = new System.Drawing.Size(108, 38);
-            this.txtCode.TabIndex = 20;
+            this.txtCode.TabIndex = 1;
             this.txtCode.TabStop = false;
             // 
             // txtId
@@ -822,7 +827,7 @@
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.EditValue = "آیدی صندوق";
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(445, 53);
+            this.txtId.Location = new System.Drawing.Point(447, 53);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Properties.Appearance.Options.UseTextOptions = true;
@@ -841,7 +846,7 @@
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(1046, 10);
+            this.labelControl3.Location = new System.Drawing.Point(1047, 10);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(101, 31);
@@ -853,7 +858,7 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(1051, 56);
+            this.labelControl1.Location = new System.Drawing.Point(1052, 56);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(79, 31);
@@ -862,6 +867,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.chkIsDefault);
             this.panelControl1.Controls.Add(this.cmbListGroupTafzili);
             this.panelControl1.Controls.Add(this.txtStartDate);
             this.panelControl1.Controls.Add(this.cmbNoeArz);
@@ -903,14 +909,26 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 317);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1161, 337);
+            this.panelControl1.Size = new System.Drawing.Size(1162, 337);
             this.panelControl1.TabIndex = 28;
+            // 
+            // chkIsDefault
+            // 
+            this.chkIsDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkIsDefault.EnterMoveNextControl = true;
+            this.chkIsDefault.Location = new System.Drawing.Point(208, 290);
+            this.chkIsDefault.Margin = new System.Windows.Forms.Padding(4);
+            this.chkIsDefault.Name = "chkIsDefault";
+            this.chkIsDefault.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.chkIsDefault.Properties.Caption = "بانک پیش فرض";
+            this.chkIsDefault.Size = new System.Drawing.Size(177, 39);
+            this.chkIsDefault.TabIndex = 13;
             // 
             // cmbListGroupTafzili
             // 
             this.cmbListGroupTafzili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbListGroupTafzili.EnterMoveNextControl = true;
-            this.cmbListGroupTafzili.Location = new System.Drawing.Point(702, 7);
+            this.cmbListGroupTafzili.Location = new System.Drawing.Point(703, 7);
             this.cmbListGroupTafzili.Margin = new System.Windows.Forms.Padding(4);
             this.cmbListGroupTafzili.Name = "cmbListGroupTafzili";
             this.cmbListGroupTafzili.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -928,7 +946,7 @@
             this.cmbListGroupTafzili.Properties.ValueMember = "Id";
             this.cmbListGroupTafzili.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListGroupTafzili.Size = new System.Drawing.Size(337, 38);
-            this.cmbListGroupTafzili.TabIndex = 36;
+            this.cmbListGroupTafzili.TabIndex = 0;
             this.cmbListGroupTafzili.TabStop = false;
             this.cmbListGroupTafzili.EditValueChanged += new System.EventHandler(this.cmbListGroupTafzili_EditValueChanged);
             // 
@@ -936,7 +954,7 @@
             // 
             this.txtStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStartDate.EnterMoveNextControl = true;
-            this.txtStartDate.Location = new System.Drawing.Point(831, 291);
+            this.txtStartDate.Location = new System.Drawing.Point(832, 291);
             this.txtStartDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.Properties.Appearance.Options.UseTextOptions = true;
@@ -950,7 +968,7 @@
             this.txtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtStartDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtStartDate.Size = new System.Drawing.Size(208, 38);
-            this.txtStartDate.TabIndex = 10;
+            this.txtStartDate.TabIndex = 11;
             // 
             // EpHesabTafziliHesabBankisBindingSource
             // 
@@ -1266,12 +1284,12 @@
             // 
             this.gridControl1.DataSource = this.EpHesabTafziliHesabBankisBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1157, 255);
+            this.gridControl1.Size = new System.Drawing.Size(1158, 255);
             this.gridControl1.TabIndex = 32;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1279,19 +1297,41 @@
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.gridControl1);
+            this.panelControl4.Controls.Add(this.lblSalMali);
+            this.panelControl4.Controls.Add(this.lblSalId);
             this.panelControl4.Controls.Add(this.lblUserName);
             this.panelControl4.Controls.Add(this.lblUserId);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1161, 259);
+            this.panelControl4.Size = new System.Drawing.Size(1162, 259);
             this.panelControl4.TabIndex = 26;
+            // 
+            // lblSalMali
+            // 
+            this.lblSalMali.Location = new System.Drawing.Point(28, 200);
+            this.lblSalMali.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalMali.Name = "lblSalMali";
+            this.lblSalMali.Size = new System.Drawing.Size(73, 31);
+            this.lblSalMali.TabIndex = 36;
+            this.lblSalMali.Text = "سال مالی";
+            this.lblSalMali.Visible = false;
+            // 
+            // lblSalId
+            // 
+            this.lblSalId.Location = new System.Drawing.Point(28, 143);
+            this.lblSalId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalId.Name = "lblSalId";
+            this.lblSalId.Size = new System.Drawing.Size(78, 31);
+            this.lblSalId.TabIndex = 35;
+            this.lblSalId.Text = "آیدی سال";
+            this.lblSalId.Visible = false;
             // 
             // lblUserName
             // 
             this.lblUserName.Location = new System.Drawing.Point(28, 99);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(61, 31);
             this.lblUserName.TabIndex = 31;
@@ -1301,7 +1341,7 @@
             // lblUserId
             // 
             this.lblUserId.Location = new System.Drawing.Point(28, 58);
-            this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lblUserId.Name = "lblUserId";
             this.lblUserId.Size = new System.Drawing.Size(85, 31);
             this.lblUserId.TabIndex = 30;
@@ -1312,18 +1352,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 654);
+            this.ClientSize = new System.Drawing.Size(1162, 654);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1171, 700);
+            this.MinimumSize = new System.Drawing.Size(1066, 637);
             this.Name = "FrmHesabTafziliHesabBanki";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " حساب تفضیلی حساب بانکی";
+            this.Text = " حساب تفضیلی حسابهای بانکی";
             this.Load += new System.EventHandler(this.FrmHesabTafziliHesabBamki_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabTafziliHesabBamki_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -1352,6 +1392,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbListGroupTafzili.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpHesabTafziliHesabBankisBindingSource)).EndInit();
@@ -1446,5 +1487,8 @@
         private DevExpress.XtraEditors.SimpleButton btnSaveNext;
         public DevExpress.XtraEditors.TextEdit txtStartDate;
         public DevExpress.XtraEditors.LookUpEdit cmbListGroupTafzili;
+        public DevExpress.XtraEditors.LabelControl lblSalMali;
+        public DevExpress.XtraEditors.LabelControl lblSalId;
+        private DevExpress.XtraEditors.CheckEdit chkIsDefault;
     }
 }

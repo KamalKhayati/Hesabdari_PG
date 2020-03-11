@@ -590,6 +590,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     //fm.MdiParent = this;
                                     fm.lblUserId.Text = lblUserId.Text;
                                     fm.lblUserName.Text = lblUserName.Text;
+                                    fm.lblSalId.Text = lblSalId.Text;
+                                    fm.lblSalMali.Text = lblSalMali.Text;
                                     // ActiveForm(fm);
                                     fm.cmbGroupTafzili.EditValue = Convert.ToInt32(cmbListGroupTafzili.EditValue);
                                     int _Code = Convert.ToInt32(txtCodeGroupTafzili.Text + txtCode.Text);
@@ -734,6 +736,8 @@ namespace EtelaatePaye.CodingHesabdari
                                         //fm.MdiParent = this;
                                         fm.lblUserId.Text = lblUserId.Text;
                                         fm.lblUserName.Text = lblUserName.Text;
+                                        fm.lblSalId.Text = lblSalId.Text;
+                                        fm.lblSalMali.Text = lblSalMali.Text;
                                         // ActiveForm(fm);
                                         fm.cmbGroupTafzili.EditValue = Convert.ToInt32(cmbListGroupTafzili.EditValue);
                                         fm.cmbTafziliAshkhas.EditValue = Convert.ToInt32(txtId.Text);
@@ -837,6 +841,8 @@ namespace EtelaatePaye.CodingHesabdari
             //fm.MdiParent = this;
             fm.lblUserId.Text = lblUserId.Text;
             fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
             // ActiveForm(fm);
             fm.cmbGroupTafzili.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupTafziliId"));
             fm.cmbTafziliAshkhas.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());

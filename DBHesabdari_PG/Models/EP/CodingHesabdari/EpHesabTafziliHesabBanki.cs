@@ -21,6 +21,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
     {
         public int Id { get; set; }
         [Required]
+        public int SalId { get; set; }
+        [Required]
         public int Code { get; set; }
         [Required, MaxLength(100)]
         public string Name { get; set; }
@@ -44,6 +46,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(40)]
         public string NoeArz { get; set; }
         [Required]
+        public bool IsDefault { get; set; }
+        [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
@@ -59,6 +63,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int NoeArzId { get; set; }
         public virtual EpNoeArz EpNoeArz1 { get; set; }
+        public virtual EpAllHesabTafzili EpAllHesabTafzili1 { get; set; }
 
     }
 }

@@ -41,9 +41,10 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
                     if (IsActiveList == true)
                     {
-                        var q1 = dataContext.EpHesabGroups.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
+                        var q1 = dataContext.EpHesabGroups.Where(s => s.IsActive == true && s.SalId==_SallId).OrderBy(s => s.Code).ToList();
                         if (lblUserId.Text == "1")
                         {
                             if (q1.Count > 0)
@@ -79,7 +80,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q = dataContext.EpHesabGroups.Where(p => p.IsActive == false).OrderBy(s => s.Code).ToList();
+                            var q = dataContext.EpHesabGroups.Where(s => s.IsActive == false && s.SalId == _SallId).OrderBy(s => s.Code).ToList();
                             if (q.Count > 0)
                                 epHesabGroupsBindingSource.DataSource = q;
                             else
@@ -507,6 +508,7 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpHesabGroup obj = new EpHesabGroup();
+                                obj.SalId = Convert.ToInt32(lblSalId.Text);
                                 obj.Code = Convert.ToInt32(txtCode.Text);
                                 obj.Name = txtName.Text;
                                 obj.IsActive = chkIsActive.Checked;
@@ -522,6 +524,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 var q = db.EpHesabGroups.FirstOrDefault(s => s.Code == _code);
                                 ////////////////////////////////////// اضافه کردن حساب گروه به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
+                                n1.SalId = Convert.ToInt32(lblSalId.Text);
                                 n1.KeyId = _code;
                                 n1.ParentId = _code;
                                 n1.LevelName = txtName.Text;

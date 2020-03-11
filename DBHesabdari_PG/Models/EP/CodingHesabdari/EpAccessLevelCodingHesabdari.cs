@@ -23,6 +23,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
+        public int SalId { get; set; }
+        [Required]
         public int KeyId { get; set; }
         [Required]
         public int ParentId { get; set; }

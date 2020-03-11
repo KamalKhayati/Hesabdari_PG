@@ -459,11 +459,14 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
                     if (db.EpNameBanks.Any())
                     {
-                        db.EpNameBanks.Load();
+                        db.EpNameBanks.Where(s => s.SalId == _SallId).OrderBy(s => s.Id).Load();
                         epNameBanksBindingSource.DataSource = db.EpNameBanks.Local.ToBindingList();
                     }
+                    else
+                        epNameBanksBindingSource.DataSource = null;
                 }
                 catch (Exception ex)
                 {
@@ -4928,6 +4931,8 @@ namespace EtelaatePaye.CodingHesabdari
             FrmNameAdress fm = new FrmNameAdress(this);
             fm.lblUserId.Text = lblUserId.Text;
             fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
             fm.ShowDialog();
         }
 
@@ -4937,6 +4942,8 @@ namespace EtelaatePaye.CodingHesabdari
             fm.lblUserId.Text = lblUserId.Text;
             fm.lblUserName.Text = lblUserName.Text;
             fm.IsActiveFrmNameOstan = true;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
             fm.ShowDialog();
         }
 
@@ -4945,6 +4952,8 @@ namespace EtelaatePaye.CodingHesabdari
             FrmNameShahrstan fm = new FrmNameShahrstan(this);
             fm.lblUserId.Text = lblUserId.Text;
             fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
             fm.ShowDialog();
         }
 
@@ -5031,6 +5040,10 @@ namespace EtelaatePaye.CodingHesabdari
         private void btnNamBank_Click(object sender, EventArgs e)
         {
             FrmNameBank fm = new FrmNameBank(this);
+            fm.lblUserId.Text = lblUserId.Text;
+            fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
             fm.ShowDialog();
 
         }

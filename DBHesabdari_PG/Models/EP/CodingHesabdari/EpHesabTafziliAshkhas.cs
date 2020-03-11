@@ -20,8 +20,10 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
    public class EpHesabTafziliAshkhas
     {
         public int Id { get; set; }
-        [Required, MaxLength(50)]
-        public string GroupTafzili { get; set; }
+        [Required]
+        public int AllId { get; set; }
+        [Required]
+        public int SalId { get; set; }
         [Required]
         public int Code { get; set; }
         [Required, MaxLength(100)]
@@ -36,6 +38,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public bool IsRanande { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        [Required, MaxLength(50)]
+        public string GroupTafzili { get; set; }
         [Required]
         public int GroupTafziliId { get; set; }
         public virtual EpGroupTafzili EpGroupTafzili1 { get; set; }

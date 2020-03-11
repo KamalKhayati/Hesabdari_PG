@@ -19,6 +19,10 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
    public class EpNameOstan
     {
         public int Id { get; set; }
+        [Required]
+        public int SalId { get; set; }
+        [Required]
+        public int Code { get; set; }
         [Required, MaxLength(50)]
         public string Name { get; set; }
         public virtual ICollection<EpAdress_A> EpAdress_As { get; set; }

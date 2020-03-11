@@ -19,10 +19,16 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
     public class EpSharhStandardMoin
     {
         public int Id { get; set; }
+        [Required]
+        public int SalId { get; set; }
+        //[Required]
+        //public int Code { get; set; }
         [Required, MaxLength(500)]
         public string Name { get; set; }
         [Required]
         public int MoinId { get; set; }
+        [Required]
+        public int MoinCode { get; set; }
         public virtual EpHesabMoin EpHesabMoin1 { get; set; }
 
     }

@@ -85,6 +85,7 @@
     <Compile Include="Models\EP\CodingAnbar\EpNameKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpTaminKonandeKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpVahedKala.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAllHesabTafzili.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpDarsadRanande_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpDarsadTakhfif_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpDarsadVizitor_A.cs" />

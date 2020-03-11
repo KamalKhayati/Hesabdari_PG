@@ -41,9 +41,10 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
                     if (IsActiveList == true)
                     {
-                        var q1 = dataContext.EpHesabCols.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
+                        var q1 = dataContext.EpHesabCols.Where(s => s.IsActive == true && s.SalId == _SallId).OrderBy(s => s.Code).ToList();
                         if (lblUserId.Text == "1")
                         {
                             if (q1.Count > 0)
@@ -79,7 +80,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q = dataContext.EpHesabCols.Where(p => p.IsActive == false).OrderBy(s => s.Code).ToList();
+                            var q = dataContext.EpHesabCols.Where(s => s.IsActive == false && s.SalId == _SallId).OrderBy(s => s.Code).ToList();
                             if (q.Count > 0)
                                 epHesabColsBindingSource.DataSource = q;
                             else
@@ -107,14 +108,15 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     if (db.EpHesabGroups.Any())
                     {
+                        int _SallId = Convert.ToInt32(lblSalId.Text);
                         if (IsActiveList == true)
                         {
-                            db.EpHesabGroups.Where(s => s.IsActive == true).Load();
+                            db.EpHesabGroups.Where(s => s.IsActive == true && s.SalId == _SallId).OrderBy(s => s.Code).Load();
                             epHesabGroupsBindingSource.DataSource = db.EpHesabGroups.Local.ToBindingList();
                         }
                         else
                         {
-                            db.EpHesabGroups.Load();
+                            db.EpHesabGroups.Where(s => s.SalId == _SallId).OrderBy(s => s.Code).Load();
                             epHesabGroupsBindingSource.DataSource = db.EpHesabGroups.Local.ToBindingList();
                         }
                     }
@@ -535,6 +537,7 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpHesabCol obj = new EpHesabCol();
+                                obj.SalId = Convert.ToInt32(lblSalId.Text);
                                 obj.Code = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
                                 obj.Name = txtName.Text;
                                 obj.IsActive = chkIsActive.Checked;
@@ -551,6 +554,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 var q = db.EpHesabCols.FirstOrDefault(s => s.Code == _code);
                                 ////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
+                                n1.SalId = Convert.ToInt32(lblSalId.Text);
                                 n1.KeyId = _code;
                                 n1.ParentId = Convert.ToInt32(txtGroupCode.Text);
                                 n1.LevelName = txtName.Text;

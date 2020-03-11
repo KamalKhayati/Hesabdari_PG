@@ -41,7 +41,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    var q1 = dataContext.EpNoeHesabs.ToList();
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
+                    var q1 = dataContext.EpNoeHesabs.Where(s => s.SalId == _SallId).OrderBy(s => s.Id).ToList();
                     if (q1.Count > 0)
                         epNoeHesabsBindingSource.DataSource = q1;
                     else
@@ -101,11 +102,12 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     try
                     {
+                        int _SallId = Convert.ToInt32(lblSalId.Text);
                         if (En == EnumCED.Create)
                         {
                             if (db.EpNoeHesabs.Any())
                             {
-                                var q1 = db.EpNoeHesabs.FirstOrDefault(p => p.Name == txtName.Text);
+                                var q1 = db.EpNoeHesabs.FirstOrDefault(p => p.SalId == _SallId && p.Name == txtName.Text);
                                 if (q1 != null)
                                 {
                                     XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -116,7 +118,7 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.EpNoeHesabs.FirstOrDefault(p => p.Id != RowId && p.Name == txtName.Text);
+                            var q1 = db.EpNoeHesabs.FirstOrDefault(p => p.SalId == _SallId && p.Id != RowId && p.Name == txtName.Text);
                             if (q1 != null)
                             {
                                 XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -245,8 +247,9 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                                var q = db.EpNoeHesabs.FirstOrDefault(p => p.Id == RowId);
+                                var q = db.EpNoeHesabs.FirstOrDefault(p =>p.SalId== _SallId && p.Id == RowId);
                                 //var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
                                 if (q != null /*&& q8 != null*/)
                                 {
@@ -298,8 +301,8 @@ namespace EtelaatePaye.CodingHesabdari
 
                     txtName.Focus();
                 }
-
-            }        }
+            }
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -314,6 +317,7 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpNoeHesab obj = new EpNoeHesab();
+                                obj.SalId = Convert.ToInt32(lblSalId.Text);
                                 obj.Name = txtName.Text;
 
                                 db.EpNoeHesabs.Add(obj);
@@ -351,9 +355,10 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
                                 string _Name = txtName.Text;
                                 int RowId = Convert.ToInt32(txtId.Text);
-                                var q = db.EpNoeHesabs.FirstOrDefault(p => p.Id == RowId);
+                                var q = db.EpNoeHesabs.FirstOrDefault(p => p.SalId == _SallId && p.Id == RowId);
                                 if (q != null)
                                 {
                                     q.Name = _Name;
@@ -492,6 +497,8 @@ namespace EtelaatePaye.CodingHesabdari
         private void FrmNoeHesab_FormClosing(object sender, FormClosingEventArgs e)
         {
             Fm.FillcmbNoeHesab();
+            //Fm.cmbNoeHesab_Enter(null, null);
+
         }
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)

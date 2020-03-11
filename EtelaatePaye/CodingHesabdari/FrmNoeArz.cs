@@ -41,7 +41,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    var q1 = dataContext.EpNoeArzs.ToList();
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
+                    var q1 = dataContext.EpNoeArzs.Where(s => s.SalId == _SallId).OrderBy(s => s.Id).ToList();
                     if (q1.Count > 0)
                         epNoeArzsBindingSource.DataSource = q1;
                     else
@@ -101,11 +102,12 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     try
                     {
+                        int _SallId = Convert.ToInt32(lblSalId.Text);
                         if (En == EnumCED.Create)
                         {
                             if (db.EpNoeArzs.Any())
                             {
-                                var q1 = db.EpNoeArzs.FirstOrDefault(p => p.Name == txtName.Text);
+                                var q1 = db.EpNoeArzs.FirstOrDefault(p => p.SalId == _SallId && p.Name == txtName.Text);
                                 if (q1 != null)
                                 {
                                     XtraMessageBox.Show("این ارز قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -116,7 +118,7 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.EpNoeArzs.FirstOrDefault(p => p.Id != RowId && p.Name == txtName.Text);
+                            var q1 = db.EpNoeArzs.FirstOrDefault(p => p.SalId == _SallId && p.Id != RowId && p.Name == txtName.Text);
                             if (q1 != null)
                             {
                                 XtraMessageBox.Show("این ارز قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -245,8 +247,9 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                                var q = db.EpNoeArzs.FirstOrDefault(p => p.Id == RowId);
+                                var q = db.EpNoeArzs.FirstOrDefault(p => p.SalId == _SallId && p.Id == RowId);
                                 //var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
                                 if (q != null /*&& q8 != null*/)
                                 {
@@ -266,7 +269,7 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             catch (DbUpdateException)
                             {
-                                XtraMessageBox.Show("حذف این نوع ارز مقدور نیست \n" +
+                                XtraMessageBox.Show("حذف این ارز مقدور نیست \n" +
                                     " جهت حذف حساب مورد نظر ، در ابتدا بایستی ارتباط این حساب با حساب تفضیلی بانکها حذف گردد",
                                     "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
@@ -316,6 +319,7 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpNoeArz obj = new EpNoeArz();
+                                obj.SalId = Convert.ToInt32(lblSalId.Text);
                                 obj.Name = txtName.Text;
 
                                 db.EpNoeArzs.Add(obj);
@@ -353,9 +357,10 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
                                 string _Name = txtName.Text;
                                 int RowId = Convert.ToInt32(txtId.Text);
-                                var q = db.EpNoeArzs.FirstOrDefault(p => p.Id == RowId);
+                                var q = db.EpNoeArzs.FirstOrDefault(p => p.SalId == _SallId && p.Id == RowId);
                                 if (q != null)
                                 {
                                     q.Name = _Name;
@@ -494,6 +499,8 @@ namespace EtelaatePaye.CodingHesabdari
         private void FrmNoeArz_FormClosing(object sender, FormClosingEventArgs e)
         {
             Fm.FillcmbNoeArz();
+           // Fm.cmbNoeArz_Enter(null, null);
+
         }
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)

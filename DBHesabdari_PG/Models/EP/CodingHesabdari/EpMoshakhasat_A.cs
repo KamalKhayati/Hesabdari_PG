@@ -20,12 +20,16 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
    public class EpMoshakhasat_A
     {
         public int Id { get; set; }
+        [Required]
+        public int SalId { get; set; }
         //[Required]
         //public int GroupTafziliId { get; set; }
         //[Required, MaxLength(50)]
         //public string GroupTafziliName { get; set; }
         //[Required]
         //public int AshkhasId { get; set; }
+        [Required]
+        public int Code { get; set; }
         //[Required]
         //public int AshkhasCode { get; set; }
         //[Required, MaxLength(100)]

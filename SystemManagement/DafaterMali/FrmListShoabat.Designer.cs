@@ -436,7 +436,7 @@
             // layoutViewField_colMsCode
             // 
             this.layoutViewField_colMsCode.EditorPreferredWidth = 498;
-            this.layoutViewField_colMsCode.Location = new System.Drawing.Point(-26, 0);
+            this.layoutViewField_colMsCode.Location = new System.Drawing.Point(26, 0);
             this.layoutViewField_colMsCode.Name = "layoutViewField_colMsCode";
             this.layoutViewField_colMsCode.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMsCode.Size = new System.Drawing.Size(485, 40);
@@ -460,7 +460,7 @@
             // layoutViewField_colMsName
             // 
             this.layoutViewField_colMsName.EditorPreferredWidth = 496;
-            this.layoutViewField_colMsName.Location = new System.Drawing.Point(-26, 40);
+            this.layoutViewField_colMsName.Location = new System.Drawing.Point(26, 40);
             this.layoutViewField_colMsName.Name = "layoutViewField_colMsName";
             this.layoutViewField_colMsName.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMsName.Size = new System.Drawing.Size(485, 40);
@@ -484,7 +484,7 @@
             // layoutViewField_colNoeShakhs
             // 
             this.layoutViewField_colNoeShakhs.EditorPreferredWidth = 425;
-            this.layoutViewField_colNoeShakhs.Location = new System.Drawing.Point(-26, 80);
+            this.layoutViewField_colNoeShakhs.Location = new System.Drawing.Point(26, 80);
             this.layoutViewField_colNoeShakhs.Name = "layoutViewField_colNoeShakhs";
             this.layoutViewField_colNoeShakhs.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colNoeShakhs.Size = new System.Drawing.Size(485, 40);
@@ -508,7 +508,7 @@
             // layoutViewField_colNoeFaaliat
             // 
             this.layoutViewField_colNoeFaaliat.EditorPreferredWidth = 422;
-            this.layoutViewField_colNoeFaaliat.Location = new System.Drawing.Point(-26, 120);
+            this.layoutViewField_colNoeFaaliat.Location = new System.Drawing.Point(26, 120);
             this.layoutViewField_colNoeFaaliat.Name = "layoutViewField_colNoeFaaliat";
             this.layoutViewField_colNoeFaaliat.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colNoeFaaliat.Size = new System.Drawing.Size(485, 40);
@@ -532,7 +532,7 @@
             // layoutViewField_colAdress
             // 
             this.layoutViewField_colAdress.EditorPreferredWidth = 471;
-            this.layoutViewField_colAdress.Location = new System.Drawing.Point(-26, 160);
+            this.layoutViewField_colAdress.Location = new System.Drawing.Point(26, 160);
             this.layoutViewField_colAdress.Name = "layoutViewField_colAdress";
             this.layoutViewField_colAdress.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colAdress.Size = new System.Drawing.Size(485, 40);
@@ -556,7 +556,7 @@
             // layoutViewField_colCodePosti
             // 
             this.layoutViewField_colCodePosti.EditorPreferredWidth = 442;
-            this.layoutViewField_colCodePosti.Location = new System.Drawing.Point(-26, 200);
+            this.layoutViewField_colCodePosti.Location = new System.Drawing.Point(26, 200);
             this.layoutViewField_colCodePosti.Name = "layoutViewField_colCodePosti";
             this.layoutViewField_colCodePosti.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colCodePosti.Size = new System.Drawing.Size(485, 40);
@@ -580,7 +580,7 @@
             // layoutViewField_colSandoghPosti
             // 
             this.layoutViewField_colSandoghPosti.EditorPreferredWidth = 401;
-            this.layoutViewField_colSandoghPosti.Location = new System.Drawing.Point(-26, 240);
+            this.layoutViewField_colSandoghPosti.Location = new System.Drawing.Point(26, 240);
             this.layoutViewField_colSandoghPosti.Name = "layoutViewField_colSandoghPosti";
             this.layoutViewField_colSandoghPosti.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colSandoghPosti.Size = new System.Drawing.Size(485, 40);
@@ -604,7 +604,7 @@
             // layoutViewField_colShomarePlak
             // 
             this.layoutViewField_colShomarePlak.EditorPreferredWidth = 423;
-            this.layoutViewField_colShomarePlak.Location = new System.Drawing.Point(-26, 280);
+            this.layoutViewField_colShomarePlak.Location = new System.Drawing.Point(26, 280);
             this.layoutViewField_colShomarePlak.Name = "layoutViewField_colShomarePlak";
             this.layoutViewField_colShomarePlak.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShomarePlak.Size = new System.Drawing.Size(485, 40);
@@ -628,7 +628,7 @@
             // layoutViewField_colShenaseMelli
             // 
             this.layoutViewField_colShenaseMelli.EditorPreferredWidth = 378;
-            this.layoutViewField_colShenaseMelli.Location = new System.Drawing.Point(-26, 320);
+            this.layoutViewField_colShenaseMelli.Location = new System.Drawing.Point(26, 320);
             this.layoutViewField_colShenaseMelli.Name = "layoutViewField_colShenaseMelli";
             this.layoutViewField_colShenaseMelli.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShenaseMelli.Size = new System.Drawing.Size(485, 40);
@@ -652,7 +652,7 @@
             // layoutViewField_colCodeSenfee
             // 
             this.layoutViewField_colCodeSenfee.EditorPreferredWidth = 440;
-            this.layoutViewField_colCodeSenfee.Location = new System.Drawing.Point(-26, 360);
+            this.layoutViewField_colCodeSenfee.Location = new System.Drawing.Point(26, 360);
             this.layoutViewField_colCodeSenfee.Name = "layoutViewField_colCodeSenfee";
             this.layoutViewField_colCodeSenfee.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colCodeSenfee.Size = new System.Drawing.Size(485, 40);
@@ -676,7 +676,7 @@
             // layoutViewField_colCodeEghtesadi
             // 
             this.layoutViewField_colCodeEghtesadi.EditorPreferredWidth = 417;
-            this.layoutViewField_colCodeEghtesadi.Location = new System.Drawing.Point(-26, 400);
+            this.layoutViewField_colCodeEghtesadi.Location = new System.Drawing.Point(26, 400);
             this.layoutViewField_colCodeEghtesadi.Name = "layoutViewField_colCodeEghtesadi";
             this.layoutViewField_colCodeEghtesadi.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colCodeEghtesadi.Size = new System.Drawing.Size(485, 40);
@@ -700,7 +700,7 @@
             // layoutViewField_colTell1
             // 
             this.layoutViewField_colTell1.EditorPreferredWidth = 466;
-            this.layoutViewField_colTell1.Location = new System.Drawing.Point(-26, 440);
+            this.layoutViewField_colTell1.Location = new System.Drawing.Point(26, 440);
             this.layoutViewField_colTell1.Name = "layoutViewField_colTell1";
             this.layoutViewField_colTell1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTell1.Size = new System.Drawing.Size(485, 40);
@@ -724,7 +724,7 @@
             // layoutViewField_colTell2
             // 
             this.layoutViewField_colTell2.EditorPreferredWidth = 462;
-            this.layoutViewField_colTell2.Location = new System.Drawing.Point(-26, 480);
+            this.layoutViewField_colTell2.Location = new System.Drawing.Point(26, 480);
             this.layoutViewField_colTell2.Name = "layoutViewField_colTell2";
             this.layoutViewField_colTell2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTell2.Size = new System.Drawing.Size(485, 40);
@@ -748,7 +748,7 @@
             // layoutViewField_colTellFax1
             // 
             this.layoutViewField_colTellFax1.EditorPreferredWidth = 440;
-            this.layoutViewField_colTellFax1.Location = new System.Drawing.Point(-26, 520);
+            this.layoutViewField_colTellFax1.Location = new System.Drawing.Point(26, 520);
             this.layoutViewField_colTellFax1.Name = "layoutViewField_colTellFax1";
             this.layoutViewField_colTellFax1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTellFax1.Size = new System.Drawing.Size(485, 40);
@@ -772,7 +772,7 @@
             // layoutViewField_colTellFax2
             // 
             this.layoutViewField_colTellFax2.EditorPreferredWidth = 436;
-            this.layoutViewField_colTellFax2.Location = new System.Drawing.Point(-26, 560);
+            this.layoutViewField_colTellFax2.Location = new System.Drawing.Point(26, 560);
             this.layoutViewField_colTellFax2.Name = "layoutViewField_colTellFax2";
             this.layoutViewField_colTellFax2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colTellFax2.Size = new System.Drawing.Size(485, 40);
@@ -796,7 +796,7 @@
             // layoutViewField_colMobile1
             // 
             this.layoutViewField_colMobile1.EditorPreferredWidth = 452;
-            this.layoutViewField_colMobile1.Location = new System.Drawing.Point(-26, 600);
+            this.layoutViewField_colMobile1.Location = new System.Drawing.Point(26, 600);
             this.layoutViewField_colMobile1.Name = "layoutViewField_colMobile1";
             this.layoutViewField_colMobile1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMobile1.Size = new System.Drawing.Size(485, 40);
@@ -820,7 +820,7 @@
             // layoutViewField_colMobile2
             // 
             this.layoutViewField_colMobile2.EditorPreferredWidth = 448;
-            this.layoutViewField_colMobile2.Location = new System.Drawing.Point(-26, 640);
+            this.layoutViewField_colMobile2.Location = new System.Drawing.Point(26, 640);
             this.layoutViewField_colMobile2.Name = "layoutViewField_colMobile2";
             this.layoutViewField_colMobile2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colMobile2.Size = new System.Drawing.Size(485, 40);
@@ -844,7 +844,7 @@
             // layoutViewField_colEmail1
             // 
             this.layoutViewField_colEmail1.EditorPreferredWidth = 461;
-            this.layoutViewField_colEmail1.Location = new System.Drawing.Point(-26, 680);
+            this.layoutViewField_colEmail1.Location = new System.Drawing.Point(26, 680);
             this.layoutViewField_colEmail1.Name = "layoutViewField_colEmail1";
             this.layoutViewField_colEmail1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colEmail1.Size = new System.Drawing.Size(485, 40);
@@ -868,7 +868,7 @@
             // layoutViewField_colEmail2
             // 
             this.layoutViewField_colEmail2.EditorPreferredWidth = 456;
-            this.layoutViewField_colEmail2.Location = new System.Drawing.Point(-26, 720);
+            this.layoutViewField_colEmail2.Location = new System.Drawing.Point(26, 720);
             this.layoutViewField_colEmail2.Name = "layoutViewField_colEmail2";
             this.layoutViewField_colEmail2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colEmail2.Size = new System.Drawing.Size(485, 40);
@@ -892,7 +892,7 @@
             // layoutViewField_colSite
             // 
             this.layoutViewField_colSite.EditorPreferredWidth = 463;
-            this.layoutViewField_colSite.Location = new System.Drawing.Point(-26, 760);
+            this.layoutViewField_colSite.Location = new System.Drawing.Point(26, 760);
             this.layoutViewField_colSite.Name = "layoutViewField_colSite";
             this.layoutViewField_colSite.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colSite.Size = new System.Drawing.Size(485, 40);
@@ -916,7 +916,7 @@
             // layoutViewField_colWebLog
             // 
             this.layoutViewField_colWebLog.EditorPreferredWidth = 470;
-            this.layoutViewField_colWebLog.Location = new System.Drawing.Point(-26, 800);
+            this.layoutViewField_colWebLog.Location = new System.Drawing.Point(26, 800);
             this.layoutViewField_colWebLog.Name = "layoutViewField_colWebLog";
             this.layoutViewField_colWebLog.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colWebLog.Size = new System.Drawing.Size(485, 40);
@@ -940,7 +940,7 @@
             // layoutViewField_colShabakeEjtemaee1
             // 
             this.layoutViewField_colShabakeEjtemaee1.EditorPreferredWidth = 385;
-            this.layoutViewField_colShabakeEjtemaee1.Location = new System.Drawing.Point(-26, 840);
+            this.layoutViewField_colShabakeEjtemaee1.Location = new System.Drawing.Point(26, 840);
             this.layoutViewField_colShabakeEjtemaee1.Name = "layoutViewField_colShabakeEjtemaee1";
             this.layoutViewField_colShabakeEjtemaee1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShabakeEjtemaee1.Size = new System.Drawing.Size(485, 40);
@@ -964,7 +964,7 @@
             // layoutViewField_colShabakeEjtemaee2
             // 
             this.layoutViewField_colShabakeEjtemaee2.EditorPreferredWidth = 381;
-            this.layoutViewField_colShabakeEjtemaee2.Location = new System.Drawing.Point(-26, 880);
+            this.layoutViewField_colShabakeEjtemaee2.Location = new System.Drawing.Point(26, 880);
             this.layoutViewField_colShabakeEjtemaee2.Name = "layoutViewField_colShabakeEjtemaee2";
             this.layoutViewField_colShabakeEjtemaee2.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShabakeEjtemaee2.Size = new System.Drawing.Size(485, 40);
@@ -988,7 +988,7 @@
             // layoutViewField_colShParvandeMaliati
             // 
             this.layoutViewField_colShParvandeMaliati.EditorPreferredWidth = 368;
-            this.layoutViewField_colShParvandeMaliati.Location = new System.Drawing.Point(-26, 920);
+            this.layoutViewField_colShParvandeMaliati.Location = new System.Drawing.Point(26, 920);
             this.layoutViewField_colShParvandeMaliati.Name = "layoutViewField_colShParvandeMaliati";
             this.layoutViewField_colShParvandeMaliati.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShParvandeMaliati.Size = new System.Drawing.Size(485, 40);
@@ -1012,7 +1012,7 @@
             // layoutViewField_colShBimeKargah
             // 
             this.layoutViewField_colShBimeKargah.EditorPreferredWidth = 400;
-            this.layoutViewField_colShBimeKargah.Location = new System.Drawing.Point(-26, 960);
+            this.layoutViewField_colShBimeKargah.Location = new System.Drawing.Point(26, 960);
             this.layoutViewField_colShBimeKargah.Name = "layoutViewField_colShBimeKargah";
             this.layoutViewField_colShBimeKargah.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutViewField_colShBimeKargah.Size = new System.Drawing.Size(485, 40);
@@ -2338,7 +2338,7 @@
             this.Name = "FrmListShoabat";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "لیست شعبات یا نمایندگان";
+            this.Text = " لیست شعبات مستقل";
             this.Load += new System.EventHandler(this.FrmListShoabat_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmListShoabat_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();

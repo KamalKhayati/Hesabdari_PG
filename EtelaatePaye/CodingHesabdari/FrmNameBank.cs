@@ -47,7 +47,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    var q1 = dataContext.EpNameBanks.ToList();
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
+                    var q1 = dataContext.EpNameBanks.Where(f=>f.SalId== _SallId).OrderBy(s => s.Id).ToList();
                     if (q1.Count > 0)
                         epNameBanksBindingSource.DataSource = q1;
                     else
@@ -107,11 +108,12 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     try
                     {
+                        int _SallId = Convert.ToInt32(lblSalId.Text);
                         if (En == EnumCED.Create)
                         {
                             if (db.EpNameBanks.Any())
                             {
-                                var q1 = db.EpNameBanks.FirstOrDefault(p => p.Name == txtName.Text);
+                                var q1 = db.EpNameBanks.FirstOrDefault(p => p.SalId == _SallId && p.Name == txtName.Text);
                                 if (q1 != null)
                                 {
                                     XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -122,7 +124,7 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.EpNameBanks.FirstOrDefault(p => p.Id != RowId && p.Name == txtName.Text);
+                            var q1 = db.EpNameBanks.FirstOrDefault(p => p.SalId == _SallId && p.Id != RowId && p.Name == txtName.Text);
                             if (q1 != null)
                             {
                                 XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -251,8 +253,9 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                                var q = db.EpNameBanks.FirstOrDefault(p => p.Id == RowId);
+                                var q = db.EpNameBanks.FirstOrDefault(p => p.SalId == _SallId && p.Id == RowId);
                                 //var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
                                 if (q != null /*&& q8 != null*/)
                                 {
@@ -273,7 +276,7 @@ namespace EtelaatePaye.CodingHesabdari
                             catch (DbUpdateException)
                             {
                                 XtraMessageBox.Show("حذف این نام بانک مقدور نیست \n" +
-                                    " جهت حذف نام بانک مورد نظر ، در ابتدا بایستی ارتباط این حساب با حساب تفضیلی بانکها حذف گردد",
+                                    " جهت حذف نام بانک مورد نظر ، در ابتدا بایستی ارتباط این حساب با حساب تفضیلی بانکها و حساب بانکی اشخاص حذف گردد",
                                     "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             catch (Exception ex)
@@ -322,6 +325,7 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpNameBank obj = new EpNameBank();
+                                obj.SalId = Convert.ToInt32(lblSalId.Text) ;
                                 obj.Name = txtName.Text;
 
                                 db.EpNameBanks.Add(obj);
@@ -359,9 +363,10 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
                                 string _Name = txtName.Text;
                                 int RowId = Convert.ToInt32(txtId.Text);
-                                var q = db.EpNameBanks.FirstOrDefault(p => p.Id == RowId);
+                                var q = db.EpNameBanks.FirstOrDefault(p => p.SalId == _SallId && p.Id == RowId);
                                 if (q != null)
                                 {
                                     q.Name = _Name;
@@ -500,8 +505,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameBank_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms["FrmHesabTafziliHesabBamki"] != null)
+            if (Application.OpenForms["FrmHesabTafziliHesabBanki"] != null)
+            {
                 Fm.FillcmbNameBank();
+                //Fm.cmbNameBank_Enter(null, null);
+            }
             if (Application.OpenForms["FrmEtelaateAshkhas"] != null)
                 FM.FillcmbNameBank();
         }
