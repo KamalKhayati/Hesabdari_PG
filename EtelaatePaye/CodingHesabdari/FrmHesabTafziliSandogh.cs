@@ -419,7 +419,7 @@ namespace EtelaatePaye.CodingHesabdari
                 //cmbListGroupTafzili.EditValue = 1;
                 //txtCodeGroupTafzili.Text = "10";
                 //btnNewCode_Click(null, null);
-                cmbListGroupTafzili.EditValue = 1;
+                cmbListGroupTafzili.EditValue = 10;
                 txtName.Focus();
             }
         }
@@ -711,7 +711,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     //    //    b2.IsActive = true;
                                     //}
 
-                                    db.SaveChanges();
+                                    //db.SaveChanges();
                                     if (IsActiveBeforeEdit)
                                         btnDisplyActiveList_Click(null, null);
                                     else

@@ -418,7 +418,7 @@ namespace EtelaatePaye.CodingHesabdari
                             catch (DbUpdateException)
                             {
                                 XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
-                                    " جهت حذف حساب گروه تفضیلی در ابتدا بایستی کلیه ارتباط های این حساب با حسابهای معین حذف گردد" +
+                                    " جهت حذف حساب گروه تفضیلی در ابتدا بایستی کلیه ارتباط های این حساب با حسابهای معین و حسابهای تفضیلی حذف گردد" +
                                     "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             catch (Exception ex)

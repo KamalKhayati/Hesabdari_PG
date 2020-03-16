@@ -41,10 +41,10 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    int _SallId = Convert.ToInt32(lblSalId.Text);
+                    int _SalId = Convert.ToInt32(lblSalId.Text);
                     if (IsActiveList == true)
                     {
-                        var q1 = dataContext.EpHesabCols.Where(s => s.IsActive == true && s.SalId == _SallId).OrderBy(s => s.Code).ToList();
+                        var q1 = dataContext.EpHesabCols.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                         if (lblUserId.Text == "1")
                         {
                             if (q1.Count > 0)
@@ -80,7 +80,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q = dataContext.EpHesabCols.Where(s => s.IsActive == false && s.SalId == _SallId).OrderBy(s => s.Code).ToList();
+                            var q = dataContext.EpHesabCols.Where(s => s.IsActive == false && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                             if (q.Count > 0)
                                 epHesabColsBindingSource.DataSource = q;
                             else
@@ -108,15 +108,15 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     if (db.EpHesabGroups.Any())
                     {
-                        int _SallId = Convert.ToInt32(lblSalId.Text);
+                        int _SalId = Convert.ToInt32(lblSalId.Text);
                         if (IsActiveList == true)
                         {
-                            db.EpHesabGroups.Where(s => s.IsActive == true && s.SalId == _SallId).OrderBy(s => s.Code).Load();
+                            db.EpHesabGroups.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).Load();
                             epHesabGroupsBindingSource.DataSource = db.EpHesabGroups.Local.ToBindingList();
                         }
                         else
                         {
-                            db.EpHesabGroups.Where(s => s.SalId == _SallId).OrderBy(s => s.Code).Load();
+                            db.EpHesabGroups.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).Load();
                             epHesabGroupsBindingSource.DataSource = db.EpHesabGroups.Local.ToBindingList();
                         }
                     }
@@ -139,10 +139,11 @@ namespace EtelaatePaye.CodingHesabdari
                     try
                     {
                         int _GroupId = Convert.ToInt32(cmbListHesabGroup.EditValue);
-                        var q = db.EpHesabCols.Where(s => s.GroupId == _GroupId).ToList();
+                        int _SalId = Convert.ToInt32(lblSalId.Text);
+                        var q = db.EpHesabCols.Where(s => s.GroupId == _GroupId && s.SalId == _SalId).ToList();
                         if (q.Count > 0)
                         {
-                            var MaximumCod = q.Max(p => p.Code);
+                            var MaximumCod = q.Max(s => s.Code);
                             if (MaximumCod.ToString().Substring(1) != "9")
                             {
                                 txtCode.Text = (MaximumCod + 1).ToString().Substring(1);
@@ -236,7 +237,7 @@ namespace EtelaatePaye.CodingHesabdari
                             if (db.EpHesabCols.Any())
                             {
                                 int _Code = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
-                                var q1 = db.EpHesabCols.FirstOrDefault(p => p.Code == _Code);
+                                var q1 = db.EpHesabCols.FirstOrDefault(s => s.Code == _Code);
                                 if (q1 != null)
                                 {
                                     XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -249,7 +250,7 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
                             int _Code = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
-                            var q1 = db.EpHesabCols.FirstOrDefault(p => p.Id != RowId && p.Code == _Code);
+                            var q1 = db.EpHesabCols.FirstOrDefault(s => s.Id != RowId && s.Code == _Code);
                             if (q1 != null)
                             {
                                 XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -282,7 +283,8 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             if (db.EpHesabCols.Any())
                             {
-                                var q1 = db.EpHesabCols.FirstOrDefault(p => p.Name == txtName.Text);
+                                int _SalId = Convert.ToInt32(lblSalId.Text);
+                                var q1 = db.EpHesabCols.FirstOrDefault(s => s.Name == txtName.Text && s.SalId == _SalId);
                                 if (q1 != null)
                                 {
                                     XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -293,7 +295,8 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.EpHesabCols.FirstOrDefault(p => p.Id != RowId && p.Name == txtName.Text);
+                            int _SalId = Convert.ToInt32(lblSalId.Text);
+                            var q1 = db.EpHesabCols.FirstOrDefault(s => s.Id != RowId && s.Name == txtName.Text && s.SalId == _SalId);
                             if (q1 != null)
                             {
                                 XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -453,8 +456,9 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                                var q = db.EpHesabCols.FirstOrDefault(p => p.Id == RowId);
-                                var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
+                                int _SalId = Convert.ToInt32(lblSalId.Text);
+                                var q = db.EpHesabCols.FirstOrDefault(s => s.Id == RowId && s.SalId == _SalId);
+                                var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId && s.SalId == _SalId);
                                 if (q != null && q8 != null)
                                 {
                                     db.EpHesabCols.Remove(q);
@@ -550,8 +554,9 @@ namespace EtelaatePaye.CodingHesabdari
                                 db.EpHesabCols.Add(obj);
                                 db.SaveChanges();
                                 /////////////////////////////////////////////////////////////////////////////////////
+                                int _SalId = Convert.ToInt32(lblSalId.Text);
                                 int _code = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
-                                var q = db.EpHesabCols.FirstOrDefault(s => s.Code == _code);
+                                var q = db.EpHesabCols.FirstOrDefault(s => s.Code == _code && s.SalId == _SalId);
                                 ////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
                                 n1.SalId = Convert.ToInt32(lblSalId.Text);
@@ -591,7 +596,8 @@ namespace EtelaatePaye.CodingHesabdari
                                 string _GroupName = cmbListHesabGroup.Text;
                                 string _Name = txtName.Text;
                                 int RowId = Convert.ToInt32(txtId.Text);
-                                var q = db.EpHesabCols.FirstOrDefault(p => p.Id == RowId);
+                                int _SalId = Convert.ToInt32(lblSalId.Text);
+                                var q = db.EpHesabCols.FirstOrDefault(s => s.Id == RowId && s.SalId == _SalId);
                                 if (q != null)
                                 {
                                     q.Code = _Code;
@@ -606,7 +612,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     ///////////////////////////////متد اصلاح کد و نام در لیست حساب معین WillCascadeOnUpdate ///////////////////////
 
                                     ///////////////////////////// WillCascadeOnUpdate : EpHesabMoins /////////////////////////
-                                    var q6 = db.EpHesabMoins.Where(s => s.ColId == RowId).ToList();
+                                    var q6 = db.EpHesabMoins.Where(s => s.ColId == RowId && s.SalId == _SalId).ToList();
                                     if (q6.Count > 0)
                                     {
                                         q6.ForEach(item =>
@@ -621,7 +627,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         });
                                     }
                                     ///////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
-                                    var q8 = db.EpAccessLevelCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
+                                    var q8 = db.EpAccessLevelCodingHesabdaris.Where(s => s.HesabColId == RowId && s.SalId == _SalId).ToList();
                                     if (q8.Count > 0)
                                     {
                                         q8.ForEach(item =>
@@ -672,11 +678,11 @@ namespace EtelaatePaye.CodingHesabdari
                                     //////////////////////////////////////////////////////////////////////////////////////
                                     if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
                                     {
-                                        var m = db.EpHesabGroups.FirstOrDefault(p => p.Id == _GroupId);
-                                        var a1 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
-                                        //var a2 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
-                                        var b1 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
-                                        //var b2 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
+                                        var m = db.EpHesabGroups.FirstOrDefault(s => s.Id == _GroupId && s.SalId == _SalId);
+                                        var a1 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0 && s.SalId == _SalId);
+                                        //var a2 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == RowId && s.HesabMoinId == 0);
+                                        var b1 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0 && s.SalId == _SalId);
+                                        //var b2 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == RowId && s.HesabMoinId == 0);
                                         if (m != null)
                                             m.IsActive = true;
                                         if (a1 != null)
@@ -772,7 +778,8 @@ namespace EtelaatePaye.CodingHesabdari
                 try
                 {
                     int _GroupId = Convert.ToInt32(cmbListHesabGroup.EditValue);
-                    var q = db.EpHesabGroups.FirstOrDefault(s => s.Id == _GroupId);
+                    int _SalId = Convert.ToInt32(lblSalId.Text);
+                    var q = db.EpHesabGroups.FirstOrDefault(s => s.Id == _GroupId && s.SalId == _SalId);
                     if (q != null)
                     {
                         txtGroupCode.Text = q.Code.ToString();

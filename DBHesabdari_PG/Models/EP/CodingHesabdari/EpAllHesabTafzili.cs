@@ -29,6 +29,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual EpGroupTafzili EpGroupTafzili1 { get; set; }
         public virtual EpHesabTafziliSandogh EpHesabTafziliSandogh1 { get; set; }
         public virtual EpHesabTafziliHesabBanki EpHesabTafziliHesabBanki1 { get; set; }
+        public virtual EpHesabTafziliAshkhas EpHesabTafziliAshkhas1 { get; set; }
         //public virtual ICollection<HaghOzviat> HaghOzviats { get; set; }
         //public virtual ICollection<AsnadeHesabdariRow> AsnadeHesabdariRows { get; set; }
         //public virtual ICollection<CheckTazmin> CheckTazmins { get; set; }

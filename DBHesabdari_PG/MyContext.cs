@@ -39,7 +39,7 @@ namespace DBHesabdari_PG
             //پیش فرض
             //Database.SetInitializer<MyContext>(new CreateDatabaseIfNotExists<MyContext>());
             //حذف دیتابیس قبلی بهمراه داده های داخلش و ایجاد دیتابیس جدید بدون داده در صورت تغییرویاعدم تغییر(در هرصورت) کلاس مدل
-           // Database.SetInitializer<MyContext>(new DropCreateDatabaseAlways<MyContext>());
+        //  Database.SetInitializer<MyContext>(new DropCreateDatabaseAlways<MyContext>());
             // حذف دیتابیس قبلی بهمراه داده های داخلش و ایجاد دیتابیس جدید بدون داده در صورت تغییر کلاس مدل
             //Database.SetInitializer<MyContext>(new DropCreateDatabaseIfModelChanges<MyContext>());
             // غیرفعال کردن پیکربندی دیتابیس برای اینکه داده های فعلی موجود در دیتا بیس حذف نشود
@@ -193,6 +193,7 @@ namespace DBHesabdari_PG
             ///////////////////////
             modelBuilder.Entity<EpAllHesabTafzili>().HasOptional(m => m.EpHesabTafziliSandogh1).WithRequired(m => m.EpAllHesabTafzili1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllHesabTafzili>().HasOptional(m => m.EpHesabTafziliHesabBanki1).WithRequired(m => m.EpAllHesabTafzili1).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpAllHesabTafzili>().HasOptional(m => m.EpHesabTafziliAshkhas1).WithRequired(m => m.EpAllHesabTafzili1).WillCascadeOnDelete(true);
 
             //modelBuilder.Entity<EpHesabTafziliHesabBanki>().HasRequired(m => m.EpNameBank1).WithMany(m=>m.EpHesabTafziliHesabBankis).HasForeignKey(m => m.NameBankId).WillCascadeOnDelete(true);
             //modelBuilder.Entity<EpHesabTafziliHesabBanki>().HasRequired(m => m.EpNoeHesab1).WithMany(m=>m.EpHesabTafziliHesabBankis).HasForeignKey(m => m.NoeHesaId).WillCascadeOnDelete(true);

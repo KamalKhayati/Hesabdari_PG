@@ -40,9 +40,10 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
                     if (IsActiveList == true)
                     {
-                        var q1 = dataContext.EpHesabTafziliAshkhass.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList();
+                        var q1 = dataContext.EpHesabTafziliAshkhass.Where(s => s.IsActive == true && s.SalId == _SallId).OrderBy(s => s.Code).ToList();
                         if (lblUserId.Text == "1")
                         {
                             if (q1.Count > 0)
@@ -78,7 +79,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q = dataContext.EpHesabTafziliAshkhass.Where(p => p.IsActive == false).OrderBy(s => s.Code).ToList();
+                            var q = dataContext.EpHesabTafziliAshkhass.Where(s => s.IsActive == false && s.SalId == _SallId).OrderBy(s => s.Code).ToList();
                             if (q.Count > 0)
                                 epHesabTafziliAshkhassBindingSource.DataSource = q;
                             else
@@ -108,12 +109,12 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (IsActiveList == true)
                         {
-                            db.EpGroupTafzilis.Where(s => s.IsActive == true && s.Id == 3 || s.Id == 4).Load();
+                            db.EpGroupTafzilis.Where(s => s.IsActive == true && s.Id == 30 || s.Id == 31 || s.Id == 32).Load();
                             epGroupTafzilisBindingSource.DataSource = db.EpGroupTafzilis.Local.ToBindingList();
                         }
                         else
                         {
-                            db.EpGroupTafzilis.Where(s => s.Id == 3 || s.Id == 4).Load();
+                            db.EpGroupTafzilis.Where(s => s.Id == 30 || s.Id == 31 || s.Id == 32).Load();
                             epGroupTafzilisBindingSource.DataSource = db.EpGroupTafzilis.Local.ToBindingList();
                         }
                     }
@@ -133,35 +134,37 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    var q = db.EpHesabTafziliAshkhass.Where(s => s.GroupTafziliId == 3).ToList();
-                    var q1 = db.EpHesabTafziliAshkhass.Where(s => s.GroupTafziliId == 4).ToList();
-                    if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 3)
+                    int _SallId = Convert.ToInt32(lblSalId.Text);
+                    var q = db.EpHesabTafziliAshkhass.Where(s => s.GroupTafziliId == 30 && s.SalId == _SallId).ToList();
+                    var q1 = db.EpHesabTafziliAshkhass.Where(s => s.GroupTafziliId == 31 && s.SalId == _SallId).ToList();
+                    var q2 = db.EpHesabTafziliAshkhass.Where(s => s.GroupTafziliId == 32 && s.SalId == _SallId).ToList();
+                    if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 30)
                     {
                         if (q.Count > 0)
                         {
                             var MaximumCod = q.Max(p => p.Code);
-                            if (MaximumCod.ToString().Substring(2) != "99999")
+                            if (MaximumCod.ToString().Substring(2) != "999999")
                             {
                                 txtCode.Text = (MaximumCod + 1).ToString().Substring(2);
                             }
                             else
                             {
                                 if (En == EnumCED.Create)
-                                    XtraMessageBox.Show("اعمال محدودیت تعریف 99999 حساب تفضیلی برای هر گروه تفضیلی ..." + "\n" +
-                                        "توجه : نمیتوان بیشتر از 99999 حساب تفضیلی برای هر گروه تفضیلی تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین صفر تا 100000 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    XtraMessageBox.Show("اعمال محدودیت تعریف 1000000 حساب تفضیلی برای هر گروه تفضیلی ..." + "\n" +
+                                        "توجه : نمیتوان بیشتر از 1000000 حساب تفضیلی برای هر گروه تفضیلی تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین صفر تا 1000000 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                         else
                         {
-                            txtCode.Text = "00001";
+                            txtCode.Text = "000001";
                         }
                     }
-                    else if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 4)
+                    else if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 31)
                     {
                         if (q1.Count > 0)
                         {
                             var MaximumCod = q1.Max(p => p.Code);
-                            if (MaximumCod.ToString().Substring(2) != "99999")
+                            if (MaximumCod.ToString().Substring(2) != "999999")
                             {
                                 txtCode.Text = (MaximumCod + 1).ToString().Substring(2);
                                 btnNewCode.Enabled = true;
@@ -169,14 +172,37 @@ namespace EtelaatePaye.CodingHesabdari
                             else
                             {
                                 if (En == EnumCED.Create)
-                                    XtraMessageBox.Show("اعمال محدودیت تعریف 99999 حساب تفضیلی برای هر گروه تفضیلی ..." + "\n" +
-                                        "توجه : نمیتوان بیشتر از 99999 حساب تفضیلی برای هر گروه تفضیلی تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین صفر تا 100000 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    XtraMessageBox.Show("اعمال محدودیت تعریف 1000000 حساب تفضیلی برای هر گروه تفضیلی ..." + "\n" +
+                                        "توجه : نمیتوان بیشتر از 1000000 حساب تفضیلی برای هر گروه تفضیلی تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین صفر تا 1000000 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 btnNewCode.Enabled = false;
                             }
                         }
                         else
                         {
-                            txtCode.Text = "00001";
+                            txtCode.Text = "000001";
+                        }
+                    }
+                    else if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 32)
+                    {
+                        if (q1.Count > 0)
+                        {
+                            var MaximumCod = q1.Max(p => p.Code);
+                            if (MaximumCod.ToString().Substring(2) != "999999")
+                            {
+                                txtCode.Text = (MaximumCod + 1).ToString().Substring(2);
+                                btnNewCode.Enabled = true;
+                            }
+                            else
+                            {
+                                if (En == EnumCED.Create)
+                                    XtraMessageBox.Show("اعمال محدودیت تعریف 1000000 حساب تفضیلی برای هر گروه تفضیلی ..." + "\n" +
+                                        "توجه : نمیتوان بیشتر از 1000000 حساب تفضیلی برای هر گروه تفضیلی تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین صفر تا 1000000 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                btnNewCode.Enabled = false;
+                            }
+                        }
+                        else
+                        {
+                            txtCode.Text = "000001";
                         }
                     }
                 }
@@ -235,9 +261,9 @@ namespace EtelaatePaye.CodingHesabdari
                 XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (Convert.ToInt32(txtCode.Text) == 0 || Convert.ToInt32(txtCode.Text) > 99999)
+            else if (Convert.ToInt32(txtCode.Text) == 0 || Convert.ToInt32(txtCode.Text) > 999999)
             {
-                XtraMessageBox.Show("کد وارده بایستی عددی بزرگتر از صفر و کمتر از 100000 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("کد وارده بایستی عددی بزرگتر از صفر و کمتر از 1000000 باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCode.Focus();
                 return false;
             }
@@ -248,11 +274,12 @@ namespace EtelaatePaye.CodingHesabdari
                     try
                     {
                         int _Code = Convert.ToInt32(txtCodeGroupTafzili.Text + txtCode.Text);
+                        int _SallId = Convert.ToInt32(lblSalId.Text);
                         if (En == EnumCED.Create)
                         {
                             if (db.EpHesabTafziliAshkhass.Any())
                             {
-                                var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(p => p.Code == _Code);
+                                var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code && s.SalId == _SallId);
                                 if (q1 != null)
                                 {
                                     XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -264,7 +291,7 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(p => p.Id != RowId && p.Code == _Code);
+                            var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Id != RowId && s.Code == _Code && s.SalId == _SallId);
                             if (q1 != null)
                             {
                                 XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -292,11 +319,12 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     try
                     {
+                        int _SallId = Convert.ToInt32(lblSalId.Text);
                         if (En == EnumCED.Create)
                         {
                             if (db.EpHesabTafziliAshkhass.Any())
                             {
-                                var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(p => p.Name == txtName.Text);
+                                var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Name == txtName.Text && s.SalId == _SallId);
                                 if (q1 != null)
                                 {
                                     XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -307,7 +335,7 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(p => p.Id != RowId && p.Name == txtName.Text);
+                            var q1 = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Id != RowId && s.Name == txtName.Text && s.SalId == _SallId);
                             if (q1 != null)
                             {
                                 XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -459,12 +487,14 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                                var q = db.EpHesabTafziliAshkhass.FirstOrDefault(p => p.Id == RowId);
+                                var q = db.EpAllHesabTafzilis.FirstOrDefault(p => p.SalId == _SallId && p.Id == RowId);
+                                //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(p => p.Id == RowId );
                                 //var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
                                 if (q != null /*&& q8 != null*/)
                                 {
-                                    db.EpHesabTafziliAshkhass.Remove(q);
+                                    db.EpAllHesabTafzilis.Remove(q);
                                     //db.EpAccessLevelCodingHesabdaris.Remove(q8);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
@@ -550,21 +580,33 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpHesabTafziliAshkhas obj = new EpHesabTafziliAshkhas();
+                                obj.SalId = Convert.ToInt32(lblSalId.Text);
                                 obj.Code = Convert.ToInt32(txtCodeGroupTafzili.Text + txtCode.Text);
                                 obj.Name = txtName.Text;
                                 if (!string.IsNullOrEmpty(txtTarikhEjad.Text))
                                     obj.TarikhEjad = Convert.ToDateTime(txtTarikhEjad.Text);
                                 obj.IsActive = chkIsActive.Checked;
                                 obj.SharhHesab = txtSharhHesab.Text;
-                                obj.GroupTafzili = cmbListGroupTafzili.Text;
+                                obj.GroupTafziliName = cmbListGroupTafzili.Text;
                                 obj.GroupTafziliId = Convert.ToInt32(cmbListGroupTafzili.EditValue);
                                 obj.IsPersonel = chkPersonel.Checked;
                                 obj.IsSahamdar = chkSahamdar.Checked;
                                 obj.IsVizitor = chkVizitor.Checked;
                                 obj.IsRanande = chkRanande.Checked;
 
-                                db.EpHesabTafziliAshkhass.Add(obj);
+                                //////////////////////////////////////////////////////////////
+                                
+                                EpAllHesabTafzili obj1 = new EpAllHesabTafzili();
+                                obj1.SalId = Convert.ToInt32(lblSalId.Text);
+                                obj1.Code = Convert.ToInt32(txtCodeGroupTafzili.Text + txtCode.Text);
+                                obj1.Name = txtName.Text;
+                                obj1.GroupTafziliId = Convert.ToInt32(cmbListGroupTafzili.EditValue); ;
+                                obj1.IsActive = chkIsActive.Checked;
+                                obj1.SharhHesab = txtSharhHesab.Text;
+                                obj1.EpHesabTafziliAshkhas1 = obj;
+                                db.EpAllHesabTafzilis.Add(obj1);
                                 db.SaveChanges();
+
                                 /////////////////////////////////////////////////////////////////////////////////////
                                 //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
                                 //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
@@ -595,7 +637,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     // ActiveForm(fm);
                                     fm.cmbGroupTafzili.EditValue = Convert.ToInt32(cmbListGroupTafzili.EditValue);
                                     int _Code = Convert.ToInt32(txtCodeGroupTafzili.Text + txtCode.Text);
-                                    var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    int _SallId = Convert.ToInt32(lblSalId.Text);
+                                    var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code && s.SalId == _SallId);
                                     if (q != null)
                                         fm.cmbTafziliAshkhas.EditValue = q.Id;
                                     fm.cmbGroupTafzili.ReadOnly = fm.cmbTafziliAshkhas.ReadOnly = true;
@@ -621,7 +664,8 @@ namespace EtelaatePaye.CodingHesabdari
                                 int _Code = Convert.ToInt32(txtCodeGroupTafzili.Text + txtCode.Text);
                                 string _Name = txtName.Text;
                                 int RowId = Convert.ToInt32(txtId.Text);
-                                var q = db.EpHesabTafziliAshkhass.FirstOrDefault(p => p.Id == RowId);
+                                int _SallId = Convert.ToInt32(lblSalId.Text);
+                                var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Id == RowId && s.SalId == _SallId);
                                 if (q != null)
                                 {
                                     q.Code = Convert.ToInt32(txtCodeGroupTafzili.Text + txtCode.Text);
@@ -630,12 +674,26 @@ namespace EtelaatePaye.CodingHesabdari
                                         q.TarikhEjad = Convert.ToDateTime(txtTarikhEjad.Text);
                                     q.IsActive = chkIsActive.Checked;
                                     q.SharhHesab = txtSharhHesab.Text;
-                                    q.GroupTafzili = cmbListGroupTafzili.Text;
+                                    q.GroupTafziliName = cmbListGroupTafzili.Text;
                                     q.GroupTafziliId = Convert.ToInt32(cmbListGroupTafzili.EditValue);
                                     q.IsPersonel = chkPersonel.Checked;
                                     q.IsSahamdar = chkSahamdar.Checked;
                                     q.IsVizitor = chkVizitor.Checked;
                                     q.IsRanande = chkRanande.Checked;
+
+                                    //////////////////////////////////////////////////////////////////////////
+                                    ///
+                                    var q1 = db.EpAllHesabTafzilis.FirstOrDefault(f => f.SalId == _SallId && f.Id == RowId);
+                                    if (q1 != null)
+                                    {
+                                        q1.Code = _Code;
+                                        q1.Name = txtName.Text;
+                                        q1.GroupTafziliId = Convert.ToInt32(cmbListGroupTafzili.EditValue);
+                                        q1.IsActive = chkIsActive.Checked;
+                                        //q1.IsDefault = chkIsDefault.Checked;
+                                        q1.SharhHesab = txtSharhHesab.Text;
+                                    }
+                                    db.SaveChanges();
 
                                     /////////////////////////////////متد اصلاح کد و نام در لیست حساب معین WillCascadeOnUpdate ///////////////////////
 
@@ -723,7 +781,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     //    //    b2.IsActive = true;
                                     //}
 
-                                    db.SaveChanges();
+                                    //db.SaveChanges();
                                     if (IsActiveBeforeEdit)
                                         btnDisplyActiveList_Click(null, null);
                                     else
@@ -803,14 +861,19 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void cmbListGroupTafzili_EditValueChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 3)
+            if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 30)
             {
                 txtCodeGroupTafzili.Text = "30";
                 btnNewCode_Click(null, null);
             }
-            else if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 4)
+            else if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 31)
             {
-                txtCodeGroupTafzili.Text = "40";
+                txtCodeGroupTafzili.Text = "31";
+                btnNewCode_Click(null, null);
+            }
+            else if (Convert.ToInt32(cmbListGroupTafzili.EditValue) == 32)
+            {
+                txtCodeGroupTafzili.Text = "32";
                 btnNewCode_Click(null, null);
             }
 

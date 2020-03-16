@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFroosh = new DevExpress.XtraBars.BarButtonItem();
             this.btnBargashtFroosh = new DevExpress.XtraBars.BarButtonItem();
@@ -87,6 +87,7 @@
             this.btnTafziliMahsol = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliMarakezHazine = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTafziliShoabatVabasteh = new DevExpress.XtraBars.BarButtonItem();
             this.btnTafziliSayer = new DevExpress.XtraBars.BarButtonItem();
             this.mbsCodingAnbarVaKala = new DevExpress.XtraBars.BarSubItem();
             this.btnListAnbarha = new DevExpress.XtraBars.BarButtonItem();
@@ -354,13 +355,14 @@
             this.btnTafziliGhataat,
             this.btnTafziliMahsol,
             this.btnTafziliMarakezHazine,
-            this.btnTafziliSayer,
+            this.btnTafziliShoabatVabasteh,
             this.btnJoziatEtelaatAshkhas,
-            this.btnTafziliKala});
+            this.btnTafziliKala,
+            this.btnTafziliSayer});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 155;
+            this.ribbon.MaxItemId = 156;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
             this.ribbon.PageHeaderMinWidth = 50;
@@ -722,6 +724,7 @@
             this.btnGroupTafzili.Caption = "گروه تفضیلی";
             this.btnGroupTafzili.Id = 56;
             this.btnGroupTafzili.Name = "btnGroupTafzili";
+            this.btnGroupTafzili.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnGroupTafzili.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupTafzili_ItemClick);
             // 
             // btnHesabhaTafzili
@@ -741,6 +744,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliMahsol),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliKala),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliMarakezHazine),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliShoabatVabasteh),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTafziliSayer)});
             this.btnHesabhaTafzili.Name = "btnHesabhaTafzili";
             // 
@@ -816,7 +820,7 @@
             // 
             // btnTafziliKala
             // 
-            this.btnTafziliKala.Caption = "کالا";
+            this.btnTafziliKala.Caption = "کالاها";
             this.btnTafziliKala.Id = 154;
             this.btnTafziliKala.Name = "btnTafziliKala";
             this.btnTafziliKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliKala_ItemClick);
@@ -828,10 +832,17 @@
             this.btnTafziliMarakezHazine.Name = "btnTafziliMarakezHazine";
             this.btnTafziliMarakezHazine.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliMarakezHazine_ItemClick);
             // 
+            // btnTafziliShoabatVabasteh
+            // 
+            this.btnTafziliShoabatVabasteh.Caption = "شعبات یا نمایندگیهای وابسته";
+            this.btnTafziliShoabatVabasteh.Id = 152;
+            this.btnTafziliShoabatVabasteh.Name = "btnTafziliShoabatVabasteh";
+            this.btnTafziliShoabatVabasteh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliShoabatVabasteh_ItemClick);
+            // 
             // btnTafziliSayer
             // 
             this.btnTafziliSayer.Caption = "سایر";
-            this.btnTafziliSayer.Id = 152;
+            this.btnTafziliSayer.Id = 155;
             this.btnTafziliSayer.Name = "btnTafziliSayer";
             this.btnTafziliSayer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTafziliSayer_ItemClick);
             // 
@@ -1326,10 +1337,10 @@
             this.chkDefault.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.chkDefault.Id = 124;
             this.chkDefault.Name = "chkDefault";
-            toolTipItem1.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
+            toolTipItem2.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
     "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نیست";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.chkDefault.SuperTip = superToolTip1;
+            superToolTip2.Items.Add(toolTipItem2);
+            this.chkDefault.SuperTip = superToolTip2;
             this.chkDefault.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkDefault_CheckedChanged);
             // 
             // txtUserName
@@ -2031,8 +2042,9 @@
         private DevExpress.XtraBars.BarButtonItem btnTafziliGhataat;
         private DevExpress.XtraBars.BarButtonItem btnTafziliMahsol;
         private DevExpress.XtraBars.BarButtonItem btnTafziliMarakezHazine;
-        private DevExpress.XtraBars.BarButtonItem btnTafziliSayer;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliShoabatVabasteh;
         private DevExpress.XtraBars.BarButtonItem btnJoziatEtelaatAshkhas;
         private DevExpress.XtraBars.BarButtonItem btnTafziliKala;
+        private DevExpress.XtraBars.BarButtonItem btnTafziliSayer;
     }
 }

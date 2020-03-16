@@ -43,26 +43,38 @@ namespace DBHesabdari_PG.Migrations
             {
                 try
                 {
-                    context.Entry(new EpGroupTafzili() { Id = 1, Code = 10, Name = "صندوق", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 1) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 2, Code = 20, Name = "حسابهای بانکی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 2) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 3, Code = 30, Name = "اشخاص حقیقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 3) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 4, Code = 40, Name = "اشخاص حقوقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 4) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 5, Code = 50, Name = "داراییها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 5) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 6, Code = 60, Name = "پروژه", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 6) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 7, Code = 70, Name = "وامها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 7) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 8, Code = 80, Name = "مواد", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 8) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 9, Code = 81, Name = "قطعات", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 9) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 10, Code = 82, Name = "محصول", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 10) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 11, Code = 83, Name = "کالا", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 11) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 12, Code = 90, Name = "مراکز هزینه", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 12) ? EntityState.Modified : EntityState.Added;
-                    context.Entry(new EpGroupTafzili() { Id = 13, Code = 99, Name = "سایر", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 13) ? EntityState.Modified : EntityState.Added;
+                    if (!context.EpGroupTafzilis.Any())
+                    {
+                        context.Entry(new EpGroupTafzili() { Id = 10, Code = 10, Name = "صندوق", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 10) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 15, Code = 15, Name = "حسابهای بانکی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 15) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 20, Code = 20, Name = "اشخاص حقیقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 20) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 25, Code = 25, Name = "اشخاص حقوقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 25) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 30, Code = 30, Name = "ادارات دولتی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 30) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 35, Code = 35, Name = "وامها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 35) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 40, Code = 40, Name = "داراییها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 40) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 45, Code = 45, Name = "پروژه ها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 45) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 50, Code = 50, Name = "مواد", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 50) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 55, Code = 55, Name = "قطعات", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 55) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 60, Code = 60, Name = "محصول", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 60) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 65, Code = 65, Name = "کالاها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 65) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 70, Code = 70, Name = "مراکز هزینه", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 70) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 75, Code = 75, Name = "شعبات یا نمایندگیهای وابسته", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 75) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 90, Code = 90, Name = "سایر", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 90) ? EntityState.Unchanged : EntityState.Added;
 
+                    }
 
-                    context.Entry(new MsActiveSystem() { Id = 1, Code = 10, Name = "فروش و خرید", IsActive = true }).State = context.MsActiveSystems.Any(s => s.Id == 1) ? EntityState.Unchanged : EntityState.Added;
-                    context.Entry(new MsActiveSystem() { Id = 2, Code = 15, Name = "دریافت و پرداخت", IsActive = true }).State = context.MsActiveSystems.Any(s => s.Id == 2) ? EntityState.Unchanged : EntityState.Added;
-                    context.Entry(new MsActiveSystem() { Id = 3, Code = 20, Name = "اسناد حسابداری", IsActive = true }).State = context.MsActiveSystems.Any(s => s.Id == 3) ? EntityState.Unchanged : EntityState.Added;
-                    context.Entry(new MsActiveSystem() { Id = 4, Code = 25, Name = "انبار و کالا", IsActive = false }).State = context.MsActiveSystems.Any(s => s.Id == 4) ? EntityState.Unchanged : EntityState.Added;
+                    if (!context.MsActiveSystems.Any())
+                    {
+                        context.Entry(new MsActiveSystem() { Id = 10, Code = 10, Name = "فروش و خرید", IsActive = true }).State = context.MsActiveSystems.Any(s => s.Id == 1) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new MsActiveSystem() { Id = 15, Code = 15, Name = "دریافت و پرداخت", IsActive = true }).State = context.MsActiveSystems.Any(s => s.Id == 2) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new MsActiveSystem() { Id = 20, Code = 20, Name = "اسناد حسابداری", IsActive = true }).State = context.MsActiveSystems.Any(s => s.Id == 3) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new MsActiveSystem() { Id = 25, Code = 25, Name = "انبار و کالا", IsActive = false }).State = context.MsActiveSystems.Any(s => s.Id == 4) ? EntityState.Unchanged : EntityState.Added;
+                    }
 
+                    if (!context.MsDefaults.Any())
+                    {
+                        context.Entry(new MsDefault() { MsUserId = 1, MajmoeId = 1, VahedId = 1, ShobeId = 1, DoreMaliId=1}).State = context.MsDefaults.Any(s => s.MsUserId == 1) ? EntityState.Unchanged : EntityState.Added;
+                    }
 
                     if (!context.MsUsers.Any())
                     {

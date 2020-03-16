@@ -711,15 +711,15 @@ namespace Hesabdari_PG.Forms
 
         }
 
-        private void btnTafziliSayer_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnTafziliShoabatVabasteh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmHesabTafziliSayer fm = new FrmHesabTafziliSayer();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            fm.lblSalId.Text = _SalId;
-            fm.lblSalMali.Text = _SalMali;
-            ActiveForm(fm);
+            //FrmHesabTafziliSayer fm = new FrmHesabTafziliSayer();
+            //fm.MdiParent = this;
+            //fm.lblUserId.Text = txtUserId.Caption;
+            //fm.lblUserName.Text = txtUserName.Caption;
+            //fm.lblSalId.Text = _SalId;
+            //fm.lblSalMali.Text = _SalMali;
+            //ActiveForm(fm);
 
         }
 
@@ -759,6 +759,18 @@ namespace Hesabdari_PG.Forms
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
+        }
+
+        private void btnTafziliSayer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabTafziliSayer fm = new FrmHesabTafziliSayer();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+
         }
     }
 }

@@ -566,7 +566,7 @@ namespace EtelaatePaye.CodingHesabdari
                 FillcmbNoeHesab();
                 FillcmbNoeArz();
                 FillcmbGroupTafzili();
-                cmbListGroupTafzili.EditValue = 2;
+                cmbListGroupTafzili.EditValue = 20;
                 cmbNameBank.Focus();
             }
         }
@@ -882,7 +882,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     //    //    b2.IsActive = true;
                                     //}
 
-                                    db.SaveChanges();
+                                    //db.SaveChanges();
                                     if (IsActiveBeforeEdit)
                                         btnDisplyActiveList_Click(null, null);
                                     else
@@ -965,6 +965,7 @@ namespace EtelaatePaye.CodingHesabdari
             _NoeHesab = cmbNoeHesab.Text;
             txtName.Text = _NameBank + " " + _NameShobe + " " + _NoeHesab + " " + _ShomareHesab;
         }
+
         private void txtShomareHesab_EditValueChanged(object sender, EventArgs e)
         {
             _ShomareHesab = txtShomareHesab.Text;

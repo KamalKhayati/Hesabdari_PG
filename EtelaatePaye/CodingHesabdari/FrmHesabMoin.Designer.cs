@@ -44,7 +44,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMoinId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMoinStaticId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEpHesabMoin1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkListBoxActiveSystem = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.msActiveSystemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -96,8 +96,8 @@
             this.colSelectedGroupTafziliLevel1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelectedActivesystem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSharhHesab = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGroupId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colColId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGroupStaticId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colColStaticId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEpHesabCol1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndexMahiatHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
@@ -288,7 +288,7 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn8,
-            this.colMoinId,
+            this.colMoinStaticId,
             this.colEpHesabMoin1});
             this.gridView2.DetailHeight = 434;
             this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
@@ -341,12 +341,12 @@
             this.gridColumn8.VisibleIndex = 0;
             this.gridColumn8.Width = 733;
             // 
-            // colMoinId
+            // colMoinStaticId
             // 
-            this.colMoinId.FieldName = "MoinId";
-            this.colMoinId.MinWidth = 24;
-            this.colMoinId.Name = "colMoinId";
-            this.colMoinId.Width = 92;
+            this.colMoinStaticId.FieldName = "MoinStaticId";
+            this.colMoinStaticId.MinWidth = 25;
+            this.colMoinStaticId.Name = "colMoinStaticId";
+            this.colMoinStaticId.Width = 94;
             // 
             // colEpHesabMoin1
             // 
@@ -464,7 +464,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "    کد ", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "                          نام حساب     ", 350, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeHesab", "  نوع حساب", 120, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MahiatHesab", "ماهیت حساب", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbListHesabCol.Properties.DataSource = this.epHesabColsBindingSource;
             this.cmbListHesabCol.Properties.DisplayMember = "Name";
             this.cmbListHesabCol.Properties.DropDownRows = 10;
@@ -850,8 +850,8 @@
             this.colSelectedGroupTafziliLevel1,
             this.colSelectedActivesystem,
             this.colSharhHesab,
-            this.colGroupId,
-            this.colColId,
+            this.colGroupStaticId,
+            this.colColStaticId,
             this.colEpHesabCol1,
             this.colIndexMahiatHesab});
             this.gridView1.DetailHeight = 434;
@@ -976,7 +976,7 @@
             this.colMahiatHesab.Name = "colMahiatHesab";
             this.colMahiatHesab.Visible = true;
             this.colMahiatHesab.VisibleIndex = 5;
-            this.colMahiatHesab.Width = 122;
+            this.colMahiatHesab.Width = 161;
             // 
             // colIsActive
             // 
@@ -1035,21 +1035,23 @@
             this.colSharhHesab.FieldName = "SharhHesab";
             this.colSharhHesab.MinWidth = 23;
             this.colSharhHesab.Name = "colSharhHesab";
+            this.colSharhHesab.Visible = true;
+            this.colSharhHesab.VisibleIndex = 9;
             this.colSharhHesab.Width = 489;
             // 
-            // colGroupId
+            // colGroupStaticId
             // 
-            this.colGroupId.FieldName = "GroupId";
-            this.colGroupId.MinWidth = 23;
-            this.colGroupId.Name = "colGroupId";
-            this.colGroupId.Width = 92;
+            this.colGroupStaticId.FieldName = "GroupStaticId";
+            this.colGroupStaticId.MinWidth = 25;
+            this.colGroupStaticId.Name = "colGroupStaticId";
+            this.colGroupStaticId.Width = 94;
             // 
-            // colColId
+            // colColStaticId
             // 
-            this.colColId.FieldName = "ColId";
-            this.colColId.MinWidth = 24;
-            this.colColId.Name = "colColId";
-            this.colColId.Width = 92;
+            this.colColStaticId.FieldName = "ColStaticId";
+            this.colColStaticId.MinWidth = 25;
+            this.colColStaticId.Name = "colColStaticId";
+            this.colColStaticId.Width = 94;
             // 
             // colEpHesabCol1
             // 
@@ -1291,7 +1293,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private DevExpress.XtraGrid.Columns.GridColumn colMoinId;
         private DevExpress.XtraGrid.Columns.GridColumn colEpHesabMoin1;
         private DevExpress.XtraEditors.CheckedListBoxControl chkListBoxActiveSystem;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
@@ -1326,8 +1327,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSelectedGroupTafziliLevel1;
         private DevExpress.XtraGrid.Columns.GridColumn colSelectedActivesystem;
         private DevExpress.XtraGrid.Columns.GridColumn colSharhHesab;
-        private DevExpress.XtraGrid.Columns.GridColumn colGroupId;
-        private DevExpress.XtraGrid.Columns.GridColumn colColId;
         private DevExpress.XtraGrid.Columns.GridColumn colEpHesabCol1;
         private DevExpress.XtraGrid.Columns.GridColumn colIndexMahiatHesab;
         private System.Windows.Forms.BindingSource epHesabMoinsBindingSource;
@@ -1347,5 +1346,8 @@
         private DevExpress.XtraEditors.SimpleButton btnSaveNext;
         public DevExpress.XtraEditors.LabelControl lblSalMali;
         public DevExpress.XtraEditors.LabelControl lblSalId;
+        private DevExpress.XtraGrid.Columns.GridColumn colMoinStaticId;
+        private DevExpress.XtraGrid.Columns.GridColumn colGroupStaticId;
+        private DevExpress.XtraGrid.Columns.GridColumn colColStaticId;
     }
 }

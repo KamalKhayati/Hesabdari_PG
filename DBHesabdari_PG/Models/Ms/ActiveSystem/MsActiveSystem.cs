@@ -20,6 +20,7 @@ namespace DBHesabdari_PG.Models.Ms.ActiveSystem
 {
     public class MsActiveSystem
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         //[Required]
         //public int SalId { get; set; }
@@ -40,10 +41,10 @@ namespace DBHesabdari_PG.Models.Ms.ActiveSystem
         [Required, Column(Order = 1)]
         public int SalId { get; set; }
         [Key]
-        [Column(Order = 2)]
+        [Required, Column(Order = 2)]
         public int ActiveSystemId { get; set; }
         [Key]
-        [Column(Order = 3)]
+        [Required, Column(Order = 3)]
         public int MoinId { get; set; }
         [Required, Column(Order = 4)]
         public int ActiveSystemCode { get; set; }

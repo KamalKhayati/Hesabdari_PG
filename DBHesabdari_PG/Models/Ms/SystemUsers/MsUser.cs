@@ -42,21 +42,31 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
 
     public class RmsUserBepAccessLevelCodingHesabdari
     {
-        [Key]
+        [Required]
         [Column(Order = 0)]
+        public int SalId { get; set; }
+        [Key]
+        [Required]
+        [Column(Order = 1)]
         public int UserId { get; set; }
         [Key]
-        [Column(Order = 1)]
-        public int CodingHesabdariId { get; set; }
+        [Required]
         [Column(Order = 2)]
-        public int KeyId { get; set; }
+        public int CodingHesabdariId { get; set; }
+        [Required]
         [Column(Order = 3)]
-        public int HesabGroupId { get; set; }
+        public int KeyId { get; set; }
+        [Required]
         [Column(Order = 4)]
-        public int HesabColId { get; set; }
+        public int HesabGroupId { get; set; }
+        [Required]
         [Column(Order = 5)]
-        public int HesabMoinId { get; set; }
+        public int HesabColId { get; set; }
+        [Required]
         [Column(Order = 6)]
+        public int HesabMoinId { get; set; }
+        [Required]
+        [Column(Order = 7)]
         public bool IsActive { get; set; }
 
         public virtual MsUser MsUser1 { get; set; }

@@ -20,6 +20,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpHesabMoin
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         public int SalId { get; set; }
@@ -58,21 +59,21 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
     {
         //[Column(Order = 0)]
        // public int Id { get; set; }
-        [Required, Column(Order = 1)]
+        [Required, Column(Order = 0)]
         public int SalId { get; set; }
         [Key]
-        [Column(Order = 2)]
+        [Required, Column(Order = 1)]
         public int MoinId { get; set; }
 
         [Key]
-        [Column(Order = 3)]
-        public int GroupTafziliId { get; set; }
+        [Required, Column(Order = 2)]
+        public int GroupTafziliId { get; set; } 
 
-        [Column(Order = 4)]
+        [Required, Column(Order = 3)]
         public int NumberLevel { get; set; }
-        [Required, Column(Order = 5)]
+        [Required, Column(Order = 4)]
         public int MoinCode { get; set; }
-        [Required, Column(Order = 6)]
+        [Required, Column(Order = 5)]
         public int GroupTafziliCode { get; set; }
 
         public virtual EpHesabMoin EpHesabMoin1 { get; set; }

@@ -11,6 +11,7 @@ using DBHesabdari_PG.Models.EP.CodingHesabdari;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,12 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpGroupTafzili
     {
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
+        //[Required]
+        //public int SalId { get; set; }
         [Required]
-        public int SalId { get; set; }
+        public int StaticId { get; set; }
         [Required]
         public int Code { get; set; }
         [Required, MaxLength(50)]
