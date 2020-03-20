@@ -229,9 +229,9 @@
             this.cmbMahiatHesab.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbMahiatHesab.Properties.Items.AddRange(new object[] {
-            "بدهکار",
-            "بستانکار",
-            "بد / بس"});
+            "مانده بدهکار",
+            "مانده بستانکار",
+            "مانده بد / بس"});
             this.cmbMahiatHesab.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbMahiatHesab.Size = new System.Drawing.Size(171, 38);
             this.cmbMahiatHesab.TabIndex = 3;
@@ -464,7 +464,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "    کد ", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "                          نام حساب     ", 350, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MahiatHesab", "ماهیت حساب", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MahiatHesab", "ماهیت حساب", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbListHesabCol.Properties.DataSource = this.epHesabColsBindingSource;
             this.cmbListHesabCol.Properties.DisplayMember = "Name";
             this.cmbListHesabCol.Properties.DropDownRows = 10;
@@ -505,7 +505,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "    کد ", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "                          نام حساب     ", 350, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeHesab", "  نوع حساب", 120, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeHesab", "  نوع حساب", 160, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbListHesabGroup.Properties.DataSource = this.epHesabGroupsBindingSource;
             this.cmbListHesabGroup.Properties.DisplayMember = "Name";
             this.cmbListHesabGroup.Properties.DropDownRows = 10;
@@ -593,7 +593,8 @@
             this.txtColCode.Name = "txtColCode";
             this.txtColCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtColCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtColCode.Properties.MaxLength = 2;
+            this.txtColCode.Properties.Mask.EditMask = "0000";
+            this.txtColCode.Properties.MaxLength = 4;
             this.txtColCode.Size = new System.Drawing.Size(86, 38);
             this.txtColCode.TabIndex = 29;
             this.txtColCode.TabStop = false;
@@ -610,7 +611,6 @@
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtCode.Properties.Mask.EditMask = "00";
-            this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCode.Properties.MaxLength = 2;
             this.txtCode.Size = new System.Drawing.Size(78, 38);
             this.txtCode.TabIndex = 28;
@@ -1183,14 +1183,14 @@
             this.xtraTabPage2.Controls.Add(this.xtraTabControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1151, 251);
-            this.xtraTabPage2.Text = "ارتباط معین با سطح تفضیلی";
+            this.xtraTabPage2.Text = "ارتباط معین با سطوح تفضیلی";
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.chkListBoxActiveSystem);
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1151, 251);
-            this.xtraTabPage3.Text = "تعیین دسترسی سیستمهای فعال به معین";
+            this.xtraTabPage3.Text = "ارتباط معین با سیستمهای فعال";
             // 
             // xtraTabPage4
             // 

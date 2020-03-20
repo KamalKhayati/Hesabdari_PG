@@ -56,7 +56,7 @@ namespace EtelaatePaye.CodingHesabdari
                         //else
                         //{
                         //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                        //    var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 && s.IsActive == true).Select(s => s.HesabMoinId).ToList();
+                        //    var q2 = dataContext.RmsUserBAllCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 && s.IsActive == true).Select(s => s.HesabMoinId).ToList();
 
                         //    if (q1.Count > 0)
                         //    {
@@ -173,8 +173,8 @@ namespace EtelaatePaye.CodingHesabdari
                     db1.EpSharhStandardMoins.Where(s => s.MoinId == RowId && s.SalId == _SalId).OrderBy(s => s.Id).Load();
                     epSharhStandardMoinsBindingSource.DataSource = db1.EpSharhStandardMoins.Local.ToBindingList();
                 }
-                else
-                    epSharhStandardMoinsBindingSource.DataSource = null;
+                //else
+                //    epSharhStandardMoinsBindingSource.DataSource = null;
             }
             catch (Exception ex)
             {
@@ -245,16 +245,16 @@ namespace EtelaatePaye.CodingHesabdari
                         if (q.Count > 0)
                         {
                             var MaximumCod = q.Max(s => s.Code);
-                            if (MaximumCod.ToString().Substring(2) != "99")
+                            if (MaximumCod.ToString().Substring(4) != "99")
                             {
-                                txtCode.Text = (MaximumCod + 1).ToString().Substring(2);
+                                txtCode.Text = (MaximumCod + 1).ToString().Substring(4);
                                 //btnNewCode.Enabled = true;
                             }
                             else
                             {
                                 if (En == EnumCED.Create)
-                                    XtraMessageBox.Show("اعمال محدودیت تعریف 99 حساب معین برای هر حساب کل ..." + "\n" +
-                                        "توجه : نمیتوان بیشتر از 99 حساب معین برای هر حساب کل تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین 1 تا 99 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    XtraMessageBox.Show("اعمال محدودیت تعریف 100 حساب معین برای هر حساب کل ..." + "\n" +
+                                        "توجه : نمیتوان بیشتر از 100 حساب معین برای هر حساب کل تعریف کرد مگر اینکه در صورت امکان از کدهای خالی مابین صفر تا 100 استفاده نمایید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //btnNewCode.Enabled = false;
                             }
                         }
@@ -654,11 +654,11 @@ namespace EtelaatePaye.CodingHesabdari
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
                                 int _SalId = Convert.ToInt32(lblSalId.Text);
                                 var q = db.EpHesabMoins.FirstOrDefault(s => s.Id == RowId && s.SalId == _SalId);
-                                var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId && s.SalId == _SalId);
+                                var q8 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId && s.SalId == _SalId);
                                 if (q != null && q8 != null)
                                 {
                                     db.EpHesabMoins.Remove(q);
-                                    db.EpAccessLevelCodingHesabdaris.Remove(q8);
+                                    db.AllCodingHesabdaris.Remove(q8);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
@@ -716,8 +716,8 @@ namespace EtelaatePaye.CodingHesabdari
                     cmbListHesabGroup.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupId").ToString());
                     cmbListHesabCol.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ColId").ToString());
                     txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                    txtColCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
-                    txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(2);
+                    txtColCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 4);
+                    txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(4);
                     txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                     cmbMahiatHesab.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("IndexMahiatHesab").ToString());
                     chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
@@ -884,7 +884,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
                                 }
                                 ////////////////////////////////////// اضافه کردن حساب معین به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
-                                EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
+                                AllCodingHesabdari n1 = new AllCodingHesabdari();
                                 n1.SalId = Convert.ToInt32(lblSalId.Text);
                                 n1.KeyId = _code;
                                 n1.ParentId = Convert.ToInt32(txtColCode.Text);
@@ -893,7 +893,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 n1.HesabColId = q.ColId;
                                 n1.HesabMoinId = q.Id;
                                 n1.IsActive = chkIsActive.Checked;
-                                db.EpAccessLevelCodingHesabdaris.Add(n1);
+                                db.AllCodingHesabdaris.Add(n1);
                                 /////////////////////////////////////////////////////////////////////////////////////
                                 db.SaveChanges();
                                 if (chkIsActive.Checked)
@@ -1018,7 +1018,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         }
                                     }
                                     ///////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
-                                    var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId && s.SalId == _SalId);
+                                    var q8 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId && s.SalId == _SalId);
                                     if (q8 != null)
                                     {
                                         if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
@@ -1035,7 +1035,7 @@ namespace EtelaatePaye.CodingHesabdari
                                             q8.IsActive = chkIsActive.Checked;
                                     }
                                     /////////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate////////////////////////////////////// 
-                                    var q9 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId && s.SalId == _SalId);
+                                    var q9 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(s => s.HesabMoinId == RowId && s.SalId == _SalId);
                                     if (q9 != null)
                                     {
                                         if (GroupIdBeforeEdit != Convert.ToInt32(cmbListHesabGroup.EditValue) || CodeBeforeEdit != txtCode.Text)
@@ -1052,10 +1052,10 @@ namespace EtelaatePaye.CodingHesabdari
                                     {
                                         var m1 = db.EpHesabGroups.FirstOrDefault(s => s.Id == _GroupId && s.SalId == _SalId);
                                         var m2 = db.EpHesabCols.FirstOrDefault(s => s.Id == _ColId && s.SalId == _SalId);
-                                        var a1 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0 && s.SalId == _SalId);
-                                        var a2 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == _ColId && s.HesabMoinId == 0 && s.SalId == _SalId);
-                                        var b1 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0);
-                                        var b2 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == _ColId && s.HesabMoinId == 0);
+                                        var a1 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0 && s.SalId == _SalId);
+                                        var a2 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == _ColId && s.HesabMoinId == 0 && s.SalId == _SalId);
+                                        var b1 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0);
+                                        var b2 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == _ColId && s.HesabMoinId == 0);
                                         if (m1 != null)
                                             m1.IsActive = true;
                                         if (m2 != null)
@@ -1183,8 +1183,8 @@ namespace EtelaatePaye.CodingHesabdari
                 cmbListHesabGroup.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupId").ToString());
                 cmbListHesabCol.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ColId").ToString());
                 txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                txtColCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
-                txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(2);
+                txtColCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 4);
+                txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(4);
                 txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                 cmbMahiatHesab.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("IndexMahiatHesab").ToString());
                 chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));

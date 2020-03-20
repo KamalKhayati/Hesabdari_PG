@@ -239,6 +239,12 @@
     <Compile Include="CodingHesabdari\FrmNameOstan.Designer.cs">
       <DependentUpon>FrmNameOstan.cs</DependentUpon>
     </Compile>
+    <Compile Include="CodingHesabdari\FrmTabaghebandiHesabha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodingHesabdari\FrmTabaghebandiHesabha.Designer.cs">
+      <DependentUpon>FrmTabaghebandiHesabha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CodingAnbar\FrmGroupAsliKala.resx">
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmNameOstan.resx">
       <DependentUpon>FrmNameOstan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodingHesabdari\FrmTabaghebandiHesabha.resx">
+      <DependentUpon>FrmTabaghebandiHesabha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

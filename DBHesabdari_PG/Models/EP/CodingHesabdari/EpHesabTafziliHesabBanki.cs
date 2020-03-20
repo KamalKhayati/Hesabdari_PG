@@ -30,7 +30,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public string NameBank { get; set; }
         [Required, MaxLength(40)]
         public string NameShobe { get; set; }
-        public float CodeShobe { get; set; }
+        [MaxLength(40)]
+        public string CodeShobe { get; set; }
         [Required, MaxLength(40)]
         public string NoeHesab { get; set; }
         [Required, MaxLength(40)]

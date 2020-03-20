@@ -121,6 +121,8 @@
     <Compile Include="Models\EP\CodingHesabdari\EpEetebarat_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpShTamas_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafziliDaraeha.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpTabaghebandiHesabha.cs" />
+    <Compile Include="Models\EP\Tanzimat\EpTanzimatCodingHesabdari.cs" />
     <Compile Include="Models\Ms\ActiveSystem\MsActiveSystem.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsDefault.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsDoreMali.cs" />

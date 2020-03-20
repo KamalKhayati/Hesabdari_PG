@@ -37,10 +37,10 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public virtual MsDefault MsDefault1 { get; set; }
         public virtual ICollection<RmsUserBmsAccessLevelMenu> RmsUserBmsAccessLevelMenus { get; set; }
         public virtual ICollection<RmsUserBmsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
-        public virtual ICollection<RmsUserBepAccessLevelCodingHesabdari> RmsUserBepAccessLevelCodingHesabdaris { get; set; }
+        public virtual ICollection<RmsUserBallCodingHesabdari> RmsUserBallCodingHesabdaris { get; set; }
     }
 
-    public class RmsUserBepAccessLevelCodingHesabdari
+    public class RmsUserBallCodingHesabdari
     {
         [Required]
         [Column(Order = 0)]
@@ -58,19 +58,22 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public int KeyId { get; set; }
         [Required]
         [Column(Order = 4)]
-        public int HesabGroupId { get; set; }
+        public int TabaghebandiHesabhaId { get; set; }
         [Required]
         [Column(Order = 5)]
-        public int HesabColId { get; set; }
+        public int HesabGroupId { get; set; }
         [Required]
         [Column(Order = 6)]
-        public int HesabMoinId { get; set; }
+        public int HesabColId { get; set; }
         [Required]
         [Column(Order = 7)]
+        public int HesabMoinId { get; set; }
+        [Required]
+        [Column(Order = 8)]
         public bool IsActive { get; set; }
 
         public virtual MsUser MsUser1 { get; set; }
-        public virtual EpAccessLevelCodingHesabdari EpAccessLevelCodingHesabdari1 { get; set; }
+        public virtual AllCodingHesabdari AllCodingHesabdari1 { get; set; }
     }
 
     public class RmsUserBmsAccessLevelMenu

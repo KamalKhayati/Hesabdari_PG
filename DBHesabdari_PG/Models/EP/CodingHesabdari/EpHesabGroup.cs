@@ -27,17 +27,19 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(50)]
         public string Name { get; set; }
         [Required]
-        public int IndexGroupStandard { get; set; }
-        [Required, MaxLength(30)]
-        public string NameGroupStandard { get; set; }
+        public int TabaghebandiHesabhaId { get; set; }
+        [Required, MaxLength(50)]
+        public string TabaghebandiHesabhaName { get; set; }
         [Required]
         public int IndexNoeHesab { get; set; }
-        [Required, MaxLength(15)]
+        [Required, MaxLength(20)]
         public string NoeHesab { get; set; }
         [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        public virtual EpTabaghebandiHesabha EpTabaghebandiHesabha1 { get; set; }
+        public virtual AllCodingHesabdari AllCodingHesabdari1 { get; set; }
         public virtual ICollection<EpHesabCol> EpHesabCols { get; set; }
 
     }

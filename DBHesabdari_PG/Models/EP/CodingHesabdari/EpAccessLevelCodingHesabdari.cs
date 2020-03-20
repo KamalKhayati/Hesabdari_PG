@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
-   public class EpAccessLevelCodingHesabdari
+   public class AllCodingHesabdari
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -30,11 +30,14 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public int ParentId { get; set; }
         [Required,MaxLength(50)]
         public string LevelName { get; set; }
+        public int TabaghebandiHesabhaId { get; set; }
         public int HesabGroupId { get; set; }
         public int HesabColId { get; set; }
         public int HesabMoinId { get; set; }
         public bool IsActive { get; set; }
-        public virtual ICollection<RmsUserBepAccessLevelCodingHesabdari> RmsUserBepAccessLevelCodingHesabdaris { get; set; }
+        public virtual ICollection<RmsUserBallCodingHesabdari> RmsUserBallCodingHesabdaris { get; set; }
+        public virtual EpTabaghebandiHesabha EpTabaghebandiHesabha1 { get; set; }
+        public virtual EpHesabGroup EpHesabGroup1 { get; set; }
 
     }
 }

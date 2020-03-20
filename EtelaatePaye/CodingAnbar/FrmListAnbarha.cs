@@ -44,7 +44,7 @@ namespace EtelaatePaye.CodingAnbar
                         //else
                         //{
                         //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                        //    var q2 = dataContext.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 && s.IsActive == true).Select(s => s.HesabMoinId).ToList();
+                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 && s.IsActive == true).Select(s => s.HesabMoinId).ToList();
 
                         //    if (q1.Count > 0)
                         //    {
@@ -399,11 +399,11 @@ namespace EtelaatePaye.CodingAnbar
                             {
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
                                 var q = db.EpListAnbarhas.FirstOrDefault(p => p.Id == RowId);
-                                //var q8 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
+                                //var q8 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
                                 if (q != null /*&& q8 != null*/)
                                 {
                                     db.EpListAnbarhas.Remove(q);
-                                    //db.EpAccessLevelCodingHesabdaris.Remove(q8);
+                                    //db.AllCodingHesabdaris.Remove(q8);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
@@ -497,14 +497,14 @@ namespace EtelaatePaye.CodingAnbar
                                 //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
                                 //var q = db.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Code == _Code);
                                 //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
-                                //EpAccessLevelCodingHesabdari n1 = new EpAccessLevelCodingHesabdari();
+                                //AllCodingHesabdari n1 = new AllCodingHesabdari();
                                 //n1.KeyId = _Code;
                                 //n1.ParentId = Convert.ToInt32(txtGroupCode.Text);
                                 //n1.LevelName = txtName.Text;
                                 //n1.HesabGroupId = q.GroupId;
                                 //n1.HesabColId = q.Id;
                                 //n1.IsActive = chkIsActive.Checked;
-                                //db.EpAccessLevelCodingHesabdaris.Add(n1);
+                                //db.AllCodingHesabdaris.Add(n1);
                                 ///////////////////////////////////////////////////////////////////////////////////////
                                 //db.SaveChanges();
                                 if (chkIsActive.Checked)
@@ -559,7 +559,7 @@ namespace EtelaatePaye.CodingAnbar
                                     //    });
                                     //}
                                     /////////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
-                                    //var q8 = db.EpAccessLevelCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
+                                    //var q8 = db.AllCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
                                     //if (q8.Count > 0)
                                     //{
                                     //    q8.ForEach(item =>
@@ -593,7 +593,7 @@ namespace EtelaatePaye.CodingAnbar
                                     //    });
                                     //}
                                     ///////////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate////////////////////////////////////// 
-                                    //var q9 = db.RmsUserBepAccessLevelCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
+                                    //var q9 = db.RmsUserBallCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
                                     //if (q9.Count > 0)
                                     //{
                                     //    q9.ForEach(item =>
@@ -611,10 +611,10 @@ namespace EtelaatePaye.CodingAnbar
                                     //if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
                                     //{
                                     //    var m = db.EpHesabGroups.FirstOrDefault(p => p.Id == _GroupId);
-                                    //    var a1 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
-                                    //    //var a2 = db.EpAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
-                                    //    var b1 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
-                                    //    //var b2 = db.RmsUserBepAccessLevelCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
+                                    //    var a1 = db.AllCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
+                                    //    //var a2 = db.AllCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
+                                    //    var b1 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
+                                    //    //var b2 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
                                     //    if (m != null)
                                     //        m.IsActive = true;
                                     //    if (a1 != null)

@@ -25,11 +25,13 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //[Required]
         //public int SalId { get; set; }
         [Required]
-        public int StaticId { get; set; }
-        [Required]
         public int Code { get; set; }
         [Required, MaxLength(50)]
         public string Name { get; set; }
+        [Required]
+        public int StartCode { get; set; }
+        [Required]
+        public int EndCode { get; set; }
         [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]

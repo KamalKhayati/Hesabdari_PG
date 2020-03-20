@@ -45,21 +45,25 @@ namespace DBHesabdari_PG.Migrations
                 {
                     if (!context.EpGroupTafzilis.Any())
                     {
-                        context.Entry(new EpGroupTafzili() { Id = 10, Code = 10, Name = "صندوق", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 10) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 15, Code = 15, Name = "حسابهای بانکی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 15) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 20, Code = 20, Name = "اشخاص حقیقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 20) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 25, Code = 25, Name = "اشخاص حقوقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 25) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 30, Code = 30, Name = "ادارات دولتی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 30) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 35, Code = 35, Name = "وامها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 35) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 40, Code = 40, Name = "داراییها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 40) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 45, Code = 45, Name = "پروژه ها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 45) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 50, Code = 50, Name = "مواد", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 50) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 55, Code = 55, Name = "قطعات", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 55) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 60, Code = 60, Name = "محصول", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 60) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 65, Code = 65, Name = "کالاها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 65) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 70, Code = 70, Name = "مراکز هزینه", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 70) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 75, Code = 75, Name = "شعبات یا نمایندگیهای وابسته", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 75) ? EntityState.Unchanged : EntityState.Added;
-                        context.Entry(new EpGroupTafzili() { Id = 90, Code = 90, Name = "سایر", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 90) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 10, Code = 10, StartCode = 1000000, EndCode = 1999999, Name = "سهامداران", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 10) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 20, Code = 20, StartCode = 2000000, EndCode = 2999999, Name = "کارکنان", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 20) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 30, Code = 30, StartCode = 3000000, EndCode = 3999999, Name = "اشخاص حقیقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 30) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 40, Code = 40, StartCode = 4000000, EndCode = 4999999, Name = "اشخاص حقوقی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 40) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 50, Code = 50, StartCode = 5000000, EndCode = 5999999, Name = "ادارات دولتی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 50) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 60, Code = 60, StartCode = 6000000, EndCode = 6499999, Name = "مواد", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 60) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 65, Code = 65, StartCode = 6500000, EndCode = 6999999, Name = "قطعات و ملزومات", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 65) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 70, Code = 70, StartCode = 7000000, EndCode = 7499999, Name = "محصولات", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 70) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 75, Code = 75, StartCode = 7500000, EndCode = 7999999, Name = "کالاها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 75) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 80, Code = 80, StartCode = 8000000, EndCode = 8499999, Name = "داراییها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 80) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 85, Code = 85, StartCode = 8500000, EndCode = 8799999, Name = "پروژه ها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 85) ? EntityState.Unchanged : EntityState.Added;
+
+                        context.Entry(new EpGroupTafzili() { Id = 88, Code = 88, StartCode = 8800000, EndCode = 8899999, Name = "صندوق", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 88) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 89, Code = 89, StartCode = 8900000, EndCode = 8999999, Name = "حسابهای بانکی", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 89) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 90, Code = 90, StartCode = 9000000, EndCode = 9099999, Name = "وامها", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 90) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 91, Code = 91, StartCode = 9100000, EndCode = 9199999, Name = "مراکز هزینه", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 91) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new EpGroupTafzili() { Id = 92, Code = 92, StartCode = 9200000, EndCode = 9299999, Name = "شعبات یا نمایندگیهای وابسته", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 92) ? EntityState.Unchanged : EntityState.Added;
+
+                        context.Entry(new EpGroupTafzili() { Id = 99, Code = 99, StartCode = 9900000, EndCode = 9999999, Name = "سایر", IsActive = true }).State = context.EpGroupTafzilis.Any(s => s.Id == 99) ? EntityState.Unchanged : EntityState.Added;
 
                     }
 
@@ -71,11 +75,45 @@ namespace DBHesabdari_PG.Migrations
                         context.Entry(new MsActiveSystem() { Id = 25, Code = 25, Name = "انبار و کالا", IsActive = false }).State = context.MsActiveSystems.Any(s => s.Id == 4) ? EntityState.Unchanged : EntityState.Added;
                     }
 
+                    //if (!context.EpTabaghebandiHesabhas.Any())
+                    //{
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 1, Name = "دارائیها", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 1) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 2, Name = "بدهیها و حقوق صاحبان سهام", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 2) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 3, Name = "عملکرد (سود و زیان)", IndexNoeHesab = 1, NoeHesab = "سود و زیانی", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 3) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 4, Name = "حسابهای انتظامی و کنترلی", IndexNoeHesab = 2, NoeHesab = "انتظامی و کنترلی", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 4) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.SaveChanges();
+                    //}
+
+                    //if (!context.EpHesabGroups.Any())
+                    //{
+                    //    context.Entry(new EpHesabGroup() { SalId = 1, Code = 10, Name = "دارائیهای جاری", TabaghebandiHesabhaId = 1, TabaghebandiHesabhaName = "دارائیها", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabGroups.Any(s => s.Code == 10) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabGroup() { SalId = 1, Code = 20, Name = "دارائیهای غیرجاری", TabaghebandiHesabhaId = 1, TabaghebandiHesabhaName = "دارائیها", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabGroups.Any(s => s.Code == 20) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabGroup() { SalId = 1, Code = 30, Name = "بدهیهای جاری", TabaghebandiHesabhaId = 2, TabaghebandiHesabhaName = "بدهیها و حقوق صاحبان سهام", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabGroups.Any(s => s.Code == 30) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabGroup() { SalId = 1, Code = 40, Name = "بدهیهای غیرجاری", TabaghebandiHesabhaId = 2, TabaghebandiHesabhaName = "بدهیها و حقوق صاحبان سهام", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabGroups.Any(s => s.Code == 40) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.SaveChanges();
+                    //}
+                    //if (!context.EpHesabCols.Any())
+                    //{
+                    //    context.Entry(new EpHesabCol() { SalId = 1, Code = 1001, Name = "موجودی نقد و بانک", GroupId = 1, GroupName = "دارائیهای جاری", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabCols.Any(s => s.Code == 1001) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabCol() { SalId = 1, Code = 2001, Name = "دارائیهای ثابت مشهود", GroupId = 2, GroupName = "دارائیهای غیرجاری", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabCols.Any(s => s.Code == 2001) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabCol() { SalId = 1, Code = 3001, Name = "حسابهای پرداختنی تجاری", GroupId = 3, GroupName = "بدهیهای جاری", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabCols.Any(s => s.Code == 3001) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabCol() { SalId = 1, Code = 4001, Name = "حسابهای پرداختنی غیرتجاری", GroupId = 4, GroupName = "بدهیهای غیرجاری", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabCols.Any(s => s.Code == 4001) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.SaveChanges();
+                    //}
+
+                    //if (!context.EpHesabMoins.Any())
+                    //{
+                    //    context.Entry(new EpHesabMoin() { SalId = 1, Code = 100101, Name = "صندوق", GroupId = 1, GroupName = "دارائیهای جاری", ColId = 1, ColName = "موجودی نقد و بانک", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IsActive = true, SelectedGroupTafziliLevel1 = "صندوق,", SelectedActivesystem = "دریافت و پرداخت,", SharhHesab = "" }).State = context.EpHesabMoins.Any(s => s.Code == 100101) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabMoin() { SalId = 1, Code = 200101, Name = "زمین", GroupId = 2, GroupName = "دارائیهای غیرجاری", ColId = 2, ColName = "دارائیهای ثابت مشهود", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IsActive = true, SelectedGroupTafziliLevel1 = "دارائیها,", SelectedActivesystem = "اسناد حسابداری,", SharhHesab = "" }).State = context.EpHesabMoins.Any(s => s.Code == 200101) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabMoin() { SalId = 1, Code = 300101, Name = "بستانکاران تجاری", GroupId = 3, GroupName = "بدهیهای جاری", ColId = 3, ColName = "حسابهای پرداختنی تجاری", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IsActive = true, SelectedGroupTafziliLevel1 = "اشخاص حقیقی,", SelectedActivesystem = "دریافت و پرداخت,", SharhHesab = "" }).State = context.EpHesabMoins.Any(s => s.Code == 300101) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpHesabMoin() { SalId = 1, Code = 400101, Name = "حقوق و دستمزد پرداختنی", GroupId = 4, GroupName = "بدهیهای غیرجاری", ColId = 4, ColName = "حسابهای پرداختنی غیرتجاری", IndexMahiatHesab = 0, MahiatHesab = "مانده بدهکار", IsActive = true, SelectedGroupTafziliLevel1 = "اشخاص حقوقی,", SelectedActivesystem = "اسناد حسابداری,", SharhHesab = "" }).State = context.EpHesabMoins.Any(s => s.Code == 400101) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.SaveChanges();
+                    //}
+
                     if (!context.MsDefaults.Any())
                     {
-                        context.Entry(new MsDefault() { MsUserId = 1, MajmoeId = 1, VahedId = 1, ShobeId = 1, DoreMaliId=1}).State = context.MsDefaults.Any(s => s.MsUserId == 1) ? EntityState.Unchanged : EntityState.Added;
+                        context.Entry(new MsDefault() { MsUserId = 1, MajmoeId = 1, VahedId = 1, ShobeId = 1, DoreMaliId = 1 }).State = context.MsDefaults.Any(s => s.MsUserId == 1) ? EntityState.Unchanged : EntityState.Added;
                     }
-
                     if (!context.MsUsers.Any())
                     {
                         context.MsUsers.Add(new MsUser() { MsUserId = 1, UserCode = 101, Name = "مدیر سیستم", Shenase = "1", Password = "1", UserIsActive = true });
@@ -336,7 +374,7 @@ namespace DBHesabdari_PG.Migrations
                 }
                 catch (Exception ex)
                 {
-                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.ToString(), "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 /////////////////////////////////////////////////////////////////////////////////////////////////
                 //        //context.Students.Add(new Student() { StudentName = "Kaveh", StudentAge = 35 });

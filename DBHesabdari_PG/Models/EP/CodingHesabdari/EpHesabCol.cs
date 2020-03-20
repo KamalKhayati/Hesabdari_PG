@@ -26,13 +26,21 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(50)]
         public string Name { get; set; }
         [Required]
+        public int TabaghebandiHesabhaId { get; set; }
+        [Required, MaxLength(50)]
+        public string TabaghebandiHesabhaName { get; set; }
+        [Required]
         public int GroupId { get; set; }
         [Required, MaxLength(50)]
         public string GroupName { get; set; }
         [Required]
         public int IndexMahiatHesab { get; set; }
-        [Required, MaxLength(10)]
+        [Required, MaxLength(20)]
         public string MahiatHesab { get; set; }
+        [Required]
+        public int IndexNoeHesab { get; set; }
+        [Required, MaxLength(20)]
+        public string NoeHesab { get; set; }
         [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]
