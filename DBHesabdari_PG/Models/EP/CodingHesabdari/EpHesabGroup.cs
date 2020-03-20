@@ -38,8 +38,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
-        public virtual EpTabaghebandiHesabha EpTabaghebandiHesabha1 { get; set; }
-        public virtual AllCodingHesabdari AllCodingHesabdari1 { get; set; }
+        public virtual EpHesabTabagheh EpTabaghebandiHesabha1 { get; set; }
+        public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual ICollection<EpHesabCol> EpHesabCols { get; set; }
 
     }

@@ -43,7 +43,7 @@
             this.colHesabColId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colHesabMoinId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIsActive2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.AllCodingHesabdarisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.EpAllCodingHesabdarisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
@@ -68,7 +68,7 @@
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingHesabdari)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllCodingHesabdarisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpAllCodingHesabdarisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msUserBindingSource)).BeginInit();
@@ -92,7 +92,7 @@
             this.colHesabMoinId2,
             this.colIsActive2});
             this.treeListCodingHesabdari.Cursor = System.Windows.Forms.Cursors.Default;
-            this.treeListCodingHesabdari.DataSource = this.AllCodingHesabdarisBindingSource;
+            this.treeListCodingHesabdari.DataSource = this.EpAllCodingHesabdarisBindingSource;
             this.treeListCodingHesabdari.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeListCodingHesabdari.KeyFieldName = "KeyId";
             this.treeListCodingHesabdari.Location = new System.Drawing.Point(0, 60);
@@ -189,9 +189,9 @@
             this.colIsActive2.Name = "colIsActive2";
             this.colIsActive2.Width = 92;
             // 
-            // AllCodingHesabdarisBindingSource
+            // EpAllCodingHesabdarisBindingSource
             // 
-            this.AllCodingHesabdarisBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.AllCodingHesabdari);
+            this.EpAllCodingHesabdarisBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpAllCodingHesabdari);
             // 
             // barManager1
             // 
@@ -430,7 +430,7 @@
             this.Text = "دسترسی کاربران به کدینگ حسابداری (گروه،کل،معین";
             this.Load += new System.EventHandler(this.FrmAccesslevelCodingHesabdari_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingHesabdari)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllCodingHesabdarisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EpAllCodingHesabdarisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msUserBindingSource)).EndInit();
@@ -476,7 +476,7 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn colHesabColId2;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colHesabMoinId2;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colIsActive2;
-        private System.Windows.Forms.BindingSource AllCodingHesabdarisBindingSource;
+        private System.Windows.Forms.BindingSource EpAllCodingHesabdarisBindingSource;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private System.Windows.Forms.BindingSource msUserBindingSource;
     }

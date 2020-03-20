@@ -106,18 +106,18 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    if (db.EpTabaghebandiHesabhas.Any())
+                    if (db.EpHesabTabaghehs.Any())
                     {
                         int _SalId = Convert.ToInt32(lblSalId.Text);
                         if (IsActiveList == true)
                         {
-                            db.EpTabaghebandiHesabhas.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).Load();
-                            epTabaghebandiHesabhasBindingSource.DataSource = db.EpTabaghebandiHesabhas.Local.ToBindingList();
+                            db.EpHesabTabaghehs.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).Load();
+                            epHesabTabaghehsBindingSource.DataSource = db.EpHesabTabaghehs.Local.ToBindingList();
                         }
                         else
                         {
-                            db.EpTabaghebandiHesabhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).Load();
-                            epTabaghebandiHesabhasBindingSource.DataSource = db.EpTabaghebandiHesabhas.Local.ToBindingList();
+                            db.EpHesabTabaghehs.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).Load();
+                            epHesabTabaghehsBindingSource.DataSource = db.EpHesabTabaghehs.Local.ToBindingList();
                         }
                     }
                 }
@@ -493,11 +493,11 @@ namespace EtelaatePaye.CodingHesabdari
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
                                 int _SalId = Convert.ToInt32(lblSalId.Text);
                                 var q = db.EpHesabCols.FirstOrDefault(s => s.Id == RowId && s.SalId == _SalId);
-                                var q8 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId && s.SalId == _SalId);
+                                var q8 = db.EpAllCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId && s.SalId == _SalId);
                                 if (q != null && q8 != null)
                                 {
                                     db.EpHesabCols.Remove(q);
-                                    db.AllCodingHesabdaris.Remove(q8);
+                                    db.EpAllCodingHesabdaris.Remove(q8);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
@@ -595,7 +595,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 int _code = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
                                 var q = db.EpHesabCols.FirstOrDefault(s => s.Code == _code && s.SalId == _SalId);
                                 ////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
-                                AllCodingHesabdari n1 = new AllCodingHesabdari();
+                                EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                 n1.SalId = Convert.ToInt32(lblSalId.Text);
                                 n1.KeyId = _code;
                                 n1.ParentId = Convert.ToInt32(txtGroupCode.Text);
@@ -603,7 +603,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 n1.HesabGroupId = q.GroupId;
                                 n1.HesabColId = q.Id;
                                 n1.IsActive = chkIsActive.Checked;
-                                db.AllCodingHesabdaris.Add(n1);
+                                db.EpAllCodingHesabdaris.Add(n1);
                                 /////////////////////////////////////////////////////////////////////////////////////
                                 db.SaveChanges();
                                 if (chkIsActive.Checked)
@@ -666,7 +666,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         });
                                     }
                                     ///////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
-                                    var q8 = db.AllCodingHesabdaris.Where(s => s.HesabColId == RowId && s.SalId == _SalId).ToList();
+                                    var q8 = db.EpAllCodingHesabdaris.Where(s => s.HesabColId == RowId && s.SalId == _SalId).ToList();
                                     if (q8.Count > 0)
                                     {
                                         q8.ForEach(item =>
@@ -718,8 +718,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
                                     {
                                         var m = db.EpHesabGroups.FirstOrDefault(s => s.Id == _GroupId && s.SalId == _SalId);
-                                        var a1 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0 && s.SalId == _SalId);
-                                        //var a2 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == RowId && s.HesabMoinId == 0);
+                                        var a1 = db.EpAllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0 && s.SalId == _SalId);
+                                        //var a2 = db.EpAllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == RowId && s.HesabMoinId == 0);
                                         var b1 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == 0 && s.SalId == _SalId);
                                         //var b2 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == _GroupId && s.HesabColId == RowId && s.HesabMoinId == 0);
                                         if (m != null)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
-   public class EpTabaghebandiHesabha
+   public class EpHesabTabagheh
     {
         public int Id { get; set; }
         [Required]
@@ -25,6 +25,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         public virtual ICollection<EpHesabGroup> EpHesabGroups { get; set; }
-        public virtual AllCodingHesabdari AllCodingHesabdari1 { get; set; }
+        public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
     }
 }

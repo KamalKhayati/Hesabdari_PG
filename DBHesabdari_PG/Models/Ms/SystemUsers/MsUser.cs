@@ -73,7 +73,7 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public bool IsActive { get; set; }
 
         public virtual MsUser MsUser1 { get; set; }
-        public virtual AllCodingHesabdari AllCodingHesabdari1 { get; set; }
+        public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
     }
 
     public class RmsUserBmsAccessLevelMenu

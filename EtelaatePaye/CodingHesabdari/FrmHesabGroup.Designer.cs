@@ -79,7 +79,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtTabaghebandiCode = new DevExpress.XtraEditors.TextEdit();
             this.cmbTabaghebandiHesabha = new DevExpress.XtraEditors.LookUpEdit();
-            this.epTabaghebandiHesabhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.epHesabTabaghehsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).BeginInit();
@@ -100,7 +100,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTabaghebandiCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTabaghebandiHesabha.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epTabaghebandiHesabhasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabTabaghehsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -795,7 +795,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "    کد ", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "                          نام حساب     ", 350, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeHesab", "  نوع حساب", 160, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.cmbTabaghebandiHesabha.Properties.DataSource = this.epTabaghebandiHesabhasBindingSource;
+            this.cmbTabaghebandiHesabha.Properties.DataSource = this.epHesabTabaghehsBindingSource;
             this.cmbTabaghebandiHesabha.Properties.DisplayMember = "Name";
             this.cmbTabaghebandiHesabha.Properties.DropDownRows = 10;
             this.cmbTabaghebandiHesabha.Properties.ImmediatePopup = true;
@@ -807,9 +807,9 @@
             this.cmbTabaghebandiHesabha.EditValueChanged += new System.EventHandler(this.cmbTabaghebandiHesabha_EditValueChanged);
             this.cmbTabaghebandiHesabha.Enter += new System.EventHandler(this.cmbTabaghebandiHesabha_Enter);
             // 
-            // epTabaghebandiHesabhasBindingSource
+            // epHesabTabaghehsBindingSource
             // 
-            this.epTabaghebandiHesabhasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpTabaghebandiHesabha);
+            this.epHesabTabaghehsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTabagheh);
             // 
             // labelControl4
             // 
@@ -822,7 +822,7 @@
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(125, 31);
             this.labelControl4.TabIndex = 50;
-            this.labelControl4.Text = "نام طبقه حساب";
+            this.labelControl4.Text = "نام حساب طبقه";
             // 
             // FrmHesabGroup
             // 
@@ -863,7 +863,7 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTabaghebandiCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTabaghebandiHesabha.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epTabaghebandiHesabhasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabTabaghehsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -917,7 +917,7 @@
         public DevExpress.XtraEditors.LookUpEdit cmbTabaghebandiHesabha;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         public DevExpress.XtraEditors.TextEdit txtTabaghebandiCode;
-        private System.Windows.Forms.BindingSource epTabaghebandiHesabhasBindingSource;
+        private System.Windows.Forms.BindingSource epHesabTabaghehsBindingSource;
         private System.Windows.Forms.BindingSource epHesabGroupsBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colTabaghebandiHesabhaName;
     }

@@ -421,11 +421,11 @@ namespace EtelaatePaye.CodingHesabdari
                             {
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
                                 var q = db.EpHesabTafziliMarakezHazines.FirstOrDefault(p => p.Id == RowId);
-                                //var q8 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
+                                //var q8 = db.EpAllCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
                                 if (q != null /*&& q8 != null*/)
                                 {
                                     db.EpHesabTafziliMarakezHazines.Remove(q);
-                                    //db.AllCodingHesabdaris.Remove(q8);
+                                    //db.EpAllCodingHesabdaris.Remove(q8);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
@@ -515,14 +515,14 @@ namespace EtelaatePaye.CodingHesabdari
                                 //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
                                 //var q = db.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Code == _Code);
                                 //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
-                                //AllCodingHesabdari n1 = new AllCodingHesabdari();
+                                //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                 //n1.KeyId = _Code;
                                 //n1.ParentId = Convert.ToInt32(txtGroupCode.Text);
                                 //n1.LevelName = txtName.Text;
                                 //n1.HesabGroupId = q.GroupId;
                                 //n1.HesabColId = q.Id;
                                 //n1.IsActive = chkIsActive.Checked;
-                                //db.AllCodingHesabdaris.Add(n1);
+                                //db.EpAllCodingHesabdaris.Add(n1);
                                 ///////////////////////////////////////////////////////////////////////////////////////
                                 //db.SaveChanges();
                                 if (chkIsActive.Checked)
@@ -575,7 +575,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     //    });
                                     //}
                                     /////////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
-                                    //var q8 = db.AllCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
+                                    //var q8 = db.EpAllCodingHesabdaris.Where(s => s.HesabColId == RowId).ToList();
                                     //if (q8.Count > 0)
                                     //{
                                     //    q8.ForEach(item =>
@@ -627,8 +627,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     //if (IsActiveBeforeEdit == false && chkIsActive.Checked == true)
                                     //{
                                     //    var m = db.EpHesabGroups.FirstOrDefault(p => p.Id == _GroupId);
-                                    //    var a1 = db.AllCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
-                                    //    //var a2 = db.AllCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
+                                    //    var a1 = db.EpAllCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
+                                    //    //var a2 = db.EpAllCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
                                     //    var b1 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == 0);
                                     //    //var b2 = db.RmsUserBallCodingHesabdaris.FirstOrDefault(p => p.HesabGroupId == _GroupId && p.HesabColId == RowId && p.HesabMoinId == 0);
                                     //    if (m != null)

@@ -75,12 +75,12 @@ namespace DBHesabdari_PG.Migrations
                         context.Entry(new MsActiveSystem() { Id = 25, Code = 25, Name = "انبار و کالا", IsActive = false }).State = context.MsActiveSystems.Any(s => s.Id == 4) ? EntityState.Unchanged : EntityState.Added;
                     }
 
-                    //if (!context.EpTabaghebandiHesabhas.Any())
+                    //if (!context.EpHesabTabagheh.Any())
                     //{
-                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 1, Name = "دارائیها", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 1) ? EntityState.Unchanged : EntityState.Added;
-                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 2, Name = "بدهیها و حقوق صاحبان سهام", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 2) ? EntityState.Unchanged : EntityState.Added;
-                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 3, Name = "عملکرد (سود و زیان)", IndexNoeHesab = 1, NoeHesab = "سود و زیانی", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 3) ? EntityState.Unchanged : EntityState.Added;
-                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 4, Name = "حسابهای انتظامی و کنترلی", IndexNoeHesab = 2, NoeHesab = "انتظامی و کنترلی", IsActive = true, SharhHesab = "" }).State = context.EpTabaghebandiHesabhas.Any(s => s.Code == 4) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 1, Name = "دارائیها", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabTabagheh.Any(s => s.Code == 1) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 2, Name = "بدهیها و حقوق صاحبان سهام", IndexNoeHesab = 0, NoeHesab = "ترازنامه ای", IsActive = true, SharhHesab = "" }).State = context.EpHesabTabagheh.Any(s => s.Code == 2) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 3, Name = "عملکرد (سود و زیان)", IndexNoeHesab = 1, NoeHesab = "سود و زیانی", IsActive = true, SharhHesab = "" }).State = context.EpHesabTabagheh.Any(s => s.Code == 3) ? EntityState.Unchanged : EntityState.Added;
+                    //    context.Entry(new EpTabaghebandiHesabha() { SalId = 1, Code = 4, Name = "حسابهای انتظامی و کنترلی", IndexNoeHesab = 2, NoeHesab = "انتظامی و کنترلی", IsActive = true, SharhHesab = "" }).State = context.EpHesabTabagheh.Any(s => s.Code == 4) ? EntityState.Unchanged : EntityState.Added;
                     //    context.SaveChanges();
                     //}
 

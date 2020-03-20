@@ -775,7 +775,7 @@ namespace Hesabdari_PG.Forms
 
         private void btnTabaghebandiHesabha_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmTabaghebandiHesabha fm = new FrmTabaghebandiHesabha();
+            FrmHesabTabagheh fm = new FrmHesabTabagheh();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;

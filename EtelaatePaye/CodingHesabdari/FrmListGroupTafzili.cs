@@ -395,11 +395,11 @@ namespace EtelaatePaye.CodingHesabdari
                             {
                                 int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
                                 var q = db.EpGroupTafzilis.FirstOrDefault(p => p.Id == RowId);
-                                //var q8 = db.AllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == RowId);
+                                //var q8 = db.EpAllCodingHesabdaris.FirstOrDefault(s => s.HesabGroupId == RowId);
                                 if (q != null /*&& q8 != null*/)
                                 {
                                     db.EpGroupTafzilis.Remove(q);
-                                    //db.AllCodingHesabdaris.Remove(q8);
+                                    //db.EpAllCodingHesabdaris.Remove(q8);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
@@ -487,13 +487,13 @@ namespace EtelaatePaye.CodingHesabdari
                                 int _code = Convert.ToInt32(txtCode.Text);
                                 var q = db.EpGroupTafzilis.FirstOrDefault(s => s.Code == _code);
                                 //////////////////////////////////////// اضافه کردن حساب گروه به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
-                                //AllCodingHesabdari n1 = new AllCodingHesabdari();
+                                //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                 //n1.KeyId = _code;
                                 //n1.ParentId = _code;
                                 //n1.LevelName = txtName.Text;
                                 //n1.HesabGroupId = q.Id;
                                 //n1.IsActive = chkIsActive.Checked;
-                                //db.AllCodingHesabdaris.Add(n1);
+                                //db.EpAllCodingHesabdaris.Add(n1);
                                 ///////////////////////////////////////////////////////////////////////////////////////
                                 //db.SaveChanges();
                                 if (chkIsActive.Checked)
@@ -560,7 +560,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     //    });
                                     //}
                                     /////////////////////////////////متد اصلاح کد و نام در لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate ///////////////////////
-                                    //var q8 = db.AllCodingHesabdaris.Where(s => s.HesabGroupId == RowId).ToList();
+                                    //var q8 = db.EpAllCodingHesabdaris.Where(s => s.HesabGroupId == RowId).ToList();
                                     //if (q8.Count > 0)
                                     //{
                                     //    q8.ForEach(item =>

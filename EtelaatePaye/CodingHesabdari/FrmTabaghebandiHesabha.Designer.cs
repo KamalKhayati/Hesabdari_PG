@@ -1,6 +1,6 @@
 ﻿namespace EtelaatePaye.CodingHesabdari
 {
-    partial class FrmTabaghebandiHesabha
+    partial class FrmHesabTabagheh
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTabaghebandiHesabha));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHesabTabagheh));
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnSaveNext = new DevExpress.XtraEditors.SimpleButton();
@@ -72,7 +72,7 @@
             this.colSharhHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndexNoeHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.epTabaghebandiHesabhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.epHesabTabaghehsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
@@ -90,7 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epTabaghebandiHesabhasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabTabaghehsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             this.SuspendLayout();
@@ -425,9 +425,9 @@
             this.labelControl2.Location = new System.Drawing.Point(1021, 57);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(121, 31);
+            this.labelControl2.Size = new System.Drawing.Size(125, 31);
             this.labelControl2.TabIndex = 45;
-            this.labelControl2.Text = "نام حساب گروه";
+            this.labelControl2.Text = "نام حساب طبقه";
             // 
             // chkIsActive
             // 
@@ -687,7 +687,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.epTabaghebandiHesabhasBindingSource;
+            this.gridControl1.DataSource = this.epHesabTabaghehsBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
@@ -699,9 +699,9 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // epTabaghebandiHesabhasBindingSource
+            // epHesabTabaghehsBindingSource
             // 
-            this.epTabaghebandiHesabhasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpTabaghebandiHesabha);
+            this.epHesabTabaghehsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTabagheh);
             // 
             // panelControl4
             // 
@@ -737,7 +737,7 @@
             this.lblSalId.Text = "آیدی سال";
             this.lblSalId.Visible = false;
             // 
-            // FrmTabaghebandiHesabha
+            // FrmHesabTabagheh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -748,12 +748,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(1066, 637);
-            this.Name = "FrmTabaghebandiHesabha";
+            this.Name = "FrmHesabTabagheh";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "طبقه بندی حسابها";
-            this.Load += new System.EventHandler(this.FrmTabaghebandiHesabha_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTabaghebandiHesabha_KeyDown);
+            this.Load += new System.EventHandler(this.FrmHesabTabagheh_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmHesabTabagheh_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbNoeHesab.Properties)).EndInit();
@@ -769,7 +769,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epTabaghebandiHesabhasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabTabaghehsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
@@ -824,6 +824,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl4;
         public DevExpress.XtraEditors.LabelControl lblSalMali;
         public DevExpress.XtraEditors.LabelControl lblSalId;
-        private System.Windows.Forms.BindingSource epTabaghebandiHesabhasBindingSource;
+        private System.Windows.Forms.BindingSource epHesabTabaghehsBindingSource;
     }
 }
