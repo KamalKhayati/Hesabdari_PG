@@ -12,19 +12,33 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
         public int Id { get; set; }
         [Required]
         public int SalId { get; set; }
+        //[Required]
+        //public int Code { get; set; }
         [Required]
-        public int Code { get; set; }
-        [Required, MaxLength(50)]
-        public string Name { get; set; }
+        public int HesabTabaghehCarakter { get; set; }
         [Required]
-        public int TabaghebandiHesabhaId { get; set; }
-        [Required, MaxLength(50)]
-        public string TabaghebandiHesabhaName { get; set; }
+        public int HesabGroupCarakter { get; set; }
         [Required]
-        public int IndexNoeHesab { get; set; }
-        [Required, MaxLength(20)]
-        public string NoeHesab { get; set; }
+        public int HesabColCarakter { get; set; }
         [Required]
-        public bool IsActive { get; set; }
+        public int HesabMoinCarakter { get; set; }
+
+        [Required ,MaxLength(1)]
+        public string HesabTabaghehMinCode { get; set; }
+        [Required, MaxLength(1)]
+        public string HesabTabaghehMaxCode { get; set; }
+        [Required, MaxLength(2)]
+        public string HesabGroupMinCode { get; set; }
+        [Required, MaxLength(2)]
+        public string HesabGroupMaxCode { get; set; }
+        [Required, MaxLength(3)]
+        public string HesabColMinCode { get; set; }
+        [Required, MaxLength(3)]
+        public string HesabColMaxCode { get; set; }
+        [Required, MaxLength(3)]
+        public string HesabMoinMinCode { get; set; }
+        [Required, MaxLength(3)]
+        public string HesabMoinMaxCode { get; set; }
+
     }
 }

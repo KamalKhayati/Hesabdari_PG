@@ -59,8 +59,8 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEpGroupTafzili1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGroupTafziliId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEpGroupTafsiliLevel11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGroupTafsiliId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSharhHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -363,8 +363,8 @@
             this.gridColumn1,
             this.gridColumn2,
             this.colIsActive,
-            this.colEpGroupTafzili1,
-            this.colGroupTafziliId,
+            this.colEpGroupTafsiliLevel11,
+            this.colGroupTafsiliId,
             this.colSharhHesab});
             this.gridView1.DetailHeight = 434;
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
@@ -494,19 +494,19 @@
             this.colIsActive.VisibleIndex = 5;
             this.colIsActive.Width = 92;
             // 
-            // colEpGroupTafzili1
+            // colEpGroupTafsiliLevel11
             // 
-            this.colEpGroupTafzili1.FieldName = "EpGroupTafzili1";
-            this.colEpGroupTafzili1.MinWidth = 24;
-            this.colEpGroupTafzili1.Name = "colEpGroupTafzili1";
-            this.colEpGroupTafzili1.Width = 92;
+            this.colEpGroupTafsiliLevel11.FieldName = "EpGroupTafsiliLevel11";
+            this.colEpGroupTafsiliLevel11.MinWidth = 24;
+            this.colEpGroupTafsiliLevel11.Name = "colEpGroupTafsiliLevel11";
+            this.colEpGroupTafsiliLevel11.Width = 92;
             // 
-            // colGroupTafziliId
+            // colGroupTafsiliId
             // 
-            this.colGroupTafziliId.FieldName = "GroupTafziliId";
-            this.colGroupTafziliId.MinWidth = 24;
-            this.colGroupTafziliId.Name = "colGroupTafziliId";
-            this.colGroupTafziliId.Width = 92;
+            this.colGroupTafsiliId.FieldName = "GroupTafsiliId";
+            this.colGroupTafsiliId.MinWidth = 24;
+            this.colGroupTafsiliId.Name = "colGroupTafsiliId";
+            this.colGroupTafsiliId.Width = 92;
             // 
             // colSharhHesab
             // 
@@ -807,8 +807,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCode;
         private DevExpress.XtraGrid.Columns.GridColumn colName;
         private DevExpress.XtraGrid.Columns.GridColumn colIsActive;
-        private DevExpress.XtraGrid.Columns.GridColumn colEpGroupTafzili1;
-        private DevExpress.XtraGrid.Columns.GridColumn colGroupTafziliId;
+        private DevExpress.XtraGrid.Columns.GridColumn colEpGroupTafsiliLevel11;
+        private DevExpress.XtraGrid.Columns.GridColumn colGroupTafsiliId;
         private DevExpress.XtraGrid.Columns.GridColumn colSharhHesab;
         public DevExpress.XtraEditors.LabelControl lblUserId;
         private DevExpress.XtraEditors.PanelControl panelControl2;

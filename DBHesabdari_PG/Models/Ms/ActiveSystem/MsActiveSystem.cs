@@ -48,8 +48,8 @@ namespace DBHesabdari_PG.Models.Ms.ActiveSystem
         public int MoinId { get; set; }
         [Required, Column(Order = 4)]
         public int ActiveSystemCode { get; set; }
-        [Required, Column(Order = 5)]
-        public int MoinCode { get; set; }
+        //[Required, Column(Order = 5)]
+        //public int MoinCode { get; set; }
 
         public virtual MsActiveSystem MsActiveSystem1 { get; set; }
         public virtual EpHesabMoin EpHesabMoin1 { get; set; }

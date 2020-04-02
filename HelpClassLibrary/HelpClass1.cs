@@ -246,7 +246,7 @@ namespace HelpClassLibrary
             {
                 if (item is SimpleButton)
                 {
-                    if (item.Name == "btnSave" || item.Name == "btnSaveNext" || item.Name == "btnCancel" || item.Name == "btnClose")
+                    if (item.Name == "btnSave" || item.Name== "btnSaveNext" || item.Name== "btnCancel")
                     {
                         item.Enabled = true;
                     }
@@ -262,11 +262,11 @@ namespace HelpClassLibrary
             {
                 if (item is SimpleButton)
                 {
-                    if (item.Name == "btnSave" || item.Name == "btnSaveNext" || item.Name == "btnCancel" )
+                    if (item.Enabled==true)
                     {
                         item.Enabled = false;
                     }
-                    else
+                   else if (item.Name != "btnDelete" && item.Name != "btnEdit")
                         item.Enabled = true;
                 }
 

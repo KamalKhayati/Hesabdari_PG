@@ -29,9 +29,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required]
-        public int TabaghebandiHesabhaId { get; set; }
+        public int TabaghehId { get; set; }
         [Required, MaxLength(50)]
-        public string TabaghebandiHesabhaName { get; set; }
+        public string TabaghehName { get; set; }
         [Required]
         public int GroupId { get; set; }
         [Required, MaxLength(50)]
@@ -49,17 +49,18 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         [MaxLength(500)]
-        public string SelectedGroupTafziliLevel1 { get; set; }
+        public string SelectedGroupTafsiliLevel1 { get; set; }
         [MaxLength(500)]
         public string SelectedActivesystem { get; set; }
 
         public virtual EpHesabCol EpHesabCol1 { get; set; }
+        public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual ICollection<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
         public virtual ICollection<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }
-        public virtual ICollection<REpHesabMoinBEpGroupTafziliLevel1> REpHesabMoinBEpGroupTafziliLevel1s { get; set; }
+        public virtual ICollection<REpHesabMoinBEpGroupTafsiliLevel1> REpHesabMoinBEpGroupTafsiliLevel1s { get; set; }
     }
 
-    public class REpHesabMoinBEpGroupTafziliLevel1
+    public class REpHesabMoinBEpGroupTafsiliLevel1
     {
         //[Column(Order = 0)]
        // public int Id { get; set; }
@@ -71,16 +72,16 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 
         [Key]
         [Required, Column(Order = 2)]
-        public int GroupTafziliId { get; set; } 
+        public int GroupTafsiliId { get; set; } 
 
         [Required, Column(Order = 3)]
         public int NumberLevel { get; set; }
+        //[Required, Column(Order = 4)]
+        //public int MoinCode { get; set; }
         [Required, Column(Order = 4)]
-        public int MoinCode { get; set; }
-        [Required, Column(Order = 5)]
-        public int GroupTafziliCode { get; set; }
+        public int GroupTafsiliCode { get; set; }
 
         public virtual EpHesabMoin EpHesabMoin1 { get; set; }
-        public virtual EpGroupTafzili EpGroupTafzili1 { get; set; }
+        public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel11 { get; set; }
     }
 }

@@ -23,9 +23,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         //[Required]
-        //public int GroupTafziliId { get; set; }
+        //public int GroupTafsiliId { get; set; }
         //[Required, MaxLength(50)]
-        //public string GroupTafziliName { get; set; }
+        //public string GroupTafsiliName { get; set; }
         //[Required]
         //public int AshkhasId { get; set; }
         [Required]
@@ -50,7 +50,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [MaxLength(400)]
         public string Molahezat { get; set; }
         public byte[] Pictuer { get; set; }
-        public virtual EpHesabTafziliAshkhas EpHesabTafziliAshkhas1 { get; set; }
+        public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
 
     }
 }

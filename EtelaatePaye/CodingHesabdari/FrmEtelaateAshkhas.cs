@@ -35,23 +35,23 @@ namespace EtelaatePaye.CodingHesabdari
 
         public EnumCED En;
         public bool IsActiveList = true;
-        public void FillcmbGroupTafzili()
+        public void FillcmbGroupTafsili()
         {
             using (var db = new MyContext())
             {
                 try
                 {
-                    if (db.EpGroupTafzilis.Any())
+                    if (db.EpGroupTafsiliLevel1s.Any())
                     {
                         if (IsActiveList == true)
                         {
-                            db.EpGroupTafzilis.Where(s => s.IsActive == true && s.Id == 3 || s.Id == 4).Load();
-                            epGroupTafzilisBindingSource.DataSource = db.EpGroupTafzilis.Local.ToBindingList();
+                            db.EpGroupTafsiliLevel1s.Where(s => s.IsActive == true && s.Id == 3 || s.Id == 4).Load();
+                            epGroupTafsiliLevel1sBindingSource.DataSource = db.EpGroupTafsiliLevel1s.Local.ToBindingList();
                         }
                         else
                         {
-                            db.EpGroupTafzilis.Where(s => s.Id == 3 || s.Id == 4).Load();
-                            epGroupTafzilisBindingSource.DataSource = db.EpGroupTafzilis.Local.ToBindingList();
+                            db.EpGroupTafsiliLevel1s.Where(s => s.Id == 3 || s.Id == 4).Load();
+                            epGroupTafsiliLevel1sBindingSource.DataSource = db.EpGroupTafsiliLevel1s.Local.ToBindingList();
                         }
                     }
                 }
@@ -63,23 +63,23 @@ namespace EtelaatePaye.CodingHesabdari
             }
 
         }
-        public void FillcmbTafziliAshkhas()
+        public void FillcmbTafsiliAshkhas()
         {
             using (var db = new MyContext())
             {
                 try
                 {
-                    if (db.EpHesabTafziliAshkhass.Any())
+                    if (db.EpHesabTafsiliAshkhass.Any())
                     {
                         if (IsActiveList == true)
                         {
-                            db.EpHesabTafziliAshkhass.Where(s => s.IsActive == true).Load();
-                            epHesabTafziliAshkhassBindingSource.DataSource = db.EpHesabTafziliAshkhass.Local.ToBindingList();
+                            db.EpHesabTafsiliAshkhass.Where(s => s.IsActive == true).Load();
+                            epHesabTafsiliAshkhassBindingSource.DataSource = db.EpHesabTafsiliAshkhass.Local.ToBindingList();
                         }
                         else
                         {
-                            db.EpHesabTafziliAshkhass.Load();
-                            epHesabTafziliAshkhassBindingSource.DataSource = db.EpHesabTafziliAshkhass.Local.ToBindingList();
+                            db.EpHesabTafsiliAshkhass.Load();
+                            epHesabTafsiliAshkhassBindingSource.DataSource = db.EpHesabTafsiliAshkhass.Local.ToBindingList();
                         }
                     }
                 }
@@ -93,8 +93,8 @@ namespace EtelaatePaye.CodingHesabdari
         }
         private void FrmEtelaateAshkhas_Load(object sender, EventArgs e)
         {
-            FillcmbGroupTafzili();
-            FillcmbTafziliAshkhas();
+            FillcmbGroupTafsili();
+            FillcmbTafsiliAshkhas();
             //if (lblUserId.Text == "1")
             //{
             //    chkIsActive.Visible = true;
@@ -127,27 +127,27 @@ namespace EtelaatePaye.CodingHesabdari
         {
             this.Close();
         }
-        public int Before_GroupTafzili_EditValueChanged = 0;
-        private void cmbGroupTafzili_EditValueChanged(object sender, EventArgs e)
+        public int Before_GroupTafsili_EditValueChanged = 0;
+        private void cmbGroupTafsili_EditValueChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(cmbGroupTafzili.EditValue) == 3)
+            if (Convert.ToInt32(cmbGroupTafsili.EditValue) == 3)
             {
 
                 using (var db = new MyContext())
                 {
                     try
                     {
-                        if (db.EpHesabTafziliAshkhass.Any())
+                        if (db.EpHesabTafsiliAshkhass.Any())
                         {
                             if (IsActiveList == true)
                             {
-                                db.EpHesabTafziliAshkhass.Where(s => s.IsActive == true && s.GroupTafziliId == 3).Load();
-                                epHesabTafziliAshkhassBindingSource.DataSource = db.EpHesabTafziliAshkhass.Local.ToBindingList();
+                                db.EpHesabTafsiliAshkhass.Where(s => s.IsActive == true && s.GroupTafsiliId == 3).Load();
+                                epHesabTafsiliAshkhassBindingSource.DataSource = db.EpHesabTafsiliAshkhass.Local.ToBindingList();
                             }
                             else
                             {
-                                db.EpHesabTafziliAshkhass.Where(s => s.GroupTafziliId == 3).Load();
-                                epHesabTafziliAshkhassBindingSource.DataSource = db.EpHesabTafziliAshkhass.Local.ToBindingList();
+                                db.EpHesabTafsiliAshkhass.Where(s => s.GroupTafsiliId == 3).Load();
+                                epHesabTafsiliAshkhassBindingSource.DataSource = db.EpHesabTafsiliAshkhass.Local.ToBindingList();
                             }
                             labelControl1.Text = "نام شخص حقیقی";
                         }
@@ -159,23 +159,23 @@ namespace EtelaatePaye.CodingHesabdari
                     }
                 }
             }
-            else if (Convert.ToInt32(cmbGroupTafzili.EditValue) == 4)
+            else if (Convert.ToInt32(cmbGroupTafsili.EditValue) == 4)
             {
                 using (var db = new MyContext())
                 {
                     try
                     {
-                        if (db.EpHesabTafziliAshkhass.Any())
+                        if (db.EpHesabTafsiliAshkhass.Any())
                         {
                             if (IsActiveList == true)
                             {
-                                db.EpHesabTafziliAshkhass.Where(s => s.IsActive == true && s.GroupTafziliId == 4).Load();
-                                epHesabTafziliAshkhassBindingSource.DataSource = db.EpHesabTafziliAshkhass.Local.ToBindingList();
+                                db.EpHesabTafsiliAshkhass.Where(s => s.IsActive == true && s.GroupTafsiliId == 4).Load();
+                                epHesabTafsiliAshkhassBindingSource.DataSource = db.EpHesabTafsiliAshkhass.Local.ToBindingList();
                             }
                             else
                             {
-                                db.EpHesabTafziliAshkhass.Where(s => s.GroupTafziliId == 4).Load();
-                                epHesabTafziliAshkhassBindingSource.DataSource = db.EpHesabTafziliAshkhass.Local.ToBindingList();
+                                db.EpHesabTafsiliAshkhass.Where(s => s.GroupTafsiliId == 4).Load();
+                                epHesabTafsiliAshkhassBindingSource.DataSource = db.EpHesabTafsiliAshkhass.Local.ToBindingList();
                             }
                             labelControl1.Text = "نام شخص حقوقی";
                         }
@@ -187,20 +187,20 @@ namespace EtelaatePaye.CodingHesabdari
                     }
                 }
             }
-            txtGroupTafziliId.Text = cmbGroupTafzili.EditValue.ToString();
-            if (Before_GroupTafzili_EditValueChanged != Convert.ToInt32(cmbGroupTafzili.EditValue))
-                cmbTafziliAshkhas.EditValue = 0;
-            Before_GroupTafzili_EditValueChanged = Convert.ToInt32(cmbGroupTafzili.EditValue);
+            txtGroupTafsiliId.Text = cmbGroupTafsili.EditValue.ToString();
+            if (Before_GroupTafsili_EditValueChanged != Convert.ToInt32(cmbGroupTafsili.EditValue))
+                cmbTafsiliAshkhas.EditValue = 0;
+            Before_GroupTafsili_EditValueChanged = Convert.ToInt32(cmbGroupTafsili.EditValue);
         }
-        private void cmbTafziliAshkhas_EditValueChanged(object sender, EventArgs e)
+        private void cmbTafsiliAshkhas_EditValueChanged(object sender, EventArgs e)
         {
-            txtId.Text = cmbTafziliAshkhas.EditValue.ToString();
+            txtId.Text = cmbTafsiliAshkhas.EditValue.ToString();
             int _Id = Convert.ToInt32(txtId.Text);
             using (var db = new MyContext())
             {
                 try
                 {
-                    var q = db.EpHesabTafziliAshkhass.FirstOrDefault(f => f.Id == _Id);
+                    var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(f => f.Id == _Id);
                     if (q != null)
                     {
                         tpPersonel.PageVisible = q.IsPersonel;
@@ -227,13 +227,13 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
-                    if (db.EpHesabTafziliAshkhass.Any())
+                    if (db.EpHesabTafsiliAshkhass.Any())
                     {
                         int AshkhasId = Convert.ToInt32(txtId.Text);
-                        var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Id == AshkhasId);
+                        var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Id == AshkhasId);
                         if (q != null)
                         {
-                            if (q.GroupTafziliId == 3)
+                            if (q.GroupTafsiliId == 3)
                             {
                                 labelControl5.Text = "نام اختصار";
                                 labelControl18.Text = "کد ملی";
@@ -261,7 +261,7 @@ namespace EtelaatePaye.CodingHesabdari
         //////////////////////////////////////////////////////////////////////////////////////////////////////
         public void FillDataGridView()
         {
-            if (Convert.ToInt32(cmbTafziliAshkhas.EditValue) != 0)
+            if (Convert.ToInt32(cmbTafsiliAshkhas.EditValue) != 0)
             {
                 using (var dataContext = new MyContext())
                 {
@@ -701,7 +701,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if (string.IsNullOrEmpty(txtMablagh.Text)
                                 && string.IsNullOrEmpty(txtShGharadad.Text)
                                 && string.IsNullOrEmpty(txtTarikhGharadad.Text)
@@ -769,7 +769,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if (string.IsNullOrEmpty(cmbNameAdress_F.Text)
                                 && string.IsNullOrEmpty(txtSharhAdress_F.Text)
                                 && string.IsNullOrEmpty(txtMolahezat_F.Text))
@@ -835,7 +835,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if (string.IsNullOrEmpty(txtShomareHesab.Text)
                                 && string.IsNullOrEmpty(txtShomareKart.Text)
                                 && string.IsNullOrEmpty(txtShomareShaba.Text)
@@ -916,7 +916,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if (string.IsNullOrEmpty(txtDarsadTakhfif.Text))
                             {
                                 //XtraMessageBox.Show("هیچگونه اطلاعاتی برای ذخیره وارد نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -985,7 +985,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if ((!string.IsNullOrEmpty(txtCodPersoneli.Text)
                                 || !string.IsNullOrEmpty(txtTarikhEstekhdam.Text)
                                 || !string.IsNullOrEmpty(txtNamePedar.Text)
@@ -1086,7 +1086,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if ((!string.IsNullOrEmpty(txtTedadSahm.Text)
                                 || !string.IsNullOrEmpty(txtMablaghHarSahm.Text))
                                && string.IsNullOrEmpty(txtSumMablagh.Text))
@@ -1168,7 +1168,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if (string.IsNullOrEmpty(txtDarsadVizitor.Text))
                             {
                                 XtraMessageBox.Show("لطفاً درصد ویزیتور را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1230,7 +1230,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (En == EnumCED.Create)
                         {
-                            int _AshkhasId = Convert.ToInt32(cmbTafziliAshkhas.EditValue);
+                            int _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if (string.IsNullOrEmpty(txtDarsadRanande.Text))
                             {
                                 XtraMessageBox.Show("لطفاً درصد راننده را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1526,7 +1526,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         public void btnDisplyActiveList_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(cmbTafziliAshkhas.EditValue) != 0)
+            if (Convert.ToInt32(cmbTafsiliAshkhas.EditValue) != 0)
             {
                 using (var dataContext = new MyContext())
                 {
@@ -2698,8 +2698,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     db.EpMoshakhasat_As.Add(obj);
                                     db.SaveChanges();
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -2901,8 +2901,8 @@ namespace EtelaatePaye.CodingHesabdari
                                         }
                                     }
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -3114,8 +3114,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
 
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -3324,8 +3324,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
 
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -3531,8 +3531,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
 
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -3738,8 +3738,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
 
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -3950,8 +3950,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
 
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -4152,8 +4152,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     db.EpMPersoneli_As.Add(obj);
                                     db.SaveChanges();
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -4332,8 +4332,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     db.EpSahmSahamdar_As.Add(obj);
                                     db.SaveChanges();
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -4519,8 +4519,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
 
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;
@@ -4721,8 +4721,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     }
 
                                     /////////////////////////////////////////////////////////////////////////////////////
-                                    //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                    //var q = db.EpHesabTafziliAshkhass.FirstOrDefault(s => s.Code == _Code);
+                                    //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                    //var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _Code);
                                     //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                     //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                     //n1.KeyId = _Code;

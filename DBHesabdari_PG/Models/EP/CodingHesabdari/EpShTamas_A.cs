@@ -15,9 +15,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int Code { get; set; }
         //[Required]
-        //public int GroupTafziliId { get; set; }
+        //public int GroupTafsiliId { get; set; }
         //[Required, MaxLength(50)]
-        //public string GroupTafziliName { get; set; }
+        //public string GroupTafsiliName { get; set; }
         [Required]
         public int AshkhasId { get; set; }
         //[Required]
@@ -40,7 +40,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public string Molahezat { get; set; }
         [Required]
         public int IndexNoeTamas { get; set; }
-        public virtual EpHesabTafziliAshkhas EpHesabTafziliAshkhas1 { get; set; }
+        public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
 
     }
 }

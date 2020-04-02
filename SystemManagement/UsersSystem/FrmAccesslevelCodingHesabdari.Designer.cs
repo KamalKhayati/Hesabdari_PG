@@ -54,6 +54,7 @@
             this.chkSelectAll = new DevExpress.XtraBars.BarCheckItem();
             this.chkOpenClose = new DevExpress.XtraBars.BarCheckItem();
             this.btnPrintPreview = new DevExpress.XtraBars.BarButtonItem();
+            this.btnReloadList = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -97,7 +98,7 @@
             this.treeListCodingHesabdari.KeyFieldName = "KeyId";
             this.treeListCodingHesabdari.Location = new System.Drawing.Point(0, 60);
             this.treeListCodingHesabdari.Margin = new System.Windows.Forms.Padding(4);
-            this.treeListCodingHesabdari.MinWidth = 24;
+            this.treeListCodingHesabdari.MinWidth = 22;
             this.treeListCodingHesabdari.Name = "treeListCodingHesabdari";
             this.treeListCodingHesabdari.OptionsBehavior.Editable = false;
             this.treeListCodingHesabdari.OptionsFilter.ExpandNodesOnFiltering = true;
@@ -108,9 +109,9 @@
             this.treeListCodingHesabdari.OptionsView.ShowIndicator = false;
             this.treeListCodingHesabdari.ParentFieldName = "ParentId";
             this.treeListCodingHesabdari.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeListCodingHesabdari.Size = new System.Drawing.Size(1495, 601);
+            this.treeListCodingHesabdari.Size = new System.Drawing.Size(1359, 537);
             this.treeListCodingHesabdari.TabIndex = 37;
-            this.treeListCodingHesabdari.TreeLevelWidth = 31;
+            this.treeListCodingHesabdari.TreeLevelWidth = 28;
             this.treeListCodingHesabdari.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
             this.treeListCodingHesabdari.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.treeListCodingHesabdari_AfterCheckNode);
             // 
@@ -121,14 +122,14 @@
             this.colLevelName2.AppearanceHeader.Options.UseTextOptions = true;
             this.colLevelName2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colLevelName2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelName2.Caption = "نام سطوح کدینگ حسابداری (گروه،کل،معین) ";
+            this.colLevelName2.Caption = "نام سطوح کدینگ حسابداری (طبقه ،گروه ،کل ،معین) ";
             this.colLevelName2.FieldName = "LevelName";
-            this.colLevelName2.MaxWidth = 856;
-            this.colLevelName2.MinWidth = 24;
+            this.colLevelName2.MaxWidth = 778;
+            this.colLevelName2.MinWidth = 22;
             this.colLevelName2.Name = "colLevelName2";
             this.colLevelName2.Visible = true;
             this.colLevelName2.VisibleIndex = 0;
-            this.colLevelName2.Width = 856;
+            this.colLevelName2.Width = 778;
             // 
             // colKeyId2
             // 
@@ -139,55 +140,55 @@
             this.colKeyId2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colKeyId2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colKeyId2.Caption = "کد";
-            this.colKeyId2.FieldName = "KeyId";
-            this.colKeyId2.MaxWidth = 159;
-            this.colKeyId2.MinWidth = 24;
+            this.colKeyId2.FieldName = "KeyCode";
+            this.colKeyId2.MaxWidth = 136;
+            this.colKeyId2.MinWidth = 22;
             this.colKeyId2.Name = "colKeyId2";
             this.colKeyId2.Visible = true;
             this.colKeyId2.VisibleIndex = 1;
-            this.colKeyId2.Width = 159;
+            this.colKeyId2.Width = 128;
             // 
             // colId2
             // 
             this.colId2.FieldName = "Id";
-            this.colId2.MinWidth = 24;
+            this.colId2.MinWidth = 22;
             this.colId2.Name = "colId2";
-            this.colId2.Width = 92;
+            this.colId2.Width = 84;
             // 
             // colParentId2
             // 
             this.colParentId2.FieldName = "ParentId";
-            this.colParentId2.MinWidth = 24;
+            this.colParentId2.MinWidth = 22;
             this.colParentId2.Name = "colParentId2";
-            this.colParentId2.Width = 92;
+            this.colParentId2.Width = 84;
             // 
             // colHesabGroupId2
             // 
             this.colHesabGroupId2.FieldName = "HesabGroupId";
-            this.colHesabGroupId2.MinWidth = 24;
+            this.colHesabGroupId2.MinWidth = 22;
             this.colHesabGroupId2.Name = "colHesabGroupId2";
-            this.colHesabGroupId2.Width = 92;
+            this.colHesabGroupId2.Width = 84;
             // 
             // colHesabColId2
             // 
             this.colHesabColId2.FieldName = "HesabColId";
-            this.colHesabColId2.MinWidth = 24;
+            this.colHesabColId2.MinWidth = 22;
             this.colHesabColId2.Name = "colHesabColId2";
-            this.colHesabColId2.Width = 92;
+            this.colHesabColId2.Width = 84;
             // 
             // colHesabMoinId2
             // 
             this.colHesabMoinId2.FieldName = "HesabMoinId";
-            this.colHesabMoinId2.MinWidth = 24;
+            this.colHesabMoinId2.MinWidth = 22;
             this.colHesabMoinId2.Name = "colHesabMoinId2";
-            this.colHesabMoinId2.Width = 92;
+            this.colHesabMoinId2.Width = 84;
             // 
             // colIsActive2
             // 
             this.colIsActive2.FieldName = "IsActive";
-            this.colIsActive2.MinWidth = 24;
+            this.colIsActive2.MinWidth = 22;
             this.colIsActive2.Name = "colIsActive2";
-            this.colIsActive2.Width = 92;
+            this.colIsActive2.Width = 84;
             // 
             // EpAllCodingHesabdarisBindingSource
             // 
@@ -211,8 +212,9 @@
             this.btnPrintPreview,
             this.btnSave,
             this.chkSelectAll,
-            this.chkOpenClose});
-            this.barManager1.MaxItemId = 39;
+            this.chkOpenClose,
+            this.btnReloadList});
+            this.barManager1.MaxItemId = 40;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemTextEdit1,
@@ -237,7 +239,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSave, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.chkSelectAll, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.chkOpenClose, true),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintPreview, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintPreview, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnReloadList, true)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DisableClose = true;
             this.bar1.OptionsBar.DisableCustomization = true;
@@ -318,23 +321,32 @@
             this.btnPrintPreview.SuperTip = superToolTip2;
             this.btnPrintPreview.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintPreview_ItemClick);
             // 
+            // btnReloadList
+            // 
+            this.btnReloadList.Caption = "دوباره سازی";
+            this.btnReloadList.Id = 39;
+            this.btnReloadList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadList.ImageOptions.SvgImage")));
+            this.btnReloadList.Name = "btnReloadList";
+            this.btnReloadList.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnReloadList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReloadList_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlTop.Size = new System.Drawing.Size(1495, 60);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlTop.Size = new System.Drawing.Size(1359, 60);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 661);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 597);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1495, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1359, 0);
             // 
             // barDockControlLeft
             // 
@@ -342,17 +354,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 601);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 537);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1495, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1359, 60);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 601);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 537);
             // 
             // repositoryItemTextEdit1
             // 
@@ -392,29 +404,29 @@
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(15, 48);
+            this.lblUserId.Location = new System.Drawing.Point(14, 43);
             this.lblUserId.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(85, 31);
+            this.lblUserId.Size = new System.Drawing.Size(82, 30);
             this.lblUserId.TabIndex = 30;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(15, 87);
+            this.lblUserName.Location = new System.Drawing.Point(14, 79);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(61, 31);
+            this.lblUserName.Size = new System.Drawing.Size(59, 30);
             this.lblUserName.TabIndex = 31;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
             // 
             // FrmAccesslevelCodingHesabdari
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1495, 661);
+            this.ClientSize = new System.Drawing.Size(1359, 597);
             this.Controls.Add(this.treeListCodingHesabdari);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblUserName);
@@ -427,7 +439,7 @@
             this.Name = "FrmAccesslevelCodingHesabdari";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "دسترسی کاربران به کدینگ حسابداری (گروه،کل،معین";
+            this.Text = "دسترسی کاربران به کدینگ حسابداری (طبقه،گروه،کل،معین)";
             this.Load += new System.EventHandler(this.FrmAccesslevelCodingHesabdari_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingHesabdari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpAllCodingHesabdarisBindingSource)).EndInit();
@@ -479,5 +491,6 @@
         private System.Windows.Forms.BindingSource EpAllCodingHesabdarisBindingSource;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private System.Windows.Forms.BindingSource msUserBindingSource;
+        private DevExpress.XtraBars.BarButtonItem btnReloadList;
     }
 }

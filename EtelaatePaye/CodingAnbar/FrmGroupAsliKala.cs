@@ -88,17 +88,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -123,17 +123,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -158,17 +158,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -193,17 +193,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -674,10 +674,10 @@ namespace EtelaatePaye.CodingAnbar
                 HelpClass1.ClearControls(panelControl1);
                 HelpClass1.ActiveControls(panelControl1);
                  FillcmbVahedKala();
-                //cmbListGroupTafzili.EditValue = 1;
-                //txtCodeGroupTafzili.Text = "10";
+                //cmbListGroupTafsili.EditValue = 1;
+                //txtCodeGroupTafsili.Text = "10";
                 //btnNewCode_Click(null, null);
-                // cmbListGroupTafzili.EditValue = 13;
+                // cmbListGroupTafsili.EditValue = 13;
                 cmbDasteBandi.Focus();
             }
         }
@@ -898,7 +898,7 @@ namespace EtelaatePaye.CodingAnbar
 
                         cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("DasteBandiIndex"));
                         txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                        //txtCodeGroupTafzili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                        //txtCodeGroupTafsili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                         txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
                         txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                         cmbVahedKala.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("VahedKalaId"));
@@ -927,7 +927,7 @@ namespace EtelaatePaye.CodingAnbar
 
                         cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView2.GetFocusedRowCellValue("DasteBandiIndex"));
                         txtId.Text = gridView2.GetFocusedRowCellValue("Id").ToString();
-                        //txtCodeGroupTafzili.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                        //txtCodeGroupTafsili.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                         txtCode.Text = gridView2.GetFocusedRowCellValue("Code").ToString();
                         txtName.Text = gridView2.GetFocusedRowCellValue("Name").ToString();
                         cmbVahedKala.EditValue = Convert.ToInt32(gridView2.GetFocusedRowCellValue("VahedKalaId"));
@@ -955,7 +955,7 @@ namespace EtelaatePaye.CodingAnbar
 
                         cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView3.GetFocusedRowCellValue("DasteBandiIndex"));
                         txtId.Text = gridView3.GetFocusedRowCellValue("Id").ToString();
-                        //txtCodeGroupTafzili.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                        //txtCodeGroupTafsili.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                         txtCode.Text = gridView3.GetFocusedRowCellValue("Code").ToString();
                         txtName.Text = gridView3.GetFocusedRowCellValue("Name").ToString();
                         cmbVahedKala.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("VahedKalaId"));
@@ -983,7 +983,7 @@ namespace EtelaatePaye.CodingAnbar
 
                         cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView4.GetFocusedRowCellValue("DasteBandiIndex"));
                         txtId.Text = gridView4.GetFocusedRowCellValue("Id").ToString();
-                        //txtCodeGroupTafzili.Text = gridView4.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                        //txtCodeGroupTafsili.Text = gridView4.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                         txtCode.Text = gridView4.GetFocusedRowCellValue("Code").ToString();
                         txtName.Text = gridView4.GetFocusedRowCellValue("Name").ToString();
                         cmbVahedKala.EditValue = Convert.ToInt32(gridView4.GetFocusedRowCellValue("VahedKalaId"));
@@ -1026,8 +1026,8 @@ namespace EtelaatePaye.CodingAnbar
                                 db.EpGroupAsliKalas.Add(obj);
                                 db.SaveChanges();
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                //var q = db.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Code == _Code);
+                                //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                //var q = db.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Code == _Code);
                                 //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                 //n1.KeyId = _Code;
@@ -1258,7 +1258,7 @@ namespace EtelaatePaye.CodingAnbar
 
                     cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("DasteBandiIndex"));
                     txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                    //txtCodeGroupTafzili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                    //txtCodeGroupTafsili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                     txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
                     txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                     cmbVahedKala.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("VahedKalaId"));
@@ -1274,7 +1274,7 @@ namespace EtelaatePaye.CodingAnbar
 
                     cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView2.GetFocusedRowCellValue("DasteBandiIndex"));
                     txtId.Text = gridView2.GetFocusedRowCellValue("Id").ToString();
-                    //txtCodeGroupTafzili.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                    //txtCodeGroupTafsili.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                     txtCode.Text = gridView2.GetFocusedRowCellValue("Code").ToString();
                     txtName.Text = gridView2.GetFocusedRowCellValue("Name").ToString();
                     cmbVahedKala.EditValue = Convert.ToInt32(gridView2.GetFocusedRowCellValue("VahedKalaId"));
@@ -1290,7 +1290,7 @@ namespace EtelaatePaye.CodingAnbar
 
                     cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView3.GetFocusedRowCellValue("DasteBandiIndex"));
                     txtId.Text = gridView3.GetFocusedRowCellValue("Id").ToString();
-                    //txtCodeGroupTafzili.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                    //txtCodeGroupTafsili.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                     txtCode.Text = gridView3.GetFocusedRowCellValue("Code").ToString();
                     txtName.Text = gridView3.GetFocusedRowCellValue("Name").ToString();
                     cmbVahedKala.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("VahedKalaId"));
@@ -1306,7 +1306,7 @@ namespace EtelaatePaye.CodingAnbar
 
                     cmbDasteBandi.SelectedIndex = Convert.ToInt32(gridView4.GetFocusedRowCellValue("DasteBandiIndex"));
                     txtId.Text = gridView4.GetFocusedRowCellValue("Id").ToString();
-                    //txtCodeGroupTafzili.Text = gridView4.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                    //txtCodeGroupTafsili.Text = gridView4.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                     txtCode.Text = gridView4.GetFocusedRowCellValue("Code").ToString();
                     txtName.Text = gridView4.GetFocusedRowCellValue("Name").ToString();
                     cmbVahedKala.EditValue = Convert.ToInt32(gridView4.GetFocusedRowCellValue("VahedKalaId"));

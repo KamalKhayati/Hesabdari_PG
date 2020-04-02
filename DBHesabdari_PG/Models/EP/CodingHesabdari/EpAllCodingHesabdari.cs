@@ -25,19 +25,23 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
-        public int KeyId { get; set; }
+        public int KeyCode { get; set; }
         [Required]
-        public int ParentId { get; set; }
+        public int ParentCode { get; set; }
+        [Required]
+        public int LevelNamber { get; set; }
         [Required, MaxLength(50)]
         public string LevelName { get; set; }
-        public int TabaghebandiHesabhaId { get; set; }
-        public int HesabGroupId { get; set; }
-        public int HesabColId { get; set; }
-        public int HesabMoinId { get; set; }
+        //public int HesabTabaghehId { get; set; }
+        //public int HesabGroupId { get; set; }
+       // public int HesabColId { get; set; }
+        //public int HesabMoinId { get; set; }
         public bool IsActive { get; set; }
         public virtual ICollection<RmsUserBallCodingHesabdari> RmsUserBallCodingHesabdaris { get; set; }
-        public virtual EpHesabTabagheh EpTabaghebandiHesabha1 { get; set; }
+        public virtual EpHesabTabagheh EpHesabTabagheh1 { get; set; }
         public virtual EpHesabGroup EpHesabGroup1 { get; set; }
+        public virtual EpHesabCol EpHesabCol1 { get; set; }
+        public virtual EpHesabMoin EpHesabMoin1 { get; set; }
 
     }
 }

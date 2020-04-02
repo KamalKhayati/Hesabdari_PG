@@ -328,7 +328,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 db.EpNameOstans.Add(obj);
                                 db.SaveChanges();
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
+                                //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
                                 //var q = db.EpAdressNames.FirstOrDefault(s => s.Code == _Code);
                                 //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();

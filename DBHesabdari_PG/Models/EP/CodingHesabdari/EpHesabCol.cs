@@ -26,9 +26,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(50)]
         public string Name { get; set; }
         [Required]
-        public int TabaghebandiHesabhaId { get; set; }
+        public int TabaghehId { get; set; }
         [Required, MaxLength(50)]
-        public string TabaghebandiHesabhaName { get; set; }
+        public string TabaghehName { get; set; }
         [Required]
         public int GroupId { get; set; }
         [Required, MaxLength(50)]
@@ -45,6 +45,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual EpHesabGroup EpHesabGroup1 { get; set; }
         public virtual ICollection<EpHesabMoin> EpHesabMoins { get; set; }
 

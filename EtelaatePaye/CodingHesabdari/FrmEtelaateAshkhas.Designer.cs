@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEtelaateAshkhas));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.cmbGroupTafzili = new DevExpress.XtraEditors.LookUpEdit();
-            this.epGroupTafzilisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbTafziliAshkhas = new DevExpress.XtraEditors.LookUpEdit();
-            this.epHesabTafziliAshkhassBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtGroupTafziliId = new DevExpress.XtraEditors.TextEdit();
+            this.cmbGroupTafsili = new DevExpress.XtraEditors.LookUpEdit();
+            this.epGroupTafsiliLevel1sBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbTafsiliAshkhas = new DevExpress.XtraEditors.LookUpEdit();
+            this.epHesabTafsiliAshkhassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtGroupTafsiliId = new DevExpress.XtraEditors.TextEdit();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -374,11 +374,11 @@
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafzili.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epGroupTafzilisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTafziliAshkhas.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epHesabTafziliAshkhassBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroupTafziliId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epGroupTafsiliLevel1sBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTafsiliAshkhas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabTafsiliAshkhassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupTafsiliId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
@@ -548,9 +548,9 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.cmbGroupTafzili);
-            this.panelControl1.Controls.Add(this.cmbTafziliAshkhas);
-            this.panelControl1.Controls.Add(this.txtGroupTafziliId);
+            this.panelControl1.Controls.Add(this.cmbGroupTafsili);
+            this.panelControl1.Controls.Add(this.cmbTafsiliAshkhas);
+            this.panelControl1.Controls.Add(this.txtGroupTafsiliId);
             this.panelControl1.Controls.Add(this.txtCode);
             this.panelControl1.Controls.Add(this.txtId);
             this.panelControl1.Controls.Add(this.labelControl1);
@@ -562,82 +562,82 @@
             this.panelControl1.Size = new System.Drawing.Size(1056, 51);
             this.panelControl1.TabIndex = 0;
             // 
-            // cmbGroupTafzili
+            // cmbGroupTafsili
             // 
-            this.cmbGroupTafzili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbGroupTafzili.EnterMoveNextControl = true;
-            this.cmbGroupTafzili.Location = new System.Drawing.Point(725, 8);
-            this.cmbGroupTafzili.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbGroupTafzili.Name = "cmbGroupTafzili";
-            this.cmbGroupTafzili.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbGroupTafsili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbGroupTafsili.EnterMoveNextControl = true;
+            this.cmbGroupTafsili.Location = new System.Drawing.Point(725, 8);
+            this.cmbGroupTafsili.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbGroupTafsili.Name = "cmbGroupTafsili";
+            this.cmbGroupTafsili.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbGroupTafzili.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.cmbGroupTafsili.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "    کد ", 130, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 300, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.cmbGroupTafzili.Properties.DataSource = this.epGroupTafzilisBindingSource;
-            this.cmbGroupTafzili.Properties.DisplayMember = "Name";
-            this.cmbGroupTafzili.Properties.DropDownRows = 10;
-            this.cmbGroupTafzili.Properties.ImmediatePopup = true;
-            this.cmbGroupTafzili.Properties.NullText = "";
-            this.cmbGroupTafzili.Properties.ValueMember = "Id";
-            this.cmbGroupTafzili.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbGroupTafzili.Size = new System.Drawing.Size(221, 34);
-            this.cmbGroupTafzili.TabIndex = 0;
-            this.cmbGroupTafzili.TabStop = false;
-            this.cmbGroupTafzili.EditValueChanged += new System.EventHandler(this.cmbGroupTafzili_EditValueChanged);
+            this.cmbGroupTafsili.Properties.DataSource = this.epGroupTafsiliLevel1sBindingSource;
+            this.cmbGroupTafsili.Properties.DisplayMember = "Name";
+            this.cmbGroupTafsili.Properties.DropDownRows = 10;
+            this.cmbGroupTafsili.Properties.ImmediatePopup = true;
+            this.cmbGroupTafsili.Properties.NullText = "";
+            this.cmbGroupTafsili.Properties.ValueMember = "Id";
+            this.cmbGroupTafsili.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbGroupTafsili.Size = new System.Drawing.Size(221, 34);
+            this.cmbGroupTafsili.TabIndex = 0;
+            this.cmbGroupTafsili.TabStop = false;
+            this.cmbGroupTafsili.EditValueChanged += new System.EventHandler(this.cmbGroupTafsili_EditValueChanged);
             // 
-            // epGroupTafzilisBindingSource
+            // epGroupTafsiliLevel1sBindingSource
             // 
-            this.epGroupTafzilisBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpGroupTafzili);
+            this.epGroupTafsiliLevel1sBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpGroupTafsiliLevel1);
             // 
-            // cmbTafziliAshkhas
+            // cmbTafsiliAshkhas
             // 
-            this.cmbTafziliAshkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbTafziliAshkhas.EnterMoveNextControl = true;
-            this.cmbTafziliAshkhas.Location = new System.Drawing.Point(106, 8);
-            this.cmbTafziliAshkhas.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbTafziliAshkhas.Name = "cmbTafziliAshkhas";
-            this.cmbTafziliAshkhas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbTafsiliAshkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTafsiliAshkhas.EnterMoveNextControl = true;
+            this.cmbTafsiliAshkhas.Location = new System.Drawing.Point(106, 8);
+            this.cmbTafsiliAshkhas.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbTafsiliAshkhas.Name = "cmbTafsiliAshkhas";
+            this.cmbTafsiliAshkhas.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTafziliAshkhas.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.cmbTafsiliAshkhas.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "    کد ", 130, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.cmbTafziliAshkhas.Properties.DataSource = this.epHesabTafziliAshkhassBindingSource;
-            this.cmbTafziliAshkhas.Properties.DisplayMember = "Name";
-            this.cmbTafziliAshkhas.Properties.DropDownRows = 10;
-            this.cmbTafziliAshkhas.Properties.ImmediatePopup = true;
-            this.cmbTafziliAshkhas.Properties.NullText = "";
-            this.cmbTafziliAshkhas.Properties.ValueMember = "Id";
-            this.cmbTafziliAshkhas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbTafziliAshkhas.Size = new System.Drawing.Size(459, 34);
-            this.cmbTafziliAshkhas.TabIndex = 1;
-            this.cmbTafziliAshkhas.TabStop = false;
-            this.cmbTafziliAshkhas.EditValueChanged += new System.EventHandler(this.cmbTafziliAshkhas_EditValueChanged);
+            this.cmbTafsiliAshkhas.Properties.DataSource = this.epHesabTafsiliAshkhassBindingSource;
+            this.cmbTafsiliAshkhas.Properties.DisplayMember = "Name";
+            this.cmbTafsiliAshkhas.Properties.DropDownRows = 10;
+            this.cmbTafsiliAshkhas.Properties.ImmediatePopup = true;
+            this.cmbTafsiliAshkhas.Properties.NullText = "";
+            this.cmbTafsiliAshkhas.Properties.ValueMember = "Id";
+            this.cmbTafsiliAshkhas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbTafsiliAshkhas.Size = new System.Drawing.Size(459, 34);
+            this.cmbTafsiliAshkhas.TabIndex = 1;
+            this.cmbTafsiliAshkhas.TabStop = false;
+            this.cmbTafsiliAshkhas.EditValueChanged += new System.EventHandler(this.cmbTafsiliAshkhas_EditValueChanged);
             // 
-            // epHesabTafziliAshkhassBindingSource
+            // epHesabTafsiliAshkhassBindingSource
             // 
-            this.epHesabTafziliAshkhassBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTafziliAshkhas);
+            this.epHesabTafsiliAshkhassBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTafsiliAshkhas);
             // 
-            // txtGroupTafziliId
+            // txtGroupTafsiliId
             // 
-            this.txtGroupTafziliId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGroupTafziliId.EditValue = "آیدی";
-            this.txtGroupTafziliId.Location = new System.Drawing.Point(763, 8);
-            this.txtGroupTafziliId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGroupTafziliId.Name = "txtGroupTafziliId";
-            this.txtGroupTafziliId.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtGroupTafziliId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtGroupTafziliId.Properties.Mask.EditMask = "f0";
-            this.txtGroupTafziliId.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtGroupTafziliId.Properties.NullText = "آیدی انبار";
-            this.txtGroupTafziliId.Properties.ReadOnly = true;
-            this.txtGroupTafziliId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtGroupTafziliId.Size = new System.Drawing.Size(50, 34);
-            this.txtGroupTafziliId.TabIndex = 37;
-            this.txtGroupTafziliId.TabStop = false;
-            this.txtGroupTafziliId.Visible = false;
+            this.txtGroupTafsiliId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGroupTafsiliId.EditValue = "آیدی";
+            this.txtGroupTafsiliId.Location = new System.Drawing.Point(763, 8);
+            this.txtGroupTafsiliId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGroupTafsiliId.Name = "txtGroupTafsiliId";
+            this.txtGroupTafsiliId.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGroupTafsiliId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtGroupTafsiliId.Properties.Mask.EditMask = "f0";
+            this.txtGroupTafsiliId.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtGroupTafsiliId.Properties.NullText = "آیدی انبار";
+            this.txtGroupTafsiliId.Properties.ReadOnly = true;
+            this.txtGroupTafsiliId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtGroupTafsiliId.Size = new System.Drawing.Size(50, 34);
+            this.txtGroupTafsiliId.TabIndex = 37;
+            this.txtGroupTafsiliId.TabStop = false;
+            this.txtGroupTafsiliId.Visible = false;
             // 
             // txtCode
             // 
@@ -5324,11 +5324,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafzili.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epGroupTafzilisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTafziliAshkhas.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epHesabTafziliAshkhassBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroupTafziliId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epGroupTafsiliLevel1sBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTafsiliAshkhas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epHesabTafsiliAshkhassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupTafsiliId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
@@ -5536,7 +5536,7 @@
         private DevExpress.XtraTab.XtraTabPage tpDarsadRanande;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraGrid.GridControl gridControlMoshkhasat1;
-        private System.Windows.Forms.BindingSource epHesabTafziliAshkhassBindingSource;
+        private System.Windows.Forms.BindingSource epHesabTafsiliAshkhassBindingSource;
         public DevExpress.XtraGrid.Views.Grid.GridView gridViewMoshkhasat1;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn Line;
@@ -5560,7 +5560,7 @@
         private DevExpress.XtraEditors.SimpleButton btnDisplyNotActiveList;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
-        private System.Windows.Forms.BindingSource epGroupTafzilisBindingSource;
+        private System.Windows.Forms.BindingSource epGroupTafsiliLevel1sBindingSource;
         public DevExpress.XtraEditors.TextEdit txtShomareSabt;
         public DevExpress.XtraEditors.TextEdit txtNoeFaaliat;
         public DevExpress.XtraEditors.TextEdit txtCodeEghtesadi;
@@ -5571,9 +5571,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         public DevExpress.XtraEditors.TextEdit txtShenaseMelli;
         private DevExpress.XtraEditors.LabelControl labelControl18;
-        public DevExpress.XtraEditors.LookUpEdit cmbGroupTafzili;
-        public DevExpress.XtraEditors.TextEdit txtGroupTafziliId;
-        public DevExpress.XtraEditors.LookUpEdit cmbTafziliAshkhas;
+        public DevExpress.XtraEditors.LookUpEdit cmbGroupTafsili;
+        public DevExpress.XtraEditors.TextEdit txtGroupTafsiliId;
+        public DevExpress.XtraEditors.LookUpEdit cmbTafsiliAshkhas;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         public DevExpress.XtraEditors.TextEdit txtId;

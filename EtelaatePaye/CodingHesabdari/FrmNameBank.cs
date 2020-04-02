@@ -27,8 +27,8 @@ namespace EtelaatePaye.CodingHesabdari
 {
     public partial class FrmNameBank : DevExpress.XtraEditors.XtraForm
     {
-        FrmHesabTafziliHesabBanki Fm;
-        public FrmNameBank(FrmHesabTafziliHesabBanki fm)
+        FrmHesabTafsiliHesabBanki Fm;
+        public FrmNameBank(FrmHesabTafsiliHesabBanki fm)
         {
             InitializeComponent();
             Fm = fm;
@@ -333,7 +333,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 db.EpNameBanks.Add(obj);
                                 db.SaveChanges();
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
+                                //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
                                 //var q = db.EpNameBanks.FirstOrDefault(s => s.Code == _Code);
                                 //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
@@ -507,7 +507,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameBank_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms["FrmHesabTafziliHesabBanki"] != null)
+            if (Application.OpenForms["FrmHesabTafsiliHesabBanki"] != null)
             {
                 Fm.FillcmbNameBank();
                 //Fm.cmbNameBank_Enter(null, null);

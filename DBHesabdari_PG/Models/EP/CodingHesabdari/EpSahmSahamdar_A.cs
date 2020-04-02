@@ -12,9 +12,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 
         public int Id { get; set; }
         //[Required]
-        //public int GroupTafziliId { get; set; }
+        //public int GroupTafsiliId { get; set; }
         //[Required, MaxLength(50)]
-        //public string GroupTafziliName { get; set; }
+        //public string GroupTafsiliName { get; set; }
         [Required]
         public int SalId { get; set; }
         [Required]
@@ -31,6 +31,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public decimal SumMablagh { get; set; }
         [MaxLength(400)]
         public string Molahezat { get; set; }
-        public virtual EpHesabTafziliAshkhas EpHesabTafziliAshkhas1 { get; set; }
+        public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
     }
 }

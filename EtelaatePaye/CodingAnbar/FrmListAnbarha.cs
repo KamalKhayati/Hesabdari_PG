@@ -52,17 +52,17 @@ namespace EtelaatePaye.CodingAnbar
                         //        {
                         //            q2.ForEach(item2 =>
                         //            {
-                        //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                        //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                         //            });
-                        //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                        //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                         //        }
                         //        else
                         //        {
-                        //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                        //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                         //        }
                         //    }
                         //    else
-                        //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                        //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                         //}
                     }
                     else
@@ -374,11 +374,11 @@ namespace EtelaatePaye.CodingAnbar
                 HelpClass1.InActiveButtons(panelControl2);
                 HelpClass1.ClearControls(panelControl1);
                 HelpClass1.ActiveControls(panelControl1);
-               // FillcmbGroupTafzili();
-                //cmbListGroupTafzili.EditValue = 1;
-                //txtCodeGroupTafzili.Text = "10";
+               // FillcmbGroupTafsili();
+                //cmbListGroupTafsili.EditValue = 1;
+                //txtCodeGroupTafsili.Text = "10";
                 btnNewCode_Click(null, null);
-               // cmbListGroupTafzili.EditValue = 13;
+               // cmbListGroupTafsili.EditValue = 13;
                 txtName.Focus();
             }
         }
@@ -447,11 +447,11 @@ namespace EtelaatePaye.CodingAnbar
                     En = EnumCED.Edit;
                     HelpClass1.InActiveButtons(panelControl2);
                     HelpClass1.ActiveControls(panelControl1);
-                    //FillcmbGroupTafzili();
+                    //FillcmbGroupTafsili();
 
-                    //cmbListGroupTafzili.EditValue = 13;
+                    //cmbListGroupTafsili.EditValue = 13;
                     txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                    //txtCodeGroupTafzili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                    //txtCodeGroupTafsili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                     txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
                     txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                     cmbNoeAnbar.SelectedIndex= Convert.ToInt32(gridView1.GetFocusedRowCellValue("IndexNoeAnbar").ToString());
@@ -494,8 +494,8 @@ namespace EtelaatePaye.CodingAnbar
                                 db.EpListAnbarhas.Add(obj);
                                 db.SaveChanges();
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                //var q = db.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Code == _Code);
+                                //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                //var q = db.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Code == _Code);
                                 //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                 //n1.KeyId = _Code;
@@ -693,10 +693,10 @@ namespace EtelaatePaye.CodingAnbar
         {
             if (gridView1.RowCount > 0)
             {
-               // FillcmbGroupTafzili();
+               // FillcmbGroupTafsili();
 
                 txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                //txtCodeGroupTafzili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                //txtCodeGroupTafsili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
                 txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
                 txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                 cmbNoeAnbar.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("IndexNoeAnbar").ToString());

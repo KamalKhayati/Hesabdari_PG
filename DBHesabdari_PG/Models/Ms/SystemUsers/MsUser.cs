@@ -55,10 +55,10 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public int CodingHesabdariId { get; set; }
         [Required]
         [Column(Order = 3)]
-        public int KeyId { get; set; }
+        public int KeyCode { get; set; }
         [Required]
         [Column(Order = 4)]
-        public int TabaghebandiHesabhaId { get; set; }
+        public int HesabTabaghehId { get; set; }
         [Required]
         [Column(Order = 5)]
         public int HesabGroupId { get; set; }

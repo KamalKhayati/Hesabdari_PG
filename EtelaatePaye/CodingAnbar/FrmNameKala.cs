@@ -212,17 +212,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -247,17 +247,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -282,17 +282,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -317,17 +317,17 @@ namespace EtelaatePaye.CodingAnbar
                             //        {
                             //            q2.ForEach(item2 =>
                             //            {
-                            //                q1.Remove(dataContext.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Id == item2));
+                            //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
                             //            });
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //        else
                             //        {
-                            //            epHesabTafziliSandoghsBindingSource.DataSource = q1;
+                            //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
                             //        }
                             //    }
                             //    else
-                            //        epHesabTafziliSandoghsBindingSource.DataSource = null;
+                            //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
                             //}
 
                         }
@@ -740,10 +740,10 @@ namespace EtelaatePaye.CodingAnbar
                 HelpClass1.ActiveControls(xtraTabPage9);
                 FillcmbVahedKala();
                 FillcmbTaminKonande();
-                //cmbListGroupTafzili.EditValue = 1;
-                //txtCodeGroupTafzili.Text = "10";
+                //cmbListGroupTafsili.EditValue = 1;
+                //txtCodeGroupTafsili.Text = "10";
                 //btnNewCode_Click(null, null);
-                // cmbListGroupTafzili.EditValue = 13;
+                // cmbListGroupTafsili.EditValue = 13;
                 cmbDasteBandi.Focus();
             }
         }
@@ -1267,8 +1267,8 @@ namespace EtelaatePaye.CodingAnbar
                                 db.EpNameKalas.Add(obj);
                                 db.SaveChanges();
                                 /////////////////////////////////////////////////////////////////////////////////////
-                                //int _Code = Convert.ToInt32(txtCodeGroupTafziliSandogh.Text + txtCode.Text);
-                                //var q = db.EpHesabTafziliSandoghs.FirstOrDefault(s => s.Code == _Code);
+                                //int _Code = Convert.ToInt32(txtCodeGroupTafsiliSandogh.Text + txtCode.Text);
+                                //var q = db.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Code == _Code);
                                 //////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
                                 //EpAllCodingHesabdari n1 = new EpAllCodingHesabdari();
                                 //n1.KeyId = _Code;
