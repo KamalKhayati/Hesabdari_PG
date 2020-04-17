@@ -94,12 +94,11 @@
     <Compile Include="Models\EP\CodingHesabdari\EpGroupTafsiliLevel2.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpGroupTafsiliLevel3.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabBanki_A.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliGhataat.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliKala.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliMahsol.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliShoabat.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliGharardad.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliMarakezHazine.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliMavad.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliProjhe.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliAghlamAnbar.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliProzhe.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliSayer.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliVam.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpMPersoneli_A.cs" />
@@ -111,7 +110,7 @@
     <Compile Include="Models\EP\CodingHesabdari\EpAllCodingHesabdari.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabMoin.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliAshkhas.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliHesabBanki.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliBankha.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliSandogh.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpMoshakhasat_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpNameBank.cs" />

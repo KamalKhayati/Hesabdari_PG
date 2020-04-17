@@ -15,12 +15,19 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG
 {
-   public enum EnumCED
+    public enum EnumCED
     {
         Create,
         Edit,
         Delete,
         Save,
         Cancel,
+        None,
+    }
+    public enum EnumTreeList
+    {
+        CollapseAll,
+        ExpandAll,
+        None,
     }
 }

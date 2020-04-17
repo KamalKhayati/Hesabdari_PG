@@ -14,7 +14,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public int SalId { get; set; }
         [Required]
         public int Code { get; set; }
-        [Required, MaxLength(50)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required]
         public int IndexNoeHesab { get; set; }

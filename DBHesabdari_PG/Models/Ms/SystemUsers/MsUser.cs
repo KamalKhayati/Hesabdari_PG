@@ -56,20 +56,20 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         [Required]
         [Column(Order = 3)]
         public int KeyCode { get; set; }
+        //[Required]
+        //[Column(Order = 4)]
+        //public int HesabTabaghehId { get; set; }
+        //[Required]
+        //[Column(Order = 5)]
+        //public int HesabGroupId { get; set; }
+        //[Required]
+        //[Column(Order = 6)]
+        //public int HesabColId { get; set; }
+        //[Required]
+        //[Column(Order = 7)]
+        //public int HesabMoinId { get; set; }
         [Required]
         [Column(Order = 4)]
-        public int HesabTabaghehId { get; set; }
-        [Required]
-        [Column(Order = 5)]
-        public int HesabGroupId { get; set; }
-        [Required]
-        [Column(Order = 6)]
-        public int HesabColId { get; set; }
-        [Required]
-        [Column(Order = 7)]
-        public int HesabMoinId { get; set; }
-        [Required]
-        [Column(Order = 8)]
         public bool IsActive { get; set; }
 
         public virtual MsUser MsUser1 { get; set; }

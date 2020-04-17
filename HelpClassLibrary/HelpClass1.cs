@@ -28,6 +28,7 @@ using System.Security.Cryptography;
 using System.Data.SqlClient;
 using System.Data.Entity;
 using static DevExpress.DataAccess.UI.XPObjectSource.PropertyCollectionEditor;
+using DevExpress.XtraEditors.Popup;
 
 namespace HelpClassLibrary
 {
@@ -246,7 +247,7 @@ namespace HelpClassLibrary
             {
                 if (item is SimpleButton)
                 {
-                    if (item.Name == "btnSave" || item.Name== "btnSaveNext" || item.Name== "btnCancel")
+                    if (item.Name == "btnSave" || item.Name == "btnSaveNext" || item.Name == "btnCancel")
                     {
                         item.Enabled = true;
                     }
@@ -262,11 +263,9 @@ namespace HelpClassLibrary
             {
                 if (item is SimpleButton)
                 {
-                    if (item.Enabled==true)
-                    {
+                    if (item.Enabled == true)
                         item.Enabled = false;
-                    }
-                   else if (item.Name != "btnDelete" && item.Name != "btnEdit")
+                    else if (item.Name != "btnDelete" && item.Name != "btnEdit")
                         item.Enabled = true;
                 }
 
@@ -293,8 +292,8 @@ namespace HelpClassLibrary
                 else if (_Type.Name == "CheckEdit")
                 {
                     CheckEdit item1 = (CheckEdit)item;
-                    if (item1.Name != "chkIsActive")
-                        item1.Checked = false;
+                    // if (item1.Name != "chkIsActive")
+                    item1.Checked = false;
                 }
                 else if (_Type.Name == "GroupBox")
                 {
@@ -304,7 +303,7 @@ namespace HelpClassLibrary
                 else if (_Type.Name == "PictureEdit")
                 {
                     PictureEdit item1 = (PictureEdit)item;
-                    item1.Image=null;
+                    item1.Image = null;
                 }
             }
         }
@@ -345,6 +344,68 @@ namespace HelpClassLibrary
             //}
         }
 
+        /// <summary>
+        /// رنگ بندی ردیفهای دیتاگریدویو
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public static void gridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            bool IsActive = Convert.ToBoolean(view.GetRowCellValue(e.RowHandle, "IsActive"));
+
+            if (IsActive)
+            {
+                Color foreColor = Color.Black;
+                e.Appearance.ForeColor = foreColor;
+            }
+            else
+            {
+                Color foreColor = Color.Red;
+                e.Appearance.ForeColor = foreColor;
+            }
+
+        }
+
+        /// <summary>
+        /// رنگ بندی سلول کمبوباکس
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public static void LookupEdit_CustomDrawCell(object sender, LookUpCustomDrawCellArgs e)
+        {
+            //if (e.IsRowSelected) return;
+            //if ((e.RowIndex % 2) == 0) return;
+            //if (e.DisplayText != "False")
+            //    return;
+            //e.Appearance.BackColor = Color.Red;
+            if (e.DisplayText == "False")
+            {
+                e.Appearance.BackColor = Color.Pink;
+                e.DisplayText = "خیر";
+            }
+            else if (e.DisplayText == "True")
+            {
+                e.DisplayText = "بله";
+            }
+        }
+
+        public static void DateTimeMask(TextEdit TextBox)
+        {
+            /// <summary>
+            /// فرمول قالب بندی تاریخ برای ماه اسفند 29 روزه
+            /// </summary>
+            //([1-9][3-9][0-9][0-9])/(((0[1-6])/([012][1-9]|[123]0|31))|((0[7-9]|1[0-1])/([012][1-9]|[123]0))|((1[2])/([012][1-9]|[12]0)))
+
+            /// <summary>
+            /// فرمول قالب بندی تاریخ برای ماه اسفند 30 روزه
+            /// </summary>
+            //([1-9][3-9][0-9][0-9])/(((0[1-6])/([012][1-9]|[123]0|31))|((0[7-9]|1[0-1])/([012][1-9]|[123]0))|((1[2])/([012][1-9]|[123]0)))
+
+            TextBox.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            TextBox.Properties.Mask.EditMask = "([1-9][3-9][0-9][0-9])/(((0[1-6])/([012][1-9]|[123]0|31))|((0[7-9]|1[0-1])/([012][1-9]|[123]0))|((1[2])/([012][1-9]|[12]0)))";
+            TextBox.RightToLeft = RightToLeft.No;
+        }
 
         //public void SetDateTimeNow(MaskedTextBox objMTB)
         //{

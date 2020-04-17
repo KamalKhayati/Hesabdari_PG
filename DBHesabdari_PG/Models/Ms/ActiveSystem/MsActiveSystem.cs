@@ -46,8 +46,8 @@ namespace DBHesabdari_PG.Models.Ms.ActiveSystem
         [Key]
         [Required, Column(Order = 3)]
         public int MoinId { get; set; }
-        [Required, Column(Order = 4)]
-        public int ActiveSystemCode { get; set; }
+        //[Required, Column(Order = 4)]
+        //public int ActiveSystemCode { get; set; }
         //[Required, Column(Order = 5)]
         //public int MoinCode { get; set; }
 

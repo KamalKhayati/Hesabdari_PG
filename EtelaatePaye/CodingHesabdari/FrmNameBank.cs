@@ -27,8 +27,8 @@ namespace EtelaatePaye.CodingHesabdari
 {
     public partial class FrmNameBank : DevExpress.XtraEditors.XtraForm
     {
-        FrmHesabTafsiliHesabBanki Fm;
-        public FrmNameBank(FrmHesabTafsiliHesabBanki fm)
+        FrmHesabhaTafsili Fm;
+        public FrmNameBank(FrmHesabhaTafsili fm)
         {
             InitializeComponent();
             Fm = fm;
@@ -170,7 +170,7 @@ namespace EtelaatePaye.CodingHesabdari
             }
             else if (e.KeyCode == Keys.F8)
             {
-                btnDisplyActiveList_Click(sender, null);
+                btnDisplyList_Click(sender, null);
             }
             //else if (e.KeyCode == Keys.F9)
             //{
@@ -208,7 +208,7 @@ namespace EtelaatePaye.CodingHesabdari
             HelpClass1.MoveFirst(gridView1);
         }
 
-        public void btnDisplyActiveList_Click(object sender, EventArgs e)
+        public void btnDisplyList_Click(object sender, EventArgs e)
         {
             FillDataGridNameBank();
         }
@@ -264,7 +264,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
-                                    btnDisplyActiveList_Click(null, null);
+                                    btnDisplyList_Click(null, null);
                                     //XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     if (gridView1.RowCount > 0)
                                         gridView1.FocusedRowHandle = EditRowIndex - 1;
@@ -275,8 +275,8 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             catch (DbUpdateException)
                             {
-                                XtraMessageBox.Show("حذف این نام بانک مقدور نیست \n" +
-                                    " جهت حذف نام بانک مورد نظر ، در ابتدا بایستی ارتباط این حساب با حساب تفضیلی حسابهای بانکی خودمان واشخاص حذف گردد",
+                                XtraMessageBox.Show("حذف این حساب بانک مقدور نیست \n" +
+                                    " جهت حذف حساب بانک مورد نظر ، در ابتدا بایستی ارتباط این حساب با حساب تفضیلی بانکهای خودمان واشخاص حذف گردد",
                                     "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             catch (Exception ex)
@@ -297,18 +297,21 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView1.SelectedRowsCount > 0)
                 {
-                    gridControl1.Enabled = false;
-                    EditRowIndex = gridView1.FocusedRowHandle;
-                    En = EnumCED.Edit;
-                    HelpClass1.InActiveButtons(panelControl2);
-                    HelpClass1.ActiveControls(panelControl1);
+                    if (!string.IsNullOrEmpty(txtId.Text))
+                    {
+                        gridControl1.Enabled = false;
+                        EditRowIndex = gridView1.FocusedRowHandle;
+                        En = EnumCED.Edit;
+                        HelpClass1.InActiveButtons(panelControl2);
+                        HelpClass1.ActiveControls(panelControl1);
 
-                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                        txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                        txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
 
-                    txtName.Focus();
+                        txtName.Focus();
+
+                    }
                 }
-
             }
         }
 
@@ -346,7 +349,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 //db.EpAllCodingHesabdaris.Add(n1);
                                 ///////////////////////////////////////////////////////////////////////////////////////
                                 //db.SaveChanges();
-                                btnDisplyActiveList_Click(null, null);
+                                btnDisplyList_Click(null, null);
 
                                 //XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 btnLast_Click(null, null);
@@ -460,7 +463,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     //}
 
                                     db.SaveChanges();
-                                    btnDisplyActiveList_Click(null, null);
+                                    btnDisplyList_Click(null, null);
 
                                     //XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     if (gridView1.RowCount > 0)
@@ -507,7 +510,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameBank_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms["FrmHesabTafsiliHesabBanki"] != null)
+            if (Application.OpenForms["FrmHesabhaTafsili"] != null)
             {
                 Fm.FillcmbNameBank();
                 //Fm.cmbNameBank_Enter(null, null);

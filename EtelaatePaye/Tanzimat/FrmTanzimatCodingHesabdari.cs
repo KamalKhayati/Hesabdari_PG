@@ -92,24 +92,24 @@ namespace EtelaatePaye.Tanzimat
                     int _SalId = Convert.ToInt32(lblSalId.Text);
 
                     if (db.EpHesabTabaghehs.Any(s => s.SalId == _SalId))
-                        txtTabaghehCarakter.Enabled = false;
+                        txtTabaghehCarakter.ReadOnly = true;
                     else
-                        txtTabaghehCarakter.Enabled = true;
+                        txtTabaghehCarakter.ReadOnly = false;
 
                     if (db.EpHesabGroups.Any(s => s.SalId == _SalId))
-                        txtGroupCarakter.Enabled = false;
+                        txtGroupCarakter.ReadOnly = true;
                     else
-                        txtGroupCarakter.Enabled = true;
+                        txtGroupCarakter.ReadOnly = false;
 
                     if (db.EpHesabCols.Any(s => s.SalId == _SalId))
-                        txtColCarakter.Enabled = false;
+                        txtColCarakter.ReadOnly = true;
                     else
-                        txtColCarakter.Enabled = true;
+                        txtColCarakter.ReadOnly = false;
 
                     if (db.EpHesabMoins.Any(s => s.SalId == _SalId))
-                        txtMoinCarakter.Enabled = false;
+                        txtMoinCarakter.ReadOnly = true;
                     else
-                        txtMoinCarakter.Enabled = true;
+                        txtMoinCarakter.ReadOnly = false;
 
                 }
                 catch (Exception ex)

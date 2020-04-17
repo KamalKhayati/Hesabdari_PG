@@ -13,6 +13,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
+        public int LevelNamber { get; set; }
+        [Required]
         public int KeyCode { get; set; }
         [Required]
         public int ParentCode { get; set; }
@@ -25,13 +27,14 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //[Required]
         //public int Level3Id { get; set; }
         [Required]
-        public int LevelNamber { get; set; }
-        [Required]
         public bool IsActive { get; set; }
         //[MaxLength(500)]
         //public string SharhHesab { get; set; }
         public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
         public virtual EpGroupTafsiliLevel2 EpGroupTafsiliLevel2 { get; set; }
         public virtual EpGroupTafsiliLevel3 EpGroupTafsiliLevel3 { get; set; }
+        public virtual ICollection<REpHesabMoinBEpAllGroupTafsili> REpHesabMoinBEpAllGroupTafsilis { get; set; }
+        public virtual ICollection<EpAllHesabTafsili> EpAllHesabTafsilis { get; set; }
+
     }
 }

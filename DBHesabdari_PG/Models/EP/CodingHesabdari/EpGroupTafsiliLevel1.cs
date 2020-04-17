@@ -25,6 +25,10 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
+        public int TabaghehIndex { get; set; }
+        [Required, MaxLength(30)]
+        public string TabaghehName { get; set; }
+        [Required]
         public int Code { get; set; }
         [Required, MaxLength(50)]
         public string Name { get; set; }
@@ -36,23 +40,23 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
-        public virtual ICollection<REpHesabMoinBEpGroupTafsiliLevel1> REpHesabMoinBEpGroupTafsiliLevel1s { get; set; }
-        public virtual ICollection<EpHesabTafsiliSandogh> EpHesabTafsiliSandoghs { get; set; }
-        public virtual ICollection<EpHesabTafsiliHesabBanki> EpHesabTafsiliHesabBankis { get; set; }
-        public virtual ICollection<EpHesabTafsiliAshkhas> EpHesabTafsiliAshkhass { get; set; }
-        public virtual ICollection<EpHesabTafsiliDaraeha> EpHesabTafsiliDaraehas { get; set; }
-        public virtual ICollection<EpHesabTafsiliProjhe> EpHesabTafsiliProjhes { get; set; }
-        public virtual ICollection<EpHesabTafsiliVam> EpHesabTafsiliVams { get; set; }
-        public virtual ICollection<EpHesabTafsiliMavad> EpHesabTafsiliMavads { get; set; }
-        public virtual ICollection<EpHesabTafsiliGhataat> EpHesabTafsiliGhataats { get; set; }
-        public virtual ICollection<EpHesabTafsiliMahsol> EpHesabTafsiliMahsols { get; set; }
-        public virtual ICollection<EpHesabTafsiliKala> EpHesabTafsiliKalas { get; set; }
-        public virtual ICollection<EpHesabTafsiliMarakezHazine> EpHesabTafsiliMarakezHazines { get; set; }
-        public virtual ICollection<EpHesabTafsiliSayer> EpHesabTafsiliSayers { get; set; }
-        public virtual ICollection<EpAllHesabTafsili> EpAllHesabTafsilis { get; set; }
+       // public virtual ICollection<REpHesabMoinBEpAllGroupTafsili> REpHesabMoinBEpGroupTafsiliLevel1s { get; set; }
+       // public virtual ICollection<EpHesabTafsiliSandogh> EpHesabTafsiliSandoghs { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliHesabBanki> EpHesabTafsiliHesabBankis { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliAshkhas> EpHesabTafsiliAshkhass { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliDaraeha> EpHesabTafsiliDaraehas { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliProjhe> EpHesabTafsiliProjhes { get; set; }
+     //   public virtual ICollection<EpHesabTafsiliVam> EpHesabTafsiliVams { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliMavad> EpHesabTafsiliMavads { get; set; }
+     //   public virtual ICollection<EpHesabTafsiliGhataat> EpHesabTafsiliGhataats { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliMahsol> EpHesabTafsiliMahsols { get; set; }
+       // public virtual ICollection<EpHesabTafsiliKala> EpHesabTafsiliKalas { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliMarakezHazine> EpHesabTafsiliMarakezHazines { get; set; }
+      //  public virtual ICollection<EpHesabTafsiliSayer> EpHesabTafsiliSayers { get; set; }
+     //   public virtual ICollection<EpAllHesabTafsili> EpAllHesabTafsilis { get; set; }
 
         public virtual ICollection<EpGroupTafsiliLevel2> EpGroupTafsiliLevel2s { get; set; }
-        public virtual EpAllGroupTafsili EpAllGroupTafsilis { get; set; }
+        public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
 
     }
 }

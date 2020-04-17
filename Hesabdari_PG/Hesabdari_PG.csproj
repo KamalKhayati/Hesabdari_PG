@@ -119,6 +119,12 @@
     <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaList.Designer.cs">
       <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AP\Hesabdari\FrmHesabTafsiliLevelsSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AP\Hesabdari\FrmHesabTafsiliLevelsSelected.Designer.cs">
+      <DependentUpon>FrmHesabTafsiliLevelsSelected.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormKham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="Forms\AP\AnbarKala\FrmAnbarhaList.resx">
       <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AP\Hesabdari\FrmHesabTafsiliLevelsSelected.resx">
+      <DependentUpon>FrmHesabTafsiliLevelsSelected.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormKham.resx">
       <DependentUpon>FormKham.cs</DependentUpon>
@@ -198,7 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\AK\" />
-    <Folder Include="Forms\AP\Hesabdari\" />
     <Folder Include="Forms\DP\" />
     <Folder Include="Forms\FT\" />
     <Folder Include="Forms\SH\" />

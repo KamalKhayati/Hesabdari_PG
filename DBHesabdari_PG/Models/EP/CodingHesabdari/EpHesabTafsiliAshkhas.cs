@@ -25,25 +25,29 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
+        public int LevelNamber { get; set; }
+        [Required]
         public int Code { get; set; }
-        [Required, MaxLength(100)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
         [Column(TypeName = "Date")]
-        public DateTime? TarikhEjad { get; set; }
+        public DateTime TarikhEjad { get; set; }
         [Required]
         public bool IsActive { get; set; }
-        public bool IsPersonel { get; set; }
+        public bool IsKarkonan { get; set; }
         public bool IsSahamdar { get; set; }
         public bool IsVizitor { get; set; }
         public bool IsRanande { get; set; }
+        public bool IsKharidar { get; set; }
+        public bool IsFroshandeh { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
-        [Required, MaxLength(50)]
-        public string GroupTafsiliName { get; set; }
+        //[Required, MaxLength(50)]
+        //public string GroupTafsiliName { get; set; }
         [Required]
         public int GroupTafsiliId { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
-        public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
+       // public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
         public virtual EpMoshakhasat_A EpMoshakhasat_A1 { get; set; }
         public virtual ICollection<EpAdress_A> EpAdress_As { get; set; }
         public virtual ICollection<EpShTamas_A> EpShTamas_As { get; set; }

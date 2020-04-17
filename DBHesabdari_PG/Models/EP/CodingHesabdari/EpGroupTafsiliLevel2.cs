@@ -32,6 +32,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public string SharhHesab { get; set; }
         public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
         public virtual ICollection<EpGroupTafsiliLevel3> EpGroupTafsiliLevel3s { get; set; }
-        public virtual EpAllGroupTafsili EpAllGroupTafsilis { get; set; }
+        public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
     }
 }

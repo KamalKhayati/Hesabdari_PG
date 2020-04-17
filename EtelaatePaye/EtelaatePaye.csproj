@@ -101,59 +101,17 @@
     <Compile Include="CodingAnbar\FrmVahedKala.Designer.cs">
       <DependentUpon>FrmVahedKala.cs</DependentUpon>
     </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliDaraeha.cs">
+    <Compile Include="CodingHesabdari\FrmCodingHesabdari.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliDaraeha.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliDaraeha.cs</DependentUpon>
+    <Compile Include="CodingHesabdari\FrmCodingHesabdari.Designer.cs">
+      <DependentUpon>FrmCodingHesabdari.cs</DependentUpon>
     </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliGhataat.cs">
+    <Compile Include="CodingHesabdari\FrmHesabhaTafsili.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliGhataat.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliGhataat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliKala.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliKala.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliKala.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliMahsol.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliMahsol.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliMahsol.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliMarakezHazine.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliMarakezHazine.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliMarakezHazine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliMavad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliMavad.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliMavad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliProjhe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliProjhe.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliProjhe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliSayer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliSayer.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliSayer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliVam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliVam.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliVam.cs</DependentUpon>
+    <Compile Include="CodingHesabdari\FrmHesabhaTafsili.Designer.cs">
+      <DependentUpon>FrmHesabhaTafsili.cs</DependentUpon>
     </Compile>
     <Compile Include="CodingHesabdari\FrmGroupTafsili.cs">
       <SubType>Form</SubType>
@@ -179,30 +137,6 @@
     <Compile Include="CodingHesabdari\FrmEtelaateAshkhas.Designer.cs">
       <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
     </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabCol.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabCol.Designer.cs">
-      <DependentUpon>FrmHesabCol.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabGroup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabGroup.Designer.cs">
-      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabMoin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabMoin.Designer.cs">
-      <DependentUpon>FrmHesabMoin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliAshkhas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliAshkhas.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliAshkhas.cs</DependentUpon>
-    </Compile>
     <Compile Include="CodingHesabdari\FrmNameBank.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,29 +155,11 @@
     <Compile Include="CodingHesabdari\FrmNoeHesab.Designer.cs">
       <DependentUpon>FrmNoeHesab.cs</DependentUpon>
     </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliHesabBanki.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliHesabBanki.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliHesabBanki.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliSandogh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTafsiliSandogh.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliSandogh.cs</DependentUpon>
-    </Compile>
     <Compile Include="CodingHesabdari\FrmNameOstan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CodingHesabdari\FrmNameOstan.Designer.cs">
       <DependentUpon>FrmNameOstan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTabagheh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabTabagheh.Designer.cs">
-      <DependentUpon>FrmHesabTabagheh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -271,32 +187,11 @@
     <EmbeddedResource Include="CodingAnbar\FrmVahedKala.resx">
       <DependentUpon>FrmVahedKala.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliDaraeha.resx">
-      <DependentUpon>FrmHesabTafsiliDaraeha.cs</DependentUpon>
+    <EmbeddedResource Include="CodingHesabdari\FrmCodingHesabdari.resx">
+      <DependentUpon>FrmCodingHesabdari.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliGhataat.resx">
-      <DependentUpon>FrmHesabTafsiliGhataat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliKala.resx">
-      <DependentUpon>FrmHesabTafsiliKala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliMahsol.resx">
-      <DependentUpon>FrmHesabTafsiliMahsol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliMarakezHazine.resx">
-      <DependentUpon>FrmHesabTafsiliMarakezHazine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliMavad.resx">
-      <DependentUpon>FrmHesabTafsiliMavad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliProjhe.resx">
-      <DependentUpon>FrmHesabTafsiliProjhe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliSayer.resx">
-      <DependentUpon>FrmHesabTafsiliSayer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliVam.resx">
-      <DependentUpon>FrmHesabTafsiliVam.cs</DependentUpon>
+    <EmbeddedResource Include="CodingHesabdari\FrmHesabhaTafsili.resx">
+      <DependentUpon>FrmHesabhaTafsili.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmGroupTafsili.resx">
       <DependentUpon>FrmGroupTafsili.cs</DependentUpon>
@@ -311,18 +206,6 @@
     <EmbeddedResource Include="CodingHesabdari\FrmEtelaateAshkhas.resx">
       <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabCol.resx">
-      <DependentUpon>FrmHesabCol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabGroup.resx">
-      <DependentUpon>FrmHesabGroup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabMoin.resx">
-      <DependentUpon>FrmHesabMoin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliAshkhas.resx">
-      <DependentUpon>FrmHesabTafsiliAshkhas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmNameBank.resx">
       <DependentUpon>FrmNameBank.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,18 +215,8 @@
     <EmbeddedResource Include="CodingHesabdari\FrmNoeHesab.resx">
       <DependentUpon>FrmNoeHesab.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliHesabBanki.resx">
-      <DependentUpon>FrmHesabTafsiliHesabBanki.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTafsiliSandogh.resx">
-      <DependentUpon>FrmHesabTafsiliSandogh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CodingHesabdari\FrmNameOstan.resx">
       <DependentUpon>FrmNameOstan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabTabagheh.resx">
-      <DependentUpon>FrmHesabTabagheh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

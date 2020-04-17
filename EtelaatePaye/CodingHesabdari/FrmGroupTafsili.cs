@@ -24,220 +24,177 @@ namespace EtelaatePaye.CodingHesabdari
             InitializeComponent();
         }
 
-        public EnumCED En = EnumCED.Cancel;
-        public bool IsActiveList = true;
+        EnumCED En;
+        EnumTreeList treeList;
+        int _SalId = 0;
+        string _Name = "";
+        int _Code = 0;
+        int _CodeLevel = 0;
+        bool _IsActive = true;
+        string _SharhHesab = "";
+        int _StartCode = 0;
+        int _EndCode = 0;
+        int _Level1Id = 0;
+        int _Level2Id = 0;
+        int _LevelNamber = 0;
+        int EditRowIndex = 0;
+
+        int CodeBeforeEdit = 0;
+        string NameBeforeEdit = "";
+        bool IsActiveBeforeEdit = true;
+        int Level1IdBeforeEdit = 0;
+        int Level2IdBeforeEdit = 0;
+
+        int _GroupTafsiliLevel1Carakter = 0;
+        int _GroupTafsiliLevel2Carakter = 0;
+        int _GroupTafsiliLevel3Carakter = 0;
+        int _CodeTafsiliCarakter = 0;
+
+        string _GroupTafsiliLevel1MinCode = "";
+        string _GroupTafsiliLevel1MaxCode = "";
+        string _GroupTafsiliLevel2MinCode = "";
+        string _GroupTafsiliLevel2MaxCode = "";
+        string _GroupTafsiliLevel3MinCode = "";
+        string _GroupTafsiliLevel3MaxCode = "";
+        string _CodeTafsiliMinCode = "";
+        string _CodeTafsiliMaxCode = "";
+
         public void FillGridviewGroupTafsili()
         {
-            btnDelete.Enabled = btnEdit.Enabled = false;
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            using (var db = new MyContext())
             {
-                using (var dataContext = new MyContext())
+                try
                 {
-                    try
+                    btnDelete.Enabled = btnEdit.Enabled = false;
+                    if (xtraTabControl1.SelectedTabPageIndex == 0)
                     {
-                        if (IsActiveList == true)
+                        if (lblUserId.Text == "1")
                         {
-                            var q1 = dataContext.EpGroupTafsiliLevel1s.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                            if (lblUserId.Text == "1")
-                            {
-                                if (q1.Count > 0)
-                                    epGroupTafsiliLevel1sBindingSource.DataSource = q1;
-                                else
-                                    epGroupTafsiliLevel1sBindingSource.DataSource = null;
-                            }
-                            gridView1.Appearance.HeaderPanel.ForeColor = Color.Black;
-                            //gridView1.Appearance.Row.ForeColor = Color.Black;
-                            HelpClass1.ClearControls(panelControl1_2);
-                            //else
-                            //{
-                            //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                            //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
-
-                            //    if (q1.Count > 0)
-                            //    {
-                            //        if (q2.Count > 0)
-                            //        {
-                            //            q2.ForEach(item3 =>
-                            //            {
-                            //                q1.Remove(dataContext.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == item3));
-                            //            });
-                            //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
-                            //        }
-                            //        else
-                            //        {
-                            //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
-                            //        }
-                            //    }
-                            //    else
-                            //        epGroupTafsiliLevel1sBindingSource.DataSource = null;
-                            //}
-                        }
-                        else
-                        {
-                            if (lblUserId.Text == "1")
-                            {
-                                var q = dataContext.EpGroupTafsiliLevel1s.Where(s => s.IsActive == false && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                                if (q.Count > 0)
-                                    epGroupTafsiliLevel1sBindingSource.DataSource = q;
-                                else
-                                    epGroupTafsiliLevel1sBindingSource.DataSource = null;
-                            }
+                            var q1 = db.EpGroupTafsiliLevel1s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                            if (q1.Count > 0)
+                                epGroupTafsiliLevel1sBindingSource.DataSource = q1;
                             else
                                 epGroupTafsiliLevel1sBindingSource.DataSource = null;
-
-                            gridView1.Appearance.HeaderPanel.ForeColor = Color.Red;
-                            //gridView1.Appearance.Row.ForeColor = Color.Red;
-                            HelpClass1.ClearControls(panelControl1_2);
                         }
+                        //gridView1.Appearance.HeaderPanel.ForeColor = Color.Black;
+                        //gridView1.Appearance.Row.ForeColor = Color.Black;
+                        //else
+                        //{
+                        //    int _UserId = Convert.ToInt32(lblUserId.Text);
+                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
 
+                        //    if (q1.Count > 0)
+                        //    {
+                        //        if (q2.Count > 0)
+                        //        {
+                        //            q2.ForEach(item3 =>
+                        //            {
+                        //                q1.Remove(dataContext.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == item3));
+                        //            });
+                        //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
+                        //        }
+                        //        else
+                        //        {
+                        //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
+                        //        }
+                        //    }
+                        //    else
+                        //        epGroupTafsiliLevel1sBindingSource.DataSource = null;
+                        //}
                     }
-                    catch (Exception ex)
+                    else if (xtraTabControl1.SelectedTabPageIndex == 1)
                     {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                using (var dataContext = new MyContext())
-                {
-                    try
-                    {
-                        if (IsActiveList == true)
+                        if (lblUserId.Text == "1")
                         {
-                            var q1 = dataContext.EpGroupTafsiliLevel2s.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                            if (lblUserId.Text == "1")
-                            {
-                                if (q1.Count > 0)
-                                    epGroupTafsiliLevel2sBindingSource.DataSource = q1;
-                                else
-                                    epGroupTafsiliLevel2sBindingSource.DataSource = null;
-                            }
-                            gridView2.Appearance.HeaderPanel.ForeColor = Color.Black;
-                            //gridView2.Appearance.Row.ForeColor = Color.Black;
-                            HelpClass1.ClearControls(panelControl2_2);
-                            //else
-                            //{
-                            //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                            //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
-
-                            //    if (q1.Count > 0)
-                            //    {
-                            //        if (q2.Count > 0)
-                            //        {
-                            //            q2.ForEach(item3 =>
-                            //            {
-                            //                q1.Remove(dataContext.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == item3));
-                            //            });
-                            //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
-                            //        }
-                            //        else
-                            //        {
-                            //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
-                            //        }
-                            //    }
-                            //    else
-                            //        epGroupTafsiliLevel1sBindingSource.DataSource = null;
-                            //}
-                        }
-                        else
-                        {
-                            if (lblUserId.Text == "1")
-                            {
-                                var q = dataContext.EpGroupTafsiliLevel2s.Where(s => s.IsActive == false && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                                if (q.Count > 0)
-                                    epGroupTafsiliLevel2sBindingSource.DataSource = q;
-                                else
-                                    epGroupTafsiliLevel2sBindingSource.DataSource = null;
-                            }
+                            var q1 = db.EpGroupTafsiliLevel2s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                            if (q1.Count > 0)
+                                epGroupTafsiliLevel2sBindingSource.DataSource = q1;
                             else
                                 epGroupTafsiliLevel2sBindingSource.DataSource = null;
-
-                            gridView2.Appearance.HeaderPanel.ForeColor = Color.Red;
-                            //gridView2.Appearance.Row.ForeColor = Color.Red;
-                            HelpClass1.ClearControls(panelControl2_2);
                         }
+                        //gridView2.Appearance.HeaderPanel.ForeColor = Color.Black;
+                        //gridView2.Appearance.Row.ForeColor = Color.Black;
+                        //else
+                        //{
+                        //    int _UserId = Convert.ToInt32(lblUserId.Text);
+                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
 
+                        //    if (q1.Count > 0)
+                        //    {
+                        //        if (q2.Count > 0)
+                        //        {
+                        //            q2.ForEach(item3 =>
+                        //            {
+                        //                q1.Remove(dataContext.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == item3));
+                        //            });
+                        //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
+                        //        }
+                        //        else
+                        //        {
+                        //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
+                        //        }
+                        //    }
+                        //    else
+                        //        epGroupTafsiliLevel1sBindingSource.DataSource = null;
+                        //}
                     }
-                    catch (Exception ex)
+                    else if (xtraTabControl1.SelectedTabPageIndex == 2)
                     {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                using (var dataContext = new MyContext())
-                {
-                    try
-                    {
-                        if (IsActiveList == true)
+                        if (lblUserId.Text == "1")
                         {
-                            var q1 = dataContext.EpGroupTafsiliLevel3s.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                            if (lblUserId.Text == "1")
-                            {
-                                if (q1.Count > 0)
-                                    epGroupTafsiliLevel3sBindingSource.DataSource = q1;
-                                else
-                                    epGroupTafsiliLevel3sBindingSource.DataSource = null;
-                            }
-                            gridView3.Appearance.HeaderPanel.ForeColor = Color.Black;
-                            //gridView3.Appearance.Row.ForeColor = Color.Black;
-                            HelpClass1.ClearControls(panelControl3_2);
-                            //else
-                            //{
-                            //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                            //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
-
-                            //    if (q1.Count > 0)
-                            //    {
-                            //        if (q2.Count > 0)
-                            //        {
-                            //            q2.ForEach(item3 =>
-                            //            {
-                            //                q1.Remove(dataContext.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == item3));
-                            //            });
-                            //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
-                            //        }
-                            //        else
-                            //        {
-                            //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
-                            //        }
-                            //    }
-                            //    else
-                            //        epGroupTafsiliLevel1sBindingSource.DataSource = null;
-                            //}
-                        }
-                        else
-                        {
-                            if (lblUserId.Text == "1")
-                            {
-                                var q = dataContext.EpGroupTafsiliLevel3s.Where(s => s.IsActive == false && s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                                if (q.Count > 0)
-                                    epGroupTafsiliLevel3sBindingSource.DataSource = q;
-                                else
-                                    epGroupTafsiliLevel3sBindingSource.DataSource = null;
-                            }
+                            var q1 = db.EpGroupTafsiliLevel3s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                            if (q1.Count > 0)
+                                epGroupTafsiliLevel3sBindingSource.DataSource = q1;
                             else
                                 epGroupTafsiliLevel3sBindingSource.DataSource = null;
-
-                            gridView3.Appearance.HeaderPanel.ForeColor = Color.Red;
-                            //gridView3.Appearance.Row.ForeColor = Color.Red;
-                            HelpClass1.ClearControls(panelControl3_2);
                         }
+                        //gridView3.Appearance.HeaderPanel.ForeColor = Color.Black;
+                        //gridView3.Appearance.Row.ForeColor = Color.Black;
+                        //else
+                        //{
+                        //    int _UserId = Convert.ToInt32(lblUserId.Text);
+                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
+
+                        //    if (q1.Count > 0)
+                        //    {
+                        //        if (q2.Count > 0)
+                        //        {
+                        //            q2.ForEach(item3 =>
+                        //            {
+                        //                q1.Remove(dataContext.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == item3));
+                        //            });
+                        //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
+                        //        }
+                        //        else
+                        //        {
+                        //            epGroupTafsiliLevel1sBindingSource.DataSource = q1;
+                        //        }
+                        //    }
+                        //    else
+                        //        epGroupTafsiliLevel1sBindingSource.DataSource = null;
+                        //}
+                    }
+                    else if (xtraTabControl1.SelectedTabPageIndex == 3)
+                    {
+                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId).ToList();
+                        if (q.Count > 0)
+                        {
+                            epAllGroupTafsilisBindingSource.DataSource = q;
+                            // treeListGroupTafsili.CollapseAll();
+                            // treeListCodingHesabdari.ExpandAll();
+                        }
+                        else
+                            epAllGroupTafsilisBindingSource.DataSource = null;
 
                     }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-
         public void FillcmbGruopLevel1()
         {
             using (var db = new MyContext())
@@ -247,19 +204,8 @@ namespace EtelaatePaye.CodingHesabdari
                     if (db.EpGroupTafsiliLevel1s.Any())
                     {
                         //int _SalId = Convert.ToInt32(lblSalId.Text);
-                        if (IsActiveList == true)
-                        {
-                            db.EpGroupTafsiliLevel1s.Where(s => s.IsActive == true && s.SalId == _SalId).OrderBy(s => s.Code).Load();
-                            epGroupTafsiliLevel1sBindingSource1.DataSource = db.EpGroupTafsiliLevel1s.Local.ToBindingList();
-                        }
-                        else
-                        {
-                            db.EpGroupTafsiliLevel1s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).Load();
-                            epGroupTafsiliLevel1sBindingSource1.DataSource = db.EpGroupTafsiliLevel1s.Local.ToBindingList();
-                        }
-
-                        //if (En != EnumCED.Edit)
-                        //    cmbGruopLevel1_2.EditValue = 0;
+                        db.EpGroupTafsiliLevel1s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).Load();
+                        epGroupTafsiliLevel1sBindingSource1.DataSource = db.EpGroupTafsiliLevel1s.Local.ToBindingList();
                     }
                 }
                 catch (Exception ex)
@@ -281,16 +227,8 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         //int _SalId = Convert.ToInt32(lblSalId.Text);
                         _Level1Id = Convert.ToInt32(cmbGruopLevel1_3.EditValue);
-                        if (IsActiveList == true)
-                        {
-                            db.EpGroupTafsiliLevel2s.Where(s => s.IsActive == true && s.Level1Id == _Level1Id && s.SalId == _SalId).OrderBy(s => s.Code).Load();
-                            epGroupTafsiliLevel2sBindingSource.DataSource = db.EpGroupTafsiliLevel2s.Local.ToBindingList();
-                        }
-                        else
-                        {
-                            db.EpGroupTafsiliLevel2s.Where(s => s.Level1Id == _Level1Id && s.SalId == _SalId).OrderBy(s => s.Code).Load();
-                            epGroupTafsiliLevel2sBindingSource.DataSource = db.EpGroupTafsiliLevel2s.Local.ToBindingList();
-                        }
+                        db.EpGroupTafsiliLevel2s.Where(s => s.Level1Id == _Level1Id && s.SalId == _SalId).OrderBy(s => s.Code).Load();
+                        epGroupTafsiliLevel2sBindingSource.DataSource = db.EpGroupTafsiliLevel2s.Local.ToBindingList();
                     }
                 }
                 catch (Exception ex)
@@ -304,11 +242,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnNewCode_Click(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            using (var db = new MyContext())
             {
-                using (var db = new MyContext())
+                try
                 {
-                    try
+                    if (xtraTabControl1.SelectedTabPageIndex == 0)
                     {
                         var q = db.EpGroupTafsiliLevel1s.Where(s => s.SalId == _SalId).ToList();
                         if (q.Count > 0)
@@ -327,17 +265,7 @@ namespace EtelaatePaye.CodingHesabdari
                             txtCode_1.Text = _GroupTafsiliLevel1MinCode;
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                using (var db = new MyContext())
-                {
-                    try
+                    else if (xtraTabControl1.SelectedTabPageIndex == 1)
                     {
                         _Level1Id = Convert.ToInt32(cmbGruopLevel1_2.EditValue);
                         var q = db.EpGroupTafsiliLevel2s.Where(s => s.Level1Id == _Level1Id && s.SalId == _SalId).ToList();
@@ -357,17 +285,7 @@ namespace EtelaatePaye.CodingHesabdari
                             txtCode_2.Text = _GroupTafsiliLevel2MinCode;
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                using (var db = new MyContext())
-                {
-                    try
+                    else if (xtraTabControl1.SelectedTabPageIndex == 2)
                     {
                         _Level2Id = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
                         var q = db.EpGroupTafsiliLevel3s.Where(s => s.Level2Id == _Level2Id && s.SalId == _SalId).ToList();
@@ -387,35 +305,19 @@ namespace EtelaatePaye.CodingHesabdari
                             txtCode_3.Text = _GroupTafsiliLevel3MinCode;
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-        string CodeBeforeEdit = "";
-        string NameBeforeEdit = "";
-        bool IsActiveBeforeEdit = true;
-        int Level1IdBeforeEdit = 0;
-        int Level2IdBeforeEdit = 0;
-        int _SalId = 0;
-        int _GroupTafsiliLevel1Carakter = 0;
-        int _GroupTafsiliLevel2Carakter = 0;
-        int _GroupTafsiliLevel3Carakter = 0;
-        int _CodeTafsiliCarakter = 0;
-        string _GroupTafsiliLevel1MinCode = "";
-        string _GroupTafsiliLevel1MaxCode = "";
-        string _GroupTafsiliLevel2MinCode = "";
-        string _GroupTafsiliLevel2MaxCode = "";
-        string _GroupTafsiliLevel3MinCode = "";
-        string _GroupTafsiliLevel3MaxCode = "";
-        string _CodeTafsiliMinCode = "";
-        string _CodeTafsiliMaxCode = "";
         private void FrmGroupTafsili_Load(object sender, EventArgs e)
         {
             _SalId = Convert.ToInt32(lblSalId.Text);
+            En = EnumCED.None;
+            treeList = EnumTreeList.CollapseAll;
             FillGridviewGroupTafsili();
             btnCreate.Focus();
             using (var db = new MyContext())
@@ -485,44 +387,45 @@ namespace EtelaatePaye.CodingHesabdari
             this.Close();
         }
 
-        string _Name = "";
-        int _Code = 0;
-        int _CodeLevel = 0;
-        bool _IsActive = true;
-        string _SharhHesab = "";
-        int _StartCode = 0;
-        int _EndCode = 0;
-        int _Level1Id = 0;
-        int _Level2Id = 0;
-        int _LevelNamber = 0;
         private bool TextEditValidation()
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            using (var db = new MyContext())
             {
-                _Name = txtName_1.Text.Trim();
-                _Code = Convert.ToInt32(txtCode_1.Text);
-                _IsActive = chkIsActive_1.Checked;
-                _SharhHesab = txtSharhHesab_1.Text;
-                _StartCode = Convert.ToInt32(txtStartCode_1.Text);
-                _EndCode = Convert.ToInt32(txtEndCode_1.Text);
-                _LevelNamber = 1;
-                ///////////////// اعتبار سنجی کد ////////////////////////////////////
-                if (string.IsNullOrEmpty(_Code.ToString()))
+                try
                 {
-                    XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-                else if (_Code < Convert.ToInt32(_GroupTafsiliLevel1MinCode) || _Code > Convert.ToInt32(_GroupTafsiliLevel1MaxCode))
-                {
-                    XtraMessageBox.Show("کد وارده بایستی عددی از " + _GroupTafsiliLevel1MinCode + " تا " + _GroupTafsiliLevel1MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtCode_1.Focus();
-                    return false;
-                }
-                else
-                {
-                    using (var db = new MyContext())
+                    if (xtraTabControl1.SelectedTabPageIndex == 0)
                     {
-                        try
+                        _Name = txtName_1.Text.Trim();
+                        _Code = Convert.ToInt32(txtCode_1.Text);
+                        _IsActive = chkIsActive_1.Checked;
+                        _SharhHesab = txtSharhHesab_1.Text;
+                        _StartCode = txtStartCode_1.Text != "" ? Convert.ToInt32(txtStartCode_1.Text) : 0;
+                        _EndCode = txtEndCode_1.Text != "" ? Convert.ToInt32(txtEndCode_1.Text) : 0;
+                        _LevelNamber = 1;
+                        ///////////////// اعتبار سنجی کد ////////////////////////////////////
+                        if (cmbTabaghehGroup.SelectedIndex == -1)
+                        {
+                            XtraMessageBox.Show("لطفاً طبقه گروه را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmbTabaghehGroup.Focus();
+                            return false;
+                        }
+                        else if (string.IsNullOrEmpty(_Code.ToString()))
+                        {
+                            XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                        else if (_Code < Convert.ToInt32(_GroupTafsiliLevel1MinCode) || _Code > Convert.ToInt32(_GroupTafsiliLevel1MaxCode))
+                        {
+                            XtraMessageBox.Show("کد وارده بایستی عددی از " + _GroupTafsiliLevel1MinCode + " تا " + _GroupTafsiliLevel1MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtCode_1.Focus();
+                            return false;
+                        }
+                        else if (string.IsNullOrEmpty(_Name) || _Name == "0")
+                        {
+                            XtraMessageBox.Show("لطفاً نام حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                        else
                         {
                             if (En == EnumCED.Create)
                             {
@@ -535,63 +438,11 @@ namespace EtelaatePaye.CodingHesabdari
                                         btnNewCode_Click(null, null);
                                         return false;
                                     }
-                                }
-                            }
-                            else if (En == EnumCED.Edit)
-                            {
-                                int _RowId = Convert.ToInt32(txtId_1.Text);
-                                var q1 = db.EpGroupTafsiliLevel1s.Where(s => s.Id != _RowId && s.Code == _Code && s.SalId == _SalId);
-                                //var q2 = db.REpHesabMoinBEpGroupTafsiliLevel1s.FirstOrDefault(s => s.GroupTafsiliId == _RowId);
-                                //var q3 = db.EpAllHesabTafsilis.FirstOrDefault(s => s.GroupTafsiliId == _RowId);
-                                //if (q2 != null && txtCode_1.Text != CodeBeforeEdit)
-                                //{
-                                //    XtraMessageBox.Show("کد گروه تفصیلی فوق قابل ویرایش نیست زیرا با حساب معین ارتباط دارد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //    txtCode_1.Text = CodeBeforeEdit;
-                                //    return false;
-                                //}
-                                //if (q3 != null && txtCode_1.Text != CodeBeforeEdit)
-                                //{
-                                //    XtraMessageBox.Show("کد گروه تفصیلی فوق قابل ویرایش نیست زیرا با گروه فوق ، حساب تفصیلی تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //    txtCode_1.Text = CodeBeforeEdit;
-                                //    return false;
-                                //}
-                                if (q1.Any())
-                                {
-                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    txtCode_1.Text = CodeBeforeEdit;
-                                    return false;
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-
-                }
-
-                //////////////// اعتبار سنجی تکس باکس///////////////////////////////
-
-                if (string.IsNullOrEmpty(_Name) || _Name == "0")
-                {
-                    XtraMessageBox.Show("لطفاً نام حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-                else
-                {
-                    using (var db = new MyContext())
-                    {
-                        try
-                        {
-                            if (En == EnumCED.Create)
-                            {
-                                if (db.EpGroupTafsiliLevel1s.Any())
-                                {
                                     var q2 = db.EpGroupTafsiliLevel1s.Where(s => s.Name == _Name && s.SalId == _SalId);
                                     if (q2.Any())
                                     {
                                         XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        txtName_1.Focus();
                                         return false;
                                     }
                                 }
@@ -599,52 +450,60 @@ namespace EtelaatePaye.CodingHesabdari
                             else if (En == EnumCED.Edit)
                             {
                                 int _RowId = Convert.ToInt32(txtId_1.Text);
+                                var q1 = db.EpGroupTafsiliLevel1s.Where(s => s.Id != _RowId && s.Code == _Code && s.SalId == _SalId);
+                                if (q1.Any())
+                                {
+                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtCode_1.Text = CodeBeforeEdit.ToString();
+                                    return false;
+                                }
                                 var q2 = db.EpGroupTafsiliLevel1s.Where(s => s.Id != _RowId && s.Name == _Name && s.SalId == _SalId);
                                 if (q2.Any())
                                 {
                                     XtraMessageBox.Show("این نام قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    //txtName.Text = nameBeforeEdit;
+                                    txtName_1.Focus();
                                     return false;
                                 }
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
                         }
                     }
-
-                }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                _Name = txtName_2.Text.Trim();
-                _Code = Convert.ToInt32(txtCodeLevel1.Text + txtCode_2.Text);
-                _CodeLevel = Convert.ToInt32(txtCodeLevel1.Text);
-                _IsActive = chkIsActive_2.Checked;
-                _SharhHesab = txtSharhHesab_2.Text;
-                _StartCode = Convert.ToInt32(txtStartCode_2.Text);
-                _EndCode = Convert.ToInt32(txtEndCode_2.Text);
-                _Level1Id = Convert.ToInt32(cmbGruopLevel1_2.EditValue);
-                _LevelNamber = 2;
-                ///////////////// اعتبار سنجی کد ////////////////////////////////////
-                if (string.IsNullOrEmpty(txtCode_2.Text) || string.IsNullOrEmpty(_CodeLevel.ToString()))
-                {
-                    XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-                else if (Convert.ToInt32(txtCode_2.Text) < Convert.ToInt32(_GroupTafsiliLevel2MinCode) || Convert.ToInt32(txtCode_2.Text) > Convert.ToInt32(_GroupTafsiliLevel2MaxCode))
-                {
-                    XtraMessageBox.Show("کد وارده بایستی عددی از " + _GroupTafsiliLevel2MinCode + " تا " + _GroupTafsiliLevel2MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtCode_2.Focus();
-                    return false;
-                }
-                else
-                {
-                    using (var db = new MyContext())
+                    else if (xtraTabControl1.SelectedTabPageIndex == 1)
                     {
-                        try
+                        _Name = txtName_2.Text.Trim();
+                        _Code = txtCodeLevel1.Text != "" && txtCode_2.Text != "" ? Convert.ToInt32(txtCodeLevel1.Text + txtCode_2.Text) : 0;
+                        _CodeLevel = txtCodeLevel1.Text != "" ? Convert.ToInt32(txtCodeLevel1.Text) : 0;
+                        _IsActive = chkIsActive_2.Checked;
+                        _SharhHesab = txtSharhHesab_2.Text;
+                        _StartCode = txtStartCode_2.Text != "" ? Convert.ToInt32(txtStartCode_2.Text) : 0;
+                        _EndCode = txtEndCode_2.Text != "" ? Convert.ToInt32(txtEndCode_2.Text) : 0;
+                        _Level1Id = Convert.ToInt32(cmbGruopLevel1_2.EditValue);
+                        _LevelNamber = 2;
+                        ///////////////// اعتبار سنجی کد ////////////////////////////////////
+                        if (_Level1Id == 0)
+                        {
+                            XtraMessageBox.Show("لطفاً گروه سطح 1 را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmbGruopLevel1_2.Focus();
+                            return false;
+                        }
+                        else if (string.IsNullOrEmpty(txtCode_2.Text) || string.IsNullOrEmpty(_CodeLevel.ToString()))
+                        {
+                            XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                        else if (Convert.ToInt32(txtCode_2.Text) < Convert.ToInt32(_GroupTafsiliLevel2MinCode) || Convert.ToInt32(txtCode_2.Text) > Convert.ToInt32(_GroupTafsiliLevel2MaxCode))
+                        {
+                            XtraMessageBox.Show("کد وارده بایستی عددی از " + _GroupTafsiliLevel2MinCode + " تا " + _GroupTafsiliLevel2MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtCode_2.Focus();
+                            return false;
+                        }
+                        else if (string.IsNullOrEmpty(_Name) || _Name == "0")
+                        {
+                            XtraMessageBox.Show("لطفاً نام حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                        else
                         {
                             if (En == EnumCED.Create)
                             {
@@ -657,59 +516,6 @@ namespace EtelaatePaye.CodingHesabdari
                                         btnNewCode_Click(null, null);
                                         return false;
                                     }
-                                }
-                            }
-                            else if (En == EnumCED.Edit)
-                            {
-                                int _RowId = Convert.ToInt32(txtId_2.Text);
-                                var q1 = db.EpGroupTafsiliLevel2s.Where(s => s.Id != _RowId && s.Code == _Code && s.SalId == _SalId);
-                                //var q2 = db.REpHesabMoinBEpGroupTafsiliLevel2s.FirstOrDefault(s => s.GroupTafsiliId == _RowId);
-                                //var q3 = db.EpAllHesabTafsilis.FirstOrDefault(s => s.GroupTafsiliId == _RowId);
-                                //if (q2 != null && txtCode_1.Text != CodeBeforeEdit)
-                                //{
-                                //    XtraMessageBox.Show("کد گروه تفصیلی فوق قابل ویرایش نیست زیرا با حساب معین ارتباط دارد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //    txtCode_1.Text = CodeBeforeEdit;
-                                //    return false;
-                                //}
-                                //if (q3 != null && txtCode_1.Text != CodeBeforeEdit)
-                                //{
-                                //    XtraMessageBox.Show("کد گروه تفصیلی فوق قابل ویرایش نیست زیرا با گروه فوق ، حساب تفصیلی تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //    txtCode_1.Text = CodeBeforeEdit;
-                                //    return false;
-                                //}
-                                if (q1.Any())
-                                {
-                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    txtCode_2.Text = CodeBeforeEdit.Substring(_GroupTafsiliLevel1Carakter);
-                                    return false;
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-
-                }
-
-                //////////////// اعتبار سنجی تکس باکس///////////////////////////////
-
-                if (string.IsNullOrEmpty(_Name) || _Name == "0")
-                {
-                    XtraMessageBox.Show("لطفاً نام حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-                else
-                {
-                    using (var db = new MyContext())
-                    {
-                        try
-                        {
-                            if (En == EnumCED.Create)
-                            {
-                                if (db.EpGroupTafsiliLevel2s.Any())
-                                {
                                     var q2 = db.EpGroupTafsiliLevel2s.Where(s => s.Name == _Name && s.SalId == _SalId);
                                     if (q2.Any())
                                     {
@@ -721,6 +527,13 @@ namespace EtelaatePaye.CodingHesabdari
                             else if (En == EnumCED.Edit)
                             {
                                 int _RowId = Convert.ToInt32(txtId_2.Text);
+                                var q1 = db.EpGroupTafsiliLevel2s.Where(s => s.Id != _RowId && s.Code == _Code && s.SalId == _SalId);
+                                if (q1.Any())
+                                {
+                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtCode_2.Text = CodeBeforeEdit.ToString().Substring(_GroupTafsiliLevel1Carakter);
+                                    return false;
+                                }
                                 var q2 = db.EpGroupTafsiliLevel2s.Where(s => s.Id != _RowId && s.Name == _Name && s.SalId == _SalId);
                                 if (q2.Any())
                                 {
@@ -730,44 +543,49 @@ namespace EtelaatePaye.CodingHesabdari
                                 }
                             }
                         }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
                     }
-
-                }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                _Name = txtName_3.Text.Trim();
-                _Code = Convert.ToInt32(txtCodeLevel2.Text + txtCode_3.Text);
-                _CodeLevel = Convert.ToInt32(txtCodeLevel2.Text);
-                _IsActive = chkIsActive_3.Checked;
-                _SharhHesab = txtSharhHesab_3.Text;
-                _StartCode = Convert.ToInt32(txtStartCode_3.Text);
-                _EndCode = Convert.ToInt32(txtEndCode_3.Text);
-                _Level1Id = Convert.ToInt32(cmbGruopLevel1_3.EditValue);
-                _Level2Id = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
-                _LevelNamber = 3;
-                ///////////////// اعتبار سنجی کد ////////////////////////////////////
-                if (string.IsNullOrEmpty(txtCode_3.Text) || string.IsNullOrEmpty(_CodeLevel.ToString()))
-                {
-                    XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-                else if (Convert.ToInt32(txtCode_3.Text) < Convert.ToInt32(_GroupTafsiliLevel3MinCode) || Convert.ToInt32(txtCode_3.Text) > Convert.ToInt32(_GroupTafsiliLevel3MaxCode))
-                {
-                    XtraMessageBox.Show("کد وارده بایستی عددی از " + _GroupTafsiliLevel3MinCode + " تا " + _GroupTafsiliLevel3MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtCode_3.Focus();
-                    return false;
-                }
-                else
-                {
-                    using (var db = new MyContext())
+                    else if (xtraTabControl1.SelectedTabPageIndex == 2)
                     {
-                        try
+                        _Name = txtName_3.Text.Trim();
+                        _Code = txtCodeLevel2.Text != "" && txtCode_3.Text != "" ? Convert.ToInt32(txtCodeLevel2.Text + txtCode_3.Text) : 0;
+                        _CodeLevel = txtCodeLevel2.Text != "" ? Convert.ToInt32(txtCodeLevel2.Text) : 0;
+                        _IsActive = chkIsActive_3.Checked;
+                        _SharhHesab = txtSharhHesab_3.Text;
+                        _StartCode = txtStartCode_3.Text != "" ? Convert.ToInt32(txtStartCode_3.Text) : 0;
+                        _EndCode = txtEndCode_3.Text != "" ? Convert.ToInt32(txtEndCode_3.Text) : 0;
+                        _Level1Id = Convert.ToInt32(cmbGruopLevel1_3.EditValue);
+                        _Level2Id = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
+                        _LevelNamber = 3;
+                        ///////////////// اعتبار سنجی کد ////////////////////////////////////
+                        if (_Level1Id == 0)
+                        {
+                            XtraMessageBox.Show("لطفاً گروه سطح 1 را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmbGruopLevel1_3.Focus();
+                            return false;
+                        }
+                        else if (_Level2Id == 0)
+                        {
+                            XtraMessageBox.Show("لطفاً گروه سطح 2 را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmbGruopLevel2_3.Focus();
+                            return false;
+                        }
+                        else if (string.IsNullOrEmpty(txtCode_3.Text) || string.IsNullOrEmpty(_CodeLevel.ToString()))
+                        {
+                            XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                        else if (Convert.ToInt32(txtCode_3.Text) < Convert.ToInt32(_GroupTafsiliLevel3MinCode) || Convert.ToInt32(txtCode_3.Text) > Convert.ToInt32(_GroupTafsiliLevel3MaxCode))
+                        {
+                            XtraMessageBox.Show("کد وارده بایستی عددی از " + _GroupTafsiliLevel3MinCode + " تا " + _GroupTafsiliLevel3MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtCode_3.Focus();
+                            return false;
+                        }
+                        else if (string.IsNullOrEmpty(_Name) || _Name == "0")
+                        {
+                            XtraMessageBox.Show("لطفاً نام حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                        else
                         {
                             if (En == EnumCED.Create)
                             {
@@ -780,59 +598,6 @@ namespace EtelaatePaye.CodingHesabdari
                                         btnNewCode_Click(null, null);
                                         return false;
                                     }
-                                }
-                            }
-                            else if (En == EnumCED.Edit)
-                            {
-                                int _RowId = Convert.ToInt32(txtId_3.Text);
-                                var q1 = db.EpGroupTafsiliLevel3s.Where(s => s.Id != _RowId && s.Code == _Code && s.SalId == _SalId);
-                                //var q2 = db.REpHesabMoinBEpGroupTafsiliLevel1s.FirstOrDefault(s => s.GroupTafsiliId == _RowId);
-                                // var q3 = db.EpAllHesabTafsilis.FirstOrDefault(s => s.GroupTafsiliId == _RowId);
-                                //if (q2 != null && txtCode_1.Text != CodeBeforeEdit)
-                                //{
-                                //    XtraMessageBox.Show("کد گروه تفصیلی فوق قابل ویرایش نیست زیرا با حساب معین ارتباط دارد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //    txtCode_1.Text = CodeBeforeEdit;
-                                //    return false;
-                                //}
-                                //if (q3 != null && txtCode_1.Text != CodeBeforeEdit)
-                                //{
-                                //    XtraMessageBox.Show("کد گروه تفصیلی فوق قابل ویرایش نیست زیرا با گروه فوق ، حساب تفصیلی تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //    txtCode_1.Text = CodeBeforeEdit;
-                                //    return false;
-                                //}
-                                if (q1.Any())
-                                {
-                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    txtCode_3.Text = CodeBeforeEdit.Substring(_GroupTafsiliLevel1Carakter+_GroupTafsiliLevel2Carakter);
-                                    return false;
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-
-                }
-
-                //////////////// اعتبار سنجی تکس باکس///////////////////////////////
-
-                if (string.IsNullOrEmpty(_Name) || _Name == "0")
-                {
-                    XtraMessageBox.Show("لطفاً نام حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-                else
-                {
-                    using (var db = new MyContext())
-                    {
-                        try
-                        {
-                            if (En == EnumCED.Create)
-                            {
-                                if (db.EpGroupTafsiliLevel3s.Any())
-                                {
                                     var q2 = db.EpGroupTafsiliLevel3s.Where(s => s.Name == _Name && s.SalId == _SalId);
                                     if (q2.Any())
                                     {
@@ -844,6 +609,13 @@ namespace EtelaatePaye.CodingHesabdari
                             else if (En == EnumCED.Edit)
                             {
                                 int _RowId = Convert.ToInt32(txtId_3.Text);
+                                var q1 = db.EpGroupTafsiliLevel3s.Where(s => s.Id != _RowId && s.Code == _Code && s.SalId == _SalId);
+                                if (q1.Any())
+                                {
+                                    XtraMessageBox.Show("این کد قبلاً تعریف شده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    txtCode_3.Text = CodeBeforeEdit.ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
+                                    return false;
+                                }
                                 var q2 = db.EpGroupTafsiliLevel3s.Where(s => s.Id != _RowId && s.Name == _Name && s.SalId == _SalId);
                                 if (q2.Any())
                                 {
@@ -853,17 +625,14 @@ namespace EtelaatePaye.CodingHesabdari
                                 }
                             }
                         }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
                     }
-
                 }
-
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                return true;
             }
-
-            return true;
         }
 
         private void FrmGroupTafsili_KeyDown(object sender, KeyEventArgs e)
@@ -894,11 +663,7 @@ namespace EtelaatePaye.CodingHesabdari
             }
             else if (e.KeyCode == Keys.F8)
             {
-                btnDisplyActiveList_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F9)
-            {
-                btnDisplyNotActiveList_Click(sender, null);
+                btnDisplyList_Click(sender, null);
             }
             else if (e.KeyCode == Keys.F10)
             {
@@ -992,34 +757,52 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnPrintPreview_Click(object sender, EventArgs e)
         {
+            if (btnPrintPreview.Visible)
+            {
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
+                {
+                    HelpClass1.PrintPreview(gridControl1, gridView1);
+                }
+                else if (xtraTabControl1.SelectedTabPageIndex == 1)
+                {
+                    HelpClass1.PrintPreview(gridControl2, gridView2);
+                }
+                else if (xtraTabControl1.SelectedTabPageIndex == 2)
+                {
+                    HelpClass1.PrintPreview(gridControl3, gridView3);
+                }
+
+            }
+        }
+
+        public void btnDisplyList_Click(object sender, EventArgs e)
+        {
+            FillGridviewGroupTafsili();
             if (xtraTabControl1.SelectedTabPageIndex == 0)
             {
-                if (btnPrintPreview.Visible)
-                    HelpClass1.PrintPreview(gridControl1, gridView1);
+                HelpClass1.ClearControls(panelControl1_2);
             }
             else if (xtraTabControl1.SelectedTabPageIndex == 1)
             {
-                if (btnPrintPreview.Visible)
-                    HelpClass1.PrintPreview(gridControl2, gridView2);
+                HelpClass1.ClearControls(panelControl2_2);
             }
             else if (xtraTabControl1.SelectedTabPageIndex == 2)
             {
-                if (btnPrintPreview.Visible)
-                    HelpClass1.PrintPreview(gridControl3, gridView3);
+                HelpClass1.ClearControls(panelControl3_2);
             }
-        }
-
-        public void btnDisplyActiveList_Click(object sender, EventArgs e)
-        {
-            IsActiveList = true;
-            FillGridviewGroupTafsili();
-        }
-
-        public void btnDisplyNotActiveList_Click(object sender, EventArgs e)
-        {
-            IsActiveList = false;
-            FillGridviewGroupTafsili();
-            FillcmbGruopLevel1();
+            //else if (xtraTabControl1.SelectedTabPageIndex == 3)
+            //{
+            //    if (treeList == EnumTreeList.CollapseAll)
+            //    {
+            //        treeListGroupTafsili.CollapseAll();
+            //        treeList = EnumTreeList.ExpandAll;
+            //    }
+            //    else
+            //    {
+            //        treeListGroupTafsili.ExpandAll();
+            //        treeList = EnumTreeList.CollapseAll;
+            //    }
+            //}
         }
 
         private void gridView_KeyPress(object sender, KeyPressEventArgs e)
@@ -1037,11 +820,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            if (btnCreate.Visible)
             {
-                if (btnCreate.Visible)
+                En = EnumCED.Create;
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
                 {
-                    En = EnumCED.Create;
                     gridControl1.Enabled = false;
                     HelpClass1.InActiveButtons(panelControl);
                     HelpClass1.ClearControls(panelControl1_2);
@@ -1051,14 +834,10 @@ namespace EtelaatePaye.CodingHesabdari
                     btnNewCode_Click(null, null);
                     chkEditCode_1.Checked = false;
                     chkIsActive_1.Checked = true;
-                    txtName_1.Focus();
+                    cmbTabaghehGroup.Focus();
                 }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                if (btnCreate.Visible)
+                else if (xtraTabControl1.SelectedTabPageIndex == 1)
                 {
-                    En = EnumCED.Create;
                     gridControl2.Enabled = false;
                     HelpClass1.InActiveButtons(panelControl);
                     HelpClass1.ClearControls(panelControl2_2);
@@ -1070,12 +849,8 @@ namespace EtelaatePaye.CodingHesabdari
                     chkIsActive_2.Checked = true;
                     cmbGruopLevel1_2.Focus();
                 }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                if (btnCreate.Visible)
+                else if (xtraTabControl1.SelectedTabPageIndex == 2)
                 {
-                    En = EnumCED.Create;
                     gridControl3.Enabled = false;
                     HelpClass1.InActiveButtons(panelControl);
                     HelpClass1.ClearControls(panelControl3_2);
@@ -1092,20 +867,27 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            if (btnDelete.Visible)
             {
-                if (btnDelete.Visible)
+                using (var db = new MyContext())
                 {
-                    if (gridView1.RowCount > 0)
+                    try
                     {
-                        if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        // En = EnumCED.Delete;
+                        if (xtraTabControl1.SelectedTabPageIndex == 0)
                         {
-                            IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
-                            EditRowIndex = gridView1.FocusedRowHandle;
-                            using (var db = new MyContext())
+                            if (gridView1.RowCount > 0)
                             {
-                                try
+                                string _NameGroup = gridView1.GetFocusedRowCellDisplayText("Name");
+                                if (_NameGroup == "سایر")
                                 {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا حذف نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                                {
+                                    IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                                    EditRowIndex = gridView1.FocusedRowHandle;
                                     int _RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
                                     //var q = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _RowId && s.SalId == _SalId);
                                     var q8 = db.EpAllGroupTafsilis.FirstOrDefault(s => s.Id == _RowId && s.SalId == _SalId);
@@ -1116,50 +898,30 @@ namespace EtelaatePaye.CodingHesabdari
                                         db.SaveChanges();
 
 
-                                        if (IsActiveBeforeEdit)
-                                            btnDisplyActiveList_Click(null, null);
-                                        else
-                                            btnDisplyNotActiveList_Click(null, null);
+                                        btnDisplyList_Click(null, null);
                                         // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView1.RowCount > 0)
                                             gridView1.FocusedRowHandle = EditRowIndex - 1;
-                                        HelpClass1.ClearControls(panelControl1_2);
                                     }
                                     else
                                         XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                                catch (DbUpdateException)
-                                {
-                                    XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
-                                        " جهت حذف حساب گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این حساب با\n" +
-                                        " حسابهای معین ، گروه تفضیلی سطح 2 و 3 و حسابهای تفضیلی حذف گردد" +
-                                        "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
                             }
                         }
-                    }
-
-                }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                if (btnDelete.Visible)
-                {
-                    if (gridView2.RowCount > 0)
-                    {
-                        if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        else if (xtraTabControl1.SelectedTabPageIndex == 1)
                         {
-                            IsActiveBeforeEdit = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
-                            EditRowIndex = gridView2.FocusedRowHandle;
-                            using (var db = new MyContext())
+                            if (gridView2.RowCount > 0)
                             {
-                                try
+                                string _NameGroup = gridView2.GetFocusedRowCellDisplayText("Name");
+                                if (_NameGroup == "سایر")
                                 {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا حذف نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                                {
+                                    IsActiveBeforeEdit = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
+                                    EditRowIndex = gridView2.FocusedRowHandle;
                                     int _RowId = Convert.ToInt32(gridView2.GetFocusedRowCellValue("Id").ToString());
                                     // var q = db.EpGroupTafsiliLevel2s.FirstOrDefault(s => s.Id == _RowId);
                                     var q8 = db.EpAllGroupTafsilis.FirstOrDefault(s => s.Id == _RowId && s.SalId == _SalId);
@@ -1169,51 +931,30 @@ namespace EtelaatePaye.CodingHesabdari
                                         /////////////////////////////////////////////////////////////////////////////
                                         db.SaveChanges();
 
-
-                                        if (IsActiveBeforeEdit)
-                                            btnDisplyActiveList_Click(null, null);
-                                        else
-                                            btnDisplyNotActiveList_Click(null, null);
+                                        btnDisplyList_Click(null, null);
                                         // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView2.RowCount > 0)
                                             gridView2.FocusedRowHandle = EditRowIndex - 1;
-                                        HelpClass1.ClearControls(panelControl2_2);
                                     }
                                     else
                                         XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                                catch (DbUpdateException)
-                                {
-                                    XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
-                                        " جهت حذف حساب گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این حساب با\n" +
-                                        " حسابهای معین ، گروه تفضیلی سطح 3 و حسابهای تفضیلی حذف گردد" +
-                                        "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
                             }
                         }
-                    }
-
-                }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                if (btnDelete.Visible)
-                {
-                    if (gridView3.RowCount > 0)
-                    {
-                        if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        else if (xtraTabControl1.SelectedTabPageIndex == 2)
                         {
-                            IsActiveBeforeEdit = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
-                            EditRowIndex = gridView3.FocusedRowHandle;
-                            using (var db = new MyContext())
+                            if (gridView3.RowCount > 0)
                             {
-                                try
+                                string _NameGroup = gridView3.GetFocusedRowCellDisplayText("Name");
+                                if (_NameGroup == "سایر")
                                 {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا حذف نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                               else if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                                {
+                                    IsActiveBeforeEdit = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
+                                    EditRowIndex = gridView3.FocusedRowHandle;
                                     int _RowId = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Id").ToString());
                                     // var q = db.EpGroupTafsiliLevel3s.FirstOrDefault(s => s.Id == _RowId);
                                     var q8 = db.EpAllGroupTafsilis.FirstOrDefault(s => s.Id == _RowId && s.SalId == _SalId);
@@ -1222,162 +963,274 @@ namespace EtelaatePaye.CodingHesabdari
                                         db.EpAllGroupTafsilis.Remove(q8);
                                         /////////////////////////////////////////////////////////////////////////////
                                         db.SaveChanges();
-
-
-                                        if (IsActiveBeforeEdit)
-                                            btnDisplyActiveList_Click(null, null);
-                                        else
-                                            btnDisplyNotActiveList_Click(null, null);
+                                        btnDisplyList_Click(null, null);
                                         // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView3.RowCount > 0)
                                             gridView3.FocusedRowHandle = EditRowIndex - 1;
-                                        HelpClass1.ClearControls(panelControl3_2);
                                     }
                                     else
                                         XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                                catch (DbUpdateException)
-                                {
-                                    XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
-                                        " جهت حذف حساب گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این حساب با\n" +
-                                        " حسابهای معین و حسابهای تفضیلی حذف گردد" +
-                                        "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
                             }
                         }
                     }
-
+                    catch (DbUpdateException)
+                    {
+                        if (xtraTabControl1.SelectedTabPageIndex == 0)
+                        {
+                            XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
+                                " جهت حذف گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
+                                " حسابهای معین ، گروه تفضیلی سطح 2 و 3 و حسابهای تفضیلی حذف گردد" +
+                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else if (xtraTabControl1.SelectedTabPageIndex == 1)
+                        {
+                            XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
+                                " جهت حذف گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
+                                " حسابهای معین ، گروه تفضیلی سطح 3 و حسابهای تفضیلی حذف گردد" +
+                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else if (xtraTabControl1.SelectedTabPageIndex == 2)
+                        {
+                            XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
+                                " جهت حذف گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
+                                " حسابهای معین و حسابهای تفضیلی حذف گردد" +
+                                "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
             }
         }
 
-        public int EditRowIndex = 0;
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            if (btnEdit.Visible)
             {
-                if (btnEdit.Visible)
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
                 {
                     if (gridView1.RowCount > 0)
                     {
-                        gridControl1.Enabled = false;
-                        EditRowIndex = gridView1.FocusedRowHandle;
-                        En = EnumCED.Edit;
-                        HelpClass1.InActiveButtons(panelControl);
-                        HelpClass1.ActiveControls(panelControl1_2);
+                        using (var db = new MyContext())
+                        {
+                            try
+                            {
+                                _SalId = Convert.ToInt32(lblSalId.Text);
+                                int _RowId = Convert.ToInt32(txtId_1.Text);
+                                string _NameGroup = gridView1.GetFocusedRowCellDisplayText("Name");
+                                if (_NameGroup == "سایر")
+                                {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.EpAllHesabTafsilis.Any(s => s.GroupTafsiliId == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show("با گروه تفصیلی فوق ، حساب تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.EpGroupTafsiliLevel2s.Any(s => s.Level1Id == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show("با گروه تفصیلی فوق در سطح دوم گروه تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.REpHesabMoinBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else
+                                {
+                                    //cmbTabaghehGroup.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("TabaghehIndex").ToString());
+                                    //txtId_1.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                                    //txtCode_1.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
+                                    //txtName_1.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                                    //chkIsActive_1.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                                    //txtSharhHesab_1.Text = gridView1.GetFocusedRowCellValue("SharhHesab") != null ? gridView1.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                                    En = EnumCED.Edit;
+                                    gridControl1.Enabled = false;
+                                    EditRowIndex = gridView1.FocusedRowHandle;
+                                    HelpClass1.InActiveButtons(panelControl);
+                                    HelpClass1.ActiveControls(panelControl1_2);
 
+                                    CodeBeforeEdit = Convert.ToInt32(txtCode_1.Text);
+                                    NameBeforeEdit = txtName_1.Text.Trim();
+                                    IsActiveBeforeEdit = chkIsActive_1.Checked;
+                                    //if (txtCode.Text == "9")
+                                    //    btnNewCode.Enabled = false;
+                                    chkEditCode_1.Checked = false;
+                                    cmbTabaghehGroup.Focus();
+                                }
 
-                        txtId_1.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                        txtCode_1.Text = gridView1.GetFocusedRowCellValue("Code").ToString();
-                        txtName_1.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
-                        chkIsActive_1.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
-                        txtSharhHesab_1.Text = gridView1.GetFocusedRowCellValue("SharhHesab") != null ? gridView1.GetFocusedRowCellValue("SharhHesab").ToString() : "";
-
-                        CodeBeforeEdit = txtCode_1.Text;
-                        NameBeforeEdit = txtName_1.Text.Trim();
-                        IsActiveBeforeEdit = chkIsActive_1.Checked;
-                        //if (txtCode.Text == "9")
-                        //    btnNewCode.Enabled = false;
-                        chkEditCode_1.Checked = false;
-                        txtName_1.Focus();
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
-
                 }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                if (btnEdit.Visible)
+                else if (xtraTabControl1.SelectedTabPageIndex == 1)
                 {
                     if (gridView2.RowCount > 0)
                     {
-                        gridControl2.Enabled = false;
-                        EditRowIndex = gridView2.FocusedRowHandle;
-                        En = EnumCED.Edit;
-                        HelpClass1.InActiveButtons(panelControl);
-                        HelpClass1.ActiveControls(panelControl2_2);
-                        //FillcmbGruopLevel1();
+                        using (var db = new MyContext())
+                        {
+                            try
+                            {
+                                _SalId = Convert.ToInt32(lblSalId.Text);
+                                int _RowId = Convert.ToInt32(txtId_2.Text);
 
-                        cmbGruopLevel1_2.EditValue = gridView2.GetFocusedRowCellValue("Level1Id").ToString();
-                        txtId_2.Text = gridView2.GetFocusedRowCellValue("Id").ToString();
-                        txtCode_2.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter);
-                        txtCodeLevel1.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter);
-                        txtName_2.Text = gridView2.GetFocusedRowCellValue("Name").ToString();
-                        chkIsActive_2.Checked = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
-                        txtSharhHesab_2.Text = gridView2.GetFocusedRowCellValue("SharhHesab") != null ? gridView2.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                                string _NameGroup = gridView2.GetFocusedRowCellDisplayText("Name");
+                                if (_NameGroup == "سایر")
+                                {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.EpAllHesabTafsilis.Any(s => s.GroupTafsiliId == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show("با گروه تفصیلی فوق ، حساب تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.EpGroupTafsiliLevel3s.Any(s => s.Level2Id == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show("با گروه تفصیلی فوق در سطح سوم گروه تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.REpHesabMoinBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show(" گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else
+                                {
+                                    En = EnumCED.Edit;
+                                    gridControl2.Enabled = false;
+                                    EditRowIndex = gridView2.FocusedRowHandle;
+                                    HelpClass1.InActiveButtons(panelControl);
+                                    HelpClass1.ActiveControls(panelControl2_2);
+                                    //FillcmbGruopLevel1();
 
-                        CodeBeforeEdit = txtCodeLevel1.Text + txtCode_2.Text;
-                        NameBeforeEdit = txtName_2.Text.Trim();
-                        IsActiveBeforeEdit = chkIsActive_2.Checked;
-                        Level1IdBeforeEdit = Convert.ToInt32(cmbGruopLevel1_2.EditValue);
-                        //if (txtCode.Text == "9")
-                        //    btnNewCode.Enabled = false;
-                        chkEditCode_2.Checked = false;
-                        cmbGruopLevel1_2.Focus();
+                                    //cmbGruopLevel1_2.EditValue = gridView2.GetFocusedRowCellValue("Level1Id").ToString();
+                                    //txtId_2.Text = gridView2.GetFocusedRowCellValue("Id").ToString();
+                                    //txtCode_2.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter);
+                                    //txtCodeLevel1.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter);
+                                    //txtName_2.Text = gridView2.GetFocusedRowCellValue("Name").ToString();
+                                    //chkIsActive_2.Checked = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
+                                    //txtSharhHesab_2.Text = gridView2.GetFocusedRowCellValue("SharhHesab") != null ? gridView2.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+
+                                    CodeBeforeEdit = Convert.ToInt32(txtCodeLevel1.Text + txtCode_2.Text);
+                                    NameBeforeEdit = txtName_2.Text.Trim();
+                                    IsActiveBeforeEdit = chkIsActive_2.Checked;
+                                    Level1IdBeforeEdit = Convert.ToInt32(cmbGruopLevel1_2.EditValue);
+                                    //if (txtCode.Text == "9")
+                                    //    btnNewCode.Enabled = false;
+                                    chkEditCode_2.Checked = false;
+                                    cmbGruopLevel1_2.Focus();
+                                }
+
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
-
                 }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                if (btnEdit.Visible)
+                else if (xtraTabControl1.SelectedTabPageIndex == 2)
                 {
                     if (gridView3.RowCount > 0)
                     {
-                        gridControl3.Enabled = false;
-                        EditRowIndex = gridView3.FocusedRowHandle;
-                        En = EnumCED.Edit;
-                        HelpClass1.InActiveButtons(panelControl);
-                        HelpClass1.ActiveControls(panelControl3_2);
-                        //FillcmbGruopLevel1();
-                        _Level2Id = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level2Id").ToString());
-                        cmbGruopLevel1_3.EditValue = new MyContext().EpGroupTafsiliLevel2s.FirstOrDefault(s => s.Id == _Level2Id && s.SalId == _SalId).Level1Id;
-                        cmbGruopLevel2_3.EditValue = gridView3.GetFocusedRowCellValue("Level2Id").ToString();
-                        txtId_3.Text = gridView3.GetFocusedRowCellValue("Id").ToString();
-                        txtCode_3.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
-                        txtCodeLevel2.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
-                        txtName_3.Text = gridView3.GetFocusedRowCellValue("Name").ToString();
-                        chkIsActive_3.Checked = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
-                        txtSharhHesab_3.Text = gridView3.GetFocusedRowCellValue("SharhHesab") != null ? gridView3.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                        using (var db = new MyContext())
+                        {
+                            try
+                            {
+                                _SalId = Convert.ToInt32(lblSalId.Text);
+                                int _RowId = Convert.ToInt32(txtId_3.Text);
 
-                        CodeBeforeEdit = txtCodeLevel2.Text + txtCode_3.Text;
-                        NameBeforeEdit = txtName_3.Text.Trim();
-                        IsActiveBeforeEdit = chkIsActive_3.Checked;
-                        Level2IdBeforeEdit = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
-                        //if (txtCode.Text == "9")
-                        //    btnNewCode.Enabled = false;
-                        chkEditCode_3.Checked = false;
-                        cmbGruopLevel1_3.Focus();
+                                string _NameGroup = gridView3.GetFocusedRowCellDisplayText("Name");
+                                if (_NameGroup == "سایر")
+                                {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.EpAllHesabTafsilis.Any(s => s.GroupTafsiliId == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show("با گروه تفصیلی فوق ، حساب تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else if (db.REpHesabMoinBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                {
+                                    XtraMessageBox.Show("گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                else
+                                {
+                                    En = EnumCED.Edit;
+                                    gridControl3.Enabled = false;
+                                    EditRowIndex = gridView3.FocusedRowHandle;
+                                    HelpClass1.InActiveButtons(panelControl);
+                                    HelpClass1.ActiveControls(panelControl3_2);
+                                    //FillcmbGruopLevel1();
+                                    //_Level2Id = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level2Id").ToString());
+                                    //cmbGruopLevel1_3.EditValue = new MyContext().EpGroupTafsiliLevel2s.FirstOrDefault(s => s.Id == _Level2Id && s.SalId == _SalId).Level1Id;
+                                    //cmbGruopLevel2_3.EditValue = gridView3.GetFocusedRowCellValue("Level2Id").ToString();
+                                    //txtId_3.Text = gridView3.GetFocusedRowCellValue("Id").ToString();
+                                    //txtCode_3.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
+                                    //txtCodeLevel2.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
+                                    //txtName_3.Text = gridView3.GetFocusedRowCellValue("Name").ToString();
+                                    //chkIsActive_3.Checked = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
+                                    //txtSharhHesab_3.Text = gridView3.GetFocusedRowCellValue("SharhHesab") != null ? gridView3.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+
+                                    CodeBeforeEdit = Convert.ToInt32(txtCodeLevel2.Text + txtCode_3.Text);
+                                    NameBeforeEdit = txtName_3.Text.Trim();
+                                    IsActiveBeforeEdit = chkIsActive_3.Checked;
+                                    Level2IdBeforeEdit = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
+                                    //if (txtCode.Text == "9")
+                                    //    btnNewCode.Enabled = false;
+                                    chkEditCode_3.Checked = false;
+                                    cmbGruopLevel1_3.Focus();
+                                }
+
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+
                     }
-
                 }
-
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            if (btnSave.Enabled)
             {
-                if (btnSave.Enabled)
+                if (TextEditValidation())
                 {
-                    if (TextEditValidation())
+                    using (var db = new MyContext())
                     {
-                        if (En == EnumCED.Create)
+                        try
                         {
-                            using (var db = new MyContext())
+                            if (En == EnumCED.Create)
                             {
-                                try
+                                if (xtraTabControl1.SelectedTabPageIndex == 0)
                                 {
                                     EpGroupTafsiliLevel1 obj = new EpGroupTafsiliLevel1();
                                     obj.SalId = _SalId;
                                     obj.Code = _Code;
+                                    obj.TabaghehIndex = cmbTabaghehGroup.SelectedIndex;
+                                    obj.TabaghehName = cmbTabaghehGroup.Text;
                                     obj.Name = _Name;
                                     obj.StartCode = _StartCode;
                                     obj.EndCode = _EndCode;
@@ -1400,27 +1253,79 @@ namespace EtelaatePaye.CodingHesabdari
                                     db.EpAllGroupTafsilis.Add(n1);
                                     ///////////////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
-                                    if (chkIsActive_1.Checked)
-                                        btnDisplyActiveList_Click(null, null);
-                                    else
-                                        btnDisplyNotActiveList_Click(null, null);
-
+                                    btnCancel_Click(null, null);
+                                    FillGridviewGroupTafsili();
                                     //XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                     btnLast_Click(null, null);
-                                    btnCancel_Click(null, null);
                                     En = EnumCED.Save;
                                 }
-                                catch (Exception ex)
+                                else if (xtraTabControl1.SelectedTabPageIndex == 1)
                                 {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    EpGroupTafsiliLevel2 obj = new EpGroupTafsiliLevel2();
+                                    obj.SalId = _SalId;
+                                    obj.Level1Id = _Level1Id;
+                                    // obj.Level1Name = cmbGruopLevel1_2.Text;
+                                    obj.Code = _Code;
+                                    obj.Name = _Name;
+                                    obj.StartCode = _StartCode;
+                                    obj.EndCode = _EndCode;
+                                    obj.IsActive = _IsActive;
+                                    obj.SharhHesab = _SharhHesab;
+                                    //db.EpGroupTafsiliLevel2s.Add(obj);
+                                    //db.SaveChanges();
+                                    ////////////////////////////////////////////////////////////
+                                    EpAllGroupTafsili n1 = new EpAllGroupTafsili();
+                                    n1.SalId = _SalId;
+                                    n1.KeyCode = _Code;
+                                    n1.ParentCode = Convert.ToInt32(_Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter));
+                                    n1.LevelName = _Name;
+                                    n1.LevelNamber = _LevelNamber;
+                                    n1.IsActive = _IsActive;
+                                    n1.EpGroupTafsiliLevel2 = obj;
+                                    db.EpAllGroupTafsilis.Add(n1);
+                                    db.SaveChanges();
+                                    btnCancel_Click(null, null);
+                                    FillGridviewGroupTafsili();
+                                    //XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    btnLast_Click(null, null);
+                                    En = EnumCED.Save;
                                 }
+                                else if (xtraTabControl1.SelectedTabPageIndex == 2)
+                                {
+                                    EpGroupTafsiliLevel3 obj = new EpGroupTafsiliLevel3();
+                                    obj.SalId = _SalId;
+                                    // obj.Level1Name = cmbGruopLevel1_3.Text;
+                                    obj.Level2Id = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
+                                    // obj.Level2Name = cmbGruopLevel2_3.Text;
+                                    obj.Code = _Code;
+                                    obj.Name = _Name;
+                                    obj.StartCode = _StartCode;
+                                    obj.EndCode = _EndCode;
+                                    obj.IsActive = _IsActive;
+                                    obj.SharhHesab = _SharhHesab;
+                                    ///////////////
+                                    EpAllGroupTafsili n1 = new EpAllGroupTafsili();
+                                    n1.SalId = _SalId;
+                                    n1.KeyCode = _Code;
+                                    n1.ParentCode = Convert.ToInt32(_Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter));
+                                    n1.LevelName = _Name;
+                                    n1.LevelNamber = _LevelNamber;
+                                    n1.IsActive = _IsActive;
+                                    n1.EpGroupTafsiliLevel3 = obj;
+                                    db.EpAllGroupTafsilis.Add(n1);
+                                    db.SaveChanges();
+
+                                    btnCancel_Click(null, null);
+                                    FillGridviewGroupTafsili();
+                                    //XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    btnLast_Click(null, null);
+                                    En = EnumCED.Save;
+                                }
+
                             }
-                        }
-                        else if (En == EnumCED.Edit)
-                        {
-                            using (var db = new MyContext())
+                            else if (En == EnumCED.Edit)
                             {
-                                try
+                                if (xtraTabControl1.SelectedTabPageIndex == 0)
                                 {
                                     int _RowId = Convert.ToInt32(txtId_1.Text);
                                     ////////////////
@@ -1429,17 +1334,17 @@ namespace EtelaatePaye.CodingHesabdari
                                     {
                                         foreach (var item in s3)
                                         {
-                                            if (txtCode_1.Text != CodeBeforeEdit)
+                                            if (_Code != CodeBeforeEdit)
                                                 item.Code = Convert.ToInt32(item.Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                         + item.Code.ToString().Substring(_GroupTafsiliLevel1Carakter));
                                             //if (txtName_1.Text != NameBeforeEdit)
                                             //    item.Level1Name = txtName_1.Text;
-                                            if (chkIsActive_1.Checked != IsActiveBeforeEdit)
-                                                item.IsActive = chkIsActive_1.Checked;
-                                            if (txtCode_1.Text != CodeBeforeEdit)
+                                            if (_IsActive != IsActiveBeforeEdit)
+                                                item.IsActive = _IsActive;
+                                            if (_Code != CodeBeforeEdit)
                                                 item.StartCode = Convert.ToInt32(item.StartCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.StartCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                         + item.StartCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
-                                            if (txtCode_1.Text != CodeBeforeEdit)
+                                            if (_Code != CodeBeforeEdit)
                                                 item.EndCode = Convert.ToInt32(item.EndCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.EndCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                         + item.EndCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
                                         }
@@ -1451,17 +1356,17 @@ namespace EtelaatePaye.CodingHesabdari
                                     {
                                         foreach (var item in s2)
                                         {
-                                            if (txtCode_1.Text != CodeBeforeEdit)
+                                            if (_Code != CodeBeforeEdit)
                                                 item.Code = Convert.ToInt32(item.Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                         + item.Code.ToString().Substring(_GroupTafsiliLevel1Carakter));
                                             //if (txtName_1.Text != NameBeforeEdit)
                                             //    item.Level1Name = txtName_1.Text;
-                                            if (chkIsActive_1.Checked != IsActiveBeforeEdit)
-                                                item.IsActive = chkIsActive_1.Checked;
-                                            if (txtCode_1.Text != CodeBeforeEdit)
+                                            if (_IsActive != IsActiveBeforeEdit)
+                                                item.IsActive = _IsActive;
+                                            if (_Code != CodeBeforeEdit)
                                                 item.StartCode = Convert.ToInt32(item.StartCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.StartCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                         + item.StartCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
-                                            if (txtCode_1.Text != CodeBeforeEdit)
+                                            if (_Code != CodeBeforeEdit)
                                                 item.EndCode = Convert.ToInt32(item.EndCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.EndCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                         + item.EndCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
                                             foreach (var item1 in s3)
@@ -1476,6 +1381,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     var s1 = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _RowId && s.SalId == _SalId);
                                     if (s1 != null)
                                     {
+                                        s1.TabaghehIndex = cmbTabaghehGroup.SelectedIndex;
+                                        s1.TabaghehName = cmbTabaghehGroup.Text;
                                         s1.Code = _Code;
                                         s1.Name = _Name;
                                         s1.StartCode = _StartCode;
@@ -1501,7 +1408,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             foreach (var item in q7)
                                             {
-                                                if (txtCode_1.Text != CodeBeforeEdit)
+                                                if (_Code != CodeBeforeEdit)
                                                 {
                                                     item.KeyCode = Convert.ToInt32(item.KeyCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.KeyCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                                   + item.KeyCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
@@ -1509,8 +1416,8 @@ namespace EtelaatePaye.CodingHesabdari
                                                                   + item.ParentCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
 
                                                 }
-                                                if (chkIsActive_1.Checked != IsActiveBeforeEdit)
-                                                    item.IsActive = chkIsActive_1.Checked;
+                                                if (_IsActive != IsActiveBeforeEdit)
+                                                    item.IsActive = _IsActive;
 
                                             }
                                         }
@@ -1519,98 +1426,30 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             foreach (var item in q5)
                                             {
-                                                if (txtCode_1.Text != CodeBeforeEdit)
+                                                if (_Code != CodeBeforeEdit)
                                                 {
                                                     item.KeyCode = Convert.ToInt32(item.KeyCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.KeyCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                                   + item.KeyCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
                                                     item.ParentCode = Convert.ToInt32(item.ParentCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter).Replace(item.ParentCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter), _Code.ToString())
                                                                  + item.ParentCode.ToString().Substring(_GroupTafsiliLevel1Carakter));
                                                 }
-                                                if (chkIsActive_1.Checked != IsActiveBeforeEdit)
-                                                    item.IsActive = chkIsActive_1.Checked;
+                                                if (_IsActive != IsActiveBeforeEdit)
+                                                    item.IsActive = _IsActive;
                                             }
                                         }
 
                                         db.SaveChanges();
-                                        if (IsActiveBeforeEdit)
-                                            btnDisplyActiveList_Click(null, null);
-                                        else
-                                            btnDisplyNotActiveList_Click(null, null);
-
+                                        btnCancel_Click(null, null);
+                                        FillGridviewGroupTafsili();
                                         //XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView1.RowCount > 0)
                                             gridView1.FocusedRowHandle = EditRowIndex;
-                                        btnCancel_Click(null, null);
                                         En = EnumCED.Save;
                                     }
                                     else
                                         XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                if (btnSave.Enabled)
-                {
-                    if (TextEditValidation())
-                    {
-                        if (En == EnumCED.Create)
-                        {
-                            using (var db = new MyContext())
-                            {
-                                try
-                                {
-                                    EpGroupTafsiliLevel2 obj = new EpGroupTafsiliLevel2();
-                                    obj.SalId = _SalId;
-                                    obj.Level1Id = _Level1Id;
-                                   // obj.Level1Name = cmbGruopLevel1_2.Text;
-                                    obj.Code = _Code;
-                                    obj.Name = _Name;
-                                    obj.StartCode = _StartCode;
-                                    obj.EndCode = _EndCode;
-                                    obj.IsActive = _IsActive;
-                                    obj.SharhHesab = _SharhHesab;
-                                    //db.EpGroupTafsiliLevel2s.Add(obj);
-                                    //db.SaveChanges();
-                                    ////////////////////////////////////////////////////////////
-                                    EpAllGroupTafsili n1 = new EpAllGroupTafsili();
-                                    n1.SalId = _SalId;
-                                    n1.KeyCode = _Code;
-                                    n1.ParentCode = Convert.ToInt32(_Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter));
-                                    n1.LevelName = _Name;
-                                    n1.LevelNamber = _LevelNamber;
-                                    n1.IsActive = _IsActive;
-                                    n1.EpGroupTafsiliLevel2 = obj;
-                                    db.EpAllGroupTafsilis.Add(n1);
-                                    db.SaveChanges();
-                                    if (chkIsActive_2.Checked)
-                                        btnDisplyActiveList_Click(null, null);
-                                    else
-                                        btnDisplyNotActiveList_Click(null, null);
-
-                                    //XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                    btnLast_Click(null, null);
-                                    btnCancel_Click(null, null);
-                                    En = EnumCED.Save;
-                                }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                        }
-                        else if (En == EnumCED.Edit)
-                        {
-                            using (var db = new MyContext())
-                            {
-                                try
+                                else if (xtraTabControl1.SelectedTabPageIndex == 1)
                                 {
                                     int _RowId = Convert.ToInt32(txtId_2.Text);
                                     ///////////////
@@ -1619,17 +1458,17 @@ namespace EtelaatePaye.CodingHesabdari
                                     {
                                         foreach (var item in q3)
                                         {
-                                            if (_Code.ToString() != CodeBeforeEdit)
+                                            if (_Code != CodeBeforeEdit)
                                                 item.Code = Convert.ToInt32(item.Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter).Replace(item.Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter), _Code.ToString())
                                                         + item.Code.ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter));
                                             //if (txtName_2.Text != NameBeforeEdit)
                                             //    item.Level2Name = txtName_2.Text;
-                                            if (chkIsActive_2.Checked != IsActiveBeforeEdit)
-                                                item.IsActive = chkIsActive_2.Checked;
-                                            if (_Code.ToString() != CodeBeforeEdit)
+                                            if (_IsActive != IsActiveBeforeEdit)
+                                                item.IsActive = _IsActive;
+                                            if (_Code != CodeBeforeEdit)
                                                 item.StartCode = Convert.ToInt32(item.StartCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter).Replace(item.StartCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter), _Code.ToString())
                                                         + item.StartCode.ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter));
-                                            if (_Code.ToString() != CodeBeforeEdit)
+                                            if (_Code != CodeBeforeEdit)
                                                 item.EndCode = Convert.ToInt32(item.EndCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter).Replace(item.EndCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter), _Code.ToString())
                                                         + item.EndCode.ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter));
                                         }
@@ -1639,7 +1478,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     if (q != null)
                                     {
                                         q.Level1Id = _Level1Id;
-                                       // q.Level1Name = cmbGruopLevel1_2.Text;
+                                        // q.Level1Name = cmbGruopLevel1_2.Text;
                                         q.Code = _Code;
                                         q.Name = _Name;
                                         q.StartCode = _StartCode;
@@ -1663,15 +1502,15 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             foreach (var item in q5)
                                             {
-                                                if (_Code.ToString() != CodeBeforeEdit)
+                                                if (_Code != CodeBeforeEdit)
                                                 {
                                                     item.KeyCode = Convert.ToInt32(item.KeyCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter).Replace(item.KeyCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter), _Code.ToString())
                                                                   + item.KeyCode.ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter));
                                                     item.ParentCode = Convert.ToInt32(item.ParentCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter).Replace(item.ParentCode.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter), _Code.ToString())
                                                                  + item.ParentCode.ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter));
                                                 }
-                                                if (chkIsActive_1.Checked != IsActiveBeforeEdit)
-                                                    item.IsActive = chkIsActive_1.Checked;
+                                                if (_IsActive != IsActiveBeforeEdit)
+                                                    item.IsActive = _IsActive;
                                             }
                                         }
 
@@ -1694,93 +1533,25 @@ namespace EtelaatePaye.CodingHesabdari
                                         }
 
                                         db.SaveChanges();
-                                        if (IsActiveBeforeEdit)
-                                            btnDisplyActiveList_Click(null, null);
-                                        else
-                                            btnDisplyNotActiveList_Click(null, null);
-
+                                        btnCancel_Click(null, null);
+                                        FillGridviewGroupTafsili();
                                         //XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView2.RowCount > 0)
                                             gridView2.FocusedRowHandle = EditRowIndex;
-                                        btnCancel_Click(null, null);
                                         En = EnumCED.Save;
                                     }
                                     else
                                         XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                if (btnSave.Enabled)
-                {
-                    if (TextEditValidation())
-                    {
-                        if (En == EnumCED.Create)
-                        {
-                            using (var db = new MyContext())
-                            {
-                                try
-                                {
-                                    EpGroupTafsiliLevel3 obj = new EpGroupTafsiliLevel3();
-                                    obj.SalId = _SalId;
-                                   // obj.Level1Name = cmbGruopLevel1_3.Text;
-                                    obj.Level2Id = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
-                                   // obj.Level2Name = cmbGruopLevel2_3.Text;
-                                    obj.Code = _Code;
-                                    obj.Name = _Name;
-                                    obj.StartCode = _StartCode;
-                                    obj.EndCode = _EndCode;
-                                    obj.IsActive = _IsActive;
-                                    obj.SharhHesab = _SharhHesab;
-                                    ///////////////
-                                    EpAllGroupTafsili n1 = new EpAllGroupTafsili();
-                                    n1.SalId = _SalId;
-                                    n1.KeyCode = _Code;
-                                    n1.ParentCode = Convert.ToInt32(_Code.ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter));
-                                    n1.LevelName = _Name;
-                                    n1.LevelNamber = _LevelNamber;
-                                    n1.IsActive = _IsActive;
-                                    n1.EpGroupTafsiliLevel3 = obj;
-                                    db.EpAllGroupTafsilis.Add(n1);
-                                    db.SaveChanges();
-
-                                    if (chkIsActive_3.Checked)
-                                        btnDisplyActiveList_Click(null, null);
-                                    else
-                                        btnDisplyNotActiveList_Click(null, null);
-
-                                    //XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                    btnLast_Click(null, null);
-                                    btnCancel_Click(null, null);
-                                    En = EnumCED.Save;
-                                }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                        }
-                        else if (En == EnumCED.Edit)
-                        {
-                            using (var db = new MyContext())
-                            {
-                                try
+                                else if (xtraTabControl1.SelectedTabPageIndex == 2)
                                 {
                                     int _RowId = Convert.ToInt32(txtId_3.Text);
                                     var q = db.EpGroupTafsiliLevel3s.FirstOrDefault(s => s.Id == _RowId && s.SalId == _SalId);
                                     if (q != null)
                                     {
-                                       // q.Level1Name = cmbGruopLevel1_3.Text;
+                                        // q.Level1Name = cmbGruopLevel1_3.Text;
                                         q.Level2Id = Convert.ToInt32(cmbGruopLevel2_3.EditValue);
-                                      //  q.Level2Name = cmbGruopLevel2_3.Text;
+                                        //  q.Level2Name = cmbGruopLevel2_3.Text;
                                         q.Code = _Code;
                                         q.Name = _Name;
                                         q.StartCode = _StartCode;
@@ -1815,25 +1586,21 @@ namespace EtelaatePaye.CodingHesabdari
 
 
                                         db.SaveChanges();
-                                        if (IsActiveBeforeEdit)
-                                            btnDisplyActiveList_Click(null, null);
-                                        else
-                                            btnDisplyNotActiveList_Click(null, null);
-
+                                        btnCancel_Click(null, null);
+                                        FillGridviewGroupTafsili();
                                         //XtraMessageBox.Show("عملیات ویرایش با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                         if (gridView3.RowCount > 0)
                                             gridView3.FocusedRowHandle = EditRowIndex;
-                                        btnCancel_Click(null, null);
                                         En = EnumCED.Save;
                                     }
                                     else
                                         XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                                catch (Exception ex)
-                                {
-                                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
                             }
+                        }
+                        catch (Exception ex)
+                        {
+                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -1853,62 +1620,38 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            if (btnCancel.Enabled)
             {
-                if (btnCancel.Enabled)
+                En = EnumCED.Cancel;
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
                 {
                     gridControl1.Enabled = true;
-                    En = EnumCED.Cancel;
                     HelpClass1.ActiveButtons(panelControl);
                     HelpClass1.ClearControls(panelControl1_2);
                     HelpClass1.InActiveControls(panelControl1_2);
-                    btnCreate.Focus();
                 }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                if (btnCancel.Enabled)
+                else if (xtraTabControl1.SelectedTabPageIndex == 1)
                 {
                     gridControl2.Enabled = true;
-                    En = EnumCED.Cancel;
                     HelpClass1.ActiveButtons(panelControl);
                     HelpClass1.ClearControls(panelControl2_2);
                     HelpClass1.InActiveControls(panelControl2_2);
-                    btnCreate.Focus();
                 }
-
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                if (btnCancel.Enabled)
+                else if (xtraTabControl1.SelectedTabPageIndex == 2)
                 {
                     gridControl3.Enabled = true;
-                    En = EnumCED.Cancel;
                     HelpClass1.ActiveButtons(panelControl);
                     HelpClass1.ClearControls(panelControl3_2);
                     HelpClass1.InActiveControls(panelControl3_2);
-                    btnCreate.Focus();
                 }
-
+                btnCreate.Focus();
             }
         }
 
         private void gridView_DoubleClick(object sender, EventArgs e)
         {
             btnEdit_Click(null, null);
-        }
-
-        private void gridView_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            //if (xtraTabControl1.SelectedTabPageIndex == 0)
-            //{
-            //    btnDelete.Enabled = btnEdit.Enabled = gridView.RowCount > 0 ? true : false;
-            //}
-            //else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            //{
-            //    btnDelete.Enabled = btnEdit.Enabled = gridView.RowCount > 0 ? true : false;
-            //}
+            //btnDelete.Enabled = btnEdit.Enabled = false;
         }
 
         private void gridView_KeyDown(object sender, KeyEventArgs e)
@@ -1924,59 +1667,64 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void gridView_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 0)
+            if (En != EnumCED.Edit)
             {
-                if (gridView1.RowCount > 0)
+                if (xtraTabControl1.SelectedTabPageIndex == 0)
                 {
-                    txtId_1.Text = gridView1.GetFocusedRowCellDisplayText("Id");
-                    txtCode_1.Text = gridView1.GetFocusedRowCellDisplayText("Code");
-                    txtName_1.Text = gridView1.GetFocusedRowCellDisplayText("Name");
-                    txtStartCode_1.Text = gridView1.GetFocusedRowCellDisplayText("StartCode");
-                    txtEndCode_1.Text = gridView1.GetFocusedRowCellDisplayText("EndCode");
-                    chkIsActive_1.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
-                    txtSharhHesab_1.Text = gridView1.GetFocusedRowCellDisplayText("SharhHesab");
+                    if (gridView1.RowCount > 0)
+                    {
+                        cmbTabaghehGroup.SelectedIndex = Convert.ToInt32(gridView1.GetFocusedRowCellValue("TabaghehIndex").ToString());
+                        txtId_1.Text = gridView1.GetFocusedRowCellDisplayText("Id");
+                        txtCode_1.Text = gridView1.GetFocusedRowCellDisplayText("Code");
+                        txtName_1.Text = gridView1.GetFocusedRowCellDisplayText("Name");
+                        txtStartCode_1.Text = gridView1.GetFocusedRowCellDisplayText("StartCode");
+                        txtEndCode_1.Text = gridView1.GetFocusedRowCellDisplayText("EndCode");
+                        chkIsActive_1.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                        txtSharhHesab_1.Text = gridView1.GetFocusedRowCellDisplayText("SharhHesab");
 
-                    btnDelete.Enabled = btnEdit.Enabled = true;
+                        btnDelete.Enabled = btnEdit.Enabled = true;
+                    }
+                    else
+                        btnDelete.Enabled = btnEdit.Enabled = false;
                 }
-                else
-                    btnDelete.Enabled = btnEdit.Enabled = false;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 1)
-            {
-                //FillcmbGruopLevel1();
-                if (gridView2.RowCount > 0)
+                else if (xtraTabControl1.SelectedTabPageIndex == 1)
                 {
-                    cmbGruopLevel1_2.EditValue = Convert.ToInt32(gridView2.GetFocusedRowCellValue("Level1Id").ToString());
-                    txtId_2.Text = gridView2.GetFocusedRowCellValue("Id").ToString();
-                    txtCode_2.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter);
-                    txtCodeLevel1.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter);
-                    txtName_2.Text = gridView2.GetFocusedRowCellValue("Name").ToString();
-                    chkIsActive_2.Checked = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
-                    txtSharhHesab_2.Text = gridView2.GetFocusedRowCellValue("SharhHesab") != null ? gridView2.GetFocusedRowCellValue("SharhHesab").ToString() : "";
-                    btnDelete.Enabled = btnEdit.Enabled = true;
+                    //FillcmbGruopLevel1();
+                    if (gridView2.RowCount > 0)
+                    {
+                        cmbGruopLevel1_2.EditValue = Convert.ToInt32(gridView2.GetFocusedRowCellValue("Level1Id").ToString());
+                        txtId_2.Text = gridView2.GetFocusedRowCellValue("Id").ToString();
+                        txtCode_2.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter);
+                        txtCodeLevel1.Text = gridView2.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter);
+                        txtName_2.Text = gridView2.GetFocusedRowCellValue("Name").ToString();
+                        chkIsActive_2.Checked = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
+                        txtSharhHesab_2.Text = gridView2.GetFocusedRowCellValue("SharhHesab") != null ? gridView2.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                        btnDelete.Enabled = btnEdit.Enabled = true;
+                    }
+                    else
+                        btnDelete.Enabled = btnEdit.Enabled = false;
                 }
-                else
-                    btnDelete.Enabled = btnEdit.Enabled = false;
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                //FillcmbGruopLevel1();
-                if (gridView3.RowCount > 0)
+                else if (xtraTabControl1.SelectedTabPageIndex == 2)
                 {
-                    _Level2Id = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level2Id").ToString());
-                    cmbGruopLevel1_3.EditValue = new MyContext().EpGroupTafsiliLevel2s.FirstOrDefault(s => s.Id == _Level2Id && s.SalId == _SalId).Level1Id;
-                    //cmbGruopLevel1_3.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level1Id").ToString());
-                    cmbGruopLevel2_3.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level2Id").ToString());
-                    txtId_3.Text = gridView3.GetFocusedRowCellValue("Id").ToString();
-                    txtCode_3.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
-                    txtCodeLevel2.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
-                    txtName_3.Text = gridView3.GetFocusedRowCellValue("Name").ToString();
-                    chkIsActive_3.Checked = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
-                    txtSharhHesab_3.Text = gridView3.GetFocusedRowCellValue("SharhHesab") != null ? gridView3.GetFocusedRowCellValue("SharhHesab").ToString() : "";
-                    btnDelete.Enabled = btnEdit.Enabled = true;
+                    //FillcmbGruopLevel1();
+                    if (gridView3.RowCount > 0)
+                    {
+                        _Level2Id = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level2Id").ToString());
+                        cmbGruopLevel1_3.EditValue = new MyContext().EpGroupTafsiliLevel2s.FirstOrDefault(s => s.Id == _Level2Id && s.SalId == _SalId).Level1Id;
+                        //cmbGruopLevel1_3.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level1Id").ToString());
+                        cmbGruopLevel2_3.EditValue = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Level2Id").ToString());
+                        txtId_3.Text = gridView3.GetFocusedRowCellValue("Id").ToString();
+                        txtCode_3.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(_GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
+                        txtCodeLevel2.Text = gridView3.GetFocusedRowCellValue("Code").ToString().Substring(0, _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter);
+                        txtName_3.Text = gridView3.GetFocusedRowCellValue("Name").ToString();
+                        chkIsActive_3.Checked = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
+                        txtSharhHesab_3.Text = gridView3.GetFocusedRowCellValue("SharhHesab") != null ? gridView3.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                        btnDelete.Enabled = btnEdit.Enabled = true;
+                    }
+                    else
+                        btnDelete.Enabled = btnEdit.Enabled = false;
                 }
-                else
-                    btnDelete.Enabled = btnEdit.Enabled = false;
+
             }
         }
 
@@ -2035,25 +1783,36 @@ namespace EtelaatePaye.CodingHesabdari
         private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             // btnDelete.Enabled = btnEdit.Enabled = false;
-            btnDisplyActiveList_Click(null, null);
-            FillcmbGruopLevel1();
+            btnDisplyList_Click(null, null);
             if (xtraTabControl1.SelectedTabPageIndex == 0)
             {
                 txtCode_1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
                 txtCode_1.Properties.Mask.EditMask = "00";
                 txtCode_1.Properties.MaxLength = _GroupTafsiliLevel1Carakter;
+                btnCreate.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                btnCreate.Focus();
             }
             else if (xtraTabControl1.SelectedTabPageIndex == 1)
             {
                 txtCode_2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
                 txtCode_2.Properties.Mask.EditMask = "0";
                 txtCode_2.Properties.MaxLength = _GroupTafsiliLevel2Carakter;
+                btnCreate.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                FillcmbGruopLevel1();
+                btnCreate.Focus();
             }
             else if (xtraTabControl1.SelectedTabPageIndex == 2)
             {
                 txtCode_3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
                 txtCode_3.Properties.Mask.EditMask = "0";
                 txtCode_3.Properties.MaxLength = _GroupTafsiliLevel3Carakter;
+                btnCreate.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                FillcmbGruopLevel1();
+                btnCreate.Focus();
+            }
+            else if (xtraTabControl1.SelectedTabPageIndex == 3)
+            {
+                btnCreate.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
             }
         }
 
@@ -2067,11 +1826,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void cmbGruopLevel1_EditValueChanged(object sender, EventArgs e)
         {
-            if (xtraTabControl1.SelectedTabPageIndex == 1)
+            using (var db = new MyContext())
             {
-                using (var db = new MyContext())
+                try
                 {
-                    try
+                    if (xtraTabControl1.SelectedTabPageIndex == 1)
                     {
                         int _Level1Id = Convert.ToInt32(cmbGruopLevel1_2.EditValue);
                         // int _SalId = Convert.ToInt32(lblSalId.Text);
@@ -2093,21 +1852,20 @@ namespace EtelaatePaye.CodingHesabdari
                         }
 
                     }
-                    catch (Exception ex)
+                    else if (xtraTabControl1.SelectedTabPageIndex == 2)
                     {
-                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        FillcmbGruopLevel2();
+                        cmbGruopLevel2_3.EditValue = 0;
+                        txtCodeLevel2.Text = txtCode_3.Text = string.Empty;
                     }
                 }
-            }
-            else if (xtraTabControl1.SelectedTabPageIndex == 2)
-            {
-                FillcmbGruopLevel2();
-                cmbGruopLevel2_3.EditValue = 0;
-                txtCodeLevel2.Text = txtCode_3.Text = string.Empty;
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
 
         private void cmbGruopLevel1_Enter(object sender, EventArgs e)
         {
@@ -2127,6 +1885,7 @@ namespace EtelaatePaye.CodingHesabdari
             }
 
         }
+
         private void cmbGruopLevel2_Enter(object sender, EventArgs e)
         {
             if (En == EnumCED.Create)
@@ -2177,6 +1936,37 @@ namespace EtelaatePaye.CodingHesabdari
                 }
             }
 
+        }
+
+        private void gridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            HelpClass1.gridView_RowCellStyle(sender, e);
+        }
+
+        private void cmbGruopLevel1_CustomDrawCell(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawCellArgs e)
+        {
+            HelpClass1.LookupEdit_CustomDrawCell(sender, e);
+        }
+
+        private void cmbGruopLevel2_CustomDrawCell(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawCellArgs e)
+        {
+            HelpClass1.LookupEdit_CustomDrawCell(sender, e);
+
+        }
+
+        private void cmbTabaghehGroup_Enter(object sender, EventArgs e)
+        {
+            if (En == EnumCED.Create)
+            {
+                cmbTabaghehGroup.ShowPopup();
+            }
+        }
+
+        private void treeListGroupTafsili_NodeCellStyle(object sender, DevExpress.XtraTreeList.GetCustomNodeCellStyleEventArgs e)
+        {
+            if (e.Column.FieldName != "IsActive") return;
+            if (e.Node.GetDisplayText(colIsActive1) == "انتخاب نشده")
+                e.Appearance.BackColor = Color.Pink;
         }
     }
 }

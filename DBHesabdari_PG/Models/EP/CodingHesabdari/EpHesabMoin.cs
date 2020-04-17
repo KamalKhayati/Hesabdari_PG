@@ -29,20 +29,20 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required]
-        public int TabaghehId { get; set; }
-        [Required, MaxLength(50)]
-        public string TabaghehName { get; set; }
-        [Required]
-        public int GroupId { get; set; }
-        [Required, MaxLength(50)]
-        public string GroupName { get; set; }
+        public int GroupLevelsId { get; set; }
+        [Required, MaxLength(20)]
+        public string GroupLevelsName { get; set; }
+        //[Required]
+        //public int GroupId { get; set; }
+        //[Required, MaxLength(50)]
+        //public string GroupName { get; set; }
         [Required]
         public int ColId { get; set; }
-        [Required, MaxLength(50)]
-        public string ColName { get; set; }
+        //[Required, MaxLength(50)]
+        //public string ColName { get; set; }
         [Required]
         public int IndexMahiatHesab { get; set; }
-        [Required, MaxLength(20)]
+        [Required, MaxLength(30)]
         public string MahiatHesab { get; set; }
         [Required]
         public bool IsActive { get; set; }
@@ -57,10 +57,10 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual ICollection<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
         public virtual ICollection<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }
-        public virtual ICollection<REpHesabMoinBEpGroupTafsiliLevel1> REpHesabMoinBEpGroupTafsiliLevel1s { get; set; }
+        public virtual ICollection<REpHesabMoinBEpAllGroupTafsili> REpHesabMoinBEpAllGroupTafsilis { get; set; }
     }
 
-    public class REpHesabMoinBEpGroupTafsiliLevel1
+    public class REpHesabMoinBEpAllGroupTafsili
     {
         //[Column(Order = 0)]
        // public int Id { get; set; }
@@ -69,19 +69,20 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Key]
         [Required, Column(Order = 1)]
         public int MoinId { get; set; }
-
         [Key]
         [Required, Column(Order = 2)]
-        public int GroupTafsiliId { get; set; } 
-
+        public int AllGroupTafsiliId { get; set; }
         [Required, Column(Order = 3)]
-        public int NumberLevel { get; set; }
+        public int LevelNamber { get; set; }
+
+        //[Required, Column(Order = 3)]
+        //public int NumberLevel { get; set; }
         //[Required, Column(Order = 4)]
         //public int MoinCode { get; set; }
-        [Required, Column(Order = 4)]
-        public int GroupTafsiliCode { get; set; }
+        //[Required, Column(Order = 4)]
+        //public int GroupTafsiliCode { get; set; }
 
         public virtual EpHesabMoin EpHesabMoin1 { get; set; }
-        public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel11 { get; set; }
+        public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
     }
 }

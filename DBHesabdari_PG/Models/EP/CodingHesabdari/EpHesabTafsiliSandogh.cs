@@ -23,13 +23,15 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
+        public int LevelNamber { get; set; }
+        [Required]
         public int Code { get; set; }
-        [Required, MaxLength(50)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
         [MaxLength(50)]
         public string NameMasol { get; set; }
         [Column(TypeName = "Date")]
-        public DateTime? StartDate { get; set; }
+        public DateTime TarikhEjad { get; set; }
         [Required]
         public bool IsDefault { get; set; }
         [Required]
@@ -38,7 +40,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public string SharhHesab { get; set; }
         [Required]
         public int GroupTafsiliId { get; set; }
-        public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
 
     }

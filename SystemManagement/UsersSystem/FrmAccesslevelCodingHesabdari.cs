@@ -104,9 +104,9 @@ namespace SystemManagement.UsersSystem
                             obj1.UserId = _UserId;
                             obj1.CodingHesabdariId = Convert.ToInt32(item.GetValue(colId2));
                             obj1.KeyCode = Convert.ToInt32(item.GetValue(colKeyId2));
-                            obj1.HesabGroupId = Convert.ToInt32(item.GetValue(colHesabGroupId2));
-                            obj1.HesabColId = Convert.ToInt32(item.GetValue(colHesabColId2));
-                            obj1.HesabMoinId = Convert.ToInt32(item.GetValue(colHesabMoinId2));
+                            //obj1.HesabGroupId = Convert.ToInt32(item.GetValue(colHesabGroupId2));
+                            //obj1.HesabColId = Convert.ToInt32(item.GetValue(colHesabColId2));
+                            //obj1.HesabMoinId = Convert.ToInt32(item.GetValue(colHesabMoinId2));
                             obj1.IsActive = Convert.ToBoolean(item.GetValue(colIsActive2));
 
                             db.RmsUserBallCodingHesabdaris.Add(obj1);

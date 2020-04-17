@@ -23,24 +23,24 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public int SalId { get; set; }
         [Required]
         public int Code { get; set; }
-        [Required, MaxLength(50)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
-        [Required]
-        public int TabaghehId { get; set; }
-        [Required, MaxLength(50)]
-        public string TabaghehName { get; set; }
+        //[Required]
+        //public int TabaghehId { get; set; }
+        //[Required, MaxLength(50)]
+        //public string TabaghehName { get; set; }
         [Required]
         public int GroupId { get; set; }
-        [Required, MaxLength(50)]
-        public string GroupName { get; set; }
-        [Required]
-        public int IndexMahiatHesab { get; set; }
-        [Required, MaxLength(20)]
-        public string MahiatHesab { get; set; }
-        [Required]
-        public int IndexNoeHesab { get; set; }
-        [Required, MaxLength(20)]
-        public string NoeHesab { get; set; }
+        //[Required, MaxLength(50)]
+        //public string GroupName { get; set; }
+        //[Required]
+        //public int IndexMahiatHesab { get; set; }
+        //[Required, MaxLength(30)]
+        //public string MahiatHesab { get; set; }
+        //[Required]
+        //public int IndexNoeHesab { get; set; }
+        //[Required, MaxLength(20)]
+        //public string NoeHesab { get; set; }
         [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]

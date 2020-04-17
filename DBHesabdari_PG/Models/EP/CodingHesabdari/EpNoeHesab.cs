@@ -25,6 +25,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public int Code { get; set; }
         [Required, MaxLength(50)]
         public string Name { get; set; }
-        public virtual ICollection<EpHesabTafsiliHesabBanki> EpHesabTafsiliHesabBankis { get; set; }
+        public virtual ICollection<EpHesabTafsiliBankha> EpHesabTafsiliHesabBankis { get; set; }
     }
 }

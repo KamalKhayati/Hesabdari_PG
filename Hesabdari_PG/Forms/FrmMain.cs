@@ -40,17 +40,24 @@ using SystemManagement.DafaterMali;
 using DBHesabdari_PG.Models.Ms.DafaterMali;
 using EtelaatePaye.CodingAnbar;
 using EtelaatePaye.Tanzimat;
+using Hesabdari_PG.Forms.AP.Hesabdari;
 
 namespace Hesabdari_PG.Forms
 {
     public partial class FrmMain : DevExpress.XtraEditors.XtraForm
     {
-        DocumentManager documentManager1;
+       DocumentManager documentManager1;
         //XtraTabbedMdiManager xtraTabbedMdiManager1;
         public FrmMain()
         {
             InitializeComponent();
         }
+        //public FrmHesabTafsiliLevelsSelected Fm;
+        //public FrmMain(FrmHesabTafsiliLevelsSelected fm)
+        //{
+        //    InitializeComponent();
+        //    Fm = fm;
+        //}
         int _UserId = 0;
 
         public new void ActiveForm(XtraForm form)
@@ -61,8 +68,8 @@ namespace Hesabdari_PG.Forms
             }
             else
             {
-                //Application.OpenForms[form.Name].Activate();
-                form.Show();
+                Application.OpenForms[form.Name].Activate();
+                //form.Show();
             }
 
         }
@@ -72,7 +79,8 @@ namespace Hesabdari_PG.Forms
             _UserId = Convert.ToInt32(txtUserId.Caption.ToString());
             // that will manage MDI child windows.
             //documentManager1.View = new NativeMdiView();
-            //ribbon.Minimized = true;
+            ribbon.Minimized = true;
+
             //xtraTabbedMdiManager1 = new XtraTabbedMdiManager();
             //xtraTabbedMdiManager1.MdiParent = this;     
             documentManager1 = new DocumentManager
@@ -478,7 +486,7 @@ namespace Hesabdari_PG.Forms
 
         }
 
-        private void btnTaeenAccessLevelSystemVMenu_ItemClick(object sender, ItemClickEventArgs e) 
+        private void btnTaeenAccessLevelSystemVMenu_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmAccesslevelMenuh fm = new FrmAccesslevelMenuh();
             fm.MdiParent = this;
@@ -504,39 +512,6 @@ namespace Hesabdari_PG.Forms
             fm.lblUserName.Text = txtUserName.Caption;
             ActiveForm(fm);
 
-        }
-
-        private void btnHesabGroup_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FrmHesabGroup fm = new FrmHesabGroup();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            fm.lblSalId.Text = _SalId;
-            fm.lblSalMali.Text = _SalMali;
-            ActiveForm(fm);
-        }
-
-        private void btnHesabCol_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FrmHesabCol fm = new FrmHesabCol();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            fm.lblSalId.Text = _SalId;
-            fm.lblSalMali.Text = _SalMali;
-            ActiveForm(fm);
-        }
-
-        private void btnHesabMoin_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FrmHesabMoin fm = new FrmHesabMoin();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            fm.lblSalId.Text = _SalId;
-            fm.lblSalMali.Text = _SalMali;
-            ActiveForm(fm);
         }
 
         private void btnTaeenAcecessLevelCodingHesabdari_ItemClick(object sender, ItemClickEventArgs e)
@@ -775,9 +750,26 @@ namespace Hesabdari_PG.Forms
 
         }
 
-        private void btnHesabTabagheh_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnTanzimatCodingHesabdari_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmHesabTabagheh fm = new FrmHesabTabagheh();
+            FrmTanzimatCodingHesabdari fm = new FrmTanzimatCodingHesabdari();
+            // fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+
+        }
+
+        private void ribbon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ribbon.Minimized = true;
+        }
+
+        private void btnCodingHesabdari_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmCodingHesabdari fm = new FrmCodingHesabdari();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -787,14 +779,46 @@ namespace Hesabdari_PG.Forms
 
         }
 
-        private void btnTanzimatCodingHesabdari_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnHesabhaTafsiliLevel1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmTanzimatCodingHesabdari fm = new FrmTanzimatCodingHesabdari();
-           // fm.MdiParent = this;
+            FrmHesabhaTafsili fm = new FrmHesabhaTafsili();
+            fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             fm.lblSalId.Text = _SalId;
             fm.lblSalMali.Text = _SalMali;
+            fm._levelNamber = 1;
+            //fm.Name = "FrmHesabhaTafsiliLevel1";
+            fm.Text = "حسابهای تفصیلی سطح 1";
+            ActiveForm(fm);
+        }
+
+        private void btnHesabhaTafsiliLevel2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabhaTafsili fm = new FrmHesabhaTafsili();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm._levelNamber = 2;
+            //fm.Name = "FrmHesabhaTafsiliLevel2";
+            fm.Text = "حسابهای تفصیلی سطح 2";
+            ActiveForm(fm);
+
+        }
+
+        private void btnHesabhaTafsiliLevel3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmHesabhaTafsili fm = new FrmHesabhaTafsili();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm._levelNamber = 3;
+            //fm.Name = "FrmHesabhaTafsiliLevel3";
+            fm.Text = "حسابهای تفصیلی سطح 3";
             ActiveForm(fm);
 
         }

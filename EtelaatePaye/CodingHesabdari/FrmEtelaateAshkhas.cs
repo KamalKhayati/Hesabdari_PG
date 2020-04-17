@@ -203,7 +203,7 @@ namespace EtelaatePaye.CodingHesabdari
                     var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(f => f.Id == _Id);
                     if (q != null)
                     {
-                        tpPersonel.PageVisible = q.IsPersonel;
+                        tpPersonel.PageVisible = q.IsKarkonan;
                         tpSahmSahamdar.PageVisible = q.IsSahamdar;
                         tpDarsadVizitor.PageVisible = q.IsVizitor;
                         tpDarsadRanande.PageVisible = q.IsRanande;

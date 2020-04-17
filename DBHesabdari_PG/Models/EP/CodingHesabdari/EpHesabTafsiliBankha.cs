@@ -17,14 +17,16 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
-   public class EpHesabTafsiliHesabBanki
+   public class EpHesabTafsiliBankha
     {
         public int Id { get; set; }
         [Required]
         public int SalId { get; set; }
         [Required]
+        public int LevelNamber { get; set; }
+        [Required]
         public int Code { get; set; }
-        [Required, MaxLength(100)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required, MaxLength(40)]
         public string NameBank { get; set; }
@@ -43,7 +45,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [MaxLength(40)]
         public string ShomareMoshtari { get; set; }
         [Column(TypeName = "Date")]
-        public DateTime? StartDate { get; set; }
+        public DateTime TarikhEjad { get; set; }
         [Required, MaxLength(40)]
         public string NoeArz { get; set; }
         [Required]
@@ -54,7 +56,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public string SharhHesab { get; set; }
         [Required]
         public int GroupTafsiliId { get; set; }
-        public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
         [Required]
         public int NameBankId { get; set; }
         public virtual EpNameBank EpNameBank1 { get; set; }

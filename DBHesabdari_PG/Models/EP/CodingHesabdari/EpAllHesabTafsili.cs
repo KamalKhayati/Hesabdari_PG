@@ -13,8 +13,10 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
+        public int LevelNamber { get; set; }
+        [Required]
         public int Code { get; set; }
-        [Required, MaxLength(100)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required]
         public int GroupTafsiliId { get; set; }
@@ -26,10 +28,20 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //[Required]
         //public int SandoghId { get; set; }
         //public virtual TarifSandogh TarifSandogh1 { get; set; }
-        public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
-        public virtual EpHesabTafsiliSandogh EpHesabTafsiliSandogh1 { get; set; }
-        public virtual EpHesabTafsiliHesabBanki EpHesabTafsiliHesabBanki1 { get; set; }
+       // public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
+        public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
         public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
+        public virtual EpHesabTafsiliAghlamAnbar EpHesabTafsiliAghlamAnbar1 { get; set; }
+        public virtual EpHesabTafsiliDaraeha EpHesabTafsiliDaraeha1 { get; set; }
+        public virtual EpHesabTafsiliSandogh EpHesabTafsiliSandogh1 { get; set; }
+        public virtual EpHesabTafsiliBankha EpHesabTafsiliBankha1 { get; set; }
+        public virtual EpHesabTafsiliVam EpHesabTafsiliVam1 { get; set; }
+        public virtual EpHesabTafsiliMarakezHazine EpHesabTafsiliMarakezHazine1 { get; set; }
+        public virtual EpHesabTafsiliShoabat EpHesabTafsiliShoabat1 { get; set; }
+        public virtual EpHesabTafsiliProzhe EpHesabTafsiliProzhe1 { get; set; }
+        public virtual EpHesabTafsiliGharardad EpHesabTafsiliGharardad1 { get; set; }
+        public virtual EpHesabTafsiliSayer EpHesabTafsiliSayer1 { get; set; }
+
         //public virtual ICollection<HaghOzviat> HaghOzviats { get; set; }
         //public virtual ICollection<AsnadeHesabdariRow> AsnadeHesabdariRows { get; set; }
         //public virtual ICollection<CheckTazmin> CheckTazmins { get; set; }
