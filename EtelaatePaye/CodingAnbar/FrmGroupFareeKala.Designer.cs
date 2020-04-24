@@ -1306,7 +1306,7 @@
             // txtId
             // 
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId.EditValue = "آیدی صندوق";
+            this.txtId.EditValue = "";
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(565, 110);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);

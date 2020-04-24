@@ -236,7 +236,7 @@
             // txtId_1
             // 
             this.txtId_1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_1.EditValue = "آیدی";
+            this.txtId_1.EditValue = "";
             this.txtId_1.Location = new System.Drawing.Point(437, 11);
             this.txtId_1.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_1.Name = "txtId_1";
@@ -776,7 +776,6 @@
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // colId
             // 
@@ -1008,7 +1007,6 @@
             this.gridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
-            this.gridView2.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // gridColumn1
             // 
@@ -1398,7 +1396,7 @@
             // txtId_2
             // 
             this.txtId_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_2.EditValue = "آیدی";
+            this.txtId_2.EditValue = "";
             this.txtId_2.Location = new System.Drawing.Point(445, 56);
             this.txtId_2.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_2.Name = "txtId_2";
@@ -1564,7 +1562,6 @@
             this.gridView3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
-            this.gridView3.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // gridColumn9
             // 
@@ -2026,7 +2023,7 @@
             // txtId_3
             // 
             this.txtId_3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_3.EditValue = "آیدی";
+            this.txtId_3.EditValue = "";
             this.txtId_3.Location = new System.Drawing.Point(445, 101);
             this.txtId_3.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_3.Name = "txtId_3";

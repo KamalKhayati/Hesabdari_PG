@@ -41,6 +41,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
+
                     var q1 = dataContext.EpNameAdresss.ToList();
                     if (q1.Count > 0)
                         epNameAdresssBindingSource.DataSource = q1;
@@ -58,7 +60,9 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameAdress_Load(object sender, EventArgs e)
         {
+            _SalId = Convert.ToInt32(lblSalId.Text);
             FillDataGridNameAdress();
+            btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
             //using (var db = new MyContext())
             //{
             //    try
@@ -211,7 +215,6 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 btnEdit_Click(null, null);
             }
-
         }
 
         private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
@@ -254,7 +257,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 db.SaveChanges();
 
                                 btnDisplyActiveList_Click(null, null);
-                               // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                                 if (gridView1.RowCount > 0)
                                     gridView1.FocusedRowHandle = EditRowIndex - 1;
                                 HelpClass1.ClearControls(panelControl1);
@@ -265,7 +268,7 @@ namespace EtelaatePaye.CodingHesabdari
                         catch (DbUpdateException)
                         {
                             XtraMessageBox.Show("حذف این ردیف مقدور نیست \n" +
-                                " جهت حذف ردیف مورد نظر در ابتدا بایستی زیر مجموعه های این ردیف در قسمت آدرس اشخاص حذف شود" 
+                                " جهت حذف ردیف مورد نظر در ابتدا بایستی زیر مجموعه های این ردیف در قسمت آدرس اشخاص حذف شود"
                                 , "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         catch (Exception ex)
@@ -284,25 +287,29 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView1.RowCount > 0)
                 {
-                    gridControl1.Enabled = false;
-                    EditRowIndex = gridView1.FocusedRowHandle;
-                    En = EnumCED.Edit;
-                    En = EnumCED.Edit;
-                    HelpClass1.InActiveButtons(panelControl2);
-                    HelpClass1.ActiveControls(panelControl1);
+                        gridControl1.Enabled = false;
+                        EditRowIndex = gridView1.FocusedRowHandle;
+                        En = EnumCED.Edit;
+                        En = EnumCED.Edit;
+                        HelpClass1.InActiveButtons(panelControl2);
+                        HelpClass1.ActiveControls(panelControl1);
 
-                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                        txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                        txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
 
-                    txtName.Focus();
+                        txtName.Focus();
+
                 }
+            }
+        }
 
-            }        }
-
+        int _SalId = 0;
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (btnSave.Enabled)
             {
+                _SalId = Convert.ToInt32(lblSalId.Text);
+
                 if (TextEditValidation())
                 {
                     if (En == EnumCED.Create)
@@ -312,6 +319,8 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpNameAdress obj = new EpNameAdress();
+                                obj.SalId = _SalId;
+                                obj.Code = db.EpNameAdresss.Any() ? db.EpNameAdresss.Max(s => s.Code) + 1 : 1;
                                 obj.Name = txtName.Text;
 
                                 db.EpNameAdresss.Add(obj);
@@ -462,7 +471,8 @@ namespace EtelaatePaye.CodingHesabdari
                     }
                 }
 
-            }        }
+            }
+        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -473,6 +483,7 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.ActiveButtons(panelControl2);
                 HelpClass1.ClearControls(panelControl1);
                 HelpClass1.InActiveControls(panelControl1);
+                btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
             }
         }
@@ -505,13 +516,18 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            if (gridView1.RowCount > 0)
+            try
             {
-                txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                if (gridView1.RowCount > 0)
+                {
+                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                }
             }
-
-
+            catch (Exception)
+            {
+            }
         }
     }
 }

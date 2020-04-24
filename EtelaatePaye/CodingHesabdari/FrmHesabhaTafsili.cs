@@ -85,7 +85,7 @@ namespace EtelaatePaye.CodingHesabdari
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    btnDelete.Enabled = btnEdit.Enabled = false;
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                     if (lblUserId.Text == "1")
                     {
                         switch (_SelectedTabPage)
@@ -183,8 +183,21 @@ namespace EtelaatePaye.CodingHesabdari
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
-                    cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
+                    if (_levelNamber == 1)
+                    {
+                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
+                        cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
+                    }
+                   else if (_levelNamber == 2)
+                    {
+                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
+                        cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
+                    }
+                   else if (_levelNamber == 3)
+                    {
+                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel3.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
+                        cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -294,6 +307,7 @@ namespace EtelaatePaye.CodingHesabdari
             gridView = gridView_AllHesabTafsili;
             _SelectedTabPage = xtcHesabhaTafsili.SelectedTabPage.Name;
             FillGridViewHesabTafsili();
+            btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
 
             using (var db = new MyContext())
             {
@@ -557,16 +571,14 @@ namespace EtelaatePaye.CodingHesabdari
         public void btnDisplyList_Click(object sender, EventArgs e)
         {
             FillGridViewHesabTafsili();
-            HelpClass1.ClearControls(PanelControl);
         }
 
-        private void gridView1_KeyPress(object sender, KeyPressEventArgs e)
+        private void gridView_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
             {
                 btnEdit_Click(null, null);
             }
-
         }
 
         private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
@@ -584,6 +596,7 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.ClearControls(PanelControl);
                 HelpClass1.ActiveControls(PanelControl);
                 chkIsActive.Checked = true;
+                chkHaghighi_Ashkhas.Checked = true;
                 txtTarikhEjad.Text = DateTime.Now.ToString().Substring(0, 10);
                 FillcmbGroupTafsili();
                 cmbGroupTafsili.Focus();
@@ -645,8 +658,6 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView.RowCount > 0)
                 {
-                    if (!string.IsNullOrEmpty(txtId.Text))
-                    {
                         gridControl.Enabled = false;
                         EditRowIndex = gridView.FocusedRowHandle;
                         En = EnumCED.Edit;
@@ -674,8 +685,6 @@ namespace EtelaatePaye.CodingHesabdari
                         _IsActiveBeforeEdit = chkIsActive.Checked;
                         _GroupTafsiliIdBeforeEdit = Convert.ToInt32(cmbGroupTafsili.EditValue);
                         cmbGroupTafsili.Focus();
-
-                    }
                 }
             }
         }
@@ -724,7 +733,9 @@ namespace EtelaatePaye.CodingHesabdari
                                             objAshkhas.IsActive = _IsActive;
                                             objAshkhas.SharhHesab = _txtSharh;
                                             objAshkhas.GroupTafsiliId = _cmbGroupTafsiliId;
-                                            objAshkhas.IsKarkonan = chkKarconan_Ashkhas.Checked;
+                                            objAshkhas.IsHaghighi = chkHaghighi_Ashkhas.Checked;
+                                            objAshkhas.IsHoghoghi = chkHoghoghi_Ashkhas.Checked;
+                                            objAshkhas.IsPersonel = chkPersonel_Ashkhas.Checked;
                                             objAshkhas.IsSahamdar = chkSahamdar_Ashkhas.Checked;
                                             objAshkhas.IsVizitor = chkVizitor_Ashkhas.Checked;
                                             objAshkhas.IsRanande = chkRanande_Ashkhas.Checked;
@@ -1003,12 +1014,13 @@ namespace EtelaatePaye.CodingHesabdari
                                                 fm.lblUserName.Text = lblUserName.Text;
                                                 fm.lblSalId.Text = lblSalId.Text;
                                                 fm.lblSalMali.Text = lblSalMali.Text;
-                                                // ActiveForm(fm);
-                                                fm.cmbGroupTafsili.EditValue = _cmbGroupTafsiliId;
+                                                //fm._levelNamber = _levelNamber;
+                                                fm._GroupTafsiliId = _cmbGroupTafsiliId;
                                                 var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _CodeTafsili && s.SalId == _SalId && s.LevelNamber == _levelNamber);
                                                 if (q != null)
-                                                    fm.cmbTafsiliAshkhas.EditValue = q.Id;
+                                                    fm._AshkhasId = q.Id;
                                                 fm.cmbGroupTafsili.ReadOnly = fm.cmbTafsiliAshkhas.ReadOnly = true;
+                                                fm.btnReloadGroupTafsili_Ashkhas.Enabled = fm.btnReloadHesabTafsili_Ashkhas.Enabled = false;
                                                 fm.ShowDialog();
                                             }
                                             break;
@@ -1042,7 +1054,9 @@ namespace EtelaatePaye.CodingHesabdari
                                             q.EpHesabTafsiliAshkhas1.IsActive = _IsActive;
                                             q.EpHesabTafsiliAshkhas1.SharhHesab = _txtSharh;
                                             q.EpHesabTafsiliAshkhas1.GroupTafsiliId = _cmbGroupTafsiliId;
-                                            q.EpHesabTafsiliAshkhas1.IsKarkonan = chkKarconan_Ashkhas.Checked;
+                                            q.EpHesabTafsiliAshkhas1.IsHaghighi = chkHaghighi_Ashkhas.Checked;
+                                            q.EpHesabTafsiliAshkhas1.IsHoghoghi = chkHoghoghi_Ashkhas.Checked;
+                                            q.EpHesabTafsiliAshkhas1.IsPersonel = chkPersonel_Ashkhas.Checked;
                                             q.EpHesabTafsiliAshkhas1.IsSahamdar = chkSahamdar_Ashkhas.Checked;
                                             q.EpHesabTafsiliAshkhas1.IsVizitor = chkVizitor_Ashkhas.Checked;
                                             q.EpHesabTafsiliAshkhas1.IsRanande = chkRanande_Ashkhas.Checked;
@@ -1252,6 +1266,7 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.ActiveButtons(panelControl1);
                 HelpClass1.ClearControls(PanelControl);
                 HelpClass1.InActiveControls(PanelControl);
+                btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
             }
         }
@@ -1322,86 +1337,96 @@ namespace EtelaatePaye.CodingHesabdari
             fm.lblUserName.Text = lblUserName.Text;
             fm.lblSalId.Text = lblSalId.Text;
             fm.lblSalMali.Text = lblSalMali.Text;
-            // ActiveForm(fm);
+            //fm._levelNamber=_levelNamber;
             fm.cmbGroupTafsili.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupTafsiliId"));
             fm.cmbTafsiliAshkhas.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("Id").ToString());
             fm.cmbGroupTafsili.ReadOnly = fm.cmbTafsiliAshkhas.ReadOnly = true;
+            fm.btnReloadGroupTafsili_Ashkhas.Enabled = fm.btnReloadHesabTafsili_Ashkhas.Enabled = false;
             fm.ShowDialog();
 
         }
 
         private void gridView_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            if (gridView.RowCount > 0)
+            try
             {
-                cmbGroupTafsili.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupTafsiliId"));
-                txtId.Text = gridView.GetFocusedRowCellValue("Id").ToString();
-                txtGroupCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(0, _Carakter);
-                txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(_Carakter);
-                txtName.Text = gridView.GetFocusedRowCellValue("Name").ToString();
-                txtTarikhEjad.Text = gridView.GetFocusedRowCellValue("TarikhEjad") != null ? gridView.GetFocusedRowCellValue("TarikhEjad").ToString().Substring(0, 10) : "";
-                chkIsActive.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsActive"));
-                txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab").ToString();
-
-                switch (_SelectedTabPage)
+                if (gridView.RowCount > 0)
                 {
-                    case "xtpAshkhas":
-                        {
-                            chkKarconan_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsKarkonan"));
-                            chkSahamdar_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsSahamdar"));
-                            chkVizitor_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsVizitor"));
-                            chkRanande_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsRanande"));
-                            chkKharidar_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsKharidar"));
-                            chkFroshandeh_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsFroshandeh"));
+                    txtId.Text = gridView.GetFocusedRowCellValue("Id").ToString();
+                    cmbGroupTafsili.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupTafsiliId"));
+                    txtGroupCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(0, _Carakter);
+                    txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(_Carakter);
+                    txtName.Text = gridView.GetFocusedRowCellValue("Name").ToString();
+                    txtTarikhEjad.Text = gridView.GetFocusedRowCellValue("TarikhEjad") != null ? gridView.GetFocusedRowCellValue("TarikhEjad").ToString().Substring(0, 10) : "";
+                    chkIsActive.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsActive"));
+                    txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab").ToString();
+
+                    switch (_SelectedTabPage)
+                    {
+                        case "xtpAshkhas":
+                            {
+                                chkHaghighi_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsHaghighi"));
+                                chkHoghoghi_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsHoghoghi"));
+                                chkPersonel_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsKarkonan"));
+                                chkSahamdar_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsSahamdar"));
+                                chkVizitor_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsVizitor"));
+                                chkRanande_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsRanande"));
+                                chkKharidar_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsKharidar"));
+                                chkFroshandeh_Ashkhas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsFroshandeh"));
+                                break;
+                            }
+                        case "xtpAghlamAnbar":
+                            {
+                                txtCodeKala_Aghlam.Text = gridView.GetFocusedRowCellValue("CodeKala").ToString();
+                                break;
+                            }
+                        case "xtpDaraeha":
+                            {
+                                txtCodeAmval_Daraeha.Text = gridView.GetFocusedRowCellValue("CodeAmval").ToString();
+                                cmbRaveshEstehlak_Daraeha.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexRaveshEstehlak"));
+                                txtOmreMofid_Daraeha.Text = gridView.GetFocusedRowCellValue("OmreMofid").ToString();
+                                txtDarsadEstehlak_Daraeha.Text = gridView.GetFocusedRowCellValue("DarsadEstehlak").ToString();
+                                txtArzeshEsghat_Daraeha.Text = gridView.GetFocusedRowCellValue("ArzeshEsghat").ToString();
+                                break;
+                            }
+                        case "xtpSandoghha":
+                            {
+                                txtNameMasol_Sandogh.Text = gridView.GetFocusedRowCellValue("NameMasol").ToString();
+                                chkIsDefault_Sandogh.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                                break;
+                            }
+                        case "xtpBankha":
+                            {
+                                cmbNameBank_Bank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameBankId").ToString());
+                                cmbNoeHesab_Bank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NoeHesaId").ToString());
+                                cmbNoeArz_Bank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NoeArzId").ToString());
+                                chkIsDefault_Bank.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                                txtNameShobe_Bank.Text = gridView.GetFocusedRowCellValue("NameShobe").ToString();
+                                txtCodeShobe_Bank.Text = gridView.GetFocusedRowCellValue("CodeShobe").ToString();
+                                txtShomareHesab_Bank.Text = gridView.GetFocusedRowCellValue("ShomareHesab").ToString();
+                                txtShomareKart_Bank.Text = gridView.GetFocusedRowCellValue("ShomareKart").ToString();
+                                txtShomareShaba_Bank.Text = gridView.GetFocusedRowCellValue("ShomareShaba").ToString();
+                                txtShomareMoshtari_Bank.Text = gridView.GetFocusedRowCellValue("ShomareMoshtari").ToString();
+                                break;
+                            }
+                        case "xtpVamha":
+                            {
+                                txtTarikhDaryaftVam_Vam.Text = gridView.GetFocusedRowCellValue("TarikhDaryaftVam") != null ? gridView.GetFocusedRowCellValue("TarikhDaryaftVam").ToString().Substring(0, 10) : "";
+                                txtSarresidAvalinGhest_Vam.Text = gridView.GetFocusedRowCellValue("SarresidAvalinGhest") != null ? gridView.GetFocusedRowCellValue("SarresidAvalinGhest").ToString().Substring(0, 10) : "";
+                                cmbNoeVam_Vam.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNoeVam").ToString());
+                                txtTedadAghsat_Vam.Text = gridView.GetFocusedRowCellValue("TedadAghsat").ToString();
+                                txtNerkhBahre_Vam.Text = gridView.GetFocusedRowCellValue("NerkhBahre").ToString();
+                                break;
+                            }
+                        default:
                             break;
-                        }
-                    case "xtpAghlamAnbar":
-                        {
-                            txtCodeKala_Aghlam.Text = gridView.GetFocusedRowCellValue("CodeKala").ToString();
-                            break;
-                        }
-                    case "xtpDaraeha":
-                        {
-                            txtCodeAmval_Daraeha.Text = gridView.GetFocusedRowCellValue("CodeAmval").ToString();
-                            cmbRaveshEstehlak_Daraeha.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexRaveshEstehlak"));
-                            txtOmreMofid_Daraeha.Text = gridView.GetFocusedRowCellValue("OmreMofid").ToString();
-                            txtDarsadEstehlak_Daraeha.Text = gridView.GetFocusedRowCellValue("DarsadEstehlak").ToString();
-                            txtArzeshEsghat_Daraeha.Text = gridView.GetFocusedRowCellValue("ArzeshEsghat").ToString();
-                            break;
-                        }
-                    case "xtpSandoghha":
-                        {
-                            txtNameMasol_Sandogh.Text = gridView.GetFocusedRowCellValue("NameMasol").ToString();
-                            chkIsDefault_Sandogh.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                            break;
-                        }
-                    case "xtpBankha":
-                        {
-                            cmbNameBank_Bank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameBankId").ToString());
-                            cmbNoeHesab_Bank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NoeHesaId").ToString());
-                            cmbNoeArz_Bank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NoeArzId").ToString());
-                            chkIsDefault_Bank.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                            txtNameShobe_Bank.Text = gridView.GetFocusedRowCellValue("NameShobe").ToString();
-                            txtCodeShobe_Bank.Text = gridView.GetFocusedRowCellValue("CodeShobe").ToString();
-                            txtShomareHesab_Bank.Text = gridView.GetFocusedRowCellValue("ShomareHesab").ToString();
-                            txtShomareKart_Bank.Text = gridView.GetFocusedRowCellValue("ShomareKart").ToString();
-                            txtShomareShaba_Bank.Text = gridView.GetFocusedRowCellValue("ShomareShaba").ToString();
-                            txtShomareMoshtari_Bank.Text = gridView.GetFocusedRowCellValue("ShomareMoshtari").ToString();
-                            break;
-                        }
-                    case "xtpVamha":
-                        {
-                            txtTarikhDaryaftVam_Vam.Text = gridView.GetFocusedRowCellValue("TarikhDaryaftVam") != null ? gridView.GetFocusedRowCellValue("TarikhDaryaftVam").ToString().Substring(0, 10) : "";
-                            txtSarresidAvalinGhest_Vam.Text = gridView.GetFocusedRowCellValue("SarresidAvalinGhest") != null ? gridView.GetFocusedRowCellValue("SarresidAvalinGhest").ToString().Substring(0, 10) : "";
-                            cmbNoeVam_Vam.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNoeVam").ToString());
-                            txtTedadAghsat_Vam.Text = gridView.GetFocusedRowCellValue("TedadAghsat").ToString();
-                            txtNerkhBahre_Vam.Text = gridView.GetFocusedRowCellValue("NerkhBahre").ToString();
-                            break;
-                        }
-                    default:
-                        break;
+                    }
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
                 }
-                btnDelete.Enabled = btnEdit.Enabled = true;
+
+            }
+            catch (Exception)
+            {
             }
         }
 
@@ -1768,7 +1793,7 @@ namespace EtelaatePaye.CodingHesabdari
                 txtOmreMofid_Daraeha.Enabled = txtArzeshEsghat_Daraeha.Enabled = true;
                 txtDarsadEstehlak_Daraeha.Enabled = false;
             }
-           else if (cmbRaveshEstehlak_Daraeha.SelectedIndex == 1)
+            else if (cmbRaveshEstehlak_Daraeha.SelectedIndex == 1)
             {
                 txtDarsadEstehlak_Daraeha.Enabled = txtArzeshEsghat_Daraeha.Enabled = true;
                 txtOmreMofid_Daraeha.Enabled = false;
@@ -1781,10 +1806,22 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void cmbNoeVam_Vam_Enter(object sender, EventArgs e)
         {
-            if (En==EnumCED.Create)
+            if (En == EnumCED.Create)
             {
                 cmbNoeVam_Vam.ShowPopup();
             }
+        }
+
+        private void chkHoghoghi_Ashkhas_CheckedChanged(object sender, EventArgs e)
+        {
+            chkHaghighi_Ashkhas.Checked = chkHoghoghi_Ashkhas.Checked ? false : true;
+
+        }
+
+        private void chkHaghighi_Ashkhas_CheckedChanged(object sender, EventArgs e)
+        {
+            chkHoghoghi_Ashkhas.Checked = chkHaghighi_Ashkhas.Checked ? false : true;
+
         }
     }
 }

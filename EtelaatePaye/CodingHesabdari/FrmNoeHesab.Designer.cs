@@ -141,7 +141,6 @@
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             this.gridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyUp);
             this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // colId
             // 
@@ -248,7 +247,7 @@
             // 
             // txtId
             // 
-            this.txtId.EditValue = "آیدی صندوق";
+            this.txtId.EditValue = "";
             this.txtId.Location = new System.Drawing.Point(13, 7);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
@@ -431,7 +430,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(413, 637);
+            this.MaximumSize = new System.Drawing.Size(420, 637);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(377, 579);
             this.Name = "FrmNoeHesab";

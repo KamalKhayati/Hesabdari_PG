@@ -47,8 +47,9 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                     int _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q1 = dataContext.EpNameBanks.Where(f=>f.SalId== _SalId).OrderBy(s => s.Code).ToList();
+                    var q1 = dataContext.EpNameBanks.Where(f => f.SalId == _SalId).OrderBy(s => s.Code).ToList();
                     if (q1.Count > 0)
                         epNameBanksBindingSource.DataSource = q1;
                     else
@@ -65,7 +66,9 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameBank_Load(object sender, EventArgs e)
         {
+            _SalId = Convert.ToInt32(lblSalId.Text);
             FillDataGridNameBank();
+            btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
             //using (var db = new MyContext())
             //{
             //    try
@@ -295,10 +298,8 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (btnEdit.Visible)
             {
-                if (gridView1.SelectedRowsCount > 0)
+                if (gridView1.RowCount > 0)
                 {
-                    if (!string.IsNullOrEmpty(txtId.Text))
-                    {
                         gridControl1.Enabled = false;
                         EditRowIndex = gridView1.FocusedRowHandle;
                         En = EnumCED.Edit;
@@ -309,16 +310,17 @@ namespace EtelaatePaye.CodingHesabdari
                         txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
 
                         txtName.Focus();
-
-                    }
                 }
             }
         }
+
+        int _SalId = 0;
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (btnSave.Enabled)
             {
+                _SalId = Convert.ToInt32(lblSalId.Text);
                 if (TextEditValidation())
                 {
                     if (En == EnumCED.Create)
@@ -328,7 +330,6 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpNameBank obj = new EpNameBank();
-                                int _SalId = Convert.ToInt32(lblSalId.Text);
                                 obj.SalId = _SalId;
                                 obj.Code = db.EpNameBanks.Any() ? db.EpNameBanks.Where(s => s.SalId == _SalId).Max(s => s.Code) + 1 : 1;
                                 obj.Name = txtName.Text;
@@ -368,7 +369,6 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
-                                int _SalId = Convert.ToInt32(lblSalId.Text);
                                 string _Name = txtName.Text;
                                 int RowId = Convert.ToInt32(txtId.Text);
                                 var q = db.EpNameBanks.FirstOrDefault(p => p.SalId == _SalId && p.Id == RowId);
@@ -494,6 +494,7 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.ActiveButtons(panelControl2);
                 HelpClass1.ClearControls(panelControl1);
                 HelpClass1.InActiveControls(panelControl1);
+                btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
             }
         }
@@ -510,7 +511,9 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameBank_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms["FrmHesabhaTafsili"] != null)
+            if (Application.OpenForms["FrmHesabhaTafsiliLevel1"] != null
+                || Application.OpenForms["FrmHesabhaTafsiliLevel2"] != null
+                || Application.OpenForms["FrmHesabhaTafsiliLevel3"] != null)
             {
                 Fm.FillcmbNameBank();
                 //Fm.cmbNameBank_Enter(null, null);
@@ -532,13 +535,19 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            if (gridView1.RowCount > 0)
+            try
             {
+                if (gridView1.RowCount > 0)
+                {
 
-                txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                }
             }
-
+            catch (Exception)
+            {
+            }
 
         }
     }

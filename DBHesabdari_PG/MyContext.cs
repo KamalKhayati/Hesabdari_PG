@@ -120,6 +120,8 @@ namespace DBHesabdari_PG
         public virtual DbSet<EpSahmSahamdar_A> EpSahmSahamdar_As { get; set; }
         public virtual DbSet<EpDarsadVizitor_A> EpDarsadVizitor_As { get; set; }
         public virtual DbSet<EpDarsadRanande_A> EpDarsadRanande_As { get; set; }
+
+
         public virtual DbSet<EpListAnbarha> EpListAnbarhas { get; set; }
         public virtual DbSet<EpVahedKala> EpVahedKalas { get; set; }
         public virtual DbSet<EpGroupAsliKala> EpGroupAsliKalas { get; set; }

@@ -34,9 +34,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //public int AshkhasCode { get; set; }
         //[Required, MaxLength(100)]
         //public string AshkhasName { get; set; }
-        [MaxLength(50)]
+        [MaxLength(70)]
         public string NameEkhtesar { get; set; }
-        [MaxLength(50)]
+        [MaxLength(70)]
         public string NoeFaaliat { get; set; }
         [MaxLength(11)]
         public string ShenaseMelli { get; set; }

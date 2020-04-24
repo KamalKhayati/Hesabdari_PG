@@ -34,7 +34,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public DateTime TarikhEjad { get; set; }
         [Required]
         public bool IsActive { get; set; }
-        public bool IsKarkonan { get; set; }
+        public bool IsHaghighi { get; set; }
+        public bool IsHoghoghi { get; set; }
+        public bool IsPersonel { get; set; }
         public bool IsSahamdar { get; set; }
         public bool IsVizitor { get; set; }
         public bool IsRanande { get; set; }
@@ -49,13 +51,13 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
        // public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
         public virtual EpMoshakhasat_A EpMoshakhasat_A1 { get; set; }
+        public virtual EpMPersoneli_A EpMPersoneli_A1 { get; set; }
         public virtual ICollection<EpAdress_A> EpAdress_As { get; set; }
         public virtual ICollection<EpShTamas_A> EpShTamas_As { get; set; }
         public virtual ICollection<EpEetebarat_A> EpEetebarat_As { get; set; }
         public virtual ICollection<EpFazaMajazi_A> EpFazaMajazi_As { get; set; }
         public virtual ICollection<EpHesabBanki_A> EpHesabBanki_As { get; set; }
         public virtual ICollection<EpDarsadTakhfif_A> EpDarsadTakhfif_As { get; set; }
-        public virtual EpMPersoneli_A EpMPersoneli_A1 { get; set; }
         public virtual ICollection<EpSahmSahamdar_A> EpSahmSahamdar_As { get; set; }
         public virtual ICollection<EpDarsadVizitor_A> EpDarsadVizitor_As { get; set; }
         public virtual ICollection<EpDarsadRanande_A> EpDarsadRanande_As { get; set; }

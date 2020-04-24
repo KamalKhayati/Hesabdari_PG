@@ -645,7 +645,7 @@ namespace Hesabdari_PG.Forms
             fm.lblSalId.Text = _SalId;
             fm.lblSalMali.Text = _SalMali;
             fm._levelNamber = 1;
-            //fm.Name = "FrmHesabhaTafsiliLevel1";
+            fm.Name = "FrmHesabhaTafsiliLevel1";
             fm.Text = "حسابهای تفصیلی سطح 1";
             ActiveForm(fm);
         }
@@ -659,7 +659,7 @@ namespace Hesabdari_PG.Forms
             fm.lblSalId.Text = _SalId;
             fm.lblSalMali.Text = _SalMali;
             fm._levelNamber = 2;
-            //fm.Name = "FrmHesabhaTafsiliLevel2";
+            fm.Name = "FrmHesabhaTafsiliLevel2";
             fm.Text = "حسابهای تفصیلی سطح 2";
             ActiveForm(fm);
 
@@ -674,7 +674,7 @@ namespace Hesabdari_PG.Forms
             fm.lblSalId.Text = _SalId;
             fm.lblSalMali.Text = _SalMali;
             fm._levelNamber = 3;
-            //fm.Name = "FrmHesabhaTafsiliLevel3";
+            fm.Name = "FrmHesabhaTafsiliLevel3";
             fm.Text = "حسابهای تفصیلی سطح 3";
             ActiveForm(fm);
 

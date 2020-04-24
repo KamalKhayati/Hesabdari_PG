@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHesabhaTafsili));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip18 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip19 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl_AghlamAnbar = new DevExpress.XtraEditors.PanelControl();
             this.cmbGroupTafsili_Aghlam = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Aghlam = new DevExpress.XtraEditors.SimpleButton();
@@ -89,6 +89,8 @@
             this.xtpAghlamAnbar = new DevExpress.XtraTab.XtraTabPage();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.panelControl_Ashkhas = new DevExpress.XtraEditors.PanelControl();
+            this.chkHaghighi_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
+            this.chkHoghoghi_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
             this.btnReloadGroupTafsili_Ashkhas = new DevExpress.XtraEditors.SimpleButton();
             this.chkFroshandeh_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
             this.chkKharidar_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
@@ -99,7 +101,7 @@
             this.chkVizitor_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.chkSahamdar_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
-            this.chkKarconan_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
+            this.chkPersonel_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
             this.txtName_Ashkhas = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -137,6 +139,8 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGroupTafsili = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIsHaghighi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIsHoghoghi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsSahamdar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsKarkonan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsRanande = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -553,6 +557,8 @@
             this.xtpAghlamAnbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Ashkhas)).BeginInit();
             this.panelControl_Ashkhas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHaghighi_Ashkhas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHoghoghi_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkFroshandeh_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkKharidar_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Ashkhas.Properties)).BeginInit();
@@ -561,7 +567,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSharh_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkVizitor_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSahamdar_Ashkhas.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkKarconan_Ashkhas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkPersonel_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Ashkhas.Properties)).BeginInit();
@@ -907,7 +913,7 @@
             // txtId_Aghlam
             // 
             this.txtId_Aghlam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Aghlam.EditValue = "آیدی صندوق";
+            this.txtId_Aghlam.EditValue = "";
             this.txtId_Aghlam.Enabled = false;
             this.txtId_Aghlam.Location = new System.Drawing.Point(495, 53);
             this.txtId_Aghlam.Margin = new System.Windows.Forms.Padding(4);
@@ -1013,9 +1019,9 @@
             this.btnNewCode_Aghlam.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Aghlam.Name = "btnNewCode_Aghlam";
             this.btnNewCode_Aghlam.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem1.Text = "Alt+N";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnNewCode_Aghlam.SuperTip = superToolTip1;
+            toolTipTitleItem12.Text = "Alt+N";
+            superToolTip12.Items.Add(toolTipTitleItem12);
+            this.btnNewCode_Aghlam.SuperTip = superToolTip12;
             this.btnNewCode_Aghlam.TabIndex = 45;
             this.btnNewCode_Aghlam.TabStop = false;
             this.btnNewCode_Aghlam.Text = "کد جدید";
@@ -1138,8 +1144,7 @@
             this.gridView_Aghlam.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Aghlam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Aghlam.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Aghlam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Aghlam.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Aghlam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn7
             // 
@@ -1286,8 +1291,6 @@
             this.colEpAllHesabTafsili12.FieldName = "EpAllHesabTafsili1.EpAllGroupTafsili1.EpGroupTafsiliLevel1.TabaghehName";
             this.colEpAllHesabTafsili12.MinWidth = 25;
             this.colEpAllHesabTafsili12.Name = "colEpAllHesabTafsili12";
-            this.colEpAllHesabTafsili12.Visible = true;
-            this.colEpAllHesabTafsili12.VisibleIndex = 8;
             this.colEpAllHesabTafsili12.Width = 194;
             // 
             // gridColumn15
@@ -1302,7 +1305,7 @@
             this.gridColumn15.MinWidth = 23;
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 9;
+            this.gridColumn15.VisibleIndex = 8;
             this.gridColumn15.Width = 599;
             // 
             // gridColumn13
@@ -1340,6 +1343,8 @@
             // 
             // panelControl_Ashkhas
             // 
+            this.panelControl_Ashkhas.Controls.Add(this.chkHaghighi_Ashkhas);
+            this.panelControl_Ashkhas.Controls.Add(this.chkHoghoghi_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.btnReloadGroupTafsili_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.chkFroshandeh_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.chkKharidar_Ashkhas);
@@ -1349,7 +1354,7 @@
             this.panelControl_Ashkhas.Controls.Add(this.chkVizitor_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.labelControl2);
             this.panelControl_Ashkhas.Controls.Add(this.chkSahamdar_Ashkhas);
-            this.panelControl_Ashkhas.Controls.Add(this.chkKarconan_Ashkhas);
+            this.panelControl_Ashkhas.Controls.Add(this.chkPersonel_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.txtName_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.labelControl7);
             this.panelControl_Ashkhas.Controls.Add(this.labelControl1);
@@ -1369,6 +1374,34 @@
             this.panelControl_Ashkhas.Name = "panelControl_Ashkhas";
             this.panelControl_Ashkhas.Size = new System.Drawing.Size(1155, 228);
             this.panelControl_Ashkhas.TabIndex = 34;
+            // 
+            // chkHaghighi_Ashkhas
+            // 
+            this.chkHaghighi_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkHaghighi_Ashkhas.EnterMoveNextControl = true;
+            this.chkHaghighi_Ashkhas.Location = new System.Drawing.Point(913, 186);
+            this.chkHaghighi_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
+            this.chkHaghighi_Ashkhas.Name = "chkHaghighi_Ashkhas";
+            this.chkHaghighi_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.chkHaghighi_Ashkhas.Properties.Appearance.Options.UseForeColor = true;
+            this.chkHaghighi_Ashkhas.Properties.Caption = "حقیقی";
+            this.chkHaghighi_Ashkhas.Size = new System.Drawing.Size(100, 35);
+            this.chkHaghighi_Ashkhas.TabIndex = 139;
+            this.chkHaghighi_Ashkhas.CheckedChanged += new System.EventHandler(this.chkHaghighi_Ashkhas_CheckedChanged);
+            // 
+            // chkHoghoghi_Ashkhas
+            // 
+            this.chkHoghoghi_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkHoghoghi_Ashkhas.EnterMoveNextControl = true;
+            this.chkHoghoghi_Ashkhas.Location = new System.Drawing.Point(792, 186);
+            this.chkHoghoghi_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
+            this.chkHoghoghi_Ashkhas.Name = "chkHoghoghi_Ashkhas";
+            this.chkHoghoghi_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.chkHoghoghi_Ashkhas.Properties.Appearance.Options.UseForeColor = true;
+            this.chkHoghoghi_Ashkhas.Properties.Caption = "حقوقی";
+            this.chkHoghoghi_Ashkhas.Size = new System.Drawing.Size(100, 35);
+            this.chkHoghoghi_Ashkhas.TabIndex = 140;
+            this.chkHoghoghi_Ashkhas.CheckedChanged += new System.EventHandler(this.chkHoghoghi_Ashkhas_CheckedChanged);
             // 
             // btnReloadGroupTafsili_Ashkhas
             // 
@@ -1390,7 +1423,7 @@
             // 
             this.chkFroshandeh_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkFroshandeh_Ashkhas.EnterMoveNextControl = true;
-            this.chkFroshandeh_Ashkhas.Location = new System.Drawing.Point(494, 186);
+            this.chkFroshandeh_Ashkhas.Location = new System.Drawing.Point(93, 188);
             this.chkFroshandeh_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.chkFroshandeh_Ashkhas.Name = "chkFroshandeh_Ashkhas";
             this.chkFroshandeh_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1403,7 +1436,7 @@
             // 
             this.chkKharidar_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkKharidar_Ashkhas.EnterMoveNextControl = true;
-            this.chkKharidar_Ashkhas.Location = new System.Drawing.Point(603, 184);
+            this.chkKharidar_Ashkhas.Location = new System.Drawing.Point(202, 186);
             this.chkKharidar_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.chkKharidar_Ashkhas.Name = "chkKharidar_Ashkhas";
             this.chkKharidar_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1445,7 +1478,7 @@
             // 
             this.chkRanande_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkRanande_Ashkhas.EnterMoveNextControl = true;
-            this.chkRanande_Ashkhas.Location = new System.Drawing.Point(724, 184);
+            this.chkRanande_Ashkhas.Location = new System.Drawing.Point(323, 186);
             this.chkRanande_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.chkRanande_Ashkhas.Name = "chkRanande_Ashkhas";
             this.chkRanande_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1462,7 +1495,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(482, 210);
+            this.groupBox2.Size = new System.Drawing.Size(482, 165);
             this.groupBox2.TabIndex = 134;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "توضیح یا تشریح حساب (اختیاری)";
@@ -1476,7 +1509,7 @@
             this.txtSharh_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSharh_Ashkhas.Properties.Appearance.Options.UseForeColor = true;
             this.txtSharh_Ashkhas.Properties.MaxLength = 500;
-            this.txtSharh_Ashkhas.Size = new System.Drawing.Size(474, 170);
+            this.txtSharh_Ashkhas.Size = new System.Drawing.Size(474, 125);
             this.txtSharh_Ashkhas.TabIndex = 0;
             this.txtSharh_Ashkhas.TabStop = false;
             // 
@@ -1484,7 +1517,7 @@
             // 
             this.chkVizitor_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkVizitor_Ashkhas.EnterMoveNextControl = true;
-            this.chkVizitor_Ashkhas.Location = new System.Drawing.Point(494, 136);
+            this.chkVizitor_Ashkhas.Location = new System.Drawing.Point(451, 188);
             this.chkVizitor_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.chkVizitor_Ashkhas.Name = "chkVizitor_Ashkhas";
             this.chkVizitor_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1510,7 +1543,7 @@
             // 
             this.chkSahamdar_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSahamdar_Ashkhas.EnterMoveNextControl = true;
-            this.chkSahamdar_Ashkhas.Location = new System.Drawing.Point(724, 136);
+            this.chkSahamdar_Ashkhas.Location = new System.Drawing.Point(681, 188);
             this.chkSahamdar_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.chkSahamdar_Ashkhas.Name = "chkSahamdar_Ashkhas";
             this.chkSahamdar_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1519,18 +1552,18 @@
             this.chkSahamdar_Ashkhas.Size = new System.Drawing.Size(100, 35);
             this.chkSahamdar_Ashkhas.TabIndex = 5;
             // 
-            // chkKarconan_Ashkhas
+            // chkPersonel_Ashkhas
             // 
-            this.chkKarconan_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkKarconan_Ashkhas.EnterMoveNextControl = true;
-            this.chkKarconan_Ashkhas.Location = new System.Drawing.Point(603, 136);
-            this.chkKarconan_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
-            this.chkKarconan_Ashkhas.Name = "chkKarconan_Ashkhas";
-            this.chkKarconan_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.chkKarconan_Ashkhas.Properties.Appearance.Options.UseForeColor = true;
-            this.chkKarconan_Ashkhas.Properties.Caption = "کارکنان";
-            this.chkKarconan_Ashkhas.Size = new System.Drawing.Size(100, 35);
-            this.chkKarconan_Ashkhas.TabIndex = 6;
+            this.chkPersonel_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkPersonel_Ashkhas.EnterMoveNextControl = true;
+            this.chkPersonel_Ashkhas.Location = new System.Drawing.Point(560, 188);
+            this.chkPersonel_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPersonel_Ashkhas.Name = "chkPersonel_Ashkhas";
+            this.chkPersonel_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.chkPersonel_Ashkhas.Properties.Appearance.Options.UseForeColor = true;
+            this.chkPersonel_Ashkhas.Properties.Caption = "پرسنل";
+            this.chkPersonel_Ashkhas.Size = new System.Drawing.Size(100, 35);
+            this.chkPersonel_Ashkhas.TabIndex = 6;
             // 
             // txtName_Ashkhas
             // 
@@ -1603,7 +1636,7 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl6.Appearance.Options.UseForeColor = true;
             this.labelControl6.AutoEllipsis = true;
-            this.labelControl6.Location = new System.Drawing.Point(1025, 184);
+            this.labelControl6.Location = new System.Drawing.Point(573, 142);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(53, 31);
@@ -1640,9 +1673,9 @@
             this.btnNewCode_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Ashkhas.Name = "btnNewCode_Ashkhas";
             this.btnNewCode_Ashkhas.Size = new System.Drawing.Size(130, 41);
-            toolTipTitleItem2.Text = "Alt+N";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnNewCode_Ashkhas.SuperTip = superToolTip2;
+            toolTipTitleItem13.Text = "Alt+N";
+            superToolTip13.Items.Add(toolTipTitleItem13);
+            this.btnNewCode_Ashkhas.SuperTip = superToolTip13;
             this.btnNewCode_Ashkhas.TabIndex = 132;
             this.btnNewCode_Ashkhas.TabStop = false;
             this.btnNewCode_Ashkhas.Text = "کد جدید";
@@ -1651,7 +1684,7 @@
             // txtId_Ashkhas
             // 
             this.txtId_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Ashkhas.EditValue = "آیدی صندوق";
+            this.txtId_Ashkhas.EditValue = "";
             this.txtId_Ashkhas.Location = new System.Drawing.Point(495, 51);
             this.txtId_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Ashkhas.Name = "txtId_Ashkhas";
@@ -1712,7 +1745,7 @@
             this.chkIsActive_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsActive_Ashkhas.EditValue = true;
             this.chkIsActive_Ashkhas.EnterMoveNextControl = true;
-            this.chkIsActive_Ashkhas.Location = new System.Drawing.Point(948, 179);
+            this.chkIsActive_Ashkhas.Location = new System.Drawing.Point(496, 137);
             this.chkIsActive_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsActive_Ashkhas.Name = "chkIsActive_Ashkhas";
             this.chkIsActive_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1942,8 +1975,6 @@
             this.colEpAllGroupTafsili11.FieldName = "EpAllGroupTafsili1.EpGroupTafsiliLevel1.TabaghehName";
             this.colEpAllGroupTafsili11.MinWidth = 25;
             this.colEpAllGroupTafsili11.Name = "colEpAllGroupTafsili11";
-            this.colEpAllGroupTafsili11.Visible = true;
-            this.colEpAllGroupTafsili11.VisibleIndex = 7;
             this.colEpAllGroupTafsili11.Width = 217;
             // 
             // colSharhHesab
@@ -1958,7 +1989,7 @@
             this.colSharhHesab.MinWidth = 24;
             this.colSharhHesab.Name = "colSharhHesab";
             this.colSharhHesab.Visible = true;
-            this.colSharhHesab.VisibleIndex = 8;
+            this.colSharhHesab.VisibleIndex = 7;
             this.colSharhHesab.Width = 489;
             // 
             // xtpAshkhas
@@ -2003,6 +2034,8 @@
             this.gridColumn4,
             this.gridColumn5,
             this.colGroupTafsili,
+            this.colIsHaghighi,
+            this.colIsHoghoghi,
             this.colIsSahamdar,
             this.colIsKarkonan,
             this.colIsRanande,
@@ -2037,8 +2070,7 @@
             this.gridView_Ashkhas.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Ashkhas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Ashkhas.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Ashkhas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Ashkhas.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Ashkhas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn1
             // 
@@ -2126,6 +2158,38 @@
             this.colGroupTafsili.VisibleIndex = 4;
             this.colGroupTafsili.Width = 173;
             // 
+            // colIsHaghighi
+            // 
+            this.colIsHaghighi.AppearanceCell.Options.UseTextOptions = true;
+            this.colIsHaghighi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsHaghighi.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsHaghighi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colIsHaghighi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsHaghighi.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsHaghighi.Caption = "حقیقی";
+            this.colIsHaghighi.FieldName = "IsHaghighi";
+            this.colIsHaghighi.MinWidth = 25;
+            this.colIsHaghighi.Name = "colIsHaghighi";
+            this.colIsHaghighi.Visible = true;
+            this.colIsHaghighi.VisibleIndex = 5;
+            this.colIsHaghighi.Width = 94;
+            // 
+            // colIsHoghoghi
+            // 
+            this.colIsHoghoghi.AppearanceCell.Options.UseTextOptions = true;
+            this.colIsHoghoghi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsHoghoghi.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsHoghoghi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colIsHoghoghi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsHoghoghi.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsHoghoghi.Caption = "حقوقی";
+            this.colIsHoghoghi.FieldName = "IsHoghoghi";
+            this.colIsHoghoghi.MinWidth = 25;
+            this.colIsHoghoghi.Name = "colIsHoghoghi";
+            this.colIsHoghoghi.Visible = true;
+            this.colIsHoghoghi.VisibleIndex = 6;
+            this.colIsHoghoghi.Width = 94;
+            // 
             // colIsSahamdar
             // 
             this.colIsSahamdar.AppearanceCell.Options.UseTextOptions = true;
@@ -2139,7 +2203,7 @@
             this.colIsSahamdar.MinWidth = 24;
             this.colIsSahamdar.Name = "colIsSahamdar";
             this.colIsSahamdar.Visible = true;
-            this.colIsSahamdar.VisibleIndex = 5;
+            this.colIsSahamdar.VisibleIndex = 7;
             this.colIsSahamdar.Width = 92;
             // 
             // colIsKarkonan
@@ -2150,12 +2214,12 @@
             this.colIsKarkonan.AppearanceHeader.Options.UseTextOptions = true;
             this.colIsKarkonan.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colIsKarkonan.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colIsKarkonan.Caption = "کارکنان";
-            this.colIsKarkonan.FieldName = "IsKarkonan";
+            this.colIsKarkonan.Caption = "پرسنل";
+            this.colIsKarkonan.FieldName = "IsPersonel";
             this.colIsKarkonan.MinWidth = 24;
             this.colIsKarkonan.Name = "colIsKarkonan";
             this.colIsKarkonan.Visible = true;
-            this.colIsKarkonan.VisibleIndex = 6;
+            this.colIsKarkonan.VisibleIndex = 8;
             this.colIsKarkonan.Width = 92;
             // 
             // colIsRanande
@@ -2171,7 +2235,7 @@
             this.colIsRanande.MinWidth = 24;
             this.colIsRanande.Name = "colIsRanande";
             this.colIsRanande.Visible = true;
-            this.colIsRanande.VisibleIndex = 7;
+            this.colIsRanande.VisibleIndex = 9;
             this.colIsRanande.Width = 92;
             // 
             // colIsVizitor
@@ -2187,7 +2251,7 @@
             this.colIsVizitor.MinWidth = 24;
             this.colIsVizitor.Name = "colIsVizitor";
             this.colIsVizitor.Visible = true;
-            this.colIsVizitor.VisibleIndex = 8;
+            this.colIsVizitor.VisibleIndex = 10;
             this.colIsVizitor.Width = 92;
             // 
             // colIsKharidar
@@ -2203,7 +2267,7 @@
             this.colIsKharidar.MinWidth = 24;
             this.colIsKharidar.Name = "colIsKharidar";
             this.colIsKharidar.Visible = true;
-            this.colIsKharidar.VisibleIndex = 9;
+            this.colIsKharidar.VisibleIndex = 11;
             this.colIsKharidar.Width = 94;
             // 
             // colIsFroshandeh
@@ -2219,7 +2283,7 @@
             this.colIsFroshandeh.MinWidth = 24;
             this.colIsFroshandeh.Name = "colIsFroshandeh";
             this.colIsFroshandeh.Visible = true;
-            this.colIsFroshandeh.VisibleIndex = 10;
+            this.colIsFroshandeh.VisibleIndex = 12;
             this.colIsFroshandeh.Width = 94;
             // 
             // colTarikhEjad
@@ -2235,7 +2299,7 @@
             this.colTarikhEjad.MinWidth = 24;
             this.colTarikhEjad.Name = "colTarikhEjad";
             this.colTarikhEjad.Visible = true;
-            this.colTarikhEjad.VisibleIndex = 11;
+            this.colTarikhEjad.VisibleIndex = 13;
             this.colTarikhEjad.Width = 152;
             // 
             // colLevelNamber
@@ -2251,7 +2315,7 @@
             this.colLevelNamber.MinWidth = 24;
             this.colLevelNamber.Name = "colLevelNamber";
             this.colLevelNamber.Visible = true;
-            this.colLevelNamber.VisibleIndex = 12;
+            this.colLevelNamber.VisibleIndex = 14;
             this.colLevelNamber.Width = 94;
             // 
             // colEpAllHesabTafsili11
@@ -2265,8 +2329,6 @@
             this.colEpAllHesabTafsili11.FieldName = "EpAllHesabTafsili1.EpAllGroupTafsili1.EpGroupTafsiliLevel1.TabaghehName";
             this.colEpAllHesabTafsili11.MinWidth = 25;
             this.colEpAllHesabTafsili11.Name = "colEpAllHesabTafsili11";
-            this.colEpAllHesabTafsili11.Visible = true;
-            this.colEpAllHesabTafsili11.VisibleIndex = 13;
             this.colEpAllHesabTafsili11.Width = 184;
             // 
             // gridColumn6
@@ -2281,7 +2343,7 @@
             this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 14;
+            this.gridColumn6.VisibleIndex = 15;
             this.gridColumn6.Width = 489;
             // 
             // colEpGroupTafsiliLevel11
@@ -2372,8 +2434,7 @@
             this.gridView_Daraeha.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Daraeha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Daraeha.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Daraeha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Daraeha.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Daraeha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn16
             // 
@@ -2925,7 +2986,7 @@
             // txtId_Daraeha
             // 
             this.txtId_Daraeha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Daraeha.EditValue = "آیدی صندوق";
+            this.txtId_Daraeha.EditValue = "";
             this.txtId_Daraeha.Enabled = false;
             this.txtId_Daraeha.Location = new System.Drawing.Point(495, 53);
             this.txtId_Daraeha.Margin = new System.Windows.Forms.Padding(4);
@@ -3033,9 +3094,9 @@
             this.btnNewCode_Daraeha.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Daraeha.Name = "btnNewCode_Daraeha";
             this.btnNewCode_Daraeha.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem3.Text = "Alt+N";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.btnNewCode_Daraeha.SuperTip = superToolTip3;
+            toolTipTitleItem14.Text = "Alt+N";
+            superToolTip14.Items.Add(toolTipTitleItem14);
+            this.btnNewCode_Daraeha.SuperTip = superToolTip14;
             this.btnNewCode_Daraeha.TabIndex = 45;
             this.btnNewCode_Daraeha.TabStop = false;
             this.btnNewCode_Daraeha.Text = "کد جدید";
@@ -3167,8 +3228,7 @@
             this.gridView_Sandogh.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Sandogh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Sandogh.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Sandogh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Sandogh.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Sandogh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn24
             // 
@@ -3550,7 +3610,7 @@
             // txtId_Sandogh
             // 
             this.txtId_Sandogh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Sandogh.EditValue = "آیدی صندوق";
+            this.txtId_Sandogh.EditValue = "";
             this.txtId_Sandogh.Enabled = false;
             this.txtId_Sandogh.Location = new System.Drawing.Point(495, 53);
             this.txtId_Sandogh.Margin = new System.Windows.Forms.Padding(4);
@@ -3658,9 +3718,9 @@
             this.btnNewCode_Sandogh.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Sandogh.Name = "btnNewCode_Sandogh";
             this.btnNewCode_Sandogh.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem4.Text = "Alt+N";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            this.btnNewCode_Sandogh.SuperTip = superToolTip4;
+            toolTipTitleItem15.Text = "Alt+N";
+            superToolTip15.Items.Add(toolTipTitleItem15);
+            this.btnNewCode_Sandogh.SuperTip = superToolTip15;
             this.btnNewCode_Sandogh.TabIndex = 45;
             this.btnNewCode_Sandogh.TabStop = false;
             this.btnNewCode_Sandogh.Text = "کد جدید";
@@ -3771,8 +3831,7 @@
             this.gridView_Bank.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Bank.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Bank.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Bank.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Bank.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Bank.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn32
             // 
@@ -4596,7 +4655,7 @@
             // txtId_Bank
             // 
             this.txtId_Bank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Bank.EditValue = "آیدی صندوق";
+            this.txtId_Bank.EditValue = "";
             this.txtId_Bank.Enabled = false;
             this.txtId_Bank.Location = new System.Drawing.Point(495, 53);
             this.txtId_Bank.Margin = new System.Windows.Forms.Padding(4);
@@ -4704,9 +4763,9 @@
             this.btnNewCode_Bank.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Bank.Name = "btnNewCode_Bank";
             this.btnNewCode_Bank.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem5.Text = "Alt+N";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            this.btnNewCode_Bank.SuperTip = superToolTip5;
+            toolTipTitleItem16.Text = "Alt+N";
+            superToolTip16.Items.Add(toolTipTitleItem16);
+            this.btnNewCode_Bank.SuperTip = superToolTip16;
             this.btnNewCode_Bank.TabIndex = 45;
             this.btnNewCode_Bank.TabStop = false;
             this.btnNewCode_Bank.Text = "کد جدید";
@@ -4814,8 +4873,7 @@
             this.gridView_Vam.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Vam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Vam.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Vam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Vam.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Vam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn44
             // 
@@ -5388,7 +5446,7 @@
             // txtId_Vam
             // 
             this.txtId_Vam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Vam.EditValue = "آیدی صندوق";
+            this.txtId_Vam.EditValue = "";
             this.txtId_Vam.Enabled = false;
             this.txtId_Vam.Location = new System.Drawing.Point(495, 53);
             this.txtId_Vam.Margin = new System.Windows.Forms.Padding(4);
@@ -5496,9 +5554,9 @@
             this.btnNewCode_Vam.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Vam.Name = "btnNewCode_Vam";
             this.btnNewCode_Vam.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem6.Text = "Alt+N";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            this.btnNewCode_Vam.SuperTip = superToolTip6;
+            toolTipTitleItem17.Text = "Alt+N";
+            superToolTip17.Items.Add(toolTipTitleItem17);
+            this.btnNewCode_Vam.SuperTip = superToolTip17;
             this.btnNewCode_Vam.TabIndex = 45;
             this.btnNewCode_Vam.TabStop = false;
             this.btnNewCode_Vam.Text = "کد جدید";
@@ -5599,8 +5657,7 @@
             this.gridView_Marakez.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Marakez.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Marakez.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Marakez.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Marakez.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Marakez.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn56
             // 
@@ -5908,7 +5965,7 @@
             // txtId_Marakez
             // 
             this.txtId_Marakez.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Marakez.EditValue = "آیدی صندوق";
+            this.txtId_Marakez.EditValue = "";
             this.txtId_Marakez.Enabled = false;
             this.txtId_Marakez.Location = new System.Drawing.Point(495, 53);
             this.txtId_Marakez.Margin = new System.Windows.Forms.Padding(4);
@@ -6016,9 +6073,9 @@
             this.btnNewCode_Marakez.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Marakez.Name = "btnNewCode_Marakez";
             this.btnNewCode_Marakez.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem7.Text = "Alt+N";
-            superToolTip7.Items.Add(toolTipTitleItem7);
-            this.btnNewCode_Marakez.SuperTip = superToolTip7;
+            toolTipTitleItem18.Text = "Alt+N";
+            superToolTip18.Items.Add(toolTipTitleItem18);
+            this.btnNewCode_Marakez.SuperTip = superToolTip18;
             this.btnNewCode_Marakez.TabIndex = 45;
             this.btnNewCode_Marakez.TabStop = false;
             this.btnNewCode_Marakez.Text = "کد جدید";
@@ -6119,8 +6176,7 @@
             this.gridView_Shoabat.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Shoabat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Shoabat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Shoabat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Shoabat.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Shoabat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn62
             // 
@@ -6428,7 +6484,7 @@
             // txtId_Shoabat
             // 
             this.txtId_Shoabat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Shoabat.EditValue = "آیدی صندوق";
+            this.txtId_Shoabat.EditValue = "";
             this.txtId_Shoabat.Enabled = false;
             this.txtId_Shoabat.Location = new System.Drawing.Point(495, 53);
             this.txtId_Shoabat.Margin = new System.Windows.Forms.Padding(4);
@@ -6536,9 +6592,9 @@
             this.btnNewCode_Shoabat.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Shoabat.Name = "btnNewCode_Shoabat";
             this.btnNewCode_Shoabat.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem8.Text = "Alt+N";
-            superToolTip8.Items.Add(toolTipTitleItem8);
-            this.btnNewCode_Shoabat.SuperTip = superToolTip8;
+            toolTipTitleItem19.Text = "Alt+N";
+            superToolTip19.Items.Add(toolTipTitleItem19);
+            this.btnNewCode_Shoabat.SuperTip = superToolTip19;
             this.btnNewCode_Shoabat.TabIndex = 45;
             this.btnNewCode_Shoabat.TabStop = false;
             this.btnNewCode_Shoabat.Text = "کد جدید";
@@ -6639,8 +6695,7 @@
             this.gridView_Prozhe.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Prozhe.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Prozhe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Prozhe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Prozhe.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Prozhe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn78
             // 
@@ -6948,7 +7003,7 @@
             // txtId_Prozhe
             // 
             this.txtId_Prozhe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Prozhe.EditValue = "آیدی صندوق";
+            this.txtId_Prozhe.EditValue = "";
             this.txtId_Prozhe.Enabled = false;
             this.txtId_Prozhe.Location = new System.Drawing.Point(495, 53);
             this.txtId_Prozhe.Margin = new System.Windows.Forms.Padding(4);
@@ -7056,9 +7111,9 @@
             this.btnNewCode_Prozhe.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Prozhe.Name = "btnNewCode_Prozhe";
             this.btnNewCode_Prozhe.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem9.Text = "Alt+N";
-            superToolTip9.Items.Add(toolTipTitleItem9);
-            this.btnNewCode_Prozhe.SuperTip = superToolTip9;
+            toolTipTitleItem20.Text = "Alt+N";
+            superToolTip20.Items.Add(toolTipTitleItem20);
+            this.btnNewCode_Prozhe.SuperTip = superToolTip20;
             this.btnNewCode_Prozhe.TabIndex = 45;
             this.btnNewCode_Prozhe.TabStop = false;
             this.btnNewCode_Prozhe.Text = "کد جدید";
@@ -7159,8 +7214,7 @@
             this.gridView_Gharardad.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Gharardad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Gharardad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Gharardad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Gharardad.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Gharardad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn89
             // 
@@ -7468,7 +7522,7 @@
             // txtId_Gharardad
             // 
             this.txtId_Gharardad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Gharardad.EditValue = "آیدی صندوق";
+            this.txtId_Gharardad.EditValue = "";
             this.txtId_Gharardad.Enabled = false;
             this.txtId_Gharardad.Location = new System.Drawing.Point(495, 53);
             this.txtId_Gharardad.Margin = new System.Windows.Forms.Padding(4);
@@ -7576,9 +7630,9 @@
             this.btnNewCode_Gharardad.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Gharardad.Name = "btnNewCode_Gharardad";
             this.btnNewCode_Gharardad.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem10.Text = "Alt+N";
-            superToolTip10.Items.Add(toolTipTitleItem10);
-            this.btnNewCode_Gharardad.SuperTip = superToolTip10;
+            toolTipTitleItem21.Text = "Alt+N";
+            superToolTip21.Items.Add(toolTipTitleItem21);
+            this.btnNewCode_Gharardad.SuperTip = superToolTip21;
             this.btnNewCode_Gharardad.TabIndex = 45;
             this.btnNewCode_Gharardad.TabStop = false;
             this.btnNewCode_Gharardad.Text = "کد جدید";
@@ -7679,8 +7733,7 @@
             this.gridView_Sayer.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView_Sayer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView_Sayer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
-            this.gridView_Sayer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView_Sayer.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
+            this.gridView_Sayer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
             // 
             // gridColumn100
             // 
@@ -7988,7 +8041,7 @@
             // txtId_Sayer
             // 
             this.txtId_Sayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId_Sayer.EditValue = "آیدی صندوق";
+            this.txtId_Sayer.EditValue = "";
             this.txtId_Sayer.Enabled = false;
             this.txtId_Sayer.Location = new System.Drawing.Point(495, 53);
             this.txtId_Sayer.Margin = new System.Windows.Forms.Padding(4);
@@ -8096,9 +8149,9 @@
             this.btnNewCode_Sayer.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Sayer.Name = "btnNewCode_Sayer";
             this.btnNewCode_Sayer.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem11.Text = "Alt+N";
-            superToolTip11.Items.Add(toolTipTitleItem11);
-            this.btnNewCode_Sayer.SuperTip = superToolTip11;
+            toolTipTitleItem22.Text = "Alt+N";
+            superToolTip22.Items.Add(toolTipTitleItem22);
+            this.btnNewCode_Sayer.SuperTip = superToolTip22;
             this.btnNewCode_Sayer.TabIndex = 45;
             this.btnNewCode_Sayer.TabStop = false;
             this.btnNewCode_Sayer.Text = "کد جدید";
@@ -8414,6 +8467,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Ashkhas)).EndInit();
             this.panelControl_Ashkhas.ResumeLayout(false);
             this.panelControl_Ashkhas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHaghighi_Ashkhas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkHoghoghi_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkFroshandeh_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkKharidar_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Ashkhas.Properties)).EndInit();
@@ -8422,7 +8477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSharh_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkVizitor_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSahamdar_Ashkhas.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkKarconan_Ashkhas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkPersonel_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEditCode_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Ashkhas.Properties)).EndInit();
@@ -8689,7 +8744,7 @@
         private DevExpress.XtraEditors.CheckEdit chkVizitor_Ashkhas;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.CheckEdit chkSahamdar_Ashkhas;
-        private DevExpress.XtraEditors.CheckEdit chkKarconan_Ashkhas;
+        private DevExpress.XtraEditors.CheckEdit chkPersonel_Ashkhas;
         public DevExpress.XtraEditors.TextEdit txtName_Ashkhas;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -9116,5 +9171,9 @@
         private DevExpress.XtraEditors.SimpleButton btnNewCode_Sayer;
         private DevExpress.XtraEditors.TextEdit txtName_Sayer;
         private DevExpress.XtraEditors.LabelControl labelControl76;
+        private DevExpress.XtraEditors.CheckEdit chkHaghighi_Ashkhas;
+        private DevExpress.XtraEditors.CheckEdit chkHoghoghi_Ashkhas;
+        private DevExpress.XtraGrid.Columns.GridColumn colIsHaghighi;
+        private DevExpress.XtraGrid.Columns.GridColumn colIsHoghoghi;
     }
 }

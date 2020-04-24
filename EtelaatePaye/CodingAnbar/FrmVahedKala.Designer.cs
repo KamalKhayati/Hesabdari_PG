@@ -213,7 +213,7 @@
             // 
             // txtId
             // 
-            this.txtId.EditValue = "آیدی صندوق";
+            this.txtId.EditValue = "";
             this.txtId.Location = new System.Drawing.Point(6, 6);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";

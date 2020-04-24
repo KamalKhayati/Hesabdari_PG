@@ -34,6 +34,22 @@ namespace HelpClassLibrary
 {
     public class HelpClass1
     {
+
+        /// <summary>
+        /// وایریش ردیف دیتاگرید با استفاده از اینتر
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void gridView_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (e.KeyChar == 13)
+        //    {
+        //        btnEdit_Click(null, null);
+        //    }
+        //}
+
+
+
         /// <summary>
         /// جلوگیری از باز شدن فرمها بیش از یک بار
         /// </summary>

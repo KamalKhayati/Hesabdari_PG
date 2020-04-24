@@ -400,7 +400,6 @@
             this.gridView3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
-            this.gridView3.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // gridColumn9
             // 
@@ -1311,6 +1310,7 @@
             this.gridControl1.TabIndex = 33;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
@@ -1344,7 +1344,6 @@
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // colId
             // 
@@ -1752,7 +1751,6 @@
             this.gridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCodingHesabdari_KeyDown);
             this.gridView2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
-            this.gridView2.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // gridColumn1
             // 
@@ -1952,7 +1950,6 @@
             this.gridView4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
             this.gridView4.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView_KeyPress);
-            this.gridView4.DoubleClick += new System.EventHandler(this.gridView_DoubleClick);
             // 
             // gridColumn17
             // 

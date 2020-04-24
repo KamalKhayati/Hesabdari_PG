@@ -41,6 +41,7 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                     var q1 = dataContext.EpNameShahrstans.ToList();
                     if (q1.Count > 0)
                         epNameShahrstansBindingSource.DataSource = q1;
@@ -83,7 +84,9 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameShahrstan_Load(object sender, EventArgs e)
         {
+            _SalId = Convert.ToInt32(lblSalId.Text);
             FillDataGridNameShahrstan();
+            btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
             //using (var db = new MyContext())
             //{
             //    try
@@ -318,26 +321,28 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView1.RowCount > 0)
                 {
-                    gridControl1.Enabled = false;
-                    EditRowIndex = gridView1.FocusedRowHandle;
-                    En = EnumCED.Edit;
-                    HelpClass1.InActiveButtons(panelControl2);
-                    HelpClass1.ActiveControls(panelControl1);
-                    FillcmbNameOstan();
+                        gridControl1.Enabled = false;
+                        EditRowIndex = gridView1.FocusedRowHandle;
+                        En = EnumCED.Edit;
+                        HelpClass1.InActiveButtons(panelControl2);
+                        HelpClass1.ActiveControls(panelControl1);
+                        FillcmbNameOstan();
 
-                    cmbNameOstan.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("NameOstanId"));
-                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                        cmbNameOstan.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("NameOstanId"));
+                        txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                        txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
 
-                    cmbNameOstan.Focus();
+                        cmbNameOstan.Focus();
                 }
-
-            }        }
+            }
+        }
+        int _SalId = 0;
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (btnSave.Enabled)
             {
+                _SalId = Convert.ToInt32(lblSalId.Text);
                 if (TextEditValidation())
                 {
                     if (En == EnumCED.Create)
@@ -347,6 +352,8 @@ namespace EtelaatePaye.CodingHesabdari
                             try
                             {
                                 EpNameShahrstan obj = new EpNameShahrstan();
+                                obj.SalId = _SalId;
+                                obj.Code = db.EpNameShahrstans.Any() ? db.EpNameShahrstans.Max(s => s.Code) + 1 : 1;
                                 obj.Name = txtName.Text;
                                 obj.NameOstan = cmbNameOstan.Text;
                                 obj.NameOstanId = Convert.ToInt32(cmbNameOstan.EditValue);
@@ -512,6 +519,7 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.ActiveButtons(panelControl2);
                 HelpClass1.ClearControls(panelControl1);
                 HelpClass1.InActiveControls(panelControl1);
+                btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
             }
         }
@@ -563,16 +571,23 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            if (gridView1.RowCount > 0)
+            try
             {
-                FillcmbNameOstan();
+                if (gridView1.RowCount > 0)
+                {
+                    FillcmbNameOstan();
 
-                cmbNameOstan.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("NameOstanId"));
-                txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    cmbNameOstan.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("NameOstanId"));
+                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+
+                }
+
             }
-
-
+            catch (Exception)
+            {
+            }
         }
     }
 }

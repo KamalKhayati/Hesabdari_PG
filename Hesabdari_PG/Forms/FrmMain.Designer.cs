@@ -384,7 +384,7 @@
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1546, 205);
+            this.ribbon.Size = new System.Drawing.Size(1546, 249);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ribbon_MouseDoubleClick);
@@ -721,6 +721,7 @@
             this.btnJoziatEtelaatAshkhas.Caption = "جزئیات اطلاعات اشخاص";
             this.btnJoziatEtelaatAshkhas.Id = 172;
             this.btnJoziatEtelaatAshkhas.Name = "btnJoziatEtelaatAshkhas";
+            this.btnJoziatEtelaatAshkhas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnJoziatEtelaatAshkhas_ItemClick);
             // 
             // mbsCodingAnbarVaKala
             // 
@@ -1631,11 +1632,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserId, true);
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserName, true);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 623);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 615);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1546, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1546, 45);
             // 
             // barButtonItem30
             // 
@@ -1673,9 +1674,9 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1514, 205);
+            this.hideContainerRight.Location = new System.Drawing.Point(1508, 249);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(32, 418);
+            this.hideContainerRight.Size = new System.Drawing.Size(38, 366);
             // 
             // dockPanel1
             // 
@@ -1725,7 +1726,7 @@
             // FrmMain
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1546, 660);
             this.Controls.Add(this.hideContainerRight);

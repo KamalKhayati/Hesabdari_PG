@@ -21,6 +21,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(50)]
         public string LevelName { get; set; }
         //[Required]
+        //public int TabaghehIndex { get; set; }
+        //[Required]
         //public int Level1Id { get; set; }
         //[Required]
         //public int Level2Id { get; set; }
