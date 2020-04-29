@@ -1041,7 +1041,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         XtraMessageBox.Show("با گروه تفصیلی فوق در سطح دوم گروه تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return;
                                     }
-                                    else if (db.REpHesabMoinBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                    else if (db.REpAllCodingHesabdariBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
                                     {
                                         XtraMessageBox.Show("گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return;
@@ -1105,7 +1105,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         XtraMessageBox.Show("با گروه تفصیلی فوق در سطح سوم گروه تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return;
                                     }
-                                    else if (db.REpHesabMoinBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                    else if (db.REpAllCodingHesabdariBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
                                     {
                                         XtraMessageBox.Show(" گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return;
@@ -1168,7 +1168,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         XtraMessageBox.Show("با گروه تفصیلی فوق ، حساب تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return;
                                     }
-                                    else if (db.REpHesabMoinBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                    else if (db.REpAllCodingHesabdariBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
                                     {
                                         XtraMessageBox.Show("گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         return;

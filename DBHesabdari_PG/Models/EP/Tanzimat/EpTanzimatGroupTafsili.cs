@@ -10,8 +10,8 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
     public class EpTanzimatGroupTafsili
     {
         public int Id { get; set; }
-        //[Required]
-        //public int SalId { get; set; }
+        [Required]
+        public int SalId { get; set; }
         //[Required]
         //public int Code { get; set; }
         [Required]
@@ -39,5 +39,13 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
         public string CodeTafsiliMinCode { get; set; }
         [Required, MaxLength(5)]
         public string CodeTafsiliMaxCode { get; set; }
+
+        [Required]
+        public bool IsActiveGroupTafsiliLevel1 { get; set; }
+        [Required]
+        public bool IsActiveGroupTafsiliLevel2 { get; set; }
+        [Required]
+        public bool IsActiveGroupTafsiliLevel3 { get; set; }
+
     }
 }

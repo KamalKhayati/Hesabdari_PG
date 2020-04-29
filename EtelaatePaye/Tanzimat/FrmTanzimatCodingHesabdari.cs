@@ -28,14 +28,15 @@ namespace EtelaatePaye.Tanzimat
                 {
                     int _SalId = Convert.ToInt32(lblSalId.Text);
                     var q1 = db.EpTanzimatCodingHesabdaris.FirstOrDefault(s => s.SalId == _SalId);
-                    if (q1!=null)
+                    if (q1 != null)
                     {
                         if (lblUserId.Text == "1")
                         {
                             txtTabaghehCarakter.Text = q1.HesabTabaghehCarakter.ToString();
                             txtGroupCarakter.Text = q1.HesabGroupCarakter.ToString();
                             txtColCarakter.Text = q1.HesabColCarakter.ToString();
-                            txtMoinCarakter.Text = q1.HesabMoinCarakter.ToString();
+                            txtMoinLevel1Carakter.Text = q1.HesabMoinLevel1Carakter.ToString();
+
                         }
 
                     }
@@ -48,6 +49,11 @@ namespace EtelaatePaye.Tanzimat
                             txtGroupTafsiliLevel2Carakter.Text = q2.GroupTafsiliLevel2Carakter.ToString();
                             txtGroupTafsiliLevel3Carakter.Text = q2.GroupTafsiliLevel3Carakter.ToString();
                             txtCodeTafsiliCarakter.Text = q2.CodeTafsiliCarakter.ToString();
+
+                            chkIsActiveGroupTafsiliLevel1.Checked = q2.IsActiveGroupTafsiliLevel1;
+                            chkIsActiveGroupTafsiliLevel2.Checked = q2.IsActiveGroupTafsiliLevel2;
+                            chkIsActiveGroupTafsiliLevel3.Checked = q2.IsActiveGroupTafsiliLevel3;
+
                         }
 
                     }                    //else
@@ -106,10 +112,10 @@ namespace EtelaatePaye.Tanzimat
                     else
                         txtColCarakter.ReadOnly = false;
 
-                    if (db.EpHesabMoins.Any(s => s.SalId == _SalId))
-                        txtMoinCarakter.ReadOnly = true;
+                    if (db.EpHesabMoin1s.Any(s => s.SalId == _SalId && s.LevelNamber == 4))
+                        txtMoinLevel1Carakter.ReadOnly = true;
                     else
-                        txtMoinCarakter.ReadOnly = false;
+                        txtMoinLevel1Carakter.ReadOnly = false;
 
                 }
                 catch (Exception ex)
@@ -130,7 +136,7 @@ namespace EtelaatePaye.Tanzimat
         private bool TextEditValidation()
         {
             ///////////////// اعتبار سنجی کد ////////////////////////////////////
-            if (string.IsNullOrEmpty(txtTabaghehCarakter.Text) || string.IsNullOrEmpty(txtGroupCarakter.Text) || string.IsNullOrEmpty(txtColCarakter.Text) || string.IsNullOrEmpty(txtMoinCarakter.Text))
+            if (string.IsNullOrEmpty(txtTabaghehCarakter.Text) || string.IsNullOrEmpty(txtGroupCarakter.Text) || string.IsNullOrEmpty(txtColCarakter.Text) || string.IsNullOrEmpty(txtMoinLevel1Carakter.Text))
             {
                 XtraMessageBox.Show("هیچکدام از فیلدها نبایستی خالی باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -155,7 +161,7 @@ namespace EtelaatePaye.Tanzimat
                             q.HesabTabaghehCarakter = Convert.ToInt32(txtTabaghehCarakter.Text);
                             q.HesabGroupCarakter = Convert.ToInt32(txtGroupCarakter.Text);
                             q.HesabColCarakter = Convert.ToInt32(txtColCarakter.Text);
-                            q.HesabMoinCarakter = Convert.ToInt32(txtMoinCarakter.Text);
+                            q.HesabMoinLevel1Carakter = Convert.ToInt32(txtMoinLevel1Carakter.Text);
 
                             q.HesabTabaghehMinCode = "1";
                             q.HesabTabaghehMaxCode = "9";
@@ -163,14 +169,45 @@ namespace EtelaatePaye.Tanzimat
                             q.HesabGroupMinCode = txtGroupCarakter.Text == "1" ? "1" : "01";
                             q.HesabGroupMaxCode = txtGroupCarakter.Text == "1" ? "9" : "99";
 
-                            q.HesabColMinCode = txtColCarakter.Text == "1" ? "1" : txtColCarakter.Text == "2" ? "01" : "001";
-                            q.HesabColMaxCode = txtColCarakter.Text == "1" ? "9" : txtColCarakter.Text == "2" ? "01" : "999";
+                            q.HesabColMinCode = txtColCarakter.Text == "1" ? "1" : "01";
+                            q.HesabColMaxCode = txtColCarakter.Text == "1" ? "9" : "99";
 
-                            q.HesabMoinMinCode = txtMoinCarakter.Text == "1" ? "1" : txtMoinCarakter.Text == "2" ? "01" : "001";
-                            q.HesabMoinMaxCode = txtMoinCarakter.Text == "1" ? "9" : txtMoinCarakter.Text == "2" ? "01" : "999";
-                            db.SaveChanges();
-                            this.Close();
+                            q.HesabMoinLevel1MinCode = txtMoinLevel1Carakter.Text == "1" ? "1" : "01";
+                            q.HesabMoinLevel1MaxCode = txtMoinLevel1Carakter.Text == "1" ? "9" : "99";
+
+
                         }
+
+                        var q1 = db.EpTanzimatGroupTafsilis.FirstOrDefault(s => s.SalId == _SalId);
+                        if (q1 != null)
+                        {
+                            q1.GroupTafsiliLevel1Carakter = Convert.ToInt32(txtGroupTafsiliLevel1Carakter.Text);
+                            q1.GroupTafsiliLevel2Carakter = Convert.ToInt32(txtGroupTafsiliLevel2Carakter.Text);
+                            q1.GroupTafsiliLevel3Carakter = Convert.ToInt32(txtGroupTafsiliLevel3Carakter.Text);
+                            q1.CodeTafsiliCarakter = Convert.ToInt32(txtCodeTafsiliCarakter.Text);
+
+                            q1.GroupTafsiliLevel1MinCode = "10";
+                            q1.GroupTafsiliLevel1MaxCode = "99";
+
+                            q1.GroupTafsiliLevel2MinCode = "1";
+                            q1.GroupTafsiliLevel2MinCode = "9";
+
+                            q1.GroupTafsiliLevel3MinCode = "1";
+                            q1.GroupTafsiliLevel3MinCode = "9";
+
+                            q1.CodeTafsiliMinCode = "00001";
+                            q1.CodeTafsiliMaxCode = "99999";
+
+                            q1.IsActiveGroupTafsiliLevel1 = chkIsActiveGroupTafsiliLevel1.Checked;
+                            q1.IsActiveGroupTafsiliLevel2 = chkIsActiveGroupTafsiliLevel2.Checked;
+                            q1.IsActiveGroupTafsiliLevel3 = chkIsActiveGroupTafsiliLevel3.Checked;
+
+
+                        }
+
+
+                        db.SaveChanges();
+                        this.Close();
                         //else
                         //{
                         //    EpTanzimatCodingHesabdari obj = new EpTanzimatCodingHesabdari();

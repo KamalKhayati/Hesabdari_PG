@@ -29,7 +29,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public int MoinId { get; set; }
         //[Required]
         //public int MoinCode { get; set; }
-        public virtual EpHesabMoin EpHesabMoin1 { get; set; }
+        public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
 
     }
 }

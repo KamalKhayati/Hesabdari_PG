@@ -75,18 +75,18 @@ namespace DBHesabdari_PG
         public virtual DbSet<EpHesabTabagheh> EpHesabTabaghehs { get; set; }
         public virtual DbSet<EpHesabGroup> EpHesabGroups { get; set; }
         public virtual DbSet<EpHesabCol> EpHesabCols { get; set; }
-        public virtual DbSet<EpHesabMoin> EpHesabMoins { get; set; }
+        public virtual DbSet<EpHesabMoin1> EpHesabMoin1s { get; set; }
         public virtual DbSet<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
         public virtual DbSet<EpAllCodingHesabdari> EpAllCodingHesabdaris { get; set; }
         public virtual DbSet<RmsUserBallCodingHesabdari> RmsUserBallCodingHesabdaris { get; set; }
         public virtual DbSet<MsActiveSystem> MsActiveSystems { get; set; }
-        public virtual DbSet<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }
+        public virtual DbSet<REpAllCodingHesabdariBMsActiveSystem> REpAllCodingHesabdariBMsActiveSystems { get; set; }
 
         public virtual DbSet<EpGroupTafsiliLevel1> EpGroupTafsiliLevel1s { get; set; }
         public virtual DbSet<EpGroupTafsiliLevel2> EpGroupTafsiliLevel2s { get; set; }
         public virtual DbSet<EpGroupTafsiliLevel3> EpGroupTafsiliLevel3s { get; set; }
         public virtual DbSet<EpAllGroupTafsili> EpAllGroupTafsilis { get; set; }
-        public virtual DbSet<REpHesabMoinBEpAllGroupTafsili> REpHesabMoinBEpAllGroupTafsilis { get; set; }
+        public virtual DbSet<REpAllCodingHesabdariBEpAllGroupTafsili> REpAllCodingHesabdariBEpAllGroupTafsilis { get; set; }
 
 
         public virtual DbSet<EpAllHesabTafsili> EpAllHesabTafsilis { get; set; }
@@ -177,15 +177,16 @@ namespace DBHesabdari_PG
             modelBuilder.Entity<EpAllCodingHesabdari>().HasOptional(m => m.EpHesabGroup1).WithRequired(m => m.EpAllCodingHesabdari1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllCodingHesabdari>().HasOptional(m => m.EpHesabCol1).WithRequired(m => m.EpAllCodingHesabdari1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllCodingHesabdari>().HasOptional(m => m.EpHesabMoin1).WithRequired(m => m.EpAllCodingHesabdari1).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpAllCodingHesabdari>().HasMany(m => m.REpAllCodingHesabdariBEpAllGroupTafsilis).WithRequired(m => m.EpAllCodingHesabdari1).HasForeignKey(m => m.AllCodingHesabdariId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpAllCodingHesabdari>().HasMany(m => m.REpAllCodingHesabdariBMsActiveSystems).WithRequired(m => m.EpAllCodingHesabdari1).HasForeignKey(m => m.AllCodingHesabdariId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<EpHesabTabagheh>().HasMany(m => m.EpHesabGroups).WithRequired(m => m.EpHesabTabagheh1).HasForeignKey(m => m.TabaghehId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpHesabGroup>().HasMany(m => m.EpHesabCols).WithRequired(m => m.EpHesabGroup1).HasForeignKey(m => m.GroupId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<EpHesabCol>().HasMany(m => m.EpHesabMoins).WithRequired(m => m.EpHesabCol1).HasForeignKey(m => m.ColId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<EpHesabMoin>().HasMany(m => m.EpSharhStandardMoins).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<EpHesabMoin>().HasMany(m => m.RMsActiveSystemBEpHesabMoins).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<MsActiveSystem>().HasMany(m => m.RMsActiveSystemBEpHesabMoins).WithRequired(m => m.MsActiveSystem1).HasForeignKey(m => m.ActiveSystemId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<EpHesabMoin>().HasMany(m => m.REpHesabMoinBEpAllGroupTafsilis).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(true);
-            modelBuilder.Entity<EpAllGroupTafsili>().HasMany(m => m.REpHesabMoinBEpAllGroupTafsilis).WithRequired(m => m.EpAllGroupTafsili1).HasForeignKey(m => m.AllGroupTafsiliId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabCol>().HasMany(m => m.EpHesabMoin1s).WithRequired(m => m.EpHesabCol1).HasForeignKey(m => m.ColId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.EpSharhStandardMoins).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<MsActiveSystem>().HasMany(m => m.REpAllCodingHesabdariBMsActiveSystems).WithRequired(m => m.MsActiveSystem1).HasForeignKey(m => m.ActiveSystemId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpAllGroupTafsili>().HasMany(m => m.REpAllCodingHesabdariBEpAllGroupTafsilis).WithRequired(m => m.EpAllGroupTafsili1).HasForeignKey(m => m.AllGroupTafsiliId).WillCascadeOnDelete(false);
 
             //modelBuilder.Entity<EpGroupTafsiliLevel1>().HasMany(m => m.EpHesabTafsiliSandoghs).WithRequired(m => m.EpGroupTafsiliLevel1).HasForeignKey(m => m.GroupTafsiliId).WillCascadeOnDelete(false);
             //modelBuilder.Entity<EpGroupTafsiliLevel1>().HasMany(m => m.EpHesabTafsiliHesabBankis).WithRequired(m => m.EpGroupTafsiliLevel1).HasForeignKey(m => m.GroupTafsiliId).WillCascadeOnDelete(false);

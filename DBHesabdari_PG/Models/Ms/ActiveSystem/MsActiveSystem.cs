@@ -30,29 +30,9 @@ namespace DBHesabdari_PG.Models.Ms.ActiveSystem
         public string Name { get; set; }
         [Required]
         public bool IsActive { get; set; }
-        public virtual ICollection<RMsActiveSystemBEpHesabMoin> RMsActiveSystemBEpHesabMoins { get; set; }
+        public virtual ICollection<REpAllCodingHesabdariBMsActiveSystem> REpAllCodingHesabdariBMsActiveSystems { get; set; }
 
     }
 
-    public class RMsActiveSystemBEpHesabMoin
-    {
-        //[Column(Order = 0)]
-       // public int Id { get; set; }
-        [Required, Column(Order = 1)]
-        public int SalId { get; set; }
-        [Key]
-        [Required, Column(Order = 2)]
-        public int ActiveSystemId { get; set; }
-        [Key]
-        [Required, Column(Order = 3)]
-        public int MoinId { get; set; }
-        //[Required, Column(Order = 4)]
-        //public int ActiveSystemCode { get; set; }
-        //[Required, Column(Order = 5)]
-        //public int MoinCode { get; set; }
-
-        public virtual MsActiveSystem MsActiveSystem1 { get; set; }
-        public virtual EpHesabMoin EpHesabMoin1 { get; set; }
-    }
 
 }

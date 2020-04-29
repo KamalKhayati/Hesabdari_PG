@@ -21,8 +21,7 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
         [Required]
         public int HesabColCarakter { get; set; }
         [Required]
-        public int HesabMoinCarakter { get; set; }
-
+        public int HesabMoinLevel1Carakter { get; set; }
         [Required ,MaxLength(1)]
         public string HesabTabaghehMinCode { get; set; }
         [Required, MaxLength(1)]
@@ -31,14 +30,14 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
         public string HesabGroupMinCode { get; set; }
         [Required, MaxLength(2)]
         public string HesabGroupMaxCode { get; set; }
-        [Required, MaxLength(3)]
+        [Required, MaxLength(2)]
         public string HesabColMinCode { get; set; }
-        [Required, MaxLength(3)]
+        [Required, MaxLength(2)]
         public string HesabColMaxCode { get; set; }
-        [Required, MaxLength(3)]
-        public string HesabMoinMinCode { get; set; }
-        [Required, MaxLength(3)]
-        public string HesabMoinMaxCode { get; set; }
+        [Required, MaxLength(2)]
+        public string HesabMoinLevel1MinCode { get; set; }
+        [Required, MaxLength(2)]
+        public string HesabMoinLevel1MaxCode { get; set; }
 
     }
 }

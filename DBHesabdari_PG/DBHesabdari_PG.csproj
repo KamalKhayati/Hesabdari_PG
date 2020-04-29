@@ -108,7 +108,7 @@
     <Compile Include="Models\EP\CodingHesabdari\EpHesabCol.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabGroup.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpAllCodingHesabdari.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpHesabMoin.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabMoin1.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliAshkhas.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliBankha.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliSandogh.cs" />

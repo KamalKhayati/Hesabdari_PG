@@ -130,7 +130,7 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.xtraTabPage_Moin = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage_MoinLevel1 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl4_1 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -230,7 +230,7 @@
             this.btnDisplyList = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3_1)).BeginInit();
             this.panelControl3_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
@@ -285,7 +285,7 @@
             this.panelControl2_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            this.xtraTabPage_Moin.SuspendLayout();
+            this.xtraTabPage_MoinLevel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4_1)).BeginInit();
             this.panelControl4_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
@@ -335,8 +335,8 @@
             this.panelControl5_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingHesabdari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epAllCodingHesabdarisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
-            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
+            this.panelControl_Button.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl3_1
@@ -1274,7 +1274,7 @@
             this.xtraTabPage_Tabagheh,
             this.xtraTabPage_Group,
             this.xtraTabPage_Col,
-            this.xtraTabPage_Moin,
+            this.xtraTabPage_MoinLevel1,
             this.xtraTabPage_DerakhtVareh});
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
             this.xtraTabControl1.SelectedPageChanging += new DevExpress.XtraTab.TabPageChangingEventHandler(this.xtraTabControl1_SelectedPageChanging);
@@ -1310,7 +1310,6 @@
             this.gridControl1.TabIndex = 33;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
@@ -1876,13 +1875,13 @@
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Width = 92;
             // 
-            // xtraTabPage_Moin
+            // xtraTabPage_MoinLevel1
             // 
-            this.xtraTabPage_Moin.Controls.Add(this.panelControl4_1);
-            this.xtraTabPage_Moin.Controls.Add(this.panelControl4_2);
-            this.xtraTabPage_Moin.Name = "xtraTabPage_Moin";
-            this.xtraTabPage_Moin.Size = new System.Drawing.Size(1155, 547);
-            this.xtraTabPage_Moin.Text = "حساب معین";
+            this.xtraTabPage_MoinLevel1.Controls.Add(this.panelControl4_1);
+            this.xtraTabPage_MoinLevel1.Controls.Add(this.panelControl4_2);
+            this.xtraTabPage_MoinLevel1.Name = "xtraTabPage_MoinLevel1";
+            this.xtraTabPage_MoinLevel1.Size = new System.Drawing.Size(1155, 547);
+            this.xtraTabPage_MoinLevel1.Text = "حساب معین";
             // 
             // panelControl4_1
             // 
@@ -1896,7 +1895,7 @@
             // 
             // gridControl4
             // 
-            this.gridControl4.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin);
+            this.gridControl4.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin1);
             this.gridControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl4.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gridControl4.Location = new System.Drawing.Point(2, 2);
@@ -3269,27 +3268,27 @@
             this.btnCreate.ToolTipTitle = "F2";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // panelControl
+            // panelControl_Button
             // 
-            this.panelControl.Controls.Add(this.btnSaveNext);
-            this.panelControl.Controls.Add(this.btnClose);
-            this.panelControl.Controls.Add(this.btnNext);
-            this.panelControl.Controls.Add(this.btnPrintPreview);
-            this.panelControl.Controls.Add(this.btnEdit);
-            this.panelControl.Controls.Add(this.btnDelete);
-            this.panelControl.Controls.Add(this.btnFirst);
-            this.panelControl.Controls.Add(this.btnSave);
-            this.panelControl.Controls.Add(this.btnPreview);
-            this.panelControl.Controls.Add(this.btnLast);
-            this.panelControl.Controls.Add(this.btnDisplyList);
-            this.panelControl.Controls.Add(this.btnCancel);
-            this.panelControl.Controls.Add(this.btnCreate);
-            this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl.Location = new System.Drawing.Point(0, 0);
-            this.panelControl.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1162, 58);
-            this.panelControl.TabIndex = 41;
+            this.panelControl_Button.Controls.Add(this.btnSaveNext);
+            this.panelControl_Button.Controls.Add(this.btnClose);
+            this.panelControl_Button.Controls.Add(this.btnNext);
+            this.panelControl_Button.Controls.Add(this.btnPrintPreview);
+            this.panelControl_Button.Controls.Add(this.btnEdit);
+            this.panelControl_Button.Controls.Add(this.btnDelete);
+            this.panelControl_Button.Controls.Add(this.btnFirst);
+            this.panelControl_Button.Controls.Add(this.btnSave);
+            this.panelControl_Button.Controls.Add(this.btnPreview);
+            this.panelControl_Button.Controls.Add(this.btnLast);
+            this.panelControl_Button.Controls.Add(this.btnDisplyList);
+            this.panelControl_Button.Controls.Add(this.btnCancel);
+            this.panelControl_Button.Controls.Add(this.btnCreate);
+            this.panelControl_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl_Button.Location = new System.Drawing.Point(0, 0);
+            this.panelControl_Button.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl_Button.Name = "panelControl_Button";
+            this.panelControl_Button.Size = new System.Drawing.Size(1162, 58);
+            this.panelControl_Button.TabIndex = 41;
             // 
             // FrmCodingHesabdari
             // 
@@ -3300,7 +3299,7 @@
             this.Controls.Add(this.lblSalMali);
             this.Controls.Add(this.lblSalId);
             this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.panelControl);
+            this.Controls.Add(this.panelControl_Button);
             this.Controls.Add(this.lblUserId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -3369,7 +3368,7 @@
             this.panelControl2_1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            this.xtraTabPage_Moin.ResumeLayout(false);
+            this.xtraTabPage_MoinLevel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4_1)).EndInit();
             this.panelControl4_1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
@@ -3420,8 +3419,8 @@
             this.panelControl5_1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingHesabdari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epAllCodingHesabdarisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl)).EndInit();
-            this.panelControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).EndInit();
+            this.panelControl_Button.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3455,8 +3454,8 @@
         private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
-        private DevExpress.XtraEditors.PanelControl panelControl;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage_Moin;
+        private DevExpress.XtraEditors.PanelControl panelControl_Button;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage_MoinLevel1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_DerakhtVareh;
         private DevExpress.XtraGrid.GridControl gridControl1;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView1;

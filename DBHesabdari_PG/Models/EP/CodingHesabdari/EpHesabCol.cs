@@ -47,7 +47,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public string SharhHesab { get; set; }
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual EpHesabGroup EpHesabGroup1 { get; set; }
-        public virtual ICollection<EpHesabMoin> EpHesabMoins { get; set; }
+        public virtual ICollection<EpHesabMoin1> EpHesabMoin1s { get; set; }
 
     }
 }

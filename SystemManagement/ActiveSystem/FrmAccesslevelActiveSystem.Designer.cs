@@ -505,7 +505,7 @@
             // 
             // epHesabMoinsBindingSource
             // 
-            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin);
+            this.epHesabMoinsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin1);
             // 
             // FrmAccesslevelActiveSystem
             // 
