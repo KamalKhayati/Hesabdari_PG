@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.EP.CodingAnbar
 {
-   public class EpGroupFareeKala
+    public class EpTabaghehKala
     {
         public int Id { get; set; }
         [Required]
         public int SalId { get; set; }
-        [Required]
-        public int GroupAsliId { get; set; }
         [Required]
         public int Code { get; set; }
         [Required, MaxLength(100)]
@@ -28,7 +26,6 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public string SharhHesab { get; set; }
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }
-        public virtual EpGroupAsliKala EpGroupAsliKala1 { get; set; }
-        public virtual ICollection<EpNameKala> EpNameKalas { get; set; }
+        public virtual ICollection<EpGroupAsliKala> EpGroupAsliKalas { get; set; }
     }
 }

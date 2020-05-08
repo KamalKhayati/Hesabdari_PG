@@ -321,6 +321,12 @@ namespace HelpClassLibrary
                     PictureEdit item1 = (PictureEdit)item;
                     item1.Image = null;
                 }
+                else if (_Type.Name == "CheckedComboBoxEdit")
+                {
+                    CheckedComboBoxEdit item1 = (CheckedComboBoxEdit)item;
+                    item1.SetEditValue(0);
+                }
+                
             }
         }
 

@@ -20,6 +20,10 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public int ParentCode { get; set; }
         [Required, MaxLength(50)]
         public string LevelName { get; set; }
+        [Required]
+        public int TabaghehGroupIndex { get; set; }
+        [Required, MaxLength(50)]
+        public string TabaghehGroupName { get; set; }
         //[Required]
         //public int TabaghehIndex { get; set; }
         //[Required]

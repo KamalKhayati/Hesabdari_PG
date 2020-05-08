@@ -75,15 +75,9 @@ namespace DBHesabdari_PG.Migrations
                     }
 
                     ////////////////////////////////////////////////// کدینگ حسابداری //////////////////////////////////////////////////////
-                    if (!context.EpTanzimatCodingHesabdaris.Any())
-                    {
-                        context.Entry(new EpTanzimatCodingHesabdari() { SalId = 1, HesabTabaghehCarakter = 1, HesabGroupCarakter = 2, HesabColCarakter = 2, HesabMoinLevel1Carakter = 2, HesabTabaghehMinCode = "1", HesabTabaghehMaxCode = "9", HesabGroupMinCode = "01", HesabGroupMaxCode = "99", HesabColMinCode = "01", HesabColMaxCode = "99", HesabMoinLevel1MinCode = "01", HesabMoinLevel1MaxCode = "99" }).State = context.EpTanzimatCodingHesabdaris.Any(s => s.SalId == 1) ? EntityState.Unchanged : EntityState.Added;
-                    }
-
-                    if (!context.EpTanzimatGroupTafsilis.Any())
-                    {
-                        context.Entry(new EpTanzimatGroupTafsili() { SalId = 1, GroupTafsiliLevel1Carakter = 2, GroupTafsiliLevel2Carakter = 1, GroupTafsiliLevel3Carakter = 1, CodeTafsiliCarakter = 5, GroupTafsiliLevel1MinCode = "10", GroupTafsiliLevel1MaxCode = "99", GroupTafsiliLevel2MinCode = "1", GroupTafsiliLevel2MaxCode = "9", GroupTafsiliLevel3MinCode = "1", GroupTafsiliLevel3MaxCode = "9", CodeTafsiliMinCode = "00001", CodeTafsiliMaxCode = "99999" , IsActiveGroupTafsiliLevel1=true}).State = context.EpTanzimatGroupTafsilis.Any() ? EntityState.Unchanged : EntityState.Added;
-                    }
+                    context.Entry(new EpTanzimatCodingHesabdari() { SalId = 1, HesabTabaghehCarakter = 1, HesabGroupCarakter = 2, HesabColCarakter = 2, HesabMoinLevel1Carakter = 2, HesabTabaghehMinCode = "1", HesabTabaghehMaxCode = "9", HesabGroupMinCode = "01", HesabGroupMaxCode = "99", HesabColMinCode = "01", HesabColMaxCode = "99", HesabMoinLevel1MinCode = "01", HesabMoinLevel1MaxCode = "99" }).State = context.EpTanzimatCodingHesabdaris.Any(s => s.SalId == 1) ? EntityState.Unchanged : EntityState.Added;
+                    context.Entry(new EpTanzimatGroupTafsili() { SalId = 1, GroupTafsiliLevel1Carakter = 2, GroupTafsiliLevel2Carakter = 1, GroupTafsiliLevel3Carakter = 1, CodeTafsiliCarakter = 5, GroupTafsiliLevel1MinCode = "10", GroupTafsiliLevel1MaxCode = "99", GroupTafsiliLevel2MinCode = "1", GroupTafsiliLevel2MaxCode = "9", GroupTafsiliLevel3MinCode = "1", GroupTafsiliLevel3MaxCode = "9", CodeTafsiliMinCode = "00001", CodeTafsiliMaxCode = "99999", IsActiveGroupTafsiliLevel1 = true }).State = context.EpTanzimatGroupTafsilis.Any(s => s.SalId == 1) ? EntityState.Unchanged : EntityState.Added;
+                    context.Entry(new EpTanzimatAnbarVKala() { SalId = 1, CodeAnbarCarakter = 3, CodeTabagehKalaCarakter = 1, CodeGroupAsliKalaCarakter = 2, CodeGroupFareeKalaCarakter = 3, CodeNameKalaCarakter = 4, CodeVahedKalaCarakter = 3, CodeAnbarMinCode = "1", CodeAnbarMaxCode = "999", CodeTabagehKalaMinCode = "1", CodeTabagehKalaMaxCode = "9", CodeGroupAsliKalaMinCode = "01", CodeGroupAsliKalaMaxCode = "99", CodeGroupFareeKalaMinCode = "001", CodeGroupFareeKalaMaxCode = "999", CodeNameKalaMinCode = "0001", CodeNameKalaMaxCode = "9999", CodeVahedKalaMinCode = "1", CodeVahedKalaMaxCode = "999" }).State = context.EpTanzimatAnbarVKalas.Any(s => s.SalId == 1) ? EntityState.Unchanged : EntityState.Added;
 
                     //if (!context.EpHesabTabagheh.Any())
                     //{

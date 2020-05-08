@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DBHesabdari_PG.Models.EP.CodingAnbar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,4 +48,5 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //public virtual ICollection<AsnadeHesabdariRow> AsnadeHesabdariRows { get; set; }
         //public virtual ICollection<CheckTazmin> CheckTazmins { get; set; }
     }
+
 }

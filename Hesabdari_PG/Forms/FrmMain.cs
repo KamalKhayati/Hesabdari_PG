@@ -18,13 +18,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraTabbedMdi;
-using Hesabdari_PG.Forms.Ap;
 using DevExpress.XtraBars.Docking2010.Views.NativeMdi;
 using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 using DevExpress.XtraBars.InternalItems;
 using DevExpress.XtraBars.Docking2010;
 using DevExpress.XtraTab;
-using Hesabdari_PG.Forms.Ap.AnbarKala;
 using Microsoft.Win32;
 using System.Data.SqlClient;
 using HelpClassLibrary;
@@ -40,7 +38,6 @@ using SystemManagement.DafaterMali;
 using DBHesabdari_PG.Models.Ms.DafaterMali;
 using EtelaatePaye.CodingAnbar;
 using EtelaatePaye.Tanzimat;
-using Hesabdari_PG.Forms.AP.Hesabdari;
 
 namespace Hesabdari_PG.Forms
 {
@@ -76,7 +73,9 @@ namespace Hesabdari_PG.Forms
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            _UserId = Convert.ToInt32(txtUserId.Caption.ToString());
+            //_UserId = Convert.ToInt32(txtUserId.Caption.ToString());
+            _UserId = 1;
+            txtUserId.Caption = _UserId.ToString();
             // that will manage MDI child windows.
             //documentManager1.View = new NativeMdiView();
             ribbon.Minimized = true;
@@ -291,6 +290,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
         }
 
@@ -406,7 +407,9 @@ namespace Hesabdari_PG.Forms
                 {
                     var q = db.MsDefaults.FirstOrDefault(s => s.MsUserId == _UserId);
                     if (q != null)
+                    {
                         cmbDoreMalihaList.EditValue = q.DoreMaliId;
+                    }
                     else
                     {
                         cmbDoreMalihaList.EditValue = -1;
@@ -477,7 +480,13 @@ namespace Hesabdari_PG.Forms
         private void cmbDoreMalihaList_EditValueChanged(object sender, EventArgs e)
         {
             if (Convert.ToInt32(cmbDoreMalihaList.EditValue) > -1)
+            {
                 chkDefault.Checked = true;
+                Ap.Visible = true;
+            }
+            else
+                Ap.Visible = false;
+
             if (FirstRunFrmMain == false)
                 HelpClass1.CloseAllOpenForms();
             FirstRunFrmMain = false;
@@ -556,54 +565,14 @@ namespace Hesabdari_PG.Forms
 
         }
 
-
-        private void btnTafsiliShoabatVabasteh_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //FrmHesabTafsiliSayer fm = new FrmHesabTafsiliSayer();
-            //fm.MdiParent = this;
-            //fm.lblUserId.Text = txtUserId.Caption;
-            //fm.lblUserName.Text = txtUserName.Caption;
-            //fm.lblSalId.Text = _SalId;
-            //fm.lblSalMali.Text = _SalMali;
-            //ActiveForm(fm);
-
-        }
-
-        private void btnGroupAsliKala_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FrmGroupAsliKala fm = new FrmGroupAsliKala();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            ActiveForm(fm);
-
-        }
-
-        private void btnGroupFareeKala_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FrmGroupFareeKala fm = new FrmGroupFareeKala();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            ActiveForm(fm);
-
-        }
-
-        private void btnNameKala_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FrmNameKala fm = new FrmNameKala();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            ActiveForm(fm);
-        }
-
         private void btnVahedKala_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmVahedKala fm = new FrmVahedKala();
-            fm.MdiParent = this;
+            //fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
         }
 
@@ -676,6 +645,61 @@ namespace Hesabdari_PG.Forms
             fm._levelNamber = 3;
             fm.Name = "FrmHesabhaTafsiliLevel3";
             fm.Text = "حسابهای تفصیلی سطح 3";
+            ActiveForm(fm);
+
+        }
+
+        private void mbsCodingHesabdari_Popup(object sender, EventArgs e)
+        {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    if (Convert.ToInt32(cmbDoreMalihaList.EditValue) > 0)
+                    {
+                        int SalId = Convert.ToInt32(cmbDoreMalihaList.EditValue);
+                        var q = db.EpTanzimatGroupTafsilis.FirstOrDefault(s => s.SalId == SalId);
+                        if (q != null)
+                        {
+                            btnHesabhaTafsiliLevel2.Visibility = q.IsActiveGroupTafsiliLevel2 == true ? BarItemVisibility.Always : BarItemVisibility.Never;
+                            btnHesabhaTafsiliLevel3.Visibility = q.IsActiveGroupTafsiliLevel3 == true ? BarItemVisibility.Always : BarItemVisibility.Never;
+                        }
+                    }
+                    else
+                    {
+                        //XtraMessageBox.Show("لطفاً سال مالی را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //cmbDoreMalihaList.Edit.AllowFocused = true;
+                        //return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnTanzimatCodingAnbarVKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmTanzimatCodingAnbarVKala fm = new FrmTanzimatCodingAnbarVKala();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+
+        }
+
+        private void btnCodingKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmCodingKala fm = new FrmCodingKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }

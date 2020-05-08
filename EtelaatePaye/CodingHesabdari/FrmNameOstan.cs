@@ -538,7 +538,8 @@ namespace EtelaatePaye.CodingHesabdari
                 {
                     txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
                     txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
-                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                    if (En != EnumCED.Edit)
+                        btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
 
                 }
 

@@ -11,8 +11,10 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
     {
         public int Id { get; set; }
         [Required]
+        public int SalId { get; set; }
+        [Required]
         public int Code { get; set; }
-        [Required, MaxLength(50)]
+        [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required]
         public int IndexNoeAnbar { get; set; }

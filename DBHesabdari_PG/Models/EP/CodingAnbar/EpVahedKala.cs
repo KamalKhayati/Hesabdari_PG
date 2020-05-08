@@ -10,8 +10,13 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
   public  class EpVahedKala
     {
         public int Id { get; set; }
+        [Required]
+        public int SalId { get; set; }
+        [Required]
+        public int Code { get; set; }
         [Required, MaxLength(50)]
         public string Name { get; set; }
+        public virtual ICollection<EpTabaghehKala> EpTabaghehKalas { get; set; }
         public virtual ICollection<EpGroupAsliKala> EpGroupAsliKalas { get; set; }
         public virtual ICollection<EpGroupFareeKala> EpGroupFareeKalas { get; set; }
         public virtual ICollection<EpNameKala> EpNameKalas { get; set; }

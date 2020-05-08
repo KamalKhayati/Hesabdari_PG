@@ -11,9 +11,9 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
     {
         public int Id { get; set; }
         [Required]
-        public int DasteBandiIndex { get; set; }
-        [Required, MaxLength(20)]
-        public string DasteBandiName { get; set; }
+        public int SalId { get; set; }
+        [Required]
+        public int TabaghehId { get; set; }
         [Required]
         public int Code { get; set; }
         [Required, MaxLength(100)]
@@ -26,7 +26,9 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }
+        public virtual EpTabaghehKala EpTabaghehKala1 { get; set; }
         public virtual ICollection<EpGroupFareeKala> EpGroupFareeKalas { get; set; }
     }
 }

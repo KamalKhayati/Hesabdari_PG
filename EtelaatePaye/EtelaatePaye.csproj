@@ -65,35 +65,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodingAnbar\FrmGroupAsliKala.cs">
+    <Compile Include="CodingAnbar\FrmCodingKala.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CodingAnbar\FrmGroupAsliKala.Designer.cs">
-      <DependentUpon>FrmGroupAsliKala.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingAnbar\FrmGroupFareeKala.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingAnbar\FrmGroupFareeKala.Designer.cs">
-      <DependentUpon>FrmGroupFareeKala.cs</DependentUpon>
+    <Compile Include="CodingAnbar\FrmCodingKala.Designer.cs">
+      <DependentUpon>FrmCodingKala.cs</DependentUpon>
     </Compile>
     <Compile Include="CodingAnbar\FrmListAnbarha.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CodingAnbar\FrmListAnbarha.Designer.cs">
       <DependentUpon>FrmListAnbarha.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingAnbar\FrmNameKala.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingAnbar\FrmNameKala.Designer.cs">
-      <DependentUpon>FrmNameKala.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingAnbar\FrmTaminKonandeKala.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingAnbar\FrmTaminKonandeKala.Designer.cs">
-      <DependentUpon>FrmTaminKonandeKala.cs</DependentUpon>
     </Compile>
     <Compile Include="CodingAnbar\FrmVahedKala.cs">
       <SubType>Form</SubType>
@@ -163,26 +145,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tanzimat\FrmTanzimatCodingAnbarVKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanzimat\FrmTanzimatCodingAnbarVKala.Designer.cs">
+      <DependentUpon>FrmTanzimatCodingAnbarVKala.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tanzimat\FrmTanzimatCodingHesabdari.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tanzimat\FrmTanzimatCodingHesabdari.Designer.cs">
       <DependentUpon>FrmTanzimatCodingHesabdari.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CodingAnbar\FrmGroupAsliKala.resx">
-      <DependentUpon>FrmGroupAsliKala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingAnbar\FrmGroupFareeKala.resx">
-      <DependentUpon>FrmGroupFareeKala.cs</DependentUpon>
+    <EmbeddedResource Include="CodingAnbar\FrmCodingKala.resx">
+      <DependentUpon>FrmCodingKala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CodingAnbar\FrmListAnbarha.resx">
       <DependentUpon>FrmListAnbarha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingAnbar\FrmNameKala.resx">
-      <DependentUpon>FrmNameKala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingAnbar\FrmTaminKonandeKala.resx">
-      <DependentUpon>FrmTaminKonandeKala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CodingAnbar\FrmVahedKala.resx">
       <DependentUpon>FrmVahedKala.cs</DependentUpon>
@@ -228,6 +207,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tanzimat\FrmTanzimatCodingAnbarVKala.resx">
+      <DependentUpon>FrmTanzimatCodingAnbarVKala.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tanzimat\FrmTanzimatCodingHesabdari.resx">
       <DependentUpon>FrmTanzimatCodingHesabdari.cs</DependentUpon>
     </EmbeddedResource>

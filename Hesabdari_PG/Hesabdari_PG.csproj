@@ -107,24 +107,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaCed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaCed.Designer.cs">
-      <DependentUpon>FrmAnbarhaCed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AP\AnbarKala\FrmAnbarhaList.Designer.cs">
-      <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AP\Hesabdari\FrmHesabTafsiliLevelsSelected.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AP\Hesabdari\FrmHesabTafsiliLevelsSelected.Designer.cs">
-      <DependentUpon>FrmHesabTafsiliLevelsSelected.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FormKham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,16 +139,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AP\AnbarKala\FrmAnbarhaCed.resx">
-      <DependentUpon>FrmAnbarhaCed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AP\AnbarKala\FrmAnbarhaList.resx">
-      <DependentUpon>FrmAnbarhaList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AP\Hesabdari\FrmHesabTafsiliLevelsSelected.resx">
-      <DependentUpon>FrmHesabTafsiliLevelsSelected.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormKham.resx">
       <DependentUpon>FormKham.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,12 +177,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\AK\" />
-    <Folder Include="Forms\DP\" />
-    <Folder Include="Forms\FT\" />
-    <Folder Include="Forms\SH\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DBHesabdari_PG\DBHesabdari_PG.csproj">
       <Project>{a8821623-3d7b-4298-aaae-c6ad5e96ca5e}</Project>

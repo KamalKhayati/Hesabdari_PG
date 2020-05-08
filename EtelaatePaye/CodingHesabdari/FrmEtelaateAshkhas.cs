@@ -2956,7 +2956,8 @@ namespace EtelaatePaye.CodingHesabdari
                         chkDefaultDarsadRanande.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
                         txtMolahezat_DR.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
                     }
-                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                    if (En != EnumCED.Edit)
+                        btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
                 }
 
             }

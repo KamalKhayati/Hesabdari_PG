@@ -78,9 +78,7 @@
             this.btnJoziatEtelaatAshkhas = new DevExpress.XtraBars.BarButtonItem();
             this.mbsCodingAnbarVaKala = new DevExpress.XtraBars.BarSubItem();
             this.btnListAnbarha = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGroupAsliKala = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGroupFareeKala = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNameKala = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCodingKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnVahedKala = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
@@ -276,9 +274,6 @@
             this.btnGroupTafsili,
             this.mbsCodingAnbarVaKala,
             this.btnListAnbarha,
-            this.btnGroupAsliKala,
-            this.btnGroupFareeKala,
-            this.btnNameKala,
             this.btnVahedKala,
             this.barButtonItem24,
             this.barSubItem7,
@@ -339,11 +334,12 @@
             this.btnHesabhaTafsiliLevel1,
             this.btnJoziatEtelaatAshkhas,
             this.btnHesabhaTafsiliLevel2,
-            this.btnHesabhaTafsiliLevel3});
+            this.btnHesabhaTafsiliLevel3,
+            this.btnCodingKala});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 175;
+            this.ribbon.MaxItemId = 176;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
             this.ribbon.PageHeaderMinWidth = 50;
@@ -384,7 +380,7 @@
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1546, 249);
+            this.ribbon.Size = new System.Drawing.Size(1932, 249);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ribbon_MouseDoubleClick);
@@ -680,6 +676,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnJoziatEtelaatAshkhas)});
             this.mbsCodingHesabdari.Name = "mbsCodingHesabdari";
             this.mbsCodingHesabdari.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.mbsCodingHesabdari.Popup += new System.EventHandler(this.mbsCodingHesabdari_Popup);
             // 
             // btnCodingHesabdari
             // 
@@ -730,9 +727,7 @@
             this.mbsCodingAnbarVaKala.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("mbsCodingAnbarVaKala.ImageOptions.Image")));
             this.mbsCodingAnbarVaKala.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnListAnbarha),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupAsliKala),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupFareeKala),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnNameKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCodingKala),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnVahedKala)});
             this.mbsCodingAnbarVaKala.Name = "mbsCodingAnbarVaKala";
             this.mbsCodingAnbarVaKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -744,26 +739,12 @@
             this.btnListAnbarha.Name = "btnListAnbarha";
             this.btnListAnbarha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAnbarha_ItemClick);
             // 
-            // btnGroupAsliKala
+            // btnCodingKala
             // 
-            this.btnGroupAsliKala.Caption = "گروه اصلی کالاها";
-            this.btnGroupAsliKala.Id = 59;
-            this.btnGroupAsliKala.Name = "btnGroupAsliKala";
-            this.btnGroupAsliKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupAsliKala_ItemClick);
-            // 
-            // btnGroupFareeKala
-            // 
-            this.btnGroupFareeKala.Caption = "گروه فرعی کالاها";
-            this.btnGroupFareeKala.Id = 60;
-            this.btnGroupFareeKala.Name = "btnGroupFareeKala";
-            this.btnGroupFareeKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupFareeKala_ItemClick);
-            // 
-            // btnNameKala
-            // 
-            this.btnNameKala.Caption = "نام کالاها";
-            this.btnNameKala.Id = 61;
-            this.btnNameKala.Name = "btnNameKala";
-            this.btnNameKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNameKala_ItemClick);
+            this.btnCodingKala.Caption = "کدینگ کالا";
+            this.btnCodingKala.Id = 175;
+            this.btnCodingKala.Name = "btnCodingKala";
+            this.btnCodingKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCodingKala_ItemClick);
             // 
             // btnVahedKala
             // 
@@ -1280,6 +1261,7 @@
             this.btnTanzimatCodingAnbarVKala.Caption = "تنظیمات کدینگ انبار و کالا";
             this.btnTanzimatCodingAnbarVKala.Id = 159;
             this.btnTanzimatCodingAnbarVKala.Name = "btnTanzimatCodingAnbarVKala";
+            this.btnTanzimatCodingAnbarVKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTanzimatCodingAnbarVKala_ItemClick);
             // 
             // rpKharidFroosh
             // 
@@ -1493,6 +1475,7 @@
             this.ribbonPageGroup5});
             this.Ap.Name = "Ap";
             this.Ap.Text = "اطلاعات پایه";
+            this.Ap.Visible = false;
             // 
             // rpgTarifCoding
             // 
@@ -1636,7 +1619,7 @@
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1546, 45);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1932, 45);
             // 
             // barButtonItem30
             // 
@@ -1674,7 +1657,7 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1508, 249);
+            this.hideContainerRight.Location = new System.Drawing.Point(1894, 249);
             this.hideContainerRight.Name = "hideContainerRight";
             this.hideContainerRight.Size = new System.Drawing.Size(38, 366);
             // 
@@ -1728,7 +1711,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1546, 660);
+            this.ClientSize = new System.Drawing.Size(1932, 660);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -1840,10 +1823,7 @@
         private DevExpress.XtraBars.BarButtonItem btnGroupTafsili;
         private DevExpress.XtraBars.BarSubItem mbsCodingAnbarVaKala;
         private DevExpress.XtraBars.BarButtonItem btnListAnbarha;
-        private DevExpress.XtraBars.BarButtonItem btnGroupAsliKala;
         private DevExpress.XtraBars.BarButtonItem barButtonItem24;
-        private DevExpress.XtraBars.BarButtonItem btnGroupFareeKala;
-        private DevExpress.XtraBars.BarButtonItem btnNameKala;
         private DevExpress.XtraBars.BarButtonItem btnVahedKala;
         private DevExpress.XtraBars.BarSubItem barSubItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
@@ -1945,5 +1925,6 @@
         private DevExpress.XtraBars.BarButtonItem btnJoziatEtelaatAshkhas;
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel2;
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel3;
+        private DevExpress.XtraBars.BarButtonItem btnCodingKala;
     }
 }

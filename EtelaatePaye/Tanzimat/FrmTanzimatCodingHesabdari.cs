@@ -131,6 +131,36 @@ namespace EtelaatePaye.Tanzimat
         {
             FillTanzimatCodingHesabdari();
             IsAnyData();
+
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    int _SalId = Convert.ToInt32(lblSalId.Text);
+                    var q = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupLevelsId==2);
+                    if (q!=null)
+                    {
+                        chkIsActiveGroupTafsiliLevel2.ReadOnly = true;
+                    }
+                    else
+                        chkIsActiveGroupTafsiliLevel2.ReadOnly = false;
+
+                    var q1 = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupLevelsId == 3);
+                    if (q1 != null)
+                    {
+                        chkIsActiveGroupTafsiliLevel3.ReadOnly = true;
+                    }
+                    else
+                        chkIsActiveGroupTafsiliLevel3.ReadOnly = false;
+
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
 
         private bool TextEditValidation()

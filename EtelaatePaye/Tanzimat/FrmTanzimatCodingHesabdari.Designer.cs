@@ -378,6 +378,7 @@
             // 
             this.chkIsActiveGroupTafsiliLevel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsActiveGroupTafsiliLevel1.EditValue = true;
+            this.chkIsActiveGroupTafsiliLevel1.Enabled = false;
             this.chkIsActiveGroupTafsiliLevel1.EnterMoveNextControl = true;
             this.chkIsActiveGroupTafsiliLevel1.Location = new System.Drawing.Point(7, 238);
             this.chkIsActiveGroupTafsiliLevel1.Margin = new System.Windows.Forms.Padding(4);
@@ -393,7 +394,8 @@
             // txtCodeTafsiliCarakter
             // 
             this.txtCodeTafsiliCarakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeTafsiliCarakter.EditValue = "";
+            this.txtCodeTafsiliCarakter.EditValue = "5";
+            this.txtCodeTafsiliCarakter.Enabled = false;
             this.txtCodeTafsiliCarakter.EnterMoveNextControl = true;
             this.txtCodeTafsiliCarakter.Location = new System.Drawing.Point(48, 192);
             this.txtCodeTafsiliCarakter.Margin = new System.Windows.Forms.Padding(4);
@@ -424,7 +426,8 @@
             // txtGroupTafsiliLevel3Carakter
             // 
             this.txtGroupTafsiliLevel3Carakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGroupTafsiliLevel3Carakter.EditValue = "";
+            this.txtGroupTafsiliLevel3Carakter.EditValue = "1";
+            this.txtGroupTafsiliLevel3Carakter.Enabled = false;
             this.txtGroupTafsiliLevel3Carakter.EnterMoveNextControl = true;
             this.txtGroupTafsiliLevel3Carakter.Location = new System.Drawing.Point(48, 145);
             this.txtGroupTafsiliLevel3Carakter.Margin = new System.Windows.Forms.Padding(4);
@@ -443,7 +446,8 @@
             // txtGroupTafsiliLevel2Carakter
             // 
             this.txtGroupTafsiliLevel2Carakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGroupTafsiliLevel2Carakter.EditValue = "";
+            this.txtGroupTafsiliLevel2Carakter.EditValue = "1";
+            this.txtGroupTafsiliLevel2Carakter.Enabled = false;
             this.txtGroupTafsiliLevel2Carakter.EnterMoveNextControl = true;
             this.txtGroupTafsiliLevel2Carakter.Location = new System.Drawing.Point(48, 99);
             this.txtGroupTafsiliLevel2Carakter.Margin = new System.Windows.Forms.Padding(4);
@@ -462,7 +466,8 @@
             // txtGroupTafsiliLevel1Carakter
             // 
             this.txtGroupTafsiliLevel1Carakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGroupTafsiliLevel1Carakter.EditValue = "";
+            this.txtGroupTafsiliLevel1Carakter.EditValue = "2";
+            this.txtGroupTafsiliLevel1Carakter.Enabled = false;
             this.txtGroupTafsiliLevel1Carakter.EnterMoveNextControl = true;
             this.txtGroupTafsiliLevel1Carakter.Location = new System.Drawing.Point(48, 52);
             this.txtGroupTafsiliLevel1Carakter.Margin = new System.Windows.Forms.Padding(4);

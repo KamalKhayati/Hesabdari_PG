@@ -39,6 +39,8 @@
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
+            this.lblSalId = new DevExpress.XtraEditors.LabelControl();
+            this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.txtId = new DevExpress.XtraEditors.TextEdit();
@@ -73,6 +75,8 @@
             this.panelControl4.Controls.Add(this.gridControl1);
             this.panelControl4.Controls.Add(this.lblUserName);
             this.panelControl4.Controls.Add(this.lblUserId);
+            this.panelControl4.Controls.Add(this.lblSalId);
+            this.panelControl4.Controls.Add(this.lblSalMali);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
@@ -122,12 +126,10 @@
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             this.gridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyUp);
             this.gridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridView1_KeyPress);
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // colId
             // 
@@ -187,6 +189,26 @@
             this.lblUserId.TabIndex = 30;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
+            // 
+            // lblSalId
+            // 
+            this.lblSalId.Location = new System.Drawing.Point(28, 83);
+            this.lblSalId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalId.Name = "lblSalId";
+            this.lblSalId.Size = new System.Drawing.Size(78, 31);
+            this.lblSalId.TabIndex = 64;
+            this.lblSalId.Text = "آیدی سال";
+            this.lblSalId.Visible = false;
+            // 
+            // lblSalMali
+            // 
+            this.lblSalMali.Location = new System.Drawing.Point(28, 141);
+            this.lblSalMali.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lblSalMali.Name = "lblSalMali";
+            this.lblSalMali.Size = new System.Drawing.Size(73, 31);
+            this.lblSalMali.TabIndex = 65;
+            this.lblSalMali.Text = "سال مالی";
+            this.lblSalMali.Visible = false;
             // 
             // panelControl1
             // 
@@ -264,9 +286,9 @@
             this.btnDisplyActiveList.Name = "btnDisplyActiveList";
             this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyActiveList.TabIndex = 10;
-            this.btnDisplyActiveList.ToolTip = "لیست فعال";
+            this.btnDisplyActiveList.ToolTip = "دوباره سازی";
             this.btnDisplyActiveList.ToolTipTitle = "F8";
-            this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyActiveList_Click);
+            this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyList_Click);
             // 
             // btnClose
             // 
@@ -469,5 +491,7 @@
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.BindingSource epVahedKalasBindingSource;
+        public DevExpress.XtraEditors.LabelControl lblSalId;
+        public DevExpress.XtraEditors.LabelControl lblSalMali;
     }
 }

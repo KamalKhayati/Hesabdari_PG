@@ -188,12 +188,12 @@ namespace EtelaatePaye.CodingHesabdari
                         var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
                         cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
                     }
-                   else if (_levelNamber == 2)
+                    else if (_levelNamber == 2)
                     {
                         var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
                         cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
                     }
-                   else if (_levelNamber == 3)
+                    else if (_levelNamber == 3)
                     {
                         var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel3.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
                         cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
@@ -598,10 +598,11 @@ namespace EtelaatePaye.CodingHesabdari
                 chkIsActive.Checked = true;
                 chkHaghighi_Ashkhas.Checked = true;
                 txtTarikhEjad.Text = DateTime.Now.ToString().Substring(0, 10);
-                FillcmbGroupTafsili();
-                cmbGroupTafsili.Focus();
+                if (_SelectedTabPage != "xtpAllHesabTafsili")
+                    FillcmbGroupTafsili();
                 if (xtcHesabhaTafsili.SelectedTabPage.Name == "xtpBankha")
                     FillcmbNameBank(); FillcmbNoeHesab(); FillcmbNoeArz();
+                cmbGroupTafsili.Focus();
             }
         }
 
@@ -658,33 +659,37 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView.RowCount > 0)
                 {
-                        gridControl.Enabled = false;
-                        EditRowIndex = gridView.FocusedRowHandle;
-                        En = EnumCED.Edit;
-                        HelpClass1.InActiveButtons(panelControl1);
-                        HelpClass1.ActiveControls(PanelControl);
+                    if (_SelectedTabPage != "xtpAllHesabTafsili")
                         FillcmbGroupTafsili();
-                        if (xtcHesabhaTafsili.SelectedTabPage.Name == "xtpBankha")
-                            FillcmbNameBank(); FillcmbNoeHesab(); FillcmbNoeArz();
+                    gridControl.Enabled = false;
+                    EditRowIndex = gridView.FocusedRowHandle;
+                    En = EnumCED.Edit;
+                    HelpClass1.InActiveButtons(panelControl1);
+                    HelpClass1.ActiveControls(PanelControl);
+                    FillcmbGroupTafsili();
+                    if (xtcHesabhaTafsili.SelectedTabPage.Name == "xtpBankha")
+                        FillcmbNameBank(); FillcmbNoeHesab(); FillcmbNoeArz();
 
-                        //cmbListGroupTafsili.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupTafsiliId")); ;
-                        //txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                        //txtCodeGroupTafsili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
-                        //txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(2);
-                        //txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
-                        //txtTarikhEjad_Ashkhas.Text = gridView1.GetFocusedRowCellValue("TarikhEjad") != null ? gridView1.GetFocusedRowCellValue("TarikhEjad").ToString().Substring(0, 10) : "";
-                        //chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
-                        //txtSharhHesab.Text = gridView1.GetFocusedRowCellValue("SharhHesab").ToString();
-                        //chkPersonel.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsPersonel"));
-                        //chkSahamdar.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsSahamdar"));
-                        //chkVizitor.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsVizitor"));
-                        //chkRanande.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsRanande"));
+                    //cmbListGroupTafsili.EditValue = Convert.ToInt32(gridView1.GetFocusedRowCellValue("GroupTafsiliId")); ;
+                    //txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                    //txtCodeGroupTafsili.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(0, 2);
+                    //txtCode.Text = gridView1.GetFocusedRowCellValue("Code").ToString().Substring(2);
+                    //txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    //txtTarikhEjad_Ashkhas.Text = gridView1.GetFocusedRowCellValue("TarikhEjad") != null ? gridView1.GetFocusedRowCellValue("TarikhEjad").ToString().Substring(0, 10) : "";
+                    //chkIsActive.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                    //txtSharhHesab.Text = gridView1.GetFocusedRowCellValue("SharhHesab").ToString();
+                    //chkPersonel.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsPersonel"));
+                    //chkSahamdar.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsSahamdar"));
+                    //chkVizitor.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsVizitor"));
+                    //chkRanande.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsRanande"));
 
-                        _CodeBeforeEdit = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
-                        _NameBeforeEdit = txtName.Text;
-                        _IsActiveBeforeEdit = chkIsActive.Checked;
-                        _GroupTafsiliIdBeforeEdit = Convert.ToInt32(cmbGroupTafsili.EditValue);
-                        cmbGroupTafsili.Focus();
+                    gridView_RowCellClick(null, null);
+
+                    _CodeBeforeEdit = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
+                    _NameBeforeEdit = txtName.Text;
+                    _IsActiveBeforeEdit = chkIsActive.Checked;
+                    _GroupTafsiliIdBeforeEdit = Convert.ToInt32(cmbGroupTafsili.EditValue);
+                    cmbGroupTafsili.Focus();
                 }
             }
         }
@@ -1037,6 +1042,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 {
                                     //q.SalId = _SalId;
                                     //q.LevelNamber = _levelNamber;
+                                    //q.TabaghehGroupIndex = _TabaghehIndex;
                                     q.Code = _CodeTafsili;
                                     q.Name = _txtName;
                                     q.GroupTafsiliId = _cmbGroupTafsiliId;
@@ -1421,7 +1427,8 @@ namespace EtelaatePaye.CodingHesabdari
                         default:
                             break;
                     }
-                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
+                    if (En != EnumCED.Edit)
+                        btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = true;
                 }
 
             }
@@ -1460,7 +1467,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Ashkhas;
                 PanelControl = panelControl_Ashkhas;
                 _TabaghehIndex = 0;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpAghlamAnbar)
             {
@@ -1481,7 +1487,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Aghlam;
                 PanelControl = panelControl_AghlamAnbar;
                 _TabaghehIndex = 1;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpDaraeha)
             {
@@ -1502,7 +1507,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Daraeha;
                 PanelControl = panelControl_Daraeha;
                 _TabaghehIndex = 2;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpSandoghha)
             {
@@ -1523,7 +1527,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Sandogh;
                 PanelControl = panelControl_Sandogh;
                 _TabaghehIndex = 3;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpBankha)
             {
@@ -1544,7 +1547,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Bank;
                 PanelControl = panelControl_Bank;
                 _TabaghehIndex = 4;
-                FillcmbGroupTafsili();
                 FillcmbNameBank(); FillcmbNoeHesab(); FillcmbNoeArz();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpVamha)
@@ -1566,7 +1568,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Vam;
                 PanelControl = panelControl_Vam;
                 _TabaghehIndex = 5;
-                FillcmbGroupTafsili();
                 HelpClass1.DateTimeMask(txtTarikhDaryaftVam_Vam);
                 HelpClass1.DateTimeMask(txtSarresidAvalinGhest_Vam);
             }
@@ -1589,7 +1590,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Marakez;
                 PanelControl = panelControl_Marakez;
                 _TabaghehIndex = 6;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpShoabat)
             {
@@ -1610,7 +1610,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Shoabat;
                 PanelControl = panelControl_Shoabat;
                 _TabaghehIndex = 7;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpProzheha)
             {
@@ -1631,7 +1630,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Prozhe;
                 PanelControl = panelControl_Prozhe;
                 _TabaghehIndex = 8;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpGharardadha)
             {
@@ -1652,7 +1650,6 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Gharardad;
                 PanelControl = panelControl_Gharardad;
                 _TabaghehIndex = 9;
-                FillcmbGroupTafsili();
             }
             else if (xtcHesabhaTafsili.SelectedTabPage == xtpSayer)
             {
@@ -1673,11 +1670,12 @@ namespace EtelaatePaye.CodingHesabdari
                 txtSharh = txtSharh_Sayer;
                 PanelControl = panelControl_Sayer;
                 _TabaghehIndex = 10;
-                FillcmbGroupTafsili();
             }
             HelpClass1.DateTimeMask(txtTarikhEjad);
             _SelectedTabPage = xtcHesabhaTafsili.SelectedTabPage.Name;
             FillGridViewHesabTafsili();
+            if (_SelectedTabPage != "xtpAllHesabTafsili")
+                FillcmbGroupTafsili();
         }
 
         private void btnReloadControl_Click(object sender, EventArgs e)

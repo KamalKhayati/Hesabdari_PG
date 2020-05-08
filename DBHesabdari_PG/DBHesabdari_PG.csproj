@@ -79,11 +79,12 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AP\AnbarKala\ApAnbar.cs" />
     <Compile Include="Models\EnumCED.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpAllCodingKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpGroupAsliKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpGroupFareeKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpListAnbarha.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpNameKala.cs" />
-    <Compile Include="Models\EP\CodingAnbar\EpTaminKonandeKala.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpTabaghehKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpVahedKala.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpAllGroupTafsili.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpAllHesabTafsili.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Models\EP\CodingHesabdari\EpShTamas_A.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliDaraeha.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpHesabTabagheh.cs" />
+    <Compile Include="Models\EP\Tanzimat\EpTanzimatAnbarVKala.cs" />
     <Compile Include="Models\EP\Tanzimat\EpTanzimatCodingHesabdari.cs" />
     <Compile Include="Models\EP\Tanzimat\EpTanzimatGroupTafsili.cs" />
     <Compile Include="Models\Ms\ActiveSystem\MsActiveSystem.cs" />

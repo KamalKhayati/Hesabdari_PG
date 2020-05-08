@@ -65,6 +65,7 @@ namespace Hesabdari_PG
             HelpClass1.SetRegionAndLanguage();
 
             BonusSkins.Register();
+            //new FrmLogin().Show();
             Application.Run(new AppContext());
         }
         public class AppContext : ApplicationContext
@@ -72,7 +73,8 @@ namespace Hesabdari_PG
             public AppContext()
             {
                 Application.Idle += new EventHandler(Application_Idle);
-                new FrmLogin().Show();
+                //new FrmLogin().Show();
+                new FrmMain().Show();
             }
 
             private void Application_Idle(object sender, EventArgs e)

@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHesabhaTafsili));
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip18 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip19 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl_AghlamAnbar = new DevExpress.XtraEditors.PanelControl();
             this.cmbGroupTafsili_Aghlam = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Aghlam = new DevExpress.XtraEditors.SimpleButton();
@@ -1019,9 +1019,9 @@
             this.btnNewCode_Aghlam.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Aghlam.Name = "btnNewCode_Aghlam";
             this.btnNewCode_Aghlam.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem12.Text = "Alt+N";
-            superToolTip12.Items.Add(toolTipTitleItem12);
-            this.btnNewCode_Aghlam.SuperTip = superToolTip12;
+            toolTipTitleItem1.Text = "Alt+N";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnNewCode_Aghlam.SuperTip = superToolTip1;
             this.btnNewCode_Aghlam.TabIndex = 45;
             this.btnNewCode_Aghlam.TabStop = false;
             this.btnNewCode_Aghlam.Text = "کد جدید";
@@ -1673,9 +1673,9 @@
             this.btnNewCode_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Ashkhas.Name = "btnNewCode_Ashkhas";
             this.btnNewCode_Ashkhas.Size = new System.Drawing.Size(130, 41);
-            toolTipTitleItem13.Text = "Alt+N";
-            superToolTip13.Items.Add(toolTipTitleItem13);
-            this.btnNewCode_Ashkhas.SuperTip = superToolTip13;
+            toolTipTitleItem2.Text = "Alt+N";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnNewCode_Ashkhas.SuperTip = superToolTip2;
             this.btnNewCode_Ashkhas.TabIndex = 132;
             this.btnNewCode_Ashkhas.TabStop = false;
             this.btnNewCode_Ashkhas.Text = "کد جدید";
@@ -1930,7 +1930,7 @@
             this.colEpAllGroupTafsili1.Name = "colEpAllGroupTafsili1";
             this.colEpAllGroupTafsili1.Visible = true;
             this.colEpAllGroupTafsili1.VisibleIndex = 4;
-            this.colEpAllGroupTafsili1.Width = 177;
+            this.colEpAllGroupTafsili1.Width = 213;
             // 
             // colStartCode
             // 
@@ -1975,7 +1975,9 @@
             this.colEpAllGroupTafsili11.FieldName = "EpAllGroupTafsili1.EpGroupTafsiliLevel1.TabaghehName";
             this.colEpAllGroupTafsili11.MinWidth = 25;
             this.colEpAllGroupTafsili11.Name = "colEpAllGroupTafsili11";
-            this.colEpAllGroupTafsili11.Width = 217;
+            this.colEpAllGroupTafsili11.Visible = true;
+            this.colEpAllGroupTafsili11.VisibleIndex = 7;
+            this.colEpAllGroupTafsili11.Width = 226;
             // 
             // colSharhHesab
             // 
@@ -1989,7 +1991,7 @@
             this.colSharhHesab.MinWidth = 24;
             this.colSharhHesab.Name = "colSharhHesab";
             this.colSharhHesab.Visible = true;
-            this.colSharhHesab.VisibleIndex = 7;
+            this.colSharhHesab.VisibleIndex = 8;
             this.colSharhHesab.Width = 489;
             // 
             // xtpAshkhas
@@ -3094,9 +3096,9 @@
             this.btnNewCode_Daraeha.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Daraeha.Name = "btnNewCode_Daraeha";
             this.btnNewCode_Daraeha.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem14.Text = "Alt+N";
-            superToolTip14.Items.Add(toolTipTitleItem14);
-            this.btnNewCode_Daraeha.SuperTip = superToolTip14;
+            toolTipTitleItem3.Text = "Alt+N";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnNewCode_Daraeha.SuperTip = superToolTip3;
             this.btnNewCode_Daraeha.TabIndex = 45;
             this.btnNewCode_Daraeha.TabStop = false;
             this.btnNewCode_Daraeha.Text = "کد جدید";
@@ -3718,9 +3720,9 @@
             this.btnNewCode_Sandogh.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Sandogh.Name = "btnNewCode_Sandogh";
             this.btnNewCode_Sandogh.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem15.Text = "Alt+N";
-            superToolTip15.Items.Add(toolTipTitleItem15);
-            this.btnNewCode_Sandogh.SuperTip = superToolTip15;
+            toolTipTitleItem4.Text = "Alt+N";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnNewCode_Sandogh.SuperTip = superToolTip4;
             this.btnNewCode_Sandogh.TabIndex = 45;
             this.btnNewCode_Sandogh.TabStop = false;
             this.btnNewCode_Sandogh.Text = "کد جدید";
@@ -4763,9 +4765,9 @@
             this.btnNewCode_Bank.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Bank.Name = "btnNewCode_Bank";
             this.btnNewCode_Bank.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem16.Text = "Alt+N";
-            superToolTip16.Items.Add(toolTipTitleItem16);
-            this.btnNewCode_Bank.SuperTip = superToolTip16;
+            toolTipTitleItem5.Text = "Alt+N";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            this.btnNewCode_Bank.SuperTip = superToolTip5;
             this.btnNewCode_Bank.TabIndex = 45;
             this.btnNewCode_Bank.TabStop = false;
             this.btnNewCode_Bank.Text = "کد جدید";
@@ -5554,9 +5556,9 @@
             this.btnNewCode_Vam.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Vam.Name = "btnNewCode_Vam";
             this.btnNewCode_Vam.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem17.Text = "Alt+N";
-            superToolTip17.Items.Add(toolTipTitleItem17);
-            this.btnNewCode_Vam.SuperTip = superToolTip17;
+            toolTipTitleItem6.Text = "Alt+N";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            this.btnNewCode_Vam.SuperTip = superToolTip6;
             this.btnNewCode_Vam.TabIndex = 45;
             this.btnNewCode_Vam.TabStop = false;
             this.btnNewCode_Vam.Text = "کد جدید";
@@ -6073,9 +6075,9 @@
             this.btnNewCode_Marakez.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Marakez.Name = "btnNewCode_Marakez";
             this.btnNewCode_Marakez.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem18.Text = "Alt+N";
-            superToolTip18.Items.Add(toolTipTitleItem18);
-            this.btnNewCode_Marakez.SuperTip = superToolTip18;
+            toolTipTitleItem7.Text = "Alt+N";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            this.btnNewCode_Marakez.SuperTip = superToolTip7;
             this.btnNewCode_Marakez.TabIndex = 45;
             this.btnNewCode_Marakez.TabStop = false;
             this.btnNewCode_Marakez.Text = "کد جدید";
@@ -6592,9 +6594,9 @@
             this.btnNewCode_Shoabat.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Shoabat.Name = "btnNewCode_Shoabat";
             this.btnNewCode_Shoabat.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem19.Text = "Alt+N";
-            superToolTip19.Items.Add(toolTipTitleItem19);
-            this.btnNewCode_Shoabat.SuperTip = superToolTip19;
+            toolTipTitleItem8.Text = "Alt+N";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            this.btnNewCode_Shoabat.SuperTip = superToolTip8;
             this.btnNewCode_Shoabat.TabIndex = 45;
             this.btnNewCode_Shoabat.TabStop = false;
             this.btnNewCode_Shoabat.Text = "کد جدید";
@@ -7111,9 +7113,9 @@
             this.btnNewCode_Prozhe.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Prozhe.Name = "btnNewCode_Prozhe";
             this.btnNewCode_Prozhe.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem20.Text = "Alt+N";
-            superToolTip20.Items.Add(toolTipTitleItem20);
-            this.btnNewCode_Prozhe.SuperTip = superToolTip20;
+            toolTipTitleItem9.Text = "Alt+N";
+            superToolTip9.Items.Add(toolTipTitleItem9);
+            this.btnNewCode_Prozhe.SuperTip = superToolTip9;
             this.btnNewCode_Prozhe.TabIndex = 45;
             this.btnNewCode_Prozhe.TabStop = false;
             this.btnNewCode_Prozhe.Text = "کد جدید";
@@ -7630,9 +7632,9 @@
             this.btnNewCode_Gharardad.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Gharardad.Name = "btnNewCode_Gharardad";
             this.btnNewCode_Gharardad.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem21.Text = "Alt+N";
-            superToolTip21.Items.Add(toolTipTitleItem21);
-            this.btnNewCode_Gharardad.SuperTip = superToolTip21;
+            toolTipTitleItem10.Text = "Alt+N";
+            superToolTip10.Items.Add(toolTipTitleItem10);
+            this.btnNewCode_Gharardad.SuperTip = superToolTip10;
             this.btnNewCode_Gharardad.TabIndex = 45;
             this.btnNewCode_Gharardad.TabStop = false;
             this.btnNewCode_Gharardad.Text = "کد جدید";
@@ -8149,9 +8151,9 @@
             this.btnNewCode_Sayer.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Sayer.Name = "btnNewCode_Sayer";
             this.btnNewCode_Sayer.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem22.Text = "Alt+N";
-            superToolTip22.Items.Add(toolTipTitleItem22);
-            this.btnNewCode_Sayer.SuperTip = superToolTip22;
+            toolTipTitleItem11.Text = "Alt+N";
+            superToolTip11.Items.Add(toolTipTitleItem11);
+            this.btnNewCode_Sayer.SuperTip = superToolTip11;
             this.btnNewCode_Sayer.TabIndex = 45;
             this.btnNewCode_Sayer.TabStop = false;
             this.btnNewCode_Sayer.Text = "کد جدید";
