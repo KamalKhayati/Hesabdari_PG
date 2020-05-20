@@ -39,8 +39,12 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public int? VahedKala3Id { get; set; }
         [MaxLength(50)]
         public string VahedKala3Name { get; set; }
-        public double? HarBaste { get; set; }
-        public double? HarKarton { get; set; }
+        [Required]
+        public int VahedAsliIndex { get; set; }
+        [Required, MaxLength(50)]
+        public string VahedAsliName { get; set; }
+        public double HarBaste { get; set; }
+        public double HarKarton { get; set; }
         [Required]
         public bool IscheckVahedKala2 { get; set; }
         [Required]
@@ -59,6 +63,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public double? Tool { get; set; }
         public double? Arz { get; set; }
         public double? Ertefae { get; set; }
+        public double? Zekhamat { get; set; }
         public double? Masahat { get; set; }
         public double? Mohit { get; set; }
         public double? Hajm { get; set; }

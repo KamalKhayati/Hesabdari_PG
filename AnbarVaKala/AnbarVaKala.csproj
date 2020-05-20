@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{403481DE-962E-43C6-8A5A-24CBF93C75BB}</ProjectGuid>
+    <ProjectGuid>{06DC8F20-9B49-453A-B22D-A3BA5AD76129}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EtelaatePaye</RootNamespace>
-    <AssemblyName>EtelaatePaye</AssemblyName>
+    <RootNamespace>AnbarVaKala</RootNamespace>
+    <AssemblyName>AnbarVaKala</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -38,17 +38,14 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v19.1" />
     <Reference Include="DevExpress.Data.v19.1" />
-    <Reference Include="DevExpress.Dialogs.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v19.1" />
     <Reference Include="DevExpress.Sparkline.v19.1.Core" />
     <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraDialogs.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.1" />
     <Reference Include="DevExpress.Printing.v19.1.Core" />
     <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -68,137 +65,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodingAnbar\FrmCodingKala.cs">
+    <Compile Include="AmaliatRozaneh\FrmAmaliatRozaneh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CodingAnbar\FrmCodingKala.Designer.cs">
-      <DependentUpon>FrmCodingKala.cs</DependentUpon>
+    <Compile Include="AmaliatRozaneh\FrmAmaliatRozaneh.Designer.cs">
+      <DependentUpon>FrmAmaliatRozaneh.cs</DependentUpon>
     </Compile>
-    <Compile Include="CodingAnbar\FrmListAnbarha.cs">
+    <Compile Include="AmaliatRozaneh\FrmAmaliatVorodeKala.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CodingAnbar\FrmListAnbarha.Designer.cs">
-      <DependentUpon>FrmListAnbarha.cs</DependentUpon>
+    <Compile Include="AmaliatRozaneh\FrmAmaliatVorodeKala.Designer.cs">
+      <DependentUpon>FrmAmaliatVorodeKala.cs</DependentUpon>
     </Compile>
-    <Compile Include="CodingAnbar\FrmVahedKala.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CodingAnbar\FrmVahedKala.Designer.cs">
-      <DependentUpon>FrmVahedKala.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmCodingHesabdari.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmCodingHesabdari.Designer.cs">
-      <DependentUpon>FrmCodingHesabdari.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabhaTafsili.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmHesabhaTafsili.Designer.cs">
-      <DependentUpon>FrmHesabhaTafsili.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmGroupTafsili.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmGroupTafsili.Designer.cs">
-      <DependentUpon>FrmGroupTafsili.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameShahrstan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameShahrstan.Designer.cs">
-      <DependentUpon>FrmNameShahrstan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameAdress.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameAdress.Designer.cs">
-      <DependentUpon>FrmNameAdress.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmEtelaateAshkhas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmEtelaateAshkhas.Designer.cs">
-      <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameBank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameBank.Designer.cs">
-      <DependentUpon>FrmNameBank.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNoeArz.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNoeArz.Designer.cs">
-      <DependentUpon>FrmNoeArz.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNoeHesab.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNoeHesab.Designer.cs">
-      <DependentUpon>FrmNoeHesab.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameOstan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CodingHesabdari\FrmNameOstan.Designer.cs">
-      <DependentUpon>FrmNameOstan.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tanzimat\FrmTanzimatCodingAnbarVKala.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tanzimat\FrmTanzimatCodingAnbarVKala.Designer.cs">
-      <DependentUpon>FrmTanzimatCodingAnbarVKala.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tanzimat\FrmTanzimatCodingHesabdari.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tanzimat\FrmTanzimatCodingHesabdari.Designer.cs">
-      <DependentUpon>FrmTanzimatCodingHesabdari.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="CodingAnbar\FrmCodingKala.resx">
-      <DependentUpon>FrmCodingKala.cs</DependentUpon>
+    <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatRozaneh.resx">
+      <DependentUpon>FrmAmaliatRozaneh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CodingAnbar\FrmListAnbarha.resx">
-      <DependentUpon>FrmListAnbarha.cs</DependentUpon>
+    <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatVorodeKala.resx">
+      <DependentUpon>FrmAmaliatVorodeKala.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CodingAnbar\FrmVahedKala.resx">
-      <DependentUpon>FrmVahedKala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmCodingHesabdari.resx">
-      <DependentUpon>FrmCodingHesabdari.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmHesabhaTafsili.resx">
-      <DependentUpon>FrmHesabhaTafsili.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmGroupTafsili.resx">
-      <DependentUpon>FrmGroupTafsili.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmNameShahrstan.resx">
-      <DependentUpon>FrmNameShahrstan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmNameAdress.resx">
-      <DependentUpon>FrmNameAdress.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmEtelaateAshkhas.resx">
-      <DependentUpon>FrmEtelaateAshkhas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmNameBank.resx">
-      <DependentUpon>FrmNameBank.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmNoeArz.resx">
-      <DependentUpon>FrmNoeArz.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmNoeHesab.resx">
-      <DependentUpon>FrmNoeHesab.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CodingHesabdari\FrmNameOstan.resx">
-      <DependentUpon>FrmNameOstan.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -210,12 +104,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Tanzimat\FrmTanzimatCodingAnbarVKala.resx">
-      <DependentUpon>FrmTanzimatCodingAnbarVKala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tanzimat\FrmTanzimatCodingHesabdari.resx">
-      <DependentUpon>FrmTanzimatCodingHesabdari.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -228,10 +116,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DBHesabdari_PG\DBHesabdari_PG.csproj">
-      <Project>{A8821623-3D7B-4298-AAAE-C6AD5E96CA5E}</Project>
+      <Project>{a8821623-3d7b-4298-aaae-c6ad5e96ca5e}</Project>
       <Name>DBHesabdari_PG</Name>
     </ProjectReference>
     <ProjectReference Include="..\HelpClassLibrary\HelpClassLibrary.csproj">

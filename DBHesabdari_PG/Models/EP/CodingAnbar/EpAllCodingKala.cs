@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBHesabdari_PG.Models.AK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,8 +11,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
 {
    public class EpAllCodingKala
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public long Id { get; set; }
         [Required]
         public int SalId { get; set; }
         [Required]
@@ -31,5 +31,6 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual EpGroupAsliKala EpGroupAsliKala1 { get; set; }
         public virtual EpGroupFareeKala EpGroupFareeKala1 { get; set; }
         public virtual EpNameKala EpNameKala1 { get; set; }
+        public virtual ICollection<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpAllHesabTafsili
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         [Required]
         public int SalId { get; set; }
         [Required]

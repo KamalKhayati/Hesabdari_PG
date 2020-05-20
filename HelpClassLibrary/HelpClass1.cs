@@ -146,6 +146,22 @@ namespace HelpClassLibrary
         //}
 
 
+            /// <summary>
+            /// حذف ردیف فوکوس شده در دیتا گردید ویو با استفاده از کلید Delete
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+        private void gridView1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && e.Modifiers == Keys.Control)
+            {
+                if (MessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo) !=
+                  DialogResult.Yes)
+                    return;
+                GridView view = sender as GridView;
+                view.DeleteRow(view.FocusedRowHandle);
+            }
+        }
         #region //اضافه کردن رکورد جدید به دیتاگرید ویو
         //private void gridView1_InitNewRow(object sender, InitNewRowEventArgs e)
         //{

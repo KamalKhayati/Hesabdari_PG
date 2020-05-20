@@ -729,6 +729,12 @@ namespace EtelaatePaye.CodingAnbar
                             cmbVahedKala.Focus();
                             return false;
                         }
+                        else if (cmbVahedAsli.SelectedIndex == -1)
+                        {
+                            XtraMessageBox.Show("لطفاً واحد  اصلی کالا را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmbVahedAsli.Focus();
+                            return false;
+                        }
                         else
                         {
                             if (En == EnumCED.Create)
@@ -913,6 +919,9 @@ namespace EtelaatePaye.CodingAnbar
                     HelpClass1.ActiveControls(xtraTabPage5);
                     FillcmbTaminKonande();
                     txtTarikhEjad.Text = DateTime.Now.ToString().Substring(0, 10);
+
+                    xtraTabControl_NameKala.SelectedTabPageIndex = 1;
+                    cmbVahedAsli.SelectedIndex = 0;
                     xtraTabControl_NameKala.SelectedTabPageIndex = 0;
                     FillcmbTabaghehKala();
                     cmbTabaghehKala.Focus();
@@ -1050,6 +1059,22 @@ namespace EtelaatePaye.CodingAnbar
                         GroupFareeIdBeforeEdit = Convert.ToInt32(cmbGroupFareeKala.EditValue);
                         FillcmbTaminKonande();
                         FillcmbTabaghehKala();
+                        using (var db = new MyContext())
+                        {
+                            try
+                            {
+                                _SalId = Convert.ToInt32(lblSalId.Text);
+                                int RowId = Convert.ToInt32(txtId.Text);
+                                var q = db.AkAllAmaliateRozanehs.FirstOrDefault(s => s.KalaId == RowId && s.SalId==_SalId);
+                                cmbVahedAsli.Enabled = q != null ? false : true;
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+
                         cmbTabaghehKala.Focus();
                     }
                 }
@@ -1196,6 +1221,8 @@ namespace EtelaatePaye.CodingAnbar
                                     obj.IsActive = _IsActive;
                                     obj.VahedKala1Id = _VahedKalaId;
                                     obj.VahedKala1Name = cmbVahedKala.Text;
+                                    obj.VahedAsliIndex = cmbVahedAsli.SelectedIndex;
+                                    obj.VahedAsliName = cmbVahedAsli.Text;
                                     obj.SharhHesab = _SharhHesab;
                                     obj.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
 
@@ -1245,6 +1272,8 @@ namespace EtelaatePaye.CodingAnbar
                                         obj.Arz = Convert.ToDouble(txtArz_NameKala.Text);
                                     if (!string.IsNullOrEmpty(txtErtefae_NameKala.Text))
                                         obj.Ertefae = Convert.ToDouble(txtErtefae_NameKala.Text);
+                                    if (!string.IsNullOrEmpty(txtZekhamat_NameKala.Text))
+                                        obj.Zekhamat = Convert.ToDouble(txtZekhamat_NameKala.Text);
                                     if (!string.IsNullOrEmpty(txtMasahat_NameKala.Text))
                                         obj.Masahat = Convert.ToDouble(txtMasahat_NameKala.Text);
                                     if (!string.IsNullOrEmpty(txtMohit_NameKala.Text))
@@ -1687,6 +1716,8 @@ namespace EtelaatePaye.CodingAnbar
                                         q.IsActive = _IsActive;
                                         q.VahedKala1Id = _VahedKalaId;
                                         q.VahedKala1Name = cmbVahedKala.Text;
+                                        q.VahedAsliIndex = cmbVahedAsli.SelectedIndex;
+                                        q.VahedAsliName = cmbVahedAsli.Text;
                                         q.SharhHesab = _SharhHesab;
                                         q.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
 
@@ -1739,6 +1770,8 @@ namespace EtelaatePaye.CodingAnbar
                                             q.Arz = Convert.ToDouble(txtArz_NameKala.Text);
                                         if (!string.IsNullOrEmpty(txtErtefae_NameKala.Text))
                                             q.Ertefae = Convert.ToDouble(txtErtefae_NameKala.Text);
+                                        if (!string.IsNullOrEmpty(txtZekhamat_NameKala.Text))
+                                            q.Zekhamat = Convert.ToDouble(txtZekhamat_NameKala.Text);
                                         if (!string.IsNullOrEmpty(txtMasahat_NameKala.Text))
                                             q.Masahat = Convert.ToDouble(txtMasahat_NameKala.Text);
                                         if (!string.IsNullOrEmpty(txtMohit_NameKala.Text))
@@ -1974,6 +2007,7 @@ namespace EtelaatePaye.CodingAnbar
                             cmbTaminKonande_NameKala.SetEditValue(0);
 
                         cmbVahedKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("VahedKala1Id"));
+                        cmbVahedAsli.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("VahedAsliIndex"));
 
                         chkVahedKala2_NameKala.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IscheckVahedKala2"));
                         cmbVahedKala2_NameKala.EditValue = gridView.GetFocusedRowCellValue("VahedKala2Id") != null ? Convert.ToInt32(gridView.GetFocusedRowCellValue("VahedKala2Id")) : 0;
@@ -1988,6 +2022,7 @@ namespace EtelaatePaye.CodingAnbar
                         txtTool_NameKala.Text = gridView.GetFocusedRowCellValue("Tool") != null ? gridView.GetFocusedRowCellValue("Tool").ToString() : "";
                         txtArz_NameKala.Text = gridView.GetFocusedRowCellValue("Arz") != null ? gridView.GetFocusedRowCellValue("Arz").ToString() : "";
                         txtErtefae_NameKala.Text = gridView.GetFocusedRowCellValue("Ertefae") != null ? gridView.GetFocusedRowCellValue("Ertefae").ToString() : "";
+                        txtZekhamat_NameKala.Text = gridView.GetFocusedRowCellValue("Zekhamat") != null ? gridView.GetFocusedRowCellValue("Zekhamat").ToString() : "";
                         txtMasahat_NameKala.Text = gridView.GetFocusedRowCellValue("Masahat") != null ? gridView.GetFocusedRowCellValue("Masahat").ToString() : "";
                         txtMohit_NameKala.Text = gridView.GetFocusedRowCellValue("Mohit") != null ? gridView.GetFocusedRowCellValue("Mohit").ToString() : "";
                         txtHajm_NameKala.Text = gridView.GetFocusedRowCellValue("Hajm") != null ? gridView.GetFocusedRowCellValue("Hajm").ToString() : "";
@@ -2435,7 +2470,6 @@ namespace EtelaatePaye.CodingAnbar
 
         private void cmbVahedKala1_EditValueChanged(object sender, EventArgs e)
         {
-            labelControl25.Text = "واحد اصلی = " + cmbVahedKala1_NameKala.Text;
             // if (!string.IsNullOrEmpty(cmbVahedKala2.Text))
             labelControl24.Text = cmbVahedKala1_NameKala.Text;
         }
@@ -2517,6 +2551,30 @@ namespace EtelaatePaye.CodingAnbar
             if (e.Node.GetDisplayText(colIsActive1) == "انتخاب نشده")
                 e.Appearance.BackColor = Color.Pink;
 
+        }
+
+        private void cmbVahedAsli_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbVahedAsli.SelectedIndex == 0)
+            {
+                labelControl25.Text = cmbVahedKala1_NameKala.Text;
+            }
+            else if (cmbVahedAsli.SelectedIndex == 1)
+            {
+                labelControl25.Text = cmbVahedKala2_NameKala.Text;
+            }
+            else if (cmbVahedAsli.SelectedIndex == 2)
+            {
+                labelControl25.Text = cmbVahedKala3_NameKala.Text;
+            }
+        }
+
+        private void cmbVahedAsli_Enter(object sender, EventArgs e)
+        {
+            if (En == EnumCED.Create)
+            {
+                cmbVahedAsli.ShowPopup();
+            }
         }
     }
 }

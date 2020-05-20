@@ -38,6 +38,7 @@ using SystemManagement.DafaterMali;
 using DBHesabdari_PG.Models.Ms.DafaterMali;
 using EtelaatePaye.CodingAnbar;
 using EtelaatePaye.Tanzimat;
+using AnbarVaKala.AmaliatRozaneh;
 
 namespace Hesabdari_PG.Forms
 {
@@ -695,6 +696,18 @@ namespace Hesabdari_PG.Forms
         private void btnCodingKala_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmCodingKala fm = new FrmCodingKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+
+        }
+
+        private void btnAmaliatRozaneh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmAmaliatRozaneh fm = new FrmAmaliatRozaneh();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
