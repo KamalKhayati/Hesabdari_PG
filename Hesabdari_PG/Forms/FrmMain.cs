@@ -44,7 +44,7 @@ namespace Hesabdari_PG.Forms
 {
     public partial class FrmMain : DevExpress.XtraEditors.XtraForm
     {
-       DocumentManager documentManager1;
+        DocumentManager documentManager1;
         //XtraTabbedMdiManager xtraTabbedMdiManager1;
         public FrmMain()
         {

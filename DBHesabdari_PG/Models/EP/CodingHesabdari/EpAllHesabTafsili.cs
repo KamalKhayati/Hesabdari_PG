@@ -27,10 +27,12 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public bool IsDefault { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        [Required]
+        public int MoinId { get; set; }
         //[Required]
         //public int SandoghId { get; set; }
         //public virtual TarifSandogh TarifSandogh1 { get; set; }
-       // public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
+        // public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }
         public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
         public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
         public virtual EpHesabTafsiliAghlamAnbar EpHesabTafsiliAghlamAnbar1 { get; set; }

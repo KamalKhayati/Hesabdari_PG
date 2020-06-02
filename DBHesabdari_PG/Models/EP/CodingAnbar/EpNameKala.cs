@@ -40,11 +40,11 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [MaxLength(50)]
         public string VahedKala3Name { get; set; }
         [Required]
-        public int VahedAsliIndex { get; set; }
+        public int VahedAsliId { get; set; }
         [Required, MaxLength(50)]
         public string VahedAsliName { get; set; }
-        public double HarBaste { get; set; }
-        public double HarKarton { get; set; }
+        public double? HarBaste { get; set; }
+        public double? HarKarton { get; set; }
         [Required]
         public bool IscheckVahedKala2 { get; set; }
         [Required]

@@ -304,6 +304,7 @@ namespace HelpClassLibrary
             }
         }
 
+       //public static bool ClearLookUpedit = true;
         public static void ClearControls(Control panel)
         {
             foreach (Control item in panel.Controls)

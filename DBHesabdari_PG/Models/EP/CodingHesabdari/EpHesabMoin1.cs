@@ -58,6 +58,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual EpHesabCol EpHesabCol1 { get; set; }
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual ICollection<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
+        public virtual ICollection<EpAllHesabTafsili_HesabMovaghat> EpAllHesabTafsili_HesabMovaghats { get; set; }
     }
 
 }

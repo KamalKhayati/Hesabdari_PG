@@ -165,6 +165,7 @@
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVahedAsliName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -256,7 +257,6 @@
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
@@ -270,7 +270,8 @@
             this.cmbVahedKala1_NameKala = new DevExpress.XtraEditors.LookUpEdit();
             this.btnVahedKala1_NameKala = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbVahedAsli = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbVahedAsli = new DevExpress.XtraEditors.LookUpEdit();
+            this.epVahedKalasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
@@ -310,7 +311,6 @@
             this.colLevelNamber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIsActive1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colVahedAsliName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
             this.panelControl_Button.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_CodingKala)).BeginInit();
@@ -413,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedKala2_NameKala.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedKala1_NameKala.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedAsli.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epVahedKalasBindingSource1)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstShomareFani_NameKala.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lstSerialKala_NameKala.Properties)).BeginInit();
@@ -2425,6 +2426,22 @@
             this.gridColumn17.VisibleIndex = 4;
             this.gridColumn17.Width = 92;
             // 
+            // colVahedAsliName
+            // 
+            this.colVahedAsliName.AppearanceCell.Options.UseTextOptions = true;
+            this.colVahedAsliName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colVahedAsliName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colVahedAsliName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colVahedAsliName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colVahedAsliName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colVahedAsliName.Caption = "واحد اصلی کالا";
+            this.colVahedAsliName.FieldName = "VahedAsliName";
+            this.colVahedAsliName.MinWidth = 25;
+            this.colVahedAsliName.Name = "colVahedAsliName";
+            this.colVahedAsliName.Visible = true;
+            this.colVahedAsliName.VisibleIndex = 5;
+            this.colVahedAsliName.Width = 143;
+            // 
             // gridColumn16
             // 
             this.gridColumn16.AppearanceCell.Options.UseTextOptions = true;
@@ -3091,7 +3108,7 @@
             this.cmbTabaghehKala_NameKala.Properties.NullText = "";
             this.cmbTabaghehKala_NameKala.Properties.ValueMember = "Id";
             this.cmbTabaghehKala_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbTabaghehKala_NameKala.Size = new System.Drawing.Size(531, 38);
+            this.cmbTabaghehKala_NameKala.Size = new System.Drawing.Size(606, 38);
             this.cmbTabaghehKala_NameKala.TabIndex = 0;
             this.cmbTabaghehKala_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbTabaghehKala_NameKala.EditValueChanged += new System.EventHandler(this.cmbTabaghehKala_EditValueChanged);
@@ -3115,7 +3132,7 @@
             this.cmbTaminKonande_NameKala.Properties.DisplayMember = "Name";
             this.cmbTaminKonande_NameKala.Properties.ValueMember = "Id";
             this.cmbTaminKonande_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbTaminKonande_NameKala.Size = new System.Drawing.Size(531, 38);
+            this.cmbTaminKonande_NameKala.Size = new System.Drawing.Size(606, 38);
             this.cmbTaminKonande_NameKala.TabIndex = 5;
             this.cmbTaminKonande_NameKala.Enter += new System.EventHandler(this.cmbTaminKonande_NameKala_Enter);
             // 
@@ -3142,7 +3159,7 @@
             this.labelControl30.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl30.Appearance.Options.UseForeColor = true;
             this.labelControl30.AutoEllipsis = true;
-            this.labelControl30.Location = new System.Drawing.Point(1146, 231);
+            this.labelControl30.Location = new System.Drawing.Point(1221, 231);
             this.labelControl30.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl30.Name = "labelControl30";
             this.labelControl30.Size = new System.Drawing.Size(92, 31);
@@ -3212,7 +3229,7 @@
             this.txtCodeGroup_NameKala.EditValue = "";
             this.txtCodeGroup_NameKala.Enabled = false;
             this.txtCodeGroup_NameKala.EnterMoveNextControl = true;
-            this.txtCodeGroup_NameKala.Location = new System.Drawing.Point(877, 139);
+            this.txtCodeGroup_NameKala.Location = new System.Drawing.Point(941, 139);
             this.txtCodeGroup_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodeGroup_NameKala.Name = "txtCodeGroup_NameKala";
             this.txtCodeGroup_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -3230,7 +3247,7 @@
             this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(1147, 10);
+            this.labelControl15.Location = new System.Drawing.Point(1222, 10);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(69, 31);
@@ -3243,7 +3260,7 @@
             this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl16.Appearance.Options.UseForeColor = true;
             this.labelControl16.AutoEllipsis = true;
-            this.labelControl16.Location = new System.Drawing.Point(1148, 187);
+            this.labelControl16.Location = new System.Drawing.Point(1223, 187);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(53, 31);
@@ -3260,7 +3277,7 @@
             this.txtName_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtName_NameKala.Properties.Appearance.Options.UseForeColor = true;
             this.txtName_NameKala.Properties.MaxLength = 100;
-            this.txtName_NameKala.Size = new System.Drawing.Size(591, 38);
+            this.txtName_NameKala.Size = new System.Drawing.Size(666, 38);
             this.txtName_NameKala.TabIndex = 4;
             // 
             // cmbGroupFaree_NameKala
@@ -3287,7 +3304,7 @@
             this.cmbGroupFaree_NameKala.Properties.PopupWidth = 700;
             this.cmbGroupFaree_NameKala.Properties.ValueMember = "Id";
             this.cmbGroupFaree_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbGroupFaree_NameKala.Size = new System.Drawing.Size(531, 38);
+            this.cmbGroupFaree_NameKala.Size = new System.Drawing.Size(606, 38);
             this.cmbGroupFaree_NameKala.TabIndex = 2;
             this.cmbGroupFaree_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbGroupFaree_NameKala.EditValueChanged += new System.EventHandler(this.cmbGroupFaree_EditValueChanged);
@@ -3321,7 +3338,7 @@
             this.cmbGroupAsli_NameKala.Properties.PopupWidth = 700;
             this.cmbGroupAsli_NameKala.Properties.ValueMember = "Id";
             this.cmbGroupAsli_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbGroupAsli_NameKala.Size = new System.Drawing.Size(531, 38);
+            this.cmbGroupAsli_NameKala.Size = new System.Drawing.Size(606, 38);
             this.cmbGroupAsli_NameKala.TabIndex = 1;
             this.cmbGroupAsli_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbGroupAsli_NameKala.EditValueChanged += new System.EventHandler(this.cmbListGroupAsli_EditValueChanged);
@@ -3334,7 +3351,7 @@
             this.btnNewCode_NameKala.Appearance.Options.UseForeColor = true;
             this.btnNewCode_NameKala.Enabled = false;
             this.btnNewCode_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode_NameKala.ImageOptions.SvgImage")));
-            this.btnNewCode_NameKala.Location = new System.Drawing.Point(698, 137);
+            this.btnNewCode_NameKala.Location = new System.Drawing.Point(762, 137);
             this.btnNewCode_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_NameKala.Name = "btnNewCode_NameKala";
             this.btnNewCode_NameKala.Size = new System.Drawing.Size(138, 41);
@@ -3352,7 +3369,7 @@
             this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl17.Appearance.Options.UseForeColor = true;
             this.labelControl17.AutoEllipsis = true;
-            this.labelControl17.Location = new System.Drawing.Point(1148, 96);
+            this.labelControl17.Location = new System.Drawing.Point(1223, 96);
             this.labelControl17.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(80, 31);
@@ -3362,7 +3379,7 @@
             // chkEditCode_NameKala
             // 
             this.chkEditCode_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkEditCode_NameKala.Location = new System.Drawing.Point(843, 146);
+            this.chkEditCode_NameKala.Location = new System.Drawing.Point(907, 146);
             this.chkEditCode_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.chkEditCode_NameKala.Name = "chkEditCode_NameKala";
             this.chkEditCode_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -3380,7 +3397,7 @@
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl18.Appearance.Options.UseForeColor = true;
             this.labelControl18.AutoEllipsis = true;
-            this.labelControl18.Location = new System.Drawing.Point(1148, 52);
+            this.labelControl18.Location = new System.Drawing.Point(1223, 52);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(83, 31);
@@ -3393,7 +3410,7 @@
             this.txtCode_NameKala.EditValue = "";
             this.txtCode_NameKala.Enabled = false;
             this.txtCode_NameKala.EnterMoveNextControl = true;
-            this.txtCode_NameKala.Location = new System.Drawing.Point(1037, 139);
+            this.txtCode_NameKala.Location = new System.Drawing.Point(1102, 139);
             this.txtCode_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode_NameKala.Name = "txtCode_NameKala";
             this.txtCode_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -3403,7 +3420,7 @@
             this.txtCode_NameKala.Properties.Mask.EditMask = "0000";
             this.txtCode_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCode_NameKala.Properties.MaxLength = 4;
-            this.txtCode_NameKala.Size = new System.Drawing.Size(101, 38);
+            this.txtCode_NameKala.Size = new System.Drawing.Size(111, 38);
             this.txtCode_NameKala.TabIndex = 3;
             // 
             // txtId_NameKala
@@ -3432,7 +3449,7 @@
             this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl19.Appearance.Options.UseForeColor = true;
-            this.labelControl19.Location = new System.Drawing.Point(1148, 142);
+            this.labelControl19.Location = new System.Drawing.Point(1223, 142);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(51, 31);
@@ -3496,7 +3513,6 @@
             this.xtraTabPage2.Controls.Add(this.labelControl21);
             this.xtraTabPage2.Controls.Add(this.labelControl23);
             this.xtraTabPage2.Controls.Add(this.labelControl24);
-            this.xtraTabPage2.Controls.Add(this.labelControl25);
             this.xtraTabPage2.Controls.Add(this.labelControl26);
             this.xtraTabPage2.Controls.Add(this.labelControl27);
             this.xtraTabPage2.Controls.Add(this.labelControl28);
@@ -3521,7 +3537,7 @@
             this.labelControl57.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl57.Appearance.Options.UseForeColor = true;
             this.labelControl57.AutoEllipsis = true;
-            this.labelControl57.Location = new System.Drawing.Point(1205, 192);
+            this.labelControl57.Location = new System.Drawing.Point(1205, 200);
             this.labelControl57.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl57.Name = "labelControl57";
             this.labelControl57.Size = new System.Drawing.Size(88, 31);
@@ -3544,7 +3560,7 @@
             this.txtZekhamat_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtZekhamat_NameKala.Properties.MaxLength = 9;
             this.txtZekhamat_NameKala.Size = new System.Drawing.Size(94, 38);
-            this.txtZekhamat_NameKala.TabIndex = 10;
+            this.txtZekhamat_NameKala.TabIndex = 12;
             // 
             // labelControl56
             // 
@@ -3573,7 +3589,7 @@
             this.txtSaiz_NameKala.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSaiz_NameKala.Properties.MaxLength = 20;
             this.txtSaiz_NameKala.Size = new System.Drawing.Size(90, 38);
-            this.txtSaiz_NameKala.TabIndex = 14;
+            this.txtSaiz_NameKala.TabIndex = 16;
             // 
             // txtMohit_NameKala
             // 
@@ -3591,7 +3607,7 @@
             this.txtMohit_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMohit_NameKala.Properties.MaxLength = 9;
             this.txtMohit_NameKala.Size = new System.Drawing.Size(90, 38);
-            this.txtMohit_NameKala.TabIndex = 12;
+            this.txtMohit_NameKala.TabIndex = 14;
             // 
             // txtMasahat_NameKala
             // 
@@ -3609,7 +3625,7 @@
             this.txtMasahat_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMasahat_NameKala.Properties.MaxLength = 9;
             this.txtMasahat_NameKala.Size = new System.Drawing.Size(90, 38);
-            this.txtMasahat_NameKala.TabIndex = 11;
+            this.txtMasahat_NameKala.TabIndex = 13;
             // 
             // txtHajm_NameKala
             // 
@@ -3627,7 +3643,7 @@
             this.txtHajm_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHajm_NameKala.Properties.MaxLength = 9;
             this.txtHajm_NameKala.Size = new System.Drawing.Size(90, 38);
-            this.txtHajm_NameKala.TabIndex = 13;
+            this.txtHajm_NameKala.TabIndex = 15;
             // 
             // labelControl39
             // 
@@ -3697,7 +3713,7 @@
             this.txtErtefae_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtErtefae_NameKala.Properties.MaxLength = 9;
             this.txtErtefae_NameKala.Size = new System.Drawing.Size(94, 38);
-            this.txtErtefae_NameKala.TabIndex = 9;
+            this.txtErtefae_NameKala.TabIndex = 11;
             // 
             // txtArz_NameKala
             // 
@@ -3715,7 +3731,7 @@
             this.txtArz_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtArz_NameKala.Properties.MaxLength = 9;
             this.txtArz_NameKala.Size = new System.Drawing.Size(94, 38);
-            this.txtArz_NameKala.TabIndex = 8;
+            this.txtArz_NameKala.TabIndex = 10;
             // 
             // txtTool_NameKala
             // 
@@ -3733,7 +3749,7 @@
             this.txtTool_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTool_NameKala.Properties.MaxLength = 9;
             this.txtTool_NameKala.Size = new System.Drawing.Size(94, 38);
-            this.txtTool_NameKala.TabIndex = 7;
+            this.txtTool_NameKala.TabIndex = 9;
             // 
             // txtVazn_NameKala
             // 
@@ -3751,7 +3767,7 @@
             this.txtVazn_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtVazn_NameKala.Properties.MaxLength = 9;
             this.txtVazn_NameKala.Size = new System.Drawing.Size(94, 38);
-            this.txtVazn_NameKala.TabIndex = 6;
+            this.txtVazn_NameKala.TabIndex = 8;
             // 
             // labelControl33
             // 
@@ -3816,6 +3832,7 @@
             this.chkVahedKala3_NameKala.Properties.Caption = "";
             this.chkVahedKala3_NameKala.Size = new System.Drawing.Size(24, 19);
             this.chkVahedKala3_NameKala.TabIndex = 4;
+            this.chkVahedKala3_NameKala.TabStop = false;
             this.chkVahedKala3_NameKala.CheckedChanged += new System.EventHandler(this.chkVahedKala3_CheckedChanged);
             // 
             // chkVahedKala2_NameKala
@@ -3829,6 +3846,7 @@
             this.chkVahedKala2_NameKala.Properties.Caption = "";
             this.chkVahedKala2_NameKala.Size = new System.Drawing.Size(24, 19);
             this.chkVahedKala2_NameKala.TabIndex = 1;
+            this.chkVahedKala2_NameKala.TabStop = false;
             this.chkVahedKala2_NameKala.CheckedChanged += new System.EventHandler(this.chkVahedKala2_CheckedChanged);
             // 
             // txtHarKarton_NameKala
@@ -3848,7 +3866,7 @@
             this.txtHarKarton_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHarKarton_NameKala.Properties.MaxLength = 9;
             this.txtHarKarton_NameKala.Size = new System.Drawing.Size(77, 38);
-            this.txtHarKarton_NameKala.TabIndex = 4;
+            this.txtHarKarton_NameKala.TabIndex = 6;
             // 
             // txtHarBaste_NameKala
             // 
@@ -3867,7 +3885,7 @@
             this.txtHarBaste_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHarBaste_NameKala.Properties.MaxLength = 9;
             this.txtHarBaste_NameKala.Size = new System.Drawing.Size(77, 38);
-            this.txtHarBaste_NameKala.TabIndex = 2;
+            this.txtHarBaste_NameKala.TabIndex = 3;
             // 
             // labelControl21
             // 
@@ -3910,20 +3928,6 @@
             this.labelControl24.TabIndex = 202;
             this.labelControl24.Text = "عدد";
             // 
-            // labelControl25
-            // 
-            this.labelControl25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl25.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl25.Appearance.Options.UseForeColor = true;
-            this.labelControl25.AutoEllipsis = true;
-            this.labelControl25.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl25.Location = new System.Drawing.Point(826, 192);
-            this.labelControl25.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(157, 31);
-            this.labelControl25.TabIndex = 202;
-            this.labelControl25.Text = "...........";
-            // 
             // labelControl26
             // 
             this.labelControl26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3945,7 +3949,7 @@
             this.labelControl27.Appearance.Options.UseFont = true;
             this.labelControl27.Appearance.Options.UseForeColor = true;
             this.labelControl27.AutoEllipsis = true;
-            this.labelControl27.Location = new System.Drawing.Point(833, 123);
+            this.labelControl27.Location = new System.Drawing.Point(826, 123);
             this.labelControl27.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(94, 22);
@@ -3960,7 +3964,7 @@
             this.labelControl28.Appearance.Options.UseFont = true;
             this.labelControl28.Appearance.Options.UseForeColor = true;
             this.labelControl28.AutoEllipsis = true;
-            this.labelControl28.Location = new System.Drawing.Point(826, 73);
+            this.labelControl28.Location = new System.Drawing.Point(819, 73);
             this.labelControl28.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(98, 22);
@@ -3975,7 +3979,7 @@
             this.labelControl29.Appearance.Options.UseFont = true;
             this.labelControl29.Appearance.Options.UseForeColor = true;
             this.labelControl29.AutoEllipsis = true;
-            this.labelControl29.Location = new System.Drawing.Point(833, 24);
+            this.labelControl29.Location = new System.Drawing.Point(826, 24);
             this.labelControl29.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl29.Name = "labelControl29";
             this.labelControl29.Size = new System.Drawing.Size(91, 22);
@@ -4005,7 +4009,7 @@
             this.cmbVahedKala3_NameKala.Properties.ValueMember = "Id";
             this.cmbVahedKala3_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala3_NameKala.Size = new System.Drawing.Size(205, 38);
-            this.cmbVahedKala3_NameKala.TabIndex = 3;
+            this.cmbVahedKala3_NameKala.TabIndex = 5;
             this.cmbVahedKala3_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbVahedKala3_NameKala.EditValueChanged += new System.EventHandler(this.cmbVahedKala3_EditValueChanged);
             this.cmbVahedKala3_NameKala.Enter += new System.EventHandler(this.cmbVahedKala3_Enter);
@@ -4063,7 +4067,7 @@
             this.cmbVahedKala2_NameKala.Properties.ValueMember = "Id";
             this.cmbVahedKala2_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala2_NameKala.Size = new System.Drawing.Size(205, 38);
-            this.cmbVahedKala2_NameKala.TabIndex = 1;
+            this.cmbVahedKala2_NameKala.TabIndex = 2;
             this.cmbVahedKala2_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbVahedKala2_NameKala.EditValueChanged += new System.EventHandler(this.cmbVahedKala2_EditValueChanged);
             this.cmbVahedKala2_NameKala.Enter += new System.EventHandler(this.cmbVahedKala2_Enter);
@@ -4158,25 +4162,29 @@
             // cmbVahedAsli
             // 
             this.cmbVahedAsli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbVahedAsli.Location = new System.Drawing.Point(991, 189);
+            this.cmbVahedAsli.Location = new System.Drawing.Point(991, 197);
             this.cmbVahedAsli.Margin = new System.Windows.Forms.Padding(4);
             this.cmbVahedAsli.Name = "cmbVahedAsli";
             this.cmbVahedAsli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbVahedAsli.Properties.Appearance.Options.UseForeColor = true;
             this.cmbVahedAsli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbVahedAsli.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام واحد کالا", 300, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cmbVahedAsli.Properties.DataSource = this.epVahedKalasBindingSource1;
+            this.cmbVahedAsli.Properties.DisplayMember = "Name";
             this.cmbVahedAsli.Properties.ImmediatePopup = true;
-            this.cmbVahedAsli.Properties.Items.AddRange(new object[] {
-            "واحد اول",
-            "واحد دوم",
-            "واحد سوم"});
-            this.cmbVahedAsli.Properties.PopupSizeable = true;
-            this.cmbVahedAsli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbVahedAsli.Properties.NullText = "";
+            this.cmbVahedAsli.Properties.ValueMember = "Id";
             this.cmbVahedAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedAsli.Size = new System.Drawing.Size(205, 38);
-            this.cmbVahedAsli.TabIndex = 5;
-            this.cmbVahedAsli.SelectedIndexChanged += new System.EventHandler(this.cmbVahedAsli_SelectedIndexChanged);
+            this.cmbVahedAsli.TabIndex = 7;
             this.cmbVahedAsli.Enter += new System.EventHandler(this.cmbVahedAsli_Enter);
+            // 
+            // epVahedKalasBindingSource1
+            // 
+            this.epVahedKalasBindingSource1.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpVahedKala);
             // 
             // xtraTabPage3
             // 
@@ -4194,7 +4202,7 @@
             this.labelControl38.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl38.Appearance.Options.UseForeColor = true;
             this.labelControl38.AutoEllipsis = true;
-            this.labelControl38.Location = new System.Drawing.Point(785, 13);
+            this.labelControl38.Location = new System.Drawing.Point(859, 23);
             this.labelControl38.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl38.Name = "labelControl38";
             this.labelControl38.Size = new System.Drawing.Size(90, 31);
@@ -4207,7 +4215,7 @@
             this.labelControl40.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl40.Appearance.Options.UseForeColor = true;
             this.labelControl40.AutoEllipsis = true;
-            this.labelControl40.Location = new System.Drawing.Point(1087, 13);
+            this.labelControl40.Location = new System.Drawing.Point(1161, 23);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl40.Name = "labelControl40";
             this.labelControl40.Size = new System.Drawing.Size(149, 31);
@@ -4217,7 +4225,7 @@
             // lstShomareFani_NameKala
             // 
             this.lstShomareFani_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstShomareFani_NameKala.Location = new System.Drawing.Point(510, 52);
+            this.lstShomareFani_NameKala.Location = new System.Drawing.Point(584, 62);
             this.lstShomareFani_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.lstShomareFani_NameKala.Name = "lstShomareFani_NameKala";
             this.lstShomareFani_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4228,7 +4236,7 @@
             // lstSerialKala_NameKala
             // 
             this.lstSerialKala_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstSerialKala_NameKala.Location = new System.Drawing.Point(887, 52);
+            this.lstSerialKala_NameKala.Location = new System.Drawing.Point(961, 62);
             this.lstSerialKala_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.lstSerialKala_NameKala.Name = "lstSerialKala_NameKala";
             this.lstSerialKala_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4265,7 +4273,7 @@
             this.labelControl52.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl52.Appearance.Options.UseForeColor = true;
             this.labelControl52.AutoEllipsis = true;
-            this.labelControl52.Location = new System.Drawing.Point(942, 154);
+            this.labelControl52.Location = new System.Drawing.Point(1007, 159);
             this.labelControl52.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl52.Name = "labelControl52";
             this.labelControl52.Size = new System.Drawing.Size(15, 31);
@@ -4276,7 +4284,7 @@
             // 
             this.txtDarsadTakhfif_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDarsadTakhfif_NameKala.EnterMoveNextControl = true;
-            this.txtDarsadTakhfif_NameKala.Location = new System.Drawing.Point(965, 149);
+            this.txtDarsadTakhfif_NameKala.Location = new System.Drawing.Point(1030, 154);
             this.txtDarsadTakhfif_NameKala.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtDarsadTakhfif_NameKala.Name = "txtDarsadTakhfif_NameKala";
             this.txtDarsadTakhfif_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4295,7 +4303,7 @@
             this.labelControl47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl47.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl47.Appearance.Options.UseForeColor = true;
-            this.labelControl47.Location = new System.Drawing.Point(1070, 154);
+            this.labelControl47.Location = new System.Drawing.Point(1135, 159);
             this.labelControl47.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.labelControl47.Name = "labelControl47";
             this.labelControl47.Size = new System.Drawing.Size(153, 31);
@@ -4307,7 +4315,7 @@
             this.txtGhimatNesiyeOmde1_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhimatNesiyeOmde1_NameKala.EditValue = "";
             this.txtGhimatNesiyeOmde1_NameKala.EnterMoveNextControl = true;
-            this.txtGhimatNesiyeOmde1_NameKala.Location = new System.Drawing.Point(444, 148);
+            this.txtGhimatNesiyeOmde1_NameKala.Location = new System.Drawing.Point(509, 153);
             this.txtGhimatNesiyeOmde1_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhimatNesiyeOmde1_NameKala.Name = "txtGhimatNesiyeOmde1_NameKala";
             this.txtGhimatNesiyeOmde1_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4328,7 +4336,7 @@
             this.txtGhimatNaghdiOmde1_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhimatNaghdiOmde1_NameKala.EditValue = "";
             this.txtGhimatNaghdiOmde1_NameKala.EnterMoveNextControl = true;
-            this.txtGhimatNaghdiOmde1_NameKala.Location = new System.Drawing.Point(444, 102);
+            this.txtGhimatNaghdiOmde1_NameKala.Location = new System.Drawing.Point(509, 107);
             this.txtGhimatNaghdiOmde1_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhimatNaghdiOmde1_NameKala.Name = "txtGhimatNaghdiOmde1_NameKala";
             this.txtGhimatNaghdiOmde1_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4349,7 +4357,7 @@
             this.txtGhimatNesiyeKhorde1_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhimatNesiyeKhorde1_NameKala.EditValue = "";
             this.txtGhimatNesiyeKhorde1_NameKala.EnterMoveNextControl = true;
-            this.txtGhimatNesiyeKhorde1_NameKala.Location = new System.Drawing.Point(444, 56);
+            this.txtGhimatNesiyeKhorde1_NameKala.Location = new System.Drawing.Point(509, 61);
             this.txtGhimatNesiyeKhorde1_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhimatNesiyeKhorde1_NameKala.Name = "txtGhimatNesiyeKhorde1_NameKala";
             this.txtGhimatNesiyeKhorde1_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4370,7 +4378,7 @@
             this.txtGhimatTamamShode_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhimatTamamShode_NameKala.EditValue = "";
             this.txtGhimatTamamShode_NameKala.EnterMoveNextControl = true;
-            this.txtGhimatTamamShode_NameKala.Location = new System.Drawing.Point(875, 56);
+            this.txtGhimatTamamShode_NameKala.Location = new System.Drawing.Point(940, 61);
             this.txtGhimatTamamShode_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhimatTamamShode_NameKala.Name = "txtGhimatTamamShode_NameKala";
             this.txtGhimatTamamShode_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4391,7 +4399,7 @@
             this.txtGhimatPayeFroosh_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhimatPayeFroosh_NameKala.EditValue = "";
             this.txtGhimatPayeFroosh_NameKala.EnterMoveNextControl = true;
-            this.txtGhimatPayeFroosh_NameKala.Location = new System.Drawing.Point(876, 102);
+            this.txtGhimatPayeFroosh_NameKala.Location = new System.Drawing.Point(941, 107);
             this.txtGhimatPayeFroosh_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhimatPayeFroosh_NameKala.Name = "txtGhimatPayeFroosh_NameKala";
             this.txtGhimatPayeFroosh_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4412,7 +4420,7 @@
             this.txtGhimatNaghdiKhorde1_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhimatNaghdiKhorde1_NameKala.EditValue = "";
             this.txtGhimatNaghdiKhorde1_NameKala.EnterMoveNextControl = true;
-            this.txtGhimatNaghdiKhorde1_NameKala.Location = new System.Drawing.Point(444, 10);
+            this.txtGhimatNaghdiKhorde1_NameKala.Location = new System.Drawing.Point(509, 15);
             this.txtGhimatNaghdiKhorde1_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhimatNaghdiKhorde1_NameKala.Name = "txtGhimatNaghdiKhorde1_NameKala";
             this.txtGhimatNaghdiKhorde1_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4433,7 +4441,7 @@
             this.txtGhimatAkharinKharid_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGhimatAkharinKharid_NameKala.EditValue = "";
             this.txtGhimatAkharinKharid_NameKala.EnterMoveNextControl = true;
-            this.txtGhimatAkharinKharid_NameKala.Location = new System.Drawing.Point(875, 10);
+            this.txtGhimatAkharinKharid_NameKala.Location = new System.Drawing.Point(940, 15);
             this.txtGhimatAkharinKharid_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhimatAkharinKharid_NameKala.Name = "txtGhimatAkharinKharid_NameKala";
             this.txtGhimatAkharinKharid_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4455,7 +4463,7 @@
             this.labelControl41.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl41.Appearance.Options.UseForeColor = true;
             this.labelControl41.AutoEllipsis = true;
-            this.labelControl41.Location = new System.Drawing.Point(1071, 105);
+            this.labelControl41.Location = new System.Drawing.Point(1136, 110);
             this.labelControl41.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl41.Name = "labelControl41";
             this.labelControl41.Size = new System.Drawing.Size(149, 31);
@@ -4468,7 +4476,7 @@
             this.labelControl42.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl42.Appearance.Options.UseForeColor = true;
             this.labelControl42.AutoEllipsis = true;
-            this.labelControl42.Location = new System.Drawing.Point(641, 13);
+            this.labelControl42.Location = new System.Drawing.Point(706, 18);
             this.labelControl42.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl42.Name = "labelControl42";
             this.labelControl42.Size = new System.Drawing.Size(215, 31);
@@ -4481,7 +4489,7 @@
             this.labelControl43.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl43.Appearance.Options.UseForeColor = true;
             this.labelControl43.AutoEllipsis = true;
-            this.labelControl43.Location = new System.Drawing.Point(641, 151);
+            this.labelControl43.Location = new System.Drawing.Point(706, 156);
             this.labelControl43.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl43.Name = "labelControl43";
             this.labelControl43.Size = new System.Drawing.Size(211, 31);
@@ -4494,7 +4502,7 @@
             this.labelControl44.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl44.Appearance.Options.UseForeColor = true;
             this.labelControl44.AutoEllipsis = true;
-            this.labelControl44.Location = new System.Drawing.Point(641, 105);
+            this.labelControl44.Location = new System.Drawing.Point(706, 110);
             this.labelControl44.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl44.Name = "labelControl44";
             this.labelControl44.Size = new System.Drawing.Size(215, 31);
@@ -4507,7 +4515,7 @@
             this.labelControl45.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl45.Appearance.Options.UseForeColor = true;
             this.labelControl45.AutoEllipsis = true;
-            this.labelControl45.Location = new System.Drawing.Point(641, 59);
+            this.labelControl45.Location = new System.Drawing.Point(706, 64);
             this.labelControl45.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl45.Name = "labelControl45";
             this.labelControl45.Size = new System.Drawing.Size(211, 31);
@@ -4520,7 +4528,7 @@
             this.labelControl46.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl46.Appearance.Options.UseForeColor = true;
             this.labelControl46.AutoEllipsis = true;
-            this.labelControl46.Location = new System.Drawing.Point(1070, 59);
+            this.labelControl46.Location = new System.Drawing.Point(1135, 64);
             this.labelControl46.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl46.Name = "labelControl46";
             this.labelControl46.Size = new System.Drawing.Size(172, 31);
@@ -4533,7 +4541,7 @@
             this.labelControl48.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl48.Appearance.Options.UseForeColor = true;
             this.labelControl48.AutoEllipsis = true;
-            this.labelControl48.Location = new System.Drawing.Point(1070, 13);
+            this.labelControl48.Location = new System.Drawing.Point(1135, 18);
             this.labelControl48.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl48.Name = "labelControl48";
             this.labelControl48.Size = new System.Drawing.Size(164, 31);
@@ -4557,7 +4565,7 @@
             // chkArzeshAfzode_NameKala
             // 
             this.chkArzeshAfzode_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkArzeshAfzode_NameKala.Location = new System.Drawing.Point(1005, 110);
+            this.chkArzeshAfzode_NameKala.Location = new System.Drawing.Point(1074, 110);
             this.chkArzeshAfzode_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.chkArzeshAfzode_NameKala.Name = "chkArzeshAfzode_NameKala";
             this.chkArzeshAfzode_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4571,7 +4579,7 @@
             // 
             this.pictureEdit1_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureEdit1_NameKala.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1_NameKala.Location = new System.Drawing.Point(793, 19);
+            this.pictureEdit1_NameKala.Location = new System.Drawing.Point(862, 19);
             this.pictureEdit1_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit1_NameKala.Name = "pictureEdit1_NameKala";
             this.pictureEdit1_NameKala.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -4586,7 +4594,7 @@
             this.btnDeletePictuer_NameKala.Appearance.Options.UseForeColor = true;
             this.btnDeletePictuer_NameKala.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnDeletePictuer_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeletePictuer_NameKala.ImageOptions.SvgImage")));
-            this.btnDeletePictuer_NameKala.Location = new System.Drawing.Point(1065, 177);
+            this.btnDeletePictuer_NameKala.Location = new System.Drawing.Point(1134, 177);
             this.btnDeletePictuer_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeletePictuer_NameKala.Name = "btnDeletePictuer_NameKala";
             this.btnDeletePictuer_NameKala.Size = new System.Drawing.Size(51, 41);
@@ -4601,7 +4609,7 @@
             this.btnBrowsPictuer_NameKala.Appearance.Options.UseForeColor = true;
             this.btnBrowsPictuer_NameKala.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnBrowsPictuer_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBrowsPictuer_NameKala.ImageOptions.SvgImage")));
-            this.btnBrowsPictuer_NameKala.Location = new System.Drawing.Point(1005, 177);
+            this.btnBrowsPictuer_NameKala.Location = new System.Drawing.Point(1074, 177);
             this.btnBrowsPictuer_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowsPictuer_NameKala.Name = "btnBrowsPictuer_NameKala";
             this.btnBrowsPictuer_NameKala.Size = new System.Drawing.Size(51, 41);
@@ -4614,7 +4622,7 @@
             this.txtHadeSefaresh_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHadeSefaresh_NameKala.EditValue = "";
             this.txtHadeSefaresh_NameKala.EnterMoveNextControl = true;
-            this.txtHadeSefaresh_NameKala.Location = new System.Drawing.Point(1005, 64);
+            this.txtHadeSefaresh_NameKala.Location = new System.Drawing.Point(1074, 64);
             this.txtHadeSefaresh_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtHadeSefaresh_NameKala.Name = "txtHadeSefaresh_NameKala";
             this.txtHadeSefaresh_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4633,7 +4641,7 @@
             this.labelControl49.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl49.Appearance.Options.UseForeColor = true;
             this.labelControl49.AutoEllipsis = true;
-            this.labelControl49.Location = new System.Drawing.Point(1139, 68);
+            this.labelControl49.Location = new System.Drawing.Point(1208, 68);
             this.labelControl49.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl49.Name = "labelControl49";
             this.labelControl49.Size = new System.Drawing.Size(88, 31);
@@ -4645,7 +4653,7 @@
             this.txtNoghteSefaresh_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoghteSefaresh_NameKala.EditValue = "";
             this.txtNoghteSefaresh_NameKala.EnterMoveNextControl = true;
-            this.txtNoghteSefaresh_NameKala.Location = new System.Drawing.Point(1005, 18);
+            this.txtNoghteSefaresh_NameKala.Location = new System.Drawing.Point(1074, 18);
             this.txtNoghteSefaresh_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoghteSefaresh_NameKala.Name = "txtNoghteSefaresh_NameKala";
             this.txtNoghteSefaresh_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4664,7 +4672,7 @@
             this.labelControl50.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl50.Appearance.Options.UseForeColor = true;
             this.labelControl50.AutoEllipsis = true;
-            this.labelControl50.Location = new System.Drawing.Point(1139, 21);
+            this.labelControl50.Location = new System.Drawing.Point(1208, 21);
             this.labelControl50.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl50.Name = "labelControl50";
             this.labelControl50.Size = new System.Drawing.Size(101, 31);
@@ -4787,22 +4795,6 @@
             this.treeListColumn1.VisibleIndex = 4;
             this.treeListColumn1.Width = 448;
             // 
-            // colVahedAsliName
-            // 
-            this.colVahedAsliName.AppearanceCell.Options.UseTextOptions = true;
-            this.colVahedAsliName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colVahedAsliName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colVahedAsliName.AppearanceHeader.Options.UseTextOptions = true;
-            this.colVahedAsliName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colVahedAsliName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colVahedAsliName.Caption = "واحد اصلی کالا";
-            this.colVahedAsliName.FieldName = "VahedAsliName";
-            this.colVahedAsliName.MinWidth = 25;
-            this.colVahedAsliName.Name = "colVahedAsliName";
-            this.colVahedAsliName.Visible = true;
-            this.colVahedAsliName.VisibleIndex = 5;
-            this.colVahedAsliName.Width = 143;
-            // 
             // FrmCodingKala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
@@ -4817,6 +4809,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "کدینگ کالا";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCodingKala_FormClosed);
             this.Load += new System.EventHandler(this.FrmCodingKala_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCodingKala_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).EndInit();
@@ -4927,6 +4920,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedKala2_NameKala.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedKala1_NameKala.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedAsli.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epVahedKalasBindingSource1)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstShomareFani_NameKala.Properties)).EndInit();
@@ -4969,7 +4963,6 @@
         private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl_CodingKala;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_TabaghehKala;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_GroupAsli;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage_GroupFaree;
@@ -5061,7 +5054,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.LabelControl labelControl24;
-        private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.LabelControl labelControl26;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.LabelControl labelControl28;
@@ -5226,7 +5218,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl57;
         public DevExpress.XtraEditors.TextEdit txtZekhamat_NameKala;
         private DevExpress.XtraEditors.LabelControl labelControl56;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbVahedAsli;
         private DevExpress.XtraGrid.Columns.GridColumn colVahedAsliName;
+        private DevExpress.XtraEditors.LookUpEdit cmbVahedAsli;
+        private System.Windows.Forms.BindingSource epVahedKalasBindingSource1;
+        public DevExpress.XtraTab.XtraTabControl xtraTabControl_CodingKala;
     }
 }

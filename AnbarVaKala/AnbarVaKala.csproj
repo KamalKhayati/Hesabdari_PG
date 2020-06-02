@@ -77,12 +77,6 @@
     <Compile Include="AmaliatRozaneh\FrmAmaliatVorodeKala.Designer.cs">
       <DependentUpon>FrmAmaliatVorodeKala.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatRozaneh.resx">
@@ -90,9 +84,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatVorodeKala.resx">
       <DependentUpon>FrmAmaliatVorodeKala.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -120,6 +111,10 @@
     <ProjectReference Include="..\DBHesabdari_PG\DBHesabdari_PG.csproj">
       <Project>{a8821623-3d7b-4298-aaae-c6ad5e96ca5e}</Project>
       <Name>DBHesabdari_PG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EtelaatePaye\EtelaatePaye.csproj">
+      <Project>{403481DE-962E-43C6-8A5A-24CBF93C75BB}</Project>
+      <Name>EtelaatePaye</Name>
     </ProjectReference>
     <ProjectReference Include="..\HelpClassLibrary\HelpClassLibrary.csproj">
       <Project>{26168114-9431-42db-b60e-8213d68a1e2f}</Project>

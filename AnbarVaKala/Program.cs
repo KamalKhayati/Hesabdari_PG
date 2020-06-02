@@ -20,7 +20,7 @@ namespace AnbarVaKala
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
         }
     }
 }

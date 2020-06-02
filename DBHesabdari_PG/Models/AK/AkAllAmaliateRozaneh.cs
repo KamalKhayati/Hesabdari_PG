@@ -17,35 +17,35 @@ namespace DBHesabdari_PG.Models.AK
         [Required]
         public int AnbarId { get; set; }
         [Required]
+        public int KalaId { get; set; }
+        [Required]
+        public int VahedeKalaId { get; set; }
+        [Required]
         public int Seryal { get; set; }
         [Required]
-        public DateTime DateTimeSanad { get; set; }
+        public int NoeAmaliatCode { get; set; }
         [Required]
-        public DateTime DateTimeInsert { get; set; }
-        [Required]
-        public DateTime DateTimeEdit { get; set; }
-        [Required]
-        public int NoeAmaliatIndex { get; set; }
-        [Required]
-        public int AmaliatIndex { get; set; }
-        [Required]
-        public int KalaId { get; set; }
+        public int NoeSanadCode { get; set; }
+        [MaxLength(150)]
+        public string NoeSanadText { get; set; }
         [Required]
         public decimal Meghdar { get; set; }
         [Required]
         public decimal Nerkh { get; set; }
         [Required]
         public decimal Mablag { get; set; }
-        [Required]
-        public bool IsMeghdari { get; set; }
+        //[Required]
+        //public bool IsMeghdari { get; set; }
         [Required]
         public bool IsRiali { get; set; }
         [Required]
-        public string Sh_Sanad { get; set; }
+        public int SanadNamber { get; set; }
+        [Required]
+        public int HesabMoinId { get; set; }
+        [Required]
+        public int HesabTafsiliId { get; set; }
         [Required]
         public int Radif { get; set; }
-        [Required]
-        public long FactorNamber { get; set; }
         public virtual AkVorodeKala_Riz AkVorodeKala_Riz1 { get; set; }
         public virtual ICollection<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }
     }
