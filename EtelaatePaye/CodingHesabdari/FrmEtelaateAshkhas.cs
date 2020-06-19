@@ -160,8 +160,11 @@ namespace EtelaatePaye.CodingHesabdari
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            if (btnClose.Enabled)
+            {
+                this.Close();
+
+            }        }
         private void cmbGroupTafsili_EditValueChanged(object sender, EventArgs e)
         {
             using (var db = new MyContext())
@@ -1230,14 +1233,14 @@ namespace EtelaatePaye.CodingHesabdari
             //{
             //    btnSaveNext_Click(sender, null);
             //}
-            else if (e.KeyCode == Keys.F7)
-            {
-                btnCancel_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F8)
-            {
-                btnDisplyList_Click(sender, null);
-            }
+            //else if (e.KeyCode == Keys.F7)
+            //{
+            //    btnCancel_Click(sender, null);
+            //}
+            //else if (e.KeyCode == Keys.F8)
+            //{
+            //    btnDisplyList_Click(sender, null);
+            //}
             //else if (e.KeyCode == Keys.F9)
             //{
             //    btnDisplyNotActiveList_Click(sender, null);
@@ -1348,7 +1351,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (btnCreate.Visible)
+            if (btnCreate.Enabled)
             {
                 En = EnumCED.Create;
                 HelpClass1.InActiveButtons(PanelControl_1);
@@ -1359,7 +1362,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (btnDelete.Visible)
+            if (btnDelete.Enabled)
             {
                 if (gridView.RowCount > 0)
                 {
@@ -1545,7 +1548,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Visible)
+            if (btnEdit.Enabled)
             {
                 if (gridView.RowCount > 0)
                 {
@@ -2548,8 +2551,6 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (btnCancel.Enabled)
-            {
                 En = EnumCED.Cancel;
                 HelpClass1.ActiveButtons(PanelControl_1);
                 if (xtraTabControl.SelectedTabPage == tpMoshakhasat || xtraTabControl.SelectedTabPage == tpPersonel)
@@ -2560,8 +2561,6 @@ namespace EtelaatePaye.CodingHesabdari
                 gridControl.Enabled = true;
                 btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
-
-            }
         }
 
         private void gridView_DoubleClick(object sender, EventArgs e)
@@ -2992,6 +2991,11 @@ namespace EtelaatePaye.CodingHesabdari
         private void txtMablaghHarSahm_EditValueChanged(object sender, EventArgs e)
         {
             txtSumMablagh.Text = (Convert.ToInt32(txtTedadSahm.Text.Trim()) * Convert.ToInt32(txtMablaghHarSahm.Text.Trim())).ToString();
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

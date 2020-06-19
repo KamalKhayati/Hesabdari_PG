@@ -31,10 +31,10 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
         [Required, MaxLength(3)]
         public string CodeAnbarMaxCode { get; set; }
 
-        [Required, MaxLength(4)]
-        public string CodeTabagehKalaMinCode { get; set; }
-        [Required, MaxLength(4)]
-        public string CodeTabagehKalaMaxCode { get; set; }
+        //[Required, MaxLength(2)]
+        //public string CodeTabagehKalaMinCode { get; set; }
+        //[Required, MaxLength(6)]
+        //public string CodeTabagehKalaMaxCode { get; set; }
         [Required, MaxLength(4)]
         public string CodeGroupAsliKalaMinCode { get; set; }
         [Required, MaxLength(4)]

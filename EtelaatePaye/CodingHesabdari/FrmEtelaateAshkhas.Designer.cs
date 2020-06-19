@@ -604,9 +604,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGroupTafsili.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 5, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KeyCode", "کد", 135, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelName", "نام حساب", 380, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KeyCode", "کد", 90, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelName", "نام حساب", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح 1", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbGroupTafsili.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpAllGroupTafsili);
             this.cmbGroupTafsili.Properties.DisplayMember = "LevelName";
@@ -636,8 +636,8 @@
             this.cmbTafsiliAshkhas.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 5, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 135, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 420, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 450, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbTafsiliAshkhas.Properties.DataSource = this.epHesabTafsiliAshkhassBindingSource;
             this.cmbTafsiliAshkhas.Properties.DisplayMember = "Name";
@@ -797,6 +797,7 @@
             this.btnPrintPreview.ToolTip = "نمایش چاپ";
             this.btnPrintPreview.ToolTipTitle = "F10";
             this.btnPrintPreview.Visible = false;
+            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
             // 
             // btnEdit
             // 
@@ -889,7 +890,6 @@
             this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyActiveList.TabIndex = 9;
             this.btnDisplyActiveList.ToolTip = "دوباره سازی";
-            this.btnDisplyActiveList.ToolTipTitle = "F8";
             this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyList_Click);
             // 
             // btnCancel
@@ -903,7 +903,6 @@
             this.btnCancel.Size = new System.Drawing.Size(52, 46);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.ToolTip = "انصراف";
-            this.btnCancel.ToolTipTitle = "F7";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreate
@@ -1738,13 +1737,13 @@
             // 
             this.txtSharhAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhAdress.EnterMoveNextControl = true;
-            this.txtSharhAdress.Location = new System.Drawing.Point(140, 63);
+            this.txtSharhAdress.Location = new System.Drawing.Point(12, 63);
             this.txtSharhAdress.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSharhAdress.Name = "txtSharhAdress";
             this.txtSharhAdress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSharhAdress.Properties.Appearance.Options.UseForeColor = true;
             this.txtSharhAdress.Properties.MaxLength = 400;
-            this.txtSharhAdress.Size = new System.Drawing.Size(880, 38);
+            this.txtSharhAdress.Size = new System.Drawing.Size(1008, 38);
             this.txtSharhAdress.TabIndex = 3;
             // 
             // labelControl12
@@ -1764,7 +1763,7 @@
             this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl10.Appearance.Options.UseForeColor = true;
-            this.labelControl10.Location = new System.Drawing.Point(1026, 18);
+            this.labelControl10.Location = new System.Drawing.Point(1026, 17);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(106, 31);
@@ -1775,7 +1774,7 @@
             // 
             this.cmbNameShahrstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameShahrstan.EnterMoveNextControl = true;
-            this.cmbNameShahrstan.Location = new System.Drawing.Point(193, 14);
+            this.cmbNameShahrstan.Location = new System.Drawing.Point(67, 14);
             this.cmbNameShahrstan.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNameShahrstan.Name = "cmbNameShahrstan";
             this.cmbNameShahrstan.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1792,7 +1791,7 @@
             this.cmbNameShahrstan.Properties.NullText = "";
             this.cmbNameShahrstan.Properties.ValueMember = "Id";
             this.cmbNameShahrstan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameShahrstan.Size = new System.Drawing.Size(194, 38);
+            this.cmbNameShahrstan.Size = new System.Drawing.Size(225, 38);
             this.cmbNameShahrstan.TabIndex = 2;
             this.cmbNameShahrstan.Enter += new System.EventHandler(this.cmbNameShahrstan_Enter);
             // 
@@ -1805,7 +1804,7 @@
             this.btnShahrstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShahrstan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnShahrstan.ImageOptions.Image")));
             this.btnShahrstan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnShahrstan.ImageOptions.SvgImage")));
-            this.btnShahrstan.Location = new System.Drawing.Point(140, 13);
+            this.btnShahrstan.Location = new System.Drawing.Point(14, 13);
             this.btnShahrstan.Margin = new System.Windows.Forms.Padding(4);
             this.btnShahrstan.Name = "btnShahrstan";
             this.btnShahrstan.Size = new System.Drawing.Size(51, 41);
@@ -1819,7 +1818,7 @@
             // 
             this.cmbNameAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameAdress.EnterMoveNextControl = true;
-            this.cmbNameAdress.Location = new System.Drawing.Point(863, 14);
+            this.cmbNameAdress.Location = new System.Drawing.Point(805, 14);
             this.cmbNameAdress.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNameAdress.Name = "cmbNameAdress";
             this.cmbNameAdress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1836,7 +1835,7 @@
             this.cmbNameAdress.Properties.NullText = "";
             this.cmbNameAdress.Properties.ValueMember = "Id";
             this.cmbNameAdress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameAdress.Size = new System.Drawing.Size(156, 38);
+            this.cmbNameAdress.Size = new System.Drawing.Size(213, 38);
             this.cmbNameAdress.TabIndex = 0;
             this.cmbNameAdress.Enter += new System.EventHandler(this.cmbNameAdress_Enter);
             // 
@@ -1849,7 +1848,7 @@
             this.btnAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdress.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdress.ImageOptions.Image")));
             this.btnAdress.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdress.ImageOptions.SvgImage")));
-            this.btnAdress.Location = new System.Drawing.Point(809, 13);
+            this.btnAdress.Location = new System.Drawing.Point(751, 13);
             this.btnAdress.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdress.Name = "btnAdress";
             this.btnAdress.Size = new System.Drawing.Size(51, 41);
@@ -1863,7 +1862,7 @@
             // 
             this.cmbNameOstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameOstan.EnterMoveNextControl = true;
-            this.cmbNameOstan.Location = new System.Drawing.Point(539, 14);
+            this.cmbNameOstan.Location = new System.Drawing.Point(454, 14);
             this.cmbNameOstan.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNameOstan.Name = "cmbNameOstan";
             this.cmbNameOstan.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1880,7 +1879,7 @@
             this.cmbNameOstan.Properties.NullText = "";
             this.cmbNameOstan.Properties.ValueMember = "Id";
             this.cmbNameOstan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameOstan.Size = new System.Drawing.Size(194, 38);
+            this.cmbNameOstan.Size = new System.Drawing.Size(221, 38);
             this.cmbNameOstan.TabIndex = 1;
             this.cmbNameOstan.EditValueChanged += new System.EventHandler(this.cmbNameOstan_EditValueChanged);
             this.cmbNameOstan.Enter += new System.EventHandler(this.cmbNameOstan_Enter);
@@ -1894,7 +1893,7 @@
             this.btnOstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOstan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOstan.ImageOptions.Image")));
             this.btnOstan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOstan.ImageOptions.SvgImage")));
-            this.btnOstan.Location = new System.Drawing.Point(485, 13);
+            this.btnOstan.Location = new System.Drawing.Point(395, 12);
             this.btnOstan.Margin = new System.Windows.Forms.Padding(4);
             this.btnOstan.Name = "btnOstan";
             this.btnOstan.Size = new System.Drawing.Size(51, 41);
@@ -1909,7 +1908,7 @@
             this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl20.Appearance.Options.UseForeColor = true;
-            this.labelControl20.Location = new System.Drawing.Point(395, 18);
+            this.labelControl20.Location = new System.Drawing.Point(307, 17);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(70, 31);
@@ -1921,7 +1920,7 @@
             this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl19.Appearance.Options.UseForeColor = true;
-            this.labelControl19.Location = new System.Drawing.Point(741, 18);
+            this.labelControl19.Location = new System.Drawing.Point(683, 17);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(45, 31);
@@ -1932,13 +1931,13 @@
             // 
             this.txtMolahezat_A.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_A.EnterMoveNextControl = true;
-            this.txtMolahezat_A.Location = new System.Drawing.Point(140, 158);
+            this.txtMolahezat_A.Location = new System.Drawing.Point(12, 158);
             this.txtMolahezat_A.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMolahezat_A.Name = "txtMolahezat_A";
             this.txtMolahezat_A.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_A.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_A.Properties.MaxLength = 400;
-            this.txtMolahezat_A.Size = new System.Drawing.Size(880, 38);
+            this.txtMolahezat_A.Size = new System.Drawing.Size(1008, 38);
             this.txtMolahezat_A.TabIndex = 7;
             // 
             // labelControl13
@@ -2585,7 +2584,7 @@
             // 
             this.chkDefaultFazaMajazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultFazaMajazi.EnterMoveNextControl = true;
-            this.chkDefaultFazaMajazi.Location = new System.Drawing.Point(102, 64);
+            this.chkDefaultFazaMajazi.Location = new System.Drawing.Point(12, 64);
             this.chkDefaultFazaMajazi.Margin = new System.Windows.Forms.Padding(4);
             this.chkDefaultFazaMajazi.Name = "chkDefaultFazaMajazi";
             this.chkDefaultFazaMajazi.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -2599,14 +2598,14 @@
             // 
             this.txtSharhAdress_F.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhAdress_F.EnterMoveNextControl = true;
-            this.txtSharhAdress_F.Location = new System.Drawing.Point(101, 15);
+            this.txtSharhAdress_F.Location = new System.Drawing.Point(12, 15);
             this.txtSharhAdress_F.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSharhAdress_F.Name = "txtSharhAdress_F";
             this.txtSharhAdress_F.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSharhAdress_F.Properties.Appearance.Options.UseForeColor = true;
             this.txtSharhAdress_F.Properties.MaxLength = 200;
             this.txtSharhAdress_F.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSharhAdress_F.Size = new System.Drawing.Size(578, 38);
+            this.txtSharhAdress_F.Size = new System.Drawing.Size(667, 38);
             this.txtSharhAdress_F.TabIndex = 1;
             // 
             // labelControl37
@@ -2637,13 +2636,13 @@
             // 
             this.txtMolahezat_F.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_F.EnterMoveNextControl = true;
-            this.txtMolahezat_F.Location = new System.Drawing.Point(233, 64);
+            this.txtMolahezat_F.Location = new System.Drawing.Point(143, 64);
             this.txtMolahezat_F.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMolahezat_F.Name = "txtMolahezat_F";
             this.txtMolahezat_F.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_F.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_F.Properties.MaxLength = 400;
-            this.txtMolahezat_F.Size = new System.Drawing.Size(787, 38);
+            this.txtMolahezat_F.Size = new System.Drawing.Size(877, 38);
             this.txtMolahezat_F.TabIndex = 2;
             // 
             // labelControl39
@@ -3484,13 +3483,13 @@
             // 
             this.txtMolahezat_E.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_E.EnterMoveNextControl = true;
-            this.txtMolahezat_E.Location = new System.Drawing.Point(72, 110);
+            this.txtMolahezat_E.Location = new System.Drawing.Point(12, 110);
             this.txtMolahezat_E.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMolahezat_E.Name = "txtMolahezat_E";
             this.txtMolahezat_E.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_E.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_E.Properties.MaxLength = 400;
-            this.txtMolahezat_E.Size = new System.Drawing.Size(958, 38);
+            this.txtMolahezat_E.Size = new System.Drawing.Size(1018, 38);
             this.txtMolahezat_E.TabIndex = 5;
             // 
             // labelControl33
@@ -3838,7 +3837,7 @@
             // 
             this.chkDefaultTakhfif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultTakhfif.EnterMoveNextControl = true;
-            this.chkDefaultTakhfif.Location = new System.Drawing.Point(59, 108);
+            this.chkDefaultTakhfif.Location = new System.Drawing.Point(12, 108);
             this.chkDefaultTakhfif.Margin = new System.Windows.Forms.Padding(4);
             this.chkDefaultTakhfif.Name = "chkDefaultTakhfif";
             this.chkDefaultTakhfif.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -3894,13 +3893,13 @@
             // 
             this.txtMolahezat_DT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_DT.EnterMoveNextControl = true;
-            this.txtMolahezat_DT.Location = new System.Drawing.Point(191, 108);
+            this.txtMolahezat_DT.Location = new System.Drawing.Point(143, 108);
             this.txtMolahezat_DT.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMolahezat_DT.Name = "txtMolahezat_DT";
             this.txtMolahezat_DT.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_DT.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_DT.Properties.MaxLength = 400;
-            this.txtMolahezat_DT.Size = new System.Drawing.Size(787, 38);
+            this.txtMolahezat_DT.Size = new System.Drawing.Size(835, 38);
             this.txtMolahezat_DT.TabIndex = 5;
             // 
             // labelControl49

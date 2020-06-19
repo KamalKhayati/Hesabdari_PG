@@ -26,5 +26,13 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
+        [Required]
+        public int MoinId { get; set; }
+        [Required]
+        public int TafsiliId1 { get; set; }
+        [Required]
+        public int TafsiliId2 { get; set; }
+        [Required]
+        public int TafsiliId3 { get; set; }
     }
 }

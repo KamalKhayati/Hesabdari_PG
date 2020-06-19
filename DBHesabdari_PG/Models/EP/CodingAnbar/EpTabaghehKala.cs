@@ -13,13 +13,15 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [Required]
         public int SalId { get; set; }
         [Required]
-        public int Code { get; set; }
+        public long Code { get; set; }
         [Required, MaxLength(100)]
         public string Name { get; set; }
         [Required]
         public int VahedKalaId { get; set; }
         [Required, MaxLength(50)]
         public string VahedKalaName { get; set; }
+        [Required]
+        public int GroupTafsiliId { get; set; }
         [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]

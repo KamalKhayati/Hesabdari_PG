@@ -87,8 +87,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            if (btnClose.Enabled)
+            {
+                this.Close();
+
+            }        }
 
         private bool TextEditValidation()
         {
@@ -160,14 +163,14 @@ namespace EtelaatePaye.CodingHesabdari
             //{
             //    btnSaveNext_Click(sender, null);
             //}
-            else if (e.KeyCode == Keys.F7)
-            {
-                btnCancel_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F8)
-            {
-                btnDisplyActiveList_Click(sender, null);
-            }
+            //else if (e.KeyCode == Keys.F7)
+            //{
+            //    btnCancel_Click(sender, null);
+            //}
+            //else if (e.KeyCode == Keys.F8)
+            //{
+            //    btnDisplyActiveList_Click(sender, null);
+            //}
             //else if (e.KeyCode == Keys.F9)
             //{
             //    btnDisplyNotActiveList_Click(sender, null);
@@ -224,7 +227,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (btnCreate.Visible)
+            if (btnCreate.Enabled)
             {
                 En = EnumCED.Create;
                 gridControl1.Enabled = false;
@@ -237,53 +240,56 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (gridView1.RowCount > 0)
+            if (btnDelete.Enabled)
             {
-                if (XtraMessageBox.Show("آیا ردیف انتخابی حذف شود؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (gridView1.RowCount > 0)
                 {
-                    EditRowIndex = gridView1.FocusedRowHandle;
-                    using (var db = new MyContext())
+                    if (XtraMessageBox.Show("آیا ردیف انتخابی حذف شود؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        try
+                        EditRowIndex = gridView1.FocusedRowHandle;
+                        using (var db = new MyContext())
                         {
-                            int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
-                            var q = db.EpNameAdresss.FirstOrDefault(p => p.Id == RowId);
-                            //var q8 = db.EpAllCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
-                            if (q != null /*&& q8 != null*/)
+                            try
                             {
-                                db.EpNameAdresss.Remove(q);
-                                //db.EpAllCodingHesabdaris.Remove(q8);
-                                /////////////////////////////////////////////////////////////////////////////
-                                db.SaveChanges();
+                                int RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
+                                var q = db.EpNameAdresss.FirstOrDefault(p => p.Id == RowId);
+                                //var q8 = db.EpAllCodingHesabdaris.FirstOrDefault(s => s.HesabColId == RowId);
+                                if (q != null /*&& q8 != null*/)
+                                {
+                                    db.EpNameAdresss.Remove(q);
+                                    //db.EpAllCodingHesabdaris.Remove(q8);
+                                    /////////////////////////////////////////////////////////////////////////////
+                                    db.SaveChanges();
 
-                                btnDisplyActiveList_Click(null, null);
-                                // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                                if (gridView1.RowCount > 0)
-                                    gridView1.FocusedRowHandle = EditRowIndex - 1;
-                                HelpClass1.ClearControls(panelControl1);
+                                    btnDisplyActiveList_Click(null, null);
+                                    // XtraMessageBox.Show("عملیات حذف با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                                    if (gridView1.RowCount > 0)
+                                        gridView1.FocusedRowHandle = EditRowIndex - 1;
+                                    HelpClass1.ClearControls(panelControl1);
+                                }
+                                else
+                                    XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            else
-                                XtraMessageBox.Show("رکورد جاری در بانک اطلاعاتی موجود نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (DbUpdateException)
-                        {
-                            XtraMessageBox.Show("حذف این ردیف مقدور نیست \n" +
-                                " جهت حذف ردیف مورد نظر در ابتدا بایستی زیر مجموعه های این ردیف در قسمت آدرس اشخاص حذف شود"
-                                , "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        catch (Exception ex)
-                        {
-                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            catch (DbUpdateException)
+                            {
+                                XtraMessageBox.Show("حذف این ردیف مقدور نیست \n" +
+                                    " جهت حذف ردیف مورد نظر در ابتدا بایستی زیر مجموعه های این ردیف در قسمت آدرس اشخاص حذف شود"
+                                    , "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            catch (Exception ex)
+                            {
+                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
-            }
-        }
+
+            }        }
 
         public int EditRowIndex = 0;
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Visible)
+            if (btnEdit.Enabled)
             {
                 if (gridView1.RowCount > 0)
                 {
@@ -476,8 +482,6 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (btnCancel.Enabled)
-            {
                 gridControl1.Enabled = true;
                 En = EnumCED.Cancel;
                 HelpClass1.ActiveButtons(panelControl2);
@@ -485,7 +489,6 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.InActiveControls(panelControl1);
                 btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
-            }
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)

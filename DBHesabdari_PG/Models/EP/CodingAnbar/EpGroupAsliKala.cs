@@ -15,7 +15,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [Required]
         public int TabaghehId { get; set; }
         [Required]
-        public int Code { get; set; }
+        public long Code { get; set; }
         [Required, MaxLength(100)]
         public string Name { get; set; }
         [Required]

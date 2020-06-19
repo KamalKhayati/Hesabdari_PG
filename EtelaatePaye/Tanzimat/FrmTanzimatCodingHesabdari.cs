@@ -127,7 +127,6 @@ namespace EtelaatePaye.Tanzimat
 
         }
         private void FrmTanzimatCodingHesabdari_Load(object sender, EventArgs e)
-
         {
             FillTanzimatCodingHesabdari();
             IsAnyData();
@@ -137,8 +136,8 @@ namespace EtelaatePaye.Tanzimat
                 try
                 {
                     int _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupLevelsId==2);
-                    if (q!=null)
+                    var q = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupLevelsId == 2);
+                    if (q != null)
                     {
                         chkIsActiveGroupTafsiliLevel2.ReadOnly = true;
                     }
@@ -196,14 +195,14 @@ namespace EtelaatePaye.Tanzimat
                             q.HesabTabaghehMinCode = "1";
                             q.HesabTabaghehMaxCode = "9";
 
-                            q.HesabGroupMinCode = txtGroupCarakter.Text == "1" ? "1" : "01";
-                            q.HesabGroupMaxCode = txtGroupCarakter.Text == "1" ? "9" : "99";
+                            q.HesabGroupMinCode = "1";
+                            q.HesabGroupMaxCode = "9";
 
                             q.HesabColMinCode = txtColCarakter.Text == "1" ? "1" : "01";
                             q.HesabColMaxCode = txtColCarakter.Text == "1" ? "9" : "99";
 
-                            q.HesabMoinLevel1MinCode = txtMoinLevel1Carakter.Text == "1" ? "1" : "01";
-                            q.HesabMoinLevel1MaxCode = txtMoinLevel1Carakter.Text == "1" ? "9" : "99";
+                            q.HesabMoinLevel1MinCode = txtMoinLevel1Carakter.Text == "1" ? "1" : txtMoinLevel1Carakter.Text == "2" ? "01" : "001";
+                            q.HesabMoinLevel1MaxCode = txtMoinLevel1Carakter.Text == "1" ? "9" : txtMoinLevel1Carakter.Text == "2" ? "09" : "999";
 
 
                         }
@@ -220,13 +219,13 @@ namespace EtelaatePaye.Tanzimat
                             q1.GroupTafsiliLevel1MaxCode = "99";
 
                             q1.GroupTafsiliLevel2MinCode = "1";
-                            q1.GroupTafsiliLevel2MinCode = "9";
+                            q1.GroupTafsiliLevel2MaxCode = "9";
 
                             q1.GroupTafsiliLevel3MinCode = "1";
-                            q1.GroupTafsiliLevel3MinCode = "9";
+                            q1.GroupTafsiliLevel3MaxCode = "9";
 
-                            q1.CodeTafsiliMinCode = "00001";
-                            q1.CodeTafsiliMaxCode = "99999";
+                            q1.CodeTafsiliMinCode = "000001";
+                            q1.CodeTafsiliMaxCode = "999999";
 
                             q1.IsActiveGroupTafsiliLevel1 = chkIsActiveGroupTafsiliLevel1.Checked;
                             q1.IsActiveGroupTafsiliLevel2 = chkIsActiveGroupTafsiliLevel2.Checked;

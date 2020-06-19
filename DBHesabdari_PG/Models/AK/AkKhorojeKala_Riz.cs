@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.AK
 {
-   public class AkVorodeKala_Riz
+   public class AkKhorojeKala_Riz
     {
         public long Id { get; set; }
         [Required]
@@ -30,6 +30,12 @@ namespace DBHesabdari_PG.Models.AK
         public int AzAnbarId { get; set; }
         [Required]
         public int BeAnbarId { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string AzAnbarName { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string BeAnbarName { get; set; }
         [Required]
         public int Seryal { get; set; }
         [Required]
@@ -75,10 +81,6 @@ namespace DBHesabdari_PG.Models.AK
         [NotMapped]
         [MaxLength(100)]
         public string TafsiliName { get; set; }
-        //[MaxLength(100)]
-        //public string Tafsili2Name { get; set; }
-        //[MaxLength(100)]
-        //public string Tafsili3Name { get; set; }
         [Required]
         public int Radif { get; set; }
         public int? FactorNamber { get; set; }
@@ -87,5 +89,6 @@ namespace DBHesabdari_PG.Models.AK
         [MaxLength(500)]
         public string SharhSanad { get; set; }
         public virtual AkAllAmaliateRozaneh AkAllAmaliateRozaneh1 { get; set; }
+
     }
 }

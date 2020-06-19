@@ -55,11 +55,10 @@
             this.btnListAsnad = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnAmaliatRozaneh = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnJabejaeeKala = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
@@ -201,6 +200,7 @@
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnMojodiAvalDore = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msMajmoeBindingSource)).BeginInit();
@@ -256,11 +256,10 @@
             this.btnListAsnad,
             this.barButtonItem1,
             this.btnAmaliatRozaneh,
-            this.barButtonItem3,
             this.barButtonItem4,
             this.barButtonItem5,
             this.barButtonItem6,
-            this.barButtonItem7,
+            this.btnJabejaeeKala,
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
@@ -335,11 +334,12 @@
             this.btnJoziatEtelaatAshkhas,
             this.btnHesabhaTafsiliLevel2,
             this.btnHesabhaTafsiliLevel3,
-            this.btnCodingKala});
+            this.btnCodingKala,
+            this.btnMojodiAvalDore});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 176;
+            this.ribbon.MaxItemId = 177;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
             this.ribbon.PageHeaderMinWidth = 50;
@@ -380,7 +380,7 @@
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1485, 231);
+            this.ribbon.Size = new System.Drawing.Size(1485, 249);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ribbon_MouseDoubleClick);
@@ -552,20 +552,12 @@
             // 
             // btnAmaliatRozaneh
             // 
-            this.btnAmaliatRozaneh.Caption = "عملیات روزانه انبار و کالا";
+            this.btnAmaliatRozaneh.Caption = "عملیات ورود و خروج کالا";
             this.btnAmaliatRozaneh.Id = 34;
             this.btnAmaliatRozaneh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAmaliatRozaneh.ImageOptions.SvgImage")));
             this.btnAmaliatRozaneh.Name = "btnAmaliatRozaneh";
             this.btnAmaliatRozaneh.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnAmaliatRozaneh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAmaliatRozaneh_ItemClick);
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "خروج کالا از انبار";
-            this.barButtonItem3.Id = 35;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // barButtonItem4
             // 
@@ -591,13 +583,14 @@
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem7
+            // btnJabejaeeKala
             // 
-            this.barButtonItem7.Caption = "انتقالی بین انبارها";
-            this.barButtonItem7.Id = 39;
-            this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
-            this.barButtonItem7.Name = "barButtonItem7";
-            this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnJabejaeeKala.Caption = "جابجایی کالا بین انبارها";
+            this.btnJabejaeeKala.Id = 39;
+            this.btnJabejaeeKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnJabejaeeKala.ImageOptions.SvgImage")));
+            this.btnJabejaeeKala.Name = "btnJabejaeeKala";
+            this.btnJabejaeeKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnJabejaeeKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnJabejaeeKala_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -1436,9 +1429,9 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAmaliatRozaneh, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem7, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnJabejaeeKala, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnMojodiAvalDore, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem5, true);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ورود و خروج کالا";
             // 
@@ -1616,11 +1609,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserId, true);
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserName, true);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 697);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 694);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1485, 42);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1485, 45);
             // 
             // barButtonItem30
             // 
@@ -1658,10 +1651,10 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1450, 231);
+            this.hideContainerRight.Location = new System.Drawing.Point(1447, 249);
             this.hideContainerRight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(35, 466);
+            this.hideContainerRight.Size = new System.Drawing.Size(38, 445);
             // 
             // dockPanel1
             // 
@@ -1709,6 +1702,14 @@
             this.ribbonPageGroup8});
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "سایر موارد";
+            // 
+            // btnMojodiAvalDore
+            // 
+            this.btnMojodiAvalDore.Caption = "موجودی اول دوره کالا";
+            this.btnMojodiAvalDore.Id = 176;
+            this.btnMojodiAvalDore.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMojodiAvalDore.ImageOptions.SvgImage")));
+            this.btnMojodiAvalDore.Name = "btnMojodiAvalDore";
+            this.btnMojodiAvalDore.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // FrmMain
             // 
@@ -1795,11 +1796,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAsnadeHesabdari;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnAmaliatRozaneh;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem btnJabejaeeKala;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
@@ -1930,5 +1930,6 @@
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel2;
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel3;
         private DevExpress.XtraBars.BarButtonItem btnCodingKala;
+        private DevExpress.XtraBars.BarButtonItem btnMojodiAvalDore;
     }
 }

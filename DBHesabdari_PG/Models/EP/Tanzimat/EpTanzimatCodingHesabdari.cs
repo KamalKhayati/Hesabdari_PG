@@ -34,9 +34,9 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
         public string HesabColMinCode { get; set; }
         [Required, MaxLength(2)]
         public string HesabColMaxCode { get; set; }
-        [Required, MaxLength(2)]
+        [Required, MaxLength(3)]
         public string HesabMoinLevel1MinCode { get; set; }
-        [Required, MaxLength(2)]
+        [Required, MaxLength(3)]
         public string HesabMoinLevel1MaxCode { get; set; }
 
     }

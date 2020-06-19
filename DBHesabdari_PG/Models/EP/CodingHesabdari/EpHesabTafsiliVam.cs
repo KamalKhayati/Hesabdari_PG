@@ -16,8 +16,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int LevelNamber { get; set; }
         [Required]
-        public int Code { get; set; }
-        [Required, MaxLength(70)]
+        public long Code { get; set; }
+        [Required, MaxLength(100)]
         public string Name { get; set; }
         [Column(TypeName = "Date")]
         public DateTime TarikhEjad { get; set; }

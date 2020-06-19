@@ -93,8 +93,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            if (btnClose.Enabled)
+            {
+                this.Close();
+
+            }        }
 
         private bool TextEditValidation()
         {
@@ -167,14 +170,14 @@ namespace EtelaatePaye.CodingHesabdari
             //{
             //    btnSaveNext_Click(sender, null);
             //}
-            else if (e.KeyCode == Keys.F7)
-            {
-                btnCancel_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F8)
-            {
-                btnDisplyList_Click(sender, null);
-            }
+            //else if (e.KeyCode == Keys.F7)
+            //{
+            //    btnCancel_Click(sender, null);
+            //}
+            //else if (e.KeyCode == Keys.F8)
+            //{
+            //    btnDisplyList_Click(sender, null);
+            //}
             //else if (e.KeyCode == Keys.F9)
             //{
             //    btnDisplyNotActiveList_Click(sender, null);
@@ -232,7 +235,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (btnCreate.Visible)
+            if (btnCreate.Enabled)
             {
                 En = EnumCED.Create;
                 gridControl1.Enabled = false;
@@ -245,7 +248,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (btnDelete.Visible)
+            if (btnDelete.Enabled)
             {
                 if (gridView1.SelectedRowsCount > 0)
                 {
@@ -296,7 +299,7 @@ namespace EtelaatePaye.CodingHesabdari
         public int EditRowIndex = 0;
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Visible)
+            if (btnEdit.Enabled)
             {
                 if (gridView1.RowCount > 0)
                 {
@@ -487,8 +490,6 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (btnCancel.Enabled)
-            {
                 gridControl1.Enabled = true;
                 En = EnumCED.Cancel;
                 HelpClass1.ActiveButtons(panelControl2);
@@ -496,7 +497,6 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.InActiveControls(panelControl1);
                 btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
-            }
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)

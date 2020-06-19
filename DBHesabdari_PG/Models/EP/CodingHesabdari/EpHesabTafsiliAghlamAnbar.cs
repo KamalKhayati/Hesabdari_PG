@@ -16,18 +16,22 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int LevelNamber { get; set; }
         [Required]
-        public int Code { get; set; }
-        [Required, MaxLength(70)]
+        public long Code { get; set; }
+        [Required, MaxLength(100)]
         public string Name { get; set; }
         [Column(TypeName = "Date")]
         public DateTime TarikhEjad { get; set; }
-        public int CodeKala { get; set; }
+        public long? CodeKala { get; set; }
         [Required]
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         [Required]
         public int GroupTafsiliId { get; set; }
+        [Required]
+        public bool IsCreateByUser { get; set; }
+        [MaxLength(15)]
+        public string CreateName { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
     }
 }

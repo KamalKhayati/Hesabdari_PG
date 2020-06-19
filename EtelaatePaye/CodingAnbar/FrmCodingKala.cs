@@ -17,6 +17,7 @@ using DBHesabdari_PG.Models.EP.CodingAnbar;
 using HelpClassLibrary;
 using System.Data.Entity.Infrastructure;
 using System.IO;
+using DBHesabdari_PG.Models.EP.CodingHesabdari;
 
 namespace EtelaatePaye.CodingAnbar
 {
@@ -30,7 +31,7 @@ namespace EtelaatePaye.CodingAnbar
 
         EnumCED En;
         int _SalId = 0;
-        int _Code = 0;
+        long _Code = 0;
         string _Name = "";
         bool _IsActive = true;
         string _SharhHesab = "";
@@ -47,9 +48,10 @@ namespace EtelaatePaye.CodingAnbar
         int TabaghehKalaIdBeforeEdit = 0;
         int GroupAsliIdBeforeEdit = 0;
         int GroupFareeIdBeforeEdit = 0;
+        string NameKalaBeforeEdit = string.Empty;
 
         //int _TabaghehKalaIdBeforeEdit = 0;
-        int _CodeBeforeEdit = 0;
+        long _CodeBeforeEdit = 0;
         string _NameBeforeEdit = "";
         bool _IsActiveBeforeEdit = true;
 
@@ -62,8 +64,8 @@ namespace EtelaatePaye.CodingAnbar
         int _CodeGroupFareeKalaCarakter = 0;
         int _CodeNameKalaCarakter = 0;
 
-        string _CodeTabaghehKalaMinCode = "";
-        string _CodeTabaghehKalaMaxCode = "";
+        //string _CodeTabaghehKalaMinCode = "";
+        //string _CodeTabaghehKalaMaxCode = "";
         string _CodeGroupAsliKalaMinCode = "";
         string _CodeGroupAsliKalaMaxCode = "";
         string _CodeGroupFareeKalaMinCode = "";
@@ -93,7 +95,7 @@ namespace EtelaatePaye.CodingAnbar
         PanelControl PanelControl1;
         PanelControl PanelControl2;
 
-
+        int _LevelNamberGroupTafsili = 0;
         public void FillGridViewCodingKala()
         {
             try
@@ -148,6 +150,24 @@ namespace EtelaatePaye.CodingAnbar
 
         }
 
+        public void FillcmbGroupTafsili()
+        {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    _SalId = Convert.ToInt32(lblSalId.Text);
+                    var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.TabaghehGroupName == "اقلام انبار" && s.LevelNamber == _LevelNamberGroupTafsili).OrderBy(s => s.KeyCode).ToList();
+                    cmbGroupTafsili_Tabagheh.Properties.DataSource = q.Count > 0 ? q : null;
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         public void FillcmbTabaghehKala()
         {
             using (var db = new MyContext())
@@ -175,7 +195,11 @@ namespace EtelaatePaye.CodingAnbar
                     _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     var q = db.EpGroupAsliKalas.Where(s => s.SalId == _SalId && s.TabaghehId == _TabaghehKalaId).OrderBy(s => s.Code).ToList();
-                    epGroupAsliKalasBindingSource.DataSource = q.Count > 0 ? q : null;
+                    if (_SelectedTabPage == "xtraTabPage_GroupFaree")
+                        epGroupAsliKalasBindingSource.DataSource = q.Count > 0 ? q : null;
+                    else
+                        epGroupAsliKalasBindingSource1.DataSource = q.Count > 0 ? q : null;
+
                 }
                 catch (Exception ex)
                 {
@@ -255,23 +279,10 @@ namespace EtelaatePaye.CodingAnbar
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     if (_SelectedTabPage == "xtraTabPage_TabaghehKala")
                     {
-                        var q = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                        if (q.Count > 0)
+                        var q = db.EpAllGroupTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId);
+                        if (q != null)
                         {
-                            var MaximumCod = q.Max(p => p.Code);
-                            if (MaximumCod.ToString() != _MaxCode)
-                            {
-                                txtCode.Text = (MaximumCod + 1).ToString();
-                            }
-                            else
-                            {
-                                XtraMessageBox.Show("اعمال محدودیت تعریف  " + _MaxCode + " حساب طبقه ..." + "\n" +
-                                    "توجه : نمیتوان بیشتر از  " + _MaxCode + "  حساب طبقه تعریف کرد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-                        }
-                        else
-                        {
-                            txtCode.Text = _MinCode;
+                            txtCode.Text = q.KeyCode.ToString();
                         }
                     }
                     else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
@@ -364,14 +375,17 @@ namespace EtelaatePaye.CodingAnbar
                         _CodeGroupFareeKalaCarakter = q.CodeGroupFareeKalaCarakter;
                         _CodeNameKalaCarakter = q.CodeNameKalaCarakter;
 
-                        _CodeTabaghehKalaMinCode = q.CodeTabagehKalaMinCode;
-                        _CodeTabaghehKalaMaxCode = q.CodeTabagehKalaMaxCode;
+                        //_CodeTabaghehKalaMinCode = q.CodeTabagehKalaMinCode;
+                        //_CodeTabaghehKalaMaxCode = q.CodeTabagehKalaMaxCode;
                         _CodeGroupAsliKalaMinCode = q.CodeGroupAsliKalaMinCode;
                         _CodeGroupAsliKalaMaxCode = q.CodeGroupAsliKalaMaxCode;
                         _CodeGroupFareeKalaMinCode = q.CodeGroupFareeKalaMinCode;
                         _CodeGroupFareeKalaMaxCode = q.CodeGroupFareeKalaMaxCode;
                         _CodeNameKalaMinCode = q.CodeNameKalaMinCode;
                         _CodeNameKalaMaxCode = q.CodeNameKalaMaxCode;
+
+                        _LevelNamberGroupTafsili = _CodeTabaghehKalaCarakter == 2 ? 1 :_CodeTabaghehKalaCarakter == 3 ? 2 : 3;
+
                     }
                 }
                 catch (Exception ex)
@@ -383,6 +397,8 @@ namespace EtelaatePaye.CodingAnbar
 
             gridControl = gridControl_TabaghehKala;
             gridView = gridView_TabaghehKala;
+            cmbTabaghehKala = cmbGroupTafsili_Tabagheh;
+            btnReloadTabaghehKala = btnReloadGroupTafsili_Tabagheh;
             cmbVahedKala = cmbVahedKala_Tabagheh;
             txtCode = txtCode_Tabagheh;
             txtGroupCode = txtCodeGroup_TabaghehKala;
@@ -398,15 +414,15 @@ namespace EtelaatePaye.CodingAnbar
             _LevelNumber = 1;
             //_Carakter;
             txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
-            txtCode.Properties.Mask.EditMask = _CodeTabaghehKalaCarakter == 1 ? "0" :
-                                               _CodeTabaghehKalaCarakter == 2 ? "00" :
+            txtCode.Properties.Mask.EditMask = _CodeTabaghehKalaCarakter == 2 ? "00" :
                                                _CodeTabaghehKalaCarakter == 3 ? "000" : "0000";
             txtCode.Properties.MaxLength = _CodeTabaghehKalaCarakter;
-            _MinCode = _CodeTabaghehKalaMinCode;
-            _MaxCode = _CodeTabaghehKalaMaxCode;
+            //_MinCode = _CodeTabaghehKalaMinCode;
+            //_MaxCode = _CodeTabaghehKalaMaxCode;
 
             _SelectedTabPage = xtraTabControl_CodingKala.SelectedTabPage.Name;
             FillGridViewCodingKala();
+            FillcmbGroupTafsili();
             FillcmbVahedKala();
             btnCreate.Focus();
 
@@ -441,8 +457,11 @@ namespace EtelaatePaye.CodingAnbar
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            if (btnClose.Enabled)
+            {
+                this.Close();
+
+            }        }
 
         private bool TextEditValidation()
         {
@@ -458,20 +477,27 @@ namespace EtelaatePaye.CodingAnbar
 
                     if (_SelectedTabPage == "xtraTabPage_TabaghehKala")
                     {
-                        _Code = !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt32(txtCode.Text) : 0;
+                        _Code = !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt64(txtCode.Text) : 0;
+                        _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
 
-                        if (string.IsNullOrEmpty(_Code.ToString()))
+                        if (_TabaghehKalaId == 0)
+                        {
+                            XtraMessageBox.Show("لطفا گروه تفصیلی را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmbTabaghehKala.Focus();
+                            return false;
+                        }
+                        else if (string.IsNullOrEmpty(_Code.ToString()))
                         {
                             XtraMessageBox.Show("لطفا کد حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             txtCode.Focus();
                             return false;
                         }
-                        else if (_Code == 0 || _Code > Convert.ToInt32(_MaxCode) || _Code < Convert.ToInt32(_MinCode))
-                        {
-                            XtraMessageBox.Show("کد وارده بایستی عددی از " + _MinCode + " تا " + _MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            txtCode.Focus();
-                            return false;
-                        }
+                        //else if (_Code == 0 || _Code > Convert.ToInt32(_MaxCode) || _Code < Convert.ToInt32(_MinCode))
+                        //{
+                        //    XtraMessageBox.Show("کد وارده بایستی عددی از " + _MinCode + " تا " + _MaxCode + " باشد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //    txtCode.Focus();
+                        //    return false;
+                        //}
                         else if (string.IsNullOrEmpty(_Name) || _Name == "0")
                         {
                             XtraMessageBox.Show("لطفاً نام حساب را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -527,7 +553,7 @@ namespace EtelaatePaye.CodingAnbar
                     else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
                     {
                         _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
-                        _Code = !String.IsNullOrEmpty(txtGroupCode.Text) && !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt32(txtGroupCode.Text + txtCode.Text) : 0;
+                        _Code = !String.IsNullOrEmpty(txtGroupCode.Text) && !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt64(txtGroupCode.Text + txtCode.Text) : 0;
 
                         ///////////////// اعتبار سنجی کد ////////////////////////////////////
                         if (_TabaghehKalaId == 0)
@@ -601,7 +627,7 @@ namespace EtelaatePaye.CodingAnbar
                     {
                         _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
                         _GroupAsliKalaId = Convert.ToInt32(cmbGroupAsliKala.EditValue);
-                        _Code = !String.IsNullOrEmpty(txtGroupCode.Text) && !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt32(txtGroupCode.Text + txtCode.Text) : 0;
+                        _Code = !String.IsNullOrEmpty(txtGroupCode.Text) && !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt64(txtGroupCode.Text + txtCode.Text) : 0;
 
                         ///////////////// اعتبار سنجی کد ////////////////////////////////////
                         if (_TabaghehKalaId == 0)
@@ -680,7 +706,7 @@ namespace EtelaatePaye.CodingAnbar
                     }
                     else if (_SelectedTabPage == "xtraTabPage_NameKala")
                     {
-                        _Code = !String.IsNullOrEmpty(txtGroupCode.Text) && !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt32(txtGroupCode.Text + txtCode.Text) : 0;
+                        _Code = !String.IsNullOrEmpty(txtGroupCode.Text) && !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt64(txtGroupCode.Text + txtCode.Text) : 0;
                         _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
                         _GroupAsliKalaId = Convert.ToInt32(cmbGroupAsliKala.EditValue);
                         _GroupFareeKalaId = Convert.ToInt32(cmbGroupFareeKala.EditValue);
@@ -803,14 +829,14 @@ namespace EtelaatePaye.CodingAnbar
             {
                 btnSaveNext_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
-            {
-                btnCancel_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F8)
-            {
-                btnDisplyList_Click(sender, null);
-            }
+            //else if (e.KeyCode == Keys.F7)
+            //{
+            //    btnCancel_Click(sender, null);
+            //}
+            //else if (e.KeyCode == Keys.F8)
+            //{
+            //    btnDisplyList_Click(sender, null);
+            //}
             else if (e.KeyCode == Keys.F10)
             {
                 btnPrintPreview_Click(sender, null);
@@ -874,7 +900,7 @@ namespace EtelaatePaye.CodingAnbar
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (btnCreate.Visible)
+            if (btnCreate.Enabled)
             {
                 En = EnumCED.Create;
                 gridControl.Enabled = false;
@@ -884,8 +910,9 @@ namespace EtelaatePaye.CodingAnbar
                     HelpClass1.InActiveButtons(PanelControl1);
                     HelpClass1.ClearControls(PanelControl2);
                     HelpClass1.ActiveControls(PanelControl2);
-                    btnNewCode_Click(null, null);
-                    txtName.Focus();
+                    FillcmbGroupTafsili();
+                    //tnNewCode_Click(null, null);
+                    cmbTabaghehKala.Focus();
                 }
                 else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
                 {
@@ -905,6 +932,7 @@ namespace EtelaatePaye.CodingAnbar
                 }
                 else if (_SelectedTabPage == "xtraTabPage_NameKala")
                 {
+
                     HelpClass1.InActiveButtons(PanelControl1);
                     HelpClass1.ClearControls(xtraTabPage1);
                     HelpClass1.ClearControls(xtraTabPage2);
@@ -917,6 +945,7 @@ namespace EtelaatePaye.CodingAnbar
                     HelpClass1.ActiveControls(xtraTabPage4);
                     HelpClass1.ActiveControls(xtraTabPage5);
                     FillcmbTaminKonande();
+
                     txtTarikhEjad.Text = DateTime.Now.ToString().Substring(0, 10);
 
                     xtraTabControl_NameKala.SelectedTabPageIndex = 1;
@@ -931,7 +960,7 @@ namespace EtelaatePaye.CodingAnbar
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (btnDelete.Visible)
+            if (btnDelete.Enabled)
             {
                 if (gridView.RowCount > 0)
                 {
@@ -945,10 +974,19 @@ namespace EtelaatePaye.CodingAnbar
                             {
                                 _SalId = Convert.ToInt32(lblSalId.Text);
                                 int RowId = Convert.ToInt32(gridView.GetFocusedRowCellValue("Id").ToString());
+
                                 var q = db.EpAllCodingKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == RowId);
                                 if (q != null)
                                 {
                                     db.EpAllCodingKalas.Remove(q);
+                                    if (_SelectedTabPage == "xtraTabPage_NameKala")
+                                    {
+                                        long _CodeHesabdari = Convert.ToInt64(gridView.GetFocusedRowCellValue("CodeHesabdari").ToString());
+                                        var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Code == _CodeHesabdari && s.LevelNamber == _LevelNamberGroupTafsili);
+                                        if (qq != null)
+                                            db.EpAllHesabTafsilis.Remove(qq);
+
+                                    }
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
@@ -994,7 +1032,7 @@ namespace EtelaatePaye.CodingAnbar
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Visible)
+            if (btnEdit.Enabled)
             {
                 if (gridView.RowCount > 0)
                 {
@@ -1017,7 +1055,7 @@ namespace EtelaatePaye.CodingAnbar
 
                     gridView_RowCellClick(null, null);
 
-                    _CodeBeforeEdit = Convert.ToInt32(txtGroupCode.Text + txtCode.Text);
+                    _CodeBeforeEdit = Convert.ToInt64(txtGroupCode.Text + txtCode.Text);
                     _NameBeforeEdit = txtName.Text;
                     _IsActiveBeforeEdit = chkIsActive.Checked;
 
@@ -1025,7 +1063,9 @@ namespace EtelaatePaye.CodingAnbar
                     {
                         HelpClass1.InActiveButtons(PanelControl1);
                         HelpClass1.ActiveControls(PanelControl2);
-                        txtName.Focus();
+                        TabaghehKalaIdBeforeEdit = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                        FillcmbGroupTafsili();
+                        cmbTabaghehKala.Focus();
                     }
                     else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
                     {
@@ -1041,6 +1081,7 @@ namespace EtelaatePaye.CodingAnbar
                         HelpClass1.ActiveControls(PanelControl2);
                         TabaghehKalaIdBeforeEdit = Convert.ToInt32(cmbTabaghehKala.EditValue);
                         GroupAsliIdBeforeEdit = Convert.ToInt32(cmbGroupAsliKala.EditValue);
+                        NameKalaBeforeEdit = txtName.Text;
                         FillcmbTabaghehKala();
                         cmbTabaghehKala.Focus();
                     }
@@ -1055,6 +1096,7 @@ namespace EtelaatePaye.CodingAnbar
                         TabaghehKalaIdBeforeEdit = Convert.ToInt32(cmbTabaghehKala.EditValue);
                         GroupAsliIdBeforeEdit = Convert.ToInt32(cmbGroupAsliKala.EditValue);
                         GroupFareeIdBeforeEdit = Convert.ToInt32(cmbGroupFareeKala.EditValue);
+                        NameKalaBeforeEdit = txtName.Text;
                         FillcmbTaminKonande();
                         FillcmbTabaghehKala();
                         using (var db = new MyContext())
@@ -1120,6 +1162,7 @@ namespace EtelaatePaye.CodingAnbar
                                     obj.IsActive = _IsActive;
                                     obj.VahedKalaId = _VahedKalaId;
                                     obj.VahedKalaName = cmbVahedKala.Text;
+                                    obj.GroupTafsiliId = _TabaghehKalaId;
                                     obj.SharhHesab = _SharhHesab;
                                     /////////////////////////////////////////////////////////////////////////////////////
                                     // var q = db.EpHesabTabagheh.FirstOrDefault(s => s.Code == _code && s.SalId == _SalId);
@@ -1228,6 +1271,9 @@ namespace EtelaatePaye.CodingAnbar
 
                                     if (!string.IsNullOrEmpty(txtCodeEkhtesasi_NameKala.Text))
                                         obj.CodeEkhtesasi = Convert.ToInt32(txtCodeEkhtesasi_NameKala.Text);
+
+                                    obj.CodeHesabdari = _Code;
+
                                     if (!string.IsNullOrEmpty(cmbTaminKonande_NameKala.Text))
                                     {
                                         obj.TaminKonandeName = cmbTaminKonande_NameKala.Text;
@@ -1318,7 +1364,7 @@ namespace EtelaatePaye.CodingAnbar
                                     else
                                         obj.Pictuer = null;
 
-                                    ////////////////////////////////////// اضافه کردن حساب کل به کلاس سطح دسترسی کدینگ حسابداری ////////////////////
+                                    ///////////////////////////////////// ////////////////////
                                     EpAllCodingKala n1 = new EpAllCodingKala();
                                     n1.SalId = _SalId;
                                     n1.KeyCode = _Code;
@@ -1328,6 +1374,31 @@ namespace EtelaatePaye.CodingAnbar
                                     n1.IsActive = _IsActive;
                                     n1.EpNameKala1 = obj;
                                     db.EpAllCodingKalas.Add(n1);
+
+                                    ///////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
+                                    EpHesabTafsiliAghlamAnbar objAghlamAnbar = new EpHesabTafsiliAghlamAnbar();
+                                    objAghlamAnbar.SalId = _SalId;
+                                    objAghlamAnbar.LevelNamber = _LevelNamberGroupTafsili;
+                                    objAghlamAnbar.Code = _Code;
+                                    objAghlamAnbar.Name = _Name;
+                                    objAghlamAnbar.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
+                                    objAghlamAnbar.IsActive = _IsActive;
+                                    objAghlamAnbar.SharhHesab = _SharhHesab;
+                                    objAghlamAnbar.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                    objAghlamAnbar.IsCreateByUser = false;
+                                    objAghlamAnbar.CreateName = "سیستم انبار";
+                                    objAghlamAnbar.CodeKala = _Code;
+
+                                    EpAllHesabTafsili obj1 = new EpAllHesabTafsili();
+                                    obj1.SalId = _SalId;
+                                    obj1.LevelNamber = _LevelNamberGroupTafsili;
+                                    obj1.Code = _Code;
+                                    obj1.Name = _Name;
+                                    obj1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                    obj1.IsActive = _IsActive;
+                                    obj1.SharhHesab = _SharhHesab;
+                                    obj1.EpHesabTafsiliAghlamAnbar1 = objAghlamAnbar;
+                                    db.EpAllHesabTafsilis.Add(obj1);
 
                                     db.SaveChanges();
                                     btnCancel_Click(null, null);
@@ -1404,6 +1475,7 @@ namespace EtelaatePaye.CodingAnbar
                                         q.IsActive = _IsActive;
                                         q.VahedKalaId = _VahedKalaId;
                                         q.VahedKalaName = cmbVahedKala.Text;
+                                        q.GroupTafsiliId = _TabaghehKalaId;
                                         q.SharhHesab = _SharhHesab;
                                         q.EpGroupAsliKalas = q4;
                                     }
@@ -1726,6 +1798,7 @@ namespace EtelaatePaye.CodingAnbar
                                         else
                                             q.CodeEkhtesasi = null;
 
+                                        q.CodeHesabdari = _Code;
 
                                         cmbTaminKonande_NameKala.ShowPopup();
                                         cmbTaminKonande_NameKala.ClosePopup();
@@ -1919,6 +1992,30 @@ namespace EtelaatePaye.CodingAnbar
                                                 //    item.IsActive = true;
                                             }
 
+                                            ///////////////////////////////// ویرایش کد در حسابداری //////////////////////////
+                                            // int RowId = Convert.ToInt32(txtId.Text);
+                                            var _Id = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Code == _CodeBeforeEdit && s.LevelNamber == _LevelNamberGroupTafsili).Id;
+                                            var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Id && s.LevelNamber == _LevelNamberGroupTafsili);
+                                            if (qq != null)
+                                            {
+                                                //q.SalId = _SalId;
+                                                //q.LevelNamber = _levelNamber;
+                                                //q.TabaghehGroupIndex = _TabaghehIndex;
+                                                qq.Code = _Code;
+                                                qq.Name = _Name;
+                                                qq.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                                qq.IsActive = _IsActive;
+                                                qq.SharhHesab = _SharhHesab;
+
+                                                qq.EpHesabTafsiliAghlamAnbar1.Code = _Code;
+                                                qq.EpHesabTafsiliAghlamAnbar1.Name = _Name;
+                                                qq.EpHesabTafsiliAghlamAnbar1.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
+                                                qq.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
+                                                qq.EpHesabTafsiliAghlamAnbar1.SharhHesab = _SharhHesab;
+                                                qq.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                                qq.EpHesabTafsiliAghlamAnbar1.CodeKala = _Code;
+                                            }
+
                                             db.SaveChanges();
                                         }
 
@@ -1960,14 +2057,14 @@ namespace EtelaatePaye.CodingAnbar
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (btnCancel.Enabled)
-            {
                 gridControl.Enabled = true;
                 En = EnumCED.Cancel;
                 HelpClass1.ActiveButtons(PanelControl1);
                 btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
+                NameKalaBeforeEdit = string.Empty;
                 if (_SelectedTabPage == "xtraTabPage_NameKala")
                 {
+                    txtGroupCode.Text = string.Empty;
                     HelpClass1.ClearControls(xtraTabPage1);
                     HelpClass1.ClearControls(xtraTabPage2);
                     HelpClass1.ClearControls(xtraTabPage3);
@@ -1978,6 +2075,7 @@ namespace EtelaatePaye.CodingAnbar
                     HelpClass1.InActiveControls(xtraTabPage3);
                     HelpClass1.InActiveControls(xtraTabPage4);
                     HelpClass1.InActiveControls(xtraTabPage5);
+
                 }
                 else
                 {
@@ -1986,7 +2084,6 @@ namespace EtelaatePaye.CodingAnbar
 
                 }
                 btnCreate.Focus();
-            }
         }
 
         private void gridView_KeyDown(object sender, KeyEventArgs e)
@@ -2014,8 +2111,10 @@ namespace EtelaatePaye.CodingAnbar
 
                     if (_SelectedTabPage == "xtraTabPage_TabaghehKala")
                     {
+                        cmbTabaghehKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupTafsiliId").ToString());
                         cmbVahedKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("VahedKalaId").ToString());
                         txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString();
+                        txtIndex_TabaghehKala.Text = gridView.FocusedRowHandle.ToString();
                     }
                     else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
                     {
@@ -2024,6 +2123,7 @@ namespace EtelaatePaye.CodingAnbar
                         cmbTabaghehKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("TabaghehId").ToString());
                         txtGroupCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(0, _Carakter);
                         txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(_Carakter);
+                        txtIndex_GroupAsli.Text = gridView.FocusedRowHandle.ToString();
                     }
                     else if (_SelectedTabPage == "xtraTabPage_GroupFaree")
                     {
@@ -2036,10 +2136,11 @@ namespace EtelaatePaye.CodingAnbar
                         cmbGroupAsliKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupAsliId").ToString());
                         txtGroupCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(0, _Carakter);
                         txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(_Carakter);
+
+                        txtIndex_GroupFaree.Text = gridView.FocusedRowHandle.ToString();
                     }
                     else if (_SelectedTabPage == "xtraTabPage_NameKala")
                     {
-                        //FillcmbHesabTabagheh();
                         _GroupFareeKalaId = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupFareeId").ToString());
                         _GroupAsliKalaId = new MyContext().EpGroupFareeKalas.FirstOrDefault(s => s.Id == _GroupFareeKalaId && s.SalId == _SalId).GroupAsliId;
                         _TabaghehKalaId = new MyContext().EpGroupAsliKalas.FirstOrDefault(s => s.Id == _GroupAsliKalaId && s.SalId == _SalId).TabaghehId;
@@ -2054,6 +2155,7 @@ namespace EtelaatePaye.CodingAnbar
                         txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(_Carakter);
 
                         txtCodeEkhtesasi_NameKala.Text = gridView.GetFocusedRowCellValue("CodeEkhtesasi") != null ? gridView.GetFocusedRowCellValue("CodeEkhtesasi").ToString() : "";
+                        txtCodeHesabdari.Text = gridView.GetFocusedRowCellValue("CodeHesabdari") != null ? gridView.GetFocusedRowCellValue("CodeHesabdari").ToString() : "";
                         txtTarikhEjad.Text = gridView.GetFocusedRowCellValue("TarikhEjad") != null ? gridView.GetFocusedRowCellValue("TarikhEjad").ToString().Substring(0, 10) : "";
                         if (gridView.GetFocusedRowCellValue("TaminKonandeId") != null)
                             cmbTaminKonande_NameKala.SetEditValue(gridView.GetFocusedRowCellValue("TaminKonandeId"));
@@ -2099,6 +2201,8 @@ namespace EtelaatePaye.CodingAnbar
                         txtHadeSefaresh_NameKala.Text = gridView.GetFocusedRowCellValue("HadeSefaresh") != null ? gridView.GetFocusedRowCellValue("HadeSefaresh").ToString() : "";
                         chkArzeshAfzode_NameKala.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsArzeshAfzode"));
 
+                        txtIndex_NameKala.Text = gridView.FocusedRowHandle.ToString();
+
                         using (var db = new MyContext())
                         {
                             try
@@ -2139,6 +2243,8 @@ namespace EtelaatePaye.CodingAnbar
             {
                 gridControl = gridControl_TabaghehKala;
                 gridView = gridView_TabaghehKala;
+                cmbTabaghehKala = cmbGroupTafsili_Tabagheh;
+                btnReloadTabaghehKala = btnReloadGroupTafsili_Tabagheh;
                 cmbVahedKala = cmbVahedKala_Tabagheh;
                 txtCode = txtCode_Tabagheh;
                 txtGroupCode = txtCodeGroup_TabaghehKala;
@@ -2154,14 +2260,15 @@ namespace EtelaatePaye.CodingAnbar
                 _LevelNumber = 1;
                 //_Carakter;
                 txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
-                txtCode.Properties.Mask.EditMask = _CodeTabaghehKalaCarakter == 1 ? "0" :
-                                                   _CodeTabaghehKalaCarakter == 2 ? "00" :
+                txtCode.Properties.Mask.EditMask = _CodeTabaghehKalaCarakter == 2 ? "00" :
                                                    _CodeTabaghehKalaCarakter == 3 ? "000" : "0000";
                 txtCode.Properties.MaxLength = _CodeTabaghehKalaCarakter;
-                _MinCode = _CodeTabaghehKalaMinCode;
-                _MaxCode = _CodeTabaghehKalaMaxCode;
+                //_MinCode = _CodeTabaghehKalaMinCode;
+                //_MaxCode = _CodeTabaghehKalaMaxCode;
                 FillGridViewCodingKala();
-                //FillcmbTabaghehKala();
+                gridView.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex_TabaghehKala.Text) ? Convert.ToInt32(txtIndex_TabaghehKala.Text) : 0;
+
+                FillcmbGroupTafsili();
                 FillcmbVahedKala();
                 btnCreate.Enabled = true;
                 btnCreate.Focus();
@@ -2194,6 +2301,8 @@ namespace EtelaatePaye.CodingAnbar
                 _MinCode = _CodeGroupAsliKalaMinCode;
                 _MaxCode = _CodeGroupAsliKalaMaxCode;
                 FillGridViewCodingKala();
+                gridView.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex_GroupAsli.Text) ? Convert.ToInt32(txtIndex_GroupAsli.Text) : 0;
+
                 FillcmbTabaghehKala();
                 FillcmbVahedKala();
                 btnCreate.Enabled = true;
@@ -2229,6 +2338,8 @@ namespace EtelaatePaye.CodingAnbar
                 _MinCode = _CodeGroupFareeKalaMinCode;
                 _MaxCode = _CodeGroupFareeKalaMaxCode;
                 FillGridViewCodingKala();
+                gridView.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex_GroupFaree.Text) ? Convert.ToInt32(txtIndex_GroupFaree.Text) : 0;
+
                 FillcmbTabaghehKala();
                 FillcmbVahedKala();
                 btnCreate.Enabled = true;
@@ -2275,6 +2386,8 @@ namespace EtelaatePaye.CodingAnbar
                 HelpClass1.DateTimeMask(txtTarikhEjad);
 
                 FillGridViewCodingKala();
+                gridView.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex_NameKala.Text) ? Convert.ToInt32(txtIndex_NameKala.Text) : 0;
+
                 FillcmbTabaghehKala();
                 FillcmbTaminKonande();
                 FillcmbVahedKala();
@@ -2319,8 +2432,27 @@ namespace EtelaatePaye.CodingAnbar
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
+                    if (_SelectedTabPage == "xtraTabPage_TabaghehKala")
+                    {
+                        _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                        var q = db.EpAllGroupTafsilis.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId);
+                        if (q != null)
+                        {
+                            txtGroupCode.Text = q.KeyCode.ToString();
+                            if (En == EnumCED.Edit)
+                                if (_TabaghehKalaId != TabaghehKalaIdBeforeEdit)
+                                {
+                                    btnNewCode_Click(null, null);
+                                }
+                                else
+                                    txtCode.Text = _CodeBeforeEdit.ToString().Substring(_Carakter);
 
-                    if (_SelectedTabPage == "xtraTabPage_GroupAsli")
+                            else
+                                btnNewCode_Click(null, null);
+                        }
+                        txtName.Text = cmbTabaghehKala.Text;
+                    }
+                    else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
                     {
                         _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
                         var q = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId);
@@ -2382,6 +2514,11 @@ namespace EtelaatePaye.CodingAnbar
 
                             else
                                 btnNewCode_Click(null, null);
+                            if (GroupAsliIdBeforeEdit != Convert.ToInt32(cmbGroupAsli_GroupFaree.EditValue))
+                                txtName.Text = cmbGroupAsli_GroupFaree.Text;
+                            else
+                                txtName.Text = NameKalaBeforeEdit;
+
                         }
 
                     }
@@ -2423,6 +2560,11 @@ namespace EtelaatePaye.CodingAnbar
 
                         else
                             btnNewCode_Click(null, null);
+
+                        if (GroupFareeIdBeforeEdit != Convert.ToInt32(cmbGroupFaree_NameKala.EditValue))
+                            txtName.Text = cmbGroupFaree_NameKala.Text;
+                        else
+                            txtName.Text = NameKalaBeforeEdit;
 
                     }
 
@@ -2647,6 +2789,29 @@ namespace EtelaatePaye.CodingAnbar
         private void FrmCodingKala_FormClosed(object sender, FormClosedEventArgs e)
         {
             db1.Dispose();
+        }
+
+        private void btnReloadTabaghehKala_Tabagheh_Click(object sender, EventArgs e)
+        {
+            FillcmbGroupTafsili();
+        }
+
+        private void txtCode_NameKala_EditValueChanged(object sender, EventArgs e)
+        {
+            txtCodeHesabdari.Text = txtCodeGroup_NameKala.Text + txtCode_NameKala.Text;
+        }
+
+        private void chkIsActive_NameKala_Leave(object sender, EventArgs e)
+        {
+            xtraTabControl_NameKala.SelectedTabPageIndex = 1;
+            cmbVahedKala.Focus();
+        }
+
+        private void txtSaiz_NameKala_Leave(object sender, EventArgs e)
+        {
+            xtraTabControl_NameKala.SelectedTabPageIndex = 2;
+            lstSerialKala_NameKala.Focus();
+
         }
     }
 }

@@ -35,9 +35,9 @@ namespace DBHesabdari_PG.Models.EP.Tanzimat
         public string GroupTafsiliLevel3MinCode { get; set; }
         [Required, MaxLength(1)]
         public string GroupTafsiliLevel3MaxCode { get; set; }
-        [Required, MaxLength(5)]
+        [Required, MaxLength(6)]
         public string CodeTafsiliMinCode { get; set; }
-        [Required, MaxLength(5)]
+        [Required, MaxLength(6)]
         public string CodeTafsiliMaxCode { get; set; }
 
         [Required]

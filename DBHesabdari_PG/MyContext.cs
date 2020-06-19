@@ -105,6 +105,7 @@ namespace DBHesabdari_PG
         public virtual DbSet<EpHesabTafsiliShoabat> EpHesabTafsiliShoabats { get; set; }
         public virtual DbSet<EpHesabTafsiliProzhe> EpHesabTafsiliProzhes { get; set; }
         public virtual DbSet<EpHesabTafsiliGharardad> EpHesabTafsiliGharardads { get; set; }
+        public virtual DbSet<EpHesabTafsiliAnbarha> EpHesabTafsiliAnbarhas { get; set; }
         public virtual DbSet<EpHesabTafsiliSayer> EpHesabTafsiliSayers { get; set; }
 
 
@@ -137,6 +138,7 @@ namespace DBHesabdari_PG
         public virtual DbSet<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
         //public virtual DbSet<AkVorodeKala> AkVorodeKalas { get; set; }
         public virtual DbSet<AkVorodeKala_Riz> AkVorodeKala_Rizs { get; set; }
+        public virtual DbSet<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
         public virtual DbSet<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }
 
         #region
@@ -244,6 +246,7 @@ namespace DBHesabdari_PG
             modelBuilder.Entity<EpAllHesabTafsili>().HasOptional(m => m.EpHesabTafsiliShoabat1).WithRequired(m => m.EpAllHesabTafsili1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllHesabTafsili>().HasOptional(m => m.EpHesabTafsiliProzhe1).WithRequired(m => m.EpAllHesabTafsili1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllHesabTafsili>().HasOptional(m => m.EpHesabTafsiliGharardad1).WithRequired(m => m.EpAllHesabTafsili1).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpAllHesabTafsili>().HasOptional(m => m.EpHesabTafsiliAnbarha1).WithRequired(m => m.EpAllHesabTafsili1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllHesabTafsili>().HasOptional(m => m.EpHesabTafsiliSayer1).WithRequired(m => m.EpAllHesabTafsili1).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<EpNameBank>().HasMany(m => m.EpHesabTafsiliBankhas).WithRequired(m => m.EpNameBank1).HasForeignKey(m => m.NameBankId).WillCascadeOnDelete(false);
@@ -275,17 +278,18 @@ namespace DBHesabdari_PG
             //modelBuilder.Properties<decimal>().Configure(config => config.HasPrecision(18, 4));
             //modelBuilder.Entity<AkVorodeKala>().Property(p => p.SumMeghdar).HasPrecision(18, 4);
             //modelBuilder.Entity<AkVorodeKala>().Property(p => p.SumMablag).HasPrecision(18, 0);
-            modelBuilder.Entity<AkVorodeKala_Riz>().Property(p => p.Meghdar).HasPrecision(18, 4);
-            modelBuilder.Entity<AkVorodeKala_Riz>().Property(p => p.Nerkh).HasPrecision(18, 4);
+            modelBuilder.Entity<AkVorodeKala_Riz>().Property(p => p.Meghdar).HasPrecision(18, 3);
+            modelBuilder.Entity<AkVorodeKala_Riz>().Property(p => p.Nerkh).HasPrecision(18, 3);
             modelBuilder.Entity<AkVorodeKala_Riz>().Property(p => p.Mablag).HasPrecision(18, 0);
-            modelBuilder.Entity<AkAllAmaliateRozaneh>().Property(p => p.Meghdar).HasPrecision(18, 4);
-            modelBuilder.Entity<AkAllAmaliateRozaneh>().Property(p => p.Nerkh).HasPrecision(18, 4);
+            modelBuilder.Entity<AkAllAmaliateRozaneh>().Property(p => p.Meghdar).HasPrecision(18, 3);
+            modelBuilder.Entity<AkAllAmaliateRozaneh>().Property(p => p.Nerkh).HasPrecision(18, 3);
             modelBuilder.Entity<AkAllAmaliateRozaneh>().Property(p => p.Mablag).HasPrecision(18, 0);
 
             modelBuilder.Entity<EpAllCodingKala>().HasMany(m => m.R_EpAllCodingKala_B_AkAllAmaliateRozanehs).WithRequired(m => m.EpAllCodingKala1).HasForeignKey(m => m.KalaId).WillCascadeOnDelete(false);
             modelBuilder.Entity<AkAllAmaliateRozaneh>().HasMany(m => m.R_EpAllCodingKala_B_AkAllAmaliateRozanehs).WithRequired(m => m.AkAllAmaliateRozaneh1).HasForeignKey(m => m.AmaliatId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<AkAllAmaliateRozaneh>().HasOptional(m => m.AkVorodeKala_Riz1).WithRequired(m => m.AkAllAmaliateRozaneh1).WillCascadeOnDelete(true);
+            modelBuilder.Entity<AkAllAmaliateRozaneh>().HasOptional(m => m.AkKhorojeKala_Riz1).WithRequired(m => m.AkAllAmaliateRozaneh1).WillCascadeOnDelete(true);
 
             #region
             //--------> one - to - zero - or - one relationships < ------------

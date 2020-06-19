@@ -20,6 +20,8 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public long Code { get; set; }
         [Required, MaxLength(100)]
         public string Name { get; set; }
+        [Required]
+        public long CodeHesabdari { get; set; }
         public int? CodeEkhtesasi { get; set; }
         [Column(TypeName = "Date")]
         public DateTime TarikhEjad { get; set; }
@@ -74,6 +76,12 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [Required]
         public bool IsArzeshAfzode { get; set; }
         public byte[] Pictuer { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string GroupAsliName { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string GroupFareeName { get; set; }
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }
         public virtual EpGroupFareeKala EpGroupFareeKala1 { get; set; }

@@ -71,19 +71,37 @@
     <Compile Include="AmaliatRozaneh\FrmAmaliatRozaneh.Designer.cs">
       <DependentUpon>FrmAmaliatRozaneh.cs</DependentUpon>
     </Compile>
-    <Compile Include="AmaliatRozaneh\FrmAmaliatVorodeKala.cs">
+    <Compile Include="AmaliatRozaneh\FrmAmaliatSelectKala.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AmaliatRozaneh\FrmAmaliatVorodeKala.Designer.cs">
-      <DependentUpon>FrmAmaliatVorodeKala.cs</DependentUpon>
+    <Compile Include="AmaliatRozaneh\FrmAmaliatSelectKala.Designer.cs">
+      <DependentUpon>FrmAmaliatSelectKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AmaliatRozaneh\FrmJabejaeeKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmaliatRozaneh\FrmJabejaeeKala.Designer.cs">
+      <DependentUpon>FrmJabejaeeKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AmaliatRozaneh\FrmMojodiAvalDoreKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmaliatRozaneh\FrmMojodiAvalDoreKala.Designer.cs">
+      <DependentUpon>FrmMojodiAvalDoreKala.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatRozaneh.resx">
       <DependentUpon>FrmAmaliatRozaneh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatVorodeKala.resx">
-      <DependentUpon>FrmAmaliatVorodeKala.cs</DependentUpon>
+    <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatSelectKala.resx">
+      <DependentUpon>FrmAmaliatSelectKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmaliatRozaneh\FrmJabejaeeKala.resx">
+      <DependentUpon>FrmJabejaeeKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmaliatRozaneh\FrmMojodiAvalDoreKala.resx">
+      <DependentUpon>FrmMojodiAvalDoreKala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

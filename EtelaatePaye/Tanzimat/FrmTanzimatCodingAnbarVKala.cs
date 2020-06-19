@@ -112,50 +112,50 @@ namespace EtelaatePaye.Tanzimat
                             q.CodeAnbarMinCode = "1";
                             q.CodeAnbarMaxCode = "999";
                             //////////////
-                            switch (txtTabagehKalaCarakter.Text)
-                            {
-                                case "1":
-                                    {
-                                        q.CodeTabagehKalaMinCode = "1";
-                                        q.CodeTabagehKalaMaxCode = "9";
-                                        break;
-                                    }
-                                case "2":
-                                    {
-                                        q.CodeTabagehKalaMinCode = "10";
-                                        q.CodeTabagehKalaMaxCode = "99";
-                                        break;
-                                    }
-                                case "3":
-                                    {
-                                        q.CodeTabagehKalaMinCode = "100";
-                                        q.CodeTabagehKalaMaxCode = "999";
-                                        break;
-                                    }
-                                case "4":
-                                    {
-                                        q.CodeTabagehKalaMinCode = "1000";
-                                        q.CodeTabagehKalaMaxCode = "9999";
-                                        break;
-                                    }
-                                default:
-                                    break;
-                            }
+                            //switch (txtTabagehKalaCarakter.Text)
+                            //{
+                            //    case "1":
+                            //        {
+                            //            q.CodeTabagehKalaMinCode = "1";
+                            //            q.CodeTabagehKalaMaxCode = "9";
+                            //            break;
+                            //        }
+                            //    case "2":
+                            //        {
+                            //            q.CodeTabagehKalaMinCode = "10";
+                            //            q.CodeTabagehKalaMaxCode = "99";
+                            //            break;
+                            //        }
+                            //    case "3":
+                            //        {
+                            //            q.CodeTabagehKalaMinCode = "100";
+                            //            q.CodeTabagehKalaMaxCode = "999";
+                            //            break;
+                            //        }
+                            //    case "4":
+                            //        {
+                            //            q.CodeTabagehKalaMinCode = "1000";
+                            //            q.CodeTabagehKalaMaxCode = "9999";
+                            //            break;
+                            //        }
+                            //    default:
+                            //        break;
+                            //}
                             //////////////
                             switch (txtGroupAsliCarakter.Text)
                             {
-                                case "1":
-                                    {
-                                        q.CodeGroupAsliKalaMinCode = "1";
-                                        q.CodeGroupAsliKalaMaxCode = "9";
-                                        break;
-                                    }
-                                case "2":
-                                    {
-                                        q.CodeGroupAsliKalaMinCode = "01";
-                                        q.CodeGroupAsliKalaMaxCode = "99";
-                                        break;
-                                    }
+                                //case "1":
+                                //    {
+                                //        q.CodeGroupAsliKalaMinCode = "1";
+                                //        q.CodeGroupAsliKalaMaxCode = "9";
+                                //        break;
+                                //    }
+                                //case "2":
+                                //    {
+                                //        q.CodeGroupAsliKalaMinCode = "01";
+                                //        q.CodeGroupAsliKalaMaxCode = "99";
+                                //        break;
+                                //    }
                                 case "3":
                                     {
                                         q.CodeGroupAsliKalaMinCode = "001";
@@ -174,18 +174,18 @@ namespace EtelaatePaye.Tanzimat
                             //////////////
                             switch (txtGroupFareeCarakter.Text)
                             {
-                                case "1":
-                                    {
-                                        q.CodeGroupFareeKalaMinCode = "1";
-                                        q.CodeGroupFareeKalaMaxCode = "9";
-                                        break;
-                                    }
-                                case "2":
-                                    {
-                                        q.CodeGroupFareeKalaMinCode = "01";
-                                        q.CodeGroupFareeKalaMaxCode = "99";
-                                        break;
-                                    }
+                                //case "1":
+                                //    {
+                                //        q.CodeGroupFareeKalaMinCode = "1";
+                                //        q.CodeGroupFareeKalaMaxCode = "9";
+                                //        break;
+                                //    }
+                                //case "2":
+                                //    {
+                                //        q.CodeGroupFareeKalaMinCode = "01";
+                                //        q.CodeGroupFareeKalaMaxCode = "99";
+                                //        break;
+                                //    }
                                 case "3":
                                     {
                                         q.CodeGroupFareeKalaMinCode = "001";
@@ -204,18 +204,18 @@ namespace EtelaatePaye.Tanzimat
                             //////////////
                             switch (txtNameKalaCarakter.Text)
                             {
-                                case "1":
-                                    {
-                                        q.CodeNameKalaMinCode = "1";
-                                        q.CodeNameKalaMaxCode = "9";
-                                        break;
-                                    }
-                                case "2":
-                                    {
-                                        q.CodeNameKalaMinCode = "01";
-                                        q.CodeNameKalaMaxCode = "99";
-                                        break;
-                                    }
+                                //case "1":
+                                //    {
+                                //        q.CodeNameKalaMinCode = "1";
+                                //        q.CodeNameKalaMaxCode = "9";
+                                //        break;
+                                //    }
+                                //case "2":
+                                //    {
+                                //        q.CodeNameKalaMinCode = "01";
+                                //        q.CodeNameKalaMaxCode = "99";
+                                //        break;
+                                //    }
                                 case "3":
                                     {
                                         q.CodeNameKalaMinCode = "001";
@@ -264,6 +264,14 @@ namespace EtelaatePaye.Tanzimat
             {
                 btnClose_Click(sender, null);
             }
+        }
+
+        private void labelControl8_Click(object sender, EventArgs e)
+        {
+            XtraMessageBox.Show("تعدادکاراکتر 2 = تعریف اتوماتیک کد کالا در سطح 1 حسابهای تفصیلی\n"+
+                "تعدادکاراکتر 3 = تعریف اتوماتیک کد کالا در سطح 2 حسابهای تفصیلی\n" +
+                "تعدادکاراکتر 4 = تعریف اتوماتیک کد کالا در سطح 3 حسابهای تفصیلی"
+                        , "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

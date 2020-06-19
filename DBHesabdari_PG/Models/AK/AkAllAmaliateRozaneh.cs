@@ -15,7 +15,9 @@ namespace DBHesabdari_PG.Models.AK
         [Required]
         public int SalId { get; set; }
         [Required]
-        public int AnbarId { get; set; }
+        public int AzAnbarId { get; set; }
+        [Required]
+        public int BeAnbarId { get; set; }
         [Required]
         public int KalaId { get; set; }
         [Required]
@@ -43,10 +45,15 @@ namespace DBHesabdari_PG.Models.AK
         [Required]
         public int HesabMoinId { get; set; }
         [Required]
-        public int HesabTafsiliId { get; set; }
+        public int HesabTafsili1Id { get; set; }
+        [Required]
+        public int HesabTafsili2Id { get; set; }
+        [Required]
+        public int HesabTafsili3Id { get; set; }
         [Required]
         public int Radif { get; set; }
         public virtual AkVorodeKala_Riz AkVorodeKala_Riz1 { get; set; }
+        public virtual AkKhorojeKala_Riz AkKhorojeKala_Riz1 { get; set; }
         public virtual ICollection<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }
     }
 
@@ -56,7 +63,7 @@ namespace DBHesabdari_PG.Models.AK
         public int SalId { get; set; }
         [Key]
         [Required, Column(Order = 1)]
-        public long KalaId { get; set; }
+        public int KalaId { get; set; }
         [Key]
         [Required, Column(Order = 2)]
         public long AmaliatId { get; set; }

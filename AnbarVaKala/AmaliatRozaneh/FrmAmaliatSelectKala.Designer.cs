@@ -1,6 +1,6 @@
 ﻿namespace AnbarVaKala.AmaliatRozaneh
 {
-    partial class FrmAmaliatVorodeKala
+    partial class FrmAmaliatSelectKala
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAmaliatVorodeKala));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAmaliatSelectKala));
             this.btnReload_NameKala = new DevExpress.XtraEditors.SimpleButton();
             this.cmb_NameKala = new DevExpress.XtraEditors.LookUpEdit();
             this.epNameKalasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -121,12 +121,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmb_NameKala.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 220, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("VahedAsliName", "واحد اصلی", 180, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 100, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EpGroupFareeKala1.Name", "گروه فرعی", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name7", "گروه اصلی", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupFareeName", "گروه فرعی", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupAsliName", "گروه اصلی", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmb_NameKala.Properties.DataSource = this.epNameKalasBindingSource;
             this.cmb_NameKala.Properties.DisplayMember = "Name";
             this.cmb_NameKala.Properties.DropDownRows = 10;
@@ -135,7 +135,7 @@
             this.cmb_NameKala.Properties.NullValuePrompt = "انتخاب نام کالا ...";
             this.cmb_NameKala.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmb_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmb_NameKala.Properties.PopupWidth = 1100;
+            this.cmb_NameKala.Properties.PopupWidth = 1150;
             this.cmb_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmb_NameKala.Properties.ValueMember = "Id";
             this.cmb_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -847,7 +847,7 @@
             this.labelControl9.TabIndex = 270;
             this.labelControl9.Text = "واحد اصلی";
             // 
-            // FrmAmaliatVorodeKala
+            // FrmAmaliatSelectKala
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
@@ -902,12 +902,13 @@
             this.MaximumSize = new System.Drawing.Size(949, 428);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(949, 428);
-            this.Name = "FrmAmaliatVorodeKala";
+            this.Name = "FrmAmaliatSelectKala";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "عملیات ورود کالا";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAmaliatVorodeKala_FormClosed);
-            this.Load += new System.EventHandler(this.FrmAmaliatVorodeKala_Load);
+            this.Text = "عملیات کالا";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAmaliatSelectKala_FormClosed);
+            this.Load += new System.EventHandler(this.FrmAmaliatSelectKala_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAmaliatSelectKala_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cmb_NameKala.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epNameKalasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVahed1.Properties)).EndInit();

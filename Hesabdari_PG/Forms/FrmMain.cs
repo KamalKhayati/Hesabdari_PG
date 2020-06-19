@@ -716,5 +716,17 @@ namespace Hesabdari_PG.Forms
             ActiveForm(fm);
 
         }
+
+        private void btnJabejaeeKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmJabejaeeKala fm = new FrmJabejaeeKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+
+        }
     }
 }

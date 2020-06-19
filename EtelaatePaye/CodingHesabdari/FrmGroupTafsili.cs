@@ -19,6 +19,7 @@ namespace EtelaatePaye.CodingHesabdari
 {
     public partial class FrmGroupTafsili : DevExpress.XtraEditors.XtraForm
     {
+        MyContext db;
         public FrmGroupTafsili()
         {
             InitializeComponent();
@@ -62,7 +63,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         public void FillGridviewGroupTafsili()
         {
-            using (var db = new MyContext())
+            db = new MyContext();
             {
                 try
                 {
@@ -390,8 +391,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            if (btnClose.Enabled)
+            {
+                this.Close();
+
+            }        }
 
         private bool TextEditValidation()
         {
@@ -663,14 +667,14 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 btnSaveNext_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
-            {
-                btnCancel_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F8)
-            {
-                btnDisplyList_Click(sender, null);
-            }
+            //else if (e.KeyCode == Keys.F7)
+            //{
+            //    btnCancel_Click(sender, null);
+            //}
+            //else if (e.KeyCode == Keys.F8)
+            //{
+            //    btnDisplyList_Click(sender, null);
+            //}
             else if (e.KeyCode == Keys.F10)
             {
                 btnPrintPreview_Click(sender, null);
@@ -826,7 +830,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (btnCreate.Visible)
+            if (btnCreate.Enabled)
             {
                 En = EnumCED.Create;
                 if (xtraTabControl1.SelectedTabPageIndex == 0)
@@ -875,7 +879,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (btnDelete.Visible)
+            if (btnDelete.Enabled)
             {
                 using (var db = new MyContext())
                 {
@@ -1019,7 +1023,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Visible)
+            if (btnEdit.Enabled)
             {
                 if (xtraTabControl1.SelectedTabPageIndex == 0)
                 {
@@ -1415,8 +1419,18 @@ namespace EtelaatePaye.CodingHesabdari
                                         a1.KeyCode = _Code;
                                         a1.ParentCode = _Code;
                                         a1.LevelName = _Name;
-                                        a1.TabaghehGroupIndex = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _Level1Id && s.SalId == _SalId).TabaghehIndex;
-                                        a1.TabaghehGroupName = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _Level1Id && s.SalId == _SalId).TabaghehName;
+                                        if (xtraTabControl1.SelectedTabPageIndex != 0)
+                                        {
+                                            a1.TabaghehGroupIndex = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _Level1Id && s.SalId == _SalId).TabaghehIndex;
+                                            a1.TabaghehGroupName = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _Level1Id && s.SalId == _SalId).TabaghehName;
+
+                                        }
+                                        else
+                                        {
+                                            a1.TabaghehGroupIndex = cmbTabaghehGroup.SelectedIndex;
+                                            a1.TabaghehGroupName = cmbTabaghehGroup.Text;
+
+                                        }
                                         //a1.LevelNamber = _LevelNamber;
                                         a1.IsActive = _IsActive;
                                         a1.EpGroupTafsiliLevel1 = s1;
@@ -1643,8 +1657,6 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (btnCancel.Enabled)
-            {
                 En = EnumCED.Cancel;
                 if (xtraTabControl1.SelectedTabPageIndex == 0)
                 {
@@ -1669,7 +1681,6 @@ namespace EtelaatePaye.CodingHesabdari
                 }
                 btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
-            }
         }
 
         private void gridView_DoubleClick(object sender, EventArgs e)
@@ -1851,7 +1862,7 @@ namespace EtelaatePaye.CodingHesabdari
                     if (xtraTabControl1.SelectedTabPageIndex == 1)
                     {
                         int _Level1Id = Convert.ToInt32(cmbGruopLevel1_2.EditValue);
-                        // int _SalId = Convert.ToInt32(lblSalId.Text);
+                       //  int _SalId = Convert.ToInt32(lblSalId.Text);
                         var q = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _Level1Id);
                         if (q != null)
                         {
@@ -1985,6 +1996,11 @@ namespace EtelaatePaye.CodingHesabdari
             if (e.Column.FieldName != "IsActive") return;
             if (e.Node.GetDisplayText(colIsActive1) == "انتخاب نشده")
                 e.Appearance.BackColor = Color.Pink;
+        }
+
+        private void FrmGroupTafsili_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            db.Dispose();
         }
     }
 }

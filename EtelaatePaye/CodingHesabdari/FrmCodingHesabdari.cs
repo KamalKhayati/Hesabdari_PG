@@ -922,6 +922,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     obj.GroupLevelsName = cmbGroupTafsiliLevels_4.Text;
                                     obj.IsActive = _IsActive;
                                     obj.ColId = _ColId;
+                                    obj.LevelNamber = _LevelNamber;
                                     obj.IndexMahiatHesab = cmbMahiatHesab_4.SelectedIndex;
                                     obj.MahiatHesab = cmbMahiatHesab_4.Text;
                                     obj.SharhHesab = _SharhHesab;
@@ -1867,8 +1868,11 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            if (btnClose.Enabled)
+            {
+                this.Close();
+
+            }        }
 
         private void FrmCodingHesabdari_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1892,14 +1896,14 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 btnSaveNext_Click(sender, null);
             }
-            else if (e.KeyCode == Keys.F7)
-            {
-                btnCancel_Click(sender, null);
-            }
-            else if (e.KeyCode == Keys.F8)
-            {
-                btnDisplyList_Click(sender, null);
-            }
+            //else if (e.KeyCode == Keys.F7)
+            //{
+            //    btnCancel_Click(sender, null);
+            //}
+            //else if (e.KeyCode == Keys.F8)
+            //{
+            //    btnDisplyList_Click(sender, null);
+            //}
             else if (e.KeyCode == Keys.F10)
             {
                 btnPrintPreview_Click(sender, null);
@@ -1946,6 +1950,7 @@ namespace EtelaatePaye.CodingHesabdari
         public void btnDisplyList_Click(object sender, EventArgs e)
         {
             FillGridviewCodingHesabdari();
+            HelpClass1.ClearControls(PanelControl);
             //if (xtraTabControl1.SelectedTabPage == xtraTabPage_Tabagheh)
             //{
             //    HelpClass1.ClearControls(panelControl1_2);
@@ -2009,7 +2014,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (btnCreate.Visible)
+            if (btnCreate.Enabled)
             {
                 En = EnumCED.Create;
                 gridControl.Enabled = false;
@@ -2059,7 +2064,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (btnDelete.Visible)
+            if (btnDelete.Enabled)
             {
                 if (gridView.RowCount > 0)
                 {
@@ -2149,6 +2154,7 @@ namespace EtelaatePaye.CodingHesabdari
                             btnDisplyList_Click(null, null);
                             if (gridView.RowCount > 0)
                                 gridView.FocusedRowHandle = EditRowIndex - 1;
+
                         }
                         catch (DbUpdateException)
                         {
@@ -2178,7 +2184,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Visible)
+            if (btnEdit.Enabled)
             {
                 if (gridView.RowCount > 0)
                 {
@@ -2247,8 +2253,6 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (btnCancel.Enabled)
-            {
                 En = EnumCED.Cancel;
                 gridControl.Enabled = true;
                 HelpClass1.ActiveButtons(panelControl_Button);
@@ -2278,7 +2282,6 @@ namespace EtelaatePaye.CodingHesabdari
                 }
                 btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                 btnCreate.Focus();
-            }
         }
 
         private void cmbNoeHesab_Enter(object sender, EventArgs e)
@@ -2935,5 +2938,10 @@ namespace EtelaatePaye.CodingHesabdari
             }
         }
 
+        private void chkIsActive_4_Leave(object sender, EventArgs e)
+        {
+            xtraTabControl1.SelectedTabPageIndex = 1;
+            xtraTabControl2.SelectedTabPageIndex = 0;
+        }
     }
 }

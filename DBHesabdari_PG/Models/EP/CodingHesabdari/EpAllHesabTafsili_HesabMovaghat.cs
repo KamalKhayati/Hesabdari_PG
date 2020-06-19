@@ -10,7 +10,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
     public class EpAllHesabTafsili_HesabMovaghat
     {
         //[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long Id { get; set; }
+        public int Id { get; set; }
         [Required]
         public int SalId { get; set; }
         [Required]

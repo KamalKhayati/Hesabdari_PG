@@ -287,7 +287,6 @@
             this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyActiveList.TabIndex = 10;
             this.btnDisplyActiveList.ToolTip = "دوباره سازی";
-            this.btnDisplyActiveList.ToolTipTitle = "F8";
             this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyList_Click);
             // 
             // btnClose
@@ -407,7 +406,6 @@
             this.btnCancel.Size = new System.Drawing.Size(52, 46);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.ToolTip = "انصراف";
-            this.btnCancel.ToolTipTitle = "F7";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panelControl2

@@ -42,6 +42,13 @@
             this.txtAnbarCarakter = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTabagehKalaCarakter = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtVahedKalaCarakter = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -51,12 +58,6 @@
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTabagehKalaCarakter = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -66,11 +67,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAnbarCarakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTabagehKalaCarakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVahedKalaCarakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameKalaCarakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupFareeCarakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupAsliCarakter.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTabagehKalaCarakter.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -168,6 +169,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
+            this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txtAnbarCarakter);
             this.groupControl1.Controls.Add(this.labelControl1);
@@ -223,6 +226,9 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
+            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.Controls.Add(this.labelControl8);
             this.groupControl3.Controls.Add(this.labelControl5);
             this.groupControl3.Controls.Add(this.txtTabagehKalaCarakter);
             this.groupControl3.Controls.Add(this.labelControl7);
@@ -244,17 +250,114 @@
             this.groupControl3.TabIndex = 4;
             this.groupControl3.Text = "کدینگ کالاها";
             // 
+            // labelControl8
+            // 
+            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl8.Appearance.Options.UseForeColor = true;
+            this.labelControl8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("labelControl8.ImageOptions.Image")));
+            this.labelControl8.Location = new System.Drawing.Point(162, 57);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(32, 32);
+            this.labelControl8.TabIndex = 29;
+            this.labelControl8.ToolTip = "تعدادکاراکتر 2 = تعریف اتوماتیک کد کالا در سطح  1 حسابهای تفصیلی\r\nتعدادکاراکتر 3 " +
+    "= تعریف اتوماتیک کد کالا در سطح 2 حسابهای تفصیلی\r\nتعدادکاراکتر 4 = تعریف اتوماتی" +
+    "ک کد کالا در سطح 3 حسابهای تفصیلی\r\n";
+            this.labelControl8.Click += new System.EventHandler(this.labelControl8_Click);
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(18, 57);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(56, 31);
+            this.labelControl5.TabIndex = 28;
+            this.labelControl5.Text = "{2,3,4}";
+            // 
+            // txtTabagehKalaCarakter
+            // 
+            this.txtTabagehKalaCarakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTabagehKalaCarakter.EditValue = "";
+            this.txtTabagehKalaCarakter.EnterMoveNextControl = true;
+            this.txtTabagehKalaCarakter.Location = new System.Drawing.Point(82, 54);
+            this.txtTabagehKalaCarakter.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTabagehKalaCarakter.Name = "txtTabagehKalaCarakter";
+            this.txtTabagehKalaCarakter.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTabagehKalaCarakter.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtTabagehKalaCarakter.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtTabagehKalaCarakter.Properties.Mask.EditMask = "[234]+";
+            this.txtTabagehKalaCarakter.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtTabagehKalaCarakter.Properties.MaxLength = 1;
+            this.txtTabagehKalaCarakter.Properties.NullText = "10";
+            this.txtTabagehKalaCarakter.Size = new System.Drawing.Size(72, 38);
+            this.txtTabagehKalaCarakter.TabIndex = 0;
+            this.txtTabagehKalaCarakter.ToolTip = "تعدادکاراکتر 2 = تعریف اتوماتیک کد کالا در سطح  1 حسابهای تفصیلی\r\nتعدادکاراکتر 3 " +
+    "= تعریف اتوماتیک کد کالا در سطح 2 حسابهای تفصیلی\r\nتعدادکاراکتر 4 = تعریف اتوماتی" +
+    "ک کد کالا در سطح 3 حسابهای تفصیلی\r\n";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl7.Appearance.Options.UseForeColor = true;
+            this.labelControl7.Location = new System.Drawing.Point(206, 57);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(198, 31);
+            this.labelControl7.TabIndex = 27;
+            this.labelControl7.Text = "تعداد کاراکتر کد طبقه کالا";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl4.Appearance.Options.UseForeColor = true;
+            this.labelControl4.Location = new System.Drawing.Point(47, 245);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(27, 31);
+            this.labelControl4.TabIndex = 10;
+            this.labelControl4.Text = "{3}";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
+            this.labelControl3.Location = new System.Drawing.Point(32, 151);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(42, 31);
+            this.labelControl3.TabIndex = 25;
+            this.labelControl3.Text = "{3,4}";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Location = new System.Drawing.Point(32, 198);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(42, 31);
+            this.labelControl2.TabIndex = 24;
+            this.labelControl2.Text = "{3,4}";
+            // 
             // labelControl15
             // 
             this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(8, 105);
+            this.labelControl15.Location = new System.Drawing.Point(32, 105);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(66, 31);
+            this.labelControl15.Size = new System.Drawing.Size(42, 31);
             this.labelControl15.TabIndex = 20;
-            this.labelControl15.Text = "{1,2,3,4}";
+            this.labelControl15.Text = "{3,4}";
             // 
             // txtVahedKalaCarakter
             // 
@@ -378,84 +481,6 @@
             this.labelControl12.TabIndex = 8;
             this.labelControl12.Text = "تعداد کاراکتر کد گروه اصلی کالا";
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(8, 198);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(66, 31);
-            this.labelControl2.TabIndex = 24;
-            this.labelControl2.Text = "{1,2,3,4}";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(8, 151);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(66, 31);
-            this.labelControl3.TabIndex = 25;
-            this.labelControl3.Text = "{1,2,3,4}";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(47, 245);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(27, 31);
-            this.labelControl4.TabIndex = 10;
-            this.labelControl4.Text = "{3}";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(8, 57);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(66, 31);
-            this.labelControl5.TabIndex = 28;
-            this.labelControl5.Text = "{1,2,3,4}";
-            // 
-            // txtTabagehKalaCarakter
-            // 
-            this.txtTabagehKalaCarakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTabagehKalaCarakter.EditValue = "";
-            this.txtTabagehKalaCarakter.EnterMoveNextControl = true;
-            this.txtTabagehKalaCarakter.Location = new System.Drawing.Point(82, 54);
-            this.txtTabagehKalaCarakter.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTabagehKalaCarakter.Name = "txtTabagehKalaCarakter";
-            this.txtTabagehKalaCarakter.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtTabagehKalaCarakter.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtTabagehKalaCarakter.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtTabagehKalaCarakter.Properties.Mask.EditMask = "[1234]+";
-            this.txtTabagehKalaCarakter.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtTabagehKalaCarakter.Properties.MaxLength = 1;
-            this.txtTabagehKalaCarakter.Properties.NullText = "10";
-            this.txtTabagehKalaCarakter.Size = new System.Drawing.Size(72, 38);
-            this.txtTabagehKalaCarakter.TabIndex = 0;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(164, 57);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(198, 31);
-            this.labelControl7.TabIndex = 27;
-            this.labelControl7.Text = "تعداد کاراکتر کد طبقه کالا";
-            // 
             // FrmTanzimatCodingAnbarVKala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
@@ -484,11 +509,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTabagehKalaCarakter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVahedKalaCarakter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameKalaCarakter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupFareeCarakter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupAsliCarakter.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTabagehKalaCarakter.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,5 +548,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         public DevExpress.XtraEditors.TextEdit txtTabagehKalaCarakter;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }

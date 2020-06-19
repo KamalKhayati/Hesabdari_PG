@@ -32,6 +32,9 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtTabaghehCarakter = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -69,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTabaghehCarakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMoinLevel1Carakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColCarakter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupCarakter.Properties)).BeginInit();
@@ -92,7 +96,7 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(148, 55);
+            this.labelControl1.Location = new System.Drawing.Point(158, 55);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(167, 31);
@@ -104,7 +108,7 @@
             this.txtTabaghehCarakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTabaghehCarakter.EditValue = "";
             this.txtTabaghehCarakter.EnterMoveNextControl = true;
-            this.txtTabaghehCarakter.Location = new System.Drawing.Point(62, 52);
+            this.txtTabaghehCarakter.Location = new System.Drawing.Point(72, 52);
             this.txtTabaghehCarakter.Margin = new System.Windows.Forms.Padding(4);
             this.txtTabaghehCarakter.Name = "txtTabaghehCarakter";
             this.txtTabaghehCarakter.Properties.Appearance.Options.UseTextOptions = true;
@@ -119,6 +123,11 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
+            this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl1.Controls.Add(this.labelControl13);
+            this.groupControl1.Controls.Add(this.labelControl14);
+            this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl6);
@@ -133,28 +142,73 @@
             this.groupControl1.Controls.Add(this.txtTabaghehCarakter);
             this.groupControl1.Location = new System.Drawing.Point(346, 7);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(335, 383);
+            this.groupControl1.Size = new System.Drawing.Size(364, 383);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "کدینگ حسابداری";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl13.Appearance.Options.UseForeColor = true;
+            this.labelControl13.Location = new System.Drawing.Point(30, 243);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(34, 31);
+            this.labelControl13.TabIndex = 14;
+            this.labelControl13.Text = "{1,2}";
+            this.labelControl13.Visible = false;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl14.Appearance.Options.UseForeColor = true;
+            this.labelControl14.Location = new System.Drawing.Point(158, 242);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(187, 31);
+            this.labelControl14.TabIndex = 13;
+            this.labelControl14.Text = "تعداد کاراکتر کد معین 2";
+            this.labelControl14.Visible = false;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textEdit1.EditValue = "";
+            this.textEdit1.EnterMoveNextControl = true;
+            this.textEdit1.Location = new System.Drawing.Point(72, 240);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.Options.UseTextOptions = true;
+            this.textEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.textEdit1.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.textEdit1.Properties.Mask.EditMask = "[123]+";
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.textEdit1.Properties.MaxLength = 1;
+            this.textEdit1.Properties.NullText = "10";
+            this.textEdit1.Size = new System.Drawing.Size(72, 38);
+            this.textEdit1.TabIndex = 12;
+            this.textEdit1.Visible = false;
             // 
             // labelControl8
             // 
             this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(20, 195);
+            this.labelControl8.Location = new System.Drawing.Point(13, 194);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(34, 31);
+            this.labelControl8.Size = new System.Drawing.Size(51, 31);
             this.labelControl8.TabIndex = 11;
-            this.labelControl8.Text = "{1,2}";
+            this.labelControl8.Text = "{1,2,3}";
             // 
             // labelControl7
             // 
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(20, 148);
+            this.labelControl7.Location = new System.Drawing.Point(30, 148);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(34, 31);
@@ -166,19 +220,19 @@
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(20, 101);
+            this.labelControl6.Location = new System.Drawing.Point(44, 101);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(34, 31);
+            this.labelControl6.Size = new System.Drawing.Size(20, 31);
             this.labelControl6.TabIndex = 9;
-            this.labelControl6.Text = "{1,2}";
+            this.labelControl6.Text = "{1}";
             // 
             // labelControl5
             // 
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(34, 55);
+            this.labelControl5.Location = new System.Drawing.Point(44, 55);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(20, 31);
@@ -190,7 +244,7 @@
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(148, 194);
+            this.labelControl4.Location = new System.Drawing.Point(158, 194);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(171, 31);
@@ -202,13 +256,13 @@
             this.txtMoinLevel1Carakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMoinLevel1Carakter.EditValue = "";
             this.txtMoinLevel1Carakter.EnterMoveNextControl = true;
-            this.txtMoinLevel1Carakter.Location = new System.Drawing.Point(62, 192);
+            this.txtMoinLevel1Carakter.Location = new System.Drawing.Point(72, 192);
             this.txtMoinLevel1Carakter.Margin = new System.Windows.Forms.Padding(4);
             this.txtMoinLevel1Carakter.Name = "txtMoinLevel1Carakter";
             this.txtMoinLevel1Carakter.Properties.Appearance.Options.UseTextOptions = true;
             this.txtMoinLevel1Carakter.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtMoinLevel1Carakter.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtMoinLevel1Carakter.Properties.Mask.EditMask = "[12]+";
+            this.txtMoinLevel1Carakter.Properties.Mask.EditMask = "[123]+";
             this.txtMoinLevel1Carakter.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMoinLevel1Carakter.Properties.MaxLength = 1;
             this.txtMoinLevel1Carakter.Properties.NullText = "10";
@@ -220,7 +274,7 @@
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(148, 148);
+            this.labelControl3.Location = new System.Drawing.Point(158, 148);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(151, 31);
@@ -232,7 +286,7 @@
             this.txtColCarakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtColCarakter.EditValue = "";
             this.txtColCarakter.EnterMoveNextControl = true;
-            this.txtColCarakter.Location = new System.Drawing.Point(62, 145);
+            this.txtColCarakter.Location = new System.Drawing.Point(72, 145);
             this.txtColCarakter.Margin = new System.Windows.Forms.Padding(4);
             this.txtColCarakter.Name = "txtColCarakter";
             this.txtColCarakter.Properties.Appearance.Options.UseTextOptions = true;
@@ -250,7 +304,7 @@
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(148, 101);
+            this.labelControl2.Location = new System.Drawing.Point(158, 101);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(163, 31);
@@ -262,7 +316,7 @@
             this.txtGroupCarakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGroupCarakter.EditValue = "";
             this.txtGroupCarakter.EnterMoveNextControl = true;
-            this.txtGroupCarakter.Location = new System.Drawing.Point(62, 99);
+            this.txtGroupCarakter.Location = new System.Drawing.Point(72, 99);
             this.txtGroupCarakter.Margin = new System.Windows.Forms.Padding(4);
             this.txtGroupCarakter.Name = "txtGroupCarakter";
             this.txtGroupCarakter.Properties.Appearance.Options.UseTextOptions = true;
@@ -277,6 +331,8 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
+            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl3.Controls.Add(this.labelControl18);
             this.groupControl3.Controls.Add(this.labelControl17);
             this.groupControl3.Controls.Add(this.labelControl16);
@@ -303,12 +359,12 @@
             this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl18.Appearance.Options.UseForeColor = true;
-            this.labelControl18.Location = new System.Drawing.Point(20, 195);
+            this.labelControl18.Location = new System.Drawing.Point(16, 194);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(26, 31);
+            this.labelControl18.Size = new System.Drawing.Size(24, 31);
             this.labelControl18.TabIndex = 23;
-            this.labelControl18.Text = "{5}";
+            this.labelControl18.Text = "{6}";
             // 
             // labelControl17
             // 
@@ -394,7 +450,7 @@
             // txtCodeTafsiliCarakter
             // 
             this.txtCodeTafsiliCarakter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeTafsiliCarakter.EditValue = "5";
+            this.txtCodeTafsiliCarakter.EditValue = "6";
             this.txtCodeTafsiliCarakter.Enabled = false;
             this.txtCodeTafsiliCarakter.EnterMoveNextControl = true;
             this.txtCodeTafsiliCarakter.Location = new System.Drawing.Point(48, 192);
@@ -403,7 +459,7 @@
             this.txtCodeTafsiliCarakter.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCodeTafsiliCarakter.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtCodeTafsiliCarakter.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtCodeTafsiliCarakter.Properties.Mask.EditMask = "[5]+";
+            this.txtCodeTafsiliCarakter.Properties.Mask.EditMask = "[6]+";
             this.txtCodeTafsiliCarakter.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtCodeTafsiliCarakter.Properties.MaxLength = 1;
             this.txtCodeTafsiliCarakter.Properties.NullText = "10";
@@ -530,7 +586,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(686, 400);
+            this.panelControl1.Size = new System.Drawing.Size(715, 400);
             this.panelControl1.TabIndex = 5;
             // 
             // lblSalMali
@@ -581,14 +637,14 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 402);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(686, 58);
+            this.panelControl2.Size = new System.Drawing.Size(715, 58);
             this.panelControl2.TabIndex = 32;
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(2, 6);
+            this.btnClose.Location = new System.Drawing.Point(9, 6);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(183, 46);
@@ -602,7 +658,7 @@
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(192, 6);
+            this.btnSave.Location = new System.Drawing.Point(199, 6);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(182, 46);
@@ -616,7 +672,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 460);
+            this.ClientSize = new System.Drawing.Size(715, 460);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -633,6 +689,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMoinLevel1Carakter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColCarakter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupCarakter.Properties)).EndInit();
@@ -694,5 +751,8 @@
         private DevExpress.XtraEditors.CheckEdit chkIsActiveGroupTafsiliLevel3;
         private DevExpress.XtraEditors.CheckEdit chkIsActiveGroupTafsiliLevel2;
         private DevExpress.XtraEditors.CheckEdit chkIsActiveGroupTafsiliLevel1;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        public DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

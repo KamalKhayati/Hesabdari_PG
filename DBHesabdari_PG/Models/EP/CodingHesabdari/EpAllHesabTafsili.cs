@@ -11,14 +11,14 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
    public class EpAllHesabTafsili
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         [Required]
         public int SalId { get; set; }
         [Required]
         public int LevelNamber { get; set; }
         [Required]
-        public int Code { get; set; }
-        [Required, MaxLength(70)]
+        public long Code { get; set; }
+        [Required, MaxLength(100)]
         public string Name { get; set; }
         [Required]
         public int GroupTafsiliId { get; set; }
@@ -44,6 +44,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual EpHesabTafsiliShoabat EpHesabTafsiliShoabat1 { get; set; }
         public virtual EpHesabTafsiliProzhe EpHesabTafsiliProzhe1 { get; set; }
         public virtual EpHesabTafsiliGharardad EpHesabTafsiliGharardad1 { get; set; }
+        public virtual EpHesabTafsiliAnbarha EpHesabTafsiliAnbarha1 { get; set; }
         public virtual EpHesabTafsiliSayer EpHesabTafsiliSayer1 { get; set; }
 
         //public virtual ICollection<HaghOzviat> HaghOzviats { get; set; }

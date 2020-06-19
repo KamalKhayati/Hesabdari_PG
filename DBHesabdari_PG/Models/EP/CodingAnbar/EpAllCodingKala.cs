@@ -11,13 +11,13 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
 {
    public class EpAllCodingKala
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         [Required]
         public int SalId { get; set; }
         [Required]
-        public int KeyCode { get; set; }
+        public long KeyCode { get; set; }
         [Required]
-        public int ParentCode { get; set; }
+        public long ParentCode { get; set; }
         [Required]
         public int LevelNamber { get; set; }
         [Required, MaxLength(100)]

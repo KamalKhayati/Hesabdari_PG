@@ -637,6 +637,7 @@
             this.cmbHesabTabagheh_3.Properties.DropDownRows = 10;
             this.cmbHesabTabagheh_3.Properties.ImmediatePopup = true;
             this.cmbHesabTabagheh_3.Properties.NullText = "";
+            this.cmbHesabTabagheh_3.Properties.PopupWidth = 600;
             this.cmbHesabTabagheh_3.Properties.ValueMember = "Id";
             this.cmbHesabTabagheh_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_3.Size = new System.Drawing.Size(506, 38);
@@ -725,13 +726,14 @@
             this.cmbListHesabGroup_3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 90, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 550, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbListHesabGroup_3.Properties.DataSource = this.epHesabGroupsBindingSource;
             this.cmbListHesabGroup_3.Properties.DisplayMember = "Name";
             this.cmbListHesabGroup_3.Properties.DropDownRows = 10;
             this.cmbListHesabGroup_3.Properties.ImmediatePopup = true;
             this.cmbListHesabGroup_3.Properties.NullText = "";
+            this.cmbListHesabGroup_3.Properties.PopupWidth = 600;
             this.cmbListHesabGroup_3.Properties.ValueMember = "Id";
             this.cmbListHesabGroup_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup_3.Size = new System.Drawing.Size(506, 38);
@@ -2388,6 +2390,7 @@
             this.cmbHesabTabagheh_4.Properties.DropDownRows = 10;
             this.cmbHesabTabagheh_4.Properties.ImmediatePopup = true;
             this.cmbHesabTabagheh_4.Properties.NullText = "";
+            this.cmbHesabTabagheh_4.Properties.PopupWidth = 600;
             this.cmbHesabTabagheh_4.Properties.ValueMember = "Id";
             this.cmbHesabTabagheh_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_4.Size = new System.Drawing.Size(460, 38);
@@ -2496,6 +2499,7 @@
             this.chkIsActive_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive_4.Size = new System.Drawing.Size(65, 39);
             this.chkIsActive_4.TabIndex = 7;
+            this.chkIsActive_4.Leave += new System.EventHandler(this.chkIsActive_4_Leave);
             // 
             // cmbListHesabGroup_4
             // 
@@ -2511,13 +2515,14 @@
             this.cmbListHesabGroup_4.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 90, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 550, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbListHesabGroup_4.Properties.DataSource = this.epHesabGroupsBindingSource;
             this.cmbListHesabGroup_4.Properties.DisplayMember = "Name";
             this.cmbListHesabGroup_4.Properties.DropDownRows = 10;
             this.cmbListHesabGroup_4.Properties.ImmediatePopup = true;
             this.cmbListHesabGroup_4.Properties.NullText = "";
+            this.cmbListHesabGroup_4.Properties.PopupWidth = 600;
             this.cmbListHesabGroup_4.Properties.ValueMember = "Id";
             this.cmbListHesabGroup_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup_4.Size = new System.Drawing.Size(460, 38);
@@ -2586,14 +2591,15 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbListHesabCol_4.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 90, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 90, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbListHesabCol_4.Properties.DataSource = this.epHesabColsBindingSource;
             this.cmbListHesabCol_4.Properties.DisplayMember = "Name";
             this.cmbListHesabCol_4.Properties.DropDownRows = 10;
             this.cmbListHesabCol_4.Properties.ImmediatePopup = true;
             this.cmbListHesabCol_4.Properties.NullText = "";
+            this.cmbListHesabCol_4.Properties.PopupWidth = 700;
             this.cmbListHesabCol_4.Properties.ValueMember = "Id";
             this.cmbListHesabCol_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabCol_4.Size = new System.Drawing.Size(460, 38);
@@ -3238,7 +3244,6 @@
             this.btnDisplyList.Size = new System.Drawing.Size(52, 46);
             this.btnDisplyList.TabIndex = 10;
             this.btnDisplyList.ToolTip = "دوباره سازی";
-            this.btnDisplyList.ToolTipTitle = "F8";
             this.btnDisplyList.Click += new System.EventHandler(this.btnDisplyList_Click);
             // 
             // btnCancel
@@ -3252,7 +3257,6 @@
             this.btnCancel.Size = new System.Drawing.Size(52, 46);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.ToolTip = "انصراف";
-            this.btnCancel.ToolTipTitle = "F7";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnCreate

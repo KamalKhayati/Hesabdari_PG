@@ -78,6 +78,7 @@
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTozihat1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn151 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn348 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_BargashtAzFroosh = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_BargashtAzFroosh = new DevExpress.XtraGrid.GridControl();
             this.gridView_BargashtAzFroosh = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -102,6 +103,7 @@
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn152 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn349 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_ResidKalaAmani = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_ResidKalaAmani = new DevExpress.XtraGrid.GridControl();
             this.gridView_ResidKalaAmani = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -126,6 +128,7 @@
             this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn153 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn350 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_ResidTolid = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_ResidTolid = new DevExpress.XtraGrid.GridControl();
             this.gridView_ResidTolid = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -150,6 +153,7 @@
             this.gridColumn67 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn68 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn154 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn351 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_BargashtAzHavaleTolid = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_BargashtAzHavaleTolid = new DevExpress.XtraGrid.GridControl();
             this.gridView_BargashtAzHavaleTolid = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -174,9 +178,10 @@
             this.gridColumn87 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn88 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn155 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.xtp_ResidSayer = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl_ResidSayer = new DevExpress.XtraGrid.GridControl();
-            this.gridView_ResidSayer = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn352 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtp_BargashtAzHavaleHazine = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_BargashtAzHavaleHazine = new DevExpress.XtraGrid.GridControl();
+            this.gridView_BargashtAzHavaleHazine = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn109 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn110 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn111 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -198,6 +203,32 @@
             this.gridColumn127 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn128 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn156 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn353 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtp_BargashtAzHavaleAmval = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_BargashtAzHavaleAmval = new DevExpress.XtraGrid.GridControl();
+            this.gridView_BargashtAzHavaleAmval = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn385 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn386 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn387 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn388 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn389 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn390 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn391 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn392 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn393 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn394 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn395 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn396 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn397 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn398 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn399 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn400 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn401 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn402 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn403 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn404 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn405 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn406 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_EzafateAnbar = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_EzafateAnbar = new DevExpress.XtraGrid.GridControl();
             this.gridView_EzafateAnbar = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -222,6 +253,7 @@
             this.gridColumn107 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn108 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn157 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn354 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_AllVorode = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_AllVorode = new DevExpress.XtraGrid.GridControl();
             this.gridView_AllVorode = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -249,16 +281,256 @@
             this.gridColumn150 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtpKhrojeKala = new DevExpress.XtraTab.XtraTabPage();
             this.xtc_KhorojeKala = new DevExpress.XtraTab.XtraTabControl();
-            this.xtp_HavaleFroosh = new DevExpress.XtraTab.XtraTabPage();
             this.xtp_BargashtAzKharid = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_BargashtAzKharid = new DevExpress.XtraGrid.GridControl();
+            this.gridView_BargashtAzKharid = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn179 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn180 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn181 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn182 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn183 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn184 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn185 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn186 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn187 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn188 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn189 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn190 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn191 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn192 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn193 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn194 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn195 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn196 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn197 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn198 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn199 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn355 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtp_HavaleFroosh = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_HavaleFroosh = new DevExpress.XtraGrid.GridControl();
+            this.gridView_HavaleFroosh = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn158 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn159 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn160 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn161 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn162 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn163 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn164 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn165 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn166 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn167 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn168 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn169 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn170 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn171 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn172 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn173 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn174 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn175 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn176 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn177 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn178 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn356 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_HavaleKalaAmani = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_HavaleKalaAmani = new DevExpress.XtraGrid.GridControl();
+            this.gridView_HavaleKalaAmani = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn200 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn201 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn202 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn203 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn204 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn205 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn206 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn207 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn208 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn209 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn210 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn211 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn212 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn213 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn214 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn215 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn216 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn217 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn218 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn219 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn220 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn357 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_BargashtAzResidTolid = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_BargashtAzResidTolid = new DevExpress.XtraGrid.GridControl();
+            this.gridView_BargashtAzResidTolid = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn221 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn222 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn223 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn224 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn225 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn226 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn227 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn228 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn229 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn230 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn231 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn232 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn233 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn234 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn235 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn236 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn237 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn238 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn239 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn240 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn241 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn358 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_HavaleTolid = new DevExpress.XtraTab.XtraTabPage();
-            this.xtp_HavaleSayer = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_HavaleTolid = new DevExpress.XtraGrid.GridControl();
+            this.gridView_HavaleTolid = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn242 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn243 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn244 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn245 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn246 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn247 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn248 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn249 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn250 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn251 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn252 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn253 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn254 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn255 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn256 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn257 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn258 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn259 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn260 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn261 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn262 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn359 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtp_HavaleHazine = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_HavaleHazine = new DevExpress.XtraGrid.GridControl();
+            this.gridView_HavaleHazine = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn263 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn264 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn265 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn266 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn267 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn268 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn269 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn270 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn271 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn272 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn273 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn274 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn275 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn276 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn277 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn278 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn279 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn280 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn281 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn282 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn283 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn360 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtp_HavaleAmval = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_HavaleAmval = new DevExpress.XtraGrid.GridControl();
+            this.gridView_HavaleAmval = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn407 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn408 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn409 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn410 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn411 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn412 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn413 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn414 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn415 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn416 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn417 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn418 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn419 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn420 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn421 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn422 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn423 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn424 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn425 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn426 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn427 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn428 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_KosoratAnbar = new DevExpress.XtraTab.XtraTabPage();
-            this.xtp_Khoroji = new DevExpress.XtraTab.XtraTabPage();
-            this.xtpJabejaeeKala = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_KosoratAnbar = new DevExpress.XtraGrid.GridControl();
+            this.gridView_KosoratAnbar = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn284 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn285 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn286 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn287 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn288 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn289 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn290 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn291 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn292 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn293 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn294 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn295 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn296 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn297 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn298 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn299 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn300 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn301 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn302 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn303 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn304 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn361 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtp_AllKhoroji = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_AllKhoroji = new DevExpress.XtraGrid.GridControl();
+            this.gridView_AllKhoroji = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn305 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn306 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn307 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn308 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn309 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn310 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn311 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn312 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn313 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn314 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn315 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn316 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn317 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn318 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn319 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn320 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn321 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn322 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn323 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn324 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn326 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn325 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtpMojodiAvalDore = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_MojodiAvalDore = new DevExpress.XtraGrid.GridControl();
+            this.gridView_MojodiAvalDore = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn327 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn328 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn329 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn330 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn331 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn332 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn333 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn334 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn335 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn336 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn337 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn338 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn339 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn340 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn341 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn342 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn343 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn344 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn345 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn346 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn347 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn362 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtpAmaliatAddVEdit = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl_AmaliatAddVaEdit = new DevExpress.XtraGrid.GridControl();
@@ -274,7 +546,15 @@
             this.colMablag = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTozihat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_AddVaEdit = new DevExpress.XtraEditors.PanelControl();
-            this.cmbHesabTafsili = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.btnReloadHesabTafsili3 = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbHesabTafsili3 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.btnReloadHesabTafsili2 = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbHesabTafsili2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSharhSanad = new DevExpress.XtraEditors.TextEdit();
+            this.cmbHesabTafsili1 = new DevExpress.XtraEditors.LookUpEdit();
             this.lblSanadNamber = new DevExpress.XtraEditors.LabelControl();
             this.chkIsSanadHesabdari = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -283,10 +563,10 @@
             this.btnEdit1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnReloadHesabMoin = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.lblHesabMoin = new DevExpress.XtraEditors.LabelControl();
             this.cmbHesabMoin = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadHesabTafsili = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lblHesabTafsili = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtTarikh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -326,9 +606,12 @@
             this.xtp_BargashtAzHavaleTolid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzHavaleTolid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzHavaleTolid)).BeginInit();
-            this.xtp_ResidSayer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_ResidSayer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_ResidSayer)).BeginInit();
+            this.xtp_BargashtAzHavaleHazine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzHavaleHazine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzHavaleHazine)).BeginInit();
+            this.xtp_BargashtAzHavaleAmval.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzHavaleAmval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzHavaleAmval)).BeginInit();
             this.xtp_EzafateAnbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_EzafateAnbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_EzafateAnbar)).BeginInit();
@@ -338,6 +621,36 @@
             this.xtpKhrojeKala.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtc_KhorojeKala)).BeginInit();
             this.xtc_KhorojeKala.SuspendLayout();
+            this.xtp_BargashtAzKharid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzKharid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzKharid)).BeginInit();
+            this.xtp_HavaleFroosh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleFroosh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleFroosh)).BeginInit();
+            this.xtp_HavaleKalaAmani.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleKalaAmani)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleKalaAmani)).BeginInit();
+            this.xtp_BargashtAzResidTolid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzResidTolid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzResidTolid)).BeginInit();
+            this.xtp_HavaleTolid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleTolid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleTolid)).BeginInit();
+            this.xtp_HavaleHazine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleHazine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleHazine)).BeginInit();
+            this.xtp_HavaleAmval.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleAmval)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleAmval)).BeginInit();
+            this.xtp_KosoratAnbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_KosoratAnbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_KosoratAnbar)).BeginInit();
+            this.xtp_AllKhoroji.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_AllKhoroji)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_AllKhoroji)).BeginInit();
+            this.xtpMojodiAvalDore.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_MojodiAvalDore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_MojodiAvalDore)).BeginInit();
             this.xtpAmaliatAddVEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -346,7 +659,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_AmaliatAddVaEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_AddVaEdit)).BeginInit();
             this.panelControl_AddVaEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsSanadHesabdari.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabMoin.Properties)).BeginInit();
@@ -399,8 +715,7 @@
             this.btnDisplyList.Name = "btnDisplyList";
             this.btnDisplyList.Size = new System.Drawing.Size(47, 38);
             this.btnDisplyList.TabIndex = 10;
-            this.btnDisplyList.ToolTip = "لیست فعال";
-            this.btnDisplyList.ToolTipTitle = "F8";
+            this.btnDisplyList.ToolTip = "دوباره سازی";
             this.btnDisplyList.Click += new System.EventHandler(this.btnDisplyList_Click);
             // 
             // btnSaveAndPrintAndClosed
@@ -555,7 +870,6 @@
             this.btnCancel.Size = new System.Drawing.Size(47, 38);
             this.btnCancel.TabIndex = 13;
             this.btnCancel.ToolTip = "انصراف";
-            this.btnCancel.ToolTipTitle = "F7";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnFirst
@@ -661,11 +975,10 @@
             this.xtcAmaliatRozaneh.Name = "xtcAmaliatRozaneh";
             this.xtcAmaliatRozaneh.SelectedTabPage = this.xtpVrodeKala;
             this.xtcAmaliatRozaneh.Size = new System.Drawing.Size(1428, 717);
-            this.xtcAmaliatRozaneh.TabIndex = 2;
+            this.xtcAmaliatRozaneh.TabIndex = 0;
             this.xtcAmaliatRozaneh.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpVrodeKala,
             this.xtpKhrojeKala,
-            this.xtpJabejaeeKala,
             this.xtpMojodiAvalDore,
             this.xtpAmaliatAddVEdit});
             this.xtcAmaliatRozaneh.TabStop = false;
@@ -685,17 +998,18 @@
             this.xtc_VorodeKala.Name = "xtc_VorodeKala";
             this.xtc_VorodeKala.SelectedTabPage = this.xtp_ResidKharid;
             this.xtc_VorodeKala.Size = new System.Drawing.Size(1421, 668);
-            this.xtc_VorodeKala.TabIndex = 0;
+            this.xtc_VorodeKala.TabIndex = 1;
             this.xtc_VorodeKala.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtp_ResidKharid,
             this.xtp_BargashtAzFroosh,
             this.xtp_ResidKalaAmani,
             this.xtp_ResidTolid,
             this.xtp_BargashtAzHavaleTolid,
-            this.xtp_ResidSayer,
+            this.xtp_BargashtAzHavaleHazine,
+            this.xtp_BargashtAzHavaleAmval,
             this.xtp_EzafateAnbar,
             this.xtp_AllVorode});
-            this.xtc_VorodeKala.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtc_VorodeKala_SelectedPageChanged);
+            this.xtc_VorodeKala.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl1_1_SelectedPageChanged);
             // 
             // xtp_ResidKharid
             // 
@@ -749,7 +1063,8 @@
             this.gridColumn26,
             this.gridColumn25,
             this.colTozihat1,
-            this.gridColumn151});
+            this.gridColumn151,
+            this.gridColumn348});
             this.gridView_ResidKharid_Riz.DetailHeight = 392;
             this.gridView_ResidKharid_Riz.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_ResidKharid_Riz.GridControl = this.gridControl_ResidKharid_Riz;
@@ -958,7 +1273,7 @@
             this.colMeghdar1.Name = "colMeghdar1";
             this.colMeghdar1.Visible = true;
             this.colMeghdar1.VisibleIndex = 10;
-            this.colMeghdar1.Width = 131;
+            this.colMeghdar1.Width = 146;
             // 
             // colNerkh1
             // 
@@ -976,7 +1291,7 @@
             this.colNerkh1.Name = "colNerkh1";
             this.colNerkh1.Visible = true;
             this.colNerkh1.VisibleIndex = 11;
-            this.colNerkh1.Width = 145;
+            this.colNerkh1.Width = 153;
             // 
             // colMablag1
             // 
@@ -994,7 +1309,7 @@
             this.colMablag1.Name = "colMablag1";
             this.colMablag1.Visible = true;
             this.colMablag1.VisibleIndex = 12;
-            this.colMablag1.Width = 187;
+            this.colMablag1.Width = 196;
             // 
             // colIsRiali
             // 
@@ -1110,6 +1425,14 @@
             this.gridColumn151.VisibleIndex = 19;
             this.gridColumn151.Width = 111;
             // 
+            // gridColumn348
+            // 
+            this.gridColumn348.Caption = "شرح سند";
+            this.gridColumn348.FieldName = "SharhSanad";
+            this.gridColumn348.MinWidth = 25;
+            this.gridColumn348.Name = "gridColumn348";
+            this.gridColumn348.Width = 94;
+            // 
             // xtp_BargashtAzFroosh
             // 
             this.xtp_BargashtAzFroosh.Controls.Add(this.gridControl_BargashtAzFroosh);
@@ -1153,7 +1476,8 @@
             this.gridColumn28,
             this.gridColumn27,
             this.gridColumn24,
-            this.gridColumn152});
+            this.gridColumn152,
+            this.gridColumn349});
             this.gridView_BargashtAzFroosh.DetailHeight = 392;
             this.gridView_BargashtAzFroosh.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_BargashtAzFroosh.GridControl = this.gridControl_BargashtAzFroosh;
@@ -1362,7 +1686,7 @@
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 10;
-            this.gridColumn18.Width = 131;
+            this.gridColumn18.Width = 152;
             // 
             // gridColumn19
             // 
@@ -1380,7 +1704,7 @@
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
             this.gridColumn19.VisibleIndex = 11;
-            this.gridColumn19.Width = 145;
+            this.gridColumn19.Width = 151;
             // 
             // gridColumn20
             // 
@@ -1398,7 +1722,7 @@
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 12;
-            this.gridColumn20.Width = 187;
+            this.gridColumn20.Width = 193;
             // 
             // gridColumn21
             // 
@@ -1414,7 +1738,7 @@
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 13;
-            this.gridColumn21.Width = 97;
+            this.gridColumn21.Width = 103;
             // 
             // gridColumn22
             // 
@@ -1508,6 +1832,14 @@
             this.gridColumn152.VisibleIndex = 19;
             this.gridColumn152.Width = 111;
             // 
+            // gridColumn349
+            // 
+            this.gridColumn349.Caption = "شرح سند";
+            this.gridColumn349.FieldName = "SharhSanad";
+            this.gridColumn349.MinWidth = 25;
+            this.gridColumn349.Name = "gridColumn349";
+            this.gridColumn349.Width = 94;
+            // 
             // xtp_ResidKalaAmani
             // 
             this.xtp_ResidKalaAmani.Controls.Add(this.gridControl_ResidKalaAmani);
@@ -1551,7 +1883,8 @@
             this.gridColumn46,
             this.gridColumn47,
             this.gridColumn48,
-            this.gridColumn153});
+            this.gridColumn153,
+            this.gridColumn350});
             this.gridView_ResidKalaAmani.DetailHeight = 392;
             this.gridView_ResidKalaAmani.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_ResidKalaAmani.GridControl = this.gridControl_ResidKalaAmani;
@@ -1760,7 +2093,7 @@
             this.gridColumn40.Name = "gridColumn40";
             this.gridColumn40.Visible = true;
             this.gridColumn40.VisibleIndex = 10;
-            this.gridColumn40.Width = 131;
+            this.gridColumn40.Width = 145;
             // 
             // gridColumn41
             // 
@@ -1778,7 +2111,7 @@
             this.gridColumn41.Name = "gridColumn41";
             this.gridColumn41.Visible = true;
             this.gridColumn41.VisibleIndex = 11;
-            this.gridColumn41.Width = 145;
+            this.gridColumn41.Width = 158;
             // 
             // gridColumn42
             // 
@@ -1796,7 +2129,7 @@
             this.gridColumn42.Name = "gridColumn42";
             this.gridColumn42.Visible = true;
             this.gridColumn42.VisibleIndex = 12;
-            this.gridColumn42.Width = 187;
+            this.gridColumn42.Width = 203;
             // 
             // gridColumn43
             // 
@@ -1812,7 +2145,7 @@
             this.gridColumn43.Name = "gridColumn43";
             this.gridColumn43.Visible = true;
             this.gridColumn43.VisibleIndex = 13;
-            this.gridColumn43.Width = 97;
+            this.gridColumn43.Width = 101;
             // 
             // gridColumn44
             // 
@@ -1912,6 +2245,14 @@
             this.gridColumn153.VisibleIndex = 19;
             this.gridColumn153.Width = 111;
             // 
+            // gridColumn350
+            // 
+            this.gridColumn350.Caption = "شرح سند";
+            this.gridColumn350.FieldName = "SharhSanad";
+            this.gridColumn350.MinWidth = 25;
+            this.gridColumn350.Name = "gridColumn350";
+            this.gridColumn350.Width = 94;
+            // 
             // xtp_ResidTolid
             // 
             this.xtp_ResidTolid.Controls.Add(this.gridControl_ResidTolid);
@@ -1955,7 +2296,8 @@
             this.gridColumn66,
             this.gridColumn67,
             this.gridColumn68,
-            this.gridColumn154});
+            this.gridColumn154,
+            this.gridColumn351});
             this.gridView_ResidTolid.DetailHeight = 392;
             this.gridView_ResidTolid.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_ResidTolid.GridControl = this.gridControl_ResidTolid;
@@ -2164,7 +2506,7 @@
             this.gridColumn60.Name = "gridColumn60";
             this.gridColumn60.Visible = true;
             this.gridColumn60.VisibleIndex = 10;
-            this.gridColumn60.Width = 131;
+            this.gridColumn60.Width = 148;
             // 
             // gridColumn61
             // 
@@ -2182,7 +2524,7 @@
             this.gridColumn61.Name = "gridColumn61";
             this.gridColumn61.Visible = true;
             this.gridColumn61.VisibleIndex = 11;
-            this.gridColumn61.Width = 145;
+            this.gridColumn61.Width = 158;
             // 
             // gridColumn62
             // 
@@ -2200,7 +2542,7 @@
             this.gridColumn62.Name = "gridColumn62";
             this.gridColumn62.Visible = true;
             this.gridColumn62.VisibleIndex = 12;
-            this.gridColumn62.Width = 187;
+            this.gridColumn62.Width = 200;
             // 
             // gridColumn63
             // 
@@ -2316,6 +2658,14 @@
             this.gridColumn154.VisibleIndex = 19;
             this.gridColumn154.Width = 111;
             // 
+            // gridColumn351
+            // 
+            this.gridColumn351.Caption = "شرح سند";
+            this.gridColumn351.FieldName = "SharhSanad";
+            this.gridColumn351.MinWidth = 25;
+            this.gridColumn351.Name = "gridColumn351";
+            this.gridColumn351.Width = 94;
+            // 
             // xtp_BargashtAzHavaleTolid
             // 
             this.xtp_BargashtAzHavaleTolid.Controls.Add(this.gridControl_BargashtAzHavaleTolid);
@@ -2359,7 +2709,8 @@
             this.gridColumn86,
             this.gridColumn87,
             this.gridColumn88,
-            this.gridColumn155});
+            this.gridColumn155,
+            this.gridColumn352});
             this.gridView_BargashtAzHavaleTolid.DetailHeight = 392;
             this.gridView_BargashtAzHavaleTolid.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_BargashtAzHavaleTolid.GridControl = this.gridControl_BargashtAzHavaleTolid;
@@ -2568,7 +2919,7 @@
             this.gridColumn80.Name = "gridColumn80";
             this.gridColumn80.Visible = true;
             this.gridColumn80.VisibleIndex = 10;
-            this.gridColumn80.Width = 131;
+            this.gridColumn80.Width = 146;
             // 
             // gridColumn81
             // 
@@ -2586,7 +2937,7 @@
             this.gridColumn81.Name = "gridColumn81";
             this.gridColumn81.Visible = true;
             this.gridColumn81.VisibleIndex = 11;
-            this.gridColumn81.Width = 145;
+            this.gridColumn81.Width = 159;
             // 
             // gridColumn82
             // 
@@ -2604,7 +2955,7 @@
             this.gridColumn82.Name = "gridColumn82";
             this.gridColumn82.Visible = true;
             this.gridColumn82.VisibleIndex = 12;
-            this.gridColumn82.Width = 187;
+            this.gridColumn82.Width = 200;
             // 
             // gridColumn83
             // 
@@ -2620,7 +2971,7 @@
             this.gridColumn83.Name = "gridColumn83";
             this.gridColumn83.Visible = true;
             this.gridColumn83.VisibleIndex = 13;
-            this.gridColumn83.Width = 97;
+            this.gridColumn83.Width = 98;
             // 
             // gridColumn84
             // 
@@ -2720,29 +3071,37 @@
             this.gridColumn155.VisibleIndex = 19;
             this.gridColumn155.Width = 111;
             // 
-            // xtp_ResidSayer
+            // gridColumn352
             // 
-            this.xtp_ResidSayer.Controls.Add(this.gridControl_ResidSayer);
-            this.xtp_ResidSayer.Name = "xtp_ResidSayer";
-            this.xtp_ResidSayer.Size = new System.Drawing.Size(1414, 619);
-            this.xtp_ResidSayer.Text = "رسید سایر";
+            this.gridColumn352.Caption = "شرح سند";
+            this.gridColumn352.FieldName = "SharhSanad";
+            this.gridColumn352.MinWidth = 25;
+            this.gridColumn352.Name = "gridColumn352";
+            this.gridColumn352.Width = 94;
             // 
-            // gridControl_ResidSayer
+            // xtp_BargashtAzHavaleHazine
             // 
-            this.gridControl_ResidSayer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_ResidSayer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridControl_ResidSayer.Location = new System.Drawing.Point(0, 0);
-            this.gridControl_ResidSayer.MainView = this.gridView_ResidSayer;
-            this.gridControl_ResidSayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridControl_ResidSayer.Name = "gridControl_ResidSayer";
-            this.gridControl_ResidSayer.Size = new System.Drawing.Size(1414, 619);
-            this.gridControl_ResidSayer.TabIndex = 42;
-            this.gridControl_ResidSayer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView_ResidSayer});
+            this.xtp_BargashtAzHavaleHazine.Controls.Add(this.gridControl_BargashtAzHavaleHazine);
+            this.xtp_BargashtAzHavaleHazine.Name = "xtp_BargashtAzHavaleHazine";
+            this.xtp_BargashtAzHavaleHazine.Size = new System.Drawing.Size(1414, 619);
+            this.xtp_BargashtAzHavaleHazine.Text = "برگشت از حواله هزینه";
             // 
-            // gridView_ResidSayer
+            // gridControl_BargashtAzHavaleHazine
             // 
-            this.gridView_ResidSayer.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridControl_BargashtAzHavaleHazine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_BargashtAzHavaleHazine.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzHavaleHazine.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_BargashtAzHavaleHazine.MainView = this.gridView_BargashtAzHavaleHazine;
+            this.gridControl_BargashtAzHavaleHazine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzHavaleHazine.Name = "gridControl_BargashtAzHavaleHazine";
+            this.gridControl_BargashtAzHavaleHazine.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_BargashtAzHavaleHazine.TabIndex = 42;
+            this.gridControl_BargashtAzHavaleHazine.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_BargashtAzHavaleHazine});
+            // 
+            // gridView_BargashtAzHavaleHazine
+            // 
+            this.gridView_BargashtAzHavaleHazine.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn109,
             this.gridColumn110,
             this.gridColumn111,
@@ -2763,31 +3122,32 @@
             this.gridColumn126,
             this.gridColumn127,
             this.gridColumn128,
-            this.gridColumn156});
-            this.gridView_ResidSayer.DetailHeight = 392;
-            this.gridView_ResidSayer.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.gridView_ResidSayer.GridControl = this.gridControl_ResidSayer;
-            this.gridView_ResidSayer.GroupCount = 1;
-            this.gridView_ResidSayer.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
-            this.gridView_ResidSayer.IndicatorWidth = 28;
-            this.gridView_ResidSayer.Name = "gridView_ResidSayer";
-            this.gridView_ResidSayer.OptionsBehavior.AutoSelectAllInEditor = false;
-            this.gridView_ResidSayer.OptionsBehavior.Editable = false;
-            this.gridView_ResidSayer.OptionsFind.AllowFindPanel = false;
-            this.gridView_ResidSayer.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
-            this.gridView_ResidSayer.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
-            this.gridView_ResidSayer.OptionsMenu.ShowFooterItem = true;
-            this.gridView_ResidSayer.OptionsNavigation.AutoFocusNewRow = true;
-            this.gridView_ResidSayer.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView_ResidSayer.OptionsView.ColumnAutoWidth = false;
-            this.gridView_ResidSayer.OptionsView.RowAutoHeight = true;
-            this.gridView_ResidSayer.OptionsView.ShowAutoFilterRow = true;
-            this.gridView_ResidSayer.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            this.gridColumn156,
+            this.gridColumn353});
+            this.gridView_BargashtAzHavaleHazine.DetailHeight = 392;
+            this.gridView_BargashtAzHavaleHazine.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_BargashtAzHavaleHazine.GridControl = this.gridControl_BargashtAzHavaleHazine;
+            this.gridView_BargashtAzHavaleHazine.GroupCount = 1;
+            this.gridView_BargashtAzHavaleHazine.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_BargashtAzHavaleHazine.IndicatorWidth = 28;
+            this.gridView_BargashtAzHavaleHazine.Name = "gridView_BargashtAzHavaleHazine";
+            this.gridView_BargashtAzHavaleHazine.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_BargashtAzHavaleHazine.OptionsBehavior.Editable = false;
+            this.gridView_BargashtAzHavaleHazine.OptionsFind.AllowFindPanel = false;
+            this.gridView_BargashtAzHavaleHazine.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_BargashtAzHavaleHazine.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_BargashtAzHavaleHazine.OptionsMenu.ShowFooterItem = true;
+            this.gridView_BargashtAzHavaleHazine.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_BargashtAzHavaleHazine.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_BargashtAzHavaleHazine.OptionsView.ColumnAutoWidth = false;
+            this.gridView_BargashtAzHavaleHazine.OptionsView.RowAutoHeight = true;
+            this.gridView_BargashtAzHavaleHazine.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_BargashtAzHavaleHazine.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn156, DevExpress.Data.ColumnSortOrder.Ascending)});
-            this.gridView_ResidSayer.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
-            this.gridView_ResidSayer.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
-            this.gridView_ResidSayer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
-            this.gridView_ResidSayer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            this.gridView_BargashtAzHavaleHazine.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_BargashtAzHavaleHazine.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_BargashtAzHavaleHazine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_BargashtAzHavaleHazine.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             // 
             // gridColumn109
             // 
@@ -2972,7 +3332,7 @@
             this.gridColumn120.Name = "gridColumn120";
             this.gridColumn120.Visible = true;
             this.gridColumn120.VisibleIndex = 10;
-            this.gridColumn120.Width = 131;
+            this.gridColumn120.Width = 143;
             // 
             // gridColumn121
             // 
@@ -2990,7 +3350,7 @@
             this.gridColumn121.Name = "gridColumn121";
             this.gridColumn121.Visible = true;
             this.gridColumn121.VisibleIndex = 11;
-            this.gridColumn121.Width = 145;
+            this.gridColumn121.Width = 153;
             // 
             // gridColumn122
             // 
@@ -3008,7 +3368,7 @@
             this.gridColumn122.Name = "gridColumn122";
             this.gridColumn122.Visible = true;
             this.gridColumn122.VisibleIndex = 12;
-            this.gridColumn122.Width = 187;
+            this.gridColumn122.Width = 202;
             // 
             // gridColumn123
             // 
@@ -3024,7 +3384,7 @@
             this.gridColumn123.Name = "gridColumn123";
             this.gridColumn123.Visible = true;
             this.gridColumn123.VisibleIndex = 13;
-            this.gridColumn123.Width = 97;
+            this.gridColumn123.Width = 98;
             // 
             // gridColumn124
             // 
@@ -3124,6 +3484,427 @@
             this.gridColumn156.VisibleIndex = 19;
             this.gridColumn156.Width = 111;
             // 
+            // gridColumn353
+            // 
+            this.gridColumn353.Caption = "شرح سند";
+            this.gridColumn353.FieldName = "SharhSanad";
+            this.gridColumn353.MinWidth = 25;
+            this.gridColumn353.Name = "gridColumn353";
+            this.gridColumn353.Width = 94;
+            // 
+            // xtp_BargashtAzHavaleAmval
+            // 
+            this.xtp_BargashtAzHavaleAmval.Controls.Add(this.gridControl_BargashtAzHavaleAmval);
+            this.xtp_BargashtAzHavaleAmval.Name = "xtp_BargashtAzHavaleAmval";
+            this.xtp_BargashtAzHavaleAmval.Size = new System.Drawing.Size(1414, 619);
+            this.xtp_BargashtAzHavaleAmval.Text = "برگشت از حواله اموال";
+            // 
+            // gridControl_BargashtAzHavaleAmval
+            // 
+            this.gridControl_BargashtAzHavaleAmval.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_BargashtAzHavaleAmval.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzHavaleAmval.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_BargashtAzHavaleAmval.MainView = this.gridView_BargashtAzHavaleAmval;
+            this.gridControl_BargashtAzHavaleAmval.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzHavaleAmval.Name = "gridControl_BargashtAzHavaleAmval";
+            this.gridControl_BargashtAzHavaleAmval.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_BargashtAzHavaleAmval.TabIndex = 43;
+            this.gridControl_BargashtAzHavaleAmval.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_BargashtAzHavaleAmval});
+            // 
+            // gridView_BargashtAzHavaleAmval
+            // 
+            this.gridView_BargashtAzHavaleAmval.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn385,
+            this.gridColumn386,
+            this.gridColumn387,
+            this.gridColumn388,
+            this.gridColumn389,
+            this.gridColumn390,
+            this.gridColumn391,
+            this.gridColumn392,
+            this.gridColumn393,
+            this.gridColumn394,
+            this.gridColumn395,
+            this.gridColumn396,
+            this.gridColumn397,
+            this.gridColumn398,
+            this.gridColumn399,
+            this.gridColumn400,
+            this.gridColumn401,
+            this.gridColumn402,
+            this.gridColumn403,
+            this.gridColumn404,
+            this.gridColumn405,
+            this.gridColumn406});
+            this.gridView_BargashtAzHavaleAmval.DetailHeight = 392;
+            this.gridView_BargashtAzHavaleAmval.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_BargashtAzHavaleAmval.GridControl = this.gridControl_BargashtAzHavaleAmval;
+            this.gridView_BargashtAzHavaleAmval.GroupCount = 1;
+            this.gridView_BargashtAzHavaleAmval.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_BargashtAzHavaleAmval.IndicatorWidth = 28;
+            this.gridView_BargashtAzHavaleAmval.Name = "gridView_BargashtAzHavaleAmval";
+            this.gridView_BargashtAzHavaleAmval.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_BargashtAzHavaleAmval.OptionsBehavior.Editable = false;
+            this.gridView_BargashtAzHavaleAmval.OptionsFind.AllowFindPanel = false;
+            this.gridView_BargashtAzHavaleAmval.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_BargashtAzHavaleAmval.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_BargashtAzHavaleAmval.OptionsMenu.ShowFooterItem = true;
+            this.gridView_BargashtAzHavaleAmval.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_BargashtAzHavaleAmval.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_BargashtAzHavaleAmval.OptionsView.ColumnAutoWidth = false;
+            this.gridView_BargashtAzHavaleAmval.OptionsView.RowAutoHeight = true;
+            this.gridView_BargashtAzHavaleAmval.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_BargashtAzHavaleAmval.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn405, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_BargashtAzHavaleAmval.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_BargashtAzHavaleAmval.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_BargashtAzHavaleAmval.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_BargashtAzHavaleAmval.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn385
+            // 
+            this.gridColumn385.FieldName = "Id";
+            this.gridColumn385.MinWidth = 21;
+            this.gridColumn385.Name = "gridColumn385";
+            this.gridColumn385.Width = 84;
+            // 
+            // gridColumn386
+            // 
+            this.gridColumn386.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn386.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn386.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn386.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn386.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn386.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn386.Caption = "سریال";
+            this.gridColumn386.FieldName = "Seryal";
+            this.gridColumn386.MinWidth = 21;
+            this.gridColumn386.Name = "gridColumn386";
+            this.gridColumn386.Visible = true;
+            this.gridColumn386.VisibleIndex = 0;
+            this.gridColumn386.Width = 120;
+            // 
+            // gridColumn387
+            // 
+            this.gridColumn387.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn387.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn387.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn387.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn387.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn387.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn387.Caption = "تاریخ";
+            this.gridColumn387.DisplayFormat.FormatString = "d";
+            this.gridColumn387.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn387.FieldName = "DateTimeSanad";
+            this.gridColumn387.MinWidth = 21;
+            this.gridColumn387.Name = "gridColumn387";
+            this.gridColumn387.Visible = true;
+            this.gridColumn387.VisibleIndex = 1;
+            this.gridColumn387.Width = 154;
+            // 
+            // gridColumn388
+            // 
+            this.gridColumn388.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn388.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn388.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn388.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn388.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn388.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn388.Caption = "شماره سند";
+            this.gridColumn388.FieldName = "SanadNamber";
+            this.gridColumn388.MinWidth = 23;
+            this.gridColumn388.Name = "gridColumn388";
+            this.gridColumn388.Visible = true;
+            this.gridColumn388.VisibleIndex = 2;
+            this.gridColumn388.Width = 134;
+            // 
+            // gridColumn389
+            // 
+            this.gridColumn389.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn389.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn389.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn389.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn389.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn389.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn389.Caption = "کد تفصیلی";
+            this.gridColumn389.FieldName = "TafsiliCode";
+            this.gridColumn389.MinWidth = 21;
+            this.gridColumn389.Name = "gridColumn389";
+            this.gridColumn389.Visible = true;
+            this.gridColumn389.VisibleIndex = 3;
+            this.gridColumn389.Width = 153;
+            // 
+            // gridColumn390
+            // 
+            this.gridColumn390.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn390.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn390.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn390.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn390.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn390.Caption = "حساب تفصیلی";
+            this.gridColumn390.FieldName = "TafsiliName";
+            this.gridColumn390.MinWidth = 21;
+            this.gridColumn390.Name = "gridColumn390";
+            this.gridColumn390.Visible = true;
+            this.gridColumn390.VisibleIndex = 4;
+            this.gridColumn390.Width = 377;
+            // 
+            // gridColumn391
+            // 
+            this.gridColumn391.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn391.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn391.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn391.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn391.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn391.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn391.Caption = "شماره فاکتور";
+            this.gridColumn391.FieldName = "FactorNamber";
+            this.gridColumn391.MinWidth = 25;
+            this.gridColumn391.Name = "gridColumn391";
+            this.gridColumn391.Visible = true;
+            this.gridColumn391.VisibleIndex = 5;
+            this.gridColumn391.Width = 124;
+            // 
+            // gridColumn392
+            // 
+            this.gridColumn392.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn392.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn392.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn392.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn392.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn392.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn392.Caption = "ردیف";
+            this.gridColumn392.FieldName = "Radif";
+            this.gridColumn392.MinWidth = 25;
+            this.gridColumn392.Name = "gridColumn392";
+            this.gridColumn392.Visible = true;
+            this.gridColumn392.VisibleIndex = 6;
+            this.gridColumn392.Width = 76;
+            // 
+            // gridColumn393
+            // 
+            this.gridColumn393.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn393.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn393.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn393.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn393.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn393.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn393.Caption = "کد کالا";
+            this.gridColumn393.FieldName = "KalaCode";
+            this.gridColumn393.MinWidth = 25;
+            this.gridColumn393.Name = "gridColumn393";
+            this.gridColumn393.Visible = true;
+            this.gridColumn393.VisibleIndex = 7;
+            this.gridColumn393.Width = 155;
+            // 
+            // gridColumn394
+            // 
+            this.gridColumn394.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn394.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn394.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn394.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn394.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn394.Caption = "نام کالا";
+            this.gridColumn394.FieldName = "KalaName";
+            this.gridColumn394.MinWidth = 25;
+            this.gridColumn394.Name = "gridColumn394";
+            this.gridColumn394.Visible = true;
+            this.gridColumn394.VisibleIndex = 8;
+            this.gridColumn394.Width = 364;
+            // 
+            // gridColumn395
+            // 
+            this.gridColumn395.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn395.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn395.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn395.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn395.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn395.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn395.Caption = "واحد کالا";
+            this.gridColumn395.FieldName = "VahedeKala";
+            this.gridColumn395.MinWidth = 25;
+            this.gridColumn395.Name = "gridColumn395";
+            this.gridColumn395.Visible = true;
+            this.gridColumn395.VisibleIndex = 9;
+            this.gridColumn395.Width = 120;
+            // 
+            // gridColumn396
+            // 
+            this.gridColumn396.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn396.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn396.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn396.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn396.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn396.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn396.Caption = "مقدار / تعداد";
+            this.gridColumn396.DisplayFormat.FormatString = "c3";
+            this.gridColumn396.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn396.FieldName = "Meghdar";
+            this.gridColumn396.MinWidth = 25;
+            this.gridColumn396.Name = "gridColumn396";
+            this.gridColumn396.Visible = true;
+            this.gridColumn396.VisibleIndex = 10;
+            this.gridColumn396.Width = 147;
+            // 
+            // gridColumn397
+            // 
+            this.gridColumn397.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn397.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn397.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn397.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn397.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn397.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn397.Caption = "نرخ";
+            this.gridColumn397.DisplayFormat.FormatString = "c3";
+            this.gridColumn397.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn397.FieldName = "Nerkh";
+            this.gridColumn397.MinWidth = 25;
+            this.gridColumn397.Name = "gridColumn397";
+            this.gridColumn397.Visible = true;
+            this.gridColumn397.VisibleIndex = 11;
+            this.gridColumn397.Width = 151;
+            // 
+            // gridColumn398
+            // 
+            this.gridColumn398.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn398.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn398.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn398.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn398.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn398.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn398.Caption = "مبلغ";
+            this.gridColumn398.DisplayFormat.FormatString = "n";
+            this.gridColumn398.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn398.FieldName = "Mablag";
+            this.gridColumn398.MinWidth = 25;
+            this.gridColumn398.Name = "gridColumn398";
+            this.gridColumn398.Visible = true;
+            this.gridColumn398.VisibleIndex = 12;
+            this.gridColumn398.Width = 199;
+            // 
+            // gridColumn399
+            // 
+            this.gridColumn399.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn399.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn399.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn399.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn399.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn399.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn399.Caption = "ریالی شده";
+            this.gridColumn399.FieldName = "IsRiali";
+            this.gridColumn399.MinWidth = 25;
+            this.gridColumn399.Name = "gridColumn399";
+            this.gridColumn399.Visible = true;
+            this.gridColumn399.VisibleIndex = 13;
+            this.gridColumn399.Width = 97;
+            // 
+            // gridColumn400
+            // 
+            this.gridColumn400.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn400.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn400.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn400.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn400.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn400.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn400.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn400.DisplayFormat.FormatString = "G";
+            this.gridColumn400.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn400.FieldName = "DateTimeInsert";
+            this.gridColumn400.MinWidth = 25;
+            this.gridColumn400.Name = "gridColumn400";
+            this.gridColumn400.Visible = true;
+            this.gridColumn400.VisibleIndex = 14;
+            this.gridColumn400.Width = 277;
+            // 
+            // gridColumn401
+            // 
+            this.gridColumn401.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn401.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn401.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn401.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn401.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn401.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn401.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn401.DisplayFormat.FormatString = "G";
+            this.gridColumn401.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn401.FieldName = "DateTimeEdit";
+            this.gridColumn401.MinWidth = 25;
+            this.gridColumn401.Name = "gridColumn401";
+            this.gridColumn401.Visible = true;
+            this.gridColumn401.VisibleIndex = 15;
+            this.gridColumn401.Width = 285;
+            // 
+            // gridColumn402
+            // 
+            this.gridColumn402.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn402.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn402.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn402.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn402.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn402.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn402.Caption = "کد معین";
+            this.gridColumn402.FieldName = "MoinCode";
+            this.gridColumn402.MinWidth = 25;
+            this.gridColumn402.Name = "gridColumn402";
+            this.gridColumn402.Visible = true;
+            this.gridColumn402.VisibleIndex = 16;
+            this.gridColumn402.Width = 160;
+            // 
+            // gridColumn403
+            // 
+            this.gridColumn403.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn403.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn403.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn403.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn403.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn403.Caption = "حساب معین";
+            this.gridColumn403.FieldName = "MoinName";
+            this.gridColumn403.MinWidth = 25;
+            this.gridColumn403.Name = "gridColumn403";
+            this.gridColumn403.Visible = true;
+            this.gridColumn403.VisibleIndex = 17;
+            this.gridColumn403.Width = 343;
+            // 
+            // gridColumn404
+            // 
+            this.gridColumn404.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn404.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn404.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn404.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn404.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn404.Caption = "توضیحات";
+            this.gridColumn404.FieldName = "Tozihat";
+            this.gridColumn404.MinWidth = 25;
+            this.gridColumn404.Name = "gridColumn404";
+            this.gridColumn404.Visible = true;
+            this.gridColumn404.VisibleIndex = 18;
+            this.gridColumn404.Width = 500;
+            // 
+            // gridColumn405
+            // 
+            this.gridColumn405.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn405.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn405.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn405.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn405.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn405.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn405.Caption = "سریال";
+            this.gridColumn405.FieldName = "Seryal";
+            this.gridColumn405.MinWidth = 25;
+            this.gridColumn405.Name = "gridColumn405";
+            this.gridColumn405.Visible = true;
+            this.gridColumn405.VisibleIndex = 19;
+            this.gridColumn405.Width = 111;
+            // 
+            // gridColumn406
+            // 
+            this.gridColumn406.Caption = "شرح سند";
+            this.gridColumn406.FieldName = "SharhSanad";
+            this.gridColumn406.MinWidth = 25;
+            this.gridColumn406.Name = "gridColumn406";
+            this.gridColumn406.Width = 94;
+            // 
             // xtp_EzafateAnbar
             // 
             this.xtp_EzafateAnbar.Controls.Add(this.gridControl_EzafateAnbar);
@@ -3167,7 +3948,8 @@
             this.gridColumn106,
             this.gridColumn107,
             this.gridColumn108,
-            this.gridColumn157});
+            this.gridColumn157,
+            this.gridColumn354});
             this.gridView_EzafateAnbar.DetailHeight = 392;
             this.gridView_EzafateAnbar.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_EzafateAnbar.GridControl = this.gridControl_EzafateAnbar;
@@ -3376,7 +4158,7 @@
             this.gridColumn100.Name = "gridColumn100";
             this.gridColumn100.Visible = true;
             this.gridColumn100.VisibleIndex = 10;
-            this.gridColumn100.Width = 131;
+            this.gridColumn100.Width = 139;
             // 
             // gridColumn101
             // 
@@ -3394,7 +4176,7 @@
             this.gridColumn101.Name = "gridColumn101";
             this.gridColumn101.Visible = true;
             this.gridColumn101.VisibleIndex = 11;
-            this.gridColumn101.Width = 145;
+            this.gridColumn101.Width = 157;
             // 
             // gridColumn102
             // 
@@ -3412,7 +4194,7 @@
             this.gridColumn102.Name = "gridColumn102";
             this.gridColumn102.Visible = true;
             this.gridColumn102.VisibleIndex = 12;
-            this.gridColumn102.Width = 187;
+            this.gridColumn102.Width = 199;
             // 
             // gridColumn103
             // 
@@ -3428,7 +4210,7 @@
             this.gridColumn103.Name = "gridColumn103";
             this.gridColumn103.Visible = true;
             this.gridColumn103.VisibleIndex = 13;
-            this.gridColumn103.Width = 97;
+            this.gridColumn103.Width = 96;
             // 
             // gridColumn104
             // 
@@ -3527,6 +4309,14 @@
             this.gridColumn157.Visible = true;
             this.gridColumn157.VisibleIndex = 19;
             this.gridColumn157.Width = 111;
+            // 
+            // gridColumn354
+            // 
+            this.gridColumn354.Caption = "شرح سند";
+            this.gridColumn354.FieldName = "SharhSanad";
+            this.gridColumn354.MinWidth = 25;
+            this.gridColumn354.Name = "gridColumn354";
+            this.gridColumn354.Width = 94;
             // 
             // xtp_AllVorode
             // 
@@ -3782,7 +4572,7 @@
             this.gridColumn140.Name = "gridColumn140";
             this.gridColumn140.Visible = true;
             this.gridColumn140.VisibleIndex = 10;
-            this.gridColumn140.Width = 131;
+            this.gridColumn140.Width = 143;
             // 
             // gridColumn141
             // 
@@ -3800,7 +4590,7 @@
             this.gridColumn141.Name = "gridColumn141";
             this.gridColumn141.Visible = true;
             this.gridColumn141.VisibleIndex = 11;
-            this.gridColumn141.Width = 145;
+            this.gridColumn141.Width = 160;
             // 
             // gridColumn142
             // 
@@ -3818,7 +4608,7 @@
             this.gridColumn142.Name = "gridColumn142";
             this.gridColumn142.Visible = true;
             this.gridColumn142.VisibleIndex = 12;
-            this.gridColumn142.Width = 187;
+            this.gridColumn142.Width = 201;
             // 
             // gridColumn143
             // 
@@ -3834,7 +4624,7 @@
             this.gridColumn143.Name = "gridColumn143";
             this.gridColumn143.Visible = true;
             this.gridColumn143.VisibleIndex = 13;
-            this.gridColumn143.Width = 97;
+            this.gridColumn143.Width = 100;
             // 
             // gridColumn144
             // 
@@ -3962,79 +4752,4158 @@
             this.xtc_KhorojeKala.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtc_KhorojeKala.Location = new System.Drawing.Point(0, 0);
             this.xtc_KhorojeKala.Name = "xtc_KhorojeKala";
-            this.xtc_KhorojeKala.SelectedTabPage = this.xtp_HavaleFroosh;
+            this.xtc_KhorojeKala.SelectedTabPage = this.xtp_BargashtAzKharid;
             this.xtc_KhorojeKala.Size = new System.Drawing.Size(1421, 668);
-            this.xtc_KhorojeKala.TabIndex = 1;
+            this.xtc_KhorojeKala.TabIndex = 2;
             this.xtc_KhorojeKala.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtp_BargashtAzKharid,
             this.xtp_HavaleFroosh,
             this.xtp_HavaleKalaAmani,
             this.xtp_BargashtAzResidTolid,
             this.xtp_HavaleTolid,
-            this.xtp_HavaleSayer,
+            this.xtp_HavaleHazine,
+            this.xtp_HavaleAmval,
             this.xtp_KosoratAnbar,
-            this.xtp_Khoroji});
-            this.xtc_KhorojeKala.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtc_KhorojeKala_SelectedPageChanged);
-            // 
-            // xtp_HavaleFroosh
-            // 
-            this.xtp_HavaleFroosh.Name = "xtp_HavaleFroosh";
-            this.xtp_HavaleFroosh.Size = new System.Drawing.Size(1414, 619);
-            this.xtp_HavaleFroosh.Text = "حواله فروش";
+            this.xtp_AllKhoroji});
+            this.xtc_KhorojeKala.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl1_1_SelectedPageChanged);
             // 
             // xtp_BargashtAzKharid
             // 
+            this.xtp_BargashtAzKharid.Controls.Add(this.gridControl_BargashtAzKharid);
             this.xtp_BargashtAzKharid.Name = "xtp_BargashtAzKharid";
             this.xtp_BargashtAzKharid.Size = new System.Drawing.Size(1414, 619);
             this.xtp_BargashtAzKharid.Text = "برگشت از خرید";
             // 
+            // gridControl_BargashtAzKharid
+            // 
+            this.gridControl_BargashtAzKharid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_BargashtAzKharid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzKharid.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_BargashtAzKharid.MainView = this.gridView_BargashtAzKharid;
+            this.gridControl_BargashtAzKharid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzKharid.Name = "gridControl_BargashtAzKharid";
+            this.gridControl_BargashtAzKharid.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_BargashtAzKharid.TabIndex = 37;
+            this.gridControl_BargashtAzKharid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_BargashtAzKharid});
+            // 
+            // gridView_BargashtAzKharid
+            // 
+            this.gridView_BargashtAzKharid.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn179,
+            this.gridColumn180,
+            this.gridColumn181,
+            this.gridColumn182,
+            this.gridColumn183,
+            this.gridColumn184,
+            this.gridColumn185,
+            this.gridColumn186,
+            this.gridColumn187,
+            this.gridColumn188,
+            this.gridColumn189,
+            this.gridColumn190,
+            this.gridColumn191,
+            this.gridColumn192,
+            this.gridColumn193,
+            this.gridColumn194,
+            this.gridColumn195,
+            this.gridColumn196,
+            this.gridColumn197,
+            this.gridColumn198,
+            this.gridColumn199,
+            this.gridColumn355});
+            this.gridView_BargashtAzKharid.DetailHeight = 392;
+            this.gridView_BargashtAzKharid.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_BargashtAzKharid.GridControl = this.gridControl_BargashtAzKharid;
+            this.gridView_BargashtAzKharid.GroupCount = 1;
+            this.gridView_BargashtAzKharid.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_BargashtAzKharid.IndicatorWidth = 28;
+            this.gridView_BargashtAzKharid.Name = "gridView_BargashtAzKharid";
+            this.gridView_BargashtAzKharid.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_BargashtAzKharid.OptionsBehavior.Editable = false;
+            this.gridView_BargashtAzKharid.OptionsFind.AllowFindPanel = false;
+            this.gridView_BargashtAzKharid.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_BargashtAzKharid.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_BargashtAzKharid.OptionsMenu.ShowFooterItem = true;
+            this.gridView_BargashtAzKharid.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_BargashtAzKharid.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_BargashtAzKharid.OptionsView.ColumnAutoWidth = false;
+            this.gridView_BargashtAzKharid.OptionsView.RowAutoHeight = true;
+            this.gridView_BargashtAzKharid.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_BargashtAzKharid.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn199, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_BargashtAzKharid.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_BargashtAzKharid.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_BargashtAzKharid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_BargashtAzKharid.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn179
+            // 
+            this.gridColumn179.FieldName = "Id";
+            this.gridColumn179.MinWidth = 21;
+            this.gridColumn179.Name = "gridColumn179";
+            this.gridColumn179.Width = 84;
+            // 
+            // gridColumn180
+            // 
+            this.gridColumn180.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn180.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn180.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn180.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn180.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn180.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn180.Caption = "سریال";
+            this.gridColumn180.FieldName = "Seryal";
+            this.gridColumn180.MinWidth = 21;
+            this.gridColumn180.Name = "gridColumn180";
+            this.gridColumn180.Visible = true;
+            this.gridColumn180.VisibleIndex = 0;
+            this.gridColumn180.Width = 120;
+            // 
+            // gridColumn181
+            // 
+            this.gridColumn181.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn181.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn181.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn181.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn181.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn181.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn181.Caption = "تاریخ";
+            this.gridColumn181.DisplayFormat.FormatString = "d";
+            this.gridColumn181.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn181.FieldName = "DateTimeSanad";
+            this.gridColumn181.MinWidth = 21;
+            this.gridColumn181.Name = "gridColumn181";
+            this.gridColumn181.Visible = true;
+            this.gridColumn181.VisibleIndex = 1;
+            this.gridColumn181.Width = 154;
+            // 
+            // gridColumn182
+            // 
+            this.gridColumn182.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn182.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn182.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn182.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn182.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn182.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn182.Caption = "شماره سند";
+            this.gridColumn182.FieldName = "SanadNamber";
+            this.gridColumn182.MinWidth = 23;
+            this.gridColumn182.Name = "gridColumn182";
+            this.gridColumn182.Visible = true;
+            this.gridColumn182.VisibleIndex = 2;
+            this.gridColumn182.Width = 134;
+            // 
+            // gridColumn183
+            // 
+            this.gridColumn183.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn183.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn183.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn183.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn183.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn183.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn183.Caption = "کد تفصیلی";
+            this.gridColumn183.FieldName = "TafsiliCode";
+            this.gridColumn183.MinWidth = 21;
+            this.gridColumn183.Name = "gridColumn183";
+            this.gridColumn183.Visible = true;
+            this.gridColumn183.VisibleIndex = 3;
+            this.gridColumn183.Width = 153;
+            // 
+            // gridColumn184
+            // 
+            this.gridColumn184.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn184.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn184.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn184.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn184.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn184.Caption = "حساب تفصیلی";
+            this.gridColumn184.FieldName = "TafsiliName";
+            this.gridColumn184.MinWidth = 21;
+            this.gridColumn184.Name = "gridColumn184";
+            this.gridColumn184.Visible = true;
+            this.gridColumn184.VisibleIndex = 4;
+            this.gridColumn184.Width = 377;
+            // 
+            // gridColumn185
+            // 
+            this.gridColumn185.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn185.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn185.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn185.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn185.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn185.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn185.Caption = "شماره فاکتور";
+            this.gridColumn185.FieldName = "FactorNamber";
+            this.gridColumn185.MinWidth = 25;
+            this.gridColumn185.Name = "gridColumn185";
+            this.gridColumn185.Visible = true;
+            this.gridColumn185.VisibleIndex = 5;
+            this.gridColumn185.Width = 124;
+            // 
+            // gridColumn186
+            // 
+            this.gridColumn186.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn186.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn186.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn186.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn186.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn186.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn186.Caption = "ردیف";
+            this.gridColumn186.FieldName = "Radif";
+            this.gridColumn186.MinWidth = 25;
+            this.gridColumn186.Name = "gridColumn186";
+            this.gridColumn186.Visible = true;
+            this.gridColumn186.VisibleIndex = 6;
+            this.gridColumn186.Width = 76;
+            // 
+            // gridColumn187
+            // 
+            this.gridColumn187.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn187.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn187.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn187.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn187.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn187.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn187.Caption = "کد کالا";
+            this.gridColumn187.FieldName = "KalaCode";
+            this.gridColumn187.MinWidth = 25;
+            this.gridColumn187.Name = "gridColumn187";
+            this.gridColumn187.Visible = true;
+            this.gridColumn187.VisibleIndex = 7;
+            this.gridColumn187.Width = 155;
+            // 
+            // gridColumn188
+            // 
+            this.gridColumn188.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn188.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn188.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn188.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn188.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn188.Caption = "نام کالا";
+            this.gridColumn188.FieldName = "KalaName";
+            this.gridColumn188.MinWidth = 25;
+            this.gridColumn188.Name = "gridColumn188";
+            this.gridColumn188.Visible = true;
+            this.gridColumn188.VisibleIndex = 8;
+            this.gridColumn188.Width = 364;
+            // 
+            // gridColumn189
+            // 
+            this.gridColumn189.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn189.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn189.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn189.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn189.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn189.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn189.Caption = "واحد کالا";
+            this.gridColumn189.FieldName = "VahedeKala";
+            this.gridColumn189.MinWidth = 25;
+            this.gridColumn189.Name = "gridColumn189";
+            this.gridColumn189.Visible = true;
+            this.gridColumn189.VisibleIndex = 9;
+            this.gridColumn189.Width = 120;
+            // 
+            // gridColumn190
+            // 
+            this.gridColumn190.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn190.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn190.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn190.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn190.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn190.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn190.Caption = "مقدار / تعداد";
+            this.gridColumn190.DisplayFormat.FormatString = "c3";
+            this.gridColumn190.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn190.FieldName = "Meghdar";
+            this.gridColumn190.MinWidth = 25;
+            this.gridColumn190.Name = "gridColumn190";
+            this.gridColumn190.Visible = true;
+            this.gridColumn190.VisibleIndex = 10;
+            this.gridColumn190.Width = 142;
+            // 
+            // gridColumn191
+            // 
+            this.gridColumn191.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn191.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn191.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn191.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn191.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn191.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn191.Caption = "نرخ";
+            this.gridColumn191.DisplayFormat.FormatString = "c3";
+            this.gridColumn191.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn191.FieldName = "Nerkh";
+            this.gridColumn191.MinWidth = 25;
+            this.gridColumn191.Name = "gridColumn191";
+            this.gridColumn191.Visible = true;
+            this.gridColumn191.VisibleIndex = 11;
+            this.gridColumn191.Width = 157;
+            // 
+            // gridColumn192
+            // 
+            this.gridColumn192.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn192.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn192.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn192.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn192.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn192.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn192.Caption = "مبلغ";
+            this.gridColumn192.DisplayFormat.FormatString = "n";
+            this.gridColumn192.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn192.FieldName = "Mablag";
+            this.gridColumn192.MinWidth = 25;
+            this.gridColumn192.Name = "gridColumn192";
+            this.gridColumn192.Visible = true;
+            this.gridColumn192.VisibleIndex = 12;
+            this.gridColumn192.Width = 201;
+            // 
+            // gridColumn193
+            // 
+            this.gridColumn193.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn193.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn193.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn193.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn193.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn193.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn193.Caption = "ریالی شده";
+            this.gridColumn193.FieldName = "IsRiali";
+            this.gridColumn193.MinWidth = 25;
+            this.gridColumn193.Name = "gridColumn193";
+            this.gridColumn193.Visible = true;
+            this.gridColumn193.VisibleIndex = 13;
+            this.gridColumn193.Width = 100;
+            // 
+            // gridColumn194
+            // 
+            this.gridColumn194.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn194.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn194.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn194.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn194.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn194.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn194.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn194.DisplayFormat.FormatString = "G";
+            this.gridColumn194.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn194.FieldName = "DateTimeInsert";
+            this.gridColumn194.MinWidth = 25;
+            this.gridColumn194.Name = "gridColumn194";
+            this.gridColumn194.Visible = true;
+            this.gridColumn194.VisibleIndex = 14;
+            this.gridColumn194.Width = 277;
+            // 
+            // gridColumn195
+            // 
+            this.gridColumn195.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn195.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn195.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn195.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn195.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn195.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn195.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn195.DisplayFormat.FormatString = "G";
+            this.gridColumn195.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn195.FieldName = "DateTimeEdit";
+            this.gridColumn195.MinWidth = 25;
+            this.gridColumn195.Name = "gridColumn195";
+            this.gridColumn195.Visible = true;
+            this.gridColumn195.VisibleIndex = 15;
+            this.gridColumn195.Width = 285;
+            // 
+            // gridColumn196
+            // 
+            this.gridColumn196.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn196.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn196.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn196.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn196.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn196.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn196.Caption = "کد معین";
+            this.gridColumn196.FieldName = "MoinCode";
+            this.gridColumn196.MinWidth = 25;
+            this.gridColumn196.Name = "gridColumn196";
+            this.gridColumn196.Visible = true;
+            this.gridColumn196.VisibleIndex = 16;
+            this.gridColumn196.Width = 176;
+            // 
+            // gridColumn197
+            // 
+            this.gridColumn197.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn197.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn197.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn197.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn197.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn197.Caption = "حساب معین";
+            this.gridColumn197.FieldName = "MoinName";
+            this.gridColumn197.MinWidth = 25;
+            this.gridColumn197.Name = "gridColumn197";
+            this.gridColumn197.Visible = true;
+            this.gridColumn197.VisibleIndex = 17;
+            this.gridColumn197.Width = 333;
+            // 
+            // gridColumn198
+            // 
+            this.gridColumn198.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn198.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn198.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn198.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn198.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn198.Caption = "توضیحات";
+            this.gridColumn198.FieldName = "Tozihat";
+            this.gridColumn198.MinWidth = 25;
+            this.gridColumn198.Name = "gridColumn198";
+            this.gridColumn198.Visible = true;
+            this.gridColumn198.VisibleIndex = 18;
+            this.gridColumn198.Width = 500;
+            // 
+            // gridColumn199
+            // 
+            this.gridColumn199.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn199.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn199.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn199.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn199.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn199.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn199.Caption = "سریال";
+            this.gridColumn199.FieldName = "Seryal";
+            this.gridColumn199.MinWidth = 25;
+            this.gridColumn199.Name = "gridColumn199";
+            this.gridColumn199.Visible = true;
+            this.gridColumn199.VisibleIndex = 19;
+            this.gridColumn199.Width = 111;
+            // 
+            // gridColumn355
+            // 
+            this.gridColumn355.Caption = "شرح سند";
+            this.gridColumn355.FieldName = "SharhSanad";
+            this.gridColumn355.MinWidth = 25;
+            this.gridColumn355.Name = "gridColumn355";
+            this.gridColumn355.Width = 94;
+            // 
+            // xtp_HavaleFroosh
+            // 
+            this.xtp_HavaleFroosh.Controls.Add(this.gridControl_HavaleFroosh);
+            this.xtp_HavaleFroosh.Name = "xtp_HavaleFroosh";
+            this.xtp_HavaleFroosh.Size = new System.Drawing.Size(1414, 619);
+            this.xtp_HavaleFroosh.Text = "حواله فروش";
+            // 
+            // gridControl_HavaleFroosh
+            // 
+            this.gridControl_HavaleFroosh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_HavaleFroosh.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleFroosh.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_HavaleFroosh.MainView = this.gridView_HavaleFroosh;
+            this.gridControl_HavaleFroosh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleFroosh.Name = "gridControl_HavaleFroosh";
+            this.gridControl_HavaleFroosh.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_HavaleFroosh.TabIndex = 37;
+            this.gridControl_HavaleFroosh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_HavaleFroosh});
+            // 
+            // gridView_HavaleFroosh
+            // 
+            this.gridView_HavaleFroosh.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn158,
+            this.gridColumn159,
+            this.gridColumn160,
+            this.gridColumn161,
+            this.gridColumn162,
+            this.gridColumn163,
+            this.gridColumn164,
+            this.gridColumn165,
+            this.gridColumn166,
+            this.gridColumn167,
+            this.gridColumn168,
+            this.gridColumn169,
+            this.gridColumn170,
+            this.gridColumn171,
+            this.gridColumn172,
+            this.gridColumn173,
+            this.gridColumn174,
+            this.gridColumn175,
+            this.gridColumn176,
+            this.gridColumn177,
+            this.gridColumn178,
+            this.gridColumn356});
+            this.gridView_HavaleFroosh.DetailHeight = 392;
+            this.gridView_HavaleFroosh.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_HavaleFroosh.GridControl = this.gridControl_HavaleFroosh;
+            this.gridView_HavaleFroosh.GroupCount = 1;
+            this.gridView_HavaleFroosh.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_HavaleFroosh.IndicatorWidth = 28;
+            this.gridView_HavaleFroosh.Name = "gridView_HavaleFroosh";
+            this.gridView_HavaleFroosh.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_HavaleFroosh.OptionsBehavior.Editable = false;
+            this.gridView_HavaleFroosh.OptionsFind.AllowFindPanel = false;
+            this.gridView_HavaleFroosh.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_HavaleFroosh.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_HavaleFroosh.OptionsMenu.ShowFooterItem = true;
+            this.gridView_HavaleFroosh.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_HavaleFroosh.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_HavaleFroosh.OptionsView.ColumnAutoWidth = false;
+            this.gridView_HavaleFroosh.OptionsView.RowAutoHeight = true;
+            this.gridView_HavaleFroosh.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_HavaleFroosh.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn178, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_HavaleFroosh.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_HavaleFroosh.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_HavaleFroosh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_HavaleFroosh.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn158
+            // 
+            this.gridColumn158.FieldName = "Id";
+            this.gridColumn158.MinWidth = 21;
+            this.gridColumn158.Name = "gridColumn158";
+            this.gridColumn158.Width = 84;
+            // 
+            // gridColumn159
+            // 
+            this.gridColumn159.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn159.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn159.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn159.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn159.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn159.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn159.Caption = "سریال";
+            this.gridColumn159.FieldName = "Seryal";
+            this.gridColumn159.MinWidth = 21;
+            this.gridColumn159.Name = "gridColumn159";
+            this.gridColumn159.Visible = true;
+            this.gridColumn159.VisibleIndex = 0;
+            this.gridColumn159.Width = 120;
+            // 
+            // gridColumn160
+            // 
+            this.gridColumn160.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn160.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn160.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn160.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn160.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn160.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn160.Caption = "تاریخ";
+            this.gridColumn160.DisplayFormat.FormatString = "d";
+            this.gridColumn160.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn160.FieldName = "DateTimeSanad";
+            this.gridColumn160.MinWidth = 21;
+            this.gridColumn160.Name = "gridColumn160";
+            this.gridColumn160.Visible = true;
+            this.gridColumn160.VisibleIndex = 1;
+            this.gridColumn160.Width = 154;
+            // 
+            // gridColumn161
+            // 
+            this.gridColumn161.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn161.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn161.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn161.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn161.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn161.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn161.Caption = "شماره سند";
+            this.gridColumn161.FieldName = "SanadNamber";
+            this.gridColumn161.MinWidth = 23;
+            this.gridColumn161.Name = "gridColumn161";
+            this.gridColumn161.Visible = true;
+            this.gridColumn161.VisibleIndex = 2;
+            this.gridColumn161.Width = 134;
+            // 
+            // gridColumn162
+            // 
+            this.gridColumn162.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn162.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn162.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn162.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn162.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn162.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn162.Caption = "کد تفصیلی";
+            this.gridColumn162.FieldName = "TafsiliCode";
+            this.gridColumn162.MinWidth = 21;
+            this.gridColumn162.Name = "gridColumn162";
+            this.gridColumn162.Visible = true;
+            this.gridColumn162.VisibleIndex = 3;
+            this.gridColumn162.Width = 153;
+            // 
+            // gridColumn163
+            // 
+            this.gridColumn163.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn163.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn163.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn163.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn163.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn163.Caption = "حساب تفصیلی";
+            this.gridColumn163.FieldName = "TafsiliName";
+            this.gridColumn163.MinWidth = 21;
+            this.gridColumn163.Name = "gridColumn163";
+            this.gridColumn163.Visible = true;
+            this.gridColumn163.VisibleIndex = 4;
+            this.gridColumn163.Width = 377;
+            // 
+            // gridColumn164
+            // 
+            this.gridColumn164.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn164.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn164.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn164.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn164.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn164.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn164.Caption = "شماره فاکتور";
+            this.gridColumn164.FieldName = "FactorNamber";
+            this.gridColumn164.MinWidth = 25;
+            this.gridColumn164.Name = "gridColumn164";
+            this.gridColumn164.Visible = true;
+            this.gridColumn164.VisibleIndex = 5;
+            this.gridColumn164.Width = 124;
+            // 
+            // gridColumn165
+            // 
+            this.gridColumn165.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn165.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn165.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn165.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn165.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn165.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn165.Caption = "ردیف";
+            this.gridColumn165.FieldName = "Radif";
+            this.gridColumn165.MinWidth = 25;
+            this.gridColumn165.Name = "gridColumn165";
+            this.gridColumn165.Visible = true;
+            this.gridColumn165.VisibleIndex = 6;
+            this.gridColumn165.Width = 76;
+            // 
+            // gridColumn166
+            // 
+            this.gridColumn166.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn166.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn166.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn166.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn166.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn166.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn166.Caption = "کد کالا";
+            this.gridColumn166.FieldName = "KalaCode";
+            this.gridColumn166.MinWidth = 25;
+            this.gridColumn166.Name = "gridColumn166";
+            this.gridColumn166.Visible = true;
+            this.gridColumn166.VisibleIndex = 7;
+            this.gridColumn166.Width = 155;
+            // 
+            // gridColumn167
+            // 
+            this.gridColumn167.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn167.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn167.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn167.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn167.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn167.Caption = "نام کالا";
+            this.gridColumn167.FieldName = "KalaName";
+            this.gridColumn167.MinWidth = 25;
+            this.gridColumn167.Name = "gridColumn167";
+            this.gridColumn167.Visible = true;
+            this.gridColumn167.VisibleIndex = 8;
+            this.gridColumn167.Width = 364;
+            // 
+            // gridColumn168
+            // 
+            this.gridColumn168.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn168.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn168.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn168.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn168.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn168.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn168.Caption = "واحد کالا";
+            this.gridColumn168.FieldName = "VahedeKala";
+            this.gridColumn168.MinWidth = 25;
+            this.gridColumn168.Name = "gridColumn168";
+            this.gridColumn168.Visible = true;
+            this.gridColumn168.VisibleIndex = 9;
+            this.gridColumn168.Width = 120;
+            // 
+            // gridColumn169
+            // 
+            this.gridColumn169.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn169.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn169.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn169.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn169.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn169.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn169.Caption = "مقدار / تعداد";
+            this.gridColumn169.DisplayFormat.FormatString = "c3";
+            this.gridColumn169.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn169.FieldName = "Meghdar";
+            this.gridColumn169.MinWidth = 25;
+            this.gridColumn169.Name = "gridColumn169";
+            this.gridColumn169.Visible = true;
+            this.gridColumn169.VisibleIndex = 10;
+            this.gridColumn169.Width = 144;
+            // 
+            // gridColumn170
+            // 
+            this.gridColumn170.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn170.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn170.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn170.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn170.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn170.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn170.Caption = "نرخ";
+            this.gridColumn170.DisplayFormat.FormatString = "c3";
+            this.gridColumn170.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn170.FieldName = "Nerkh";
+            this.gridColumn170.MinWidth = 25;
+            this.gridColumn170.Name = "gridColumn170";
+            this.gridColumn170.Visible = true;
+            this.gridColumn170.VisibleIndex = 11;
+            this.gridColumn170.Width = 160;
+            // 
+            // gridColumn171
+            // 
+            this.gridColumn171.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn171.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn171.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn171.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn171.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn171.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn171.Caption = "مبلغ";
+            this.gridColumn171.DisplayFormat.FormatString = "n";
+            this.gridColumn171.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn171.FieldName = "Mablag";
+            this.gridColumn171.MinWidth = 25;
+            this.gridColumn171.Name = "gridColumn171";
+            this.gridColumn171.Visible = true;
+            this.gridColumn171.VisibleIndex = 12;
+            this.gridColumn171.Width = 203;
+            // 
+            // gridColumn172
+            // 
+            this.gridColumn172.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn172.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn172.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn172.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn172.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn172.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn172.Caption = "ریالی شده";
+            this.gridColumn172.FieldName = "IsRiali";
+            this.gridColumn172.MinWidth = 25;
+            this.gridColumn172.Name = "gridColumn172";
+            this.gridColumn172.Visible = true;
+            this.gridColumn172.VisibleIndex = 13;
+            this.gridColumn172.Width = 97;
+            // 
+            // gridColumn173
+            // 
+            this.gridColumn173.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn173.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn173.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn173.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn173.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn173.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn173.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn173.DisplayFormat.FormatString = "G";
+            this.gridColumn173.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn173.FieldName = "DateTimeInsert";
+            this.gridColumn173.MinWidth = 25;
+            this.gridColumn173.Name = "gridColumn173";
+            this.gridColumn173.Visible = true;
+            this.gridColumn173.VisibleIndex = 14;
+            this.gridColumn173.Width = 277;
+            // 
+            // gridColumn174
+            // 
+            this.gridColumn174.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn174.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn174.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn174.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn174.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn174.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn174.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn174.DisplayFormat.FormatString = "G";
+            this.gridColumn174.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn174.FieldName = "DateTimeEdit";
+            this.gridColumn174.MinWidth = 25;
+            this.gridColumn174.Name = "gridColumn174";
+            this.gridColumn174.Visible = true;
+            this.gridColumn174.VisibleIndex = 15;
+            this.gridColumn174.Width = 285;
+            // 
+            // gridColumn175
+            // 
+            this.gridColumn175.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn175.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn175.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn175.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn175.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn175.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn175.Caption = "کد معین";
+            this.gridColumn175.FieldName = "MoinCode";
+            this.gridColumn175.MinWidth = 25;
+            this.gridColumn175.Name = "gridColumn175";
+            this.gridColumn175.Visible = true;
+            this.gridColumn175.VisibleIndex = 16;
+            this.gridColumn175.Width = 176;
+            // 
+            // gridColumn176
+            // 
+            this.gridColumn176.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn176.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn176.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn176.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn176.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn176.Caption = "حساب معین";
+            this.gridColumn176.FieldName = "MoinName";
+            this.gridColumn176.MinWidth = 25;
+            this.gridColumn176.Name = "gridColumn176";
+            this.gridColumn176.Visible = true;
+            this.gridColumn176.VisibleIndex = 17;
+            this.gridColumn176.Width = 333;
+            // 
+            // gridColumn177
+            // 
+            this.gridColumn177.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn177.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn177.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn177.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn177.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn177.Caption = "توضیحات";
+            this.gridColumn177.FieldName = "Tozihat";
+            this.gridColumn177.MinWidth = 25;
+            this.gridColumn177.Name = "gridColumn177";
+            this.gridColumn177.Visible = true;
+            this.gridColumn177.VisibleIndex = 18;
+            this.gridColumn177.Width = 500;
+            // 
+            // gridColumn178
+            // 
+            this.gridColumn178.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn178.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn178.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn178.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn178.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn178.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn178.Caption = "سریال";
+            this.gridColumn178.FieldName = "Seryal";
+            this.gridColumn178.MinWidth = 25;
+            this.gridColumn178.Name = "gridColumn178";
+            this.gridColumn178.Visible = true;
+            this.gridColumn178.VisibleIndex = 19;
+            this.gridColumn178.Width = 111;
+            // 
+            // gridColumn356
+            // 
+            this.gridColumn356.Caption = "شرح سند";
+            this.gridColumn356.FieldName = "SharhSanad";
+            this.gridColumn356.MinWidth = 25;
+            this.gridColumn356.Name = "gridColumn356";
+            this.gridColumn356.Width = 94;
+            // 
             // xtp_HavaleKalaAmani
             // 
+            this.xtp_HavaleKalaAmani.Controls.Add(this.gridControl_HavaleKalaAmani);
             this.xtp_HavaleKalaAmani.Name = "xtp_HavaleKalaAmani";
             this.xtp_HavaleKalaAmani.Size = new System.Drawing.Size(1414, 619);
             this.xtp_HavaleKalaAmani.Text = "حواله کالای امانی";
             // 
+            // gridControl_HavaleKalaAmani
+            // 
+            this.gridControl_HavaleKalaAmani.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_HavaleKalaAmani.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleKalaAmani.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_HavaleKalaAmani.MainView = this.gridView_HavaleKalaAmani;
+            this.gridControl_HavaleKalaAmani.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleKalaAmani.Name = "gridControl_HavaleKalaAmani";
+            this.gridControl_HavaleKalaAmani.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_HavaleKalaAmani.TabIndex = 37;
+            this.gridControl_HavaleKalaAmani.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_HavaleKalaAmani});
+            // 
+            // gridView_HavaleKalaAmani
+            // 
+            this.gridView_HavaleKalaAmani.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn200,
+            this.gridColumn201,
+            this.gridColumn202,
+            this.gridColumn203,
+            this.gridColumn204,
+            this.gridColumn205,
+            this.gridColumn206,
+            this.gridColumn207,
+            this.gridColumn208,
+            this.gridColumn209,
+            this.gridColumn210,
+            this.gridColumn211,
+            this.gridColumn212,
+            this.gridColumn213,
+            this.gridColumn214,
+            this.gridColumn215,
+            this.gridColumn216,
+            this.gridColumn217,
+            this.gridColumn218,
+            this.gridColumn219,
+            this.gridColumn220,
+            this.gridColumn357});
+            this.gridView_HavaleKalaAmani.DetailHeight = 392;
+            this.gridView_HavaleKalaAmani.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_HavaleKalaAmani.GridControl = this.gridControl_HavaleKalaAmani;
+            this.gridView_HavaleKalaAmani.GroupCount = 1;
+            this.gridView_HavaleKalaAmani.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_HavaleKalaAmani.IndicatorWidth = 28;
+            this.gridView_HavaleKalaAmani.Name = "gridView_HavaleKalaAmani";
+            this.gridView_HavaleKalaAmani.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_HavaleKalaAmani.OptionsBehavior.Editable = false;
+            this.gridView_HavaleKalaAmani.OptionsFind.AllowFindPanel = false;
+            this.gridView_HavaleKalaAmani.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_HavaleKalaAmani.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_HavaleKalaAmani.OptionsMenu.ShowFooterItem = true;
+            this.gridView_HavaleKalaAmani.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_HavaleKalaAmani.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_HavaleKalaAmani.OptionsView.ColumnAutoWidth = false;
+            this.gridView_HavaleKalaAmani.OptionsView.RowAutoHeight = true;
+            this.gridView_HavaleKalaAmani.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_HavaleKalaAmani.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn220, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_HavaleKalaAmani.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_HavaleKalaAmani.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_HavaleKalaAmani.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_HavaleKalaAmani.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn200
+            // 
+            this.gridColumn200.FieldName = "Id";
+            this.gridColumn200.MinWidth = 21;
+            this.gridColumn200.Name = "gridColumn200";
+            this.gridColumn200.Width = 84;
+            // 
+            // gridColumn201
+            // 
+            this.gridColumn201.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn201.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn201.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn201.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn201.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn201.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn201.Caption = "سریال";
+            this.gridColumn201.FieldName = "Seryal";
+            this.gridColumn201.MinWidth = 21;
+            this.gridColumn201.Name = "gridColumn201";
+            this.gridColumn201.Visible = true;
+            this.gridColumn201.VisibleIndex = 0;
+            this.gridColumn201.Width = 120;
+            // 
+            // gridColumn202
+            // 
+            this.gridColumn202.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn202.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn202.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn202.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn202.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn202.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn202.Caption = "تاریخ";
+            this.gridColumn202.DisplayFormat.FormatString = "d";
+            this.gridColumn202.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn202.FieldName = "DateTimeSanad";
+            this.gridColumn202.MinWidth = 21;
+            this.gridColumn202.Name = "gridColumn202";
+            this.gridColumn202.Visible = true;
+            this.gridColumn202.VisibleIndex = 1;
+            this.gridColumn202.Width = 154;
+            // 
+            // gridColumn203
+            // 
+            this.gridColumn203.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn203.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn203.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn203.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn203.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn203.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn203.Caption = "شماره سند";
+            this.gridColumn203.FieldName = "SanadNamber";
+            this.gridColumn203.MinWidth = 23;
+            this.gridColumn203.Name = "gridColumn203";
+            this.gridColumn203.Visible = true;
+            this.gridColumn203.VisibleIndex = 2;
+            this.gridColumn203.Width = 134;
+            // 
+            // gridColumn204
+            // 
+            this.gridColumn204.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn204.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn204.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn204.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn204.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn204.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn204.Caption = "کد تفصیلی";
+            this.gridColumn204.FieldName = "TafsiliCode";
+            this.gridColumn204.MinWidth = 21;
+            this.gridColumn204.Name = "gridColumn204";
+            this.gridColumn204.Visible = true;
+            this.gridColumn204.VisibleIndex = 3;
+            this.gridColumn204.Width = 153;
+            // 
+            // gridColumn205
+            // 
+            this.gridColumn205.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn205.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn205.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn205.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn205.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn205.Caption = "حساب تفصیلی";
+            this.gridColumn205.FieldName = "TafsiliName";
+            this.gridColumn205.MinWidth = 21;
+            this.gridColumn205.Name = "gridColumn205";
+            this.gridColumn205.Visible = true;
+            this.gridColumn205.VisibleIndex = 4;
+            this.gridColumn205.Width = 377;
+            // 
+            // gridColumn206
+            // 
+            this.gridColumn206.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn206.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn206.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn206.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn206.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn206.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn206.Caption = "شماره فاکتور";
+            this.gridColumn206.FieldName = "FactorNamber";
+            this.gridColumn206.MinWidth = 25;
+            this.gridColumn206.Name = "gridColumn206";
+            this.gridColumn206.Visible = true;
+            this.gridColumn206.VisibleIndex = 5;
+            this.gridColumn206.Width = 124;
+            // 
+            // gridColumn207
+            // 
+            this.gridColumn207.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn207.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn207.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn207.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn207.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn207.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn207.Caption = "ردیف";
+            this.gridColumn207.FieldName = "Radif";
+            this.gridColumn207.MinWidth = 25;
+            this.gridColumn207.Name = "gridColumn207";
+            this.gridColumn207.Visible = true;
+            this.gridColumn207.VisibleIndex = 6;
+            this.gridColumn207.Width = 76;
+            // 
+            // gridColumn208
+            // 
+            this.gridColumn208.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn208.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn208.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn208.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn208.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn208.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn208.Caption = "کد کالا";
+            this.gridColumn208.FieldName = "KalaCode";
+            this.gridColumn208.MinWidth = 25;
+            this.gridColumn208.Name = "gridColumn208";
+            this.gridColumn208.Visible = true;
+            this.gridColumn208.VisibleIndex = 7;
+            this.gridColumn208.Width = 155;
+            // 
+            // gridColumn209
+            // 
+            this.gridColumn209.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn209.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn209.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn209.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn209.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn209.Caption = "نام کالا";
+            this.gridColumn209.FieldName = "KalaName";
+            this.gridColumn209.MinWidth = 25;
+            this.gridColumn209.Name = "gridColumn209";
+            this.gridColumn209.Visible = true;
+            this.gridColumn209.VisibleIndex = 8;
+            this.gridColumn209.Width = 364;
+            // 
+            // gridColumn210
+            // 
+            this.gridColumn210.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn210.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn210.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn210.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn210.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn210.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn210.Caption = "واحد کالا";
+            this.gridColumn210.FieldName = "VahedeKala";
+            this.gridColumn210.MinWidth = 25;
+            this.gridColumn210.Name = "gridColumn210";
+            this.gridColumn210.Visible = true;
+            this.gridColumn210.VisibleIndex = 9;
+            this.gridColumn210.Width = 120;
+            // 
+            // gridColumn211
+            // 
+            this.gridColumn211.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn211.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn211.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn211.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn211.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn211.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn211.Caption = "مقدار / تعداد";
+            this.gridColumn211.DisplayFormat.FormatString = "c3";
+            this.gridColumn211.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn211.FieldName = "Meghdar";
+            this.gridColumn211.MinWidth = 25;
+            this.gridColumn211.Name = "gridColumn211";
+            this.gridColumn211.Visible = true;
+            this.gridColumn211.VisibleIndex = 10;
+            this.gridColumn211.Width = 138;
+            // 
+            // gridColumn212
+            // 
+            this.gridColumn212.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn212.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn212.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn212.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn212.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn212.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn212.Caption = "نرخ";
+            this.gridColumn212.DisplayFormat.FormatString = "c3";
+            this.gridColumn212.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn212.FieldName = "Nerkh";
+            this.gridColumn212.MinWidth = 25;
+            this.gridColumn212.Name = "gridColumn212";
+            this.gridColumn212.Visible = true;
+            this.gridColumn212.VisibleIndex = 11;
+            this.gridColumn212.Width = 155;
+            // 
+            // gridColumn213
+            // 
+            this.gridColumn213.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn213.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn213.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn213.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn213.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn213.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn213.Caption = "مبلغ";
+            this.gridColumn213.DisplayFormat.FormatString = "n";
+            this.gridColumn213.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn213.FieldName = "Mablag";
+            this.gridColumn213.MinWidth = 25;
+            this.gridColumn213.Name = "gridColumn213";
+            this.gridColumn213.Visible = true;
+            this.gridColumn213.VisibleIndex = 12;
+            this.gridColumn213.Width = 198;
+            // 
+            // gridColumn214
+            // 
+            this.gridColumn214.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn214.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn214.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn214.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn214.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn214.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn214.Caption = "ریالی شده";
+            this.gridColumn214.FieldName = "IsRiali";
+            this.gridColumn214.MinWidth = 25;
+            this.gridColumn214.Name = "gridColumn214";
+            this.gridColumn214.Visible = true;
+            this.gridColumn214.VisibleIndex = 13;
+            this.gridColumn214.Width = 100;
+            // 
+            // gridColumn215
+            // 
+            this.gridColumn215.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn215.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn215.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn215.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn215.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn215.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn215.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn215.DisplayFormat.FormatString = "G";
+            this.gridColumn215.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn215.FieldName = "DateTimeInsert";
+            this.gridColumn215.MinWidth = 25;
+            this.gridColumn215.Name = "gridColumn215";
+            this.gridColumn215.Visible = true;
+            this.gridColumn215.VisibleIndex = 14;
+            this.gridColumn215.Width = 277;
+            // 
+            // gridColumn216
+            // 
+            this.gridColumn216.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn216.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn216.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn216.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn216.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn216.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn216.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn216.DisplayFormat.FormatString = "G";
+            this.gridColumn216.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn216.FieldName = "DateTimeEdit";
+            this.gridColumn216.MinWidth = 25;
+            this.gridColumn216.Name = "gridColumn216";
+            this.gridColumn216.Visible = true;
+            this.gridColumn216.VisibleIndex = 15;
+            this.gridColumn216.Width = 285;
+            // 
+            // gridColumn217
+            // 
+            this.gridColumn217.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn217.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn217.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn217.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn217.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn217.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn217.Caption = "کد معین";
+            this.gridColumn217.FieldName = "MoinCode";
+            this.gridColumn217.MinWidth = 25;
+            this.gridColumn217.Name = "gridColumn217";
+            this.gridColumn217.Visible = true;
+            this.gridColumn217.VisibleIndex = 16;
+            this.gridColumn217.Width = 176;
+            // 
+            // gridColumn218
+            // 
+            this.gridColumn218.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn218.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn218.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn218.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn218.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn218.Caption = "حساب معین";
+            this.gridColumn218.FieldName = "MoinName";
+            this.gridColumn218.MinWidth = 25;
+            this.gridColumn218.Name = "gridColumn218";
+            this.gridColumn218.Visible = true;
+            this.gridColumn218.VisibleIndex = 17;
+            this.gridColumn218.Width = 333;
+            // 
+            // gridColumn219
+            // 
+            this.gridColumn219.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn219.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn219.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn219.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn219.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn219.Caption = "توضیحات";
+            this.gridColumn219.FieldName = "Tozihat";
+            this.gridColumn219.MinWidth = 25;
+            this.gridColumn219.Name = "gridColumn219";
+            this.gridColumn219.Visible = true;
+            this.gridColumn219.VisibleIndex = 18;
+            this.gridColumn219.Width = 500;
+            // 
+            // gridColumn220
+            // 
+            this.gridColumn220.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn220.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn220.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn220.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn220.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn220.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn220.Caption = "سریال";
+            this.gridColumn220.FieldName = "Seryal";
+            this.gridColumn220.MinWidth = 25;
+            this.gridColumn220.Name = "gridColumn220";
+            this.gridColumn220.Visible = true;
+            this.gridColumn220.VisibleIndex = 19;
+            this.gridColumn220.Width = 111;
+            // 
+            // gridColumn357
+            // 
+            this.gridColumn357.Caption = "شرح سند";
+            this.gridColumn357.FieldName = "SharhSanad";
+            this.gridColumn357.MinWidth = 25;
+            this.gridColumn357.Name = "gridColumn357";
+            this.gridColumn357.Width = 94;
+            // 
             // xtp_BargashtAzResidTolid
             // 
+            this.xtp_BargashtAzResidTolid.Controls.Add(this.gridControl_BargashtAzResidTolid);
             this.xtp_BargashtAzResidTolid.Name = "xtp_BargashtAzResidTolid";
             this.xtp_BargashtAzResidTolid.Size = new System.Drawing.Size(1414, 619);
             this.xtp_BargashtAzResidTolid.Text = "برگشت از رسید تولید";
             // 
+            // gridControl_BargashtAzResidTolid
+            // 
+            this.gridControl_BargashtAzResidTolid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_BargashtAzResidTolid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzResidTolid.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_BargashtAzResidTolid.MainView = this.gridView_BargashtAzResidTolid;
+            this.gridControl_BargashtAzResidTolid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_BargashtAzResidTolid.Name = "gridControl_BargashtAzResidTolid";
+            this.gridControl_BargashtAzResidTolid.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_BargashtAzResidTolid.TabIndex = 37;
+            this.gridControl_BargashtAzResidTolid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_BargashtAzResidTolid});
+            // 
+            // gridView_BargashtAzResidTolid
+            // 
+            this.gridView_BargashtAzResidTolid.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn221,
+            this.gridColumn222,
+            this.gridColumn223,
+            this.gridColumn224,
+            this.gridColumn225,
+            this.gridColumn226,
+            this.gridColumn227,
+            this.gridColumn228,
+            this.gridColumn229,
+            this.gridColumn230,
+            this.gridColumn231,
+            this.gridColumn232,
+            this.gridColumn233,
+            this.gridColumn234,
+            this.gridColumn235,
+            this.gridColumn236,
+            this.gridColumn237,
+            this.gridColumn238,
+            this.gridColumn239,
+            this.gridColumn240,
+            this.gridColumn241,
+            this.gridColumn358});
+            this.gridView_BargashtAzResidTolid.DetailHeight = 392;
+            this.gridView_BargashtAzResidTolid.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_BargashtAzResidTolid.GridControl = this.gridControl_BargashtAzResidTolid;
+            this.gridView_BargashtAzResidTolid.GroupCount = 1;
+            this.gridView_BargashtAzResidTolid.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_BargashtAzResidTolid.IndicatorWidth = 28;
+            this.gridView_BargashtAzResidTolid.Name = "gridView_BargashtAzResidTolid";
+            this.gridView_BargashtAzResidTolid.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_BargashtAzResidTolid.OptionsBehavior.Editable = false;
+            this.gridView_BargashtAzResidTolid.OptionsFind.AllowFindPanel = false;
+            this.gridView_BargashtAzResidTolid.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_BargashtAzResidTolid.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_BargashtAzResidTolid.OptionsMenu.ShowFooterItem = true;
+            this.gridView_BargashtAzResidTolid.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_BargashtAzResidTolid.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_BargashtAzResidTolid.OptionsView.ColumnAutoWidth = false;
+            this.gridView_BargashtAzResidTolid.OptionsView.RowAutoHeight = true;
+            this.gridView_BargashtAzResidTolid.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_BargashtAzResidTolid.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn241, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_BargashtAzResidTolid.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_BargashtAzResidTolid.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_BargashtAzResidTolid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_BargashtAzResidTolid.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn221
+            // 
+            this.gridColumn221.FieldName = "Id";
+            this.gridColumn221.MinWidth = 21;
+            this.gridColumn221.Name = "gridColumn221";
+            this.gridColumn221.Width = 84;
+            // 
+            // gridColumn222
+            // 
+            this.gridColumn222.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn222.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn222.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn222.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn222.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn222.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn222.Caption = "سریال";
+            this.gridColumn222.FieldName = "Seryal";
+            this.gridColumn222.MinWidth = 21;
+            this.gridColumn222.Name = "gridColumn222";
+            this.gridColumn222.Visible = true;
+            this.gridColumn222.VisibleIndex = 0;
+            this.gridColumn222.Width = 120;
+            // 
+            // gridColumn223
+            // 
+            this.gridColumn223.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn223.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn223.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn223.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn223.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn223.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn223.Caption = "تاریخ";
+            this.gridColumn223.DisplayFormat.FormatString = "d";
+            this.gridColumn223.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn223.FieldName = "DateTimeSanad";
+            this.gridColumn223.MinWidth = 21;
+            this.gridColumn223.Name = "gridColumn223";
+            this.gridColumn223.Visible = true;
+            this.gridColumn223.VisibleIndex = 1;
+            this.gridColumn223.Width = 154;
+            // 
+            // gridColumn224
+            // 
+            this.gridColumn224.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn224.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn224.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn224.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn224.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn224.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn224.Caption = "شماره سند";
+            this.gridColumn224.FieldName = "SanadNamber";
+            this.gridColumn224.MinWidth = 23;
+            this.gridColumn224.Name = "gridColumn224";
+            this.gridColumn224.Visible = true;
+            this.gridColumn224.VisibleIndex = 2;
+            this.gridColumn224.Width = 134;
+            // 
+            // gridColumn225
+            // 
+            this.gridColumn225.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn225.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn225.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn225.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn225.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn225.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn225.Caption = "کد تفصیلی";
+            this.gridColumn225.FieldName = "TafsiliCode";
+            this.gridColumn225.MinWidth = 21;
+            this.gridColumn225.Name = "gridColumn225";
+            this.gridColumn225.Visible = true;
+            this.gridColumn225.VisibleIndex = 3;
+            this.gridColumn225.Width = 153;
+            // 
+            // gridColumn226
+            // 
+            this.gridColumn226.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn226.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn226.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn226.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn226.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn226.Caption = "حساب تفصیلی";
+            this.gridColumn226.FieldName = "TafsiliName";
+            this.gridColumn226.MinWidth = 21;
+            this.gridColumn226.Name = "gridColumn226";
+            this.gridColumn226.Visible = true;
+            this.gridColumn226.VisibleIndex = 4;
+            this.gridColumn226.Width = 377;
+            // 
+            // gridColumn227
+            // 
+            this.gridColumn227.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn227.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn227.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn227.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn227.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn227.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn227.Caption = "شماره فاکتور";
+            this.gridColumn227.FieldName = "FactorNamber";
+            this.gridColumn227.MinWidth = 25;
+            this.gridColumn227.Name = "gridColumn227";
+            this.gridColumn227.Visible = true;
+            this.gridColumn227.VisibleIndex = 5;
+            this.gridColumn227.Width = 124;
+            // 
+            // gridColumn228
+            // 
+            this.gridColumn228.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn228.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn228.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn228.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn228.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn228.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn228.Caption = "ردیف";
+            this.gridColumn228.FieldName = "Radif";
+            this.gridColumn228.MinWidth = 25;
+            this.gridColumn228.Name = "gridColumn228";
+            this.gridColumn228.Visible = true;
+            this.gridColumn228.VisibleIndex = 6;
+            this.gridColumn228.Width = 76;
+            // 
+            // gridColumn229
+            // 
+            this.gridColumn229.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn229.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn229.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn229.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn229.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn229.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn229.Caption = "کد کالا";
+            this.gridColumn229.FieldName = "KalaCode";
+            this.gridColumn229.MinWidth = 25;
+            this.gridColumn229.Name = "gridColumn229";
+            this.gridColumn229.Visible = true;
+            this.gridColumn229.VisibleIndex = 7;
+            this.gridColumn229.Width = 155;
+            // 
+            // gridColumn230
+            // 
+            this.gridColumn230.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn230.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn230.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn230.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn230.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn230.Caption = "نام کالا";
+            this.gridColumn230.FieldName = "KalaName";
+            this.gridColumn230.MinWidth = 25;
+            this.gridColumn230.Name = "gridColumn230";
+            this.gridColumn230.Visible = true;
+            this.gridColumn230.VisibleIndex = 8;
+            this.gridColumn230.Width = 364;
+            // 
+            // gridColumn231
+            // 
+            this.gridColumn231.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn231.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn231.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn231.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn231.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn231.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn231.Caption = "واحد کالا";
+            this.gridColumn231.FieldName = "VahedeKala";
+            this.gridColumn231.MinWidth = 25;
+            this.gridColumn231.Name = "gridColumn231";
+            this.gridColumn231.Visible = true;
+            this.gridColumn231.VisibleIndex = 9;
+            this.gridColumn231.Width = 120;
+            // 
+            // gridColumn232
+            // 
+            this.gridColumn232.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn232.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn232.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn232.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn232.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn232.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn232.Caption = "مقدار / تعداد";
+            this.gridColumn232.DisplayFormat.FormatString = "c3";
+            this.gridColumn232.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn232.FieldName = "Meghdar";
+            this.gridColumn232.MinWidth = 25;
+            this.gridColumn232.Name = "gridColumn232";
+            this.gridColumn232.Visible = true;
+            this.gridColumn232.VisibleIndex = 10;
+            this.gridColumn232.Width = 143;
+            // 
+            // gridColumn233
+            // 
+            this.gridColumn233.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn233.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn233.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn233.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn233.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn233.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn233.Caption = "نرخ";
+            this.gridColumn233.DisplayFormat.FormatString = "c3";
+            this.gridColumn233.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn233.FieldName = "Nerkh";
+            this.gridColumn233.MinWidth = 25;
+            this.gridColumn233.Name = "gridColumn233";
+            this.gridColumn233.Visible = true;
+            this.gridColumn233.VisibleIndex = 11;
+            this.gridColumn233.Width = 159;
+            // 
+            // gridColumn234
+            // 
+            this.gridColumn234.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn234.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn234.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn234.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn234.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn234.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn234.Caption = "مبلغ";
+            this.gridColumn234.DisplayFormat.FormatString = "n";
+            this.gridColumn234.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn234.FieldName = "Mablag";
+            this.gridColumn234.MinWidth = 25;
+            this.gridColumn234.Name = "gridColumn234";
+            this.gridColumn234.Visible = true;
+            this.gridColumn234.VisibleIndex = 12;
+            this.gridColumn234.Width = 202;
+            // 
+            // gridColumn235
+            // 
+            this.gridColumn235.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn235.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn235.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn235.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn235.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn235.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn235.Caption = "ریالی شده";
+            this.gridColumn235.FieldName = "IsRiali";
+            this.gridColumn235.MinWidth = 25;
+            this.gridColumn235.Name = "gridColumn235";
+            this.gridColumn235.Visible = true;
+            this.gridColumn235.VisibleIndex = 13;
+            this.gridColumn235.Width = 101;
+            // 
+            // gridColumn236
+            // 
+            this.gridColumn236.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn236.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn236.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn236.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn236.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn236.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn236.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn236.DisplayFormat.FormatString = "G";
+            this.gridColumn236.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn236.FieldName = "DateTimeInsert";
+            this.gridColumn236.MinWidth = 25;
+            this.gridColumn236.Name = "gridColumn236";
+            this.gridColumn236.Visible = true;
+            this.gridColumn236.VisibleIndex = 14;
+            this.gridColumn236.Width = 277;
+            // 
+            // gridColumn237
+            // 
+            this.gridColumn237.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn237.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn237.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn237.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn237.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn237.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn237.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn237.DisplayFormat.FormatString = "G";
+            this.gridColumn237.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn237.FieldName = "DateTimeEdit";
+            this.gridColumn237.MinWidth = 25;
+            this.gridColumn237.Name = "gridColumn237";
+            this.gridColumn237.Visible = true;
+            this.gridColumn237.VisibleIndex = 15;
+            this.gridColumn237.Width = 285;
+            // 
+            // gridColumn238
+            // 
+            this.gridColumn238.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn238.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn238.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn238.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn238.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn238.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn238.Caption = "کد معین";
+            this.gridColumn238.FieldName = "MoinCode";
+            this.gridColumn238.MinWidth = 25;
+            this.gridColumn238.Name = "gridColumn238";
+            this.gridColumn238.Visible = true;
+            this.gridColumn238.VisibleIndex = 16;
+            this.gridColumn238.Width = 176;
+            // 
+            // gridColumn239
+            // 
+            this.gridColumn239.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn239.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn239.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn239.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn239.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn239.Caption = "حساب معین";
+            this.gridColumn239.FieldName = "MoinName";
+            this.gridColumn239.MinWidth = 25;
+            this.gridColumn239.Name = "gridColumn239";
+            this.gridColumn239.Visible = true;
+            this.gridColumn239.VisibleIndex = 17;
+            this.gridColumn239.Width = 333;
+            // 
+            // gridColumn240
+            // 
+            this.gridColumn240.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn240.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn240.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn240.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn240.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn240.Caption = "توضیحات";
+            this.gridColumn240.FieldName = "Tozihat";
+            this.gridColumn240.MinWidth = 25;
+            this.gridColumn240.Name = "gridColumn240";
+            this.gridColumn240.Visible = true;
+            this.gridColumn240.VisibleIndex = 18;
+            this.gridColumn240.Width = 500;
+            // 
+            // gridColumn241
+            // 
+            this.gridColumn241.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn241.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn241.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn241.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn241.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn241.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn241.Caption = "سریال";
+            this.gridColumn241.FieldName = "Seryal";
+            this.gridColumn241.MinWidth = 25;
+            this.gridColumn241.Name = "gridColumn241";
+            this.gridColumn241.Visible = true;
+            this.gridColumn241.VisibleIndex = 19;
+            this.gridColumn241.Width = 111;
+            // 
+            // gridColumn358
+            // 
+            this.gridColumn358.Caption = "شرح سند";
+            this.gridColumn358.FieldName = "SharhSanad";
+            this.gridColumn358.MinWidth = 25;
+            this.gridColumn358.Name = "gridColumn358";
+            this.gridColumn358.Width = 94;
+            // 
             // xtp_HavaleTolid
             // 
+            this.xtp_HavaleTolid.Controls.Add(this.gridControl_HavaleTolid);
             this.xtp_HavaleTolid.Name = "xtp_HavaleTolid";
             this.xtp_HavaleTolid.Size = new System.Drawing.Size(1414, 619);
             this.xtp_HavaleTolid.Text = "حواله تولـید";
             // 
-            // xtp_HavaleSayer
+            // gridControl_HavaleTolid
             // 
-            this.xtp_HavaleSayer.Name = "xtp_HavaleSayer";
-            this.xtp_HavaleSayer.Size = new System.Drawing.Size(1414, 619);
-            this.xtp_HavaleSayer.Text = "حواله سایر";
+            this.gridControl_HavaleTolid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_HavaleTolid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleTolid.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_HavaleTolid.MainView = this.gridView_HavaleTolid;
+            this.gridControl_HavaleTolid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleTolid.Name = "gridControl_HavaleTolid";
+            this.gridControl_HavaleTolid.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_HavaleTolid.TabIndex = 37;
+            this.gridControl_HavaleTolid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_HavaleTolid});
+            // 
+            // gridView_HavaleTolid
+            // 
+            this.gridView_HavaleTolid.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn242,
+            this.gridColumn243,
+            this.gridColumn244,
+            this.gridColumn245,
+            this.gridColumn246,
+            this.gridColumn247,
+            this.gridColumn248,
+            this.gridColumn249,
+            this.gridColumn250,
+            this.gridColumn251,
+            this.gridColumn252,
+            this.gridColumn253,
+            this.gridColumn254,
+            this.gridColumn255,
+            this.gridColumn256,
+            this.gridColumn257,
+            this.gridColumn258,
+            this.gridColumn259,
+            this.gridColumn260,
+            this.gridColumn261,
+            this.gridColumn262,
+            this.gridColumn359});
+            this.gridView_HavaleTolid.DetailHeight = 392;
+            this.gridView_HavaleTolid.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_HavaleTolid.GridControl = this.gridControl_HavaleTolid;
+            this.gridView_HavaleTolid.GroupCount = 1;
+            this.gridView_HavaleTolid.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_HavaleTolid.IndicatorWidth = 28;
+            this.gridView_HavaleTolid.Name = "gridView_HavaleTolid";
+            this.gridView_HavaleTolid.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_HavaleTolid.OptionsBehavior.Editable = false;
+            this.gridView_HavaleTolid.OptionsFind.AllowFindPanel = false;
+            this.gridView_HavaleTolid.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_HavaleTolid.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_HavaleTolid.OptionsMenu.ShowFooterItem = true;
+            this.gridView_HavaleTolid.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_HavaleTolid.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_HavaleTolid.OptionsView.ColumnAutoWidth = false;
+            this.gridView_HavaleTolid.OptionsView.RowAutoHeight = true;
+            this.gridView_HavaleTolid.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_HavaleTolid.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn262, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_HavaleTolid.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_HavaleTolid.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_HavaleTolid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_HavaleTolid.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn242
+            // 
+            this.gridColumn242.FieldName = "Id";
+            this.gridColumn242.MinWidth = 21;
+            this.gridColumn242.Name = "gridColumn242";
+            this.gridColumn242.Width = 84;
+            // 
+            // gridColumn243
+            // 
+            this.gridColumn243.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn243.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn243.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn243.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn243.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn243.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn243.Caption = "سریال";
+            this.gridColumn243.FieldName = "Seryal";
+            this.gridColumn243.MinWidth = 21;
+            this.gridColumn243.Name = "gridColumn243";
+            this.gridColumn243.Visible = true;
+            this.gridColumn243.VisibleIndex = 0;
+            this.gridColumn243.Width = 120;
+            // 
+            // gridColumn244
+            // 
+            this.gridColumn244.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn244.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn244.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn244.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn244.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn244.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn244.Caption = "تاریخ";
+            this.gridColumn244.DisplayFormat.FormatString = "d";
+            this.gridColumn244.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn244.FieldName = "DateTimeSanad";
+            this.gridColumn244.MinWidth = 21;
+            this.gridColumn244.Name = "gridColumn244";
+            this.gridColumn244.Visible = true;
+            this.gridColumn244.VisibleIndex = 1;
+            this.gridColumn244.Width = 154;
+            // 
+            // gridColumn245
+            // 
+            this.gridColumn245.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn245.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn245.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn245.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn245.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn245.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn245.Caption = "شماره سند";
+            this.gridColumn245.FieldName = "SanadNamber";
+            this.gridColumn245.MinWidth = 23;
+            this.gridColumn245.Name = "gridColumn245";
+            this.gridColumn245.Visible = true;
+            this.gridColumn245.VisibleIndex = 2;
+            this.gridColumn245.Width = 134;
+            // 
+            // gridColumn246
+            // 
+            this.gridColumn246.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn246.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn246.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn246.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn246.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn246.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn246.Caption = "کد تفصیلی";
+            this.gridColumn246.FieldName = "TafsiliCode";
+            this.gridColumn246.MinWidth = 21;
+            this.gridColumn246.Name = "gridColumn246";
+            this.gridColumn246.Visible = true;
+            this.gridColumn246.VisibleIndex = 3;
+            this.gridColumn246.Width = 153;
+            // 
+            // gridColumn247
+            // 
+            this.gridColumn247.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn247.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn247.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn247.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn247.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn247.Caption = "حساب تفصیلی";
+            this.gridColumn247.FieldName = "TafsiliName";
+            this.gridColumn247.MinWidth = 21;
+            this.gridColumn247.Name = "gridColumn247";
+            this.gridColumn247.Visible = true;
+            this.gridColumn247.VisibleIndex = 4;
+            this.gridColumn247.Width = 377;
+            // 
+            // gridColumn248
+            // 
+            this.gridColumn248.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn248.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn248.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn248.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn248.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn248.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn248.Caption = "شماره فاکتور";
+            this.gridColumn248.FieldName = "FactorNamber";
+            this.gridColumn248.MinWidth = 25;
+            this.gridColumn248.Name = "gridColumn248";
+            this.gridColumn248.Visible = true;
+            this.gridColumn248.VisibleIndex = 5;
+            this.gridColumn248.Width = 124;
+            // 
+            // gridColumn249
+            // 
+            this.gridColumn249.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn249.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn249.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn249.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn249.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn249.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn249.Caption = "ردیف";
+            this.gridColumn249.FieldName = "Radif";
+            this.gridColumn249.MinWidth = 25;
+            this.gridColumn249.Name = "gridColumn249";
+            this.gridColumn249.Visible = true;
+            this.gridColumn249.VisibleIndex = 6;
+            this.gridColumn249.Width = 76;
+            // 
+            // gridColumn250
+            // 
+            this.gridColumn250.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn250.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn250.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn250.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn250.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn250.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn250.Caption = "کد کالا";
+            this.gridColumn250.FieldName = "KalaCode";
+            this.gridColumn250.MinWidth = 25;
+            this.gridColumn250.Name = "gridColumn250";
+            this.gridColumn250.Visible = true;
+            this.gridColumn250.VisibleIndex = 7;
+            this.gridColumn250.Width = 155;
+            // 
+            // gridColumn251
+            // 
+            this.gridColumn251.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn251.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn251.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn251.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn251.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn251.Caption = "نام کالا";
+            this.gridColumn251.FieldName = "KalaName";
+            this.gridColumn251.MinWidth = 25;
+            this.gridColumn251.Name = "gridColumn251";
+            this.gridColumn251.Visible = true;
+            this.gridColumn251.VisibleIndex = 8;
+            this.gridColumn251.Width = 364;
+            // 
+            // gridColumn252
+            // 
+            this.gridColumn252.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn252.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn252.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn252.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn252.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn252.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn252.Caption = "واحد کالا";
+            this.gridColumn252.FieldName = "VahedeKala";
+            this.gridColumn252.MinWidth = 25;
+            this.gridColumn252.Name = "gridColumn252";
+            this.gridColumn252.Visible = true;
+            this.gridColumn252.VisibleIndex = 9;
+            this.gridColumn252.Width = 120;
+            // 
+            // gridColumn253
+            // 
+            this.gridColumn253.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn253.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn253.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn253.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn253.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn253.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn253.Caption = "مقدار / تعداد";
+            this.gridColumn253.DisplayFormat.FormatString = "c3";
+            this.gridColumn253.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn253.FieldName = "Meghdar";
+            this.gridColumn253.MinWidth = 25;
+            this.gridColumn253.Name = "gridColumn253";
+            this.gridColumn253.Visible = true;
+            this.gridColumn253.VisibleIndex = 10;
+            this.gridColumn253.Width = 142;
+            // 
+            // gridColumn254
+            // 
+            this.gridColumn254.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn254.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn254.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn254.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn254.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn254.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn254.Caption = "نرخ";
+            this.gridColumn254.DisplayFormat.FormatString = "c3";
+            this.gridColumn254.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn254.FieldName = "Nerkh";
+            this.gridColumn254.MinWidth = 25;
+            this.gridColumn254.Name = "gridColumn254";
+            this.gridColumn254.Visible = true;
+            this.gridColumn254.VisibleIndex = 11;
+            this.gridColumn254.Width = 158;
+            // 
+            // gridColumn255
+            // 
+            this.gridColumn255.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn255.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn255.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn255.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn255.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn255.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn255.Caption = "مبلغ";
+            this.gridColumn255.DisplayFormat.FormatString = "n";
+            this.gridColumn255.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn255.FieldName = "Mablag";
+            this.gridColumn255.MinWidth = 25;
+            this.gridColumn255.Name = "gridColumn255";
+            this.gridColumn255.Visible = true;
+            this.gridColumn255.VisibleIndex = 12;
+            this.gridColumn255.Width = 202;
+            // 
+            // gridColumn256
+            // 
+            this.gridColumn256.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn256.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn256.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn256.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn256.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn256.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn256.Caption = "ریالی شده";
+            this.gridColumn256.FieldName = "IsRiali";
+            this.gridColumn256.MinWidth = 25;
+            this.gridColumn256.Name = "gridColumn256";
+            this.gridColumn256.Visible = true;
+            this.gridColumn256.VisibleIndex = 13;
+            this.gridColumn256.Width = 97;
+            // 
+            // gridColumn257
+            // 
+            this.gridColumn257.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn257.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn257.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn257.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn257.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn257.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn257.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn257.DisplayFormat.FormatString = "G";
+            this.gridColumn257.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn257.FieldName = "DateTimeInsert";
+            this.gridColumn257.MinWidth = 25;
+            this.gridColumn257.Name = "gridColumn257";
+            this.gridColumn257.Visible = true;
+            this.gridColumn257.VisibleIndex = 14;
+            this.gridColumn257.Width = 277;
+            // 
+            // gridColumn258
+            // 
+            this.gridColumn258.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn258.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn258.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn258.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn258.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn258.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn258.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn258.DisplayFormat.FormatString = "G";
+            this.gridColumn258.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn258.FieldName = "DateTimeEdit";
+            this.gridColumn258.MinWidth = 25;
+            this.gridColumn258.Name = "gridColumn258";
+            this.gridColumn258.Visible = true;
+            this.gridColumn258.VisibleIndex = 15;
+            this.gridColumn258.Width = 285;
+            // 
+            // gridColumn259
+            // 
+            this.gridColumn259.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn259.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn259.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn259.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn259.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn259.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn259.Caption = "کد معین";
+            this.gridColumn259.FieldName = "MoinCode";
+            this.gridColumn259.MinWidth = 25;
+            this.gridColumn259.Name = "gridColumn259";
+            this.gridColumn259.Visible = true;
+            this.gridColumn259.VisibleIndex = 16;
+            this.gridColumn259.Width = 176;
+            // 
+            // gridColumn260
+            // 
+            this.gridColumn260.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn260.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn260.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn260.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn260.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn260.Caption = "حساب معین";
+            this.gridColumn260.FieldName = "MoinName";
+            this.gridColumn260.MinWidth = 25;
+            this.gridColumn260.Name = "gridColumn260";
+            this.gridColumn260.Visible = true;
+            this.gridColumn260.VisibleIndex = 17;
+            this.gridColumn260.Width = 333;
+            // 
+            // gridColumn261
+            // 
+            this.gridColumn261.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn261.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn261.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn261.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn261.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn261.Caption = "توضیحات";
+            this.gridColumn261.FieldName = "Tozihat";
+            this.gridColumn261.MinWidth = 25;
+            this.gridColumn261.Name = "gridColumn261";
+            this.gridColumn261.Visible = true;
+            this.gridColumn261.VisibleIndex = 18;
+            this.gridColumn261.Width = 500;
+            // 
+            // gridColumn262
+            // 
+            this.gridColumn262.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn262.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn262.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn262.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn262.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn262.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn262.Caption = "سریال";
+            this.gridColumn262.FieldName = "Seryal";
+            this.gridColumn262.MinWidth = 25;
+            this.gridColumn262.Name = "gridColumn262";
+            this.gridColumn262.Visible = true;
+            this.gridColumn262.VisibleIndex = 19;
+            this.gridColumn262.Width = 111;
+            // 
+            // gridColumn359
+            // 
+            this.gridColumn359.Caption = "شرح سند";
+            this.gridColumn359.FieldName = "SharhSanad";
+            this.gridColumn359.MinWidth = 25;
+            this.gridColumn359.Name = "gridColumn359";
+            this.gridColumn359.Width = 94;
+            // 
+            // xtp_HavaleHazine
+            // 
+            this.xtp_HavaleHazine.Controls.Add(this.gridControl_HavaleHazine);
+            this.xtp_HavaleHazine.Name = "xtp_HavaleHazine";
+            this.xtp_HavaleHazine.Size = new System.Drawing.Size(1414, 619);
+            this.xtp_HavaleHazine.Text = "حواله هزینه";
+            // 
+            // gridControl_HavaleHazine
+            // 
+            this.gridControl_HavaleHazine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_HavaleHazine.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleHazine.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_HavaleHazine.MainView = this.gridView_HavaleHazine;
+            this.gridControl_HavaleHazine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleHazine.Name = "gridControl_HavaleHazine";
+            this.gridControl_HavaleHazine.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_HavaleHazine.TabIndex = 37;
+            this.gridControl_HavaleHazine.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_HavaleHazine});
+            // 
+            // gridView_HavaleHazine
+            // 
+            this.gridView_HavaleHazine.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn263,
+            this.gridColumn264,
+            this.gridColumn265,
+            this.gridColumn266,
+            this.gridColumn267,
+            this.gridColumn268,
+            this.gridColumn269,
+            this.gridColumn270,
+            this.gridColumn271,
+            this.gridColumn272,
+            this.gridColumn273,
+            this.gridColumn274,
+            this.gridColumn275,
+            this.gridColumn276,
+            this.gridColumn277,
+            this.gridColumn278,
+            this.gridColumn279,
+            this.gridColumn280,
+            this.gridColumn281,
+            this.gridColumn282,
+            this.gridColumn283,
+            this.gridColumn360});
+            this.gridView_HavaleHazine.DetailHeight = 392;
+            this.gridView_HavaleHazine.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_HavaleHazine.GridControl = this.gridControl_HavaleHazine;
+            this.gridView_HavaleHazine.GroupCount = 1;
+            this.gridView_HavaleHazine.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_HavaleHazine.IndicatorWidth = 28;
+            this.gridView_HavaleHazine.Name = "gridView_HavaleHazine";
+            this.gridView_HavaleHazine.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_HavaleHazine.OptionsBehavior.Editable = false;
+            this.gridView_HavaleHazine.OptionsFind.AllowFindPanel = false;
+            this.gridView_HavaleHazine.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_HavaleHazine.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_HavaleHazine.OptionsMenu.ShowFooterItem = true;
+            this.gridView_HavaleHazine.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_HavaleHazine.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_HavaleHazine.OptionsView.ColumnAutoWidth = false;
+            this.gridView_HavaleHazine.OptionsView.RowAutoHeight = true;
+            this.gridView_HavaleHazine.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_HavaleHazine.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn283, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_HavaleHazine.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_HavaleHazine.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_HavaleHazine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_HavaleHazine.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn263
+            // 
+            this.gridColumn263.FieldName = "Id";
+            this.gridColumn263.MinWidth = 21;
+            this.gridColumn263.Name = "gridColumn263";
+            this.gridColumn263.Width = 84;
+            // 
+            // gridColumn264
+            // 
+            this.gridColumn264.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn264.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn264.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn264.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn264.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn264.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn264.Caption = "سریال";
+            this.gridColumn264.FieldName = "Seryal";
+            this.gridColumn264.MinWidth = 21;
+            this.gridColumn264.Name = "gridColumn264";
+            this.gridColumn264.Visible = true;
+            this.gridColumn264.VisibleIndex = 0;
+            this.gridColumn264.Width = 120;
+            // 
+            // gridColumn265
+            // 
+            this.gridColumn265.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn265.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn265.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn265.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn265.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn265.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn265.Caption = "تاریخ";
+            this.gridColumn265.DisplayFormat.FormatString = "d";
+            this.gridColumn265.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn265.FieldName = "DateTimeSanad";
+            this.gridColumn265.MinWidth = 21;
+            this.gridColumn265.Name = "gridColumn265";
+            this.gridColumn265.Visible = true;
+            this.gridColumn265.VisibleIndex = 1;
+            this.gridColumn265.Width = 154;
+            // 
+            // gridColumn266
+            // 
+            this.gridColumn266.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn266.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn266.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn266.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn266.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn266.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn266.Caption = "شماره سند";
+            this.gridColumn266.FieldName = "SanadNamber";
+            this.gridColumn266.MinWidth = 23;
+            this.gridColumn266.Name = "gridColumn266";
+            this.gridColumn266.Visible = true;
+            this.gridColumn266.VisibleIndex = 2;
+            this.gridColumn266.Width = 134;
+            // 
+            // gridColumn267
+            // 
+            this.gridColumn267.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn267.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn267.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn267.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn267.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn267.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn267.Caption = "کد تفصیلی";
+            this.gridColumn267.FieldName = "TafsiliCode";
+            this.gridColumn267.MinWidth = 21;
+            this.gridColumn267.Name = "gridColumn267";
+            this.gridColumn267.Visible = true;
+            this.gridColumn267.VisibleIndex = 3;
+            this.gridColumn267.Width = 153;
+            // 
+            // gridColumn268
+            // 
+            this.gridColumn268.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn268.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn268.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn268.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn268.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn268.Caption = "حساب تفصیلی";
+            this.gridColumn268.FieldName = "TafsiliName";
+            this.gridColumn268.MinWidth = 21;
+            this.gridColumn268.Name = "gridColumn268";
+            this.gridColumn268.Visible = true;
+            this.gridColumn268.VisibleIndex = 4;
+            this.gridColumn268.Width = 377;
+            // 
+            // gridColumn269
+            // 
+            this.gridColumn269.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn269.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn269.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn269.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn269.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn269.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn269.Caption = "شماره فاکتور";
+            this.gridColumn269.FieldName = "FactorNamber";
+            this.gridColumn269.MinWidth = 25;
+            this.gridColumn269.Name = "gridColumn269";
+            this.gridColumn269.Visible = true;
+            this.gridColumn269.VisibleIndex = 5;
+            this.gridColumn269.Width = 124;
+            // 
+            // gridColumn270
+            // 
+            this.gridColumn270.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn270.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn270.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn270.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn270.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn270.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn270.Caption = "ردیف";
+            this.gridColumn270.FieldName = "Radif";
+            this.gridColumn270.MinWidth = 25;
+            this.gridColumn270.Name = "gridColumn270";
+            this.gridColumn270.Visible = true;
+            this.gridColumn270.VisibleIndex = 6;
+            this.gridColumn270.Width = 76;
+            // 
+            // gridColumn271
+            // 
+            this.gridColumn271.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn271.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn271.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn271.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn271.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn271.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn271.Caption = "کد کالا";
+            this.gridColumn271.FieldName = "KalaCode";
+            this.gridColumn271.MinWidth = 25;
+            this.gridColumn271.Name = "gridColumn271";
+            this.gridColumn271.Visible = true;
+            this.gridColumn271.VisibleIndex = 7;
+            this.gridColumn271.Width = 155;
+            // 
+            // gridColumn272
+            // 
+            this.gridColumn272.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn272.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn272.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn272.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn272.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn272.Caption = "نام کالا";
+            this.gridColumn272.FieldName = "KalaName";
+            this.gridColumn272.MinWidth = 25;
+            this.gridColumn272.Name = "gridColumn272";
+            this.gridColumn272.Visible = true;
+            this.gridColumn272.VisibleIndex = 8;
+            this.gridColumn272.Width = 364;
+            // 
+            // gridColumn273
+            // 
+            this.gridColumn273.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn273.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn273.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn273.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn273.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn273.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn273.Caption = "واحد کالا";
+            this.gridColumn273.FieldName = "VahedeKala";
+            this.gridColumn273.MinWidth = 25;
+            this.gridColumn273.Name = "gridColumn273";
+            this.gridColumn273.Visible = true;
+            this.gridColumn273.VisibleIndex = 9;
+            this.gridColumn273.Width = 120;
+            // 
+            // gridColumn274
+            // 
+            this.gridColumn274.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn274.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn274.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn274.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn274.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn274.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn274.Caption = "مقدار / تعداد";
+            this.gridColumn274.DisplayFormat.FormatString = "c3";
+            this.gridColumn274.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn274.FieldName = "Meghdar";
+            this.gridColumn274.MinWidth = 25;
+            this.gridColumn274.Name = "gridColumn274";
+            this.gridColumn274.Visible = true;
+            this.gridColumn274.VisibleIndex = 10;
+            this.gridColumn274.Width = 141;
+            // 
+            // gridColumn275
+            // 
+            this.gridColumn275.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn275.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn275.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn275.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn275.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn275.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn275.Caption = "نرخ";
+            this.gridColumn275.DisplayFormat.FormatString = "c3";
+            this.gridColumn275.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn275.FieldName = "Nerkh";
+            this.gridColumn275.MinWidth = 25;
+            this.gridColumn275.Name = "gridColumn275";
+            this.gridColumn275.Visible = true;
+            this.gridColumn275.VisibleIndex = 11;
+            this.gridColumn275.Width = 158;
+            // 
+            // gridColumn276
+            // 
+            this.gridColumn276.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn276.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn276.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn276.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn276.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn276.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn276.Caption = "مبلغ";
+            this.gridColumn276.DisplayFormat.FormatString = "n";
+            this.gridColumn276.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn276.FieldName = "Mablag";
+            this.gridColumn276.MinWidth = 25;
+            this.gridColumn276.Name = "gridColumn276";
+            this.gridColumn276.Visible = true;
+            this.gridColumn276.VisibleIndex = 12;
+            this.gridColumn276.Width = 200;
+            // 
+            // gridColumn277
+            // 
+            this.gridColumn277.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn277.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn277.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn277.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn277.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn277.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn277.Caption = "ریالی شده";
+            this.gridColumn277.FieldName = "IsRiali";
+            this.gridColumn277.MinWidth = 25;
+            this.gridColumn277.Name = "gridColumn277";
+            this.gridColumn277.Visible = true;
+            this.gridColumn277.VisibleIndex = 13;
+            this.gridColumn277.Width = 103;
+            // 
+            // gridColumn278
+            // 
+            this.gridColumn278.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn278.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn278.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn278.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn278.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn278.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn278.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn278.DisplayFormat.FormatString = "G";
+            this.gridColumn278.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn278.FieldName = "DateTimeInsert";
+            this.gridColumn278.MinWidth = 25;
+            this.gridColumn278.Name = "gridColumn278";
+            this.gridColumn278.Visible = true;
+            this.gridColumn278.VisibleIndex = 14;
+            this.gridColumn278.Width = 277;
+            // 
+            // gridColumn279
+            // 
+            this.gridColumn279.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn279.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn279.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn279.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn279.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn279.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn279.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn279.DisplayFormat.FormatString = "G";
+            this.gridColumn279.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn279.FieldName = "DateTimeEdit";
+            this.gridColumn279.MinWidth = 25;
+            this.gridColumn279.Name = "gridColumn279";
+            this.gridColumn279.Visible = true;
+            this.gridColumn279.VisibleIndex = 15;
+            this.gridColumn279.Width = 285;
+            // 
+            // gridColumn280
+            // 
+            this.gridColumn280.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn280.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn280.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn280.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn280.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn280.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn280.Caption = "کد معین";
+            this.gridColumn280.FieldName = "MoinCode";
+            this.gridColumn280.MinWidth = 25;
+            this.gridColumn280.Name = "gridColumn280";
+            this.gridColumn280.Visible = true;
+            this.gridColumn280.VisibleIndex = 16;
+            this.gridColumn280.Width = 176;
+            // 
+            // gridColumn281
+            // 
+            this.gridColumn281.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn281.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn281.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn281.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn281.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn281.Caption = "حساب معین";
+            this.gridColumn281.FieldName = "MoinName";
+            this.gridColumn281.MinWidth = 25;
+            this.gridColumn281.Name = "gridColumn281";
+            this.gridColumn281.Visible = true;
+            this.gridColumn281.VisibleIndex = 17;
+            this.gridColumn281.Width = 333;
+            // 
+            // gridColumn282
+            // 
+            this.gridColumn282.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn282.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn282.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn282.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn282.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn282.Caption = "توضیحات";
+            this.gridColumn282.FieldName = "Tozihat";
+            this.gridColumn282.MinWidth = 25;
+            this.gridColumn282.Name = "gridColumn282";
+            this.gridColumn282.Visible = true;
+            this.gridColumn282.VisibleIndex = 18;
+            this.gridColumn282.Width = 500;
+            // 
+            // gridColumn283
+            // 
+            this.gridColumn283.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn283.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn283.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn283.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn283.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn283.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn283.Caption = "سریال";
+            this.gridColumn283.FieldName = "Seryal";
+            this.gridColumn283.MinWidth = 25;
+            this.gridColumn283.Name = "gridColumn283";
+            this.gridColumn283.Visible = true;
+            this.gridColumn283.VisibleIndex = 19;
+            this.gridColumn283.Width = 111;
+            // 
+            // gridColumn360
+            // 
+            this.gridColumn360.Caption = "شرح سند";
+            this.gridColumn360.FieldName = "SharhSanad";
+            this.gridColumn360.MinWidth = 25;
+            this.gridColumn360.Name = "gridColumn360";
+            this.gridColumn360.Width = 94;
+            // 
+            // xtp_HavaleAmval
+            // 
+            this.xtp_HavaleAmval.Controls.Add(this.gridControl_HavaleAmval);
+            this.xtp_HavaleAmval.Name = "xtp_HavaleAmval";
+            this.xtp_HavaleAmval.Size = new System.Drawing.Size(1414, 619);
+            this.xtp_HavaleAmval.Text = "حواله اموال";
+            // 
+            // gridControl_HavaleAmval
+            // 
+            this.gridControl_HavaleAmval.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_HavaleAmval.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleAmval.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_HavaleAmval.MainView = this.gridView_HavaleAmval;
+            this.gridControl_HavaleAmval.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_HavaleAmval.Name = "gridControl_HavaleAmval";
+            this.gridControl_HavaleAmval.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_HavaleAmval.TabIndex = 38;
+            this.gridControl_HavaleAmval.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_HavaleAmval});
+            // 
+            // gridView_HavaleAmval
+            // 
+            this.gridView_HavaleAmval.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn407,
+            this.gridColumn408,
+            this.gridColumn409,
+            this.gridColumn410,
+            this.gridColumn411,
+            this.gridColumn412,
+            this.gridColumn413,
+            this.gridColumn414,
+            this.gridColumn415,
+            this.gridColumn416,
+            this.gridColumn417,
+            this.gridColumn418,
+            this.gridColumn419,
+            this.gridColumn420,
+            this.gridColumn421,
+            this.gridColumn422,
+            this.gridColumn423,
+            this.gridColumn424,
+            this.gridColumn425,
+            this.gridColumn426,
+            this.gridColumn427,
+            this.gridColumn428});
+            this.gridView_HavaleAmval.DetailHeight = 392;
+            this.gridView_HavaleAmval.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_HavaleAmval.GridControl = this.gridControl_HavaleAmval;
+            this.gridView_HavaleAmval.GroupCount = 1;
+            this.gridView_HavaleAmval.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_HavaleAmval.IndicatorWidth = 28;
+            this.gridView_HavaleAmval.Name = "gridView_HavaleAmval";
+            this.gridView_HavaleAmval.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_HavaleAmval.OptionsBehavior.Editable = false;
+            this.gridView_HavaleAmval.OptionsFind.AllowFindPanel = false;
+            this.gridView_HavaleAmval.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_HavaleAmval.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_HavaleAmval.OptionsMenu.ShowFooterItem = true;
+            this.gridView_HavaleAmval.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_HavaleAmval.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_HavaleAmval.OptionsView.ColumnAutoWidth = false;
+            this.gridView_HavaleAmval.OptionsView.RowAutoHeight = true;
+            this.gridView_HavaleAmval.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_HavaleAmval.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn427, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_HavaleAmval.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_HavaleAmval.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_HavaleAmval.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_HavaleAmval.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn407
+            // 
+            this.gridColumn407.FieldName = "Id";
+            this.gridColumn407.MinWidth = 21;
+            this.gridColumn407.Name = "gridColumn407";
+            this.gridColumn407.Width = 84;
+            // 
+            // gridColumn408
+            // 
+            this.gridColumn408.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn408.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn408.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn408.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn408.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn408.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn408.Caption = "سریال";
+            this.gridColumn408.FieldName = "Seryal";
+            this.gridColumn408.MinWidth = 21;
+            this.gridColumn408.Name = "gridColumn408";
+            this.gridColumn408.Visible = true;
+            this.gridColumn408.VisibleIndex = 0;
+            this.gridColumn408.Width = 120;
+            // 
+            // gridColumn409
+            // 
+            this.gridColumn409.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn409.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn409.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn409.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn409.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn409.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn409.Caption = "تاریخ";
+            this.gridColumn409.DisplayFormat.FormatString = "d";
+            this.gridColumn409.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn409.FieldName = "DateTimeSanad";
+            this.gridColumn409.MinWidth = 21;
+            this.gridColumn409.Name = "gridColumn409";
+            this.gridColumn409.Visible = true;
+            this.gridColumn409.VisibleIndex = 1;
+            this.gridColumn409.Width = 154;
+            // 
+            // gridColumn410
+            // 
+            this.gridColumn410.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn410.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn410.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn410.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn410.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn410.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn410.Caption = "شماره سند";
+            this.gridColumn410.FieldName = "SanadNamber";
+            this.gridColumn410.MinWidth = 23;
+            this.gridColumn410.Name = "gridColumn410";
+            this.gridColumn410.Visible = true;
+            this.gridColumn410.VisibleIndex = 2;
+            this.gridColumn410.Width = 134;
+            // 
+            // gridColumn411
+            // 
+            this.gridColumn411.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn411.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn411.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn411.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn411.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn411.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn411.Caption = "کد تفصیلی";
+            this.gridColumn411.FieldName = "TafsiliCode";
+            this.gridColumn411.MinWidth = 21;
+            this.gridColumn411.Name = "gridColumn411";
+            this.gridColumn411.Visible = true;
+            this.gridColumn411.VisibleIndex = 3;
+            this.gridColumn411.Width = 153;
+            // 
+            // gridColumn412
+            // 
+            this.gridColumn412.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn412.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn412.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn412.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn412.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn412.Caption = "حساب تفصیلی";
+            this.gridColumn412.FieldName = "TafsiliName";
+            this.gridColumn412.MinWidth = 21;
+            this.gridColumn412.Name = "gridColumn412";
+            this.gridColumn412.Visible = true;
+            this.gridColumn412.VisibleIndex = 4;
+            this.gridColumn412.Width = 377;
+            // 
+            // gridColumn413
+            // 
+            this.gridColumn413.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn413.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn413.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn413.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn413.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn413.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn413.Caption = "شماره فاکتور";
+            this.gridColumn413.FieldName = "FactorNamber";
+            this.gridColumn413.MinWidth = 25;
+            this.gridColumn413.Name = "gridColumn413";
+            this.gridColumn413.Visible = true;
+            this.gridColumn413.VisibleIndex = 5;
+            this.gridColumn413.Width = 124;
+            // 
+            // gridColumn414
+            // 
+            this.gridColumn414.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn414.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn414.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn414.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn414.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn414.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn414.Caption = "ردیف";
+            this.gridColumn414.FieldName = "Radif";
+            this.gridColumn414.MinWidth = 25;
+            this.gridColumn414.Name = "gridColumn414";
+            this.gridColumn414.Visible = true;
+            this.gridColumn414.VisibleIndex = 6;
+            this.gridColumn414.Width = 76;
+            // 
+            // gridColumn415
+            // 
+            this.gridColumn415.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn415.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn415.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn415.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn415.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn415.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn415.Caption = "کد کالا";
+            this.gridColumn415.FieldName = "KalaCode";
+            this.gridColumn415.MinWidth = 25;
+            this.gridColumn415.Name = "gridColumn415";
+            this.gridColumn415.Visible = true;
+            this.gridColumn415.VisibleIndex = 7;
+            this.gridColumn415.Width = 155;
+            // 
+            // gridColumn416
+            // 
+            this.gridColumn416.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn416.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn416.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn416.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn416.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn416.Caption = "نام کالا";
+            this.gridColumn416.FieldName = "KalaName";
+            this.gridColumn416.MinWidth = 25;
+            this.gridColumn416.Name = "gridColumn416";
+            this.gridColumn416.Visible = true;
+            this.gridColumn416.VisibleIndex = 8;
+            this.gridColumn416.Width = 364;
+            // 
+            // gridColumn417
+            // 
+            this.gridColumn417.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn417.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn417.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn417.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn417.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn417.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn417.Caption = "واحد کالا";
+            this.gridColumn417.FieldName = "VahedeKala";
+            this.gridColumn417.MinWidth = 25;
+            this.gridColumn417.Name = "gridColumn417";
+            this.gridColumn417.Visible = true;
+            this.gridColumn417.VisibleIndex = 9;
+            this.gridColumn417.Width = 120;
+            // 
+            // gridColumn418
+            // 
+            this.gridColumn418.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn418.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn418.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn418.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn418.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn418.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn418.Caption = "مقدار / تعداد";
+            this.gridColumn418.DisplayFormat.FormatString = "c3";
+            this.gridColumn418.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn418.FieldName = "Meghdar";
+            this.gridColumn418.MinWidth = 25;
+            this.gridColumn418.Name = "gridColumn418";
+            this.gridColumn418.Visible = true;
+            this.gridColumn418.VisibleIndex = 10;
+            this.gridColumn418.Width = 142;
+            // 
+            // gridColumn419
+            // 
+            this.gridColumn419.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn419.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn419.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn419.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn419.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn419.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn419.Caption = "نرخ";
+            this.gridColumn419.DisplayFormat.FormatString = "c3";
+            this.gridColumn419.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn419.FieldName = "Nerkh";
+            this.gridColumn419.MinWidth = 25;
+            this.gridColumn419.Name = "gridColumn419";
+            this.gridColumn419.Visible = true;
+            this.gridColumn419.VisibleIndex = 11;
+            this.gridColumn419.Width = 156;
+            // 
+            // gridColumn420
+            // 
+            this.gridColumn420.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn420.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn420.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn420.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn420.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn420.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn420.Caption = "مبلغ";
+            this.gridColumn420.DisplayFormat.FormatString = "n";
+            this.gridColumn420.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn420.FieldName = "Mablag";
+            this.gridColumn420.MinWidth = 25;
+            this.gridColumn420.Name = "gridColumn420";
+            this.gridColumn420.Visible = true;
+            this.gridColumn420.VisibleIndex = 12;
+            this.gridColumn420.Width = 198;
+            // 
+            // gridColumn421
+            // 
+            this.gridColumn421.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn421.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn421.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn421.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn421.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn421.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn421.Caption = "ریالی شده";
+            this.gridColumn421.FieldName = "IsRiali";
+            this.gridColumn421.MinWidth = 25;
+            this.gridColumn421.Name = "gridColumn421";
+            this.gridColumn421.Visible = true;
+            this.gridColumn421.VisibleIndex = 13;
+            this.gridColumn421.Width = 101;
+            // 
+            // gridColumn422
+            // 
+            this.gridColumn422.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn422.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn422.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn422.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn422.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn422.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn422.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn422.DisplayFormat.FormatString = "G";
+            this.gridColumn422.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn422.FieldName = "DateTimeInsert";
+            this.gridColumn422.MinWidth = 25;
+            this.gridColumn422.Name = "gridColumn422";
+            this.gridColumn422.Visible = true;
+            this.gridColumn422.VisibleIndex = 14;
+            this.gridColumn422.Width = 277;
+            // 
+            // gridColumn423
+            // 
+            this.gridColumn423.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn423.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn423.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn423.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn423.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn423.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn423.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn423.DisplayFormat.FormatString = "G";
+            this.gridColumn423.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn423.FieldName = "DateTimeEdit";
+            this.gridColumn423.MinWidth = 25;
+            this.gridColumn423.Name = "gridColumn423";
+            this.gridColumn423.Visible = true;
+            this.gridColumn423.VisibleIndex = 15;
+            this.gridColumn423.Width = 285;
+            // 
+            // gridColumn424
+            // 
+            this.gridColumn424.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn424.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn424.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn424.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn424.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn424.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn424.Caption = "کد معین";
+            this.gridColumn424.FieldName = "MoinCode";
+            this.gridColumn424.MinWidth = 25;
+            this.gridColumn424.Name = "gridColumn424";
+            this.gridColumn424.Visible = true;
+            this.gridColumn424.VisibleIndex = 16;
+            this.gridColumn424.Width = 176;
+            // 
+            // gridColumn425
+            // 
+            this.gridColumn425.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn425.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn425.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn425.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn425.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn425.Caption = "حساب معین";
+            this.gridColumn425.FieldName = "MoinName";
+            this.gridColumn425.MinWidth = 25;
+            this.gridColumn425.Name = "gridColumn425";
+            this.gridColumn425.Visible = true;
+            this.gridColumn425.VisibleIndex = 17;
+            this.gridColumn425.Width = 333;
+            // 
+            // gridColumn426
+            // 
+            this.gridColumn426.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn426.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn426.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn426.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn426.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn426.Caption = "توضیحات";
+            this.gridColumn426.FieldName = "Tozihat";
+            this.gridColumn426.MinWidth = 25;
+            this.gridColumn426.Name = "gridColumn426";
+            this.gridColumn426.Visible = true;
+            this.gridColumn426.VisibleIndex = 18;
+            this.gridColumn426.Width = 500;
+            // 
+            // gridColumn427
+            // 
+            this.gridColumn427.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn427.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn427.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn427.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn427.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn427.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn427.Caption = "سریال";
+            this.gridColumn427.FieldName = "Seryal";
+            this.gridColumn427.MinWidth = 25;
+            this.gridColumn427.Name = "gridColumn427";
+            this.gridColumn427.Visible = true;
+            this.gridColumn427.VisibleIndex = 19;
+            this.gridColumn427.Width = 111;
+            // 
+            // gridColumn428
+            // 
+            this.gridColumn428.Caption = "شرح سند";
+            this.gridColumn428.FieldName = "SharhSanad";
+            this.gridColumn428.MinWidth = 25;
+            this.gridColumn428.Name = "gridColumn428";
+            this.gridColumn428.Width = 94;
             // 
             // xtp_KosoratAnbar
             // 
+            this.xtp_KosoratAnbar.Controls.Add(this.gridControl_KosoratAnbar);
             this.xtp_KosoratAnbar.Name = "xtp_KosoratAnbar";
             this.xtp_KosoratAnbar.Size = new System.Drawing.Size(1414, 619);
             this.xtp_KosoratAnbar.Text = "کسورات انبـار";
             // 
-            // xtp_Khoroji
+            // gridControl_KosoratAnbar
             // 
-            this.xtp_Khoroji.Name = "xtp_Khoroji";
-            this.xtp_Khoroji.Size = new System.Drawing.Size(1414, 619);
-            this.xtp_Khoroji.Text = "همـه";
+            this.gridControl_KosoratAnbar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_KosoratAnbar.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_KosoratAnbar.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_KosoratAnbar.MainView = this.gridView_KosoratAnbar;
+            this.gridControl_KosoratAnbar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_KosoratAnbar.Name = "gridControl_KosoratAnbar";
+            this.gridControl_KosoratAnbar.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_KosoratAnbar.TabIndex = 37;
+            this.gridControl_KosoratAnbar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_KosoratAnbar});
             // 
-            // xtpJabejaeeKala
+            // gridView_KosoratAnbar
             // 
-            this.xtpJabejaeeKala.Name = "xtpJabejaeeKala";
-            this.xtpJabejaeeKala.Size = new System.Drawing.Size(1421, 668);
-            this.xtpJabejaeeKala.Text = "جابجایی کــالا بین انبارها";
+            this.gridView_KosoratAnbar.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn284,
+            this.gridColumn285,
+            this.gridColumn286,
+            this.gridColumn287,
+            this.gridColumn288,
+            this.gridColumn289,
+            this.gridColumn290,
+            this.gridColumn291,
+            this.gridColumn292,
+            this.gridColumn293,
+            this.gridColumn294,
+            this.gridColumn295,
+            this.gridColumn296,
+            this.gridColumn297,
+            this.gridColumn298,
+            this.gridColumn299,
+            this.gridColumn300,
+            this.gridColumn301,
+            this.gridColumn302,
+            this.gridColumn303,
+            this.gridColumn304,
+            this.gridColumn361});
+            this.gridView_KosoratAnbar.DetailHeight = 392;
+            this.gridView_KosoratAnbar.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_KosoratAnbar.GridControl = this.gridControl_KosoratAnbar;
+            this.gridView_KosoratAnbar.GroupCount = 1;
+            this.gridView_KosoratAnbar.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_KosoratAnbar.IndicatorWidth = 28;
+            this.gridView_KosoratAnbar.Name = "gridView_KosoratAnbar";
+            this.gridView_KosoratAnbar.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_KosoratAnbar.OptionsBehavior.Editable = false;
+            this.gridView_KosoratAnbar.OptionsFind.AllowFindPanel = false;
+            this.gridView_KosoratAnbar.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_KosoratAnbar.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_KosoratAnbar.OptionsMenu.ShowFooterItem = true;
+            this.gridView_KosoratAnbar.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_KosoratAnbar.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_KosoratAnbar.OptionsView.ColumnAutoWidth = false;
+            this.gridView_KosoratAnbar.OptionsView.RowAutoHeight = true;
+            this.gridView_KosoratAnbar.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_KosoratAnbar.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn304, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_KosoratAnbar.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_KosoratAnbar.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_KosoratAnbar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_KosoratAnbar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn284
+            // 
+            this.gridColumn284.FieldName = "Id";
+            this.gridColumn284.MinWidth = 21;
+            this.gridColumn284.Name = "gridColumn284";
+            this.gridColumn284.Width = 84;
+            // 
+            // gridColumn285
+            // 
+            this.gridColumn285.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn285.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn285.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn285.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn285.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn285.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn285.Caption = "سریال";
+            this.gridColumn285.FieldName = "Seryal";
+            this.gridColumn285.MinWidth = 21;
+            this.gridColumn285.Name = "gridColumn285";
+            this.gridColumn285.Visible = true;
+            this.gridColumn285.VisibleIndex = 0;
+            this.gridColumn285.Width = 120;
+            // 
+            // gridColumn286
+            // 
+            this.gridColumn286.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn286.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn286.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn286.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn286.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn286.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn286.Caption = "تاریخ";
+            this.gridColumn286.DisplayFormat.FormatString = "d";
+            this.gridColumn286.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn286.FieldName = "DateTimeSanad";
+            this.gridColumn286.MinWidth = 21;
+            this.gridColumn286.Name = "gridColumn286";
+            this.gridColumn286.Visible = true;
+            this.gridColumn286.VisibleIndex = 1;
+            this.gridColumn286.Width = 154;
+            // 
+            // gridColumn287
+            // 
+            this.gridColumn287.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn287.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn287.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn287.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn287.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn287.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn287.Caption = "شماره سند";
+            this.gridColumn287.FieldName = "SanadNamber";
+            this.gridColumn287.MinWidth = 23;
+            this.gridColumn287.Name = "gridColumn287";
+            this.gridColumn287.Visible = true;
+            this.gridColumn287.VisibleIndex = 2;
+            this.gridColumn287.Width = 134;
+            // 
+            // gridColumn288
+            // 
+            this.gridColumn288.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn288.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn288.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn288.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn288.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn288.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn288.Caption = "کد تفصیلی";
+            this.gridColumn288.FieldName = "TafsiliCode";
+            this.gridColumn288.MinWidth = 21;
+            this.gridColumn288.Name = "gridColumn288";
+            this.gridColumn288.Visible = true;
+            this.gridColumn288.VisibleIndex = 3;
+            this.gridColumn288.Width = 153;
+            // 
+            // gridColumn289
+            // 
+            this.gridColumn289.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn289.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn289.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn289.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn289.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn289.Caption = "حساب تفصیلی";
+            this.gridColumn289.FieldName = "TafsiliName";
+            this.gridColumn289.MinWidth = 21;
+            this.gridColumn289.Name = "gridColumn289";
+            this.gridColumn289.Visible = true;
+            this.gridColumn289.VisibleIndex = 4;
+            this.gridColumn289.Width = 377;
+            // 
+            // gridColumn290
+            // 
+            this.gridColumn290.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn290.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn290.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn290.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn290.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn290.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn290.Caption = "شماره فاکتور";
+            this.gridColumn290.FieldName = "FactorNamber";
+            this.gridColumn290.MinWidth = 25;
+            this.gridColumn290.Name = "gridColumn290";
+            this.gridColumn290.Visible = true;
+            this.gridColumn290.VisibleIndex = 5;
+            this.gridColumn290.Width = 124;
+            // 
+            // gridColumn291
+            // 
+            this.gridColumn291.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn291.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn291.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn291.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn291.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn291.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn291.Caption = "ردیف";
+            this.gridColumn291.FieldName = "Radif";
+            this.gridColumn291.MinWidth = 25;
+            this.gridColumn291.Name = "gridColumn291";
+            this.gridColumn291.Visible = true;
+            this.gridColumn291.VisibleIndex = 6;
+            this.gridColumn291.Width = 76;
+            // 
+            // gridColumn292
+            // 
+            this.gridColumn292.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn292.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn292.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn292.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn292.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn292.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn292.Caption = "کد کالا";
+            this.gridColumn292.FieldName = "KalaCode";
+            this.gridColumn292.MinWidth = 25;
+            this.gridColumn292.Name = "gridColumn292";
+            this.gridColumn292.Visible = true;
+            this.gridColumn292.VisibleIndex = 7;
+            this.gridColumn292.Width = 155;
+            // 
+            // gridColumn293
+            // 
+            this.gridColumn293.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn293.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn293.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn293.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn293.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn293.Caption = "نام کالا";
+            this.gridColumn293.FieldName = "KalaName";
+            this.gridColumn293.MinWidth = 25;
+            this.gridColumn293.Name = "gridColumn293";
+            this.gridColumn293.Visible = true;
+            this.gridColumn293.VisibleIndex = 8;
+            this.gridColumn293.Width = 364;
+            // 
+            // gridColumn294
+            // 
+            this.gridColumn294.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn294.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn294.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn294.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn294.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn294.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn294.Caption = "واحد کالا";
+            this.gridColumn294.FieldName = "VahedeKala";
+            this.gridColumn294.MinWidth = 25;
+            this.gridColumn294.Name = "gridColumn294";
+            this.gridColumn294.Visible = true;
+            this.gridColumn294.VisibleIndex = 9;
+            this.gridColumn294.Width = 120;
+            // 
+            // gridColumn295
+            // 
+            this.gridColumn295.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn295.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn295.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn295.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn295.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn295.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn295.Caption = "مقدار / تعداد";
+            this.gridColumn295.DisplayFormat.FormatString = "c3";
+            this.gridColumn295.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn295.FieldName = "Meghdar";
+            this.gridColumn295.MinWidth = 25;
+            this.gridColumn295.Name = "gridColumn295";
+            this.gridColumn295.Visible = true;
+            this.gridColumn295.VisibleIndex = 10;
+            this.gridColumn295.Width = 142;
+            // 
+            // gridColumn296
+            // 
+            this.gridColumn296.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn296.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn296.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn296.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn296.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn296.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn296.Caption = "نرخ";
+            this.gridColumn296.DisplayFormat.FormatString = "c3";
+            this.gridColumn296.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn296.FieldName = "Nerkh";
+            this.gridColumn296.MinWidth = 25;
+            this.gridColumn296.Name = "gridColumn296";
+            this.gridColumn296.Visible = true;
+            this.gridColumn296.VisibleIndex = 11;
+            this.gridColumn296.Width = 158;
+            // 
+            // gridColumn297
+            // 
+            this.gridColumn297.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn297.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn297.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn297.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn297.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn297.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn297.Caption = "مبلغ";
+            this.gridColumn297.DisplayFormat.FormatString = "n";
+            this.gridColumn297.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn297.FieldName = "Mablag";
+            this.gridColumn297.MinWidth = 25;
+            this.gridColumn297.Name = "gridColumn297";
+            this.gridColumn297.Visible = true;
+            this.gridColumn297.VisibleIndex = 12;
+            this.gridColumn297.Width = 200;
+            // 
+            // gridColumn298
+            // 
+            this.gridColumn298.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn298.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn298.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn298.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn298.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn298.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn298.Caption = "ریالی شده";
+            this.gridColumn298.FieldName = "IsRiali";
+            this.gridColumn298.MinWidth = 25;
+            this.gridColumn298.Name = "gridColumn298";
+            this.gridColumn298.Visible = true;
+            this.gridColumn298.VisibleIndex = 13;
+            this.gridColumn298.Width = 101;
+            // 
+            // gridColumn299
+            // 
+            this.gridColumn299.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn299.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn299.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn299.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn299.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn299.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn299.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn299.DisplayFormat.FormatString = "G";
+            this.gridColumn299.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn299.FieldName = "DateTimeInsert";
+            this.gridColumn299.MinWidth = 25;
+            this.gridColumn299.Name = "gridColumn299";
+            this.gridColumn299.Visible = true;
+            this.gridColumn299.VisibleIndex = 14;
+            this.gridColumn299.Width = 277;
+            // 
+            // gridColumn300
+            // 
+            this.gridColumn300.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn300.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn300.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn300.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn300.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn300.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn300.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn300.DisplayFormat.FormatString = "G";
+            this.gridColumn300.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn300.FieldName = "DateTimeEdit";
+            this.gridColumn300.MinWidth = 25;
+            this.gridColumn300.Name = "gridColumn300";
+            this.gridColumn300.Visible = true;
+            this.gridColumn300.VisibleIndex = 15;
+            this.gridColumn300.Width = 285;
+            // 
+            // gridColumn301
+            // 
+            this.gridColumn301.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn301.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn301.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn301.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn301.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn301.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn301.Caption = "کد معین";
+            this.gridColumn301.FieldName = "MoinCode";
+            this.gridColumn301.MinWidth = 25;
+            this.gridColumn301.Name = "gridColumn301";
+            this.gridColumn301.Visible = true;
+            this.gridColumn301.VisibleIndex = 16;
+            this.gridColumn301.Width = 176;
+            // 
+            // gridColumn302
+            // 
+            this.gridColumn302.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn302.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn302.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn302.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn302.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn302.Caption = "حساب معین";
+            this.gridColumn302.FieldName = "MoinName";
+            this.gridColumn302.MinWidth = 25;
+            this.gridColumn302.Name = "gridColumn302";
+            this.gridColumn302.Visible = true;
+            this.gridColumn302.VisibleIndex = 17;
+            this.gridColumn302.Width = 333;
+            // 
+            // gridColumn303
+            // 
+            this.gridColumn303.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn303.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn303.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn303.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn303.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn303.Caption = "توضیحات";
+            this.gridColumn303.FieldName = "Tozihat";
+            this.gridColumn303.MinWidth = 25;
+            this.gridColumn303.Name = "gridColumn303";
+            this.gridColumn303.Visible = true;
+            this.gridColumn303.VisibleIndex = 18;
+            this.gridColumn303.Width = 500;
+            // 
+            // gridColumn304
+            // 
+            this.gridColumn304.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn304.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn304.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn304.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn304.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn304.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn304.Caption = "سریال";
+            this.gridColumn304.FieldName = "Seryal";
+            this.gridColumn304.MinWidth = 25;
+            this.gridColumn304.Name = "gridColumn304";
+            this.gridColumn304.Visible = true;
+            this.gridColumn304.VisibleIndex = 19;
+            this.gridColumn304.Width = 111;
+            // 
+            // gridColumn361
+            // 
+            this.gridColumn361.Caption = "شرح سند";
+            this.gridColumn361.FieldName = "SharhSanad";
+            this.gridColumn361.MinWidth = 25;
+            this.gridColumn361.Name = "gridColumn361";
+            this.gridColumn361.Width = 94;
+            // 
+            // xtp_AllKhoroji
+            // 
+            this.xtp_AllKhoroji.Controls.Add(this.gridControl_AllKhoroji);
+            this.xtp_AllKhoroji.Name = "xtp_AllKhoroji";
+            this.xtp_AllKhoroji.Size = new System.Drawing.Size(1414, 619);
+            this.xtp_AllKhoroji.Text = "همـه";
+            // 
+            // gridControl_AllKhoroji
+            // 
+            this.gridControl_AllKhoroji.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_AllKhoroji.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_AllKhoroji.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_AllKhoroji.MainView = this.gridView_AllKhoroji;
+            this.gridControl_AllKhoroji.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_AllKhoroji.Name = "gridControl_AllKhoroji";
+            this.gridControl_AllKhoroji.Size = new System.Drawing.Size(1414, 619);
+            this.gridControl_AllKhoroji.TabIndex = 37;
+            this.gridControl_AllKhoroji.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_AllKhoroji});
+            // 
+            // gridView_AllKhoroji
+            // 
+            this.gridView_AllKhoroji.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn305,
+            this.gridColumn306,
+            this.gridColumn307,
+            this.gridColumn308,
+            this.gridColumn309,
+            this.gridColumn310,
+            this.gridColumn311,
+            this.gridColumn312,
+            this.gridColumn313,
+            this.gridColumn314,
+            this.gridColumn315,
+            this.gridColumn316,
+            this.gridColumn317,
+            this.gridColumn318,
+            this.gridColumn319,
+            this.gridColumn320,
+            this.gridColumn321,
+            this.gridColumn322,
+            this.gridColumn323,
+            this.gridColumn324,
+            this.gridColumn326,
+            this.gridColumn325});
+            this.gridView_AllKhoroji.DetailHeight = 392;
+            this.gridView_AllKhoroji.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_AllKhoroji.GridControl = this.gridControl_AllKhoroji;
+            this.gridView_AllKhoroji.GroupCount = 2;
+            this.gridView_AllKhoroji.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_AllKhoroji.IndicatorWidth = 28;
+            this.gridView_AllKhoroji.Name = "gridView_AllKhoroji";
+            this.gridView_AllKhoroji.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_AllKhoroji.OptionsBehavior.Editable = false;
+            this.gridView_AllKhoroji.OptionsFind.AllowFindPanel = false;
+            this.gridView_AllKhoroji.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_AllKhoroji.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_AllKhoroji.OptionsMenu.ShowFooterItem = true;
+            this.gridView_AllKhoroji.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_AllKhoroji.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_AllKhoroji.OptionsView.ColumnAutoWidth = false;
+            this.gridView_AllKhoroji.OptionsView.RowAutoHeight = true;
+            this.gridView_AllKhoroji.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_AllKhoroji.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn326, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn325, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_AllKhoroji.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_AllKhoroji.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_AllKhoroji.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_AllKhoroji.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn305
+            // 
+            this.gridColumn305.FieldName = "Id";
+            this.gridColumn305.MinWidth = 21;
+            this.gridColumn305.Name = "gridColumn305";
+            this.gridColumn305.Width = 84;
+            // 
+            // gridColumn306
+            // 
+            this.gridColumn306.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn306.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn306.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn306.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn306.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn306.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn306.Caption = "سریال";
+            this.gridColumn306.FieldName = "Seryal";
+            this.gridColumn306.MinWidth = 21;
+            this.gridColumn306.Name = "gridColumn306";
+            this.gridColumn306.Visible = true;
+            this.gridColumn306.VisibleIndex = 0;
+            this.gridColumn306.Width = 120;
+            // 
+            // gridColumn307
+            // 
+            this.gridColumn307.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn307.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn307.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn307.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn307.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn307.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn307.Caption = "تاریخ";
+            this.gridColumn307.DisplayFormat.FormatString = "d";
+            this.gridColumn307.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn307.FieldName = "DateTimeSanad";
+            this.gridColumn307.MinWidth = 21;
+            this.gridColumn307.Name = "gridColumn307";
+            this.gridColumn307.Visible = true;
+            this.gridColumn307.VisibleIndex = 1;
+            this.gridColumn307.Width = 154;
+            // 
+            // gridColumn308
+            // 
+            this.gridColumn308.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn308.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn308.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn308.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn308.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn308.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn308.Caption = "شماره سند";
+            this.gridColumn308.FieldName = "SanadNamber";
+            this.gridColumn308.MinWidth = 23;
+            this.gridColumn308.Name = "gridColumn308";
+            this.gridColumn308.Visible = true;
+            this.gridColumn308.VisibleIndex = 2;
+            this.gridColumn308.Width = 134;
+            // 
+            // gridColumn309
+            // 
+            this.gridColumn309.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn309.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn309.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn309.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn309.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn309.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn309.Caption = "کد تفصیلی";
+            this.gridColumn309.FieldName = "TafsiliCode";
+            this.gridColumn309.MinWidth = 21;
+            this.gridColumn309.Name = "gridColumn309";
+            this.gridColumn309.Visible = true;
+            this.gridColumn309.VisibleIndex = 3;
+            this.gridColumn309.Width = 153;
+            // 
+            // gridColumn310
+            // 
+            this.gridColumn310.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn310.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn310.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn310.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn310.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn310.Caption = "حساب تفصیلی";
+            this.gridColumn310.FieldName = "TafsiliName";
+            this.gridColumn310.MinWidth = 21;
+            this.gridColumn310.Name = "gridColumn310";
+            this.gridColumn310.Visible = true;
+            this.gridColumn310.VisibleIndex = 4;
+            this.gridColumn310.Width = 377;
+            // 
+            // gridColumn311
+            // 
+            this.gridColumn311.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn311.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn311.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn311.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn311.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn311.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn311.Caption = "شماره فاکتور";
+            this.gridColumn311.FieldName = "FactorNamber";
+            this.gridColumn311.MinWidth = 25;
+            this.gridColumn311.Name = "gridColumn311";
+            this.gridColumn311.Visible = true;
+            this.gridColumn311.VisibleIndex = 5;
+            this.gridColumn311.Width = 124;
+            // 
+            // gridColumn312
+            // 
+            this.gridColumn312.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn312.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn312.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn312.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn312.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn312.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn312.Caption = "ردیف";
+            this.gridColumn312.FieldName = "Radif";
+            this.gridColumn312.MinWidth = 25;
+            this.gridColumn312.Name = "gridColumn312";
+            this.gridColumn312.Visible = true;
+            this.gridColumn312.VisibleIndex = 6;
+            this.gridColumn312.Width = 76;
+            // 
+            // gridColumn313
+            // 
+            this.gridColumn313.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn313.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn313.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn313.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn313.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn313.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn313.Caption = "کد کالا";
+            this.gridColumn313.FieldName = "KalaCode";
+            this.gridColumn313.MinWidth = 25;
+            this.gridColumn313.Name = "gridColumn313";
+            this.gridColumn313.Visible = true;
+            this.gridColumn313.VisibleIndex = 7;
+            this.gridColumn313.Width = 155;
+            // 
+            // gridColumn314
+            // 
+            this.gridColumn314.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn314.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn314.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn314.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn314.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn314.Caption = "نام کالا";
+            this.gridColumn314.FieldName = "KalaName";
+            this.gridColumn314.MinWidth = 25;
+            this.gridColumn314.Name = "gridColumn314";
+            this.gridColumn314.Visible = true;
+            this.gridColumn314.VisibleIndex = 8;
+            this.gridColumn314.Width = 364;
+            // 
+            // gridColumn315
+            // 
+            this.gridColumn315.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn315.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn315.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn315.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn315.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn315.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn315.Caption = "واحد کالا";
+            this.gridColumn315.FieldName = "VahedeKala";
+            this.gridColumn315.MinWidth = 25;
+            this.gridColumn315.Name = "gridColumn315";
+            this.gridColumn315.Visible = true;
+            this.gridColumn315.VisibleIndex = 9;
+            this.gridColumn315.Width = 120;
+            // 
+            // gridColumn316
+            // 
+            this.gridColumn316.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn316.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn316.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn316.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn316.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn316.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn316.Caption = "مقدار / تعداد";
+            this.gridColumn316.DisplayFormat.FormatString = "c3";
+            this.gridColumn316.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn316.FieldName = "Meghdar";
+            this.gridColumn316.MinWidth = 25;
+            this.gridColumn316.Name = "gridColumn316";
+            this.gridColumn316.Visible = true;
+            this.gridColumn316.VisibleIndex = 10;
+            this.gridColumn316.Width = 145;
+            // 
+            // gridColumn317
+            // 
+            this.gridColumn317.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn317.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn317.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn317.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn317.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn317.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn317.Caption = "نرخ";
+            this.gridColumn317.DisplayFormat.FormatString = "c3";
+            this.gridColumn317.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn317.FieldName = "Nerkh";
+            this.gridColumn317.MinWidth = 25;
+            this.gridColumn317.Name = "gridColumn317";
+            this.gridColumn317.Visible = true;
+            this.gridColumn317.VisibleIndex = 11;
+            this.gridColumn317.Width = 161;
+            // 
+            // gridColumn318
+            // 
+            this.gridColumn318.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn318.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn318.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn318.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn318.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn318.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn318.Caption = "مبلغ";
+            this.gridColumn318.DisplayFormat.FormatString = "n";
+            this.gridColumn318.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn318.FieldName = "Mablag";
+            this.gridColumn318.MinWidth = 25;
+            this.gridColumn318.Name = "gridColumn318";
+            this.gridColumn318.Visible = true;
+            this.gridColumn318.VisibleIndex = 12;
+            this.gridColumn318.Width = 205;
+            // 
+            // gridColumn319
+            // 
+            this.gridColumn319.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn319.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn319.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn319.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn319.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn319.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn319.Caption = "ریالی شده";
+            this.gridColumn319.FieldName = "IsRiali";
+            this.gridColumn319.MinWidth = 25;
+            this.gridColumn319.Name = "gridColumn319";
+            this.gridColumn319.Visible = true;
+            this.gridColumn319.VisibleIndex = 13;
+            this.gridColumn319.Width = 97;
+            // 
+            // gridColumn320
+            // 
+            this.gridColumn320.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn320.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn320.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn320.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn320.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn320.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn320.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn320.DisplayFormat.FormatString = "G";
+            this.gridColumn320.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn320.FieldName = "DateTimeInsert";
+            this.gridColumn320.MinWidth = 25;
+            this.gridColumn320.Name = "gridColumn320";
+            this.gridColumn320.Visible = true;
+            this.gridColumn320.VisibleIndex = 14;
+            this.gridColumn320.Width = 277;
+            // 
+            // gridColumn321
+            // 
+            this.gridColumn321.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn321.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn321.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn321.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn321.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn321.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn321.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn321.DisplayFormat.FormatString = "G";
+            this.gridColumn321.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn321.FieldName = "DateTimeEdit";
+            this.gridColumn321.MinWidth = 25;
+            this.gridColumn321.Name = "gridColumn321";
+            this.gridColumn321.Visible = true;
+            this.gridColumn321.VisibleIndex = 15;
+            this.gridColumn321.Width = 285;
+            // 
+            // gridColumn322
+            // 
+            this.gridColumn322.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn322.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn322.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn322.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn322.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn322.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn322.Caption = "کد معین";
+            this.gridColumn322.FieldName = "MoinCode";
+            this.gridColumn322.MinWidth = 25;
+            this.gridColumn322.Name = "gridColumn322";
+            this.gridColumn322.Visible = true;
+            this.gridColumn322.VisibleIndex = 16;
+            this.gridColumn322.Width = 176;
+            // 
+            // gridColumn323
+            // 
+            this.gridColumn323.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn323.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn323.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn323.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn323.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn323.Caption = "حساب معین";
+            this.gridColumn323.FieldName = "MoinName";
+            this.gridColumn323.MinWidth = 25;
+            this.gridColumn323.Name = "gridColumn323";
+            this.gridColumn323.Visible = true;
+            this.gridColumn323.VisibleIndex = 17;
+            this.gridColumn323.Width = 333;
+            // 
+            // gridColumn324
+            // 
+            this.gridColumn324.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn324.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn324.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn324.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn324.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn324.Caption = "توضیحات";
+            this.gridColumn324.FieldName = "Tozihat";
+            this.gridColumn324.MinWidth = 25;
+            this.gridColumn324.Name = "gridColumn324";
+            this.gridColumn324.Visible = true;
+            this.gridColumn324.VisibleIndex = 18;
+            this.gridColumn324.Width = 500;
+            // 
+            // gridColumn326
+            // 
+            this.gridColumn326.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn326.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn326.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn326.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn326.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn326.Caption = "نوع سند";
+            this.gridColumn326.FieldName = "NoeSanadText";
+            this.gridColumn326.MinWidth = 25;
+            this.gridColumn326.Name = "gridColumn326";
+            this.gridColumn326.Visible = true;
+            this.gridColumn326.VisibleIndex = 19;
+            this.gridColumn326.Width = 200;
+            // 
+            // gridColumn325
+            // 
+            this.gridColumn325.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn325.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn325.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn325.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn325.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn325.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn325.Caption = "سریال";
+            this.gridColumn325.FieldName = "Seryal";
+            this.gridColumn325.MinWidth = 25;
+            this.gridColumn325.Name = "gridColumn325";
+            this.gridColumn325.Visible = true;
+            this.gridColumn325.VisibleIndex = 19;
+            this.gridColumn325.Width = 139;
             // 
             // xtpMojodiAvalDore
             // 
+            this.xtpMojodiAvalDore.Controls.Add(this.gridControl_MojodiAvalDore);
             this.xtpMojodiAvalDore.Name = "xtpMojodiAvalDore";
             this.xtpMojodiAvalDore.Size = new System.Drawing.Size(1421, 668);
-            this.xtpMojodiAvalDore.Text = "موجودی اول دوره کالا";
+            this.xtpMojodiAvalDore.Text = "موجودی اول دوره";
+            // 
+            // gridControl_MojodiAvalDore
+            // 
+            this.gridControl_MojodiAvalDore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_MojodiAvalDore.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_MojodiAvalDore.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_MojodiAvalDore.MainView = this.gridView_MojodiAvalDore;
+            this.gridControl_MojodiAvalDore.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl_MojodiAvalDore.Name = "gridControl_MojodiAvalDore";
+            this.gridControl_MojodiAvalDore.Size = new System.Drawing.Size(1421, 668);
+            this.gridControl_MojodiAvalDore.TabIndex = 37;
+            this.gridControl_MojodiAvalDore.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_MojodiAvalDore});
+            // 
+            // gridView_MojodiAvalDore
+            // 
+            this.gridView_MojodiAvalDore.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn327,
+            this.gridColumn328,
+            this.gridColumn329,
+            this.gridColumn330,
+            this.gridColumn331,
+            this.gridColumn332,
+            this.gridColumn333,
+            this.gridColumn334,
+            this.gridColumn335,
+            this.gridColumn336,
+            this.gridColumn337,
+            this.gridColumn338,
+            this.gridColumn339,
+            this.gridColumn340,
+            this.gridColumn341,
+            this.gridColumn342,
+            this.gridColumn343,
+            this.gridColumn344,
+            this.gridColumn345,
+            this.gridColumn346,
+            this.gridColumn347,
+            this.gridColumn362});
+            this.gridView_MojodiAvalDore.DetailHeight = 392;
+            this.gridView_MojodiAvalDore.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_MojodiAvalDore.GridControl = this.gridControl_MojodiAvalDore;
+            this.gridView_MojodiAvalDore.GroupCount = 1;
+            this.gridView_MojodiAvalDore.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_MojodiAvalDore.IndicatorWidth = 28;
+            this.gridView_MojodiAvalDore.Name = "gridView_MojodiAvalDore";
+            this.gridView_MojodiAvalDore.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_MojodiAvalDore.OptionsBehavior.Editable = false;
+            this.gridView_MojodiAvalDore.OptionsFind.AllowFindPanel = false;
+            this.gridView_MojodiAvalDore.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_MojodiAvalDore.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_MojodiAvalDore.OptionsMenu.ShowFooterItem = true;
+            this.gridView_MojodiAvalDore.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_MojodiAvalDore.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_MojodiAvalDore.OptionsView.ColumnAutoWidth = false;
+            this.gridView_MojodiAvalDore.OptionsView.RowAutoHeight = true;
+            this.gridView_MojodiAvalDore.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_MojodiAvalDore.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn347, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView_MojodiAvalDore.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+            this.gridView_MojodiAvalDore.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_MojodiAvalDore.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_MojodiAvalDore.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            // 
+            // gridColumn327
+            // 
+            this.gridColumn327.FieldName = "Id";
+            this.gridColumn327.MinWidth = 21;
+            this.gridColumn327.Name = "gridColumn327";
+            this.gridColumn327.Width = 84;
+            // 
+            // gridColumn328
+            // 
+            this.gridColumn328.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn328.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn328.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn328.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn328.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn328.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn328.Caption = "سریال";
+            this.gridColumn328.FieldName = "Seryal";
+            this.gridColumn328.MinWidth = 21;
+            this.gridColumn328.Name = "gridColumn328";
+            this.gridColumn328.Visible = true;
+            this.gridColumn328.VisibleIndex = 0;
+            this.gridColumn328.Width = 120;
+            // 
+            // gridColumn329
+            // 
+            this.gridColumn329.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn329.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn329.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn329.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn329.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn329.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn329.Caption = "تاریخ";
+            this.gridColumn329.DisplayFormat.FormatString = "d";
+            this.gridColumn329.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn329.FieldName = "DateTimeSanad";
+            this.gridColumn329.MinWidth = 21;
+            this.gridColumn329.Name = "gridColumn329";
+            this.gridColumn329.Visible = true;
+            this.gridColumn329.VisibleIndex = 1;
+            this.gridColumn329.Width = 154;
+            // 
+            // gridColumn330
+            // 
+            this.gridColumn330.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn330.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn330.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn330.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn330.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn330.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn330.Caption = "شماره سند";
+            this.gridColumn330.FieldName = "SanadNamber";
+            this.gridColumn330.MinWidth = 23;
+            this.gridColumn330.Name = "gridColumn330";
+            this.gridColumn330.Visible = true;
+            this.gridColumn330.VisibleIndex = 2;
+            this.gridColumn330.Width = 134;
+            // 
+            // gridColumn331
+            // 
+            this.gridColumn331.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn331.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn331.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn331.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn331.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn331.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn331.Caption = "کد تفصیلی";
+            this.gridColumn331.FieldName = "TafsiliCode";
+            this.gridColumn331.MinWidth = 21;
+            this.gridColumn331.Name = "gridColumn331";
+            this.gridColumn331.Visible = true;
+            this.gridColumn331.VisibleIndex = 3;
+            this.gridColumn331.Width = 153;
+            // 
+            // gridColumn332
+            // 
+            this.gridColumn332.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn332.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn332.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn332.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn332.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn332.Caption = "حساب تفصیلی";
+            this.gridColumn332.FieldName = "TafsiliName";
+            this.gridColumn332.MinWidth = 21;
+            this.gridColumn332.Name = "gridColumn332";
+            this.gridColumn332.Visible = true;
+            this.gridColumn332.VisibleIndex = 4;
+            this.gridColumn332.Width = 377;
+            // 
+            // gridColumn333
+            // 
+            this.gridColumn333.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn333.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn333.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn333.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn333.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn333.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn333.Caption = "شماره فاکتور";
+            this.gridColumn333.FieldName = "FactorNamber";
+            this.gridColumn333.MinWidth = 25;
+            this.gridColumn333.Name = "gridColumn333";
+            this.gridColumn333.Visible = true;
+            this.gridColumn333.VisibleIndex = 5;
+            this.gridColumn333.Width = 124;
+            // 
+            // gridColumn334
+            // 
+            this.gridColumn334.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn334.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn334.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn334.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn334.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn334.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn334.Caption = "ردیف";
+            this.gridColumn334.FieldName = "Radif";
+            this.gridColumn334.MinWidth = 25;
+            this.gridColumn334.Name = "gridColumn334";
+            this.gridColumn334.Visible = true;
+            this.gridColumn334.VisibleIndex = 6;
+            this.gridColumn334.Width = 76;
+            // 
+            // gridColumn335
+            // 
+            this.gridColumn335.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn335.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn335.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn335.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn335.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn335.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn335.Caption = "کد کالا";
+            this.gridColumn335.FieldName = "KalaCode";
+            this.gridColumn335.MinWidth = 25;
+            this.gridColumn335.Name = "gridColumn335";
+            this.gridColumn335.Visible = true;
+            this.gridColumn335.VisibleIndex = 7;
+            this.gridColumn335.Width = 155;
+            // 
+            // gridColumn336
+            // 
+            this.gridColumn336.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn336.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn336.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn336.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn336.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn336.Caption = "نام کالا";
+            this.gridColumn336.FieldName = "KalaName";
+            this.gridColumn336.MinWidth = 25;
+            this.gridColumn336.Name = "gridColumn336";
+            this.gridColumn336.Visible = true;
+            this.gridColumn336.VisibleIndex = 8;
+            this.gridColumn336.Width = 364;
+            // 
+            // gridColumn337
+            // 
+            this.gridColumn337.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn337.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn337.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn337.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn337.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn337.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn337.Caption = "واحد کالا";
+            this.gridColumn337.FieldName = "VahedeKala";
+            this.gridColumn337.MinWidth = 25;
+            this.gridColumn337.Name = "gridColumn337";
+            this.gridColumn337.Visible = true;
+            this.gridColumn337.VisibleIndex = 9;
+            this.gridColumn337.Width = 120;
+            // 
+            // gridColumn338
+            // 
+            this.gridColumn338.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn338.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn338.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn338.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn338.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn338.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn338.Caption = "مقدار / تعداد";
+            this.gridColumn338.DisplayFormat.FormatString = "c3";
+            this.gridColumn338.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn338.FieldName = "Meghdar";
+            this.gridColumn338.MinWidth = 25;
+            this.gridColumn338.Name = "gridColumn338";
+            this.gridColumn338.Visible = true;
+            this.gridColumn338.VisibleIndex = 10;
+            this.gridColumn338.Width = 145;
+            // 
+            // gridColumn339
+            // 
+            this.gridColumn339.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn339.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn339.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn339.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn339.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn339.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn339.Caption = "نرخ";
+            this.gridColumn339.DisplayFormat.FormatString = "c3";
+            this.gridColumn339.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn339.FieldName = "Nerkh";
+            this.gridColumn339.MinWidth = 25;
+            this.gridColumn339.Name = "gridColumn339";
+            this.gridColumn339.Visible = true;
+            this.gridColumn339.VisibleIndex = 11;
+            this.gridColumn339.Width = 160;
+            // 
+            // gridColumn340
+            // 
+            this.gridColumn340.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn340.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn340.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn340.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn340.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn340.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn340.Caption = "مبلغ";
+            this.gridColumn340.DisplayFormat.FormatString = "n";
+            this.gridColumn340.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn340.FieldName = "Mablag";
+            this.gridColumn340.MinWidth = 25;
+            this.gridColumn340.Name = "gridColumn340";
+            this.gridColumn340.Visible = true;
+            this.gridColumn340.VisibleIndex = 12;
+            this.gridColumn340.Width = 203;
+            // 
+            // gridColumn341
+            // 
+            this.gridColumn341.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn341.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn341.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn341.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn341.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn341.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn341.Caption = "ریالی شده";
+            this.gridColumn341.FieldName = "IsRiali";
+            this.gridColumn341.MinWidth = 25;
+            this.gridColumn341.Name = "gridColumn341";
+            this.gridColumn341.Visible = true;
+            this.gridColumn341.VisibleIndex = 13;
+            this.gridColumn341.Width = 99;
+            // 
+            // gridColumn342
+            // 
+            this.gridColumn342.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn342.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn342.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn342.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn342.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn342.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn342.Caption = "تاریخ و ساعت ثبت";
+            this.gridColumn342.DisplayFormat.FormatString = "G";
+            this.gridColumn342.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn342.FieldName = "DateTimeInsert";
+            this.gridColumn342.MinWidth = 25;
+            this.gridColumn342.Name = "gridColumn342";
+            this.gridColumn342.Visible = true;
+            this.gridColumn342.VisibleIndex = 14;
+            this.gridColumn342.Width = 277;
+            // 
+            // gridColumn343
+            // 
+            this.gridColumn343.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn343.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn343.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn343.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn343.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn343.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn343.Caption = "تاریخ و ساعت ویرایش";
+            this.gridColumn343.DisplayFormat.FormatString = "G";
+            this.gridColumn343.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn343.FieldName = "DateTimeEdit";
+            this.gridColumn343.MinWidth = 25;
+            this.gridColumn343.Name = "gridColumn343";
+            this.gridColumn343.Visible = true;
+            this.gridColumn343.VisibleIndex = 15;
+            this.gridColumn343.Width = 285;
+            // 
+            // gridColumn344
+            // 
+            this.gridColumn344.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn344.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn344.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn344.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn344.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn344.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn344.Caption = "کد معین";
+            this.gridColumn344.FieldName = "MoinCode";
+            this.gridColumn344.MinWidth = 25;
+            this.gridColumn344.Name = "gridColumn344";
+            this.gridColumn344.Visible = true;
+            this.gridColumn344.VisibleIndex = 16;
+            this.gridColumn344.Width = 176;
+            // 
+            // gridColumn345
+            // 
+            this.gridColumn345.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn345.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn345.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn345.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn345.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn345.Caption = "حساب معین";
+            this.gridColumn345.FieldName = "MoinName";
+            this.gridColumn345.MinWidth = 25;
+            this.gridColumn345.Name = "gridColumn345";
+            this.gridColumn345.Visible = true;
+            this.gridColumn345.VisibleIndex = 17;
+            this.gridColumn345.Width = 333;
+            // 
+            // gridColumn346
+            // 
+            this.gridColumn346.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn346.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn346.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn346.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn346.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn346.Caption = "توضیحات";
+            this.gridColumn346.FieldName = "Tozihat";
+            this.gridColumn346.MinWidth = 25;
+            this.gridColumn346.Name = "gridColumn346";
+            this.gridColumn346.Visible = true;
+            this.gridColumn346.VisibleIndex = 18;
+            this.gridColumn346.Width = 500;
+            // 
+            // gridColumn347
+            // 
+            this.gridColumn347.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn347.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn347.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn347.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn347.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn347.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn347.Caption = "سریال";
+            this.gridColumn347.FieldName = "Seryal";
+            this.gridColumn347.MinWidth = 25;
+            this.gridColumn347.Name = "gridColumn347";
+            this.gridColumn347.Visible = true;
+            this.gridColumn347.VisibleIndex = 19;
+            this.gridColumn347.Width = 111;
+            // 
+            // gridColumn362
+            // 
+            this.gridColumn362.Caption = "شرح سند";
+            this.gridColumn362.FieldName = "SharhSanad";
+            this.gridColumn362.MinWidth = 25;
+            this.gridColumn362.Name = "gridColumn362";
+            this.gridColumn362.Width = 94;
             // 
             // xtpAmaliatAddVEdit
             // 
@@ -4049,9 +8918,9 @@
             // 
             this.panelControl1.Controls.Add(this.gridControl_AmaliatAddVaEdit);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 99);
+            this.panelControl1.Location = new System.Drawing.Point(0, 176);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1421, 569);
+            this.panelControl1.Size = new System.Drawing.Size(1421, 492);
             this.panelControl1.TabIndex = 3;
             // 
             // gridControl_AmaliatAddVaEdit
@@ -4063,7 +8932,7 @@
             this.gridControl_AmaliatAddVaEdit.MainView = this.gridView_AmaliatAddVaEdit;
             this.gridControl_AmaliatAddVaEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_AmaliatAddVaEdit.Name = "gridControl_AmaliatAddVaEdit";
-            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1417, 565);
+            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1417, 488);
             this.gridControl_AmaliatAddVaEdit.TabIndex = 37;
             this.gridControl_AmaliatAddVaEdit.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AmaliatAddVaEdit});
@@ -4199,7 +9068,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Meghdar", "{0:c3}")});
             this.colMeghdar.Visible = true;
             this.colMeghdar.VisibleIndex = 3;
-            this.colMeghdar.Width = 136;
+            this.colMeghdar.Width = 170;
             // 
             // colNerkh
             // 
@@ -4217,7 +9086,7 @@
             this.colNerkh.Name = "colNerkh";
             this.colNerkh.Visible = true;
             this.colNerkh.VisibleIndex = 4;
-            this.colNerkh.Width = 179;
+            this.colNerkh.Width = 181;
             // 
             // colMablag
             // 
@@ -4237,7 +9106,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Mablag", "{0:n}")});
             this.colMablag.Visible = true;
             this.colMablag.VisibleIndex = 5;
-            this.colMablag.Width = 210;
+            this.colMablag.Width = 227;
             // 
             // colTozihat
             // 
@@ -4256,7 +9125,15 @@
             // 
             // panelControl_AddVaEdit
             // 
-            this.panelControl_AddVaEdit.Controls.Add(this.cmbHesabTafsili);
+            this.panelControl_AddVaEdit.Controls.Add(this.labelControl4);
+            this.panelControl_AddVaEdit.Controls.Add(this.btnReloadHesabTafsili3);
+            this.panelControl_AddVaEdit.Controls.Add(this.cmbHesabTafsili3);
+            this.panelControl_AddVaEdit.Controls.Add(this.labelControl5);
+            this.panelControl_AddVaEdit.Controls.Add(this.btnReloadHesabTafsili2);
+            this.panelControl_AddVaEdit.Controls.Add(this.cmbHesabTafsili2);
+            this.panelControl_AddVaEdit.Controls.Add(this.labelControl2);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSharhSanad);
+            this.panelControl_AddVaEdit.Controls.Add(this.cmbHesabTafsili1);
             this.panelControl_AddVaEdit.Controls.Add(this.lblSanadNamber);
             this.panelControl_AddVaEdit.Controls.Add(this.chkIsSanadHesabdari);
             this.panelControl_AddVaEdit.Controls.Add(this.labelControl3);
@@ -4265,10 +9142,10 @@
             this.panelControl_AddVaEdit.Controls.Add(this.btnEdit1);
             this.panelControl_AddVaEdit.Controls.Add(this.btnDelete1);
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadHesabMoin);
-            this.panelControl_AddVaEdit.Controls.Add(this.labelControl20);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblHesabMoin);
             this.panelControl_AddVaEdit.Controls.Add(this.cmbHesabMoin);
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadHesabTafsili);
-            this.panelControl_AddVaEdit.Controls.Add(this.labelControl2);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblHesabTafsili);
             this.panelControl_AddVaEdit.Controls.Add(this.labelControl7);
             this.panelControl_AddVaEdit.Controls.Add(this.txtTarikh);
             this.panelControl_AddVaEdit.Controls.Add(this.labelControl1);
@@ -4278,38 +9155,189 @@
             this.panelControl_AddVaEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl_AddVaEdit.Location = new System.Drawing.Point(0, 0);
             this.panelControl_AddVaEdit.Name = "panelControl_AddVaEdit";
-            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1421, 99);
+            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1421, 176);
             this.panelControl_AddVaEdit.TabIndex = 2;
             // 
-            // cmbHesabTafsili
+            // labelControl4
             // 
-            this.cmbHesabTafsili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbHesabTafsili.EnterMoveNextControl = true;
-            this.cmbHesabTafsili.Location = new System.Drawing.Point(71, 51);
-            this.cmbHesabTafsili.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbHesabTafsili.Name = "cmbHesabTafsili";
-            this.cmbHesabTafsili.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.cmbHesabTafsili.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbHesabTafsili.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl4.Appearance.Options.UseForeColor = true;
+            this.labelControl4.Location = new System.Drawing.Point(1335, 93);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(73, 31);
+            this.labelControl4.TabIndex = 198;
+            this.labelControl4.Text = "شرح سند";
+            // 
+            // btnReloadHesabTafsili3
+            // 
+            this.btnReloadHesabTafsili3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReloadHesabTafsili3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.btnReloadHesabTafsili3.Appearance.Options.UseForeColor = true;
+            this.btnReloadHesabTafsili3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabTafsili3.ImageOptions.SvgImage")));
+            this.btnReloadHesabTafsili3.Location = new System.Drawing.Point(9, 132);
+            this.btnReloadHesabTafsili3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReloadHesabTafsili3.Name = "btnReloadHesabTafsili3";
+            this.btnReloadHesabTafsili3.Size = new System.Drawing.Size(47, 38);
+            this.btnReloadHesabTafsili3.TabIndex = 197;
+            this.btnReloadHesabTafsili3.TabStop = false;
+            this.btnReloadHesabTafsili3.ToolTip = "جدید";
+            this.btnReloadHesabTafsili3.ToolTipTitle = "F2";
+            // 
+            // cmbHesabTafsili3
+            // 
+            this.cmbHesabTafsili3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbHesabTafsili3.EnterMoveNextControl = true;
+            this.cmbHesabTafsili3.Location = new System.Drawing.Point(60, 132);
+            this.cmbHesabTafsili3.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbHesabTafsili3.Name = "cmbHesabTafsili3";
+            this.cmbHesabTafsili3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbHesabTafsili3.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTafsili3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbHesabTafsili.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.cmbHesabTafsili3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 5, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cmbHesabTafsili3.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTafsiliSayer);
+            this.cmbHesabTafsili3.Properties.DisplayMember = "Name";
+            this.cmbHesabTafsili3.Properties.DropDownRows = 10;
+            this.cmbHesabTafsili3.Properties.ImmediatePopup = true;
+            this.cmbHesabTafsili3.Properties.NullText = "";
+            this.cmbHesabTafsili3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbHesabTafsili3.Properties.PopupWidth = 700;
+            this.cmbHesabTafsili3.Properties.ReadOnly = true;
+            this.cmbHesabTafsili3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbHesabTafsili3.Properties.ValueMember = "Id";
+            this.cmbHesabTafsili3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbHesabTafsili3.Size = new System.Drawing.Size(473, 38);
+            this.cmbHesabTafsili3.TabIndex = 5;
+            this.cmbHesabTafsili3.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbHesabTafsili3_CustomDrawCell);
+            this.cmbHesabTafsili3.Enter += new System.EventHandler(this.cmbHesabTafsili3_Enter);
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(541, 136);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(162, 31);
+            this.labelControl5.TabIndex = 196;
+            this.labelControl5.Text = "حساب تفصیلی س3";
+            // 
+            // btnReloadHesabTafsili2
+            // 
+            this.btnReloadHesabTafsili2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReloadHesabTafsili2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.btnReloadHesabTafsili2.Appearance.Options.UseForeColor = true;
+            this.btnReloadHesabTafsili2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabTafsili2.ImageOptions.SvgImage")));
+            this.btnReloadHesabTafsili2.Location = new System.Drawing.Point(9, 89);
+            this.btnReloadHesabTafsili2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReloadHesabTafsili2.Name = "btnReloadHesabTafsili2";
+            this.btnReloadHesabTafsili2.Size = new System.Drawing.Size(47, 38);
+            this.btnReloadHesabTafsili2.TabIndex = 195;
+            this.btnReloadHesabTafsili2.TabStop = false;
+            this.btnReloadHesabTafsili2.ToolTip = "جدید";
+            this.btnReloadHesabTafsili2.ToolTipTitle = "F2";
+            // 
+            // cmbHesabTafsili2
+            // 
+            this.cmbHesabTafsili2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbHesabTafsili2.EnterMoveNextControl = true;
+            this.cmbHesabTafsili2.Location = new System.Drawing.Point(60, 89);
+            this.cmbHesabTafsili2.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbHesabTafsili2.Name = "cmbHesabTafsili2";
+            this.cmbHesabTafsili2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbHesabTafsili2.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTafsili2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbHesabTafsili2.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 5, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cmbHesabTafsili2.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTafsiliSayer);
+            this.cmbHesabTafsili2.Properties.DisplayMember = "Name";
+            this.cmbHesabTafsili2.Properties.DropDownRows = 10;
+            this.cmbHesabTafsili2.Properties.ImmediatePopup = true;
+            this.cmbHesabTafsili2.Properties.NullText = "";
+            this.cmbHesabTafsili2.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbHesabTafsili2.Properties.PopupWidth = 700;
+            this.cmbHesabTafsili2.Properties.ReadOnly = true;
+            this.cmbHesabTafsili2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbHesabTafsili2.Properties.ValueMember = "Id";
+            this.cmbHesabTafsili2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbHesabTafsili2.Size = new System.Drawing.Size(473, 38);
+            this.cmbHesabTafsili2.TabIndex = 4;
+            this.cmbHesabTafsili2.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbHesabTafsili2_CustomDrawCell);
+            this.cmbHesabTafsili2.Enter += new System.EventHandler(this.cmbHesabTafsili2_Enter);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Location = new System.Drawing.Point(544, 93);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(159, 31);
+            this.labelControl2.TabIndex = 194;
+            this.labelControl2.Text = "حساب تفصیلی س2";
+            // 
+            // txtSharhSanad
+            // 
+            this.txtSharhSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSharhSanad.EditValue = "";
+            this.txtSharhSanad.EnterMoveNextControl = true;
+            this.txtSharhSanad.Location = new System.Drawing.Point(711, 89);
+            this.txtSharhSanad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSharhSanad.Name = "txtSharhSanad";
+            this.txtSharhSanad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSharhSanad.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSharhSanad.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSharhSanad.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtSharhSanad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.txtSharhSanad.Properties.MaxLength = 500;
+            this.txtSharhSanad.Size = new System.Drawing.Size(620, 40);
+            this.txtSharhSanad.TabIndex = 1;
+            // 
+            // cmbHesabTafsili1
+            // 
+            this.cmbHesabTafsili1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbHesabTafsili1.EnterMoveNextControl = true;
+            this.cmbHesabTafsili1.Location = new System.Drawing.Point(61, 47);
+            this.cmbHesabTafsili1.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbHesabTafsili1.Name = "cmbHesabTafsili1";
+            this.cmbHesabTafsili1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbHesabTafsili1.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTafsili1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbHesabTafsili1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.cmbHesabTafsili.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin1);
-            this.cmbHesabTafsili.Properties.DisplayMember = "Name";
-            this.cmbHesabTafsili.Properties.DropDownRows = 10;
-            this.cmbHesabTafsili.Properties.ImmediatePopup = true;
-            this.cmbHesabTafsili.Properties.NullText = "";
-            this.cmbHesabTafsili.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbHesabTafsili.Properties.PopupWidth = 650;
-            this.cmbHesabTafsili.Properties.ValueMember = "Id";
-            this.cmbHesabTafsili.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbHesabTafsili.Size = new System.Drawing.Size(417, 38);
-            this.cmbHesabTafsili.TabIndex = 2;
-            this.cmbHesabTafsili.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
-            this.cmbHesabTafsili.Enter += new System.EventHandler(this.cmbHesabTafsili_Enter);
+            this.cmbHesabTafsili1.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin1);
+            this.cmbHesabTafsili1.Properties.DisplayMember = "Name";
+            this.cmbHesabTafsili1.Properties.DropDownRows = 10;
+            this.cmbHesabTafsili1.Properties.ImmediatePopup = true;
+            this.cmbHesabTafsili1.Properties.NullText = "";
+            this.cmbHesabTafsili1.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbHesabTafsili1.Properties.PopupWidth = 650;
+            this.cmbHesabTafsili1.Properties.ReadOnly = true;
+            this.cmbHesabTafsili1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbHesabTafsili1.Properties.ValueMember = "Id";
+            this.cmbHesabTafsili1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbHesabTafsili1.Size = new System.Drawing.Size(473, 38);
+            this.cmbHesabTafsili1.TabIndex = 3;
+            this.cmbHesabTafsili1.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
+            this.cmbHesabTafsili1.Enter += new System.EventHandler(this.cmbHesabTafsili_Enter);
             // 
             // lblSanadNamber
             // 
@@ -4323,10 +9351,10 @@
             this.lblSanadNamber.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblSanadNamber.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblSanadNamber.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblSanadNamber.Location = new System.Drawing.Point(634, 6);
+            this.lblSanadNamber.Location = new System.Drawing.Point(851, 6);
             this.lblSanadNamber.Margin = new System.Windows.Forms.Padding(4);
             this.lblSanadNamber.Name = "lblSanadNamber";
-            this.lblSanadNamber.Size = new System.Drawing.Size(111, 37);
+            this.lblSanadNamber.Size = new System.Drawing.Size(130, 37);
             this.lblSanadNamber.TabIndex = 163;
             this.lblSanadNamber.Text = ".............";
             // 
@@ -4335,7 +9363,7 @@
             this.chkIsSanadHesabdari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsSanadHesabdari.EditValue = true;
             this.chkIsSanadHesabdari.EnterMoveNextControl = true;
-            this.chkIsSanadHesabdari.Location = new System.Drawing.Point(755, 5);
+            this.chkIsSanadHesabdari.Location = new System.Drawing.Point(989, 6);
             this.chkIsSanadHesabdari.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsSanadHesabdari.Name = "chkIsSanadHesabdari";
             this.chkIsSanadHesabdari.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4344,7 +9372,7 @@
             this.chkIsSanadHesabdari.Properties.Caption = "سند حسابداری";
             this.chkIsSanadHesabdari.Properties.ReadOnly = true;
             this.chkIsSanadHesabdari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkIsSanadHesabdari.Size = new System.Drawing.Size(148, 39);
+            this.chkIsSanadHesabdari.Size = new System.Drawing.Size(143, 39);
             this.chkIsSanadHesabdari.TabIndex = 162;
             // 
             // labelControl3
@@ -4352,7 +9380,7 @@
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(496, 12);
+            this.labelControl3.Location = new System.Drawing.Point(1067, 50);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 31);
@@ -4364,7 +9392,7 @@
             this.txtNoeSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoeSanad.EditValue = "";
             this.txtNoeSanad.EnterMoveNextControl = true;
-            this.txtNoeSanad.Location = new System.Drawing.Point(71, 6);
+            this.txtNoeSanad.Location = new System.Drawing.Point(711, 47);
             this.txtNoeSanad.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoeSanad.Name = "txtNoeSanad";
             this.txtNoeSanad.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -4375,7 +9403,7 @@
             this.txtNoeSanad.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtNoeSanad.Properties.MaxLength = 4;
             this.txtNoeSanad.Properties.ReadOnly = true;
-            this.txtNoeSanad.Size = new System.Drawing.Size(417, 38);
+            this.txtNoeSanad.Size = new System.Drawing.Size(348, 38);
             this.txtNoeSanad.TabIndex = 160;
             this.txtNoeSanad.TabStop = false;
             // 
@@ -4383,11 +9411,11 @@
             // 
             this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnInsert.ImageOptions.SvgImage")));
-            this.btnInsert.Location = new System.Drawing.Point(1345, 51);
+            this.btnInsert.Location = new System.Drawing.Point(1284, 132);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(47, 38);
-            this.btnInsert.TabIndex = 3;
+            this.btnInsert.TabIndex = 6;
             this.btnInsert.ToolTip = "جدید";
             this.btnInsert.ToolTipTitle = "F2";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -4397,11 +9425,11 @@
             this.btnEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit1.Enabled = false;
             this.btnEdit1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit1.ImageOptions.SvgImage")));
-            this.btnEdit1.Location = new System.Drawing.Point(1236, 51);
+            this.btnEdit1.Location = new System.Drawing.Point(1159, 132);
             this.btnEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit1.Name = "btnEdit1";
             this.btnEdit1.Size = new System.Drawing.Size(47, 38);
-            this.btnEdit1.TabIndex = 5;
+            this.btnEdit1.TabIndex = 8;
             this.btnEdit1.ToolTip = "ویرایش";
             this.btnEdit1.ToolTipTitle = "F4";
             this.btnEdit1.Click += new System.EventHandler(this.btnEdit1_Click);
@@ -4411,11 +9439,11 @@
             this.btnDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete1.Enabled = false;
             this.btnDelete1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete1.ImageOptions.SvgImage")));
-            this.btnDelete1.Location = new System.Drawing.Point(1291, 51);
+            this.btnDelete1.Location = new System.Drawing.Point(1222, 132);
             this.btnDelete1.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete1.Name = "btnDelete1";
             this.btnDelete1.Size = new System.Drawing.Size(47, 38);
-            this.btnDelete1.TabIndex = 4;
+            this.btnDelete1.TabIndex = 7;
             this.btnDelete1.ToolTip = "حذف";
             this.btnDelete1.ToolTipTitle = "F3";
             this.btnDelete1.Click += new System.EventHandler(this.btnDelete1_Click);
@@ -4426,34 +9454,32 @@
             this.btnReloadHesabMoin.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadHesabMoin.Appearance.Options.UseForeColor = true;
             this.btnReloadHesabMoin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabMoin.ImageOptions.SvgImage")));
-            this.btnReloadHesabMoin.Location = new System.Drawing.Point(634, 50);
+            this.btnReloadHesabMoin.Location = new System.Drawing.Point(9, 5);
             this.btnReloadHesabMoin.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadHesabMoin.Name = "btnReloadHesabMoin";
             this.btnReloadHesabMoin.Size = new System.Drawing.Size(47, 38);
             this.btnReloadHesabMoin.TabIndex = 146;
             this.btnReloadHesabMoin.TabStop = false;
-            this.btnReloadHesabMoin.ToolTip = "جدید";
-            this.btnReloadHesabMoin.ToolTipTitle = "F2";
             this.btnReloadHesabMoin.Click += new System.EventHandler(this.btnReloadHesabMoin_Click);
             // 
-            // labelControl20
+            // lblHesabMoin
             // 
-            this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl20.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl20.Appearance.Options.UseForeColor = true;
-            this.labelControl20.AutoEllipsis = true;
-            this.labelControl20.Location = new System.Drawing.Point(1112, 54);
-            this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(101, 31);
-            this.labelControl20.TabIndex = 145;
-            this.labelControl20.Text = "حساب معین";
+            this.lblHesabMoin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHesabMoin.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblHesabMoin.Appearance.Options.UseForeColor = true;
+            this.lblHesabMoin.AutoEllipsis = true;
+            this.lblHesabMoin.Location = new System.Drawing.Point(545, 10);
+            this.lblHesabMoin.Margin = new System.Windows.Forms.Padding(4);
+            this.lblHesabMoin.Name = "lblHesabMoin";
+            this.lblHesabMoin.Size = new System.Drawing.Size(101, 31);
+            this.lblHesabMoin.TabIndex = 145;
+            this.lblHesabMoin.Text = "حساب معین";
             // 
             // cmbHesabMoin
             // 
             this.cmbHesabMoin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbHesabMoin.EnterMoveNextControl = true;
-            this.cmbHesabMoin.Location = new System.Drawing.Point(685, 51);
+            this.cmbHesabMoin.Location = new System.Drawing.Point(60, 6);
             this.cmbHesabMoin.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHesabMoin.Name = "cmbHesabMoin";
             this.cmbHesabMoin.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4474,8 +9500,8 @@
             this.cmbHesabMoin.Properties.PopupWidth = 650;
             this.cmbHesabMoin.Properties.ValueMember = "Id";
             this.cmbHesabMoin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbHesabMoin.Size = new System.Drawing.Size(418, 38);
-            this.cmbHesabMoin.TabIndex = 1;
+            this.cmbHesabMoin.Size = new System.Drawing.Size(474, 38);
+            this.cmbHesabMoin.TabIndex = 2;
             this.cmbHesabMoin.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbHesabMoin.EditValueChanged += new System.EventHandler(this.cmbHesabMoin_EditValueChanged);
             this.cmbHesabMoin.Enter += new System.EventHandler(this.cmbHesabMoin_Enter);
@@ -4486,27 +9512,25 @@
             this.btnReloadHesabTafsili.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadHesabTafsili.Appearance.Options.UseForeColor = true;
             this.btnReloadHesabTafsili.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabTafsili.ImageOptions.SvgImage")));
-            this.btnReloadHesabTafsili.Location = new System.Drawing.Point(19, 50);
+            this.btnReloadHesabTafsili.Location = new System.Drawing.Point(9, 47);
             this.btnReloadHesabTafsili.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadHesabTafsili.Name = "btnReloadHesabTafsili";
             this.btnReloadHesabTafsili.Size = new System.Drawing.Size(47, 38);
             this.btnReloadHesabTafsili.TabIndex = 143;
             this.btnReloadHesabTafsili.TabStop = false;
-            this.btnReloadHesabTafsili.ToolTip = "جدید";
-            this.btnReloadHesabTafsili.ToolTipTitle = "F2";
             this.btnReloadHesabTafsili.Click += new System.EventHandler(this.btnReloadHesabTafsili_Click);
             // 
-            // labelControl2
+            // lblHesabTafsili
             // 
-            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(495, 58);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(120, 31);
-            this.labelControl2.TabIndex = 142;
-            this.labelControl2.Text = "حساب تفصیلی";
+            this.lblHesabTafsili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHesabTafsili.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblHesabTafsili.Appearance.Options.UseForeColor = true;
+            this.lblHesabTafsili.Location = new System.Drawing.Point(544, 51);
+            this.lblHesabTafsili.Margin = new System.Windows.Forms.Padding(4);
+            this.lblHesabTafsili.Name = "lblHesabTafsili";
+            this.lblHesabTafsili.Size = new System.Drawing.Size(155, 31);
+            this.lblHesabTafsili.TabIndex = 142;
+            this.lblHesabTafsili.Text = "حساب تفصیلی س1";
             // 
             // labelControl7
             // 
@@ -4514,7 +9538,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl7.Appearance.Options.UseForeColor = true;
             this.labelControl7.AutoEllipsis = true;
-            this.labelControl7.Location = new System.Drawing.Point(1110, 9);
+            this.labelControl7.Location = new System.Drawing.Point(1339, 50);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(41, 31);
@@ -4525,7 +9549,7 @@
             // 
             this.txtTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTarikh.EnterMoveNextControl = true;
-            this.txtTarikh.Location = new System.Drawing.Point(935, 6);
+            this.txtTarikh.Location = new System.Drawing.Point(1159, 47);
             this.txtTarikh.Margin = new System.Windows.Forms.Padding(4);
             this.txtTarikh.Name = "txtTarikh";
             this.txtTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4536,7 +9560,7 @@
             this.txtTarikh.Properties.Mask.BeepOnError = true;
             this.txtTarikh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTarikh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTarikh.Size = new System.Drawing.Size(168, 38);
+            this.txtTarikh.Size = new System.Drawing.Size(172, 38);
             this.txtTarikh.TabIndex = 0;
             // 
             // labelControl1
@@ -4544,7 +9568,7 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(1356, 8);
+            this.labelControl1.Location = new System.Drawing.Point(1341, 9);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(47, 31);
@@ -4556,7 +9580,7 @@
             this.txtSeryal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSeryal.EditValue = "";
             this.txtSeryal.EnterMoveNextControl = true;
-            this.txtSeryal.Location = new System.Drawing.Point(1236, 6);
+            this.txtSeryal.Location = new System.Drawing.Point(1221, 7);
             this.txtSeryal.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeryal.Name = "txtSeryal";
             this.txtSeryal.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -4577,7 +9601,7 @@
             this.txtNoeSanad1.EditValue = "";
             this.txtNoeSanad1.Enabled = false;
             this.txtNoeSanad1.EnterMoveNextControl = true;
-            this.txtNoeSanad1.Location = new System.Drawing.Point(21, 6);
+            this.txtNoeSanad1.Location = new System.Drawing.Point(820, 47);
             this.txtNoeSanad1.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoeSanad1.Name = "txtNoeSanad1";
             this.txtNoeSanad1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4596,7 +9620,7 @@
             this.txtNoeAmaliat1.EditValue = "";
             this.txtNoeAmaliat1.Enabled = false;
             this.txtNoeAmaliat1.EnterMoveNextControl = true;
-            this.txtNoeAmaliat1.Location = new System.Drawing.Point(71, 6);
+            this.txtNoeAmaliat1.Location = new System.Drawing.Point(870, 47);
             this.txtNoeAmaliat1.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoeAmaliat1.Name = "txtNoeAmaliat1";
             this.txtNoeAmaliat1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -4669,7 +9693,7 @@
             this.Name = "FrmAmaliatRozaneh";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "عملیات روزانه انبار وکالا";
+            this.Text = "عملیات ورود و خروج کالا";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAmaliatRozaneh_FormClosed);
             this.Load += new System.EventHandler(this.FrmAmaliatRozaneh_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAmaliatRozaneh_KeyDown);
@@ -4703,9 +9727,12 @@
             this.xtp_BargashtAzHavaleTolid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzHavaleTolid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzHavaleTolid)).EndInit();
-            this.xtp_ResidSayer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_ResidSayer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_ResidSayer)).EndInit();
+            this.xtp_BargashtAzHavaleHazine.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzHavaleHazine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzHavaleHazine)).EndInit();
+            this.xtp_BargashtAzHavaleAmval.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzHavaleAmval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzHavaleAmval)).EndInit();
             this.xtp_EzafateAnbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_EzafateAnbar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_EzafateAnbar)).EndInit();
@@ -4715,6 +9742,36 @@
             this.xtpKhrojeKala.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtc_KhorojeKala)).EndInit();
             this.xtc_KhorojeKala.ResumeLayout(false);
+            this.xtp_BargashtAzKharid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzKharid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzKharid)).EndInit();
+            this.xtp_HavaleFroosh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleFroosh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleFroosh)).EndInit();
+            this.xtp_HavaleKalaAmani.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleKalaAmani)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleKalaAmani)).EndInit();
+            this.xtp_BargashtAzResidTolid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_BargashtAzResidTolid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_BargashtAzResidTolid)).EndInit();
+            this.xtp_HavaleTolid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleTolid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleTolid)).EndInit();
+            this.xtp_HavaleHazine.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleHazine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleHazine)).EndInit();
+            this.xtp_HavaleAmval.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_HavaleAmval)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_HavaleAmval)).EndInit();
+            this.xtp_KosoratAnbar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_KosoratAnbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_KosoratAnbar)).EndInit();
+            this.xtp_AllKhoroji.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_AllKhoroji)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_AllKhoroji)).EndInit();
+            this.xtpMojodiAvalDore.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_MojodiAvalDore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_MojodiAvalDore)).EndInit();
             this.xtpAmaliatAddVEdit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -4724,7 +9781,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_AddVaEdit)).EndInit();
             this.panelControl_AddVaEdit.ResumeLayout(false);
             this.panelControl_AddVaEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsSanadHesabdari.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabMoin.Properties)).EndInit();
@@ -4756,7 +9816,6 @@
         public DevExpress.XtraEditors.LabelControl lblUserName;
         public DevExpress.XtraEditors.LabelControl lblSalId;
         public DevExpress.XtraEditors.LabelControl lblSalMali;
-        private DevExpress.XtraTab.XtraTabPage xtpJabejaeeKala;
         private DevExpress.XtraTab.XtraTabPage xtpMojodiAvalDore;
         private DevExpress.XtraTab.XtraTabControl xtc_VorodeKala;
         private DevExpress.XtraTab.XtraTabPage xtp_ResidKharid;
@@ -4765,15 +9824,15 @@
         private DevExpress.XtraTab.XtraTabPage xtp_ResidTolid;
         private DevExpress.XtraTab.XtraTabPage xtp_BargashtAzHavaleTolid;
         private DevExpress.XtraTab.XtraTabPage xtp_EzafateAnbar;
-        private DevExpress.XtraTab.XtraTabPage xtp_ResidSayer;
+        private DevExpress.XtraTab.XtraTabPage xtp_BargashtAzHavaleHazine;
         private DevExpress.XtraTab.XtraTabControl xtc_KhorojeKala;
-        private DevExpress.XtraTab.XtraTabPage xtp_HavaleFroosh;
         private DevExpress.XtraTab.XtraTabPage xtp_BargashtAzKharid;
+        private DevExpress.XtraTab.XtraTabPage xtp_HavaleFroosh;
         private DevExpress.XtraTab.XtraTabPage xtp_HavaleKalaAmani;
         private DevExpress.XtraTab.XtraTabPage xtp_HavaleTolid;
         private DevExpress.XtraTab.XtraTabPage xtp_BargashtAzResidTolid;
         private DevExpress.XtraTab.XtraTabPage xtp_KosoratAnbar;
-        private DevExpress.XtraTab.XtraTabPage xtp_HavaleSayer;
+        private DevExpress.XtraTab.XtraTabPage xtp_HavaleHazine;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraGrid.GridControl gridControl_ResidKharid_Riz;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView_ResidKharid_Riz;
@@ -4789,7 +9848,7 @@
         public DevExpress.XtraEditors.LookUpEdit cmbNameAnbar;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraTab.XtraTabPage xtp_AllVorode;
-        private DevExpress.XtraTab.XtraTabPage xtp_Khoroji;
+        private DevExpress.XtraTab.XtraTabPage xtp_AllKhoroji;
         private DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.SimpleButton btnLast;
         private DevExpress.XtraEditors.SimpleButton btnPreview;
@@ -4822,7 +9881,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMablag;
         private DevExpress.XtraGrid.Columns.GridColumn colTozihat;
         private DevExpress.XtraEditors.PanelControl panelControl_AddVaEdit;
-        public DevExpress.XtraEditors.LookUpEdit cmbHesabTafsili;
+        public DevExpress.XtraEditors.LookUpEdit cmbHesabTafsili1;
         private DevExpress.XtraEditors.LabelControl lblSanadNamber;
         public DevExpress.XtraEditors.CheckEdit chkIsSanadHesabdari;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -4831,10 +9890,10 @@
         private DevExpress.XtraEditors.SimpleButton btnEdit1;
         private DevExpress.XtraEditors.SimpleButton btnDelete1;
         private DevExpress.XtraEditors.SimpleButton btnReloadHesabMoin;
-        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl lblHesabMoin;
         public DevExpress.XtraEditors.LookUpEdit cmbHesabMoin;
         public DevExpress.XtraEditors.SimpleButton btnReloadHesabTafsili;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl lblHesabTafsili;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit txtTarikh;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -4953,8 +10012,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn106;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn107;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn108;
-        private DevExpress.XtraGrid.GridControl gridControl_ResidSayer;
-        public DevExpress.XtraGrid.Views.Grid.GridView gridView_ResidSayer;
+        private DevExpress.XtraGrid.GridControl gridControl_BargashtAzHavaleHazine;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_BargashtAzHavaleHazine;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn109;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn110;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn111;
@@ -5006,5 +10065,286 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn155;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn156;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn157;
+        private DevExpress.XtraGrid.GridControl gridControl_BargashtAzKharid;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_BargashtAzKharid;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn179;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn180;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn181;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn182;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn183;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn184;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn185;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn186;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn187;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn188;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn189;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn190;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn191;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn192;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn193;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn194;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn195;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn196;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn197;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn198;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn199;
+        private DevExpress.XtraGrid.GridControl gridControl_HavaleFroosh;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_HavaleFroosh;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn158;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn159;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn160;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn161;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn162;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn163;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn164;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn165;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn166;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn167;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn168;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn169;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn170;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn171;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn172;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn173;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn174;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn175;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn176;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn177;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn178;
+        private DevExpress.XtraGrid.GridControl gridControl_HavaleKalaAmani;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_HavaleKalaAmani;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn200;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn201;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn202;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn203;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn204;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn205;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn206;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn207;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn208;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn209;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn210;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn211;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn212;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn213;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn214;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn215;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn216;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn217;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn218;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn219;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn220;
+        private DevExpress.XtraGrid.GridControl gridControl_BargashtAzResidTolid;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_BargashtAzResidTolid;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn221;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn222;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn223;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn224;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn225;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn226;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn227;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn228;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn229;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn230;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn231;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn232;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn233;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn234;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn235;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn236;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn237;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn238;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn239;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn240;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn241;
+        private DevExpress.XtraGrid.GridControl gridControl_HavaleTolid;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_HavaleTolid;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn242;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn243;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn244;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn245;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn246;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn247;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn248;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn249;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn250;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn251;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn252;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn253;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn254;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn255;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn256;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn257;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn258;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn259;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn260;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn261;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn262;
+        private DevExpress.XtraGrid.GridControl gridControl_HavaleHazine;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_HavaleHazine;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn263;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn264;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn265;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn266;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn267;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn268;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn269;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn270;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn271;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn272;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn273;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn274;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn275;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn276;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn277;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn278;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn279;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn280;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn281;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn282;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn283;
+        private DevExpress.XtraGrid.GridControl gridControl_KosoratAnbar;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_KosoratAnbar;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn284;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn285;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn286;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn287;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn288;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn289;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn290;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn291;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn292;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn293;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn294;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn295;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn296;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn297;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn298;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn299;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn300;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn301;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn302;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn303;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn304;
+        private DevExpress.XtraGrid.GridControl gridControl_AllKhoroji;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_AllKhoroji;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn305;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn306;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn307;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn308;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn309;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn310;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn311;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn312;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn313;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn314;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn315;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn316;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn317;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn318;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn319;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn320;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn321;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn322;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn323;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn324;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn325;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn326;
+        private DevExpress.XtraGrid.GridControl gridControl_MojodiAvalDore;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_MojodiAvalDore;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn327;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn328;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn329;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn330;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn331;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn332;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn333;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn334;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn335;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn336;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn337;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn338;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn339;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn340;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn341;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn342;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn343;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn344;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn345;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn346;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn347;
+        public DevExpress.XtraEditors.TextEdit txtSharhSanad;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn348;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn349;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn350;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn351;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn352;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn353;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn354;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn355;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn356;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn357;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn358;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn359;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn360;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn361;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn362;
+        private DevExpress.XtraTab.XtraTabPage xtp_BargashtAzHavaleAmval;
+        private DevExpress.XtraTab.XtraTabPage xtp_HavaleAmval;
+        private DevExpress.XtraGrid.GridControl gridControl_BargashtAzHavaleAmval;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_BargashtAzHavaleAmval;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn385;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn386;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn387;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn388;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn389;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn390;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn391;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn392;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn393;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn394;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn395;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn396;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn397;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn398;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn399;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn400;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn401;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn402;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn403;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn404;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn405;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn406;
+        private DevExpress.XtraGrid.GridControl gridControl_HavaleAmval;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_HavaleAmval;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn407;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn408;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn409;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn410;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn411;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn412;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn413;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn414;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn415;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn416;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn417;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn418;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn419;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn420;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn421;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn422;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn423;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn424;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn425;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn426;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn427;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn428;
+        public DevExpress.XtraEditors.SimpleButton btnReloadHesabTafsili3;
+        public DevExpress.XtraEditors.LookUpEdit cmbHesabTafsili3;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        public DevExpress.XtraEditors.SimpleButton btnReloadHesabTafsili2;
+        public DevExpress.XtraEditors.LookUpEdit cmbHesabTafsili2;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
     }
 }

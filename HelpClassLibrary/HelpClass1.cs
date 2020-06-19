@@ -34,6 +34,27 @@ namespace HelpClassLibrary
 {
     public class HelpClass1
     {
+        ///// <summary>
+        ///// How to: Create New DataNavigator Control
+        ///// </summary>
+        //private void CreateDataNavigator()
+        //{
+        //    // Create a new DataNavigator control
+        //    DataNavigator dataNavigator = new DataNavigator();
+        //    Controls.Add(dataNavigator);
+        //    dataNavigator.Height = 40;
+        //    dataNavigator.Dock = DockStyle.Bottom;
+        //    // Bind to a data source
+        //    dataNavigator.DataSource = productsBindingSource;
+        //    // Specify the ImageCollection that stores custom images for the DataNavigator's buttons
+        //    dataNavigator.Buttons.ImageList = imageCollection1;
+        //    for (int i = 0; i < dataNavigator.Buttons.ButtonCollection.Count; i++)
+        //    {
+        //        dataNavigator.Buttons.ButtonCollection[i].ImageIndex = i;
+        //    }
+        //    dataNavigator.ShowToolTips = true;
+        //}
+
 
         /// <summary>
         /// وایریش ردیف دیتاگرید با استفاده از اینتر
@@ -146,11 +167,11 @@ namespace HelpClassLibrary
         //}
 
 
-            /// <summary>
-            /// حذف ردیف فوکوس شده در دیتا گردید ویو با استفاده از کلید Delete
-            /// </summary>
-            /// <param name="sender"></param>
-            /// <param name="e"></param>
+        /// <summary>
+        /// حذف ردیف فوکوس شده در دیتا گردید ویو با استفاده از کلید Delete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridView1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete && e.Modifiers == Keys.Control)
@@ -304,46 +325,69 @@ namespace HelpClassLibrary
             }
         }
 
-       //public static bool ClearLookUpedit = true;
+        //public static bool ClearLookUpedit = true;
         public static void ClearControls(Control panel)
         {
             foreach (Control item in panel.Controls)
             {
                 var _Type = item.GetType();
-                if (_Type.Name == "TextEdit")
-                    item.Text = "";
-                else if (_Type.Name == "LookUpEdit")
+
+                switch (_Type.Name)
                 {
-                    LookUpEdit item1 = (LookUpEdit)item;
-                    item1.EditValue = 0;
+                    case "TextEdit":
+                        {
+                            item.Text = "";
+                            break;
+                        }
+                    case "LookUpEdit":
+                        {
+                            LookUpEdit item1 = (LookUpEdit)item;
+                            if (Convert.ToInt32(item1.EditValue) > 0)
+                                item1.EditValue = 0;
+
+                            break;
+                        }
+                    case "ComboBoxEdit":
+                        {
+                            ComboBoxEdit item1 = (ComboBoxEdit)item;
+                            item1.SelectedIndex = -1;
+                            break;
+                        }
+                    case "CheckEdit":
+                        {
+                            CheckEdit item1 = (CheckEdit)item;
+                            // if (item1.Name != "chkIsActive")
+                            item1.Checked = false;
+                            break;
+                        }
+                    case "GroupBox":
+                        {
+                            GroupBox item1 = (GroupBox)item;
+                            item1.Controls[0].Text = "";
+                            break;
+                        }
+                    case "PictureEdit":
+                        {
+                            PictureEdit item1 = (PictureEdit)item;
+                            item1.Image = null;
+                            break;
+                        }
+                    case "CheckedComboBoxEdit":
+                        {
+                            CheckedComboBoxEdit item1 = (CheckedComboBoxEdit)item;
+                            item1.SetEditValue(0);
+                            break;
+                        }
+                    case "MemoEdit":
+                        {
+                            item.Text = "";
+                            break;
+                        }
+
+                    default:
+                        break;
                 }
-                else if (_Type.Name == "ComboBoxEdit")
-                {
-                    ComboBoxEdit item1 = (ComboBoxEdit)item;
-                    item1.SelectedIndex = -1;
-                }
-                else if (_Type.Name == "CheckEdit")
-                {
-                    CheckEdit item1 = (CheckEdit)item;
-                    // if (item1.Name != "chkIsActive")
-                    item1.Checked = false;
-                }
-                else if (_Type.Name == "GroupBox")
-                {
-                    GroupBox item1 = (GroupBox)item;
-                    item1.Controls[0].Text = "";
-                }
-                else if (_Type.Name == "PictureEdit")
-                {
-                    PictureEdit item1 = (PictureEdit)item;
-                    item1.Image = null;
-                }
-                else if (_Type.Name == "CheckedComboBoxEdit")
-                {
-                    CheckedComboBoxEdit item1 = (CheckedComboBoxEdit)item;
-                    item1.SetEditValue(0);
-                }
-                
+
             }
         }
 
