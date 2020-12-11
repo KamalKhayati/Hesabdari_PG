@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHesabhaTafsili));
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip18 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip19 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip23 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip24 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl_AghlamAnbar = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_AghlamAnbar = new DevExpress.XtraEditors.TextEdit();
             this.cmbGroupTafsili_Aghlam = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Aghlam = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -92,6 +93,7 @@
             this.xtpAghlamAnbar = new DevExpress.XtraTab.XtraTabPage();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.panelControl_Ashkhas = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Ashkhas = new DevExpress.XtraEditors.TextEdit();
             this.chkHaghighi_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
             this.chkHoghoghi_Ashkhas = new DevExpress.XtraEditors.CheckEdit();
             this.btnReloadGroupTafsili_Ashkhas = new DevExpress.XtraEditors.SimpleButton();
@@ -177,6 +179,7 @@
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Daraeha = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Daraeha = new DevExpress.XtraEditors.TextEdit();
             this.txtArzeshEsghat_Daraeha = new DevExpress.XtraEditors.TextEdit();
             this.labelControl83 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
@@ -223,6 +226,7 @@
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Sandogh = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Sandogh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.txtNameMasol_Sandogh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
@@ -269,6 +273,7 @@
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Bank = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Bankha = new DevExpress.XtraEditors.TextEdit();
             this.chkIsDefault_Bank = new DevExpress.XtraEditors.CheckEdit();
             this.cmbNoeArz_Bank = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbNoeHesab_Bank = new DevExpress.XtraEditors.LookUpEdit();
@@ -329,6 +334,7 @@
             this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Vam = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Vamha = new DevExpress.XtraEditors.TextEdit();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.txtTarikhDaryaftVam_Vam = new DevExpress.XtraEditors.TextEdit();
             this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
@@ -373,6 +379,7 @@
             this.gridColumn70 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn71 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Marakez = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Marakez = new DevExpress.XtraEditors.TextEdit();
             this.labelControl58 = new DevExpress.XtraEditors.LabelControl();
             this.cmbGroupTafsili_Marakez = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Marakez = new DevExpress.XtraEditors.SimpleButton();
@@ -406,6 +413,7 @@
             this.gridColumn76 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn77 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Shoabat = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Shoabat = new DevExpress.XtraEditors.TextEdit();
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.cmbGroupTafsili_Shoabat = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Shoabat = new DevExpress.XtraEditors.SimpleButton();
@@ -439,6 +447,7 @@
             this.gridColumn87 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn88 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Prozhe = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Projheha = new DevExpress.XtraEditors.TextEdit();
             this.labelControl57 = new DevExpress.XtraEditors.LabelControl();
             this.cmbGroupTafsili_Prozhe = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Prozhe = new DevExpress.XtraEditors.SimpleButton();
@@ -472,6 +481,7 @@
             this.gridColumn98 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn99 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Gharardad = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Gharardadha = new DevExpress.XtraEditors.TextEdit();
             this.labelControl67 = new DevExpress.XtraEditors.LabelControl();
             this.cmbGroupTafsili_Gharardad = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Gharardad = new DevExpress.XtraEditors.SimpleButton();
@@ -505,6 +515,7 @@
             this.gridColumn120 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn121 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Anbarha = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Anbarha = new DevExpress.XtraEditors.TextEdit();
             this.labelControl77 = new DevExpress.XtraEditors.LabelControl();
             this.cmbGroupTafsili_Anbarha = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Anbarha = new DevExpress.XtraEditors.SimpleButton();
@@ -538,6 +549,7 @@
             this.gridColumn109 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn110 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Sayer = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Sayer = new DevExpress.XtraEditors.TextEdit();
             this.labelControl72 = new DevExpress.XtraEditors.LabelControl();
             this.cmbGroupTafsili_Sayer = new DevExpress.XtraEditors.LookUpEdit();
             this.btnReloadGroupTafsili_Sayer = new DevExpress.XtraEditors.SimpleButton();
@@ -575,6 +587,7 @@
             this.btnJoziatAshkhas = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_AghlamAnbar)).BeginInit();
             this.panelControl_AghlamAnbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_AghlamAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Aghlam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Aghlam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Aghlam.Properties)).BeginInit();
@@ -593,6 +606,7 @@
             this.xtpAghlamAnbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Ashkhas)).BeginInit();
             this.panelControl_Ashkhas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkHaghighi_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkHoghoghi_Ashkhas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkFroshandeh_Ashkhas.Properties)).BeginInit();
@@ -630,6 +644,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Daraeha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Daraeha)).BeginInit();
             this.panelControl_Daraeha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Daraeha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtArzeshEsghat_Daraeha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDarsadEstehlak_Daraeha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbRaveshEstehlak_Daraeha.Properties)).BeginInit();
@@ -652,6 +667,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Sandogh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Sandogh)).BeginInit();
             this.panelControl_Sandogh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Sandogh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameMasol_Sandogh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault_Sandogh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Sandogh.Properties)).BeginInit();
@@ -671,6 +687,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Bank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Bank)).BeginInit();
             this.panelControl_Bank.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Bankha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault_Bank.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNoeArz_Bank.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNoeHesab_Bank.Properties)).BeginInit();
@@ -698,6 +715,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Vam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Vam)).BeginInit();
             this.panelControl_Vam.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Vamha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhDaryaftVam_Vam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNerkhBahre_Vam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSarresidAvalinGhest_Vam.Properties)).BeginInit();
@@ -720,6 +738,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Marakez)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Marakez)).BeginInit();
             this.panelControl_Marakez.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Marakez.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Marakez.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Marakez.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Marakez.Properties)).BeginInit();
@@ -737,6 +756,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Shoabat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Shoabat)).BeginInit();
             this.panelControl_Shoabat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Shoabat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Shoabat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Shoabat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Shoabat.Properties)).BeginInit();
@@ -754,6 +774,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Prozhe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Prozhe)).BeginInit();
             this.panelControl_Prozhe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Projheha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Prozhe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Prozhe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Prozhe.Properties)).BeginInit();
@@ -771,6 +792,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Gharardad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Gharardad)).BeginInit();
             this.panelControl_Gharardad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Gharardadha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Gharardad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Gharardad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Gharardad.Properties)).BeginInit();
@@ -788,6 +810,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Anbarha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Anbarha)).BeginInit();
             this.panelControl_Anbarha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Anbarha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Anbarha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Anbarha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Anbarha.Properties)).BeginInit();
@@ -805,6 +828,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_Sayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Sayer)).BeginInit();
             this.panelControl_Sayer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Sayer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Sayer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Sayer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Sayer.Properties)).BeginInit();
@@ -821,6 +845,7 @@
             // 
             // panelControl_AghlamAnbar
             // 
+            this.panelControl_AghlamAnbar.Controls.Add(this.txtIndex_AghlamAnbar);
             this.panelControl_AghlamAnbar.Controls.Add(this.cmbGroupTafsili_Aghlam);
             this.panelControl_AghlamAnbar.Controls.Add(this.btnReloadGroupTafsili_Aghlam);
             this.panelControl_AghlamAnbar.Controls.Add(this.labelControl11);
@@ -845,6 +870,27 @@
             this.panelControl_AghlamAnbar.Name = "panelControl_AghlamAnbar";
             this.panelControl_AghlamAnbar.Size = new System.Drawing.Size(1290, 184);
             this.panelControl_AghlamAnbar.TabIndex = 36;
+            // 
+            // txtIndex_AghlamAnbar
+            // 
+            this.txtIndex_AghlamAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_AghlamAnbar.EditValue = "";
+            this.txtIndex_AghlamAnbar.Enabled = false;
+            this.txtIndex_AghlamAnbar.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_AghlamAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_AghlamAnbar.Name = "txtIndex_AghlamAnbar";
+            this.txtIndex_AghlamAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_AghlamAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_AghlamAnbar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_AghlamAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_AghlamAnbar.Properties.Mask.EditMask = "f0";
+            this.txtIndex_AghlamAnbar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_AghlamAnbar.Properties.NullText = "آیدی انبار";
+            this.txtIndex_AghlamAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_AghlamAnbar.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_AghlamAnbar.TabIndex = 213;
+            this.txtIndex_AghlamAnbar.TabStop = false;
+            this.txtIndex_AghlamAnbar.Visible = false;
             // 
             // cmbGroupTafsili_Aghlam
             // 
@@ -968,7 +1014,7 @@
             this.txtId_Aghlam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Aghlam.EditValue = "";
             this.txtId_Aghlam.Enabled = false;
-            this.txtId_Aghlam.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Aghlam.Location = new System.Drawing.Point(703, 53);
             this.txtId_Aghlam.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Aghlam.Name = "txtId_Aghlam";
             this.txtId_Aghlam.Properties.Appearance.Options.UseTextOptions = true;
@@ -977,7 +1023,7 @@
             this.txtId_Aghlam.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Aghlam.Properties.NullText = "آیدی انبار";
             this.txtId_Aghlam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Aghlam.Size = new System.Drawing.Size(136, 38);
+            this.txtId_Aghlam.Size = new System.Drawing.Size(63, 38);
             this.txtId_Aghlam.TabIndex = 44;
             this.txtId_Aghlam.TabStop = false;
             this.txtId_Aghlam.Visible = false;
@@ -1072,9 +1118,9 @@
             this.btnNewCode_Aghlam.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Aghlam.Name = "btnNewCode_Aghlam";
             this.btnNewCode_Aghlam.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem13.Text = "Alt+N";
-            superToolTip13.Items.Add(toolTipTitleItem13);
-            this.btnNewCode_Aghlam.SuperTip = superToolTip13;
+            toolTipTitleItem1.Text = "Alt+N";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnNewCode_Aghlam.SuperTip = superToolTip1;
             this.btnNewCode_Aghlam.TabIndex = 45;
             this.btnNewCode_Aghlam.TabStop = false;
             this.btnNewCode_Aghlam.Text = "کد جدید";
@@ -1415,6 +1461,7 @@
             // 
             // panelControl_Ashkhas
             // 
+            this.panelControl_Ashkhas.Controls.Add(this.txtIndex_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.chkHaghighi_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.chkHoghoghi_Ashkhas);
             this.panelControl_Ashkhas.Controls.Add(this.btnReloadGroupTafsili_Ashkhas);
@@ -1446,6 +1493,27 @@
             this.panelControl_Ashkhas.Name = "panelControl_Ashkhas";
             this.panelControl_Ashkhas.Size = new System.Drawing.Size(1290, 228);
             this.panelControl_Ashkhas.TabIndex = 34;
+            // 
+            // txtIndex_Ashkhas
+            // 
+            this.txtIndex_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Ashkhas.EditValue = "";
+            this.txtIndex_Ashkhas.Enabled = false;
+            this.txtIndex_Ashkhas.Location = new System.Drawing.Point(630, 51);
+            this.txtIndex_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Ashkhas.Name = "txtIndex_Ashkhas";
+            this.txtIndex_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Ashkhas.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Ashkhas.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Ashkhas.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Ashkhas.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Ashkhas.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Ashkhas.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Ashkhas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Ashkhas.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Ashkhas.TabIndex = 213;
+            this.txtIndex_Ashkhas.TabStop = false;
+            this.txtIndex_Ashkhas.Visible = false;
             // 
             // chkHaghighi_Ashkhas
             // 
@@ -1745,9 +1813,9 @@
             this.btnNewCode_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Ashkhas.Name = "btnNewCode_Ashkhas";
             this.btnNewCode_Ashkhas.Size = new System.Drawing.Size(130, 41);
-            toolTipTitleItem14.Text = "Alt+N";
-            superToolTip14.Items.Add(toolTipTitleItem14);
-            this.btnNewCode_Ashkhas.SuperTip = superToolTip14;
+            toolTipTitleItem2.Text = "Alt+N";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnNewCode_Ashkhas.SuperTip = superToolTip2;
             this.btnNewCode_Ashkhas.TabIndex = 132;
             this.btnNewCode_Ashkhas.TabStop = false;
             this.btnNewCode_Ashkhas.Text = "کد جدید";
@@ -1757,10 +1825,12 @@
             // 
             this.txtId_Ashkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Ashkhas.EditValue = "";
-            this.txtId_Ashkhas.Location = new System.Drawing.Point(630, 51);
+            this.txtId_Ashkhas.Location = new System.Drawing.Point(691, 51);
             this.txtId_Ashkhas.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Ashkhas.Name = "txtId_Ashkhas";
+            this.txtId_Ashkhas.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtId_Ashkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtId_Ashkhas.Properties.Appearance.Options.UseBackColor = true;
             this.txtId_Ashkhas.Properties.Appearance.Options.UseForeColor = true;
             this.txtId_Ashkhas.Properties.Appearance.Options.UseTextOptions = true;
             this.txtId_Ashkhas.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1769,7 +1839,7 @@
             this.txtId_Ashkhas.Properties.NullText = "آیدی انبار";
             this.txtId_Ashkhas.Properties.ReadOnly = true;
             this.txtId_Ashkhas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Ashkhas.Size = new System.Drawing.Size(131, 38);
+            this.txtId_Ashkhas.Size = new System.Drawing.Size(70, 38);
             this.txtId_Ashkhas.TabIndex = 131;
             this.txtId_Ashkhas.TabStop = false;
             this.txtId_Ashkhas.Visible = false;
@@ -1840,7 +1910,6 @@
             this.xtcHesabhaTafsili.Size = new System.Drawing.Size(1297, 595);
             this.xtcHesabhaTafsili.TabIndex = 42;
             this.xtcHesabhaTafsili.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtpAllHesabTafsili,
             this.xtpAshkhas,
             this.xtpAghlamAnbar,
             this.xtpDaraeha,
@@ -1852,7 +1921,8 @@
             this.xtpProzheha,
             this.xtpGharardadha,
             this.xtpAnbarha,
-            this.xtpSayer});
+            this.xtpSayer,
+            this.xtpAllHesabTafsili});
             this.xtcHesabhaTafsili.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtcHesabTafsili_SelectedPageChanged);
             this.xtcHesabhaTafsili.SelectedPageChanging += new DevExpress.XtraTab.TabPageChangingEventHandler(this.xtcHesabTafsili_SelectedPageChanging);
             // 
@@ -2742,6 +2812,7 @@
             // 
             // panelControl_Daraeha
             // 
+            this.panelControl_Daraeha.Controls.Add(this.txtIndex_Daraeha);
             this.panelControl_Daraeha.Controls.Add(this.txtArzeshEsghat_Daraeha);
             this.panelControl_Daraeha.Controls.Add(this.labelControl83);
             this.panelControl_Daraeha.Controls.Add(this.labelControl52);
@@ -2776,6 +2847,27 @@
             this.panelControl_Daraeha.Name = "panelControl_Daraeha";
             this.panelControl_Daraeha.Size = new System.Drawing.Size(1290, 226);
             this.panelControl_Daraeha.TabIndex = 38;
+            // 
+            // txtIndex_Daraeha
+            // 
+            this.txtIndex_Daraeha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Daraeha.EditValue = "";
+            this.txtIndex_Daraeha.Enabled = false;
+            this.txtIndex_Daraeha.Location = new System.Drawing.Point(630, 53);
+            this.txtIndex_Daraeha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Daraeha.Name = "txtIndex_Daraeha";
+            this.txtIndex_Daraeha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Daraeha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Daraeha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Daraeha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Daraeha.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Daraeha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Daraeha.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Daraeha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Daraeha.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Daraeha.TabIndex = 213;
+            this.txtIndex_Daraeha.TabStop = false;
+            this.txtIndex_Daraeha.Visible = false;
             // 
             // txtArzeshEsghat_Daraeha
             // 
@@ -3063,7 +3155,7 @@
             this.txtId_Daraeha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Daraeha.EditValue = "";
             this.txtId_Daraeha.Enabled = false;
-            this.txtId_Daraeha.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Daraeha.Location = new System.Drawing.Point(691, 53);
             this.txtId_Daraeha.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Daraeha.Name = "txtId_Daraeha";
             this.txtId_Daraeha.Properties.Appearance.Options.UseTextOptions = true;
@@ -3072,7 +3164,7 @@
             this.txtId_Daraeha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Daraeha.Properties.NullText = "آیدی انبار";
             this.txtId_Daraeha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Daraeha.Size = new System.Drawing.Size(136, 38);
+            this.txtId_Daraeha.Size = new System.Drawing.Size(75, 38);
             this.txtId_Daraeha.TabIndex = 44;
             this.txtId_Daraeha.TabStop = false;
             this.txtId_Daraeha.Visible = false;
@@ -3169,9 +3261,9 @@
             this.btnNewCode_Daraeha.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Daraeha.Name = "btnNewCode_Daraeha";
             this.btnNewCode_Daraeha.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem15.Text = "Alt+N";
-            superToolTip15.Items.Add(toolTipTitleItem15);
-            this.btnNewCode_Daraeha.SuperTip = superToolTip15;
+            toolTipTitleItem3.Text = "Alt+N";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnNewCode_Daraeha.SuperTip = superToolTip3;
             this.btnNewCode_Daraeha.TabIndex = 45;
             this.btnNewCode_Daraeha.TabStop = false;
             this.btnNewCode_Daraeha.Text = "کد جدید";
@@ -3485,6 +3577,7 @@
             // 
             // panelControl_Sandogh
             // 
+            this.panelControl_Sandogh.Controls.Add(this.txtIndex_Sandogh);
             this.panelControl_Sandogh.Controls.Add(this.labelControl19);
             this.panelControl_Sandogh.Controls.Add(this.txtNameMasol_Sandogh);
             this.panelControl_Sandogh.Controls.Add(this.labelControl18);
@@ -3511,6 +3604,27 @@
             this.panelControl_Sandogh.Name = "panelControl_Sandogh";
             this.panelControl_Sandogh.Size = new System.Drawing.Size(1290, 225);
             this.panelControl_Sandogh.TabIndex = 40;
+            // 
+            // txtIndex_Sandogh
+            // 
+            this.txtIndex_Sandogh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Sandogh.EditValue = "";
+            this.txtIndex_Sandogh.Enabled = false;
+            this.txtIndex_Sandogh.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Sandogh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Sandogh.Name = "txtIndex_Sandogh";
+            this.txtIndex_Sandogh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Sandogh.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Sandogh.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Sandogh.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Sandogh.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Sandogh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Sandogh.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Sandogh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Sandogh.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Sandogh.TabIndex = 213;
+            this.txtIndex_Sandogh.TabStop = false;
+            this.txtIndex_Sandogh.Visible = false;
             // 
             // labelControl19
             // 
@@ -3687,7 +3801,7 @@
             this.txtId_Sandogh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Sandogh.EditValue = "";
             this.txtId_Sandogh.Enabled = false;
-            this.txtId_Sandogh.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Sandogh.Location = new System.Drawing.Point(691, 53);
             this.txtId_Sandogh.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Sandogh.Name = "txtId_Sandogh";
             this.txtId_Sandogh.Properties.Appearance.Options.UseTextOptions = true;
@@ -3696,7 +3810,7 @@
             this.txtId_Sandogh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Sandogh.Properties.NullText = "آیدی انبار";
             this.txtId_Sandogh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Sandogh.Size = new System.Drawing.Size(135, 38);
+            this.txtId_Sandogh.Size = new System.Drawing.Size(74, 38);
             this.txtId_Sandogh.TabIndex = 44;
             this.txtId_Sandogh.TabStop = false;
             this.txtId_Sandogh.Visible = false;
@@ -3793,9 +3907,9 @@
             this.btnNewCode_Sandogh.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Sandogh.Name = "btnNewCode_Sandogh";
             this.btnNewCode_Sandogh.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem16.Text = "Alt+N";
-            superToolTip16.Items.Add(toolTipTitleItem16);
-            this.btnNewCode_Sandogh.SuperTip = superToolTip16;
+            toolTipTitleItem4.Text = "Alt+N";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnNewCode_Sandogh.SuperTip = superToolTip4;
             this.btnNewCode_Sandogh.TabIndex = 45;
             this.btnNewCode_Sandogh.TabStop = false;
             this.btnNewCode_Sandogh.Text = "کد جدید";
@@ -4217,6 +4331,7 @@
             // 
             // panelControl_Bank
             // 
+            this.panelControl_Bank.Controls.Add(this.txtIndex_Bankha);
             this.panelControl_Bank.Controls.Add(this.chkIsDefault_Bank);
             this.panelControl_Bank.Controls.Add(this.cmbNoeArz_Bank);
             this.panelControl_Bank.Controls.Add(this.cmbNoeHesab_Bank);
@@ -4262,6 +4377,27 @@
             this.panelControl_Bank.Name = "panelControl_Bank";
             this.panelControl_Bank.Size = new System.Drawing.Size(1290, 314);
             this.panelControl_Bank.TabIndex = 42;
+            // 
+            // txtIndex_Bankha
+            // 
+            this.txtIndex_Bankha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Bankha.EditValue = "";
+            this.txtIndex_Bankha.Enabled = false;
+            this.txtIndex_Bankha.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Bankha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Bankha.Name = "txtIndex_Bankha";
+            this.txtIndex_Bankha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Bankha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Bankha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Bankha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Bankha.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Bankha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Bankha.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Bankha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Bankha.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Bankha.TabIndex = 214;
+            this.txtIndex_Bankha.TabStop = false;
+            this.txtIndex_Bankha.Visible = false;
             // 
             // chkIsDefault_Bank
             // 
@@ -4732,7 +4868,7 @@
             this.txtId_Bank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Bank.EditValue = "";
             this.txtId_Bank.Enabled = false;
-            this.txtId_Bank.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Bank.Location = new System.Drawing.Point(680, 53);
             this.txtId_Bank.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Bank.Name = "txtId_Bank";
             this.txtId_Bank.Properties.Appearance.Options.UseTextOptions = true;
@@ -4741,7 +4877,7 @@
             this.txtId_Bank.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Bank.Properties.NullText = "آیدی انبار";
             this.txtId_Bank.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Bank.Size = new System.Drawing.Size(126, 38);
+            this.txtId_Bank.Size = new System.Drawing.Size(76, 38);
             this.txtId_Bank.TabIndex = 44;
             this.txtId_Bank.TabStop = false;
             this.txtId_Bank.Visible = false;
@@ -4838,9 +4974,9 @@
             this.btnNewCode_Bank.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Bank.Name = "btnNewCode_Bank";
             this.btnNewCode_Bank.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem17.Text = "Alt+N";
-            superToolTip17.Items.Add(toolTipTitleItem17);
-            this.btnNewCode_Bank.SuperTip = superToolTip17;
+            toolTipTitleItem5.Text = "Alt+N";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            this.btnNewCode_Bank.SuperTip = superToolTip5;
             this.btnNewCode_Bank.TabIndex = 45;
             this.btnNewCode_Bank.TabStop = false;
             this.btnNewCode_Bank.Text = "کد جدید";
@@ -5179,6 +5315,7 @@
             // 
             // panelControl_Vam
             // 
+            this.panelControl_Vam.Controls.Add(this.txtIndex_Vamha);
             this.panelControl_Vam.Controls.Add(this.labelControl31);
             this.panelControl_Vam.Controls.Add(this.txtTarikhDaryaftVam_Vam);
             this.panelControl_Vam.Controls.Add(this.labelControl49);
@@ -5213,6 +5350,27 @@
             this.panelControl_Vam.Name = "panelControl_Vam";
             this.panelControl_Vam.Size = new System.Drawing.Size(1290, 225);
             this.panelControl_Vam.TabIndex = 42;
+            // 
+            // txtIndex_Vamha
+            // 
+            this.txtIndex_Vamha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Vamha.EditValue = "";
+            this.txtIndex_Vamha.Enabled = false;
+            this.txtIndex_Vamha.Location = new System.Drawing.Point(630, 53);
+            this.txtIndex_Vamha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Vamha.Name = "txtIndex_Vamha";
+            this.txtIndex_Vamha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Vamha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Vamha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Vamha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Vamha.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Vamha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Vamha.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Vamha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Vamha.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Vamha.TabIndex = 214;
+            this.txtIndex_Vamha.TabStop = false;
+            this.txtIndex_Vamha.Visible = false;
             // 
             // labelControl31
             // 
@@ -5523,7 +5681,7 @@
             this.txtId_Vam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Vam.EditValue = "";
             this.txtId_Vam.Enabled = false;
-            this.txtId_Vam.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Vam.Location = new System.Drawing.Point(683, 53);
             this.txtId_Vam.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Vam.Name = "txtId_Vam";
             this.txtId_Vam.Properties.Appearance.Options.UseTextOptions = true;
@@ -5532,7 +5690,7 @@
             this.txtId_Vam.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Vam.Properties.NullText = "آیدی انبار";
             this.txtId_Vam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Vam.Size = new System.Drawing.Size(124, 38);
+            this.txtId_Vam.Size = new System.Drawing.Size(71, 38);
             this.txtId_Vam.TabIndex = 44;
             this.txtId_Vam.TabStop = false;
             this.txtId_Vam.Visible = false;
@@ -5629,9 +5787,9 @@
             this.btnNewCode_Vam.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Vam.Name = "btnNewCode_Vam";
             this.btnNewCode_Vam.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem18.Text = "Alt+N";
-            superToolTip18.Items.Add(toolTipTitleItem18);
-            this.btnNewCode_Vam.SuperTip = superToolTip18;
+            toolTipTitleItem6.Text = "Alt+N";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            this.btnNewCode_Vam.SuperTip = superToolTip6;
             this.btnNewCode_Vam.TabIndex = 45;
             this.btnNewCode_Vam.TabStop = false;
             this.btnNewCode_Vam.Text = "کد جدید";
@@ -5883,6 +6041,7 @@
             // 
             // panelControl_Marakez
             // 
+            this.panelControl_Marakez.Controls.Add(this.txtIndex_Marakez);
             this.panelControl_Marakez.Controls.Add(this.labelControl58);
             this.panelControl_Marakez.Controls.Add(this.cmbGroupTafsili_Marakez);
             this.panelControl_Marakez.Controls.Add(this.btnReloadGroupTafsili_Marakez);
@@ -5906,6 +6065,27 @@
             this.panelControl_Marakez.Name = "panelControl_Marakez";
             this.panelControl_Marakez.Size = new System.Drawing.Size(1290, 185);
             this.panelControl_Marakez.TabIndex = 44;
+            // 
+            // txtIndex_Marakez
+            // 
+            this.txtIndex_Marakez.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Marakez.EditValue = "";
+            this.txtIndex_Marakez.Enabled = false;
+            this.txtIndex_Marakez.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Marakez.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Marakez.Name = "txtIndex_Marakez";
+            this.txtIndex_Marakez.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Marakez.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Marakez.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Marakez.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Marakez.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Marakez.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Marakez.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Marakez.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Marakez.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Marakez.TabIndex = 214;
+            this.txtIndex_Marakez.TabStop = false;
+            this.txtIndex_Marakez.Visible = false;
             // 
             // labelControl58
             // 
@@ -6042,7 +6222,7 @@
             this.txtId_Marakez.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Marakez.EditValue = "";
             this.txtId_Marakez.Enabled = false;
-            this.txtId_Marakez.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Marakez.Location = new System.Drawing.Point(691, 53);
             this.txtId_Marakez.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Marakez.Name = "txtId_Marakez";
             this.txtId_Marakez.Properties.Appearance.Options.UseTextOptions = true;
@@ -6051,7 +6231,7 @@
             this.txtId_Marakez.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Marakez.Properties.NullText = "آیدی انبار";
             this.txtId_Marakez.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Marakez.Size = new System.Drawing.Size(127, 38);
+            this.txtId_Marakez.Size = new System.Drawing.Size(66, 38);
             this.txtId_Marakez.TabIndex = 44;
             this.txtId_Marakez.TabStop = false;
             this.txtId_Marakez.Visible = false;
@@ -6148,9 +6328,9 @@
             this.btnNewCode_Marakez.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Marakez.Name = "btnNewCode_Marakez";
             this.btnNewCode_Marakez.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem19.Text = "Alt+N";
-            superToolTip19.Items.Add(toolTipTitleItem19);
-            this.btnNewCode_Marakez.SuperTip = superToolTip19;
+            toolTipTitleItem7.Text = "Alt+N";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            this.btnNewCode_Marakez.SuperTip = superToolTip7;
             this.btnNewCode_Marakez.TabIndex = 45;
             this.btnNewCode_Marakez.TabStop = false;
             this.btnNewCode_Marakez.Text = "کد جدید";
@@ -6402,6 +6582,7 @@
             // 
             // panelControl_Shoabat
             // 
+            this.panelControl_Shoabat.Controls.Add(this.txtIndex_Shoabat);
             this.panelControl_Shoabat.Controls.Add(this.labelControl51);
             this.panelControl_Shoabat.Controls.Add(this.cmbGroupTafsili_Shoabat);
             this.panelControl_Shoabat.Controls.Add(this.btnReloadGroupTafsili_Shoabat);
@@ -6425,6 +6606,27 @@
             this.panelControl_Shoabat.Name = "panelControl_Shoabat";
             this.panelControl_Shoabat.Size = new System.Drawing.Size(1290, 185);
             this.panelControl_Shoabat.TabIndex = 46;
+            // 
+            // txtIndex_Shoabat
+            // 
+            this.txtIndex_Shoabat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Shoabat.EditValue = "";
+            this.txtIndex_Shoabat.Enabled = false;
+            this.txtIndex_Shoabat.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Shoabat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Shoabat.Name = "txtIndex_Shoabat";
+            this.txtIndex_Shoabat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Shoabat.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Shoabat.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Shoabat.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Shoabat.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Shoabat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Shoabat.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Shoabat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Shoabat.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Shoabat.TabIndex = 214;
+            this.txtIndex_Shoabat.TabStop = false;
+            this.txtIndex_Shoabat.Visible = false;
             // 
             // labelControl51
             // 
@@ -6561,7 +6763,7 @@
             this.txtId_Shoabat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Shoabat.EditValue = "";
             this.txtId_Shoabat.Enabled = false;
-            this.txtId_Shoabat.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Shoabat.Location = new System.Drawing.Point(691, 53);
             this.txtId_Shoabat.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Shoabat.Name = "txtId_Shoabat";
             this.txtId_Shoabat.Properties.Appearance.Options.UseTextOptions = true;
@@ -6570,7 +6772,7 @@
             this.txtId_Shoabat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Shoabat.Properties.NullText = "آیدی انبار";
             this.txtId_Shoabat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Shoabat.Size = new System.Drawing.Size(127, 38);
+            this.txtId_Shoabat.Size = new System.Drawing.Size(66, 38);
             this.txtId_Shoabat.TabIndex = 44;
             this.txtId_Shoabat.TabStop = false;
             this.txtId_Shoabat.Visible = false;
@@ -6667,9 +6869,9 @@
             this.btnNewCode_Shoabat.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Shoabat.Name = "btnNewCode_Shoabat";
             this.btnNewCode_Shoabat.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem20.Text = "Alt+N";
-            superToolTip20.Items.Add(toolTipTitleItem20);
-            this.btnNewCode_Shoabat.SuperTip = superToolTip20;
+            toolTipTitleItem8.Text = "Alt+N";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            this.btnNewCode_Shoabat.SuperTip = superToolTip8;
             this.btnNewCode_Shoabat.TabIndex = 45;
             this.btnNewCode_Shoabat.TabStop = false;
             this.btnNewCode_Shoabat.Text = "کد جدید";
@@ -6921,6 +7123,7 @@
             // 
             // panelControl_Prozhe
             // 
+            this.panelControl_Prozhe.Controls.Add(this.txtIndex_Projheha);
             this.panelControl_Prozhe.Controls.Add(this.labelControl57);
             this.panelControl_Prozhe.Controls.Add(this.cmbGroupTafsili_Prozhe);
             this.panelControl_Prozhe.Controls.Add(this.btnReloadGroupTafsili_Prozhe);
@@ -6944,6 +7147,27 @@
             this.panelControl_Prozhe.Name = "panelControl_Prozhe";
             this.panelControl_Prozhe.Size = new System.Drawing.Size(1290, 185);
             this.panelControl_Prozhe.TabIndex = 48;
+            // 
+            // txtIndex_Projheha
+            // 
+            this.txtIndex_Projheha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Projheha.EditValue = "";
+            this.txtIndex_Projheha.Enabled = false;
+            this.txtIndex_Projheha.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Projheha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Projheha.Name = "txtIndex_Projheha";
+            this.txtIndex_Projheha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Projheha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Projheha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Projheha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Projheha.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Projheha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Projheha.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Projheha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Projheha.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Projheha.TabIndex = 214;
+            this.txtIndex_Projheha.TabStop = false;
+            this.txtIndex_Projheha.Visible = false;
             // 
             // labelControl57
             // 
@@ -7080,7 +7304,7 @@
             this.txtId_Prozhe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Prozhe.EditValue = "";
             this.txtId_Prozhe.Enabled = false;
-            this.txtId_Prozhe.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Prozhe.Location = new System.Drawing.Point(691, 53);
             this.txtId_Prozhe.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Prozhe.Name = "txtId_Prozhe";
             this.txtId_Prozhe.Properties.Appearance.Options.UseTextOptions = true;
@@ -7089,7 +7313,7 @@
             this.txtId_Prozhe.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Prozhe.Properties.NullText = "آیدی انبار";
             this.txtId_Prozhe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Prozhe.Size = new System.Drawing.Size(127, 38);
+            this.txtId_Prozhe.Size = new System.Drawing.Size(66, 38);
             this.txtId_Prozhe.TabIndex = 44;
             this.txtId_Prozhe.TabStop = false;
             this.txtId_Prozhe.Visible = false;
@@ -7186,9 +7410,9 @@
             this.btnNewCode_Prozhe.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Prozhe.Name = "btnNewCode_Prozhe";
             this.btnNewCode_Prozhe.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem21.Text = "Alt+N";
-            superToolTip21.Items.Add(toolTipTitleItem21);
-            this.btnNewCode_Prozhe.SuperTip = superToolTip21;
+            toolTipTitleItem9.Text = "Alt+N";
+            superToolTip9.Items.Add(toolTipTitleItem9);
+            this.btnNewCode_Prozhe.SuperTip = superToolTip9;
             this.btnNewCode_Prozhe.TabIndex = 45;
             this.btnNewCode_Prozhe.TabStop = false;
             this.btnNewCode_Prozhe.Text = "کد جدید";
@@ -7440,6 +7664,7 @@
             // 
             // panelControl_Gharardad
             // 
+            this.panelControl_Gharardad.Controls.Add(this.txtIndex_Gharardadha);
             this.panelControl_Gharardad.Controls.Add(this.labelControl67);
             this.panelControl_Gharardad.Controls.Add(this.cmbGroupTafsili_Gharardad);
             this.panelControl_Gharardad.Controls.Add(this.btnReloadGroupTafsili_Gharardad);
@@ -7463,6 +7688,27 @@
             this.panelControl_Gharardad.Name = "panelControl_Gharardad";
             this.panelControl_Gharardad.Size = new System.Drawing.Size(1290, 185);
             this.panelControl_Gharardad.TabIndex = 50;
+            // 
+            // txtIndex_Gharardadha
+            // 
+            this.txtIndex_Gharardadha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Gharardadha.EditValue = "";
+            this.txtIndex_Gharardadha.Enabled = false;
+            this.txtIndex_Gharardadha.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Gharardadha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Gharardadha.Name = "txtIndex_Gharardadha";
+            this.txtIndex_Gharardadha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Gharardadha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Gharardadha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Gharardadha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Gharardadha.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Gharardadha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Gharardadha.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Gharardadha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Gharardadha.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Gharardadha.TabIndex = 214;
+            this.txtIndex_Gharardadha.TabStop = false;
+            this.txtIndex_Gharardadha.Visible = false;
             // 
             // labelControl67
             // 
@@ -7599,7 +7845,7 @@
             this.txtId_Gharardad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Gharardad.EditValue = "";
             this.txtId_Gharardad.Enabled = false;
-            this.txtId_Gharardad.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Gharardad.Location = new System.Drawing.Point(691, 53);
             this.txtId_Gharardad.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Gharardad.Name = "txtId_Gharardad";
             this.txtId_Gharardad.Properties.Appearance.Options.UseTextOptions = true;
@@ -7608,7 +7854,7 @@
             this.txtId_Gharardad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Gharardad.Properties.NullText = "آیدی انبار";
             this.txtId_Gharardad.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Gharardad.Size = new System.Drawing.Size(127, 38);
+            this.txtId_Gharardad.Size = new System.Drawing.Size(66, 38);
             this.txtId_Gharardad.TabIndex = 44;
             this.txtId_Gharardad.TabStop = false;
             this.txtId_Gharardad.Visible = false;
@@ -7705,9 +7951,9 @@
             this.btnNewCode_Gharardad.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Gharardad.Name = "btnNewCode_Gharardad";
             this.btnNewCode_Gharardad.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem22.Text = "Alt+N";
-            superToolTip22.Items.Add(toolTipTitleItem22);
-            this.btnNewCode_Gharardad.SuperTip = superToolTip22;
+            toolTipTitleItem10.Text = "Alt+N";
+            superToolTip10.Items.Add(toolTipTitleItem10);
+            this.btnNewCode_Gharardad.SuperTip = superToolTip10;
             this.btnNewCode_Gharardad.TabIndex = 45;
             this.btnNewCode_Gharardad.TabStop = false;
             this.btnNewCode_Gharardad.Text = "کد جدید";
@@ -7958,6 +8204,7 @@
             // 
             // panelControl_Anbarha
             // 
+            this.panelControl_Anbarha.Controls.Add(this.txtIndex_Anbarha);
             this.panelControl_Anbarha.Controls.Add(this.labelControl77);
             this.panelControl_Anbarha.Controls.Add(this.cmbGroupTafsili_Anbarha);
             this.panelControl_Anbarha.Controls.Add(this.btnReloadGroupTafsili_Anbarha);
@@ -7981,6 +8228,27 @@
             this.panelControl_Anbarha.Name = "panelControl_Anbarha";
             this.panelControl_Anbarha.Size = new System.Drawing.Size(1290, 185);
             this.panelControl_Anbarha.TabIndex = 52;
+            // 
+            // txtIndex_Anbarha
+            // 
+            this.txtIndex_Anbarha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Anbarha.EditValue = "";
+            this.txtIndex_Anbarha.Enabled = false;
+            this.txtIndex_Anbarha.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Anbarha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Anbarha.Name = "txtIndex_Anbarha";
+            this.txtIndex_Anbarha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Anbarha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Anbarha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Anbarha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Anbarha.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Anbarha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Anbarha.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Anbarha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Anbarha.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Anbarha.TabIndex = 214;
+            this.txtIndex_Anbarha.TabStop = false;
+            this.txtIndex_Anbarha.Visible = false;
             // 
             // labelControl77
             // 
@@ -8117,7 +8385,7 @@
             this.txtId_Anbarha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Anbarha.EditValue = "";
             this.txtId_Anbarha.Enabled = false;
-            this.txtId_Anbarha.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Anbarha.Location = new System.Drawing.Point(691, 53);
             this.txtId_Anbarha.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Anbarha.Name = "txtId_Anbarha";
             this.txtId_Anbarha.Properties.Appearance.Options.UseTextOptions = true;
@@ -8126,7 +8394,7 @@
             this.txtId_Anbarha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Anbarha.Properties.NullText = "آیدی انبار";
             this.txtId_Anbarha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Anbarha.Size = new System.Drawing.Size(127, 38);
+            this.txtId_Anbarha.Size = new System.Drawing.Size(66, 38);
             this.txtId_Anbarha.TabIndex = 44;
             this.txtId_Anbarha.TabStop = false;
             this.txtId_Anbarha.Visible = false;
@@ -8223,9 +8491,9 @@
             this.btnNewCode_Anbarha.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Anbarha.Name = "btnNewCode_Anbarha";
             this.btnNewCode_Anbarha.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem23.Text = "Alt+N";
-            superToolTip23.Items.Add(toolTipTitleItem23);
-            this.btnNewCode_Anbarha.SuperTip = superToolTip23;
+            toolTipTitleItem11.Text = "Alt+N";
+            superToolTip11.Items.Add(toolTipTitleItem11);
+            this.btnNewCode_Anbarha.SuperTip = superToolTip11;
             this.btnNewCode_Anbarha.TabIndex = 45;
             this.btnNewCode_Anbarha.TabStop = false;
             this.btnNewCode_Anbarha.Text = "کد جدید";
@@ -8477,6 +8745,7 @@
             // 
             // panelControl_Sayer
             // 
+            this.panelControl_Sayer.Controls.Add(this.txtIndex_Sayer);
             this.panelControl_Sayer.Controls.Add(this.labelControl72);
             this.panelControl_Sayer.Controls.Add(this.cmbGroupTafsili_Sayer);
             this.panelControl_Sayer.Controls.Add(this.btnReloadGroupTafsili_Sayer);
@@ -8500,6 +8769,27 @@
             this.panelControl_Sayer.Name = "panelControl_Sayer";
             this.panelControl_Sayer.Size = new System.Drawing.Size(1290, 185);
             this.panelControl_Sayer.TabIndex = 52;
+            // 
+            // txtIndex_Sayer
+            // 
+            this.txtIndex_Sayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Sayer.EditValue = "";
+            this.txtIndex_Sayer.Enabled = false;
+            this.txtIndex_Sayer.Location = new System.Drawing.Point(631, 53);
+            this.txtIndex_Sayer.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Sayer.Name = "txtIndex_Sayer";
+            this.txtIndex_Sayer.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Sayer.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Sayer.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Sayer.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Sayer.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Sayer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Sayer.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Sayer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Sayer.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Sayer.TabIndex = 214;
+            this.txtIndex_Sayer.TabStop = false;
+            this.txtIndex_Sayer.Visible = false;
             // 
             // labelControl72
             // 
@@ -8636,7 +8926,7 @@
             this.txtId_Sayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Sayer.EditValue = "";
             this.txtId_Sayer.Enabled = false;
-            this.txtId_Sayer.Location = new System.Drawing.Point(630, 53);
+            this.txtId_Sayer.Location = new System.Drawing.Point(692, 53);
             this.txtId_Sayer.Margin = new System.Windows.Forms.Padding(4);
             this.txtId_Sayer.Name = "txtId_Sayer";
             this.txtId_Sayer.Properties.Appearance.Options.UseTextOptions = true;
@@ -8645,7 +8935,7 @@
             this.txtId_Sayer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_Sayer.Properties.NullText = "آیدی انبار";
             this.txtId_Sayer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_Sayer.Size = new System.Drawing.Size(127, 38);
+            this.txtId_Sayer.Size = new System.Drawing.Size(65, 38);
             this.txtId_Sayer.TabIndex = 44;
             this.txtId_Sayer.TabStop = false;
             this.txtId_Sayer.Visible = false;
@@ -8742,9 +9032,9 @@
             this.btnNewCode_Sayer.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCode_Sayer.Name = "btnNewCode_Sayer";
             this.btnNewCode_Sayer.Size = new System.Drawing.Size(138, 41);
-            toolTipTitleItem24.Text = "Alt+N";
-            superToolTip24.Items.Add(toolTipTitleItem24);
-            this.btnNewCode_Sayer.SuperTip = superToolTip24;
+            toolTipTitleItem12.Text = "Alt+N";
+            superToolTip12.Items.Add(toolTipTitleItem12);
+            this.btnNewCode_Sayer.SuperTip = superToolTip12;
             this.btnNewCode_Sayer.TabIndex = 45;
             this.btnNewCode_Sayer.TabStop = false;
             this.btnNewCode_Sayer.Text = "کد جدید";
@@ -8969,7 +9259,6 @@
             // btnCreate
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreate.Enabled = false;
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
             this.btnCreate.Location = new System.Drawing.Point(1233, 6);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
@@ -9039,6 +9328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_AghlamAnbar)).EndInit();
             this.panelControl_AghlamAnbar.ResumeLayout(false);
             this.panelControl_AghlamAnbar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_AghlamAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Aghlam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Aghlam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Aghlam.Properties)).EndInit();
@@ -9058,6 +9348,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Ashkhas)).EndInit();
             this.panelControl_Ashkhas.ResumeLayout(false);
             this.panelControl_Ashkhas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkHaghighi_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkHoghoghi_Ashkhas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkFroshandeh_Ashkhas.Properties)).EndInit();
@@ -9096,6 +9387,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Daraeha)).EndInit();
             this.panelControl_Daraeha.ResumeLayout(false);
             this.panelControl_Daraeha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Daraeha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtArzeshEsghat_Daraeha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDarsadEstehlak_Daraeha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbRaveshEstehlak_Daraeha.Properties)).EndInit();
@@ -9119,6 +9411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Sandogh)).EndInit();
             this.panelControl_Sandogh.ResumeLayout(false);
             this.panelControl_Sandogh.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Sandogh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameMasol_Sandogh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault_Sandogh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Sandogh.Properties)).EndInit();
@@ -9139,6 +9432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Bank)).EndInit();
             this.panelControl_Bank.ResumeLayout(false);
             this.panelControl_Bank.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Bankha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsDefault_Bank.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNoeArz_Bank.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNoeHesab_Bank.Properties)).EndInit();
@@ -9167,6 +9461,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Vam)).EndInit();
             this.panelControl_Vam.ResumeLayout(false);
             this.panelControl_Vam.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Vamha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhDaryaftVam_Vam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNerkhBahre_Vam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSarresidAvalinGhest_Vam.Properties)).EndInit();
@@ -9190,6 +9485,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Marakez)).EndInit();
             this.panelControl_Marakez.ResumeLayout(false);
             this.panelControl_Marakez.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Marakez.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Marakez.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Marakez.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Marakez.Properties)).EndInit();
@@ -9208,6 +9504,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Shoabat)).EndInit();
             this.panelControl_Shoabat.ResumeLayout(false);
             this.panelControl_Shoabat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Shoabat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Shoabat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Shoabat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Shoabat.Properties)).EndInit();
@@ -9226,6 +9523,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Prozhe)).EndInit();
             this.panelControl_Prozhe.ResumeLayout(false);
             this.panelControl_Prozhe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Projheha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Prozhe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Prozhe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Prozhe.Properties)).EndInit();
@@ -9244,6 +9542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Gharardad)).EndInit();
             this.panelControl_Gharardad.ResumeLayout(false);
             this.panelControl_Gharardad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Gharardadha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Gharardad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Gharardad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Gharardad.Properties)).EndInit();
@@ -9262,6 +9561,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Anbarha)).EndInit();
             this.panelControl_Anbarha.ResumeLayout(false);
             this.panelControl_Anbarha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Anbarha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Anbarha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Anbarha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Anbarha.Properties)).EndInit();
@@ -9280,6 +9580,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Sayer)).EndInit();
             this.panelControl_Sayer.ResumeLayout(false);
             this.panelControl_Sayer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Sayer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili_Sayer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhEjad_Sayer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_Sayer.Properties)).EndInit();
@@ -9509,46 +9810,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTarikhEjad3;
         private DevExpress.XtraGrid.Columns.GridColumn colLevelNamber3;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.PanelControl panelControl_Bank;
-        public DevExpress.XtraEditors.LookUpEdit cmbGroupTafsili_Bank;
-        private DevExpress.XtraEditors.SimpleButton btnReloadGroupTafsili_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl22;
-        private DevExpress.XtraEditors.TextEdit txtTarikhEjad_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl23;
-        private DevExpress.XtraEditors.LabelControl labelControl27;
-        public DevExpress.XtraEditors.CheckEdit chkIsActive_Bank;
-        public DevExpress.XtraEditors.TextEdit txtId_Bank;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private DevExpress.XtraEditors.MemoEdit txtSharh_Bank;
-        public DevExpress.XtraEditors.TextEdit txtCode_Bank;
-        private DevExpress.XtraEditors.CheckEdit chkEditCode_Bank;
-        public DevExpress.XtraEditors.TextEdit txtCodeGroupTafsili_Bank;
-        private DevExpress.XtraEditors.SimpleButton btnNewCode_Bank;
-        public DevExpress.XtraEditors.TextEdit txtName_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl29;
-        private DevExpress.XtraEditors.CheckEdit chkIsDefault_Bank;
-        public DevExpress.XtraEditors.LookUpEdit cmbNoeArz_Bank;
-        public DevExpress.XtraEditors.LookUpEdit cmbNoeHesab_Bank;
-        public DevExpress.XtraEditors.LookUpEdit cmbNameBank_Bank;
-        private DevExpress.XtraEditors.SimpleButton btnNoeArz_Bank;
-        private DevExpress.XtraEditors.SimpleButton btnNoeHesab_Bank;
-        private DevExpress.XtraEditors.SimpleButton btnNamBank_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl21;
-        private DevExpress.XtraEditors.LabelControl labelControl30;
-        private DevExpress.XtraEditors.LabelControl labelControl32;
-        private DevExpress.XtraEditors.LabelControl labelControl33;
-        public DevExpress.XtraEditors.TextEdit txtShomareShaba_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl34;
-        public DevExpress.XtraEditors.TextEdit txtShomareKart_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl35;
-        public DevExpress.XtraEditors.TextEdit txtShomareHesab_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl36;
-        public DevExpress.XtraEditors.TextEdit txtShomareMoshtari_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl37;
-        public DevExpress.XtraEditors.TextEdit txtCodeShobe_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl39;
-        public DevExpress.XtraEditors.TextEdit txtNameShobe_Bank;
-        private DevExpress.XtraEditors.LabelControl labelControl40;
         private DevExpress.XtraGrid.GridControl gridControl_Bank;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView_Bank;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
@@ -9818,5 +10079,57 @@
         private DevExpress.XtraEditors.TextEdit txtName_Anbarha;
         private DevExpress.XtraEditors.LabelControl labelControl81;
         private DevExpress.XtraGrid.Columns.GridColumn colCreateName;
+        public DevExpress.XtraEditors.TextEdit txtIndex_AghlamAnbar;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Ashkhas;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Daraeha;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Sandogh;
+        private DevExpress.XtraEditors.PanelControl panelControl_Bank;
+        private DevExpress.XtraEditors.CheckEdit chkIsDefault_Bank;
+        public DevExpress.XtraEditors.LookUpEdit cmbNoeArz_Bank;
+        public DevExpress.XtraEditors.LookUpEdit cmbNoeHesab_Bank;
+        public DevExpress.XtraEditors.LookUpEdit cmbNameBank_Bank;
+        private DevExpress.XtraEditors.SimpleButton btnNoeArz_Bank;
+        private DevExpress.XtraEditors.SimpleButton btnNoeHesab_Bank;
+        private DevExpress.XtraEditors.SimpleButton btnNamBank_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
+        private DevExpress.XtraEditors.LabelControl labelControl30;
+        private DevExpress.XtraEditors.LabelControl labelControl32;
+        private DevExpress.XtraEditors.LabelControl labelControl33;
+        public DevExpress.XtraEditors.TextEdit txtShomareShaba_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl34;
+        public DevExpress.XtraEditors.TextEdit txtShomareKart_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl35;
+        public DevExpress.XtraEditors.TextEdit txtShomareHesab_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl36;
+        public DevExpress.XtraEditors.TextEdit txtShomareMoshtari_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl37;
+        public DevExpress.XtraEditors.TextEdit txtCodeShobe_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl39;
+        public DevExpress.XtraEditors.TextEdit txtNameShobe_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl40;
+        public DevExpress.XtraEditors.LookUpEdit cmbGroupTafsili_Bank;
+        private DevExpress.XtraEditors.SimpleButton btnReloadGroupTafsili_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.TextEdit txtTarikhEjad_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl23;
+        private DevExpress.XtraEditors.LabelControl labelControl27;
+        public DevExpress.XtraEditors.CheckEdit chkIsActive_Bank;
+        public DevExpress.XtraEditors.TextEdit txtId_Bank;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private DevExpress.XtraEditors.MemoEdit txtSharh_Bank;
+        public DevExpress.XtraEditors.TextEdit txtCode_Bank;
+        private DevExpress.XtraEditors.CheckEdit chkEditCode_Bank;
+        public DevExpress.XtraEditors.TextEdit txtCodeGroupTafsili_Bank;
+        private DevExpress.XtraEditors.SimpleButton btnNewCode_Bank;
+        public DevExpress.XtraEditors.TextEdit txtName_Bank;
+        private DevExpress.XtraEditors.LabelControl labelControl29;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Bankha;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Vamha;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Marakez;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Shoabat;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Projheha;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Gharardadha;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Anbarha;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Sayer;
     }
 }

@@ -60,6 +60,7 @@ namespace EtelaatePaye.CodingHesabdari
         string _CodeTafsiliMinCode = "";
         string _CodeTafsiliMaxCode = "";
 
+        TextEdit txtIndex;
 
         public void FillGridviewGroupTafsili()
         {
@@ -83,7 +84,7 @@ namespace EtelaatePaye.CodingHesabdari
                         //else
                         //{
                         //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
+                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 ).Select(s => s.HesabGroupId).ToList();
 
                         //    if (q1.Count > 0)
                         //    {
@@ -119,7 +120,7 @@ namespace EtelaatePaye.CodingHesabdari
                         //else
                         //{
                         //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
+                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 ).Select(s => s.HesabGroupId).ToList();
 
                         //    if (q1.Count > 0)
                         //    {
@@ -155,7 +156,7 @@ namespace EtelaatePaye.CodingHesabdari
                         //else
                         //{
                         //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0 && s.IsActive == true).Select(s => s.HesabGroupId).ToList();
+                        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabColId == 0).Select(s => s.HesabGroupId).ToList();
 
                         //    if (q1.Count > 0)
                         //    {
@@ -322,6 +323,7 @@ namespace EtelaatePaye.CodingHesabdari
             treeList = EnumTreeList.CollapseAll;
             FillGridviewGroupTafsili();
             btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
+            txtIndex = txtIndex_Level1;
             btnCreate.Focus();
             using (var db = new MyContext())
             {
@@ -1716,6 +1718,7 @@ namespace EtelaatePaye.CodingHesabdari
                         txtEndCode_1.Text = gridView1.GetFocusedRowCellDisplayText("EndCode");
                         chkIsActive_1.Checked = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
                         txtSharhHesab_1.Text = gridView1.GetFocusedRowCellDisplayText("SharhHesab");
+                        txtIndex_Level1.Text = gridView1.FocusedRowHandle.ToString();
 
                     }
                 }
@@ -1730,6 +1733,7 @@ namespace EtelaatePaye.CodingHesabdari
                         txtName_2.Text = gridView2.GetFocusedRowCellValue("Name").ToString();
                         chkIsActive_2.Checked = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
                         txtSharhHesab_2.Text = gridView2.GetFocusedRowCellValue("SharhHesab") != null ? gridView2.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                        txtIndex_Level2.Text = gridView2.FocusedRowHandle.ToString();
                     }
                 }
                 else if (xtraTabControl1.SelectedTabPageIndex == 2)
@@ -1746,6 +1750,7 @@ namespace EtelaatePaye.CodingHesabdari
                         txtName_3.Text = gridView3.GetFocusedRowCellValue("Name").ToString();
                         chkIsActive_3.Checked = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
                         txtSharhHesab_3.Text = gridView3.GetFocusedRowCellValue("SharhHesab") != null ? gridView3.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                        txtIndex_Level3.Text = gridView3.FocusedRowHandle.ToString();
                     }
                 }
                 if (En != EnumCED.Edit)
@@ -1815,27 +1820,33 @@ namespace EtelaatePaye.CodingHesabdari
             FillGridviewGroupTafsili();
             if (xtraTabControl1.SelectedTabPageIndex == 0)
             {
+                txtIndex = txtIndex_Level1;
                 txtCode_1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
                 txtCode_1.Properties.Mask.EditMask = "00";
                 txtCode_1.Properties.MaxLength = _GroupTafsiliLevel1Carakter;
+                gridView1.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex.Text) ? Convert.ToInt32(txtIndex.Text) : 0;
                 btnCreate.Enabled = true;
                 btnCreate.Focus();
             }
             else if (xtraTabControl1.SelectedTabPageIndex == 1)
             {
                 FillcmbGruopLevel1();
+                txtIndex = txtIndex_Level2;
                 txtCode_2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
                 txtCode_2.Properties.Mask.EditMask = "0";
                 txtCode_2.Properties.MaxLength = _GroupTafsiliLevel2Carakter;
+                gridView2.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex.Text) ? Convert.ToInt32(txtIndex.Text) : 0;
                 btnCreate.Enabled = true;
                 btnCreate.Focus();
             }
             else if (xtraTabControl1.SelectedTabPageIndex == 2)
             {
                 FillcmbGruopLevel1();
+                txtIndex = txtIndex_Level3;
                 txtCode_3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
                 txtCode_3.Properties.Mask.EditMask = "0";
                 txtCode_3.Properties.MaxLength = _GroupTafsiliLevel3Carakter;
+                gridView3.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex.Text) ? Convert.ToInt32(txtIndex.Text) : 0;
                 btnCreate.Enabled = true;
                 btnCreate.Focus();
             }
@@ -2001,6 +2012,11 @@ namespace EtelaatePaye.CodingHesabdari
         private void FrmGroupTafsili_FormClosed(object sender, FormClosedEventArgs e)
         {
             db.Dispose();
+        }
+
+        private void cmbLookupEdit_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
         }
     }
 }

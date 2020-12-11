@@ -142,6 +142,7 @@
             this.mbsTanzimatEp = new DevExpress.XtraBars.BarSubItem();
             this.btnTanzimatCodingHesabdari = new DevExpress.XtraBars.BarButtonItem();
             this.btnTanzimatCodingAnbarVKala = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMojodiAvalDoreKala = new DevExpress.XtraBars.BarButtonItem();
             this.rpKharidFroosh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgFroosh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgKharid = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -200,7 +201,6 @@
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnMojodiAvalDore = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msMajmoeBindingSource)).BeginInit();
@@ -335,7 +335,7 @@
             this.btnHesabhaTafsiliLevel2,
             this.btnHesabhaTafsiliLevel3,
             this.btnCodingKala,
-            this.btnMojodiAvalDore});
+            this.btnMojodiAvalDoreKala});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1257,6 +1257,15 @@
             this.btnTanzimatCodingAnbarVKala.Name = "btnTanzimatCodingAnbarVKala";
             this.btnTanzimatCodingAnbarVKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTanzimatCodingAnbarVKala_ItemClick);
             // 
+            // btnMojodiAvalDoreKala
+            // 
+            this.btnMojodiAvalDoreKala.Caption = "موجودی اول دوره کالا";
+            this.btnMojodiAvalDoreKala.Id = 176;
+            this.btnMojodiAvalDoreKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMojodiAvalDore.ImageOptions.SvgImage")));
+            this.btnMojodiAvalDoreKala.Name = "btnMojodiAvalDoreKala";
+            this.btnMojodiAvalDoreKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnMojodiAvalDoreKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMojodiAvalDoreKala_ItemClick);
+            // 
             // rpKharidFroosh
             // 
             this.rpKharidFroosh.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -1430,7 +1439,7 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAmaliatRozaneh, true);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnJabejaeeKala, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnMojodiAvalDore, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnMojodiAvalDoreKala, true);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem5, true);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ورود و خروج کالا";
@@ -1703,14 +1712,6 @@
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "سایر موارد";
             // 
-            // btnMojodiAvalDore
-            // 
-            this.btnMojodiAvalDore.Caption = "موجودی اول دوره کالا";
-            this.btnMojodiAvalDore.Id = 176;
-            this.btnMojodiAvalDore.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMojodiAvalDore.ImageOptions.SvgImage")));
-            this.btnMojodiAvalDore.Name = "btnMojodiAvalDore";
-            this.btnMojodiAvalDore.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
             // FrmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -1930,6 +1931,6 @@
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel2;
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel3;
         private DevExpress.XtraBars.BarButtonItem btnCodingKala;
-        private DevExpress.XtraBars.BarButtonItem btnMojodiAvalDore;
+        private DevExpress.XtraBars.BarButtonItem btnMojodiAvalDoreKala;
     }
 }

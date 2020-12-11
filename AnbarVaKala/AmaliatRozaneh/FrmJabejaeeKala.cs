@@ -132,7 +132,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                     cmbAzAnbar.Properties.DataSource = q.Count > 0 ? q : null;
                 }
                 catch (Exception ex)
@@ -151,7 +151,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     _AzAnbarId = Convert.ToInt32(cmbAzAnbar.EditValue);
-                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true && s.Id != _AzAnbarId).OrderBy(s => s.Code).ToList();
+                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.Id != _AzAnbarId).OrderBy(s => s.Code).ToList();
                     cmbBeAnbar.Properties.DataSource = q.Count > 0 ? q : null;
                 }
                 catch (Exception ex)
@@ -476,6 +476,8 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            FillGridControl();
+
             xtpJabejaeeKala.PageEnabled = true;
             HelpClass1.ClearControls(panelControl_AddVaEdit);
             cmbBeAnbar.EditValue = cmbBeAnbar.EditValue = null;
@@ -527,7 +529,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         return;
                     }
                     //string NoeSanad = XtraTabControl1_1.SelectedTabPage.Text;
-                    if (XtraMessageBox.Show("آیا " + NoeAmaliatTabpageText + " مورد نظر کلاً حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (XtraMessageBox.Show("آیا جابجایی مورد نظر کلاً حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         EditRowIndex = gridView.FocusedRowHandle;
                         using (var db = new MyContext())
@@ -1289,6 +1291,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                             }
                             // ActiveButtons();
                             // btnCancel.Enabled = true;
+                            txtSharhSanad.Text = string.Empty;
                             akKhorojeKala_RizsBindingSource.Clear();
                             IsClosed_AmaliatAddVEit = true;
                             En1 = EnumCED.Create;
@@ -1458,6 +1461,11 @@ namespace AnbarVaKala.AmaliatRozaneh
         {
             btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = btnPrintPreview.Enabled = false;
 
+        }
+
+        private void cmbControl_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
         }
     }
 }

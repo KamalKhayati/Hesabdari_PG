@@ -95,7 +95,7 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnPreview = new DevExpress.XtraEditors.SimpleButton();
             this.btnLast = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDisplyActiveList = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDisplyList = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhHesab.Properties)).BeginInit();
@@ -459,6 +459,7 @@
             this.cmbHesabMoin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabMoin.Size = new System.Drawing.Size(526, 38);
             this.cmbHesabMoin.TabIndex = 0;
+            this.cmbHesabMoin.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbHesabMoin.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbHesabMoin_CustomDrawCell);
             this.cmbHesabMoin.EditValueChanged += new System.EventHandler(this.cmbHesabMoin_EditValueChanged);
             this.cmbHesabMoin.Enter += new System.EventHandler(this.cmbHesabMoin_Enter);
@@ -542,8 +543,8 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 5, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbHesabTafsili3.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTafsiliSayer);
             this.cmbHesabTafsili3.Properties.DisplayMember = "Name";
             this.cmbHesabTafsili3.Properties.DropDownRows = 10;
@@ -556,6 +557,7 @@
             this.cmbHesabTafsili3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTafsili3.Size = new System.Drawing.Size(525, 38);
             this.cmbHesabTafsili3.TabIndex = 3;
+            this.cmbHesabTafsili3.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbHesabTafsili3.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbHesabTafsili3_CustomDrawCell);
             this.cmbHesabTafsili3.Enter += new System.EventHandler(this.cmbHesabTafsili3_Enter);
             // 
@@ -574,8 +576,8 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 5, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbHesabTafsili1.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpAllHesabTafsili);
             this.cmbHesabTafsili1.Properties.DisplayMember = "Name";
             this.cmbHesabTafsili1.Properties.DropDownRows = 10;
@@ -588,6 +590,7 @@
             this.cmbHesabTafsili1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTafsili1.Size = new System.Drawing.Size(525, 38);
             this.cmbHesabTafsili1.TabIndex = 1;
+            this.cmbHesabTafsili1.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbHesabTafsili1.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbHesabTafsili_CustomDrawCell);
             this.cmbHesabTafsili1.Enter += new System.EventHandler(this.cmbHesabTafsili1_Enter);
             // 
@@ -662,8 +665,8 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 5, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbHesabTafsili2.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabTafsiliSayer);
             this.cmbHesabTafsili2.Properties.DisplayMember = "Name";
             this.cmbHesabTafsili2.Properties.DropDownRows = 10;
@@ -676,6 +679,7 @@
             this.cmbHesabTafsili2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTafsili2.Size = new System.Drawing.Size(525, 38);
             this.cmbHesabTafsili2.TabIndex = 2;
+            this.cmbHesabTafsili2.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbHesabTafsili2.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbHesabTafsili2_CustomDrawCell);
             this.cmbHesabTafsili2.Enter += new System.EventHandler(this.cmbHesabTafsili2_Enter);
             // 
@@ -938,7 +942,7 @@
             this.panelControl2.Controls.Add(this.btnSave);
             this.panelControl2.Controls.Add(this.btnPreview);
             this.panelControl2.Controls.Add(this.btnLast);
-            this.panelControl2.Controls.Add(this.btnDisplyActiveList);
+            this.panelControl2.Controls.Add(this.btnDisplyList);
             this.panelControl2.Controls.Add(this.btnCancel);
             this.panelControl2.Controls.Add(this.btnCreate);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1083,17 +1087,17 @@
             this.btnLast.ToolTip = "آخرین رکورد";
             this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
-            // btnDisplyActiveList
+            // btnDisplyList
             // 
-            this.btnDisplyActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(759, 6);
-            this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            this.btnDisplyActiveList.Size = new System.Drawing.Size(47, 38);
-            this.btnDisplyActiveList.TabIndex = 10;
-            this.btnDisplyActiveList.ToolTip = "دوباره سازی";
-            this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyList_Click);
+            this.btnDisplyList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
+            this.btnDisplyList.Location = new System.Drawing.Point(759, 6);
+            this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplyList.Name = "btnDisplyList";
+            this.btnDisplyList.Size = new System.Drawing.Size(47, 38);
+            this.btnDisplyList.TabIndex = 10;
+            this.btnDisplyList.ToolTip = "دوباره سازی";
+            this.btnDisplyList.Click += new System.EventHandler(this.btnDisplyList_Click);
             // 
             // btnCancel
             // 
@@ -1213,7 +1217,7 @@
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnPreview;
         private DevExpress.XtraEditors.SimpleButton btnLast;
-        private DevExpress.XtraEditors.SimpleButton btnDisplyActiveList;
+        private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
         private DevExpress.XtraEditors.ComboBoxEdit cmbNoeAnbar;

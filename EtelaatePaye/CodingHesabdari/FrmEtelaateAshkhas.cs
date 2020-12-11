@@ -35,7 +35,7 @@ namespace EtelaatePaye.CodingHesabdari
             InitializeComponent();
         }
 
-        public EnumCED En;
+        public EnumCED En = EnumCED.None;
 
         int _SalId = 0;
         //public int _levelNamber = 0;
@@ -56,6 +56,7 @@ namespace EtelaatePaye.CodingHesabdari
         TextEdit txtGroupCode;
         CheckEdit chkEditCode;
         SimpleButton btnNewCode;
+        TextEdit txtIndex ;
         TextEdit textId;
         TextEdit txtName;
         TextEdit txtTarikhEjad;
@@ -122,6 +123,7 @@ namespace EtelaatePaye.CodingHesabdari
             FillcmbTafsiliAshkhas();
             gridControl = gridControlMoshkhasat1;
             gridView = gridViewMoshkhasat1;
+            txtIndex = txtIndex_Moshakhasat;
             PanelControl_1 = panelControl_Buttons;
             PanelControl_2 = panelControl_Moshakhasat;
             btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
@@ -2570,7 +2572,10 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void xtraTabControl_SelectedPageChanging(object sender, DevExpress.XtraTab.TabPageChangingEventArgs e)
         {
-            btnCancel_Click(null, null);
+            if (En == EnumCED.Create || En == EnumCED.Edit)
+            {
+                btnCancel_Click(null, null);
+            }
         }
 
         private void xtraTabControl_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
@@ -2581,6 +2586,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewMoshkhasat1;
                 PanelControl_2 = panelControl_Moshakhasat;
                 btnCreate.Enabled = gridView.RowCount == 0 ? true : false;
+                txtIndex = txtIndex_Moshakhasat;
             }
             else if (xtraTabControl.SelectedTabPage == tpAdress)
             {
@@ -2588,6 +2594,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewAdress1;
                 PanelControl_2 = panelControl_Adress;
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_Adress;
             }
             else if (xtraTabControl.SelectedTabPage == tpTamas)
             {
@@ -2595,6 +2602,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewTamas1;
                 PanelControl_2 = panelControl_Tamas;
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_ShomareTamas;
             }
             else if (xtraTabControl.SelectedTabPage == tpFazaMajazi)
             {
@@ -2602,6 +2610,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewFazaMajazi1;
                 PanelControl_2 = panelControl_FazaMajazi;
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_FazaMajazi;
             }
             else if (xtraTabControl.SelectedTabPage == tpHesabBanki)
             {
@@ -2609,6 +2618,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewHesabBanki1;
                 PanelControl_2 = panelControl_HesabBanki;
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_HesabhaBanki;
             }
             else if (xtraTabControl.SelectedTabPage == tpEetebarat)
             {
@@ -2617,6 +2627,7 @@ namespace EtelaatePaye.CodingHesabdari
                 PanelControl_2 = panelControl_Eetebarat;
                 HelpClass1.DateTimeMask(txtTarikhGharadad);
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_EtebarFroosh;
             }
             else if (xtraTabControl.SelectedTabPage == tpTakhfif)
             {
@@ -2626,6 +2637,7 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.DateTimeMask(txtAzTarikh);
                 HelpClass1.DateTimeMask(txtTaTarikh);
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_DarsadeTakhfif;
             }
             else if (xtraTabControl.SelectedTabPage == tpPersonel)
             {
@@ -2635,6 +2647,7 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.DateTimeMask(txtTarikhEstekhdam);
                 HelpClass1.DateTimeMask(txtTarikhTavalod);
                 btnCreate.Enabled = gridView.RowCount == 0 ? true : false;
+                txtIndex = txtIndex_MoshakhasatPersoneli;
             }
             else if (xtraTabControl.SelectedTabPage == tpSahmSahamdar)
             {
@@ -2642,6 +2655,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewSahmSahamdar1;
                 PanelControl_2 = panelControl_SahmSahamdar;
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_SahmSahamdar;
             }
             else if (xtraTabControl.SelectedTabPage == tpDarsadVizitor)
             {
@@ -2649,6 +2663,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewDarsadVizitor1;
                 PanelControl_2 = panelControl_DarsadVizitor;
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_DarsadeVizitor;
             }
             else if (xtraTabControl.SelectedTabPage == tpDarsadRanande)
             {
@@ -2656,9 +2671,11 @@ namespace EtelaatePaye.CodingHesabdari
                 gridView = gridViewDarsadRanande1;
                 PanelControl_2 = panelControl_DarsadRanande;
                 btnCreate.Enabled = true;
+                txtIndex = txtIndex_DarsadeRanande;
             }
             _SelectedTabPage = xtraTabControl.SelectedTabPage.Name;
             FillDataGridView();
+            gridView.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex.Text) ? Convert.ToInt32(txtIndex.Text) : 0;
         }
 
         private void btnAdress_Click(object sender, EventArgs e)
@@ -2829,6 +2846,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView.RowCount > 0)
                 {
+                    txtIndex.Text = gridView.FocusedRowHandle.ToString();
+
                     if (xtraTabControl.SelectedTabPage == tpMoshakhasat)
                     {
                         txtNameEkhtesar.Text = gridView.GetFocusedRowCellValue("NameEkhtesar").ToString();
@@ -2996,6 +3015,11 @@ namespace EtelaatePaye.CodingHesabdari
         private void btnPrintPreview_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbLookupEdit_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
         }
     }
 }

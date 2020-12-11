@@ -19,6 +19,18 @@ namespace HelpClassLibrary
 {
     class HelpClass2
     {
+        //How to: Delete a Row When the CTRL+DEL Shortcut is Pressed => حذف یک ردیف خاص از دیتاگرید توسط کلیدهای ترکیبی CTRL+DEL
+        //private void gridView1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Delete && e.Modifiers == Keys.Control)
+        //    {
+        //        if (MessageBox.Show("Delete row?", "Confirmation", MessageBoxButtons.YesNo) !=
+        //          DialogResult.Yes)
+        //            return;
+        //        GridView view = sender as GridView;
+        //        view.DeleteRow(view.FocusedRowHandle);
+        //    }
+        //}
 
         //public void FillDataGridView(DataGridView objDGW)
         //{

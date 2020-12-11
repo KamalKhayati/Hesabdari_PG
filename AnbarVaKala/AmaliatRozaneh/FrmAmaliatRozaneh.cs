@@ -278,36 +278,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 }
                                 break;
                             }
-                        case "xtpMojodiAvalDore":
-                            {
-                                var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal).ToList();
-                                if (q.Count() > 0)
-                                {
-                                    foreach (var item in q.ToList())
-                                    {
-                                        item.MoinCode = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Code.ToString();
-                                        item.MoinName = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Name;
-                                        item.TafsiliCode = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Code.ToString();
-                                        item.TafsiliName = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name;
-                                        item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
-                                        item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                        item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
-                                    }
-
-                                    //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
-                                    //{
-                                    //    // Bind data to control when loading complete
-                                    //    gridControl.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
-                                    //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-
-                                    gridControl.DataSource = q.OrderBy(s => s.Seryal);
-                                }
-                                else
-                                    gridControl.DataSource = null;
-
-                                break;
-
-                            }
                         default:
                             break;
                     }
@@ -331,7 +301,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId ).OrderBy(s => s.Code).ToList();
                     cmbNameAnbar.Properties.DataSource = q.Count > 0 ? q : null;
                 }
                 catch (Exception ex)
@@ -349,7 +319,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpHesabMoin1s.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                    var q = db.EpHesabMoin1s.Where(s => s.SalId == _SalId ).OrderBy(s => s.Code).ToList();
                     cmbHesabMoin.Properties.DataSource = q.Count > 0 ? q : null;
                 }
                 catch (Exception ex)
@@ -376,7 +346,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                     {
                         foreach (var item in q1)
                         {
-                            var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.IsActive == true && s.GroupTafsiliId == item).OrderBy(s => s.Code).ToList();
+                            var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.GroupTafsiliId == item).OrderBy(s => s.Code).ToList();
                             list.AddRange(q);
                         }
                         #region MyRegion
@@ -606,12 +576,12 @@ namespace AnbarVaKala.AmaliatRozaneh
                     try
                     {
                         _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
-                        //if (_AzAnbarId == 0)
-                        //{
-                        //    XtraMessageBox.Show("لطفاً انبار مورد نظر را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //    cmbNameAnbar.Focus();
-                        //    return;
-                        //}
+                        if (_AzAnbarId == 0)
+                        {
+                            XtraMessageBox.Show("لطفاً انبار مورد نظر را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            cmbNameAnbar.ShowPopup();
+                            return;
+                        }
 
                         En1 = EnumCED.Create;
                         ActiveButtons();
@@ -681,7 +651,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                             break;
                                     }
                                     // _TabPageCount = xtcAmaliatRozaneh.TabPages.Count;
-                                    xtcAmaliatRozaneh.SelectedTabPageIndex = 4;
+                                    xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
 
                                     dbContext = new MyContext();
                                     //dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).LoadAsync().ContinueWith(loadTask =>
@@ -758,7 +728,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                             break;
                                     }
                                     // _TabPageCount = xtcAmaliatRozaneh.TabPages.Count;
-                                    xtcAmaliatRozaneh.SelectedTabPageIndex = 4;
+                                    xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
 
                                     dbContext = new MyContext();
                                     //dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).LoadAsync().ContinueWith(loadTask =>
@@ -770,82 +740,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     // Bind data to control when loading complete
                                     akVorodeKala_RizsBindingSource.DataSource = dbContext.AkKhorojeKala_Rizs.Local.ToBindingList();
 
-
-                                    break;
-                                }
-                            case "xtpJabejaeeKala":
-                                {
-                                    XtraTabControl1_1 = xtcAmaliatRozaneh;
-                                    //_IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
-                                    //NoeSanadTabpageName = XtraTabControl1_1.SelectedTabPage.Name;
-                                    txtNoeAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
-                                    txtNoeSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                                    txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
-                                    //txtNoeSanad.BackColor = Color.LightGreen;
-                                    //lblSanadNamber.BackColor = Color.LightGreen;
-                                    xtpAmaliatAddVEdit.PageVisible = true;
-                                    xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.LightGreen;
-                                    xtpAmaliatAddVEdit.Text = "عملیات ایجاد";
-                                    HelpClass1.DateTimeMask(txtTarikh);
-                                    txtTarikh.Text = DateTime.Now.ToString();
-                                    chkIsSanadHesabdari.Checked = true;
-
-                                    var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
-                                    if (q.Count > 0)
-                                    {
-                                        txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
-                                    }
-                                    else
-                                        txtSeryal.Text = "1";
-                                    xtcAmaliatRozaneh.SelectedTabPageIndex = 4;
-
-                                    dbContext = new MyContext();
-                                    //dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).LoadAsync().ContinueWith(loadTask =>
-                                    //{
-                                    //    // Bind data to control when loading complete
-                                    //    akVorodeKala_RizsBindingSource.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
-                                    //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-                                    dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).Load();
-                                    // Bind data to control when loading complete
-                                    akVorodeKala_RizsBindingSource.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
-
-
-                                    break;
-                                }
-                            case "xtpMojodiAvalDore":
-                                {
-                                    XtraTabControl1_1 = xtcAmaliatRozaneh;
-                                    //_IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
-                                    //NoeSanadTabpageName = XtraTabControl1_1.SelectedTabPage.Name;
-                                    txtNoeAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
-                                    txtNoeSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                                    txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
-                                    //txtNoeSanad.BackColor = Color.LightGreen;
-                                    //lblSanadNamber.BackColor = Color.LightGreen;
-                                    xtpAmaliatAddVEdit.PageVisible = true;
-                                    xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.LightGreen;
-                                    xtpAmaliatAddVEdit.Text = "عملیات ایجاد";
-                                    HelpClass1.DateTimeMask(txtTarikh);
-                                    txtTarikh.Text = DateTime.Now.ToString();
-                                    chkIsSanadHesabdari.Checked = true;
-                                    var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
-                                    if (q.Count > 0)
-                                    {
-                                        txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
-                                    }
-                                    else
-                                        txtSeryal.Text = "1";
-                                    xtcAmaliatRozaneh.SelectedTabPageIndex = 4;
-
-                                    dbContext = new MyContext();
-                                    //dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).LoadAsync().ContinueWith(loadTask =>
-                                    //{
-                                    //    // Bind data to control when loading complete
-                                    //    akVorodeKala_RizsBindingSource.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
-                                    //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-                                    dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).Load();
-                                    // Bind data to control when loading complete
-                                    akVorodeKala_RizsBindingSource.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
 
                                     break;
                                 }
@@ -926,24 +820,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                     //NoeSanadText = XtraTabControl1_1.SelectedTabPage.Text;
                     // XtraTabControl1_1.SelectedTabPageIndex = 0;
                     _NoeAmaliatCode = 3;
-                }
-                else if (xtcAmaliatRozaneh.SelectedTabPage.Name == "xtpJabejaeeKala")
-                {
-                    NoeAmaliatTabpageIndex = 2;
-                    NoeAmaliatTabpageName = xtcAmaliatRozaneh.SelectedTabPage.Name;
-                    //NoeSanadName = XtraTabControl1_1.SelectedTabPage.Text;
-                    _NoeAmaliatCode = 4;
-
-                }
-                else if (xtcAmaliatRozaneh.SelectedTabPage.Name == "xtpMojodiAvalDore")
-                {
-                    NoeAmaliatTabpageIndex = 3;
-                    NoeAmaliatTabpageName = xtcAmaliatRozaneh.SelectedTabPage.Name;
-                    XtraTabControl1_1 = xtcAmaliatRozaneh;
-                    //NoeSanadTabpageName = XtraTabControl1_1.SelectedTabPage.Name;
-                    //NoeSanadText = XtraTabControl1_1.SelectedTabPage.Text;
-                    //NoeSanadName = XtraTabControl1_1.SelectedTabPage.Text;
-                    _NoeAmaliatCode = 1;
                 }
                 XtraTabControl1_1_SelectedPageChanged(null, null);
             }
@@ -1149,20 +1025,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                     btnDisplyList_Click(null, null);
 
                 }
-                else if (xtcAmaliatRozaneh.SelectedTabPage.Name == "xtpMojodiAvalDore")
-                {
-                    NoeSanadTabpageIndex = 3;
-                    NoeSanadTabpageName = xtcAmaliatRozaneh.SelectedTabPage.Name;
-                    NoeSanadText = xtcAmaliatRozaneh.SelectedTabPage.Text;
-                    gridControl = gridControl_MojodiAvalDore;
-                    gridView = gridView_MojodiAvalDore;
-                    _NoeSanadCode = 100;
-                    btnCreate.Enabled = true;
-
-                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = btnPrintPreview.Enabled = false;
-                    btnDisplyList_Click(null, null);
-
-                }
             }
         }
 
@@ -1237,6 +1099,8 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            FillGridControl();
+
             for (int i = 0; i < xtcAmaliatRozaneh.TabPages.Count; i++)
             {
                 if (xtcAmaliatRozaneh.TabPages[i].Name != "xtpAmaliatAddVEdit")
@@ -1272,21 +1136,13 @@ namespace AnbarVaKala.AmaliatRozaneh
             //            XtraTabControl1_1.SelectedTabPageIndex = _IndexTabPage;
             //            break;
             //        }
-            //    case "xtpJabejaeeKala":
-            //        {
-            //            break;
-            //        }
-            //    case "xtpMojodiAvalDore":
-            //        {
-            //            break;
-            //        }
             //    default:
             //        break;
             //}
 
             HelpClass1.ClearControls(panelControl_AddVaEdit);
-            cmbHesabTafsili1.EditValue = cmbHesabTafsili1.EditValue = null;
-            cmbHesabMoin.Properties.DataSource = cmbHesabTafsili1.Properties.DataSource = null;
+            cmbHesabTafsili1.EditValue = cmbHesabTafsili2.EditValue = cmbHesabTafsili3.EditValue= null;
+            cmbHesabMoin.Properties.DataSource = cmbHesabTafsili1.Properties.DataSource = cmbHesabTafsili2.Properties.DataSource = cmbHesabTafsili3.Properties.DataSource = null;
             btnDelete1.Enabled = btnEdit1.Enabled = false;
 
             En1 = EnumCED.Cancel;
@@ -1310,7 +1166,7 @@ namespace AnbarVaKala.AmaliatRozaneh
             if (btnClose.Enabled)
             {
                 //dbContext.Dispose();
-                panelControl_NameAnbar.Enabled = true;
+                //panelControl_NameAnbar.Enabled = true;
                 this.Close();
 
             }        }
@@ -1478,8 +1334,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         txtSharhSanad.Text = _SharhSanad;
                                         //lblSanadNamber.BackColor = Color.Yellow;
                                         // _TabPageCount = XtraTabControl1_1.TabPages.Count;
-                                        xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled = xtpMojodiAvalDore.PageEnabled = false;
-                                        xtcAmaliatRozaneh.SelectedTabPageIndex = 4;
+                                        xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled = false;
+                                        xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
                                         xtpAmaliatAddVEdit.PageVisible = true;
                                         xtpAmaliatAddVEdit.Text = "عملیات ویرایش";
                                         xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.Pink;
@@ -1549,8 +1405,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         txtSharhSanad.Text = _SharhSanad;
                                         //lblSanadNamber.BackColor = Color.Yellow;
                                         // _TabPageCount = XtraTabControl1_1.TabPages.Count;
-                                        xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled = xtpMojodiAvalDore.PageEnabled = false;
-                                        xtcAmaliatRozaneh.SelectedTabPageIndex = 4;
+                                        xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled =  false;
+                                        xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
                                         xtpAmaliatAddVEdit.PageVisible = true;
                                         xtpAmaliatAddVEdit.Text = "عملیات ویرایش";
                                         xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.Pink;
@@ -1602,72 +1458,6 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                                     break;
                                 }
-                            case "xtpMojodiAvalDore":
-                                {
-                                    var q = dbContext.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                    if (q.Count > 0)
-                                    {
-                                        // _IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
-                                        txtSeryal.Text = _Seryal.ToString();
-                                        txtNoeAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
-                                        txtNoeSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                                        txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
-                                        //txtNoeSanad.BackColor = Color.Yellow;
-                                        HelpClass1.DateTimeMask(txtTarikh);
-                                        txtTarikh.Text = _DateTimeSanad;
-                                        chkIsSanadHesabdari.Checked = _IsRiali;
-                                        lblSanadNamber.Text = _lblSanadNamber;
-                                        txtSharhSanad.Text = _SharhSanad;
-                                        //lblSanadNamber.BackColor = Color.Yellow;
-                                        // _TabPageCount = XtraTabControl1_1.TabPages.Count;
-                                        xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled = xtpMojodiAvalDore.PageEnabled = false;
-                                        xtcAmaliatRozaneh.SelectedTabPageIndex = 4;
-                                        xtpAmaliatAddVEdit.PageVisible = true;
-                                        xtpAmaliatAddVEdit.Text = "عملیات ویرایش";
-                                        xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.Pink;
-                                        FillCmbHesabMoin();
-                                        cmbHesabMoin.EditValue = _MoinId;
-                                        //cmbHesabTafsili1.Text = _Tafsili1Id;
-                                        cmbHesabTafsili1.ShowPopup();
-                                        cmbHesabTafsili1.ClosePopup();
-
-                                        //List<AkVorodeKala_Riz> DBGridControl = (List<AkVorodeKala_Riz>)gridControl.DataSource;
-                                        //BindingList<AkVorodeKala_Riz> bl = new BindingList<AkVorodeKala_Riz>(DBGridControl);
-                                        //akVorodeKala_RizsBindingSource.DataSource = bl.Where(s => s.Seryal == _Seryal);
-
-                                        foreach (var item in q)
-                                        {
-                                            item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
-                                            item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                            item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
-                                        }
-
-                                        //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
-                                        //{
-                                        //    // Bind data to control when loading complete
-                                        //    gridControl.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
-                                        //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-
-                                        //xtp_AddVaEdit.PageVisible = true;
-
-                                        //dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).Load();
-                                        // Bind data to control when loading complete
-                                        akVorodeKala_RizsBindingSource.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
-                                    }
-
-
-                                    //for (int i = 0; i < XtraTabControl1_1.TabPages.Count; i++)
-                                    //{
-                                    //    if (XtraTabControl1_1.TabPages[i].Name != NoeSanadTabpageName)
-                                    //    {
-                                    //        XtraTabControl1_1.TabPages[i].PageEnabled = false;
-                                    //    }
-                                    //}
-                                    txtTarikh.Focus();
-
-                                    break;
-                                }
-
                             default:
                                 break;
                         }
@@ -1701,7 +1491,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void cmbHesabTafsili_Enter(object sender, EventArgs e)
         {
-            if (En1 == EnumCED.Create)
+            if (En1 == EnumCED.Create || En1 == EnumCED.Save)
             {
                 cmbHesabTafsili1.ShowPopup();
             }
@@ -1949,7 +1739,9 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                                                     En1 = EnumCED.Save;
                                                     if (IsClosed_AmaliatAddVEit)
+                                                    {
                                                         btnCancel_Click(null, null);
+                                                    }
 
                                                     if (IsClosed_AmaliatAddVEit == false)
                                                         ActiveButtons();
@@ -2282,7 +2074,9 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                                                     En1 = EnumCED.Save;
                                                     if (IsClosed_AmaliatAddVEit)
+                                                    {
                                                         btnCancel_Click(null, null);
+                                                    }
 
                                                     if (IsClosed_AmaliatAddVEit == false)
                                                         ActiveButtons();
@@ -2387,291 +2181,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     }
                                     break;
                                 }
-                            case "xtpMojodiAvalDore":
-                                {
-                                    int _Seryal = Convert.ToInt32(txtSeryal.Text);
-                                    DateTime _DateTimeSanad = Convert.ToDateTime(txtTarikh.Text);
-                                    DateTime _DateTimeInsert = DateTime.Now;
-                                    _HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                                    _HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue);
-                                    if (IsValidation())
-                                    {
-                                        var qq = db.EpNameKalas.Where(s => s.SalId == _SalId);
-
-                                        if (En1 == EnumCED.Create)
-                                        {
-                                            List<AkAllAmaliateRozaneh> List = new List<AkAllAmaliateRozaneh>();
-                                            for (int i = 0; i < gridView_AmaliatAddVaEdit.RowCount; i++)
-                                            {
-                                                int _Code = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                                decimal _Meghdar = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                                decimal _Nerkh = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                                decimal _Mablag = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                                string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
-
-                                                AkVorodeKala_Riz obj1 = new AkVorodeKala_Riz();
-                                                obj1.SalId = _SalId;
-                                                obj1.AzAnbarId = _AzAnbarId;
-                                                obj1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
-                                                obj1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                obj1.Seryal = _Seryal;
-                                                obj1.DateTimeSanad = _DateTimeSanad;
-                                                obj1.DateTimeInsert = _DateTimeInsert;
-                                                obj1.NoeAmaliatCode = _NoeAmaliatCode;
-                                                obj1.NoeSanadCode = _NoeSanadCode;
-                                                obj1.NoeSanadText = NoeSanadText;
-                                                obj1.Meghdar = _Meghdar;
-                                                obj1.Nerkh = _Nerkh;
-                                                obj1.Mablag = _Mablag;
-                                                obj1.IsRiali = _Mablag > 0 ? true : false;
-                                                obj1.Radif = i + 1;
-                                                obj1.Tozihat = _Tozihat;
-                                                obj1.SharhSanad = _SharhSanad;
-                                                obj1.SanadNamber = 1;
-                                                obj1.HesabMoinId = _HesabMoinId;
-                                                obj1.HesabTafsili1Id = _HesabTafsili1Id;
-
-
-                                                AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
-                                                obj.SalId = _SalId;
-                                                obj.AzAnbarId = _AzAnbarId;
-                                                obj1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
-                                                obj1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                obj.Seryal = _Seryal;
-                                                obj.NoeAmaliatCode = _NoeAmaliatCode;
-                                                obj.NoeSanadCode = _NoeSanadCode;
-                                                obj.NoeSanadText = NoeSanadText;
-                                                obj.Meghdar = _Meghdar;
-                                                obj.Nerkh = _Nerkh;
-                                                obj.Mablag = _Mablag;
-                                                obj.IsRiali = _Mablag > 0 ? true : false;
-                                                obj.Radif = i + 1;
-                                                obj.SanadNamber = 1;
-                                                obj.AkVorodeKala_Riz1 = obj1;
-                                                obj.HesabMoinId = _HesabMoinId;
-                                                obj.HesabTafsili1Id = _HesabTafsili1Id;
-
-                                                List.Add(obj);
-                                            }
-                                            db.AkAllAmaliateRozanehs.AddRange(List);
-                                            db.SaveChanges();
-                                            //En1 = EnumCED.Save;
-                                            //if (IsClosed_AmaliatAddVEit)
-                                            //    btnCancel_Click(null, null);
-
-
-                                        }
-                                        else if (En1 == EnumCED.Edit)
-                                        {
-                                            //_SalId = Convert.ToInt32(lblSalId.Text);
-                                            //int _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
-                                            //int _Seryal = Convert.ToInt32(txtSeryal.Text);
-                                            ///////////*******************
-                                            //DateTime _DateTimeSanad = Convert.ToDateTime(txtTarikh.Text);
-                                            //DateTime _DateTimeInsert = DateTime.Now;
-                                            DateTime _DateTimeEdit = DateTime.Now;
-                                            BindingList<AkVorodeKala_Riz> list = (BindingList<AkVorodeKala_Riz>)akVorodeKala_RizsBindingSource.DataSource;
-                                            var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                            foreach (var item in q2)
-                                            {
-                                                if (!list.Any(s => s.Id == item.Id))
-                                                {
-                                                    db.AkAllAmaliateRozanehs.Remove(q2.FirstOrDefault(s => s.Id == item.Id));
-                                                    db.SaveChanges();
-                                                }
-                                            }
-
-                                            var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                            var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                            for (int i = 0; i < list.Count; i++)
-                                            {
-                                                if (list[i].Id > 0)
-                                                {
-                                                    for (int j = 0; j < q.Count; j++)
-                                                    {
-                                                        if (list[i].Id == q[j].Id)
-                                                        {
-                                                            int _Code = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                                            decimal _Meghdar = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                                            decimal _Nerkh = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                                            decimal _Mablag = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                                            string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
-
-                                                            q[j].SalId = _SalId;
-                                                            q[j].AzAnbarId = _AzAnbarId;
-                                                            q[j].KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
-                                                            q[j].VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                            q[j].Seryal = _Seryal;
-                                                            q[j].DateTimeSanad = _DateTimeSanad;
-                                                            q[j].DateTimeEdit = _DateTimeEdit;
-                                                            q[j].NoeAmaliatCode = _NoeAmaliatCode;
-                                                            q[j].NoeSanadCode = _NoeSanadCode;
-                                                            q[j].NoeSanadText = NoeSanadText;
-                                                            q[j].Meghdar = _Meghdar;
-                                                            q[j].Nerkh = _Nerkh;
-                                                            q[j].Mablag = _Mablag;
-                                                            q[j].IsRiali = _Mablag > 0 ? true : false;
-                                                            q[j].Radif = i + 1;
-                                                            q[j].Tozihat = _Tozihat;
-                                                            q[j].SharhSanad = _SharhSanad;
-                                                            q[j].SanadNamber = 1;
-                                                            q[j].HesabMoinId = _HesabMoinId;
-                                                            q[j].HesabTafsili1Id = _HesabTafsili1Id;
-
-                                                            q1[j].SalId = _SalId;
-                                                            q1[j].AzAnbarId = _AzAnbarId;
-                                                            q1[j].KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
-                                                            q1[j].VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                            q1[j].Seryal = _Seryal;
-                                                            q1[j].NoeAmaliatCode = _NoeAmaliatCode;
-                                                            q1[j].NoeSanadCode = _NoeSanadCode;
-                                                            q1[j].NoeSanadText = NoeSanadText;
-                                                            q1[j].Meghdar = _Meghdar;
-                                                            q1[j].Nerkh = _Nerkh;
-                                                            q1[j].Mablag = _Mablag;
-                                                            q1[j].IsRiali = _Mablag > 0 ? true : false;
-                                                            q1[j].Radif = i + 1;
-                                                            q1[j].SanadNamber = 1;
-                                                            q1[j].AkVorodeKala_Riz1 = q[j];
-                                                            q1[j].HesabMoinId = _HesabMoinId;
-                                                            q1[j].HesabTafsili1Id = _HesabTafsili1Id;
-
-                                                            db.SaveChanges();
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    int _Code = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                                    decimal _Meghdar = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                                    decimal _Nerkh = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                                    decimal _Mablag = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                                    string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
-
-                                                    AkVorodeKala_Riz obj1 = new AkVorodeKala_Riz();
-                                                    obj1.SalId = _SalId;
-                                                    obj1.AzAnbarId = _AzAnbarId;
-                                                    obj1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
-                                                    obj1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                    obj1.Seryal = _Seryal;
-                                                    obj1.DateTimeSanad = _DateTimeSanad;
-                                                    obj1.DateTimeInsert = _DateTimeInsert;
-                                                    obj1.NoeAmaliatCode = _NoeAmaliatCode;
-                                                    obj1.NoeSanadCode = _NoeSanadCode;
-                                                    obj1.NoeSanadText = NoeSanadText;
-                                                    obj1.Meghdar = _Meghdar;
-                                                    obj1.Nerkh = _Nerkh;
-                                                    obj1.Mablag = _Mablag;
-                                                    obj1.IsRiali = _Mablag > 0 ? true : false;
-                                                    obj1.Radif = i + 1;
-                                                    obj1.Tozihat = _Tozihat;
-                                                    obj1.SharhSanad = _SharhSanad;
-                                                    obj1.SanadNamber = 1;
-                                                    obj1.HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                                                    obj1.HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue);
-
-
-                                                    AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
-                                                    obj.SalId = _SalId;
-                                                    obj.AzAnbarId = _AzAnbarId;
-                                                    obj.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
-                                                    obj.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                    obj.Seryal = _Seryal;
-                                                    obj.NoeAmaliatCode = _NoeAmaliatCode;
-                                                    obj.NoeSanadCode = _NoeSanadCode;
-                                                    obj.NoeSanadText = NoeSanadText;
-                                                    obj.Meghdar = _Meghdar;
-                                                    obj.Nerkh = _Nerkh;
-                                                    obj.Mablag = _Mablag;
-                                                    obj.IsRiali = _Mablag > 0 ? true : false;
-                                                    obj.Radif = i + 1;
-                                                    obj.SanadNamber = 1;
-                                                    obj.AkVorodeKala_Riz1 = obj1;
-                                                    obj.HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                                                    obj.HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue);
-
-                                                    db.AkAllAmaliateRozanehs.Add(obj);
-                                                    db.SaveChanges();
-                                                }
-                                            }
-                                        }
-
-                                        En1 = EnumCED.Save;
-                                        if (IsClosed_AmaliatAddVEit)
-                                            btnCancel_Click(null, null);
-
-                                        if (IsClosed_AmaliatAddVEit == false)
-                                            ActiveButtons();
-
-                                        ///////////*******************
-                                        //var q = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AnbarId == _AzAnbarId && s.NoeAmaliatIndex == 2 && s.AmaliatIndex == 201 && s.Seryal == _Seryal).ToList();
-                                        //if (q.Count > 0)
-                                        //{
-                                        //    db.AkAllAmaliateRozanehs.RemoveRange(q);
-
-                                        //    List<AkAllAmaliateRozaneh> List = new List<AkAllAmaliateRozaneh>();
-                                        //    DateTime _DateTimeSanad = Convert.ToDateTime(txtTarikh.Text);
-                                        //    DateTime _DateTimeInsert = DateTime.Now;
-                                        //    for (int i = 0; i < gridView_AmaliatAddVaEdit.RowCount; i++)
-                                        //    {
-                                        //        int _Code = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                        //        decimal _Meghdar = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                        //        decimal _Nerkh = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                        //        decimal _Mablag = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                        //        string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
-
-                                        //        AkVorodeKala_Riz obj1 = new AkVorodeKala_Riz();
-                                        //        obj1.SalId = _SalId;
-                                        //        obj1.AnbarId = _AzAnbarId;
-                                        //        obj1.KalaId = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Code == _Code).Id;
-                                        //        obj1.VahedeKalaId = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Code == _Code).VahedAsliId;
-                                        //        obj1.Seryal = _Seryal;
-                                        //        obj1.DateTimeSanad = _DateTimeSanad;
-                                        //        obj1.DateTimeInsert = _DateTimeInsert;
-                                        //        obj1.NoeAmaliatIndex = 2;
-                                        //        obj1.AmaliatIndex = 201;
-                                        //        obj1.Meghdar = _Meghdar;
-                                        //        obj1.Nerkh = _Nerkh;
-                                        //        obj1.Mablag = _Mablag;
-                                        //        obj1.IsRiali = _Mablag > 0 ? true : false;
-                                        //        obj1.Radif = i + 1;
-                                        //        obj1.Tozihat = _Tozihat;
-                                        //        obj1.SanadNamber = 1;
-                                        //        obj1.HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                                        //        obj1.HesabTafsiliId = Convert.ToInt32(cmbHesabTafsili.EditValue);
-
-
-                                        //        AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
-                                        //        obj.SalId = _SalId;
-                                        //        obj.AnbarId = _AzAnbarId;
-                                        //        obj.KalaId = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Code == _Code).Id;
-                                        //        obj.VahedeKalaId = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Code == _Code).VahedAsliId;
-                                        //        obj.Seryal = _Seryal;
-                                        //        obj.NoeAmaliatIndex = 2;
-                                        //        obj.AmaliatIndex = 201;
-                                        //        obj.Meghdar = _Meghdar;
-                                        //        obj.Nerkh = _Nerkh;
-                                        //        obj.Mablag = _Mablag;
-                                        //        obj.IsRiali = _Mablag > 0 ? true : false;
-                                        //        obj.Radif = i + 1;
-                                        //        obj.SanadNamber = 1;
-                                        //        obj.AkVorodeKala_Riz1 = obj1;
-                                        //        obj.HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                                        //        obj.HesabTafsiliId = Convert.ToInt32(cmbHesabTafsili.EditValue);
-
-                                        //        List.Add(obj);
-                                        //    }
-                                        //    db.AkAllAmaliateRozanehs.AddRange(List);
-                                        //    db.SaveChanges();
-                                        //    En1 = EnumCED.Save;
-                                        //    if (IsClosed_AmaliatAddVEit)
-                                        //        btnCancel_Click(null, null);
-                                        //}
-                                    }
-                                    break;
-                                }
-
                             default:
                                 break;
                         }
@@ -2742,19 +2251,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                             else if (txtNoeAmaliat1.Text == "xtpKhrojeKala")
                             {
                                 var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
-                                if (q.Count > 0)
-                                {
-                                    txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
-                                }
-                                else
-                                    txtSeryal.Text = "1";
-
-                                txtTarikh.Text = DateTime.Now.ToString();
-                                chkIsSanadHesabdari.Checked = true;
-                            }
-                            else if (txtNoeAmaliat1.Text == "xtpMojodiAvalDore")
-                            {
-                                var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
                                 if (q.Count > 0)
                                 {
                                     txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
@@ -2944,21 +2440,9 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         }
 
-        private void cmbHesabTafsili2_CustomDrawCell(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawCellArgs e)
-        {
-            HelpClass1.LookupEdit_CustomDrawCell(sender, e);
-
-        }
-
-        private void cmbHesabTafsili3_CustomDrawCell(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawCellArgs e)
-        {
-            HelpClass1.LookupEdit_CustomDrawCell(sender, e);
-
-        }
-
         private void cmbHesabTafsili2_Enter(object sender, EventArgs e)
         {
-            if (En1 == EnumCED.Create)
+            if (En1 == EnumCED.Create || En1 == EnumCED.Save)
             {
                 cmbHesabTafsili2.ShowPopup();
             }
@@ -2967,11 +2451,17 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void cmbHesabTafsili3_Enter(object sender, EventArgs e)
         {
-            if (En1 == EnumCED.Create)
+            if (En1 == EnumCED.Create || En1 == EnumCED.Save)
             {
                 cmbHesabTafsili3.ShowPopup();
             }
 
         }
+
+        private void cmbControl_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
+        }
+
     }
 }

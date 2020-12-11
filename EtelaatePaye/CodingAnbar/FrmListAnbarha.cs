@@ -47,7 +47,7 @@ namespace EtelaatePaye.CodingAnbar
                     //else
                     //{
                     //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                    //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 && s.IsActive == true).Select(s => s.HesabMoinId).ToList();
+                    //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 ).Select(s => s.HesabMoinId).ToList();
 
                     //    if (q1.Count > 0)
                     //    {
@@ -723,7 +723,7 @@ namespace EtelaatePaye.CodingAnbar
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpHesabMoin1s.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                    var q = db.EpHesabMoin1s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                     epHesabMoin1sBindingSource.DataSource = q.Count > 0 ? q : null;
                 }
                 catch (Exception ex)
@@ -751,7 +751,7 @@ namespace EtelaatePaye.CodingAnbar
                     {
                         foreach (var item in q1)
                         {
-                            var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.IsActive == true && s.GroupTafsiliId == item).OrderBy(s => s.Code).ToList();
+                            var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.GroupTafsiliId == item).OrderBy(s => s.Code).ToList();
                             list.AddRange(q);
                         }
                         #region MyRegion
@@ -942,6 +942,12 @@ namespace EtelaatePaye.CodingAnbar
         {
             xtraTabControl1.SelectedTabPageIndex = 1;
             cmbHesabMoin.Focus();
+
+        }
+
+        private void cmbLookupEdit_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
 
         }
     }

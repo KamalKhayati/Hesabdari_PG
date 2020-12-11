@@ -20,6 +20,7 @@ namespace AnbarVaKala.AmaliatRozaneh
     {
         FrmAmaliatRozaneh Fm;
         FrmJabejaeeKala Jm;
+        FrmMojodiAvalDoreKala Dm;
         MyContext db;
         public FrmAmaliatSelectKala(FrmAmaliatRozaneh fm)
         {
@@ -30,6 +31,11 @@ namespace AnbarVaKala.AmaliatRozaneh
         {
             InitializeComponent();
             Jm = jm;
+        }
+        public FrmAmaliatSelectKala(FrmMojodiAvalDoreKala dm)
+        {
+            InitializeComponent();
+            Dm = dm;
         }
         int _SallId = 0;
         private void FrmAmaliatSelectKala_Load(object sender, EventArgs e)
@@ -103,6 +109,40 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                 }
             }
+            else if (Dm != null)
+            {
+                if (Dm.En2 == EnumCED.Create)
+                {
+                    cmb_NameKala.Focus();
+                }
+                else if (Dm.En2 == EnumCED.Edit)
+                {
+                    using (var db = new MyContext())
+                    {
+                        try
+                        {
+                            long _CodeKala = Convert.ToInt64(Dm._KalaCode);
+                            var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SallId && s.Code == _CodeKala);
+                            if (q != null)
+                            {
+                                cmb_NameKala.EditValue = q.Id;
+                                lblVahedeAsli.Text = Dm._VahedeKala;
+                                txtMeghdar.Text = Dm._Meghdar;
+                                txtNerkh.Text = Dm._Nerkh;
+                                txtMablag.Text = Dm._Mablag;
+                                txtTozihat.Text = Dm._Tozihat;
+                                // btnSaveAndNext.Enabled = false;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -116,14 +156,14 @@ namespace AnbarVaKala.AmaliatRozaneh
             {
                 db = new MyContext();
                 _SallId = Convert.ToInt32(lblSalId.Text);
-                var q = db.EpNameKalas.Where(s => s.SalId == _SallId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                var q = db.EpNameKalas.Where(s => s.SalId == _SallId ).OrderBy(s => s.Code).ToList();
                 foreach (var item in q)
                 {
                     item.GroupAsliName = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
                     item.GroupFareeName = item.EpGroupFareeKala1.Name;
                 }
                 epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
-                //db.EpNameKalas.Where(s => s.SalId == _SallId && s.IsActive == true).LoadAsync().ContinueWith(loadTask =>
+                //db.EpNameKalas.Where(s => s.SalId == _SallId ).LoadAsync().ContinueWith(loadTask =>
                 //{
                 //    // Bind data to control when loading complete
                 //    epNameKalasBindingSource.DataSource = db.EpNameKalas.Local.ToBindingList();
@@ -168,7 +208,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     cmb_NameKala.ShowPopup();
                 }
-
+            }
+            else if (Dm != null)
+            {
+                if (Dm.En2 == EnumCED.Create)
+                {
+                    cmb_NameKala.ShowPopup();
+                }
             }
         }
         decimal _BefourMeghdar = 0;
@@ -482,6 +528,51 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 }
                             }
                         }
+                        else if (Dm != null)
+                        {
+                            if (Dm.En2 == EnumCED.Create)
+                            {
+                                int _NameKalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                                var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SallId && s.Id == _NameKalaId);
+                                if (q != null)
+                                {
+                                    Dm._KalaCode = q.Code.ToString();
+                                    Dm._KalaName = q.Name;
+                                    Dm._VahedeKala = q.VahedAsliName;
+                                    Dm._Meghdar = txtMeghdar.Text.Trim().Replace(",", "").Replace("/", ".");
+                                    Dm._Nerkh = txtNerkh.Text.Trim().Replace(",", "").Replace("/", ".");
+                                    Dm._Mablag = txtMablag.Text.Trim().Replace(",", "");
+                                    if (!string.IsNullOrEmpty(txtTozihat.Text.Trim()))
+                                        Dm._Tozihat = txtTozihat.Text.Trim();
+                                    else
+                                        Dm._Tozihat = null;
+
+                                    Dm.gridView_AmaliatAddVaEdit.AddNewRow();
+                                    Dm.gridView_AmaliatAddVaEdit.FocusInvalidRow();
+
+                                    if (IsClosed)
+                                        this.Close();
+                                }
+                            }
+                            else if (Dm.En2 == EnumCED.Edit)
+                            {
+                                int _NameKalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                                var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SallId && s.Id == _NameKalaId);
+                                if (q != null)
+                                {
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "KalaCode", q.Code);
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "KalaName", q.Name);
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "VahedeKala", q.VahedAsliName);
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Meghdar", txtMeghdar.Text.Trim().Replace(",", "").Replace("/", "."));
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Nerkh", txtNerkh.Text.Trim().Replace(",", "").Replace("/", "."));
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Mablag", txtMablag.Text.Trim().Replace(",", ""));
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Tozihat", txtTozihat.Text.Trim());
+
+                                    if (IsClosed)
+                                        this.Close();
+                                }
+                            }
+                        }
 
                     }
                 }
@@ -502,12 +593,14 @@ namespace AnbarVaKala.AmaliatRozaneh
                 if (Fm != null)
                 {
                     Fm.En2 = EnumCED.Create;
-
                 }
                 else if (Jm != null)
                 {
                     Jm.En2 = EnumCED.Create;
-
+                }
+                else if (Dm != null)
+                {
+                    Dm.En2 = EnumCED.Create;
                 }
                 cmb_NameKala.EditValue = 0;
                 txtMeghdar.Text = txtNerkh.Text = "0";
@@ -580,7 +673,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void FrmAmaliatSelectKala_KeyDown(object sender, KeyEventArgs e)
         {
-            else if (e.KeyCode == Keys.F5)
+            if (e.KeyCode == Keys.F5)
             {
                 btnSaveAndClosed_Click(sender, null);
             }
@@ -594,5 +687,11 @@ namespace AnbarVaKala.AmaliatRozaneh
             }
 
         }
+
+        private void cmbControl_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
+        }
+
     }
 }

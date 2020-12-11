@@ -51,7 +51,7 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnPreview = new DevExpress.XtraEditors.SimpleButton();
             this.btnLast = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDisplyActiveList = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDisplyList = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
@@ -368,6 +368,17 @@
             this.txtMolahezat_DR = new DevExpress.XtraEditors.TextEdit();
             this.labelControl85 = new DevExpress.XtraEditors.LabelControl();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.txtIndex_Moshakhasat = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_Adress = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_ShomareTamas = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_FazaMajazi = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_HesabhaBanki = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_EtebarFroosh = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_DarsadeTakhfif = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_MoshakhasatPersoneli = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_SahmSahamdar = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_DarsadeVizitor = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_DarsadeRanande = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGroupTafsili.Properties)).BeginInit();
@@ -539,6 +550,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDarsadRanande.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMablaghSabet_2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMolahezat_DR.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Moshakhasat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Adress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_ShomareTamas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_FazaMajazi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_HesabhaBanki.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_EtebarFroosh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeTakhfif.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_MoshakhasatPersoneli.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_SahmSahamdar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeVizitor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeRanande.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -606,8 +628,8 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 5, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KeyCode", "کد", 90, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelName", "نام حساب", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح 1", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbGroupTafsili.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpAllGroupTafsili);
             this.cmbGroupTafsili.Properties.DisplayMember = "LevelName";
             this.cmbGroupTafsili.Properties.DropDownRows = 10;
@@ -619,6 +641,7 @@
             this.cmbGroupTafsili.Size = new System.Drawing.Size(321, 38);
             this.cmbGroupTafsili.TabIndex = 0;
             this.cmbGroupTafsili.TabStop = false;
+            this.cmbGroupTafsili.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGroupTafsili.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbGroupTafsili_CustomDrawCell);
             this.cmbGroupTafsili.EditValueChanged += new System.EventHandler(this.cmbGroupTafsili_EditValueChanged);
             // 
@@ -637,8 +660,8 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 5, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 135, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 450, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbTafsiliAshkhas.Properties.DataSource = this.epHesabTafsiliAshkhassBindingSource;
             this.cmbTafsiliAshkhas.Properties.DisplayMember = "Name";
             this.cmbTafsiliAshkhas.Properties.DropDownRows = 10;
@@ -650,6 +673,7 @@
             this.cmbTafsiliAshkhas.Size = new System.Drawing.Size(443, 38);
             this.cmbTafsiliAshkhas.TabIndex = 1;
             this.cmbTafsiliAshkhas.TabStop = false;
+            this.cmbTafsiliAshkhas.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbTafsiliAshkhas.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbTafsiliAshkhas_CustomDrawCell);
             this.cmbTafsiliAshkhas.EditValueChanged += new System.EventHandler(this.cmbTafsiliAshkhas_EditValueChanged);
             // 
@@ -761,7 +785,7 @@
             this.panelControl_Buttons.Controls.Add(this.btnSave);
             this.panelControl_Buttons.Controls.Add(this.btnPreview);
             this.panelControl_Buttons.Controls.Add(this.btnLast);
-            this.panelControl_Buttons.Controls.Add(this.btnDisplyActiveList);
+            this.panelControl_Buttons.Controls.Add(this.btnDisplyList);
             this.panelControl_Buttons.Controls.Add(this.btnCancel);
             this.panelControl_Buttons.Controls.Add(this.btnCreate);
             this.panelControl_Buttons.Dock = System.Windows.Forms.DockStyle.Top;
@@ -880,17 +904,17 @@
             this.btnLast.ToolTipTitle = "آخرین رکورد";
             this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
-            // btnDisplyActiveList
+            // btnDisplyList
             // 
-            this.btnDisplyActiveList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(557, 6);
-            this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
-            this.btnDisplyActiveList.TabIndex = 9;
-            this.btnDisplyActiveList.ToolTip = "دوباره سازی";
-            this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyList_Click);
+            this.btnDisplyList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyList.ImageOptions.SvgImage")));
+            this.btnDisplyList.Location = new System.Drawing.Point(557, 6);
+            this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplyList.Name = "btnDisplyList";
+            this.btnDisplyList.Size = new System.Drawing.Size(52, 46);
+            this.btnDisplyList.TabIndex = 9;
+            this.btnDisplyList.ToolTip = "دوباره سازی";
+            this.btnDisplyList.Click += new System.EventHandler(this.btnDisplyList_Click);
             // 
             // btnCancel
             // 
@@ -1179,6 +1203,7 @@
             // 
             // panelControl_Moshakhasat
             // 
+            this.panelControl_Moshakhasat.Controls.Add(this.txtIndex_Moshakhasat);
             this.panelControl_Moshakhasat.Controls.Add(this.pictureEdit1);
             this.panelControl_Moshakhasat.Controls.Add(this.btnDeletePictuer);
             this.panelControl_Moshakhasat.Controls.Add(this.btnBrowsPictuer);
@@ -1643,6 +1668,7 @@
             // 
             // panelControl_Adress
             // 
+            this.panelControl_Adress.Controls.Add(this.txtIndex_Adress);
             this.panelControl_Adress.Controls.Add(this.chkDefaultAdress);
             this.panelControl_Adress.Controls.Add(this.txtSandoghPosti);
             this.panelControl_Adress.Controls.Add(this.labelControl16);
@@ -2185,6 +2211,7 @@
             // 
             // panelControl_Tamas
             // 
+            this.panelControl_Tamas.Controls.Add(this.txtIndex_ShomareTamas);
             this.panelControl_Tamas.Controls.Add(this.chkDefaultShTamas);
             this.panelControl_Tamas.Controls.Add(this.txtNameGhesmat);
             this.panelControl_Tamas.Controls.Add(this.txtNameTaraf);
@@ -2565,6 +2592,7 @@
             // 
             // panelControl_FazaMajazi
             // 
+            this.panelControl_FazaMajazi.Controls.Add(this.txtIndex_FazaMajazi);
             this.panelControl_FazaMajazi.Controls.Add(this.chkDefaultFazaMajazi);
             this.panelControl_FazaMajazi.Controls.Add(this.txtSharhAdress_F);
             this.panelControl_FazaMajazi.Controls.Add(this.labelControl37);
@@ -2915,6 +2943,7 @@
             // 
             // panelControl_HesabBanki
             // 
+            this.panelControl_HesabBanki.Controls.Add(this.txtIndex_HesabhaBanki);
             this.panelControl_HesabBanki.Controls.Add(this.txtShomareShaba);
             this.panelControl_HesabBanki.Controls.Add(this.labelControl45);
             this.panelControl_HesabBanki.Controls.Add(this.txtShomareMoshtari);
@@ -3341,6 +3370,7 @@
             // 
             // panelControl_Eetebarat
             // 
+            this.panelControl_Eetebarat.Controls.Add(this.txtIndex_EtebarFroosh);
             this.panelControl_Eetebarat.Controls.Add(this.txtMablagh);
             this.panelControl_Eetebarat.Controls.Add(this.txtTarikhGharadad);
             this.panelControl_Eetebarat.Controls.Add(this.labelControl24);
@@ -3719,6 +3749,7 @@
             // 
             // panelControl_Takhfif
             // 
+            this.panelControl_Takhfif.Controls.Add(this.txtIndex_DarsadeTakhfif);
             this.panelControl_Takhfif.Controls.Add(this.txtTaTarikh);
             this.panelControl_Takhfif.Controls.Add(this.labelControl51);
             this.panelControl_Takhfif.Controls.Add(this.txtAzTarikh);
@@ -4203,6 +4234,7 @@
             // 
             // panelControl_MPersoneli
             // 
+            this.panelControl_MPersoneli.Controls.Add(this.txtIndex_MoshakhasatPersoneli);
             this.panelControl_MPersoneli.Controls.Add(this.cmbJensiat);
             this.panelControl_MPersoneli.Controls.Add(this.cmbTaahol);
             this.panelControl_MPersoneli.Controls.Add(this.txtTarikhEstekhdam);
@@ -4693,6 +4725,7 @@
             // 
             // panelControl_SahmSahamdar
             // 
+            this.panelControl_SahmSahamdar.Controls.Add(this.txtIndex_SahmSahamdar);
             this.panelControl_SahmSahamdar.Controls.Add(this.txtMablaghHarSahm);
             this.panelControl_SahmSahamdar.Controls.Add(this.labelControl66);
             this.panelControl_SahmSahamdar.Controls.Add(this.labelControl67);
@@ -5018,6 +5051,7 @@
             // 
             // panelControl_DarsadVizitor
             // 
+            this.panelControl_DarsadVizitor.Controls.Add(this.txtIndex_DarsadeVizitor);
             this.panelControl_DarsadVizitor.Controls.Add(this.chkDefaultDvizitor);
             this.panelControl_DarsadVizitor.Controls.Add(this.labelControl80);
             this.panelControl_DarsadVizitor.Controls.Add(this.txtDarsadVizitor);
@@ -5335,6 +5369,7 @@
             // 
             // panelControl_DarsadRanande
             // 
+            this.panelControl_DarsadRanande.Controls.Add(this.txtIndex_DarsadeRanande);
             this.panelControl_DarsadRanande.Controls.Add(this.chkDefaultDarsadRanande);
             this.panelControl_DarsadRanande.Controls.Add(this.labelControl81);
             this.panelControl_DarsadRanande.Controls.Add(this.txtDarsadRanande);
@@ -5471,6 +5506,237 @@
             // xtraOpenFileDialog1
             // 
             this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
+            // 
+            // txtIndex_Moshakhasat
+            // 
+            this.txtIndex_Moshakhasat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Moshakhasat.EditValue = "";
+            this.txtIndex_Moshakhasat.Enabled = false;
+            this.txtIndex_Moshakhasat.Location = new System.Drawing.Point(500, 104);
+            this.txtIndex_Moshakhasat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Moshakhasat.Name = "txtIndex_Moshakhasat";
+            this.txtIndex_Moshakhasat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Moshakhasat.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Moshakhasat.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Moshakhasat.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Moshakhasat.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Moshakhasat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Moshakhasat.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Moshakhasat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Moshakhasat.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Moshakhasat.TabIndex = 214;
+            this.txtIndex_Moshakhasat.TabStop = false;
+            this.txtIndex_Moshakhasat.Visible = false;
+            // 
+            // txtIndex_Adress
+            // 
+            this.txtIndex_Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Adress.EditValue = "";
+            this.txtIndex_Adress.Enabled = false;
+            this.txtIndex_Adress.Location = new System.Drawing.Point(12, 108);
+            this.txtIndex_Adress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Adress.Name = "txtIndex_Adress";
+            this.txtIndex_Adress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Adress.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Adress.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Adress.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Adress.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Adress.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Adress.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Adress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Adress.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Adress.TabIndex = 214;
+            this.txtIndex_Adress.TabStop = false;
+            this.txtIndex_Adress.Visible = false;
+            // 
+            // txtIndex_ShomareTamas
+            // 
+            this.txtIndex_ShomareTamas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_ShomareTamas.EditValue = "";
+            this.txtIndex_ShomareTamas.Enabled = false;
+            this.txtIndex_ShomareTamas.Location = new System.Drawing.Point(20, 61);
+            this.txtIndex_ShomareTamas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_ShomareTamas.Name = "txtIndex_ShomareTamas";
+            this.txtIndex_ShomareTamas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_ShomareTamas.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_ShomareTamas.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_ShomareTamas.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_ShomareTamas.Properties.Mask.EditMask = "f0";
+            this.txtIndex_ShomareTamas.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_ShomareTamas.Properties.NullText = "آیدی انبار";
+            this.txtIndex_ShomareTamas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_ShomareTamas.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_ShomareTamas.TabIndex = 214;
+            this.txtIndex_ShomareTamas.TabStop = false;
+            this.txtIndex_ShomareTamas.Visible = false;
+            // 
+            // txtIndex_FazaMajazi
+            // 
+            this.txtIndex_FazaMajazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_FazaMajazi.EditValue = "";
+            this.txtIndex_FazaMajazi.Enabled = false;
+            this.txtIndex_FazaMajazi.Location = new System.Drawing.Point(979, 112);
+            this.txtIndex_FazaMajazi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_FazaMajazi.Name = "txtIndex_FazaMajazi";
+            this.txtIndex_FazaMajazi.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_FazaMajazi.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_FazaMajazi.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_FazaMajazi.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_FazaMajazi.Properties.Mask.EditMask = "f0";
+            this.txtIndex_FazaMajazi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_FazaMajazi.Properties.NullText = "آیدی انبار";
+            this.txtIndex_FazaMajazi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_FazaMajazi.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_FazaMajazi.TabIndex = 214;
+            this.txtIndex_FazaMajazi.TabStop = false;
+            this.txtIndex_FazaMajazi.Visible = false;
+            // 
+            // txtIndex_HesabhaBanki
+            // 
+            this.txtIndex_HesabhaBanki.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_HesabhaBanki.EditValue = "";
+            this.txtIndex_HesabhaBanki.Enabled = false;
+            this.txtIndex_HesabhaBanki.Location = new System.Drawing.Point(7, 63);
+            this.txtIndex_HesabhaBanki.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_HesabhaBanki.Name = "txtIndex_HesabhaBanki";
+            this.txtIndex_HesabhaBanki.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_HesabhaBanki.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_HesabhaBanki.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_HesabhaBanki.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_HesabhaBanki.Properties.Mask.EditMask = "f0";
+            this.txtIndex_HesabhaBanki.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_HesabhaBanki.Properties.NullText = "آیدی انبار";
+            this.txtIndex_HesabhaBanki.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_HesabhaBanki.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_HesabhaBanki.TabIndex = 214;
+            this.txtIndex_HesabhaBanki.TabStop = false;
+            this.txtIndex_HesabhaBanki.Visible = false;
+            // 
+            // txtIndex_EtebarFroosh
+            // 
+            this.txtIndex_EtebarFroosh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_EtebarFroosh.EditValue = "";
+            this.txtIndex_EtebarFroosh.Enabled = false;
+            this.txtIndex_EtebarFroosh.Location = new System.Drawing.Point(456, 61);
+            this.txtIndex_EtebarFroosh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_EtebarFroosh.Name = "txtIndex_EtebarFroosh";
+            this.txtIndex_EtebarFroosh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_EtebarFroosh.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_EtebarFroosh.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_EtebarFroosh.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_EtebarFroosh.Properties.Mask.EditMask = "f0";
+            this.txtIndex_EtebarFroosh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_EtebarFroosh.Properties.NullText = "آیدی انبار";
+            this.txtIndex_EtebarFroosh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_EtebarFroosh.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_EtebarFroosh.TabIndex = 214;
+            this.txtIndex_EtebarFroosh.TabStop = false;
+            this.txtIndex_EtebarFroosh.Visible = false;
+            // 
+            // txtIndex_DarsadeTakhfif
+            // 
+            this.txtIndex_DarsadeTakhfif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_DarsadeTakhfif.EditValue = "";
+            this.txtIndex_DarsadeTakhfif.Enabled = false;
+            this.txtIndex_DarsadeTakhfif.Location = new System.Drawing.Point(435, 62);
+            this.txtIndex_DarsadeTakhfif.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_DarsadeTakhfif.Name = "txtIndex_DarsadeTakhfif";
+            this.txtIndex_DarsadeTakhfif.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_DarsadeTakhfif.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_DarsadeTakhfif.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_DarsadeTakhfif.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_DarsadeTakhfif.Properties.Mask.EditMask = "f0";
+            this.txtIndex_DarsadeTakhfif.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_DarsadeTakhfif.Properties.NullText = "آیدی انبار";
+            this.txtIndex_DarsadeTakhfif.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_DarsadeTakhfif.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_DarsadeTakhfif.TabIndex = 214;
+            this.txtIndex_DarsadeTakhfif.TabStop = false;
+            this.txtIndex_DarsadeTakhfif.Visible = false;
+            // 
+            // txtIndex_MoshakhasatPersoneli
+            // 
+            this.txtIndex_MoshakhasatPersoneli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_MoshakhasatPersoneli.EditValue = "";
+            this.txtIndex_MoshakhasatPersoneli.Enabled = false;
+            this.txtIndex_MoshakhasatPersoneli.Location = new System.Drawing.Point(207, 105);
+            this.txtIndex_MoshakhasatPersoneli.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_MoshakhasatPersoneli.Name = "txtIndex_MoshakhasatPersoneli";
+            this.txtIndex_MoshakhasatPersoneli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_MoshakhasatPersoneli.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_MoshakhasatPersoneli.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_MoshakhasatPersoneli.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_MoshakhasatPersoneli.Properties.Mask.EditMask = "f0";
+            this.txtIndex_MoshakhasatPersoneli.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_MoshakhasatPersoneli.Properties.NullText = "آیدی انبار";
+            this.txtIndex_MoshakhasatPersoneli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_MoshakhasatPersoneli.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_MoshakhasatPersoneli.TabIndex = 214;
+            this.txtIndex_MoshakhasatPersoneli.TabStop = false;
+            this.txtIndex_MoshakhasatPersoneli.Visible = false;
+            // 
+            // txtIndex_SahmSahamdar
+            // 
+            this.txtIndex_SahmSahamdar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_SahmSahamdar.EditValue = "";
+            this.txtIndex_SahmSahamdar.Enabled = false;
+            this.txtIndex_SahmSahamdar.Location = new System.Drawing.Point(218, 14);
+            this.txtIndex_SahmSahamdar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_SahmSahamdar.Name = "txtIndex_SahmSahamdar";
+            this.txtIndex_SahmSahamdar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_SahmSahamdar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_SahmSahamdar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_SahmSahamdar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_SahmSahamdar.Properties.Mask.EditMask = "f0";
+            this.txtIndex_SahmSahamdar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_SahmSahamdar.Properties.NullText = "آیدی انبار";
+            this.txtIndex_SahmSahamdar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_SahmSahamdar.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_SahmSahamdar.TabIndex = 214;
+            this.txtIndex_SahmSahamdar.TabStop = false;
+            this.txtIndex_SahmSahamdar.Visible = false;
+            // 
+            // txtIndex_DarsadeVizitor
+            // 
+            this.txtIndex_DarsadeVizitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_DarsadeVizitor.EditValue = "";
+            this.txtIndex_DarsadeVizitor.Enabled = false;
+            this.txtIndex_DarsadeVizitor.Location = new System.Drawing.Point(219, 16);
+            this.txtIndex_DarsadeVizitor.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_DarsadeVizitor.Name = "txtIndex_DarsadeVizitor";
+            this.txtIndex_DarsadeVizitor.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_DarsadeVizitor.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_DarsadeVizitor.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_DarsadeVizitor.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_DarsadeVizitor.Properties.Mask.EditMask = "f0";
+            this.txtIndex_DarsadeVizitor.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_DarsadeVizitor.Properties.NullText = "آیدی انبار";
+            this.txtIndex_DarsadeVizitor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_DarsadeVizitor.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_DarsadeVizitor.TabIndex = 214;
+            this.txtIndex_DarsadeVizitor.TabStop = false;
+            this.txtIndex_DarsadeVizitor.Visible = false;
+            // 
+            // txtIndex_DarsadeRanande
+            // 
+            this.txtIndex_DarsadeRanande.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_DarsadeRanande.EditValue = "";
+            this.txtIndex_DarsadeRanande.Enabled = false;
+            this.txtIndex_DarsadeRanande.Location = new System.Drawing.Point(219, 16);
+            this.txtIndex_DarsadeRanande.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_DarsadeRanande.Name = "txtIndex_DarsadeRanande";
+            this.txtIndex_DarsadeRanande.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_DarsadeRanande.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_DarsadeRanande.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_DarsadeRanande.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_DarsadeRanande.Properties.Mask.EditMask = "f0";
+            this.txtIndex_DarsadeRanande.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_DarsadeRanande.Properties.NullText = "آیدی انبار";
+            this.txtIndex_DarsadeRanande.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_DarsadeRanande.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_DarsadeRanande.TabIndex = 214;
+            this.txtIndex_DarsadeRanande.TabStop = false;
+            this.txtIndex_DarsadeRanande.Visible = false;
             // 
             // FrmEtelaateAshkhas
             // 
@@ -5685,6 +5951,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDarsadRanande.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMablaghSabet_2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMolahezat_DR.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Moshakhasat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Adress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_ShomareTamas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_FazaMajazi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_HesabhaBanki.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_EtebarFroosh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeTakhfif.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_MoshakhasatPersoneli.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_SahmSahamdar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeVizitor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeRanande.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5725,7 +6002,7 @@
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnPreview;
         private DevExpress.XtraEditors.SimpleButton btnLast;
-        private DevExpress.XtraEditors.SimpleButton btnDisplyActiveList;
+        private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
         public DevExpress.XtraEditors.TextEdit txtShomareSabt;
@@ -6029,5 +6306,16 @@
         public DevExpress.XtraEditors.LabelControl lblSalId;
         public DevExpress.XtraEditors.SimpleButton btnReloadHesabTafsili_Ashkhas;
         public DevExpress.XtraEditors.SimpleButton btnReloadGroupTafsili_Ashkhas;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Moshakhasat;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Adress;
+        public DevExpress.XtraEditors.TextEdit txtIndex_ShomareTamas;
+        public DevExpress.XtraEditors.TextEdit txtIndex_FazaMajazi;
+        public DevExpress.XtraEditors.TextEdit txtIndex_HesabhaBanki;
+        public DevExpress.XtraEditors.TextEdit txtIndex_EtebarFroosh;
+        public DevExpress.XtraEditors.TextEdit txtIndex_DarsadeTakhfif;
+        public DevExpress.XtraEditors.TextEdit txtIndex_MoshakhasatPersoneli;
+        public DevExpress.XtraEditors.TextEdit txtIndex_SahmSahamdar;
+        public DevExpress.XtraEditors.TextEdit txtIndex_DarsadeVizitor;
+        public DevExpress.XtraEditors.TextEdit txtIndex_DarsadeRanande;
     }
 }

@@ -331,7 +331,7 @@
             this.gridControl_AmaliatAddVaEdit.MainView = this.gridView_AmaliatAddVaEdit;
             this.gridControl_AmaliatAddVaEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_AmaliatAddVaEdit.Name = "gridControl_AmaliatAddVaEdit";
-            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1417, 529);
+            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1422, 533);
             this.gridControl_AmaliatAddVaEdit.TabIndex = 37;
             this.gridControl_AmaliatAddVaEdit.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AmaliatAddVaEdit});
@@ -346,7 +346,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 135);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1421, 533);
+            this.panelControl1.Size = new System.Drawing.Size(1426, 537);
             this.panelControl1.TabIndex = 3;
             // 
             // xtpAmaliatAddVEdit
@@ -355,7 +355,7 @@
             this.xtpAmaliatAddVEdit.Controls.Add(this.panelControl_AddVaEdit);
             this.xtpAmaliatAddVEdit.Name = "xtpAmaliatAddVEdit";
             this.xtpAmaliatAddVEdit.PageVisible = false;
-            this.xtpAmaliatAddVEdit.Size = new System.Drawing.Size(1421, 668);
+            this.xtpAmaliatAddVEdit.Size = new System.Drawing.Size(1426, 672);
             this.xtpAmaliatAddVEdit.Text = "عملیات جابجایی کالا";
             // 
             // panelControl_AddVaEdit
@@ -384,7 +384,7 @@
             this.panelControl_AddVaEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl_AddVaEdit.Location = new System.Drawing.Point(0, 0);
             this.panelControl_AddVaEdit.Name = "panelControl_AddVaEdit";
-            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1421, 135);
+            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1426, 135);
             this.panelControl_AddVaEdit.TabIndex = 2;
             // 
             // labelControl4
@@ -392,7 +392,7 @@
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(1068, 93);
+            this.labelControl4.Location = new System.Drawing.Point(1073, 93);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(73, 31);
@@ -404,7 +404,7 @@
             this.txtSharhSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhSanad.EditValue = "";
             this.txtSharhSanad.EnterMoveNextControl = true;
-            this.txtSharhSanad.Location = new System.Drawing.Point(10, 89);
+            this.txtSharhSanad.Location = new System.Drawing.Point(15, 89);
             this.txtSharhSanad.Margin = new System.Windows.Forms.Padding(4);
             this.txtSharhSanad.Name = "txtSharhSanad";
             this.txtSharhSanad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -420,7 +420,7 @@
             // 
             this.cmbBeAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBeAnbar.EnterMoveNextControl = true;
-            this.cmbBeAnbar.Location = new System.Drawing.Point(62, 47);
+            this.cmbBeAnbar.Location = new System.Drawing.Point(67, 47);
             this.cmbBeAnbar.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBeAnbar.Name = "cmbBeAnbar";
             this.cmbBeAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -438,13 +438,13 @@
             this.cmbBeAnbar.Properties.ImmediatePopup = true;
             this.cmbBeAnbar.Properties.NullText = "";
             this.cmbBeAnbar.Properties.NullValuePrompt = "انبار مقصد";
-            this.cmbBeAnbar.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbBeAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbBeAnbar.Properties.PopupWidth = 650;
             this.cmbBeAnbar.Properties.ValueMember = "Id";
             this.cmbBeAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbBeAnbar.Size = new System.Drawing.Size(497, 38);
             this.cmbBeAnbar.TabIndex = 3;
+            this.cmbBeAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbBeAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbBeAnbar.Enter += new System.EventHandler(this.cmbBeAnbar_Enter);
             // 
@@ -460,10 +460,10 @@
             this.lblSanadNamber.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblSanadNamber.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblSanadNamber.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblSanadNamber.Location = new System.Drawing.Point(844, 6);
+            this.lblSanadNamber.Location = new System.Drawing.Point(679, 6);
             this.lblSanadNamber.Margin = new System.Windows.Forms.Padding(4);
             this.lblSanadNamber.Name = "lblSanadNamber";
-            this.lblSanadNamber.Size = new System.Drawing.Size(131, 37);
+            this.lblSanadNamber.Size = new System.Drawing.Size(212, 37);
             this.lblSanadNamber.TabIndex = 163;
             this.lblSanadNamber.Text = ".............";
             // 
@@ -471,7 +471,7 @@
             // 
             this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnInsert.ImageOptions.SvgImage")));
-            this.btnInsert.Location = new System.Drawing.Point(1299, 91);
+            this.btnInsert.Location = new System.Drawing.Point(1304, 91);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(47, 38);
@@ -485,7 +485,7 @@
             this.btnEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit1.Enabled = false;
             this.btnEdit1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit1.ImageOptions.SvgImage")));
-            this.btnEdit1.Location = new System.Drawing.Point(1174, 91);
+            this.btnEdit1.Location = new System.Drawing.Point(1179, 91);
             this.btnEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit1.Name = "btnEdit1";
             this.btnEdit1.Size = new System.Drawing.Size(47, 38);
@@ -499,7 +499,7 @@
             this.btnDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete1.Enabled = false;
             this.btnDelete1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete1.ImageOptions.SvgImage")));
-            this.btnDelete1.Location = new System.Drawing.Point(1237, 91);
+            this.btnDelete1.Location = new System.Drawing.Point(1242, 91);
             this.btnDelete1.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete1.Name = "btnDelete1";
             this.btnDelete1.Size = new System.Drawing.Size(47, 38);
@@ -513,7 +513,7 @@
             this.chkIsSanadHesabdari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsSanadHesabdari.EditValue = true;
             this.chkIsSanadHesabdari.EnterMoveNextControl = true;
-            this.chkIsSanadHesabdari.Location = new System.Drawing.Point(985, 5);
+            this.chkIsSanadHesabdari.Location = new System.Drawing.Point(904, 5);
             this.chkIsSanadHesabdari.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsSanadHesabdari.Name = "chkIsSanadHesabdari";
             this.chkIsSanadHesabdari.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -522,7 +522,7 @@
             this.chkIsSanadHesabdari.Properties.Caption = "سند حسابداری";
             this.chkIsSanadHesabdari.Properties.ReadOnly = true;
             this.chkIsSanadHesabdari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkIsSanadHesabdari.Size = new System.Drawing.Size(148, 39);
+            this.chkIsSanadHesabdari.Size = new System.Drawing.Size(161, 39);
             this.chkIsSanadHesabdari.TabIndex = 162;
             // 
             // btnReloadAzAnbar
@@ -531,7 +531,7 @@
             this.btnReloadAzAnbar.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadAzAnbar.Appearance.Options.UseForeColor = true;
             this.btnReloadAzAnbar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadAzAnbar.ImageOptions.SvgImage")));
-            this.btnReloadAzAnbar.Location = new System.Drawing.Point(10, 5);
+            this.btnReloadAzAnbar.Location = new System.Drawing.Point(15, 5);
             this.btnReloadAzAnbar.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadAzAnbar.Name = "btnReloadAzAnbar";
             this.btnReloadAzAnbar.Size = new System.Drawing.Size(47, 38);
@@ -544,7 +544,7 @@
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(1068, 50);
+            this.labelControl3.Location = new System.Drawing.Point(1073, 50);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(65, 31);
@@ -557,7 +557,7 @@
             this.lblAzAnbar.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblAzAnbar.Appearance.Options.UseForeColor = true;
             this.lblAzAnbar.AutoEllipsis = true;
-            this.lblAzAnbar.Location = new System.Drawing.Point(575, 9);
+            this.lblAzAnbar.Location = new System.Drawing.Point(580, 9);
             this.lblAzAnbar.Margin = new System.Windows.Forms.Padding(4);
             this.lblAzAnbar.Name = "lblAzAnbar";
             this.lblAzAnbar.Size = new System.Drawing.Size(45, 31);
@@ -568,7 +568,7 @@
             // 
             this.cmbAzAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAzAnbar.EnterMoveNextControl = true;
-            this.cmbAzAnbar.Location = new System.Drawing.Point(61, 6);
+            this.cmbAzAnbar.Location = new System.Drawing.Point(66, 6);
             this.cmbAzAnbar.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAzAnbar.Name = "cmbAzAnbar";
             this.cmbAzAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -586,13 +586,13 @@
             this.cmbAzAnbar.Properties.ImmediatePopup = true;
             this.cmbAzAnbar.Properties.NullText = "";
             this.cmbAzAnbar.Properties.NullValuePrompt = "انبار مبداء";
-            this.cmbAzAnbar.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbAzAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbAzAnbar.Properties.PopupWidth = 650;
             this.cmbAzAnbar.Properties.ValueMember = "Id";
             this.cmbAzAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbAzAnbar.Size = new System.Drawing.Size(498, 38);
             this.cmbAzAnbar.TabIndex = 2;
+            this.cmbAzAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbAzAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbAzAnbar.EditValueChanged += new System.EventHandler(this.cmbAzAnbar_EditValueChanged);
             this.cmbAzAnbar.Enter += new System.EventHandler(this.cmbAzAnbar_Enter);
@@ -602,7 +602,7 @@
             this.txtNoeSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoeSanad.EditValue = "";
             this.txtNoeSanad.EnterMoveNextControl = true;
-            this.txtNoeSanad.Location = new System.Drawing.Point(674, 47);
+            this.txtNoeSanad.Location = new System.Drawing.Point(679, 47);
             this.txtNoeSanad.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoeSanad.Name = "txtNoeSanad";
             this.txtNoeSanad.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -623,7 +623,7 @@
             this.btnReloadBeAnbar.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadBeAnbar.Appearance.Options.UseForeColor = true;
             this.btnReloadBeAnbar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadBeAnbar.ImageOptions.SvgImage")));
-            this.btnReloadBeAnbar.Location = new System.Drawing.Point(10, 46);
+            this.btnReloadBeAnbar.Location = new System.Drawing.Point(15, 46);
             this.btnReloadBeAnbar.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadBeAnbar.Name = "btnReloadBeAnbar";
             this.btnReloadBeAnbar.Size = new System.Drawing.Size(47, 38);
@@ -637,7 +637,7 @@
             this.txtNoeSanad1.EditValue = "";
             this.txtNoeSanad1.Enabled = false;
             this.txtNoeSanad1.EnterMoveNextControl = true;
-            this.txtNoeSanad1.Location = new System.Drawing.Point(674, 46);
+            this.txtNoeSanad1.Location = new System.Drawing.Point(679, 46);
             this.txtNoeSanad1.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoeSanad1.Name = "txtNoeSanad1";
             this.txtNoeSanad1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -655,7 +655,7 @@
             this.lblBeAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBeAnbar.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblBeAnbar.Appearance.Options.UseForeColor = true;
-            this.lblBeAnbar.Location = new System.Drawing.Point(573, 50);
+            this.lblBeAnbar.Location = new System.Drawing.Point(578, 50);
             this.lblBeAnbar.Margin = new System.Windows.Forms.Padding(4);
             this.lblBeAnbar.Name = "lblBeAnbar";
             this.lblBeAnbar.Size = new System.Drawing.Size(49, 31);
@@ -668,7 +668,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl7.Appearance.Options.UseForeColor = true;
             this.labelControl7.AutoEllipsis = true;
-            this.labelControl7.Location = new System.Drawing.Point(1354, 49);
+            this.labelControl7.Location = new System.Drawing.Point(1359, 49);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(41, 31);
@@ -679,7 +679,7 @@
             // 
             this.txtTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTarikh.EnterMoveNextControl = true;
-            this.txtTarikh.Location = new System.Drawing.Point(1174, 47);
+            this.txtTarikh.Location = new System.Drawing.Point(1179, 47);
             this.txtTarikh.Margin = new System.Windows.Forms.Padding(4);
             this.txtTarikh.Name = "txtTarikh";
             this.txtTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -698,7 +698,7 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(1356, 8);
+            this.labelControl1.Location = new System.Drawing.Point(1361, 8);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(47, 31);
@@ -710,7 +710,7 @@
             this.txtSeryal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSeryal.EditValue = "";
             this.txtSeryal.EnterMoveNextControl = true;
-            this.txtSeryal.Location = new System.Drawing.Point(1236, 6);
+            this.txtSeryal.Location = new System.Drawing.Point(1179, 6);
             this.txtSeryal.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeryal.Name = "txtSeryal";
             this.txtSeryal.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -721,7 +721,7 @@
             this.txtSeryal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSeryal.Properties.MaxLength = 4;
             this.txtSeryal.Properties.ReadOnly = true;
-            this.txtSeryal.Size = new System.Drawing.Size(110, 38);
+            this.txtSeryal.Size = new System.Drawing.Size(172, 38);
             this.txtSeryal.TabIndex = 29;
             this.txtSeryal.TabStop = false;
             // 
@@ -731,7 +731,7 @@
             this.txtNoeAmaliat1.EditValue = "";
             this.txtNoeAmaliat1.Enabled = false;
             this.txtNoeAmaliat1.EnterMoveNextControl = true;
-            this.txtNoeAmaliat1.Location = new System.Drawing.Point(726, 47);
+            this.txtNoeAmaliat1.Location = new System.Drawing.Point(731, 47);
             this.txtNoeAmaliat1.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoeAmaliat1.Name = "txtNoeAmaliat1";
             this.txtNoeAmaliat1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -762,7 +762,7 @@
             // 
             this.xtpJabejaeeKala.Controls.Add(this.gridControl_JabejaeeKala);
             this.xtpJabejaeeKala.Name = "xtpJabejaeeKala";
-            this.xtpJabejaeeKala.Size = new System.Drawing.Size(1421, 668);
+            this.xtpJabejaeeKala.Size = new System.Drawing.Size(1426, 672);
             this.xtpJabejaeeKala.Text = "جابجایی کالا بین انبارها";
             // 
             // gridControl_JabejaeeKala
@@ -774,7 +774,7 @@
             this.gridControl_JabejaeeKala.MainView = this.gridView_JabejaeeKala;
             this.gridControl_JabejaeeKala.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_JabejaeeKala.Name = "gridControl_JabejaeeKala";
-            this.gridControl_JabejaeeKala.Size = new System.Drawing.Size(1421, 668);
+            this.gridControl_JabejaeeKala.Size = new System.Drawing.Size(1426, 672);
             this.gridControl_JabejaeeKala.TabIndex = 38;
             this.gridControl_JabejaeeKala.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_JabejaeeKala});
@@ -1446,7 +1446,7 @@
             this.Controls.Add(this.lblSalMali);
             this.Controls.Add(this.panelControl0);
             this.Font = new System.Drawing.Font("IRANSans(FaNum)", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmJabejaeeKala.IconOptions.Icon")));
             this.KeyPreview = true;
             this.Name = "FrmJabejaeeKala";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

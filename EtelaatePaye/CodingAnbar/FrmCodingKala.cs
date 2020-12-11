@@ -29,7 +29,7 @@ namespace EtelaatePaye.CodingAnbar
             InitializeComponent();
         }
 
-        EnumCED En;
+        EnumCED En = EnumCED.None;
         int _SalId = 0;
         long _Code = 0;
         string _Name = "";
@@ -39,10 +39,10 @@ namespace EtelaatePaye.CodingAnbar
         int _TabaghehKalaId = 0;
         int _GroupAsliKalaId = 0;
         int _GroupFareeKalaId = 0;
-        int _NameKalaId = 0;
+       // int _NameKalaId = 0;
         int _VahedKalaId = 0;
         int EditRowIndex = 0;
-        int _IndexTabControl3 = 0;
+       // int _IndexTabControl3 = 0;
         string _SelectedTabPage = "";
 
         int TabaghehKalaIdBeforeEdit = 0;
@@ -2057,6 +2057,8 @@ namespace EtelaatePaye.CodingAnbar
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            if (En == EnumCED.Create || En == EnumCED.Edit)
+            {
                 gridControl.Enabled = true;
                 En = EnumCED.Cancel;
                 HelpClass1.ActiveButtons(PanelControl1);
@@ -2084,7 +2086,8 @@ namespace EtelaatePaye.CodingAnbar
 
                 }
                 btnCreate.Focus();
-        }
+
+            }        }
 
         private void gridView_KeyDown(object sender, KeyEventArgs e)
         {
@@ -2114,6 +2117,7 @@ namespace EtelaatePaye.CodingAnbar
                         cmbTabaghehKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupTafsiliId").ToString());
                         cmbVahedKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("VahedKalaId").ToString());
                         txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString();
+
                         txtIndex_TabaghehKala.Text = gridView.FocusedRowHandle.ToString();
                     }
                     else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
@@ -2123,6 +2127,7 @@ namespace EtelaatePaye.CodingAnbar
                         cmbTabaghehKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("TabaghehId").ToString());
                         txtGroupCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(0, _Carakter);
                         txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString().Substring(_Carakter);
+
                         txtIndex_GroupAsli.Text = gridView.FocusedRowHandle.ToString();
                     }
                     else if (_SelectedTabPage == "xtraTabPage_GroupFaree")
@@ -2404,10 +2409,7 @@ namespace EtelaatePaye.CodingAnbar
 
         private void xtraTabControl_CodingKala_SelectedPageChanging(object sender, DevExpress.XtraTab.TabPageChangingEventArgs e)
         {
-            if (En == EnumCED.Create || En == EnumCED.Edit)
-            {
                 btnCancel_Click(null, null);
-            }
         }
 
         private void btnReloadTabaghehKala_Click(object sender, EventArgs e)
@@ -2514,11 +2516,15 @@ namespace EtelaatePaye.CodingAnbar
 
                             else
                                 btnNewCode_Click(null, null);
-                            if (GroupAsliIdBeforeEdit != Convert.ToInt32(cmbGroupAsli_GroupFaree.EditValue))
-                                txtName.Text = cmbGroupAsli_GroupFaree.Text;
-                            else
-                                txtName.Text = NameKalaBeforeEdit;
 
+                            if (En==EnumCED.Create|| En == EnumCED.Edit)
+                            {
+                                if (GroupAsliIdBeforeEdit != Convert.ToInt32(cmbGroupAsli_GroupFaree.EditValue))
+                                    txtName.Text = cmbGroupAsli_GroupFaree.Text;
+                                else
+                                    txtName.Text = NameKalaBeforeEdit;
+
+                            }
                         }
 
                     }
@@ -2561,11 +2567,14 @@ namespace EtelaatePaye.CodingAnbar
                         else
                             btnNewCode_Click(null, null);
 
-                        if (GroupFareeIdBeforeEdit != Convert.ToInt32(cmbGroupFaree_NameKala.EditValue))
-                            txtName.Text = cmbGroupFaree_NameKala.Text;
-                        else
-                            txtName.Text = NameKalaBeforeEdit;
+                        if (En == EnumCED.Create || En == EnumCED.Edit)
+                        {
+                            if (GroupFareeIdBeforeEdit != Convert.ToInt32(cmbGroupFaree_NameKala.EditValue))
+                                txtName.Text = cmbGroupFaree_NameKala.Text;
+                            else
+                                txtName.Text = NameKalaBeforeEdit;
 
+                        }
                     }
 
                 }
@@ -2811,6 +2820,12 @@ namespace EtelaatePaye.CodingAnbar
         {
             xtraTabControl_NameKala.SelectedTabPageIndex = 2;
             lstSerialKala_NameKala.Focus();
+
+        }
+
+        private void cmbLookupEdit_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
 
         }
     }

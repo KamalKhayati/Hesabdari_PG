@@ -166,6 +166,9 @@
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
+            this.txtIndex_Level1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_Level2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_Level3 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId_1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsActive_1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode_1.Properties)).BeginInit();
@@ -231,6 +234,9 @@
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeListGroupTafsili)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epAllGroupTafsilisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Level1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Level2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Level3.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId_1
@@ -542,6 +548,7 @@
             // 
             // panelControl1_2
             // 
+            this.panelControl1_2.Controls.Add(this.txtIndex_Level1);
             this.panelControl1_2.Controls.Add(this.labelControl19);
             this.panelControl1_2.Controls.Add(this.cmbTabaghehGroup);
             this.panelControl1_2.Controls.Add(this.labelControl5);
@@ -1167,6 +1174,7 @@
             // 
             // panelControl2_2
             // 
+            this.panelControl2_2.Controls.Add(this.txtIndex_Level2);
             this.panelControl2_2.Controls.Add(this.txtCodeLevel1);
             this.panelControl2_2.Controls.Add(this.cmbGruopLevel1_2);
             this.panelControl2_2.Controls.Add(this.labelControl11);
@@ -1240,6 +1248,7 @@
             this.cmbGruopLevel1_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel1_2.Size = new System.Drawing.Size(492, 38);
             this.cmbGruopLevel1_2.TabIndex = 0;
+            this.cmbGruopLevel1_2.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGruopLevel1_2.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbGruopLevel1_CustomDrawCell);
             this.cmbGruopLevel1_2.EditValueChanged += new System.EventHandler(this.cmbGruopLevel1_EditValueChanged);
             this.cmbGruopLevel1_2.Enter += new System.EventHandler(this.cmbGruopLevel1_Enter);
@@ -1744,6 +1753,7 @@
             // 
             // panelControl3_2
             // 
+            this.panelControl3_2.Controls.Add(this.txtIndex_Level3);
             this.panelControl3_2.Controls.Add(this.cmbGruopLevel1_3);
             this.panelControl3_2.Controls.Add(this.labelControl18);
             this.panelControl3_2.Controls.Add(this.txtReloadGroupLevel1_3);
@@ -1798,6 +1808,7 @@
             this.cmbGruopLevel1_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel1_3.Size = new System.Drawing.Size(492, 38);
             this.cmbGruopLevel1_3.TabIndex = 0;
+            this.cmbGruopLevel1_3.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGruopLevel1_3.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbGruopLevel1_CustomDrawCell);
             this.cmbGruopLevel1_3.EditValueChanged += new System.EventHandler(this.cmbGruopLevel1_EditValueChanged);
             this.cmbGruopLevel1_3.Enter += new System.EventHandler(this.cmbGruopLevel1_Enter);
@@ -1879,6 +1890,7 @@
             this.cmbGruopLevel2_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel2_3.Size = new System.Drawing.Size(492, 38);
             this.cmbGruopLevel2_3.TabIndex = 1;
+            this.cmbGruopLevel2_3.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGruopLevel2_3.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbGruopLevel2_CustomDrawCell);
             this.cmbGruopLevel2_3.EditValueChanged += new System.EventHandler(this.cmbGruopLevel2_EditValueChanged);
             this.cmbGruopLevel2_3.Enter += new System.EventHandler(this.cmbGruopLevel2_Enter);
@@ -2293,6 +2305,69 @@
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
             // 
+            // txtIndex_Level1
+            // 
+            this.txtIndex_Level1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Level1.EditValue = "";
+            this.txtIndex_Level1.Enabled = false;
+            this.txtIndex_Level1.Location = new System.Drawing.Point(576, 11);
+            this.txtIndex_Level1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Level1.Name = "txtIndex_Level1";
+            this.txtIndex_Level1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Level1.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Level1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Level1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Level1.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Level1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Level1.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Level1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Level1.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Level1.TabIndex = 213;
+            this.txtIndex_Level1.TabStop = false;
+            this.txtIndex_Level1.Visible = false;
+            // 
+            // txtIndex_Level2
+            // 
+            this.txtIndex_Level2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Level2.EditValue = "";
+            this.txtIndex_Level2.Enabled = false;
+            this.txtIndex_Level2.Location = new System.Drawing.Point(584, 56);
+            this.txtIndex_Level2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Level2.Name = "txtIndex_Level2";
+            this.txtIndex_Level2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Level2.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Level2.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Level2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Level2.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Level2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Level2.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Level2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Level2.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Level2.TabIndex = 214;
+            this.txtIndex_Level2.TabStop = false;
+            this.txtIndex_Level2.Visible = false;
+            // 
+            // txtIndex_Level3
+            // 
+            this.txtIndex_Level3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Level3.EditValue = "";
+            this.txtIndex_Level3.Enabled = false;
+            this.txtIndex_Level3.Location = new System.Drawing.Point(584, 101);
+            this.txtIndex_Level3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Level3.Name = "txtIndex_Level3";
+            this.txtIndex_Level3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Level3.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Level3.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Level3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Level3.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Level3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Level3.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Level3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Level3.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Level3.TabIndex = 214;
+            this.txtIndex_Level3.TabStop = false;
+            this.txtIndex_Level3.Visible = false;
+            // 
             // FrmGroupTafsili
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
@@ -2382,6 +2457,9 @@
             this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeListGroupTafsili)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epAllGroupTafsilisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Level1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Level2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Level3.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2524,5 +2602,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTabaghehName;
         private DevExpress.XtraGrid.Columns.GridColumn colEpGroupTafsiliLevel11;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllGroupTafsili1;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Level1;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Level2;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Level3;
     }
 }

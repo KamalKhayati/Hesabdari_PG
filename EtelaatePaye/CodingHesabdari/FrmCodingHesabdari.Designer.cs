@@ -231,6 +231,10 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
+            this.txtIndex_Tabagheh = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_Group = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_Col = new DevExpress.XtraEditors.TextEdit();
+            this.txtIndex_Moin = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3_1)).BeginInit();
             this.panelControl3_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
@@ -337,6 +341,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.epAllCodingHesabdarisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
             this.panelControl_Button.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Tabagheh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Group.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Col.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Moin.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl3_1
@@ -557,6 +565,7 @@
             // 
             // panelControl3_2
             // 
+            this.panelControl3_2.Controls.Add(this.txtIndex_Col);
             this.panelControl3_2.Controls.Add(this.btnReloadHesabGroup_3);
             this.panelControl3_2.Controls.Add(this.btnReloadHesabTabagheh_3);
             this.panelControl3_2.Controls.Add(this.cmbHesabTabagheh_3);
@@ -642,6 +651,7 @@
             this.cmbHesabTabagheh_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_3.Size = new System.Drawing.Size(506, 38);
             this.cmbHesabTabagheh_3.TabIndex = 0;
+            this.cmbHesabTabagheh_3.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.LookupEdit_CustomDrawRow);
             this.cmbHesabTabagheh_3.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbHesabTabagheh_3.EditValueChanged += new System.EventHandler(this.cmbHesabTabagheh_EditValueChanged);
             this.cmbHesabTabagheh_3.Enter += new System.EventHandler(this.cmbHesabTabagheh_Enter);
@@ -738,6 +748,7 @@
             this.cmbListHesabGroup_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup_3.Size = new System.Drawing.Size(506, 38);
             this.cmbListHesabGroup_3.TabIndex = 1;
+            this.cmbListHesabGroup_3.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.LookupEdit_CustomDrawRow);
             this.cmbListHesabGroup_3.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbListHesabGroup_3.EditValueChanged += new System.EventHandler(this.cmbListHesabGroup_EditValueChanged);
             this.cmbListHesabGroup_3.Enter += new System.EventHandler(this.cmbListHesabGroup_Enter);
@@ -761,7 +772,7 @@
             this.txtId_3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_3.Properties.NullText = "آیدی انبار";
             this.txtId_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_3.Size = new System.Drawing.Size(156, 38);
+            this.txtId_3.Size = new System.Drawing.Size(147, 38);
             this.txtId_3.TabIndex = 65;
             this.txtId_3.TabStop = false;
             this.txtId_3.Visible = false;
@@ -952,6 +963,7 @@
             // 
             // panelControl2_2
             // 
+            this.panelControl2_2.Controls.Add(this.txtIndex_Group);
             this.panelControl2_2.Controls.Add(this.btnReloadHesabTabagheh_2);
             this.panelControl2_2.Controls.Add(this.txtTabaghehCode_2);
             this.panelControl2_2.Controls.Add(this.cmbHesabTabagheh_2);
@@ -1035,6 +1047,7 @@
             this.cmbHesabTabagheh_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_2.Size = new System.Drawing.Size(492, 38);
             this.cmbHesabTabagheh_2.TabIndex = 53;
+            this.cmbHesabTabagheh_2.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.LookupEdit_CustomDrawRow);
             this.cmbHesabTabagheh_2.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbHesabTabagheh_2.EditValueChanged += new System.EventHandler(this.cmbHesabTabagheh_EditValueChanged);
             this.cmbHesabTabagheh_2.Enter += new System.EventHandler(this.cmbHesabTabagheh_Enter);
@@ -1457,6 +1470,7 @@
             // 
             // panelControl1_2
             // 
+            this.panelControl1_2.Controls.Add(this.txtIndex_Tabagheh);
             this.panelControl1_2.Controls.Add(this.lblNoeHesab_1);
             this.panelControl1_2.Controls.Add(this.btnNewCode_1);
             this.panelControl1_2.Controls.Add(this.labelControl5);
@@ -2220,6 +2234,7 @@
             // 
             // panelControl4_3
             // 
+            this.panelControl4_3.Controls.Add(this.txtIndex_Moin);
             this.panelControl4_3.Controls.Add(this.txtColCode_4);
             this.panelControl4_3.Controls.Add(this.btnReloadHesabCol_4);
             this.panelControl4_3.Controls.Add(this.labelControl23);
@@ -2395,6 +2410,7 @@
             this.cmbHesabTabagheh_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_4.Size = new System.Drawing.Size(460, 38);
             this.cmbHesabTabagheh_4.TabIndex = 0;
+            this.cmbHesabTabagheh_4.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.LookupEdit_CustomDrawRow);
             this.cmbHesabTabagheh_4.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbHesabTabagheh_4.EditValueChanged += new System.EventHandler(this.cmbHesabTabagheh_EditValueChanged);
             this.cmbHesabTabagheh_4.Enter += new System.EventHandler(this.cmbHesabTabagheh_Enter);
@@ -2527,6 +2543,7 @@
             this.cmbListHesabGroup_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup_4.Size = new System.Drawing.Size(460, 38);
             this.cmbListHesabGroup_4.TabIndex = 1;
+            this.cmbListHesabGroup_4.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.LookupEdit_CustomDrawRow);
             this.cmbListHesabGroup_4.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbListHesabGroup_4.EditValueChanged += new System.EventHandler(this.cmbListHesabGroup_EditValueChanged);
             this.cmbListHesabGroup_4.Enter += new System.EventHandler(this.cmbListHesabGroup_Enter);
@@ -2547,7 +2564,7 @@
             this.txtId_4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtId_4.Properties.NullText = "آیدی انبار";
             this.txtId_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId_4.Size = new System.Drawing.Size(151, 38);
+            this.txtId_4.Size = new System.Drawing.Size(108, 38);
             this.txtId_4.TabIndex = 34;
             this.txtId_4.TabStop = false;
             this.txtId_4.Visible = false;
@@ -2604,6 +2621,7 @@
             this.cmbListHesabCol_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabCol_4.Size = new System.Drawing.Size(460, 38);
             this.cmbListHesabCol_4.TabIndex = 2;
+            this.cmbListHesabCol_4.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.LookupEdit_CustomDrawRow);
             this.cmbListHesabCol_4.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbListHesabCol_4.EditValueChanged += new System.EventHandler(this.cmbListHesabCol_EditValueChanged);
             this.cmbListHesabCol_4.Enter += new System.EventHandler(this.cmbListHesabCol_Enter);
@@ -3294,6 +3312,90 @@
             this.panelControl_Button.Size = new System.Drawing.Size(1162, 58);
             this.panelControl_Button.TabIndex = 41;
             // 
+            // txtIndex_Tabagheh
+            // 
+            this.txtIndex_Tabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Tabagheh.EditValue = "";
+            this.txtIndex_Tabagheh.Enabled = false;
+            this.txtIndex_Tabagheh.Location = new System.Drawing.Point(593, 13);
+            this.txtIndex_Tabagheh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Tabagheh.Name = "txtIndex_Tabagheh";
+            this.txtIndex_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Tabagheh.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Tabagheh.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Tabagheh.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Tabagheh.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Tabagheh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Tabagheh.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Tabagheh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Tabagheh.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Tabagheh.TabIndex = 212;
+            this.txtIndex_Tabagheh.TabStop = false;
+            this.txtIndex_Tabagheh.Visible = false;
+            // 
+            // txtIndex_Group
+            // 
+            this.txtIndex_Group.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Group.EditValue = "";
+            this.txtIndex_Group.Enabled = false;
+            this.txtIndex_Group.Location = new System.Drawing.Point(588, 54);
+            this.txtIndex_Group.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Group.Name = "txtIndex_Group";
+            this.txtIndex_Group.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Group.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Group.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Group.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Group.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Group.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Group.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Group.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Group.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Group.TabIndex = 213;
+            this.txtIndex_Group.TabStop = false;
+            this.txtIndex_Group.Visible = false;
+            // 
+            // txtIndex_Col
+            // 
+            this.txtIndex_Col.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Col.EditValue = "";
+            this.txtIndex_Col.Enabled = false;
+            this.txtIndex_Col.Location = new System.Drawing.Point(594, 95);
+            this.txtIndex_Col.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Col.Name = "txtIndex_Col";
+            this.txtIndex_Col.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Col.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Col.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Col.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Col.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Col.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Col.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Col.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Col.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Col.TabIndex = 214;
+            this.txtIndex_Col.TabStop = false;
+            this.txtIndex_Col.Visible = false;
+            // 
+            // txtIndex_Moin
+            // 
+            this.txtIndex_Moin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIndex_Moin.EditValue = "";
+            this.txtIndex_Moin.Enabled = false;
+            this.txtIndex_Moin.Location = new System.Drawing.Point(589, 144);
+            this.txtIndex_Moin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIndex_Moin.Name = "txtIndex_Moin";
+            this.txtIndex_Moin.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtIndex_Moin.Properties.Appearance.Options.UseForeColor = true;
+            this.txtIndex_Moin.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtIndex_Moin.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtIndex_Moin.Properties.Mask.EditMask = "f0";
+            this.txtIndex_Moin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIndex_Moin.Properties.NullText = "آیدی انبار";
+            this.txtIndex_Moin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIndex_Moin.Size = new System.Drawing.Size(41, 38);
+            this.txtIndex_Moin.TabIndex = 215;
+            this.txtIndex_Moin.TabStop = false;
+            this.txtIndex_Moin.Visible = false;
+            // 
             // FrmCodingHesabdari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
@@ -3425,6 +3527,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.epAllCodingHesabdarisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).EndInit();
             this.panelControl_Button.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Tabagheh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Group.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Col.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIndex_Moin.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3632,5 +3738,9 @@
         private System.Windows.Forms.BindingSource epGroupTafsiliLevel2sBindingSource;
         private System.Windows.Forms.BindingSource epGroupTafsiliLevel3sBindingSource;
         private DevExpress.XtraEditors.PanelControl panelControl4_3;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Col;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Group;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Tabagheh;
+        public DevExpress.XtraEditors.TextEdit txtIndex_Moin;
     }
 }

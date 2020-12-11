@@ -47,7 +47,7 @@
             this.btnPreview = new DevExpress.XtraEditors.SimpleButton();
             this.btnLast = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDisplyActiveList = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDisplyList = new DevExpress.XtraEditors.SimpleButton();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
@@ -294,16 +294,16 @@
             this.btnCancel.ToolTip = "انصراف";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnDisplyActiveList
+            // btnDisplyList
             // 
-            this.btnDisplyActiveList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
-            this.btnDisplyActiveList.Location = new System.Drawing.Point(102, 6);
-            this.btnDisplyActiveList.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDisplyActiveList.Name = "btnDisplyActiveList";
-            this.btnDisplyActiveList.Size = new System.Drawing.Size(52, 46);
-            this.btnDisplyActiveList.TabIndex = 10;
-            this.btnDisplyActiveList.ToolTip = "دوباره سازی";
-            this.btnDisplyActiveList.Click += new System.EventHandler(this.btnDisplyActiveList_Click);
+            this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyActiveList.ImageOptions.SvgImage")));
+            this.btnDisplyList.Location = new System.Drawing.Point(102, 6);
+            this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplyList.Name = "btnDisplyList";
+            this.btnDisplyList.Size = new System.Drawing.Size(52, 46);
+            this.btnDisplyList.TabIndex = 10;
+            this.btnDisplyList.ToolTip = "دوباره سازی";
+            this.btnDisplyList.Click += new System.EventHandler(this.btnDisplyActiveList_Click);
             // 
             // lblUserId
             // 
@@ -421,7 +421,7 @@
             this.panelControl2.Controls.Add(this.btnSave);
             this.panelControl2.Controls.Add(this.btnPreview);
             this.panelControl2.Controls.Add(this.btnLast);
-            this.panelControl2.Controls.Add(this.btnDisplyActiveList);
+            this.panelControl2.Controls.Add(this.btnDisplyList);
             this.panelControl2.Controls.Add(this.btnCancel);
             this.panelControl2.Controls.Add(this.btnCreate);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -552,7 +552,7 @@
         private DevExpress.XtraEditors.SimpleButton btnPreview;
         private DevExpress.XtraEditors.SimpleButton btnLast;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
-        private DevExpress.XtraEditors.SimpleButton btnDisplyActiveList;
+        private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         public DevExpress.XtraEditors.LabelControl lblUserId;
         private DevExpress.XtraEditors.SimpleButton btnCreate;
         public DevExpress.XtraEditors.TextEdit txtName;

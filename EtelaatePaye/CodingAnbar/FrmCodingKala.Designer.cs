@@ -1238,6 +1238,7 @@
             this.cmbGroupTafsili_Tabagheh.Properties.ValueMember = "Id";
             this.cmbGroupTafsili_Tabagheh.Size = new System.Drawing.Size(516, 38);
             this.cmbGroupTafsili_Tabagheh.TabIndex = 0;
+            this.cmbGroupTafsili_Tabagheh.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGroupTafsili_Tabagheh.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbGroupTafsili_Tabagheh.EditValueChanged += new System.EventHandler(this.cmbTabaghehKala_EditValueChanged);
             this.cmbGroupTafsili_Tabagheh.Enter += new System.EventHandler(this.cmbTabaghehKala_Enter);
@@ -1534,6 +1535,7 @@
             this.cmbTabaghehKala_GroupAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_GroupAsli.Size = new System.Drawing.Size(509, 38);
             this.cmbTabaghehKala_GroupAsli.TabIndex = 0;
+            this.cmbTabaghehKala_GroupAsli.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbTabaghehKala_GroupAsli.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbTabaghehKala_GroupAsli.EditValueChanged += new System.EventHandler(this.cmbTabaghehKala_EditValueChanged);
             this.cmbTabaghehKala_GroupAsli.Enter += new System.EventHandler(this.cmbTabaghehKala_Enter);
@@ -2085,6 +2087,7 @@
             this.cmbTabaghehKala_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_GroupFaree.Size = new System.Drawing.Size(517, 38);
             this.cmbTabaghehKala_GroupFaree.TabIndex = 0;
+            this.cmbTabaghehKala_GroupFaree.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbTabaghehKala_GroupFaree.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbTabaghehKala_GroupFaree.EditValueChanged += new System.EventHandler(this.cmbTabaghehKala_EditValueChanged);
             this.cmbTabaghehKala_GroupFaree.Enter += new System.EventHandler(this.cmbTabaghehKala_Enter);
@@ -2146,6 +2149,7 @@
             this.cmbGroupAsli_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupAsli_GroupFaree.Size = new System.Drawing.Size(517, 38);
             this.cmbGroupAsli_GroupFaree.TabIndex = 1;
+            this.cmbGroupAsli_GroupFaree.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGroupAsli_GroupFaree.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbGroupAsli_GroupFaree.EditValueChanged += new System.EventHandler(this.cmbListGroupAsli_EditValueChanged);
             this.cmbGroupAsli_GroupFaree.Enter += new System.EventHandler(this.cmbGroupAsli_Enter);
@@ -3313,6 +3317,7 @@
             this.cmbTabaghehKala_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_NameKala.Size = new System.Drawing.Size(606, 38);
             this.cmbTabaghehKala_NameKala.TabIndex = 0;
+            this.cmbTabaghehKala_NameKala.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbTabaghehKala_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbTabaghehKala_NameKala.EditValueChanged += new System.EventHandler(this.cmbTabaghehKala_EditValueChanged);
             this.cmbTabaghehKala_NameKala.Enter += new System.EventHandler(this.cmbTabaghehKala_Enter);
@@ -3509,6 +3514,7 @@
             this.cmbGroupFaree_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupFaree_NameKala.Size = new System.Drawing.Size(606, 38);
             this.cmbGroupFaree_NameKala.TabIndex = 2;
+            this.cmbGroupFaree_NameKala.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGroupFaree_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbGroupFaree_NameKala.EditValueChanged += new System.EventHandler(this.cmbGroupFaree_EditValueChanged);
             this.cmbGroupFaree_NameKala.Enter += new System.EventHandler(this.cmbGroupFaree_Enter);
@@ -3543,6 +3549,7 @@
             this.cmbGroupAsli_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupAsli_NameKala.Size = new System.Drawing.Size(606, 38);
             this.cmbGroupAsli_NameKala.TabIndex = 1;
+            this.cmbGroupAsli_NameKala.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
             this.cmbGroupAsli_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbGroupAsli_NameKala.EditValueChanged += new System.EventHandler(this.cmbListGroupAsli_EditValueChanged);
             this.cmbGroupAsli_NameKala.Enter += new System.EventHandler(this.cmbGroupAsli_Enter);

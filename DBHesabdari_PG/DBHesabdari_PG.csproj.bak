@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8821623-3D7B-4298-AAAE-C6AD5E96CA5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBHesabdari_PG</RootNamespace>
+    <AssemblyName>DBHesabdari_PG</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AK\AkAllAmaliateRozaneh.cs" />
+    <Compile Include="Models\AK\AkJabejaeeKala.cs" />
+    <Compile Include="Models\AK\AkKhorojeKala_Riz.cs" />
+    <Compile Include="Models\AK\AkVorodeKala_Riz.cs" />
+    <Compile Include="Models\EnumCED.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpAllCodingKala.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpGroupAsliKala.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpGroupFareeKala.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpListAnbarha.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpNameKala.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpTabaghehKala.cs" />
+    <Compile Include="Models\EP\CodingAnbar\EpVahedKala.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAllHesabTafsili_HesabMovaghat.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAllGroupTafsili.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAllHesabTafsili.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpDarsadRanande_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpDarsadTakhfif_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpDarsadVizitor_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpFazaMajazi_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpGroupTafsiliLevel2.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpGroupTafsiliLevel3.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabBanki_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliAnbarha.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliShoabat.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliGharardad.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliMarakezHazine.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliAghlamAnbar.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliProzhe.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliSayer.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliVam.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpMPersoneli_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameAdress.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAdress_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpGroupTafsiliLevel1.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabCol.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabGroup.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpAllCodingHesabdari.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabMoin1.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliAshkhas.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliBankha.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliSandogh.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpMoshakhasat_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameBank.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameOstan.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNameShahrstan.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNoeArz.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpNoeHesab.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpSahmSahamdar_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpSharhStandardMoin.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpEetebarat_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpShTamas_A.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTafsiliDaraeha.cs" />
+    <Compile Include="Models\EP\CodingHesabdari\EpHesabTabagheh.cs" />
+    <Compile Include="Models\EP\Tanzimat\EpTanzimatAnbarVKala.cs" />
+    <Compile Include="Models\EP\Tanzimat\EpTanzimatCodingHesabdari.cs" />
+    <Compile Include="Models\EP\Tanzimat\EpTanzimatGroupTafsili.cs" />
+    <Compile Include="Models\Ms\ActiveSystem\MsActiveSystem.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsDefault.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsDoreMali.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsInfoOther.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsMajmoe.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsShobe.cs" />
+    <Compile Include="Models\Ms\DafaterMali\MsVahed.cs" />
+    <Compile Include="Models\Ms\SystemUsers\MsAccessLevelDafaterMali.cs" />
+    <Compile Include="Models\Ms\SystemUsers\MsAccessLevelMenu.cs" />
+    <Compile Include="Models\Ms\SystemUsers\MsUser.cs" />
+    <Compile Include="MyContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\DP\" />
+    <Folder Include="Models\FT\" />
+    <Folder Include="Models\Ms\SalMali\" />
+    <Folder Include="Models\SH\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

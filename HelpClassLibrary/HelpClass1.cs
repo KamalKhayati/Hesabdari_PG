@@ -314,13 +314,20 @@ namespace HelpClassLibrary
         {
             foreach (Control item in panel.Controls)
             {
-                if (item is SimpleButton)
+                if (item.Name == "btnCreate" || item.Name == "btnClose" || item.Name == "btnDisplyList")
                 {
-                    if (item.Enabled == true)
-                        item.Enabled = false;
-                    else if (item.Name != "btnDelete" && item.Name != "btnEdit")
-                        item.Enabled = true;
+                    item.Enabled = true;
                 }
+                else
+                    item.Enabled = false;
+
+                //if (item is SimpleButton)
+                //{
+                //    if (item.Enabled == true)
+                //        item.Enabled = false;
+                //    else if (item.Name != "btnDelete" && item.Name != "btnEdit")
+                //        item.Enabled = true;
+                //}
 
             }
         }
@@ -450,6 +457,7 @@ namespace HelpClassLibrary
 
         }
 
+        public static bool _IsActiveRow = true;
         /// <summary>
         /// رنگ بندی سلول کمبوباکس
         /// </summary>
@@ -457,20 +465,62 @@ namespace HelpClassLibrary
         /// <param name="e"></param>
         public static void LookupEdit_CustomDrawCell(object sender, LookUpCustomDrawCellArgs e)
         {
+            // int _RowIndex = 2147483647;
             //if (e.IsRowSelected) return;
             //if ((e.RowIndex % 2) == 0) return;
             //if (e.DisplayText != "False")
             //    return;
             //e.Appearance.BackColor = Color.Red;
-            if (e.DisplayText == "False")
+            ///////////////////////////////////////////////
+
+            //if (e.DisplayText.Contains("(غیرفعال)"))
+            //{
+
+            //    e.Appearance.ForeColor = Color.Red;
+            //}
+            //else
+            //{
+            //    e.Appearance.ForeColor = Color.Black;
+            //}
+            ///////////////////////////////////////////////
+            //if (e.DisplayText == "False")
+            //{
+            //    e.Appearance.ForeColor = Color.Red;
+            //    e.DisplayText = "خیر";
+            //}
+            //else if (e.DisplayText == "True")
+            //{
+            //    e.Appearance.ForeColor = Color.Black;
+            //    e.DisplayText = "بله";
+            //}
+            //////////////////////////////////////////////
+            //if (e.DisplayText == "False")
+            //    _RowIndex = e.RowIndex;
+            //if (e.RowIndex != _RowIndex)
+            //{
+            //    if (e.DisplayText == "True")
+            //        e.DisplayText = "بله";
+            //    return;
+            //}
+            //else
+            //{
+            //    e.Appearance.ForeColor = Color.Red;
+            //    if (e.DisplayText == "False")
+            //        e.DisplayText = "خیر";
+            //}
+            /////////////////////////////////////////////
+            if (!_IsActiveRow)
             {
-                e.Appearance.BackColor = Color.Pink;
-                e.DisplayText = "خیر";
+                e.Appearance.ForeColor = Color.Red;
+                if (e.DisplayText == "False")
+                    e.DisplayText = "خیر";
             }
-            else if (e.DisplayText == "True")
+            else
             {
-                e.DisplayText = "بله";
+                if (e.DisplayText == "True")
+                    e.DisplayText = "بله";
             }
+
         }
 
         public static void DateTimeMask(TextEdit TextBox)
