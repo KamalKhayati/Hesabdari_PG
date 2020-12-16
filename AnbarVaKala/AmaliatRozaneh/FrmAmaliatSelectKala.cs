@@ -605,6 +605,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                 cmb_NameKala.EditValue = 0;
                 txtMeghdar.Text = txtNerkh.Text = "0";
                 txtMablag.Text = "0";
+                txtMeghdar1.Text = "0";
+                txtMeghdar2.Text = "0";
+                txtMeghdar3.Text = "0";
                 txtTozihat.Text = string.Empty;
                 cmb_NameKala.Focus();
             }

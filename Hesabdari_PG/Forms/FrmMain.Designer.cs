@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFroosh = new DevExpress.XtraBars.BarButtonItem();
             this.btnBargashtFroosh = new DevExpress.XtraBars.BarButtonItem();
@@ -341,6 +341,7 @@
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbon.MaxItemId = 177;
             this.ribbon.Name = "ribbon";
+            this.ribbon.OptionsPageCategories.ShowCaptions = false;
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
             this.ribbon.PageHeaderMinWidth = 50;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -376,11 +377,10 @@
             this.repositoryItemHypertextLabel2});
             this.ribbon.RibbonCaptionAlignment = DevExpress.XtraBars.Ribbon.RibbonCaptionAlignment.Center;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbon.ShowCategoryInCaption = false;
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1485, 249);
+            this.ribbon.Size = new System.Drawing.Size(1485, 233);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ribbon_MouseDoubleClick);
@@ -1189,10 +1189,10 @@
             this.chkDefault.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.chkDefault.Id = 124;
             this.chkDefault.Name = "chkDefault";
-            toolTipItem1.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
+            toolTipItem2.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
     "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نیست";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.chkDefault.SuperTip = superToolTip1;
+            superToolTip2.Items.Add(toolTipItem2);
+            this.chkDefault.SuperTip = superToolTip2;
             this.chkDefault.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkDefault_CheckedChanged);
             // 
             // txtUserName
@@ -1261,7 +1261,7 @@
             // 
             this.btnMojodiAvalDoreKala.Caption = "موجودی اول دوره کالا";
             this.btnMojodiAvalDoreKala.Id = 176;
-            this.btnMojodiAvalDoreKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMojodiAvalDore.ImageOptions.SvgImage")));
+            this.btnMojodiAvalDoreKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMojodiAvalDoreKala.ImageOptions.SvgImage")));
             this.btnMojodiAvalDoreKala.Name = "btnMojodiAvalDoreKala";
             this.btnMojodiAvalDoreKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnMojodiAvalDoreKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMojodiAvalDoreKala_ItemClick);
@@ -1298,23 +1298,23 @@
             // 
             // ribbonPageGroup17
             // 
+            this.ribbonPageGroup17.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup17.ItemLinks.Add(this.barSubItem1);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
-            this.ribbonPageGroup17.ShowCaptionButton = false;
             this.ribbonPageGroup17.Text = "گزارشات";
             // 
             // ribbonPageGroup6
             // 
+            this.ribbonPageGroup6.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup6.ItemLinks.Add(this.barSubItem8, true);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.ShowCaptionButton = false;
             this.ribbonPageGroup6.Text = "تعاریف";
             // 
             // ribbonPageGroup18
             // 
+            this.ribbonPageGroup18.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup18.ItemLinks.Add(this.barSubItem11);
             this.ribbonPageGroup18.Name = "ribbonPageGroup18";
-            this.ribbonPageGroup18.ShowCaptionButton = false;
             this.ribbonPageGroup18.Text = "تنظیمات";
             // 
             // rpDaryaftPardakht
@@ -1368,23 +1368,23 @@
             // 
             // ribbonPageGroup9
             // 
+            this.ribbonPageGroup9.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup9.ItemLinks.Add(this.barSubItem2, true);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.ShowCaptionButton = false;
             this.ribbonPageGroup9.Text = "گزارشات";
             // 
             // ribbonPageGroup14
             // 
+            this.ribbonPageGroup14.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup14.ItemLinks.Add(this.barSubItem7, true);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            this.ribbonPageGroup14.ShowCaptionButton = false;
             this.ribbonPageGroup14.Text = "تعاریف";
             // 
             // ribbonPageGroup19
             // 
+            this.ribbonPageGroup19.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup19.ItemLinks.Add(this.barSubItem12);
             this.ribbonPageGroup19.Name = "ribbonPageGroup19";
-            this.ribbonPageGroup19.ShowCaptionButton = false;
             this.ribbonPageGroup19.Text = "تنظیمات";
             // 
             // rpAsnadeHesabdari
@@ -1406,23 +1406,23 @@
             // 
             // ribbonPageGroup10
             // 
+            this.ribbonPageGroup10.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup10.ItemLinks.Add(this.barSubItem3);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.ShowCaptionButton = false;
             this.ribbonPageGroup10.Text = "گزارشات";
             // 
             // ribbonPageGroup20
             // 
+            this.ribbonPageGroup20.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup20.ItemLinks.Add(this.barSubItem15);
             this.ribbonPageGroup20.Name = "ribbonPageGroup20";
-            this.ribbonPageGroup20.ShowCaptionButton = false;
             this.ribbonPageGroup20.Text = "تعاریف";
             // 
             // ribbonPageGroup15
             // 
+            this.ribbonPageGroup15.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup15.ItemLinks.Add(this.barSubItem13);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
-            this.ribbonPageGroup15.ShowCaptionButton = false;
             this.ribbonPageGroup15.Text = "تنظیمات";
             // 
             // ribbonPage1
@@ -1453,16 +1453,16 @@
             // 
             // ribbonPageGroup11
             // 
+            this.ribbonPageGroup11.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup11.ItemLinks.Add(this.barSubItem4);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            this.ribbonPageGroup11.ShowCaptionButton = false;
             this.ribbonPageGroup11.Text = "گزارشات";
             // 
             // ribbonPageGroup16
             // 
+            this.ribbonPageGroup16.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup16.ItemLinks.Add(this.barSubItem14);
             this.ribbonPageGroup16.Name = "ribbonPageGroup16";
-            this.ribbonPageGroup16.ShowCaptionButton = false;
             this.ribbonPageGroup16.Text = "تنظیمات";
             // 
             // ribbonPage2
@@ -1511,9 +1511,9 @@
             // 
             // rpgUsers
             // 
+            this.rpgUsers.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.rpgUsers.ItemLinks.Add(this.mbsSystemUsers, "4");
             this.rpgUsers.Name = "rpgUsers";
-            this.rpgUsers.ShowCaptionButton = false;
             this.rpgUsers.Text = "کاربران ";
             // 
             // ribbonPageGroup4
@@ -1618,11 +1618,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserId, true);
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserName, true);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 694);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 673);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1485, 45);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1485, 40);
             // 
             // barButtonItem30
             // 
@@ -1657,13 +1657,13 @@
             // 
             // hideContainerRight
             // 
-            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1447, 249);
+            this.hideContainerRight.Location = new System.Drawing.Point(1448, 233);
             this.hideContainerRight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(38, 445);
+            this.hideContainerRight.Size = new System.Drawing.Size(37, 440);
             // 
             // dockPanel1
             // 
@@ -1671,7 +1671,7 @@
             this.dockPanel1.Controls.Add(this.dockPanel1_Container);
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel1.ID = new System.Guid("ecfbdb3a-260d-49ce-9410-618b1eedb794");
-            this.dockPanel1.Location = new System.Drawing.Point(1314, 231);
+            this.dockPanel1.Location = new System.Drawing.Point(1312, 233);
             this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.AllowDockAsTabbedDocument = false;
@@ -1684,20 +1684,20 @@
             this.dockPanel1.Options.FloatOnDblClick = false;
             this.dockPanel1.Options.ResizeDirection = DevExpress.XtraBars.Docking.Helpers.ResizeDirection.None;
             this.dockPanel1.Options.ShowCloseButton = false;
-            this.dockPanel1.OriginalSize = new System.Drawing.Size(150, 200);
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(136, 200);
             this.dockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.dockPanel1.SavedIndex = 0;
-            this.dockPanel1.Size = new System.Drawing.Size(136, 466);
+            this.dockPanel1.Size = new System.Drawing.Size(136, 440);
             this.dockPanel1.TabsPosition = DevExpress.XtraBars.Docking.TabsPosition.Right;
             this.dockPanel1.Text = "موارد پرکاربرد";
             this.dockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Location = new System.Drawing.Point(5, 39);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 37);
             this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(126, 422);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(128, 399);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // ribbonPageGroup8
@@ -1715,14 +1715,14 @@
             // FrmMain
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1485, 739);
+            this.ClientSize = new System.Drawing.Size(1485, 713);
             this.Controls.Add(this.hideContainerRight);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
-            this.Font = new System.Drawing.Font("IRANSans(FaNum)", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Font = new System.Drawing.Font("IRANSans(FaNum)", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmMain.IconOptions.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MdiChildCaptionFormatString = "{0} -----> {1} ";

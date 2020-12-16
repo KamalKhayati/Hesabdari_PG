@@ -30,7 +30,7 @@ namespace EtelaatePaye.CodingHesabdari
         public int _levelNamber = 0;
         string _SelectedTabPage = "";
         int _TabaghehIndex = 0;
-        int _Carakter = 0;
+        public int _Carakter = 0;
 
         int _cmbGroupTafsiliId = 0;
         //string _cmbGroupTafsiliName = "";
@@ -334,6 +334,8 @@ namespace EtelaatePaye.CodingHesabdari
 
                         _CodeTafsiliMinCode = q.CodeTafsiliMinCode;
                         _CodeTafsiliMaxCode = q.CodeTafsiliMaxCode;
+
+                        _Carakter = _levelNamber == 1 ? _GroupTafsiliLevel1Carakter : _levelNamber == 2 ? _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter : _GroupTafsiliLevel1Carakter + _GroupTafsiliLevel2Carakter + _GroupTafsiliLevel3Carakter;
 
                         //txtCode_1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
                         //txtCode_1.Properties.Mask.EditMask = "00";

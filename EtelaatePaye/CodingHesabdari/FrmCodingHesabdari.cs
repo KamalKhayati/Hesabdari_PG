@@ -2018,6 +2018,43 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (btnCreate.Enabled)
             {
+                using (var db = new MyContext())
+                {
+                    try
+                    {
+                        var q = db.EpTanzimatCodingHesabdaris.FirstOrDefault(s => s.SalId == _SalId);
+                        if (q != null)
+                        {
+                            _HesabTabaghehCarakter = q.HesabTabaghehCarakter;
+                            _HesabGroupCarakter = q.HesabGroupCarakter;
+                            _HesabColCarakter = q.HesabColCarakter;
+                            _HesabMoin1Carakter = q.HesabMoinLevel1Carakter;
+
+                            _HesabTabaghehMinCode = q.HesabTabaghehMinCode;
+                            _HesabTabaghehMaxCode = q.HesabTabaghehMaxCode;
+                            _HesabGroupMinCode = q.HesabGroupMinCode;
+                            _HesabGroupMaxCode = q.HesabGroupMaxCode;
+                            _HesabColMinCode = q.HesabColMinCode;
+                            _HesabColMaxCode = q.HesabColMaxCode;
+                            _HesabMoin1MinCode = q.HesabMoinLevel1MinCode;
+                            _HesabMoin1MaxCode = q.HesabMoinLevel1MaxCode;
+
+                            //txtCode = txtCode_1;
+                            //_Carakter = _HesabTabaghehCarakter;
+                            txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric; ;
+                            txtCode.Properties.Mask.EditMask = _Carakter == 1 ? "0" : "00";
+                            txtCode.Properties.MaxLength = _Carakter;
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
                 En = EnumCED.Create;
                 gridControl.Enabled = false;
                 HelpClass1.InActiveButtons(panelControl_Button);
@@ -2227,8 +2264,13 @@ namespace EtelaatePaye.CodingHesabdari
                         FillcmbHesabTabagheh();
                         FillListBoxGroupTafsiliLevels();
                         FillListBoxActiveSystem();
-                        chkListBoxActiveSystem.Enabled = true;
                         gridView_RowCellClick(null, null);
+                        //HelpClass1.ActiveControls(PanelControl);
+
+                        chkListBoxLevel1.ReadOnly = false;
+                        chkListBoxLevel1.ReadOnly = false;
+                        chkListBoxLevel1.ReadOnly = false;
+                        chkListBoxActiveSystem.ReadOnly = false;
                         gridControl5.Enabled = true;
                         cmbGroupTafsiliLevels_4.SelectedIndex = -1;
                         cmbGroupTafsiliLevels_4.SelectedIndex = Convert.ToInt32(gridView4.GetFocusedRowCellValue("GroupLevelsId").ToString());
@@ -2262,11 +2304,11 @@ namespace EtelaatePaye.CodingHesabdari
                 HelpClass1.InActiveControls(PanelControl);
                 if (xtraTabControl1.SelectedTabPage == xtraTabPage_MoinLevel1)
                 {
-                    chkListBoxActiveSystem.Enabled = false;
                     gridControl5.Enabled = false;
-                    chkListBoxLevel1.Enabled = false;
-                    chkListBoxLevel2.Enabled = false;
-                    chkListBoxLevel3.Enabled = false;
+                    chkListBoxLevel1.ReadOnly = true;
+                    chkListBoxLevel2.ReadOnly = true;
+                    chkListBoxLevel3.ReadOnly = true;
+                    chkListBoxActiveSystem.ReadOnly = true;
                     xtraTabControl3.SelectedTabPageIndex = 1;
                     xtraTabControl2.SelectedTabPageIndex = 0;
                     chkListBoxLevel1.UnCheckAll();
@@ -2375,9 +2417,11 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             try
                             {
-                               // FillListBoxActiveSystem();
-                                xtraTabControl3.SelectedTabPageIndex = 2;
+                                //xtraTabControl3.SelectedTabPageIndex = 2;
+                                //FillListBoxActiveSystem();
+                                //chkListBoxActiveSystem.Enabled = true;
                                 chkListBoxActiveSystem.CheckAll();
+
                                 int RowId = Convert.ToInt32(txtId_4.Text);
                                 var q = db.REpAllCodingHesabdariBMsActiveSystems.Where(s => s.AllCodingHesabdariId == RowId && s.SalId == _SalId).Select(s => s.ActiveSystemId).ToList();
                                 if (q.Count > 0)
@@ -2397,14 +2441,20 @@ namespace EtelaatePaye.CodingHesabdari
                                         }
                                     }
                                 }
+                                //chkListBoxActiveSystem.Enabled = false;
+
                                 ////////////////////////////////////////////////////////////////
-                               // FillListBoxGroupTafsiliLevels();
-                                xtraTabControl3.SelectedTabPageIndex = 1;
-                                xtraTabControl2.SelectedTabPageIndex = 0;
+
+                                //chkListBoxLevel1.Enabled = true;
+                                //chkListBoxLevel2.Enabled = true;
+                                //chkListBoxLevel3.Enabled = true;
+                                //FillListBoxGroupTafsiliLevels();
+                                //xtraTabControl3.SelectedTabPageIndex = 1;
+                                //xtraTabControl2.SelectedTabPageIndex = 0;
                                 chkListBoxLevel1.UnCheckAll();
-                                xtraTabControl2.SelectedTabPageIndex = 1;
+                                //xtraTabControl2.SelectedTabPageIndex = 1;
                                 chkListBoxLevel2.UnCheckAll();
-                                xtraTabControl2.SelectedTabPageIndex = 2;
+                                //xtraTabControl2.SelectedTabPageIndex = 2;
                                 chkListBoxLevel3.UnCheckAll();
                                 xtraTabControl2.SelectedTabPageIndex = 0;
                                 xtraTabControl3.SelectedTabPageIndex = _IndexTabControl3;
@@ -2464,6 +2514,10 @@ namespace EtelaatePaye.CodingHesabdari
                                         }
                                     }
                                 }
+                                //chkListBoxLevel1.Enabled = false;
+                                //chkListBoxLevel2.Enabled = false;
+                                //chkListBoxLevel3.Enabled = false;
+
                                 xtraTabControl3.SelectedTabPageIndex = _IndexTabControl3;
                             }
                             catch (Exception ex)
@@ -2555,6 +2609,15 @@ namespace EtelaatePaye.CodingHesabdari
             }
             else if (xtraTabControl1.SelectedTabPage == xtraTabPage_MoinLevel1)
             {
+                xtraTabControl3.SelectedTabPageIndex = 1;
+                xtraTabControl2.SelectedTabPageIndex = 0;
+                xtraTabControl2.SelectedTabPageIndex = 1;
+                xtraTabControl2.SelectedTabPageIndex = 2;
+
+                xtraTabControl3.SelectedTabPageIndex = 2;
+
+                xtraTabControl3.SelectedTabPageIndex = 3;
+
                 FillcmbHesabTabagheh();
                 FillListBoxActiveSystem();
                 FillListBoxGroupTafsiliLevels();
@@ -2576,6 +2639,9 @@ namespace EtelaatePaye.CodingHesabdari
                 _LevelNamber = 4;
                 _Carakter = _HesabMoin1Carakter;
                 gridView.FocusedRowHandle = !string.IsNullOrEmpty(txtIndex.Text) ? Convert.ToInt32(txtIndex.Text) : 0;
+                xtraTabControl3.SelectedTabPageIndex = 0;
+                xtraTabControl2.SelectedTabPageIndex = 0;
+                _IndexTabControl3 = 0;
             }
             else if (xtraTabControl1.SelectedTabPage == xtraTabPage_DerakhtVareh)
             {
@@ -2818,25 +2884,25 @@ namespace EtelaatePaye.CodingHesabdari
         {
             if (En == EnumCED.Edit || En == EnumCED.Create)
             {
-                chkListBoxLevel1.Enabled = true;
-                chkListBoxLevel2.Enabled = true;
-                chkListBoxLevel3.Enabled = true;
+                chkListBoxLevel1.ReadOnly = false;
+                chkListBoxLevel2.ReadOnly = false;
+                chkListBoxLevel3.ReadOnly = false;
                 if (cmbGroupTafsiliLevels_4.SelectedIndex == 0)
                 {
-                    chkListBoxLevel1.Enabled = false;
-                    chkListBoxLevel2.Enabled = false;
-                    chkListBoxLevel3.Enabled = false;
+                    chkListBoxLevel1.ReadOnly = true;
+                    chkListBoxLevel2.ReadOnly = true;
+                    chkListBoxLevel3.ReadOnly = true;
                 }
                 else if (cmbGroupTafsiliLevels_4.SelectedIndex == 1)
                 {
-                    chkListBoxLevel1.Enabled = true;
-                    chkListBoxLevel2.Enabled = false;
-                    chkListBoxLevel3.Enabled = false;
+                    chkListBoxLevel1.ReadOnly = false;
+                    chkListBoxLevel2.ReadOnly = true;
+                    chkListBoxLevel3.ReadOnly = true;
                 }
                 else if (cmbGroupTafsiliLevels_4.SelectedIndex == 2)
                 {
-                    chkListBoxLevel1.Enabled = true;
-                    chkListBoxLevel3.Enabled = false;
+                    chkListBoxLevel1.ReadOnly = false;
+                    chkListBoxLevel3.ReadOnly = true;
 
                     using (var db = new MyContext())
                     {
@@ -2846,12 +2912,12 @@ namespace EtelaatePaye.CodingHesabdari
                             var q = db.EpTanzimatGroupTafsilis.FirstOrDefault(s => s.SalId == SalId);
                             if (q.IsActiveGroupTafsiliLevel2 == true)
                             {
-                                chkListBoxLevel2.Enabled = true;
+                                chkListBoxLevel2.ReadOnly = false;
                             }
                             else
                             {
                                 XtraMessageBox.Show("لطفاً در ابتدا از قسمت => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح دوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                chkListBoxLevel2.Enabled = false;
+                                chkListBoxLevel2.ReadOnly = true;
                                 cmbGroupTafsiliLevels_4.SelectedIndex = 1;
                             }
                         }
@@ -2864,8 +2930,8 @@ namespace EtelaatePaye.CodingHesabdari
                 }
                 else if (cmbGroupTafsiliLevels_4.SelectedIndex == 3)
                 {
-                    chkListBoxLevel1.Enabled = true;
-                    chkListBoxLevel2.Enabled = true;
+                    chkListBoxLevel1.ReadOnly = false;
+                    chkListBoxLevel2.ReadOnly = false;
 
                     using (var db = new MyContext())
                     {
@@ -2875,12 +2941,12 @@ namespace EtelaatePaye.CodingHesabdari
                             var q = db.EpTanzimatGroupTafsilis.FirstOrDefault(s => s.SalId == SalId);
                             if (q.IsActiveGroupTafsiliLevel3 == true)
                             {
-                                chkListBoxLevel3.Enabled = true;
+                                chkListBoxLevel3.ReadOnly = false;
                             }
                             else
                             {
                                 XtraMessageBox.Show("لطفاً در ابتدا از قسمت => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح سوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                chkListBoxLevel3.Enabled = false;
+                                chkListBoxLevel3.ReadOnly = true;
                                 cmbGroupTafsiliLevels_4.SelectedIndex = 2;
                             }
                         }
@@ -2953,12 +3019,18 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void chkIsActive_4_Leave(object sender, EventArgs e)
         {
-            xtraTabControl3.SelectedTabPageIndex = 1;
-            xtraTabControl2.SelectedTabPageIndex = 0;
-        }
-
-        private void chkIsActive_4_CheckedChanged(object sender, EventArgs e)
-        {
+            if (cmbGroupTafsiliLevels_4.SelectedIndex!=0)
+            {
+                xtraTabControl3.SelectedTabPageIndex = 1;
+                xtraTabControl2.SelectedTabPageIndex = 0;
+                chkListBoxLevel1.Focus();
+            }
+            else
+            {
+                xtraTabControl3.SelectedTabPageIndex = 2;
+                //xtraTabControl2.SelectedTabPageIndex = 0;
+                chkListBoxActiveSystem.Focus();
+            }
         }
 
         private void LookupEdit_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
@@ -2966,5 +3038,6 @@ namespace EtelaatePaye.CodingHesabdari
             HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
 
         }
+
     }
 }

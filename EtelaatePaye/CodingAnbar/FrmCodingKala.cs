@@ -902,6 +902,39 @@ namespace EtelaatePaye.CodingAnbar
         {
             if (btnCreate.Enabled)
             {
+                using (var db = new MyContext())
+                {
+                    try
+                    {
+                        var q = db.EpTanzimatAnbarVKalas.FirstOrDefault(s => s.SalId == _SalId);
+                        if (q != null)
+                        {
+                            _CodeTabaghehKalaCarakter = q.CodeTabagehKalaCarakter;
+                            _CodeGroupAsliKalaCarakter = q.CodeGroupAsliKalaCarakter;
+                            _CodeGroupFareeKalaCarakter = q.CodeGroupFareeKalaCarakter;
+                            _CodeNameKalaCarakter = q.CodeNameKalaCarakter;
+
+                            //_CodeTabaghehKalaMinCode = q.CodeTabagehKalaMinCode;
+                            //_CodeTabaghehKalaMaxCode = q.CodeTabagehKalaMaxCode;
+                            _CodeGroupAsliKalaMinCode = q.CodeGroupAsliKalaMinCode;
+                            _CodeGroupAsliKalaMaxCode = q.CodeGroupAsliKalaMaxCode;
+                            _CodeGroupFareeKalaMinCode = q.CodeGroupFareeKalaMinCode;
+                            _CodeGroupFareeKalaMaxCode = q.CodeGroupFareeKalaMaxCode;
+                            _CodeNameKalaMinCode = q.CodeNameKalaMinCode;
+                            _CodeNameKalaMaxCode = q.CodeNameKalaMaxCode;
+
+                            _LevelNamberGroupTafsili = _CodeTabaghehKalaCarakter == 2 ? 1 : _CodeTabaghehKalaCarakter == 3 ? 2 : 3;
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
                 En = EnumCED.Create;
                 gridControl.Enabled = false;
 
