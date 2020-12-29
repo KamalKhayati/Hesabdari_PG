@@ -82,6 +82,10 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [NotMapped]
         [MaxLength(100)]
         public string GroupFareeName { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string TabagheKalaName { get; set; }
+
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }
         public virtual EpGroupFareeKala EpGroupFareeKala1 { get; set; }

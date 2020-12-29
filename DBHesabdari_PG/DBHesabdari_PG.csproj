@@ -147,6 +147,7 @@
     <Compile Include="Models\Ms\SystemUsers\MsAccessLevelDafaterMali.cs" />
     <Compile Include="Models\Ms\SystemUsers\MsAccessLevelMenu.cs" />
     <Compile Include="Models\Ms\SystemUsers\MsUser.cs" />
+    <Compile Include="Models\MyDate.cs" />
     <Compile Include="MyContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

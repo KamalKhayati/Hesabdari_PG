@@ -18,8 +18,8 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public string Name { get; set; }
         [Required]
         public int VahedKalaId { get; set; }
-        [Required, MaxLength(50)]
-        public string VahedKalaName { get; set; }
+        //[Required, MaxLength(50)]
+        //public string VahedKalaName { get; set; }
         [Required]
         public int GroupTafsiliId { get; set; }
         [Required]

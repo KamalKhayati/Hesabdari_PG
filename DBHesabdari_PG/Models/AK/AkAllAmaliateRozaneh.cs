@@ -52,6 +52,48 @@ namespace DBHesabdari_PG.Models.AK
         public int HesabTafsili3Id { get; set; }
         [Required]
         public int Radif { get; set; }
+        [Required]
+        public DateTime DateTimeSanad { get; set; }
+        public int? FactorNamber { get; set; }
+
+        /// <summary>
+        /// فیلدهای پین شده به جدول
+        /// </summary>
+        [NotMapped]
+        [MaxLength(100)]
+        public string AnbarName { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string VahedKala { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string HesabTafsiliName { get; set; }
+        [NotMapped]
+        public decimal MeghdarMo { get; set; }
+        [NotMapped]
+        public decimal NerkhMo { get; set; }
+        [NotMapped]
+        public decimal MablagMo { get; set; }
+        [NotMapped]
+        public decimal MeghdarVa { get; set; }
+        [NotMapped]
+        public decimal NerkhVa { get; set; }
+        [NotMapped]
+        public decimal MablagVa { get; set; }
+        [NotMapped]
+        public decimal MeghdarSa { get; set; }
+        [NotMapped]
+        public decimal NerkhSa { get; set; }
+        [NotMapped]
+        public decimal MablagSa { get; set; }
+        [NotMapped]
+        public decimal MeghdarMa { get; set; }
+        [NotMapped]
+        public decimal NerkhMa { get; set; }
+        [NotMapped]
+        public decimal MablagMa { get; set; }
+
+
         public virtual AkVorodeKala_Riz AkVorodeKala_Riz1 { get; set; }
         public virtual AkKhorojeKala_Riz AkKhorojeKala_Riz1 { get; set; }
         public virtual ICollection<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }

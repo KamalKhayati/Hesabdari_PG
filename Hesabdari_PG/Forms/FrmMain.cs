@@ -39,6 +39,7 @@ using DBHesabdari_PG.Models.Ms.DafaterMali;
 using EtelaatePaye.CodingAnbar;
 using EtelaatePaye.Tanzimat;
 using AnbarVaKala.AmaliatRozaneh;
+using AnbarVaKala.Reports;
 
 namespace Hesabdari_PG.Forms
 {
@@ -732,6 +733,29 @@ namespace Hesabdari_PG.Forms
         private void btnMojodiAvalDoreKala_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmMojodiAvalDoreKala fm = new FrmMojodiAvalDoreKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+        }
+
+        private void btnMojodiAnbarVKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmMojodiAnbarVKala fm = new FrmMojodiAnbarVKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+
+        }
+
+        private void btnKardeksKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmKardeksKala fm = new FrmKardeksKala();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;

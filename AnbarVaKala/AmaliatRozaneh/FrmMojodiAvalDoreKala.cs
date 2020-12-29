@@ -135,7 +135,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
                     cmbNameAnbar.Properties.DataSource = q.Count > 0 ? q : null;
                 }
                 catch (Exception ex)
@@ -163,7 +163,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 }
             }
         }
-
+        List<EpAllHesabTafsili> list;
         public void FillCmbHesabTafsili()
         {
             using (var db = new MyContext())
@@ -173,7 +173,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     _HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
 
-                    List<EpAllHesabTafsili> list = new List<EpAllHesabTafsili>();
+                    list = new List<EpAllHesabTafsili>();
 
                     var q1 = db.REpAllCodingHesabdariBEpAllGroupTafsilis.Where(s => s.AllCodingHesabdariId == _HesabMoinId && s.SalId == _SalId).Select(s => s.AllGroupTafsiliId).ToList();
                     if (q1.Count > 0)
@@ -890,12 +890,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                         _SalId = Convert.ToInt32(lblSalId.Text);
                         _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
                         int _Seryal = Convert.ToInt32(txtSeryal.Text);
+                        //DateTime _DateTimeSanad = Convert.ToDateTime(DateTime.Now.ToString().Replace(DateTime.Now.ToString().Substring(0, 10), txtTarikh.Text ));
                         DateTime _DateTimeSanad = Convert.ToDateTime(txtTarikh.Text);
                         DateTime _DateTimeInsert = DateTime.Now;
                         _HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                        _HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue);
-                        _HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue);
-                        _HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue);
+                        _HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 1 && s.EpAllGroupTafsili1.Id == 19 && s.Name == "سایر 1").Id : Convert.ToInt32(cmbHesabTafsili1.EditValue);
+                        _HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 2 && s.EpAllGroupTafsili1.Id == 38 && s.Name == "سایر 2").Id : Convert.ToInt32(cmbHesabTafsili2.EditValue);
+                        _HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 3 && s.EpAllGroupTafsili1.Id == 57 && s.Name == "سایر 3").Id : Convert.ToInt32(cmbHesabTafsili3.EditValue);
                         _SharhSanad = txtSharhSanad.Text;
                         if (IsValidation())
                         {
@@ -943,6 +944,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     obj.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                     obj.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                                     obj.Seryal = _Seryal;
+                                    obj.DateTimeSanad = _DateTimeSanad;
                                     obj.NoeAmaliatCode = _NoeAmaliatCode;
                                     obj.NoeSanadCode = _NoeSanadCode;
                                     obj.NoeSanadText = NoeAmaliatTabpageText;
@@ -1032,6 +1034,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         A1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                         A1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                                         A1.Seryal = _Seryal;
+                                        A1.DateTimeSanad = _DateTimeSanad;
                                         A1.NoeAmaliatCode = _NoeAmaliatCode;
                                         A1.NoeSanadCode = _NoeSanadCode;
                                         A1.NoeSanadText = NoeAmaliatTabpageText;
@@ -1088,6 +1091,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         obj.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                         obj.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                                         obj.Seryal = _Seryal;
+                                        obj.DateTimeSanad = _DateTimeSanad;
                                         obj.NoeAmaliatCode = _NoeAmaliatCode;
                                         obj.NoeSanadCode = _NoeSanadCode;
                                         obj.NoeSanadText = NoeAmaliatTabpageText;

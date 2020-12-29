@@ -310,7 +310,7 @@ namespace EtelaatePaye.CodingHesabdari
         private void FrmHesabhaTafsili_Load(object sender, EventArgs e)
         {
             xtcHesabhaTafsili.SelectedTabPageIndex = 0;
-            btnCreate.Enabled = false;
+            //btnCreate.Enabled = false;
             btnJoziatAshkhas.Visible = true;
             gridControl = gridControl_Ashkhas;
             gridView = gridView_Ashkhas;

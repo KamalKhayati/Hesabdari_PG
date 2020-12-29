@@ -186,7 +186,8 @@ namespace EtelaatePaye.CodingAnbar
             {
                 this.Close();
 
-            }        }
+            }
+        }
 
         private bool TextEditValidation()
         {
@@ -215,7 +216,7 @@ namespace EtelaatePaye.CodingAnbar
                 cmbHesabMoin.Focus();
                 return false;
             }
-            else if (Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 && cmbHesabTafsili1.ReadOnly==false)
+            else if (Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 && cmbHesabTafsili1.ReadOnly == false)
             {
                 XtraMessageBox.Show("لطفا حساب تفصیلی سطح یک را مشخص کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbHesabTafsili1.Focus();
@@ -514,7 +515,7 @@ namespace EtelaatePaye.CodingAnbar
                     cmbHesabTafsili2.ShowPopup();
                     cmbHesabTafsili2.ClosePopup();
                     cmbHesabTafsili3.ShowPopup();
-                    cmbHesabTafsili3.ClosePopup() ;
+                    cmbHesabTafsili3.ClosePopup();
                     txtName.Focus();
                 }
 
@@ -544,9 +545,9 @@ namespace EtelaatePaye.CodingAnbar
                                 obj.SharhHesab = txtSharhHesab.Text;
                                 obj.MoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
                                 var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.EpAllGroupTafsili1.TabaghehGroupName == "سایر");
-                                obj.TafsiliId1 = Convert.ToInt32(cmbHesabTafsili1.EditValue)>0  ? Convert.ToInt32(cmbHesabTafsili1.EditValue) : qq.FirstOrDefault(s=>s.LevelNamber==1&& s.Name=="سایر 1").Id;
-                                obj.TafsiliId2 = Convert.ToInt32(cmbHesabTafsili2.EditValue)>0 ? Convert.ToInt32(cmbHesabTafsili2.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 2 && s.Name == "سایر 2").Id;
-                                obj.TafsiliId3 = Convert.ToInt32(cmbHesabTafsili3.EditValue)>0 ? Convert.ToInt32(cmbHesabTafsili3.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 3 && s.Name == "سایر 3").Id;
+                                obj.TafsiliId1 = Convert.ToInt32(cmbHesabTafsili1.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili1.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 1 && s.Name == "سایر 1").Id;
+                                obj.TafsiliId2 = Convert.ToInt32(cmbHesabTafsili2.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili2.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 2 && s.Name == "سایر 2").Id;
+                                obj.TafsiliId3 = Convert.ToInt32(cmbHesabTafsili3.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili3.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 3 && s.Name == "سایر 3").Id;
 
                                 db.EpListAnbarhas.Add(obj);
                                 db.SaveChanges();
@@ -636,16 +637,16 @@ namespace EtelaatePaye.CodingAnbar
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-                gridControl1.Enabled = true;
-                En = EnumCED.Cancel;
-                HelpClass1.ActiveButtons(panelControl2);
-                HelpClass1.ClearControls(panelControl1_1);
-                HelpClass1.ClearControls(panelControl1_2);
-                HelpClass1.InActiveControls(panelControl1_1);
-                HelpClass1.InActiveControls(panelControl1_2);
-                //cmbHesabMoin.EditValue = cmbHesabTafsili1.EditValue = cmbHesabTafsili2.EditValue = cmbHesabTafsili3.EditValue = null;
-                //epHesabMoin1sBindingSource.DataSource = epHesabTafsiliAnbarhasBindingSource.DataSource = null;
-                btnCreate.Focus();
+            gridControl1.Enabled = true;
+            En = EnumCED.Cancel;
+            HelpClass1.ActiveButtons(panelControl2);
+            HelpClass1.ClearControls(panelControl1_1);
+            HelpClass1.ClearControls(panelControl1_2);
+            HelpClass1.InActiveControls(panelControl1_1);
+            HelpClass1.InActiveControls(panelControl1_2);
+            //cmbHesabMoin.EditValue = cmbHesabTafsili1.EditValue = cmbHesabTafsili2.EditValue = cmbHesabTafsili3.EditValue = null;
+            //epHesabMoin1sBindingSource.DataSource = epHesabTafsiliAnbarhasBindingSource.DataSource = null;
+            btnCreate.Focus();
         }
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
@@ -857,7 +858,7 @@ namespace EtelaatePaye.CodingAnbar
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     int _HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
                     var q = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.Id == _HesabMoinId);
-                    if (q!=null)
+                    if (q != null)
                     {
                         //cmbHesabTafsili1.EditValue = cmbHesabTafsili2.EditValue = cmbHesabTafsili3.EditValue = 0;
                         switch (q.GroupLevelsId)
@@ -891,7 +892,8 @@ namespace EtelaatePaye.CodingAnbar
                                 break;
                         }
 
-                    }                }
+                    }
+                }
                 catch (Exception ex)
                 {
                     XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
@@ -922,8 +924,13 @@ namespace EtelaatePaye.CodingAnbar
             }
             // memoEdit1.Text = "در قسمت اطلاعات پایه -> کدینگ حسابداری -> حسابهای تفصیلی سطح 1 -> در تب انبارها ، نام انبار مربوطه تعریف و در این قسمت انتخاب شود ضمناً ارتباط حساب معین با گروه تفصیلی انبارها در سطح یک داده شود";
             // memoEdit1.Text = "پیشنهاد : از قسمت اطلاعات پایه => کدینگ حسابداری => حسابهای تفصیلی سطح 1 => در تب انبارها ، انبار فعلی تعریف واز این قسمت انتخاب نمایید";
-            memoEdit1.Text = "پیشنهاد : در صورتیکه میخواهید در حسابداری زیر گروه حساب معین انبار ، لیست کالاها بیاید  " +
-                "اولین کالای تعریف شده دراین قسمت انتخاب شود در غیر اینصورت سایر 1 را در این قسمت انتخاب نمایید";
+            //memoEdit1.Text = "پیشنهاد : در صورتیکه میخواهید در حسابداری زیر گروه حساب معین انبار ، لیست کالاها بیاید  " +
+            //    "اولین کالای تعریف شده دراین قسمت انتخاب شود در غیر اینصورت سایر 1 را در این قسمت انتخاب نمایید";
+            if (cmbHesabTafsili1.ReadOnly == false)
+                memoEdit1.Text = " پیشنهاد : در صورتیکه واحد تجاری دارای چندین انبار می باشد  " +
+                     "در قسمت اطلاعات پایه => کدینگ حسابداری => حسابهای تفصیلی سطح 1 => در تب انبارها ، " +
+                     "نام انبار فعلی تعریف و در این قسمت انتخاب شود در غیر اینصورت گزینه سایر 1 را انتخاب نمایید";
+
 
         }
 
@@ -933,9 +940,13 @@ namespace EtelaatePaye.CodingAnbar
             {
                 cmbHesabTafsili2.ShowPopup();
             }
-            memoEdit1.Text = " پیشنهاد : در صورتیکه در حساب تفصیلی سطح 1  ، نام کالا انتخاب شده است و ضمناً واحد تجاری دارای چندین انبار می باشد  " +
-                             "در قسمت اطلاعات پایه => کدینگ حسابداری => حسابهای تفصیلی سطح 2 => در تب انبارها ، " +
-                             "نام انبار فعلی تعریف و در این قسمت انتخاب شود در غیر اینصورت گزینه سایر 2 را انتخاب نمایید";
+            if (cmbHesabTafsili2.ReadOnly == false)
+                memoEdit1.Text = "پیشنهاد : در صورتیکه میخواهید در حسابداری زیر گروه تفصیلی سطح 1 حساب معین انبار ، لیست کالاها بیاید  " +
+                "اولین کالای تعریف شده دراین قسمت انتخاب شود در غیر اینصورت گزینه سایر 2 را انتخاب نمایید";
+
+            //memoEdit1.Text = " پیشنهاد : در صورتیکه در حساب تفصیلی سطح 1  ، نام کالا انتخاب شده است و ضمناً واحد تجاری دارای چندین انبار می باشد  " +
+            //                 "در قسمت اطلاعات پایه => کدینگ حسابداری => حسابهای تفصیلی سطح 2 => در تب انبارها ، " +
+            //                 "نام انبار فعلی تعریف و در این قسمت انتخاب شود در غیر اینصورت گزینه سایر 2 را انتخاب نمایید";
 
             //memoEdit1.Text = "در قسمت اطلاعات پایه -> کدینگ حسابداری -> حسابهای تفصیلی سطح 1 -> " +
             //    "در تب انبارها ، نام انبار مربوطه تعریف و در این قسمت انتخاب شود ضمناً ارتباط حساب معین با گروه تفصیلی انبارها در سطح یک داده شود";
@@ -950,7 +961,8 @@ namespace EtelaatePaye.CodingAnbar
             {
                 cmbHesabTafsili3.ShowPopup();
             }
-            memoEdit1.Text = " پیشنهاد : در صورتیکه واحد تجاری بغیر از شعبه اصلی دارای شعبات وابسته و یا شعبات همگروه دیگری می باشد  " +
+            if (cmbHesabTafsili3.ReadOnly == false)
+                memoEdit1.Text = " پیشنهاد : در صورتیکه واحد تجاری بغیر از شعبه اصلی دارای شعبات وابسته و یا شعبات همگروه دیگری می باشد  " +
                              "در قسمت اطلاعات پایه => کدینگ حسابداری => حسابهای تفصیلی سطح 3 => در تب شعبات وابسته ،" +
                              " شعبه مورد نظر تعریف و در این قسمت انتخاب شود در غیر اینصورت گزینه سایر 3 را انتخاب نمایید";
 

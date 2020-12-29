@@ -69,7 +69,8 @@ namespace AnbarVaKala.AmaliatRozaneh
         //string NoeSanadTabpageName = string.Empty;
         string NoeAmaliatTabpageText = string.Empty;
         //  int _IndexTabPage = 0;
-        int _NoeAmaliatCode = 0;
+        int _NoeAmaliatCodeResid = 0;
+        int _NoeAmaliatCodeHavale = 0;
         int _NoeSanadCode = 0;
 
         int _SalId = 0;
@@ -87,7 +88,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                     var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
                     var q2 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
 
-                    var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal).ToList();
+                    var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeHavale && s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal).ToList();
                     if (q.Count() > 0)
                     {
                         foreach (var item in q.ToList())
@@ -133,7 +134,11 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                    cmbAzAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                    if (En1 == EnumCED.Edit)
+                        cmbAzAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                    else
+                        cmbAzAnbar.Properties.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
+
                 }
                 catch (Exception ex)
                 {
@@ -152,7 +157,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     _AzAnbarId = Convert.ToInt32(cmbAzAnbar.EditValue);
                     var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.Id != _AzAnbarId).OrderBy(s => s.Code).ToList();
-                    cmbBeAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                    if (En1 == EnumCED.Edit)
+                        cmbBeAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                    else
+                        cmbBeAnbar.Properties.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
                 }
                 catch (Exception ex)
                 {
@@ -376,7 +384,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         txtTarikh.Text = DateTime.Now.ToString();
                         chkIsSanadHesabdari.Checked = true;
 
-                        var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
+                        var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeHavale && s.NoeSanadCode == _NoeSanadCode).ToList();
                         if (q.Count > 0)
                         {
                             txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
@@ -416,7 +424,7 @@ namespace AnbarVaKala.AmaliatRozaneh
             //ActiveButtons();
             //NoeAmaliatTabpageIndex = 0;
             //NoeAmaliatTabpageName = xtcAmaliatRozaneh.SelectedTabPage.Name;
-            //_NoeAmaliatCode = 2;
+            //_NoeAmaliatCodeResid = 2;
             //_NoeSanadCode = 201;
             //// xtcAmaliatRozaneh.SelectedTabPageIndex = 0;
             //NoeSanadTabpageIndex = 0;
@@ -442,7 +450,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                     NoeAmaliatTabpageIndex = 0;
                     NoeAmaliatTabpageName = xtcAmaliatJabejaee.SelectedTabPage.Name;
                     //NoeSanadName = XtraTabControl1_1.SelectedTabPage.Text;
-                    _NoeAmaliatCode = 4;
+                    _NoeAmaliatCodeResid = 2;
+                    _NoeAmaliatCodeHavale = 3;
                     //NoeSanadTabpageIndex = 2;
                     //NoeSanadTabpageName = xtcAmaliatRozaneh.SelectedTabPage.Name;
                     NoeAmaliatTabpageText = xtcAmaliatJabejaee.SelectedTabPage.Text;
@@ -538,7 +547,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                             {
                                 _SalId = Convert.ToInt32(lblSalId.Text);
                                 int _Seryal = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal").ToString());
-                                var q = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal);
+                                var q = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal);
                                 if (q != null)
                                 {
                                     db.AkAllAmaliateRozanehs.RemoveRange(q);
@@ -618,7 +627,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         //var q1 = db.EpHesabTafsiliAshkhass.Where(s => s.SalId == _SalId).ToList();
                         var q2 = dbContext.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
 
-                        var q = dbContext.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                        var q = dbContext.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeHavale && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                         if (q.Count > 0)
                         {
                             // _IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
@@ -720,6 +729,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         _SalId = Convert.ToInt32(lblSalId.Text);
                         // int _AnbarId = Convert.ToInt32(cmbAzAnbar.EditValue);
                         int _Seryal = Convert.ToInt32(txtSeryal.Text);
+                        //DateTime _DateTimeSanad = Convert.ToDateTime(DateTime.Now.ToString().Replace(DateTime.Now.ToString().Substring(0, 10), txtTarikh.Text));
                         DateTime _DateTimeSanad = Convert.ToDateTime(txtTarikh.Text);
                         DateTime _DateTimeInsert = DateTime.Now;
                         _AzAnbarId = Convert.ToInt32(cmbAzAnbar.EditValue);
@@ -751,7 +761,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     obj1.Seryal = _Seryal;
                                     obj1.DateTimeSanad = _DateTimeSanad;
                                     obj1.DateTimeInsert = _DateTimeInsert;
-                                    obj1.NoeAmaliatCode = _NoeAmaliatCode;
+                                    obj1.NoeAmaliatCode = _NoeAmaliatCodeHavale;
                                     obj1.NoeSanadCode = _NoeSanadCode;
                                     obj1.NoeSanadText = "حواله (جابجایی)";
                                     obj1.Meghdar = _Meghdar;
@@ -775,7 +785,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     obj01.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                     obj01.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                                     obj01.Seryal = _Seryal;
-                                    obj01.NoeAmaliatCode = _NoeAmaliatCode;
+                                    obj01.DateTimeSanad = _DateTimeSanad;
+                                    obj01.NoeAmaliatCode = _NoeAmaliatCodeHavale;
                                     obj01.NoeSanadCode = _NoeSanadCode;
                                     obj01.NoeSanadText = "حواله (جابجایی)";
                                     obj01.Meghdar = _Meghdar;
@@ -802,7 +813,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     obj2.Seryal = _Seryal;
                                     obj2.DateTimeSanad = _DateTimeSanad;
                                     obj2.DateTimeInsert = _DateTimeInsert;
-                                    obj2.NoeAmaliatCode = _NoeAmaliatCode;
+                                    obj2.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                     obj2.NoeSanadCode = _NoeSanadCode;
                                     obj2.NoeSanadText = "رسید (جابجایی)";
                                     obj2.Meghdar = _Meghdar;
@@ -826,7 +837,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     obj02.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                     obj02.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                                     obj02.Seryal = _Seryal;
-                                    obj02.NoeAmaliatCode = _NoeAmaliatCode;
+                                    obj02.DateTimeSanad = _DateTimeSanad;
+                                    obj02.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                     obj02.NoeSanadCode = _NoeSanadCode;
                                     obj02.NoeSanadText = "رسید (جابجایی)";
                                     obj02.Meghdar = _Meghdar;
@@ -862,8 +874,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 //DateTime _DateTimeInsert = DateTime.Now;
                                 DateTime _DateTimeEdit = DateTime.Now;
                                 BindingList<AkKhorojeKala_Riz> list = (BindingList<AkKhorojeKala_Riz>)akKhorojeKala_RizsBindingSource.DataSource;
-                                var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal && s.NoeSanadText == "حواله (جابجایی)").ToList();
-                                var q21 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal && s.NoeSanadText == "حواله (جابجایی)").ToList();
+                                var q21 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId &&  s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                                 foreach (var item in q2)
                                 {
                                     if (!list.Any(s => s.Id == item.Id))
@@ -874,9 +886,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     }
                                 }
 
-                                var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                var k = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                var v = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId  && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                var k = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeHavale && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                var v = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeResid && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                                 for (int i = 0; i < list.Count; i++)
                                 {
                                     if (list[i].Id > 0)
@@ -897,7 +909,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         //k1.Seryal = _Seryal;
                                         k1.DateTimeSanad = _DateTimeSanad;
                                         k1.DateTimeEdit = _DateTimeEdit;
-                                        //k1.NoeAmaliatCode = _NoeAmaliatCode;
+                                        //k1.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                         //k1.NoeSanadCode = _NoeSanadCode;
                                         //k1.NoeSanadText = NoeAmaliatTabpageText;
                                         k1.Meghdar = _Meghdar;
@@ -919,8 +931,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         A1.BeAnbarId = _BeAnbarId;
                                         A1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                         A1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
+                                        A1.DateTimeSanad = _DateTimeSanad;
                                         //A1.Seryal = _Seryal;
-                                        //A1.NoeAmaliatCode = _NoeAmaliatCode;
+                                        //A1.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                         //A1.NoeSanadCode = _NoeSanadCode;
                                         //A1.NoeSanadText = NoeAmaliatTabpageText;
                                         A1.Meghdar = _Meghdar;
@@ -946,7 +959,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         //v1.Seryal = _Seryal;
                                         v1.DateTimeSanad = _DateTimeSanad;
                                         v1.DateTimeEdit = _DateTimeEdit;
-                                        //v1.NoeAmaliatCode = _NoeAmaliatCode;
+                                        //v1.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                         //v1.NoeSanadCode = _NoeSanadCode;
                                         //v1.NoeSanadText = NoeAmaliatTabpageText;
                                         v1.Meghdar = _Meghdar;
@@ -968,8 +981,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         A2.BeAnbarId = _AzAnbarId;
                                         A2.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                         A2.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
+                                        A2.DateTimeSanad = _DateTimeSanad;
                                         //A.Seryal = _Seryal;
-                                        //A.NoeAmaliatCode = _NoeAmaliatCode;
+                                        //A.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                         //A.NoeSanadCode = _NoeSanadCode;
                                         //A.NoeSanadText = NoeAmaliatTabpageText;
                                         A2.Meghdar = _Meghdar;
@@ -1006,7 +1020,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         obj1.Seryal = _Seryal;
                                         obj1.DateTimeSanad = _DateTimeSanad;
                                         obj1.DateTimeInsert = _DateTimeInsert;
-                                        obj1.NoeAmaliatCode = _NoeAmaliatCode;
+                                        obj1.NoeAmaliatCode = _NoeAmaliatCodeHavale;
                                         obj1.NoeSanadCode = _NoeSanadCode;
                                         obj1.NoeSanadText = "حواله (جابجایی)";
                                         obj1.Meghdar = _Meghdar;
@@ -1030,7 +1044,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         obj01.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                         obj01.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                                         obj01.Seryal = _Seryal;
-                                        obj01.NoeAmaliatCode = _NoeAmaliatCode;
+                                        obj01.DateTimeSanad = _DateTimeSanad;
+                                        obj01.NoeAmaliatCode = _NoeAmaliatCodeHavale;
                                         obj01.NoeSanadCode = _NoeSanadCode;
                                         obj01.NoeSanadText = "حواله (جابجایی)";
                                         obj01.Meghdar = _Meghdar;
@@ -1057,7 +1072,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         obj2.Seryal = _Seryal;
                                         obj2.DateTimeSanad = _DateTimeSanad;
                                         obj2.DateTimeInsert = _DateTimeInsert;
-                                        obj2.NoeAmaliatCode = _NoeAmaliatCode;
+                                        obj2.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                         obj2.NoeSanadCode = _NoeSanadCode;
                                         obj2.NoeSanadText = "رسید (جابجایی)";
                                         obj2.Meghdar = _Meghdar;
@@ -1081,7 +1096,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         obj02.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                         obj02.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                                         obj02.Seryal = _Seryal;
-                                        obj02.NoeAmaliatCode = _NoeAmaliatCode;
+                                        obj02.DateTimeSanad = _DateTimeSanad;
+                                        obj02.NoeAmaliatCode = _NoeAmaliatCodeResid;
                                         obj02.NoeSanadCode = _NoeSanadCode;
                                         obj02.NoeSanadText = "رسید (جابجایی)";
                                         obj02.Meghdar = _Meghdar;
@@ -1107,7 +1123,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                             ///////////*******************
                             #region MyRegion1
-                            //var q = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                            //var q = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeResid && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                             //if (q.Count > 0)
                             //{
                             //    db.AkAllAmaliateRozanehs.RemoveRange(q);
@@ -1131,7 +1147,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                             //        obj1.DateTimeSanad = _DateTimeSanad;
                             //        obj1.DateTimeInsert = _DateTimeInsert;
                             //        obj1.DateTimeEdit = _DateTimeEdit;
-                            //        obj1.NoeAmaliatCode = _NoeAmaliatCode;
+                            //        obj1.NoeAmaliatCode = _NoeAmaliatCodeResid;
                             //        obj1.NoeSanadCode = _NoeSanadCode;
                             //        obj1.NoeSanadText = "حواله (جابجایی)";
                             //        obj1.Meghdar = _Meghdar;
@@ -1155,7 +1171,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                             //        obj01.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                             //        obj01.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                             //        obj01.Seryal = _Seryal;
-                            //        obj01.NoeAmaliatCode = _NoeAmaliatCode;
+                            //        obj01.NoeAmaliatCode = _NoeAmaliatCodeResid;
                             //        obj01.NoeSanadCode = _NoeSanadCode;
                             //        obj01.NoeSanadText = "حواله (جابجایی)";
                             //        obj01.Meghdar = _Meghdar;
@@ -1183,7 +1199,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                             //        obj2.DateTimeSanad = _DateTimeSanad;
                             //        obj2.DateTimeInsert = _DateTimeInsert;
                             //        obj2.DateTimeEdit = _DateTimeEdit;
-                            //        obj2.NoeAmaliatCode = _NoeAmaliatCode;
+                            //        obj2.NoeAmaliatCode = _NoeAmaliatCodeResid;
                             //        obj2.NoeSanadCode = _NoeSanadCode;
                             //        obj2.NoeSanadText = "رسید (جابجایی)";
                             //        obj2.Meghdar = _Meghdar;
@@ -1207,7 +1223,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                             //        obj02.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                             //        obj02.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
                             //        obj02.Seryal = _Seryal;
-                            //        obj02.NoeAmaliatCode = _NoeAmaliatCode;
+                            //        obj02.NoeAmaliatCode = _NoeAmaliatCodeResid;
                             //        obj02.NoeSanadCode = _NoeSanadCode;
                             //        obj02.NoeSanadText = "رسید (جابجایی)";
                             //        obj02.Meghdar = _Meghdar;
@@ -1278,7 +1294,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         {
                             if (txtNoeAmaliat1.Text == "xtpJabejaeeKala")
                             {
-                                var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
+                                var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCodeHavale && s.NoeSanadCode == _NoeSanadCode).ToList();
                                 if (q.Count > 0)
                                 {
                                     txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();

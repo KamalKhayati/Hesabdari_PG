@@ -256,7 +256,7 @@ namespace HelpClassLibrary
         {
             gridView1.IndicatorWidth = 60;
             // Handle this event to paint RowIndicator manually
-            GridView view = sender as GridView;
+            //GridView view = sender as GridView;
             if (e.Info.IsRowIndicator && e.RowHandle >= 0)
             {
                 e.Info.DisplayText = (e.RowHandle + 1).ToString();
@@ -459,7 +459,7 @@ namespace HelpClassLibrary
 
         public static bool _IsActiveRow = true;
         /// <summary>
-        /// رنگ بندی سلول کمبوباکس
+        /// رنگ بندی سلول کمبوباکس LookupEdit
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -519,6 +519,40 @@ namespace HelpClassLibrary
             {
                 if (e.DisplayText == "True")
                     e.DisplayText = "بله";
+            }
+
+        }
+
+        /// <summary>
+        /// رنگ بندی ردیف CheckedComboBoxEdit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        public static void cmbAnbarName_DrawListBoxItem(object sender, ListBoxDrawItemEventArgs e)
+        {
+            if (e.Index == 0)
+                return;
+            int ItemId = Convert.ToInt32(e.Item);
+            //_SalId = Convert.ToInt32(lblSalId.Text);
+
+            using (var db = new MyContext())
+            {
+                try
+                {
+                   // var _Isactive = db.EpListAnbarhas.FirstOrDefault(s => s.SalId == _SalId && s.Id == ItemId).IsActive;
+                    //if (_Isactive == false)
+                    //    e.Appearance.ForeColor = Color.Red;
+                    //else
+                    //    e.Appearance.ForeColor = Color.Black;
+
+
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
         }

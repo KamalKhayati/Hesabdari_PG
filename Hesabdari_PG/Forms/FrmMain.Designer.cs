@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFroosh = new DevExpress.XtraBars.BarButtonItem();
             this.btnBargashtFroosh = new DevExpress.XtraBars.BarButtonItem();
@@ -68,6 +68,7 @@
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
+            this.btnMojodiAnbarVKala = new DevExpress.XtraBars.BarButtonItem();
             this.mbsCodingHesabdari = new DevExpress.XtraBars.BarSubItem();
             this.btnCodingHesabdari = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupTafsili = new DevExpress.XtraBars.BarButtonItem();
@@ -201,6 +202,7 @@
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnKardeksKala = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msMajmoeBindingSource)).BeginInit();
@@ -335,11 +337,13 @@
             this.btnHesabhaTafsiliLevel2,
             this.btnHesabhaTafsiliLevel3,
             this.btnCodingKala,
-            this.btnMojodiAvalDoreKala});
+            this.btnMojodiAvalDoreKala,
+            this.btnMojodiAnbarVKala,
+            this.btnKardeksKala});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbon.MaxItemId = 177;
+            this.ribbon.MaxItemId = 179;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsPageCategories.ShowCaptions = false;
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
@@ -653,8 +657,18 @@
             this.barSubItem4.Caption = "گزارشات ویژه";
             this.barSubItem4.Id = 49;
             this.barSubItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem4.ImageOptions.SvgImage")));
+            this.barSubItem4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnMojodiAnbarVKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnKardeksKala)});
             this.barSubItem4.Name = "barSubItem4";
             this.barSubItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btnMojodiAnbarVKala
+            // 
+            this.btnMojodiAnbarVKala.Caption = "موجودی انبار و کالا";
+            this.btnMojodiAnbarVKala.Id = 177;
+            this.btnMojodiAnbarVKala.Name = "btnMojodiAnbarVKala";
+            this.btnMojodiAnbarVKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMojodiAnbarVKala_ItemClick);
             // 
             // mbsCodingHesabdari
             // 
@@ -1189,10 +1203,10 @@
             this.chkDefault.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.chkDefault.Id = 124;
             this.chkDefault.Name = "chkDefault";
-            toolTipItem2.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
+            toolTipItem1.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
     "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نیست";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.chkDefault.SuperTip = superToolTip2;
+            superToolTip1.Items.Add(toolTipItem1);
+            this.chkDefault.SuperTip = superToolTip1;
             this.chkDefault.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkDefault_CheckedChanged);
             // 
             // txtUserName
@@ -1712,6 +1726,13 @@
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "سایر موارد";
             // 
+            // btnKardeksKala
+            // 
+            this.btnKardeksKala.Caption = "کاردکس کالا";
+            this.btnKardeksKala.Id = 178;
+            this.btnKardeksKala.Name = "btnKardeksKala";
+            this.btnKardeksKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKardeksKala_ItemClick);
+            // 
             // FrmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -1932,5 +1953,7 @@
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel3;
         private DevExpress.XtraBars.BarButtonItem btnCodingKala;
         private DevExpress.XtraBars.BarButtonItem btnMojodiAvalDoreKala;
+        private DevExpress.XtraBars.BarButtonItem btnMojodiAnbarVKala;
+        private DevExpress.XtraBars.BarButtonItem btnKardeksKala;
     }
 }

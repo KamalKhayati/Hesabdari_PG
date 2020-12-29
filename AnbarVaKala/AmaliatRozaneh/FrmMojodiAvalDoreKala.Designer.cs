@@ -451,6 +451,7 @@
             this.btnReloadHesabTafsili3.TabStop = false;
             this.btnReloadHesabTafsili3.ToolTip = "جدید";
             this.btnReloadHesabTafsili3.ToolTipTitle = "F2";
+            this.btnReloadHesabTafsili3.Click += new System.EventHandler(this.btnReloadHesabTafsili_Click);
             // 
             // cmbHesabTafsili3
             // 
@@ -513,6 +514,7 @@
             this.btnReloadHesabTafsili2.TabStop = false;
             this.btnReloadHesabTafsili2.ToolTip = "جدید";
             this.btnReloadHesabTafsili2.ToolTipTitle = "F2";
+            this.btnReloadHesabTafsili2.Click += new System.EventHandler(this.btnReloadHesabTafsili_Click);
             // 
             // cmbHesabTafsili2
             // 
@@ -736,6 +738,7 @@
             this.btnReloadHesabMoin.Size = new System.Drawing.Size(43, 33);
             this.btnReloadHesabMoin.TabIndex = 146;
             this.btnReloadHesabMoin.TabStop = false;
+            this.btnReloadHesabMoin.Click += new System.EventHandler(this.btnReloadHesabMoin_Click);
             // 
             // lblHesabMoin
             // 
@@ -795,6 +798,7 @@
             this.btnReloadHesabTafsili.Size = new System.Drawing.Size(43, 33);
             this.btnReloadHesabTafsili.TabIndex = 143;
             this.btnReloadHesabTafsili.TabStop = false;
+            this.btnReloadHesabTafsili.Click += new System.EventHandler(this.btnReloadHesabTafsili_Click);
             // 
             // lblHesabTafsili
             // 

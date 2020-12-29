@@ -156,13 +156,35 @@ namespace AnbarVaKala.AmaliatRozaneh
             {
                 db = new MyContext();
                 _SallId = Convert.ToInt32(lblSalId.Text);
-                var q = db.EpNameKalas.Where(s => s.SalId == _SallId ).OrderBy(s => s.Code).ToList();
+                var q = db.EpNameKalas.Where(s => s.SalId == _SallId).OrderBy(s => s.Code).ToList();
                 foreach (var item in q)
                 {
                     item.GroupAsliName = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
                     item.GroupFareeName = item.EpGroupFareeKala1.Name;
                 }
-                epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
+                if (Fm != null)
+                {
+                    if (Fm.En2 == EnumCED.Edit)
+                        epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
+                    else
+                        epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
+                }
+                else if (Jm != null)
+                {
+                    if (Jm.En2 == EnumCED.Edit)
+                        epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
+                    else
+                        epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
+                }
+                else if (Dm != null)
+                {
+                    if (Dm.En2 == EnumCED.Edit)
+                        epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
+                    else
+                        epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
+                }
+
+
                 //db.EpNameKalas.Where(s => s.SalId == _SallId ).LoadAsync().ContinueWith(loadTask =>
                 //{
                 //    // Bind data to control when loading complete

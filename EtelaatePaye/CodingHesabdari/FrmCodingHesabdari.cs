@@ -2916,7 +2916,7 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             else
                             {
-                                XtraMessageBox.Show("لطفاً در ابتدا از قسمت => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح دوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح دوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 chkListBoxLevel2.ReadOnly = true;
                                 cmbGroupTafsiliLevels_4.SelectedIndex = 1;
                             }
@@ -2945,7 +2945,7 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             else
                             {
-                                XtraMessageBox.Show("لطفاً در ابتدا از قسمت => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح سوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح سوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 chkListBoxLevel3.ReadOnly = true;
                                 cmbGroupTafsiliLevels_4.SelectedIndex = 2;
                             }
