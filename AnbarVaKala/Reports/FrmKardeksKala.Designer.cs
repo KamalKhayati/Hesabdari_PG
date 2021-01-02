@@ -39,7 +39,10 @@
             this.Col_FaktorNumber = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colRadif = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Col_VahedKala = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.Col_MeghdarMo = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.Col_NerkhMo = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.Col_MablagMo = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.Col_Meghdar_Va = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Col_Nerkh_Va = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -66,6 +69,7 @@
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.panelControl0 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
+            this.chkIsEdgham = new DevExpress.XtraEditors.CheckEdit();
             this.cmbNoeGozaresh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl62 = new DevExpress.XtraEditors.LabelControl();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -94,6 +98,7 @@
             this.panelControl0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
             this.panelControl_Button.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsEdgham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNoeGozaresh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAzTarikh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaTarikh.Properties)).BeginInit();
@@ -113,7 +118,7 @@
             this.bandedGridView_MeghdariVRiali.Appearance.FooterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.bandedGridView_MeghdariVRiali.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.gridBand1,
-            this.gridBand2,
+            this.gridBand6,
             this.gridBand3,
             this.gridBand4,
             this.gridBand5,
@@ -126,6 +131,9 @@
             this.Col_FaktorNumber,
             this.colRadif,
             this.Col_VahedKala,
+            this.Col_MeghdarMo,
+            this.Col_NerkhMo,
+            this.Col_MablagMo,
             this.Col_Meghdar_Va,
             this.Col_Nerkh_Va,
             this.Col_Mablagh_Va,
@@ -205,7 +213,7 @@
             this.Col_Tarikh.Caption = "تاریخ";
             this.Col_Tarikh.DisplayFormat.FormatString = "d";
             this.Col_Tarikh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.Col_Tarikh.FieldName = "DateTimeSanad";
+            this.Col_Tarikh.FieldName = "DateTimeSanadString";
             this.Col_Tarikh.MinWidth = 25;
             this.Col_Tarikh.Name = "Col_Tarikh";
             this.Col_Tarikh.Visible = true;
@@ -277,22 +285,80 @@
             this.Col_VahedKala.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Col_VahedKala.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Col_VahedKala.Caption = "واحد کالا";
-            this.Col_VahedKala.FieldName = "VahedKala";
+            this.Col_VahedKala.FieldName = "VahedeKalaName";
             this.Col_VahedKala.MinWidth = 23;
             this.Col_VahedKala.Name = "Col_VahedKala";
             this.Col_VahedKala.Visible = true;
             this.Col_VahedKala.Width = 107;
             // 
-            // gridBand2
+            // gridBand6
             // 
-            this.gridBand2.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridBand2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridBand2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridBand2.Caption = "اول دوره";
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.Visible = false;
-            this.gridBand2.VisibleIndex = -1;
-            this.gridBand2.Width = 398;
+            this.gridBand6.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridBand6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridBand6.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridBand6.Caption = "مانده از قبل";
+            this.gridBand6.Columns.Add(this.Col_MeghdarMo);
+            this.gridBand6.Columns.Add(this.Col_NerkhMo);
+            this.gridBand6.Columns.Add(this.Col_MablagMo);
+            this.gridBand6.Name = "gridBand6";
+            this.gridBand6.Visible = false;
+            this.gridBand6.VisibleIndex = -1;
+            this.gridBand6.Width = 398;
+            // 
+            // Col_MeghdarMo
+            // 
+            this.Col_MeghdarMo.AppearanceCell.Options.UseTextOptions = true;
+            this.Col_MeghdarMo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Col_MeghdarMo.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Col_MeghdarMo.AppearanceHeader.Options.UseTextOptions = true;
+            this.Col_MeghdarMo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Col_MeghdarMo.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Col_MeghdarMo.Caption = "مقدار مانده";
+            this.Col_MeghdarMo.DisplayFormat.FormatString = "c3";
+            this.Col_MeghdarMo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.Col_MeghdarMo.FieldName = "MeghdarMo";
+            this.Col_MeghdarMo.MinWidth = 25;
+            this.Col_MeghdarMo.Name = "Col_MeghdarMo";
+            this.Col_MeghdarMo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarMo", "{0:c3}")});
+            this.Col_MeghdarMo.Visible = true;
+            this.Col_MeghdarMo.Width = 104;
+            // 
+            // Col_NerkhMo
+            // 
+            this.Col_NerkhMo.AppearanceCell.Options.UseTextOptions = true;
+            this.Col_NerkhMo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Col_NerkhMo.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Col_NerkhMo.AppearanceHeader.Options.UseTextOptions = true;
+            this.Col_NerkhMo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Col_NerkhMo.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Col_NerkhMo.Caption = "نرخ";
+            this.Col_NerkhMo.DisplayFormat.FormatString = "c3";
+            this.Col_NerkhMo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.Col_NerkhMo.FieldName = "NerkhMo";
+            this.Col_NerkhMo.MinWidth = 25;
+            this.Col_NerkhMo.Name = "Col_NerkhMo";
+            this.Col_NerkhMo.Visible = true;
+            this.Col_NerkhMo.Width = 124;
+            // 
+            // Col_MablagMo
+            // 
+            this.Col_MablagMo.AppearanceCell.Options.UseTextOptions = true;
+            this.Col_MablagMo.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Col_MablagMo.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Col_MablagMo.AppearanceHeader.Options.UseTextOptions = true;
+            this.Col_MablagMo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Col_MablagMo.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Col_MablagMo.Caption = "مبلغ مانده";
+            this.Col_MablagMo.DisplayFormat.FormatString = "n";
+            this.Col_MablagMo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.Col_MablagMo.FieldName = "MablagMo";
+            this.Col_MablagMo.MinWidth = 25;
+            this.Col_MablagMo.Name = "Col_MablagMo";
+            this.Col_MablagMo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagMo", "{0:n}")});
+            this.Col_MablagMo.Visible = true;
+            this.Col_MablagMo.Width = 170;
             // 
             // gridBand3
             // 
@@ -655,6 +721,7 @@
             // 
             // panelControl_Button
             // 
+            this.panelControl_Button.Controls.Add(this.chkIsEdgham);
             this.panelControl_Button.Controls.Add(this.cmbNoeGozaresh);
             this.panelControl_Button.Controls.Add(this.labelControl62);
             this.panelControl_Button.Controls.Add(this.btnClose);
@@ -669,6 +736,23 @@
             this.panelControl_Button.Name = "panelControl_Button";
             this.panelControl_Button.Size = new System.Drawing.Size(672, 91);
             this.panelControl_Button.TabIndex = 1;
+            // 
+            // chkIsEdgham
+            // 
+            this.chkIsEdgham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkIsEdgham.EditValue = true;
+            this.chkIsEdgham.EnterMoveNextControl = true;
+            this.chkIsEdgham.Location = new System.Drawing.Point(163, 50);
+            this.chkIsEdgham.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkIsEdgham.Name = "chkIsEdgham";
+            this.chkIsEdgham.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.chkIsEdgham.Properties.Appearance.Options.UseForeColor = true;
+            this.chkIsEdgham.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.chkIsEdgham.Properties.Caption = "نمایش ستون مانده از قبل";
+            this.chkIsEdgham.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkIsEdgham.Size = new System.Drawing.Size(211, 35);
+            this.chkIsEdgham.TabIndex = 208;
+            this.chkIsEdgham.CheckedChanged += new System.EventHandler(this.chkIsEdgham_CheckedChanged);
             // 
             // cmbNoeGozaresh
             // 
@@ -839,22 +923,23 @@
             this.cmbAnbarName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbAnbarName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 240, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 100, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 130, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 50, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbAnbarName.Properties.DataSource = this.epListAnbarhasBindingSource;
             this.cmbAnbarName.Properties.DisplayMember = "Name";
             this.cmbAnbarName.Properties.ImmediatePopup = true;
             this.cmbAnbarName.Properties.NullText = "";
             this.cmbAnbarName.Properties.NullValuePrompt = "انبار مورد نظر را انتخاب کنید";
             this.cmbAnbarName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbAnbarName.Properties.PopupWidth = 591;
+            this.cmbAnbarName.Properties.PopupWidth = 1000;
             this.cmbAnbarName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbAnbarName.Properties.ValueMember = "Id";
             this.cmbAnbarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbAnbarName.Size = new System.Drawing.Size(654, 34);
+            this.cmbAnbarName.Size = new System.Drawing.Size(653, 34);
             this.cmbAnbarName.TabIndex = 1;
             this.cmbAnbarName.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbAnbarName_CustomDrawRow);
             this.cmbAnbarName.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbAnbarName_CustomDrawCell);
@@ -905,13 +990,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbKalaName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 175, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 190, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("VahedAsliName", "واحد کالا", 125, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MeghdarMa", "موجودی", 135, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupFareeName", "گروه فرعی", 320, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupAsliName", "گروه اصلی", 270, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaName", "طبقه کالا", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MeghdarMa_NM", "موجودی", 135, DevExpress.Utils.FormatType.Numeric, "c3", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupFareeName_NM", "گروه فرعی", 320, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupAsliName_NM", "گروه اصلی", 270, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaName_NM", "طبقه کالا", 220, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbKalaName.Properties.DataSource = this.epNameKalasBindingSource;
             this.cmbKalaName.Properties.DisplayMember = "Name";
@@ -1000,6 +1085,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).EndInit();
             this.panelControl_Button.ResumeLayout(false);
             this.panelControl_Button.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsEdgham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNoeGozaresh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAzTarikh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaTarikh.Properties)).EndInit();
@@ -1048,9 +1134,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtTaTarikh;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit txtAzTarikh;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_Tarikh;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_AnbarName;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_FaktorNumber;
@@ -1063,15 +1147,21 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colIsRiali;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colHesabTafsiliName;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSanadNamber;
+        public DevExpress.XtraEditors.LookUpEdit cmbAnbarName;
+        private DevExpress.XtraEditors.LabelControl labelControl62;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        public DevExpress.XtraEditors.ComboBoxEdit cmbNoeGozaresh;
+        public DevExpress.XtraEditors.TextEdit txtTaTarikh;
+        public DevExpress.XtraEditors.TextEdit txtAzTarikh;
+        public DevExpress.XtraEditors.CheckEdit chkIsEdgham;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_MeghdarMo;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_NerkhMo;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_MablagMo;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand16;
-        public DevExpress.XtraEditors.LookUpEdit cmbAnbarName;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbNoeGozaresh;
-        private DevExpress.XtraEditors.LabelControl labelControl62;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

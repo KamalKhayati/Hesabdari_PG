@@ -47,8 +47,9 @@
             this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
             this.btnSaveAndClosed = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl_NameAnbar = new DevExpress.XtraEditors.PanelControl();
-            this.btnReloadNameAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.cmbNameAnbar = new DevExpress.XtraEditors.LookUpEdit();
+            this.epListAnbarhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnReloadNameAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.xtcAmaliatRozaneh = new DevExpress.XtraTab.XtraTabControl();
             this.xtpVrodeKala = new DevExpress.XtraTab.XtraTabPage();
@@ -552,6 +553,7 @@
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).BeginInit();
             this.panelControl0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
@@ -559,6 +561,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_NameAnbar)).BeginInit();
             this.panelControl_NameAnbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNameAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatRozaneh)).BeginInit();
             this.xtcAmaliatRozaneh.SuspendLayout();
             this.xtpVrodeKala.SuspendLayout();
@@ -642,6 +645,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl0
@@ -652,7 +656,7 @@
             this.panelControl0.Location = new System.Drawing.Point(0, 0);
             this.panelControl0.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl0.Name = "panelControl0";
-            this.panelControl0.Size = new System.Drawing.Size(1428, 59);
+            this.panelControl0.Size = new System.Drawing.Size(1428, 55);
             this.panelControl0.TabIndex = 1;
             // 
             // panelControl_Button
@@ -674,7 +678,7 @@
             this.panelControl_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl_Button.Location = new System.Drawing.Point(2, 2);
             this.panelControl_Button.Name = "panelControl_Button";
-            this.panelControl_Button.Size = new System.Drawing.Size(775, 55);
+            this.panelControl_Button.Size = new System.Drawing.Size(775, 51);
             this.panelControl_Button.TabIndex = 1;
             // 
             // btnDisplyList
@@ -682,7 +686,7 @@
             this.btnDisplyList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyList.Enabled = false;
             this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyList.ImageOptions.SvgImage")));
-            this.btnDisplyList.Location = new System.Drawing.Point(117, 10);
+            this.btnDisplyList.Location = new System.Drawing.Point(117, 6);
             this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisplyList.Name = "btnDisplyList";
             this.btnDisplyList.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -697,7 +701,7 @@
             this.btnSaveAndPrintAndClosed.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveAndPrintAndClosed.Enabled = false;
             this.btnSaveAndPrintAndClosed.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndPrintAndClosed.ImageOptions.SvgImage")));
-            this.btnSaveAndPrintAndClosed.Location = new System.Drawing.Point(447, 10);
+            this.btnSaveAndPrintAndClosed.Location = new System.Drawing.Point(447, 6);
             this.btnSaveAndPrintAndClosed.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndPrintAndClosed.Name = "btnSaveAndPrintAndClosed";
             this.btnSaveAndPrintAndClosed.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -712,7 +716,7 @@
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Enabled = false;
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(722, 10);
+            this.btnCreate.Location = new System.Drawing.Point(722, 6);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -726,7 +730,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(7, 10);
+            this.btnClose.Location = new System.Drawing.Point(7, 6);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -742,7 +746,7 @@
             this.btnNext.Enabled = false;
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(282, 10);
+            this.btnNext.Location = new System.Drawing.Point(282, 6);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -756,7 +760,7 @@
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.Enabled = false;
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(337, 10);
+            this.btnLast.Location = new System.Drawing.Point(337, 6);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4);
             this.btnLast.Name = "btnLast";
             this.btnLast.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -771,7 +775,7 @@
             this.btnSaveAndNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveAndNext.Enabled = false;
             this.btnSaveAndNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndNext.ImageOptions.SvgImage")));
-            this.btnSaveAndNext.Location = new System.Drawing.Point(502, 10);
+            this.btnSaveAndNext.Location = new System.Drawing.Point(502, 6);
             this.btnSaveAndNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndNext.Name = "btnSaveAndNext";
             this.btnSaveAndNext.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -786,7 +790,7 @@
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.Enabled = false;
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(62, 10);
+            this.btnPrintPreview.Location = new System.Drawing.Point(62, 6);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -803,7 +807,7 @@
             this.btnPreview.Enabled = false;
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(227, 10);
+            this.btnPreview.Location = new System.Drawing.Point(227, 6);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -817,7 +821,7 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(612, 10);
+            this.btnEdit.Location = new System.Drawing.Point(612, 6);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -832,7 +836,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(667, 10);
+            this.btnDelete.Location = new System.Drawing.Point(667, 6);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -847,7 +851,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(392, 10);
+            this.btnCancel.Location = new System.Drawing.Point(392, 6);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -862,7 +866,7 @@
             this.btnFirst.Enabled = false;
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(172, 10);
+            this.btnFirst.Location = new System.Drawing.Point(172, 6);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -876,7 +880,7 @@
             this.btnSaveAndClosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAndClosed.Enabled = false;
             this.btnSaveAndClosed.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndClosed.ImageOptions.SvgImage")));
-            this.btnSaveAndClosed.Location = new System.Drawing.Point(557, 10);
+            this.btnSaveAndClosed.Location = new System.Drawing.Point(557, 6);
             this.btnSaveAndClosed.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndClosed.Name = "btnSaveAndClosed";
             this.btnSaveAndClosed.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -888,14 +892,58 @@
             // 
             // panelControl_NameAnbar
             // 
-            this.panelControl_NameAnbar.Controls.Add(this.btnReloadNameAnbar);
             this.panelControl_NameAnbar.Controls.Add(this.cmbNameAnbar);
+            this.panelControl_NameAnbar.Controls.Add(this.textEdit1);
+            this.panelControl_NameAnbar.Controls.Add(this.btnReloadNameAnbar);
             this.panelControl_NameAnbar.Controls.Add(this.labelControl22);
             this.panelControl_NameAnbar.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl_NameAnbar.Location = new System.Drawing.Point(777, 2);
             this.panelControl_NameAnbar.Name = "panelControl_NameAnbar";
-            this.panelControl_NameAnbar.Size = new System.Drawing.Size(649, 55);
+            this.panelControl_NameAnbar.Size = new System.Drawing.Size(649, 51);
             this.panelControl_NameAnbar.TabIndex = 0;
+            // 
+            // cmbNameAnbar
+            // 
+            this.cmbNameAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbNameAnbar.EnterMoveNextControl = true;
+            this.cmbNameAnbar.Location = new System.Drawing.Point(61, 10);
+            this.cmbNameAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameAnbar.Name = "cmbNameAnbar";
+            this.cmbNameAnbar.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
+            this.cmbNameAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbNameAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbNameAnbar.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbNameAnbar.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbNameAnbar.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.cmbNameAnbar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbNameAnbar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cmbNameAnbar.Properties.DataSource = this.epListAnbarhasBindingSource;
+            this.cmbNameAnbar.Properties.DisplayMember = "Name";
+            this.cmbNameAnbar.Properties.ImmediatePopup = true;
+            this.cmbNameAnbar.Properties.NullText = "";
+            this.cmbNameAnbar.Properties.NullValuePrompt = "انبار مورد نظر را انتخاب کنید";
+            this.cmbNameAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbNameAnbar.Properties.PopupWidth = 1000;
+            this.cmbNameAnbar.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbNameAnbar.Properties.ValueMember = "Id";
+            this.cmbNameAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbNameAnbar.Size = new System.Drawing.Size(514, 34);
+            this.cmbNameAnbar.TabIndex = 1;
+            this.cmbNameAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
+            this.cmbNameAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
+            this.cmbNameAnbar.EditValueChanged += new System.EventHandler(this.cmbNameAnbar_EditValueChanged);
+            this.cmbNameAnbar.Enter += new System.EventHandler(this.cmbNameAnbar_Enter_1);
+            // 
+            // epListAnbarhasBindingSource
+            // 
+            this.epListAnbarhasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpListAnbarha);
             // 
             // btnReloadNameAnbar
             // 
@@ -903,7 +951,7 @@
             this.btnReloadNameAnbar.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadNameAnbar.Appearance.Options.UseForeColor = true;
             this.btnReloadNameAnbar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadNameAnbar.ImageOptions.SvgImage")));
-            this.btnReloadNameAnbar.Location = new System.Drawing.Point(7, 10);
+            this.btnReloadNameAnbar.Location = new System.Drawing.Point(6, 5);
             this.btnReloadNameAnbar.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadNameAnbar.Name = "btnReloadNameAnbar";
             this.btnReloadNameAnbar.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -913,42 +961,12 @@
             this.btnReloadNameAnbar.ToolTipTitle = "بعدی";
             this.btnReloadNameAnbar.Click += new System.EventHandler(this.btnReloadNameAnbar_Click);
             // 
-            // cmbNameAnbar
-            // 
-            this.cmbNameAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbNameAnbar.EnterMoveNextControl = true;
-            this.cmbNameAnbar.Location = new System.Drawing.Point(62, 11);
-            this.cmbNameAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbNameAnbar.Name = "cmbNameAnbar";
-            this.cmbNameAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.cmbNameAnbar.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbNameAnbar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbNameAnbar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد ", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 500, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.cmbNameAnbar.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpListAnbarha);
-            this.cmbNameAnbar.Properties.DisplayMember = "Name";
-            this.cmbNameAnbar.Properties.DropDownRows = 10;
-            this.cmbNameAnbar.Properties.ImmediatePopup = true;
-            this.cmbNameAnbar.Properties.NullText = "";
-            this.cmbNameAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbNameAnbar.Properties.ValueMember = "Id";
-            this.cmbNameAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameAnbar.Size = new System.Drawing.Size(514, 34);
-            this.cmbNameAnbar.TabIndex = 0;
-            this.cmbNameAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
-            this.cmbNameAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
-            this.cmbNameAnbar.EditValueChanged += new System.EventHandler(this.cmbNameAnbar_EditValueChanged);
-            // 
             // labelControl22
             // 
             this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl22.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl22.Appearance.Options.UseForeColor = true;
-            this.labelControl22.Location = new System.Drawing.Point(584, 14);
+            this.labelControl22.Location = new System.Drawing.Point(583, 13);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(48, 27);
@@ -959,10 +977,10 @@
             // 
             this.xtcAmaliatRozaneh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtcAmaliatRozaneh.Enabled = false;
-            this.xtcAmaliatRozaneh.Location = new System.Drawing.Point(0, 59);
+            this.xtcAmaliatRozaneh.Location = new System.Drawing.Point(0, 55);
             this.xtcAmaliatRozaneh.Name = "xtcAmaliatRozaneh";
             this.xtcAmaliatRozaneh.SelectedTabPage = this.xtpVrodeKala;
-            this.xtcAmaliatRozaneh.Size = new System.Drawing.Size(1428, 691);
+            this.xtcAmaliatRozaneh.Size = new System.Drawing.Size(1428, 695);
             this.xtcAmaliatRozaneh.TabIndex = 0;
             this.xtcAmaliatRozaneh.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpVrodeKala,
@@ -975,7 +993,7 @@
             // 
             this.xtpVrodeKala.Controls.Add(this.xtc_VorodeKala);
             this.xtpVrodeKala.Name = "xtpVrodeKala";
-            this.xtpVrodeKala.Size = new System.Drawing.Size(1426, 650);
+            this.xtpVrodeKala.Size = new System.Drawing.Size(1426, 654);
             this.xtpVrodeKala.Text = "ورود کــالا به انبار";
             // 
             // xtc_VorodeKala
@@ -984,7 +1002,7 @@
             this.xtc_VorodeKala.Location = new System.Drawing.Point(0, 0);
             this.xtc_VorodeKala.Name = "xtc_VorodeKala";
             this.xtc_VorodeKala.SelectedTabPage = this.xtp_ResidKharid;
-            this.xtc_VorodeKala.Size = new System.Drawing.Size(1426, 650);
+            this.xtc_VorodeKala.Size = new System.Drawing.Size(1426, 654);
             this.xtc_VorodeKala.TabIndex = 1;
             this.xtc_VorodeKala.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtp_ResidKharid,
@@ -1002,7 +1020,7 @@
             // 
             this.xtp_ResidKharid.Controls.Add(this.panelControl2);
             this.xtp_ResidKharid.Name = "xtp_ResidKharid";
-            this.xtp_ResidKharid.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_ResidKharid.Size = new System.Drawing.Size(1424, 613);
             this.xtp_ResidKharid.Text = "رسید خرید";
             // 
             // panelControl2
@@ -1011,7 +1029,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1424, 609);
+            this.panelControl2.Size = new System.Drawing.Size(1424, 613);
             this.panelControl2.TabIndex = 1;
             // 
             // gridControl_ResidKharid_Riz
@@ -1022,7 +1040,7 @@
             this.gridControl_ResidKharid_Riz.MainView = this.gridView_ResidKharid_Riz;
             this.gridControl_ResidKharid_Riz.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_ResidKharid_Riz.Name = "gridControl_ResidKharid_Riz";
-            this.gridControl_ResidKharid_Riz.Size = new System.Drawing.Size(1420, 605);
+            this.gridControl_ResidKharid_Riz.Size = new System.Drawing.Size(1420, 609);
             this.gridControl_ResidKharid_Riz.TabIndex = 36;
             this.gridControl_ResidKharid_Riz.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_ResidKharid_Riz});
@@ -1424,7 +1442,7 @@
             // 
             this.xtp_BargashtAzFroosh.Controls.Add(this.gridControl_BargashtAzFroosh);
             this.xtp_BargashtAzFroosh.Name = "xtp_BargashtAzFroosh";
-            this.xtp_BargashtAzFroosh.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_BargashtAzFroosh.Size = new System.Drawing.Size(1424, 613);
             this.xtp_BargashtAzFroosh.Text = "برگشت از فروش";
             // 
             // gridControl_BargashtAzFroosh
@@ -1435,7 +1453,7 @@
             this.gridControl_BargashtAzFroosh.MainView = this.gridView_BargashtAzFroosh;
             this.gridControl_BargashtAzFroosh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_BargashtAzFroosh.Name = "gridControl_BargashtAzFroosh";
-            this.gridControl_BargashtAzFroosh.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_BargashtAzFroosh.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_BargashtAzFroosh.TabIndex = 37;
             this.gridControl_BargashtAzFroosh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_BargashtAzFroosh});
@@ -1831,7 +1849,7 @@
             // 
             this.xtp_ResidKalaAmani.Controls.Add(this.gridControl_ResidKalaAmani);
             this.xtp_ResidKalaAmani.Name = "xtp_ResidKalaAmani";
-            this.xtp_ResidKalaAmani.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_ResidKalaAmani.Size = new System.Drawing.Size(1424, 613);
             this.xtp_ResidKalaAmani.Text = "رسید کالای امانی";
             // 
             // gridControl_ResidKalaAmani
@@ -1842,7 +1860,7 @@
             this.gridControl_ResidKalaAmani.MainView = this.gridView_ResidKalaAmani;
             this.gridControl_ResidKalaAmani.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_ResidKalaAmani.Name = "gridControl_ResidKalaAmani";
-            this.gridControl_ResidKalaAmani.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_ResidKalaAmani.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_ResidKalaAmani.TabIndex = 38;
             this.gridControl_ResidKalaAmani.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_ResidKalaAmani});
@@ -2244,7 +2262,7 @@
             // 
             this.xtp_ResidTolid.Controls.Add(this.gridControl_ResidTolid);
             this.xtp_ResidTolid.Name = "xtp_ResidTolid";
-            this.xtp_ResidTolid.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_ResidTolid.Size = new System.Drawing.Size(1424, 613);
             this.xtp_ResidTolid.Text = "رسیـد تولـید";
             // 
             // gridControl_ResidTolid
@@ -2255,7 +2273,7 @@
             this.gridControl_ResidTolid.MainView = this.gridView_ResidTolid;
             this.gridControl_ResidTolid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_ResidTolid.Name = "gridControl_ResidTolid";
-            this.gridControl_ResidTolid.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_ResidTolid.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_ResidTolid.TabIndex = 39;
             this.gridControl_ResidTolid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_ResidTolid});
@@ -2657,7 +2675,7 @@
             // 
             this.xtp_BargashtAzHavaleTolid.Controls.Add(this.gridControl_BargashtAzHavaleTolid);
             this.xtp_BargashtAzHavaleTolid.Name = "xtp_BargashtAzHavaleTolid";
-            this.xtp_BargashtAzHavaleTolid.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_BargashtAzHavaleTolid.Size = new System.Drawing.Size(1424, 613);
             this.xtp_BargashtAzHavaleTolid.Text = "برگشت از حواله تولید";
             // 
             // gridControl_BargashtAzHavaleTolid
@@ -2668,7 +2686,7 @@
             this.gridControl_BargashtAzHavaleTolid.MainView = this.gridView_BargashtAzHavaleTolid;
             this.gridControl_BargashtAzHavaleTolid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_BargashtAzHavaleTolid.Name = "gridControl_BargashtAzHavaleTolid";
-            this.gridControl_BargashtAzHavaleTolid.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_BargashtAzHavaleTolid.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_BargashtAzHavaleTolid.TabIndex = 40;
             this.gridControl_BargashtAzHavaleTolid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_BargashtAzHavaleTolid});
@@ -3070,7 +3088,7 @@
             // 
             this.xtp_BargashtAzHavaleHazine.Controls.Add(this.gridControl_BargashtAzHavaleHazine);
             this.xtp_BargashtAzHavaleHazine.Name = "xtp_BargashtAzHavaleHazine";
-            this.xtp_BargashtAzHavaleHazine.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_BargashtAzHavaleHazine.Size = new System.Drawing.Size(1424, 613);
             this.xtp_BargashtAzHavaleHazine.Text = "برگشت از حواله هزینه";
             // 
             // gridControl_BargashtAzHavaleHazine
@@ -3081,7 +3099,7 @@
             this.gridControl_BargashtAzHavaleHazine.MainView = this.gridView_BargashtAzHavaleHazine;
             this.gridControl_BargashtAzHavaleHazine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_BargashtAzHavaleHazine.Name = "gridControl_BargashtAzHavaleHazine";
-            this.gridControl_BargashtAzHavaleHazine.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_BargashtAzHavaleHazine.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_BargashtAzHavaleHazine.TabIndex = 42;
             this.gridControl_BargashtAzHavaleHazine.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_BargashtAzHavaleHazine});
@@ -3483,7 +3501,7 @@
             // 
             this.xtp_BargashtAzHavaleAmval.Controls.Add(this.gridControl_BargashtAzHavaleAmval);
             this.xtp_BargashtAzHavaleAmval.Name = "xtp_BargashtAzHavaleAmval";
-            this.xtp_BargashtAzHavaleAmval.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_BargashtAzHavaleAmval.Size = new System.Drawing.Size(1424, 613);
             this.xtp_BargashtAzHavaleAmval.Text = "برگشت از حواله اموال";
             // 
             // gridControl_BargashtAzHavaleAmval
@@ -3494,7 +3512,7 @@
             this.gridControl_BargashtAzHavaleAmval.MainView = this.gridView_BargashtAzHavaleAmval;
             this.gridControl_BargashtAzHavaleAmval.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_BargashtAzHavaleAmval.Name = "gridControl_BargashtAzHavaleAmval";
-            this.gridControl_BargashtAzHavaleAmval.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_BargashtAzHavaleAmval.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_BargashtAzHavaleAmval.TabIndex = 43;
             this.gridControl_BargashtAzHavaleAmval.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_BargashtAzHavaleAmval});
@@ -3896,7 +3914,7 @@
             // 
             this.xtp_EzafateAnbar.Controls.Add(this.gridControl_EzafateAnbar);
             this.xtp_EzafateAnbar.Name = "xtp_EzafateAnbar";
-            this.xtp_EzafateAnbar.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_EzafateAnbar.Size = new System.Drawing.Size(1424, 613);
             this.xtp_EzafateAnbar.Text = "اضافات انبـار";
             // 
             // gridControl_EzafateAnbar
@@ -3907,7 +3925,7 @@
             this.gridControl_EzafateAnbar.MainView = this.gridView_EzafateAnbar;
             this.gridControl_EzafateAnbar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_EzafateAnbar.Name = "gridControl_EzafateAnbar";
-            this.gridControl_EzafateAnbar.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_EzafateAnbar.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_EzafateAnbar.TabIndex = 41;
             this.gridControl_EzafateAnbar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_EzafateAnbar});
@@ -4309,7 +4327,7 @@
             // 
             this.xtp_AllVorode.Controls.Add(this.gridControl_AllVorode);
             this.xtp_AllVorode.Name = "xtp_AllVorode";
-            this.xtp_AllVorode.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_AllVorode.Size = new System.Drawing.Size(1424, 613);
             this.xtp_AllVorode.Text = "همـه";
             // 
             // gridControl_AllVorode
@@ -4320,7 +4338,7 @@
             this.gridControl_AllVorode.MainView = this.gridView_AllVorode;
             this.gridControl_AllVorode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_AllVorode.Name = "gridControl_AllVorode";
-            this.gridControl_AllVorode.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_AllVorode.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_AllVorode.TabIndex = 43;
             this.gridControl_AllVorode.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AllVorode});
@@ -4731,7 +4749,7 @@
             // 
             this.xtpKhrojeKala.Controls.Add(this.xtc_KhorojeKala);
             this.xtpKhrojeKala.Name = "xtpKhrojeKala";
-            this.xtpKhrojeKala.Size = new System.Drawing.Size(1426, 650);
+            this.xtpKhrojeKala.Size = new System.Drawing.Size(1426, 654);
             this.xtpKhrojeKala.Text = "خروج کــالا از انبار";
             // 
             // xtc_KhorojeKala
@@ -4740,7 +4758,7 @@
             this.xtc_KhorojeKala.Location = new System.Drawing.Point(0, 0);
             this.xtc_KhorojeKala.Name = "xtc_KhorojeKala";
             this.xtc_KhorojeKala.SelectedTabPage = this.xtp_BargashtAzKharid;
-            this.xtc_KhorojeKala.Size = new System.Drawing.Size(1426, 650);
+            this.xtc_KhorojeKala.Size = new System.Drawing.Size(1426, 654);
             this.xtc_KhorojeKala.TabIndex = 2;
             this.xtc_KhorojeKala.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtp_BargashtAzKharid,
@@ -4758,7 +4776,7 @@
             // 
             this.xtp_BargashtAzKharid.Controls.Add(this.gridControl_BargashtAzKharid);
             this.xtp_BargashtAzKharid.Name = "xtp_BargashtAzKharid";
-            this.xtp_BargashtAzKharid.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_BargashtAzKharid.Size = new System.Drawing.Size(1424, 613);
             this.xtp_BargashtAzKharid.Text = "برگشت از خرید";
             // 
             // gridControl_BargashtAzKharid
@@ -4769,7 +4787,7 @@
             this.gridControl_BargashtAzKharid.MainView = this.gridView_BargashtAzKharid;
             this.gridControl_BargashtAzKharid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_BargashtAzKharid.Name = "gridControl_BargashtAzKharid";
-            this.gridControl_BargashtAzKharid.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_BargashtAzKharid.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_BargashtAzKharid.TabIndex = 37;
             this.gridControl_BargashtAzKharid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_BargashtAzKharid});
@@ -5171,7 +5189,7 @@
             // 
             this.xtp_HavaleFroosh.Controls.Add(this.gridControl_HavaleFroosh);
             this.xtp_HavaleFroosh.Name = "xtp_HavaleFroosh";
-            this.xtp_HavaleFroosh.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_HavaleFroosh.Size = new System.Drawing.Size(1424, 613);
             this.xtp_HavaleFroosh.Text = "حواله فروش";
             // 
             // gridControl_HavaleFroosh
@@ -5182,7 +5200,7 @@
             this.gridControl_HavaleFroosh.MainView = this.gridView_HavaleFroosh;
             this.gridControl_HavaleFroosh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_HavaleFroosh.Name = "gridControl_HavaleFroosh";
-            this.gridControl_HavaleFroosh.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_HavaleFroosh.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_HavaleFroosh.TabIndex = 37;
             this.gridControl_HavaleFroosh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_HavaleFroosh});
@@ -5584,7 +5602,7 @@
             // 
             this.xtp_HavaleKalaAmani.Controls.Add(this.gridControl_HavaleKalaAmani);
             this.xtp_HavaleKalaAmani.Name = "xtp_HavaleKalaAmani";
-            this.xtp_HavaleKalaAmani.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_HavaleKalaAmani.Size = new System.Drawing.Size(1424, 613);
             this.xtp_HavaleKalaAmani.Text = "حواله کالای امانی";
             // 
             // gridControl_HavaleKalaAmani
@@ -5595,7 +5613,7 @@
             this.gridControl_HavaleKalaAmani.MainView = this.gridView_HavaleKalaAmani;
             this.gridControl_HavaleKalaAmani.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_HavaleKalaAmani.Name = "gridControl_HavaleKalaAmani";
-            this.gridControl_HavaleKalaAmani.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_HavaleKalaAmani.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_HavaleKalaAmani.TabIndex = 37;
             this.gridControl_HavaleKalaAmani.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_HavaleKalaAmani});
@@ -5997,7 +6015,7 @@
             // 
             this.xtp_BargashtAzResidTolid.Controls.Add(this.gridControl_BargashtAzResidTolid);
             this.xtp_BargashtAzResidTolid.Name = "xtp_BargashtAzResidTolid";
-            this.xtp_BargashtAzResidTolid.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_BargashtAzResidTolid.Size = new System.Drawing.Size(1424, 613);
             this.xtp_BargashtAzResidTolid.Text = "برگشت از رسید تولید";
             // 
             // gridControl_BargashtAzResidTolid
@@ -6008,7 +6026,7 @@
             this.gridControl_BargashtAzResidTolid.MainView = this.gridView_BargashtAzResidTolid;
             this.gridControl_BargashtAzResidTolid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_BargashtAzResidTolid.Name = "gridControl_BargashtAzResidTolid";
-            this.gridControl_BargashtAzResidTolid.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_BargashtAzResidTolid.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_BargashtAzResidTolid.TabIndex = 37;
             this.gridControl_BargashtAzResidTolid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_BargashtAzResidTolid});
@@ -6410,7 +6428,7 @@
             // 
             this.xtp_HavaleTolid.Controls.Add(this.gridControl_HavaleTolid);
             this.xtp_HavaleTolid.Name = "xtp_HavaleTolid";
-            this.xtp_HavaleTolid.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_HavaleTolid.Size = new System.Drawing.Size(1424, 613);
             this.xtp_HavaleTolid.Text = "حواله تولـید";
             // 
             // gridControl_HavaleTolid
@@ -6421,7 +6439,7 @@
             this.gridControl_HavaleTolid.MainView = this.gridView_HavaleTolid;
             this.gridControl_HavaleTolid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_HavaleTolid.Name = "gridControl_HavaleTolid";
-            this.gridControl_HavaleTolid.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_HavaleTolid.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_HavaleTolid.TabIndex = 37;
             this.gridControl_HavaleTolid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_HavaleTolid});
@@ -6823,7 +6841,7 @@
             // 
             this.xtp_HavaleHazine.Controls.Add(this.gridControl_HavaleHazine);
             this.xtp_HavaleHazine.Name = "xtp_HavaleHazine";
-            this.xtp_HavaleHazine.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_HavaleHazine.Size = new System.Drawing.Size(1424, 613);
             this.xtp_HavaleHazine.Text = "حواله هزینه";
             // 
             // gridControl_HavaleHazine
@@ -6834,7 +6852,7 @@
             this.gridControl_HavaleHazine.MainView = this.gridView_HavaleHazine;
             this.gridControl_HavaleHazine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_HavaleHazine.Name = "gridControl_HavaleHazine";
-            this.gridControl_HavaleHazine.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_HavaleHazine.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_HavaleHazine.TabIndex = 37;
             this.gridControl_HavaleHazine.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_HavaleHazine});
@@ -7236,7 +7254,7 @@
             // 
             this.xtp_HavaleAmval.Controls.Add(this.gridControl_HavaleAmval);
             this.xtp_HavaleAmval.Name = "xtp_HavaleAmval";
-            this.xtp_HavaleAmval.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_HavaleAmval.Size = new System.Drawing.Size(1424, 613);
             this.xtp_HavaleAmval.Text = "حواله اموال";
             // 
             // gridControl_HavaleAmval
@@ -7247,7 +7265,7 @@
             this.gridControl_HavaleAmval.MainView = this.gridView_HavaleAmval;
             this.gridControl_HavaleAmval.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_HavaleAmval.Name = "gridControl_HavaleAmval";
-            this.gridControl_HavaleAmval.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_HavaleAmval.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_HavaleAmval.TabIndex = 38;
             this.gridControl_HavaleAmval.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_HavaleAmval});
@@ -7649,7 +7667,7 @@
             // 
             this.xtp_KosoratAnbar.Controls.Add(this.gridControl_KosoratAnbar);
             this.xtp_KosoratAnbar.Name = "xtp_KosoratAnbar";
-            this.xtp_KosoratAnbar.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_KosoratAnbar.Size = new System.Drawing.Size(1424, 613);
             this.xtp_KosoratAnbar.Text = "کسورات انبـار";
             // 
             // gridControl_KosoratAnbar
@@ -7660,7 +7678,7 @@
             this.gridControl_KosoratAnbar.MainView = this.gridView_KosoratAnbar;
             this.gridControl_KosoratAnbar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_KosoratAnbar.Name = "gridControl_KosoratAnbar";
-            this.gridControl_KosoratAnbar.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_KosoratAnbar.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_KosoratAnbar.TabIndex = 37;
             this.gridControl_KosoratAnbar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_KosoratAnbar});
@@ -8062,7 +8080,7 @@
             // 
             this.xtp_AllKhoroji.Controls.Add(this.gridControl_AllKhoroji);
             this.xtp_AllKhoroji.Name = "xtp_AllKhoroji";
-            this.xtp_AllKhoroji.Size = new System.Drawing.Size(1424, 609);
+            this.xtp_AllKhoroji.Size = new System.Drawing.Size(1424, 613);
             this.xtp_AllKhoroji.Text = "همـه";
             // 
             // gridControl_AllKhoroji
@@ -8073,7 +8091,7 @@
             this.gridControl_AllKhoroji.MainView = this.gridView_AllKhoroji;
             this.gridControl_AllKhoroji.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_AllKhoroji.Name = "gridControl_AllKhoroji";
-            this.gridControl_AllKhoroji.Size = new System.Drawing.Size(1424, 609);
+            this.gridControl_AllKhoroji.Size = new System.Drawing.Size(1424, 613);
             this.gridControl_AllKhoroji.TabIndex = 37;
             this.gridControl_AllKhoroji.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AllKhoroji});
@@ -8485,7 +8503,7 @@
             this.xtpAmaliatAddVEdit.Controls.Add(this.panelControl_AddVaEdit);
             this.xtpAmaliatAddVEdit.Name = "xtpAmaliatAddVEdit";
             this.xtpAmaliatAddVEdit.PageVisible = false;
-            this.xtpAmaliatAddVEdit.Size = new System.Drawing.Size(1426, 650);
+            this.xtpAmaliatAddVEdit.Size = new System.Drawing.Size(1426, 654);
             this.xtpAmaliatAddVEdit.Text = "عملیات ورود و خروج کالا";
             // 
             // panelControl1
@@ -8494,7 +8512,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 170);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1426, 480);
+            this.panelControl1.Size = new System.Drawing.Size(1426, 484);
             this.panelControl1.TabIndex = 3;
             // 
             // gridControl_AmaliatAddVaEdit
@@ -8506,7 +8524,7 @@
             this.gridControl_AmaliatAddVaEdit.MainView = this.gridView_AmaliatAddVaEdit;
             this.gridControl_AmaliatAddVaEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_AmaliatAddVaEdit.Name = "gridControl_AmaliatAddVaEdit";
-            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1422, 476);
+            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1422, 480);
             this.gridControl_AmaliatAddVaEdit.TabIndex = 37;
             this.gridControl_AmaliatAddVaEdit.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AmaliatAddVaEdit});
@@ -9259,6 +9277,14 @@
             this.lblSalMali.Text = "سال مالی";
             this.lblSalMali.Visible = false;
             // 
+            // textEdit1
+            // 
+            this.textEdit1.EnterMoveNextControl = true;
+            this.textEdit1.Location = new System.Drawing.Point(429, 10);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(68, 34);
+            this.textEdit1.TabIndex = 0;
+            // 
             // FrmAmaliatRozaneh
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -9291,6 +9317,7 @@
             this.panelControl_NameAnbar.ResumeLayout(false);
             this.panelControl_NameAnbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNameAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatRozaneh)).EndInit();
             this.xtcAmaliatRozaneh.ResumeLayout(false);
             this.xtpVrodeKala.ResumeLayout(false);
@@ -9375,6 +9402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -9427,7 +9455,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl_NameAnbar;
         private DevExpress.XtraEditors.PanelControl panelControl_Button;
         private DevExpress.XtraEditors.SimpleButton btnReloadNameAnbar;
-        public DevExpress.XtraEditors.LookUpEdit cmbNameAnbar;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraTab.XtraTabPage xtp_AllVorode;
         private DevExpress.XtraTab.XtraTabPage xtp_AllKhoroji;
@@ -9904,5 +9931,8 @@
         public DevExpress.XtraEditors.LookUpEdit cmbHesabTafsili2;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        public DevExpress.XtraEditors.LookUpEdit cmbNameAnbar;
+        private System.Windows.Forms.BindingSource epListAnbarhasBindingSource;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

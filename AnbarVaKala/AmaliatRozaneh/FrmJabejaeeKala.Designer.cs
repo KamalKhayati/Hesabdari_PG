@@ -47,7 +47,6 @@
             this.panelControl_AddVaEdit = new DevExpress.XtraEditors.PanelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtSharhSanad = new DevExpress.XtraEditors.TextEdit();
-            this.cmbBeAnbar = new DevExpress.XtraEditors.LookUpEdit();
             this.lblSanadNamber = new DevExpress.XtraEditors.LabelControl();
             this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit1 = new DevExpress.XtraEditors.SimpleButton();
@@ -56,7 +55,6 @@
             this.btnReloadAzAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lblAzAnbar = new DevExpress.XtraEditors.LabelControl();
-            this.cmbAzAnbar = new DevExpress.XtraEditors.LookUpEdit();
             this.txtNoeSanad = new DevExpress.XtraEditors.TextEdit();
             this.btnReloadBeAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.txtNoeSanad1 = new DevExpress.XtraEditors.TextEdit();
@@ -112,6 +110,10 @@
             this.btnSaveAndClosed = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
             this.panelControl0 = new DevExpress.XtraEditors.PanelControl();
+            this.cmbAzAnbar = new DevExpress.XtraEditors.LookUpEdit();
+            this.cmbBeAnbar = new DevExpress.XtraEditors.LookUpEdit();
+            this.epListAnbarhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.epListAnbarhasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridView_AmaliatAddVaEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_AmaliatAddVaEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.akKhorojeKala_RizsBindingSource)).BeginInit();
@@ -121,9 +123,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_AddVaEdit)).BeginInit();
             this.panelControl_AddVaEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsSanadHesabdari.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikh.Properties)).BeginInit();
@@ -138,6 +138,10 @@
             this.panelControl_Button.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).BeginInit();
             this.panelControl0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // Line
@@ -360,9 +364,10 @@
             // 
             // panelControl_AddVaEdit
             // 
+            this.panelControl_AddVaEdit.Controls.Add(this.cmbBeAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.cmbAzAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.labelControl4);
             this.panelControl_AddVaEdit.Controls.Add(this.txtSharhSanad);
-            this.panelControl_AddVaEdit.Controls.Add(this.cmbBeAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.lblSanadNamber);
             this.panelControl_AddVaEdit.Controls.Add(this.btnInsert);
             this.panelControl_AddVaEdit.Controls.Add(this.btnEdit1);
@@ -371,7 +376,6 @@
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadAzAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.labelControl3);
             this.panelControl_AddVaEdit.Controls.Add(this.lblAzAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.cmbAzAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.txtNoeSanad);
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadBeAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.txtNoeSanad1);
@@ -404,7 +408,7 @@
             this.txtSharhSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhSanad.EditValue = "";
             this.txtSharhSanad.EnterMoveNextControl = true;
-            this.txtSharhSanad.Location = new System.Drawing.Point(14, 78);
+            this.txtSharhSanad.Location = new System.Drawing.Point(59, 78);
             this.txtSharhSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSharhSanad.Name = "txtSharhSanad";
             this.txtSharhSanad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -413,40 +417,8 @@
             this.txtSharhSanad.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtSharhSanad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtSharhSanad.Properties.MaxLength = 500;
-            this.txtSharhSanad.Size = new System.Drawing.Size(955, 36);
+            this.txtSharhSanad.Size = new System.Drawing.Size(910, 36);
             this.txtSharhSanad.TabIndex = 1;
-            // 
-            // cmbBeAnbar
-            // 
-            this.cmbBeAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbBeAnbar.EnterMoveNextControl = true;
-            this.cmbBeAnbar.Location = new System.Drawing.Point(61, 41);
-            this.cmbBeAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbBeAnbar.Name = "cmbBeAnbar";
-            this.cmbBeAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.cmbBeAnbar.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbBeAnbar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbBeAnbar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.cmbBeAnbar.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin1);
-            this.cmbBeAnbar.Properties.DisplayMember = "Name";
-            this.cmbBeAnbar.Properties.DropDownRows = 10;
-            this.cmbBeAnbar.Properties.ImmediatePopup = true;
-            this.cmbBeAnbar.Properties.NullText = "";
-            this.cmbBeAnbar.Properties.NullValuePrompt = "انبار مقصد";
-            this.cmbBeAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbBeAnbar.Properties.PopupWidth = 591;
-            this.cmbBeAnbar.Properties.ValueMember = "Id";
-            this.cmbBeAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbBeAnbar.Size = new System.Drawing.Size(452, 34);
-            this.cmbBeAnbar.TabIndex = 3;
-            this.cmbBeAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
-            this.cmbBeAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
-            this.cmbBeAnbar.Enter += new System.EventHandler(this.cmbBeAnbar_Enter);
             // 
             // lblSanadNamber
             // 
@@ -460,10 +432,10 @@
             this.lblSanadNamber.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblSanadNamber.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblSanadNamber.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblSanadNamber.Location = new System.Drawing.Point(617, 5);
+            this.lblSanadNamber.Location = new System.Drawing.Point(706, 5);
             this.lblSanadNamber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblSanadNamber.Name = "lblSanadNamber";
-            this.lblSanadNamber.Size = new System.Drawing.Size(193, 32);
+            this.lblSanadNamber.Size = new System.Drawing.Size(104, 32);
             this.lblSanadNamber.TabIndex = 163;
             this.lblSanadNamber.Text = ".............";
             // 
@@ -561,52 +533,19 @@
             this.lblAzAnbar.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblAzAnbar.Appearance.Options.UseForeColor = true;
             this.lblAzAnbar.AutoEllipsis = true;
-            this.lblAzAnbar.Location = new System.Drawing.Point(527, 8);
+            this.lblAzAnbar.Location = new System.Drawing.Point(644, 8);
             this.lblAzAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblAzAnbar.Name = "lblAzAnbar";
             this.lblAzAnbar.Size = new System.Drawing.Size(38, 27);
             this.lblAzAnbar.TabIndex = 145;
             this.lblAzAnbar.Text = "از انبار";
             // 
-            // cmbAzAnbar
-            // 
-            this.cmbAzAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbAzAnbar.EnterMoveNextControl = true;
-            this.cmbAzAnbar.Location = new System.Drawing.Point(60, 5);
-            this.cmbAzAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbAzAnbar.Name = "cmbAzAnbar";
-            this.cmbAzAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.cmbAzAnbar.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbAzAnbar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbAzAnbar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.cmbAzAnbar.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpHesabMoin1);
-            this.cmbAzAnbar.Properties.DisplayMember = "Name";
-            this.cmbAzAnbar.Properties.DropDownRows = 10;
-            this.cmbAzAnbar.Properties.ImmediatePopup = true;
-            this.cmbAzAnbar.Properties.NullText = "";
-            this.cmbAzAnbar.Properties.NullValuePrompt = "انبار مبداء";
-            this.cmbAzAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbAzAnbar.Properties.PopupWidth = 591;
-            this.cmbAzAnbar.Properties.ValueMember = "Id";
-            this.cmbAzAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbAzAnbar.Size = new System.Drawing.Size(453, 34);
-            this.cmbAzAnbar.TabIndex = 2;
-            this.cmbAzAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
-            this.cmbAzAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
-            this.cmbAzAnbar.EditValueChanged += new System.EventHandler(this.cmbAzAnbar_EditValueChanged);
-            this.cmbAzAnbar.Enter += new System.EventHandler(this.cmbAzAnbar_Enter);
-            // 
             // txtNoeSanad
             // 
             this.txtNoeSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoeSanad.EditValue = "";
             this.txtNoeSanad.EnterMoveNextControl = true;
-            this.txtNoeSanad.Location = new System.Drawing.Point(617, 41);
+            this.txtNoeSanad.Location = new System.Drawing.Point(706, 41);
             this.txtNoeSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeSanad.Name = "txtNoeSanad";
             this.txtNoeSanad.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -617,7 +556,7 @@
             this.txtNoeSanad.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtNoeSanad.Properties.MaxLength = 4;
             this.txtNoeSanad.Properties.ReadOnly = true;
-            this.txtNoeSanad.Size = new System.Drawing.Size(351, 34);
+            this.txtNoeSanad.Size = new System.Drawing.Size(262, 34);
             this.txtNoeSanad.TabIndex = 160;
             this.txtNoeSanad.TabStop = false;
             // 
@@ -642,7 +581,7 @@
             this.txtNoeSanad1.EditValue = "";
             this.txtNoeSanad1.Enabled = false;
             this.txtNoeSanad1.EnterMoveNextControl = true;
-            this.txtNoeSanad1.Location = new System.Drawing.Point(617, 40);
+            this.txtNoeSanad1.Location = new System.Drawing.Point(745, 40);
             this.txtNoeSanad1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeSanad1.Name = "txtNoeSanad1";
             this.txtNoeSanad1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -660,7 +599,7 @@
             this.lblBeAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBeAnbar.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblBeAnbar.Appearance.Options.UseForeColor = true;
-            this.lblBeAnbar.Location = new System.Drawing.Point(525, 44);
+            this.lblBeAnbar.Location = new System.Drawing.Point(644, 46);
             this.lblBeAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblBeAnbar.Name = "lblBeAnbar";
             this.lblBeAnbar.Size = new System.Drawing.Size(42, 27);
@@ -736,7 +675,7 @@
             this.txtNoeAmaliat1.EditValue = "";
             this.txtNoeAmaliat1.Enabled = false;
             this.txtNoeAmaliat1.EnterMoveNextControl = true;
-            this.txtNoeAmaliat1.Location = new System.Drawing.Point(665, 41);
+            this.txtNoeAmaliat1.Location = new System.Drawing.Point(793, 41);
             this.txtNoeAmaliat1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeAmaliat1.Name = "txtNoeAmaliat1";
             this.txtNoeAmaliat1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1452,6 +1391,91 @@
             this.panelControl0.Size = new System.Drawing.Size(1298, 53);
             this.panelControl0.TabIndex = 69;
             // 
+            // cmbAzAnbar
+            // 
+            this.cmbAzAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbAzAnbar.EnterMoveNextControl = true;
+            this.cmbAzAnbar.Location = new System.Drawing.Point(59, 4);
+            this.cmbAzAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbAzAnbar.Name = "cmbAzAnbar";
+            this.cmbAzAnbar.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
+            this.cmbAzAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbAzAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbAzAnbar.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbAzAnbar.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbAzAnbar.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.cmbAzAnbar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbAzAnbar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cmbAzAnbar.Properties.DataSource = this.epListAnbarhasBindingSource;
+            this.cmbAzAnbar.Properties.DisplayMember = "Name";
+            this.cmbAzAnbar.Properties.ImmediatePopup = true;
+            this.cmbAzAnbar.Properties.NullText = "";
+            this.cmbAzAnbar.Properties.NullValuePrompt = "انبار مورد نظر را انتخاب کنید";
+            this.cmbAzAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbAzAnbar.Properties.PopupWidth = 1000;
+            this.cmbAzAnbar.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbAzAnbar.Properties.ValueMember = "Id";
+            this.cmbAzAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbAzAnbar.Size = new System.Drawing.Size(577, 34);
+            this.cmbAzAnbar.TabIndex = 2;
+            this.cmbAzAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
+            this.cmbAzAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
+            this.cmbAzAnbar.EditValueChanged += new System.EventHandler(this.cmbAzAnbar_EditValueChanged);
+            this.cmbAzAnbar.Enter += new System.EventHandler(this.cmbAzAnbar_Enter);
+            // 
+            // cmbBeAnbar
+            // 
+            this.cmbBeAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbBeAnbar.EnterMoveNextControl = true;
+            this.cmbBeAnbar.Location = new System.Drawing.Point(59, 43);
+            this.cmbBeAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbBeAnbar.Name = "cmbBeAnbar";
+            this.cmbBeAnbar.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
+            this.cmbBeAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbBeAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbBeAnbar.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbBeAnbar.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbBeAnbar.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.cmbBeAnbar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbBeAnbar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cmbBeAnbar.Properties.DataSource = this.epListAnbarhasBindingSource1;
+            this.cmbBeAnbar.Properties.DisplayMember = "Name";
+            this.cmbBeAnbar.Properties.ImmediatePopup = true;
+            this.cmbBeAnbar.Properties.NullText = "";
+            this.cmbBeAnbar.Properties.NullValuePrompt = "انبار مورد نظر را انتخاب کنید";
+            this.cmbBeAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbBeAnbar.Properties.PopupWidth = 1000;
+            this.cmbBeAnbar.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbBeAnbar.Properties.ValueMember = "Id";
+            this.cmbBeAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbBeAnbar.Size = new System.Drawing.Size(577, 34);
+            this.cmbBeAnbar.TabIndex = 3;
+            this.cmbBeAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
+            this.cmbBeAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
+            this.cmbBeAnbar.Enter += new System.EventHandler(this.cmbBeAnbar_Enter);
+            // 
+            // epListAnbarhasBindingSource
+            // 
+            this.epListAnbarhasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpListAnbarha);
+            // 
+            // epListAnbarhasBindingSource1
+            // 
+            this.epListAnbarhasBindingSource1.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpListAnbarha);
+            // 
             // FrmJabejaeeKala
             // 
             this.Appearance.Options.UseFont = true;
@@ -1484,9 +1508,7 @@
             this.panelControl_AddVaEdit.ResumeLayout(false);
             this.panelControl_AddVaEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsSanadHesabdari.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikh.Properties)).EndInit();
@@ -1501,6 +1523,10 @@
             this.panelControl_Button.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).EndInit();
             this.panelControl0.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1524,7 +1550,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl_AddVaEdit;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         public DevExpress.XtraEditors.TextEdit txtSharhSanad;
-        public DevExpress.XtraEditors.LookUpEdit cmbBeAnbar;
         private DevExpress.XtraEditors.LabelControl lblSanadNamber;
         public DevExpress.XtraEditors.CheckEdit chkIsSanadHesabdari;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -1534,7 +1559,6 @@
         private DevExpress.XtraEditors.SimpleButton btnDelete1;
         private DevExpress.XtraEditors.SimpleButton btnReloadAzAnbar;
         private DevExpress.XtraEditors.LabelControl lblAzAnbar;
-        public DevExpress.XtraEditors.LookUpEdit cmbAzAnbar;
         public DevExpress.XtraEditors.SimpleButton btnReloadBeAnbar;
         private DevExpress.XtraEditors.LabelControl lblBeAnbar;
         private DevExpress.XtraEditors.LabelControl labelControl7;
@@ -1590,5 +1614,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn383;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn384;
         private System.Windows.Forms.BindingSource akKhorojeKala_RizsBindingSource;
+        public DevExpress.XtraEditors.LookUpEdit cmbBeAnbar;
+        public DevExpress.XtraEditors.LookUpEdit cmbAzAnbar;
+        private System.Windows.Forms.BindingSource epListAnbarhasBindingSource;
+        private System.Windows.Forms.BindingSource epListAnbarhasBindingSource1;
     }
 }

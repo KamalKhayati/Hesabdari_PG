@@ -128,6 +128,9 @@ namespace DBHesabdari_PG
         public virtual DbSet<EpAllCodingKala> EpAllCodingKalas { get; set; }
         public virtual DbSet<EpTanzimatAnbarVKala> EpTanzimatAnbarVKalas { get; set; }
         public virtual DbSet<EpListAnbarha> EpListAnbarhas { get; set; }
+        public virtual DbSet<R_EpListAnbarha_B_EpTabaghehKala> R_EpListAnbarha_B_EpTabaghehKalas { get; set; }
+
+        
         public virtual DbSet<EpVahedKala> EpVahedKalas { get; set; }
         public virtual DbSet<EpTabaghehKala> EpTabaghehKalas { get; set; }
         public virtual DbSet<EpGroupAsliKala> EpGroupAsliKalas { get; set; }
@@ -292,6 +295,10 @@ namespace DBHesabdari_PG
 
             modelBuilder.Entity<AkAllAmaliateRozaneh>().HasOptional(m => m.AkVorodeKala_Riz1).WithRequired(m => m.AkAllAmaliateRozaneh1).WillCascadeOnDelete(true);
             modelBuilder.Entity<AkAllAmaliateRozaneh>().HasOptional(m => m.AkKhorojeKala_Riz1).WithRequired(m => m.AkAllAmaliateRozaneh1).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.R_EpListAnbarha_B_EpTabaghehKalas).WithRequired(m => m.EpListAnbarha1).HasForeignKey(m => m.AnbarhId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<EpTabaghehKala>().HasMany(m => m.R_EpListAnbarha_B_EpTabaghehKalas).WithRequired(m => m.EpTabaghehKala1).HasForeignKey(m => m.TabagheKalaId).WillCascadeOnDelete(true);
+
 
             #region
             //--------> one - to - zero - or - one relationships < ------------

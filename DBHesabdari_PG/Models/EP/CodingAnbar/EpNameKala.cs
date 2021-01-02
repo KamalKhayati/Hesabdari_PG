@@ -78,13 +78,15 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public byte[] Pictuer { get; set; }
         [NotMapped]
         [MaxLength(100)]
-        public string GroupAsliName { get; set; }
+        public string GroupAsliName_NM { get; set; }
         [NotMapped]
         [MaxLength(100)]
-        public string GroupFareeName { get; set; }
+        public string GroupFareeName_NM { get; set; }
         [NotMapped]
         [MaxLength(100)]
-        public string TabagheKalaName { get; set; }
+        public string TabagheKalaName_NM { get; set; }
+        [NotMapped]
+        public decimal MeghdarMa_NM { get; set; }
 
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }

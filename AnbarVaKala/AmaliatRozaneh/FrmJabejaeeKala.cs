@@ -24,7 +24,6 @@ namespace AnbarVaKala.AmaliatRozaneh
         public FrmJabejaeeKala()
         {
             InitializeComponent();
-            dbContext = new MyContext();
         }
 
         public EnumCED En1 = EnumCED.Cancel;
@@ -133,11 +132,60 @@ namespace AnbarVaKala.AmaliatRozaneh
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                    //var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
+
+                    var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+
+                    foreach (var item in q1)
+                    {
+                        IList<int> List1 = new List<int>();
+                        string _Id1 = String.Empty;
+                        if (item.TabagheKalaId != null)
+                        {
+                            char[] item1 = item.TabagheKalaId.ToArray();
+                            for (int i = 0; i < item1.Count(); i++)
+                            {
+                                if (i == 0)
+                                {
+                                    _Id1 = _Id1 + item1[i].ToString();
+                                }
+                                else
+                                {
+                                    if (item1[i] == ',')
+                                    {
+                                        int _Id2 = Convert.ToInt32(_Id1);
+                                        List1.Add(_Id2);
+                                        _Id1 = String.Empty;
+                                    }
+                                    else
+                                    {
+                                        _Id1 = _Id1 + item1[i].ToString();
+                                    }
+
+                                }
+                            }
+
+                            string _KalaId = String.Empty;
+                            foreach (var item2 in List1)
+                            {
+                                _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
+                            }
+                            item.TabagheKalaIdName_NM = _KalaId;
+                        }
+
+                    }
+
                     if (En1 == EnumCED.Edit)
-                        cmbAzAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                        epListAnbarhasBindingSource.DataSource = q1.Count > 0 ? q1 : null;
                     else
-                        cmbAzAnbar.Properties.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
+                        epListAnbarhasBindingSource.DataSource=q1.Where(s => s.IsActive == true).ToList().Count > 0 ? q1.Where(s => s.IsActive == true) : null;
+
+                    //_SalId = Convert.ToInt32(lblSalId.Text);
+                    //var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                    //if (En1 == EnumCED.Edit)
+                    //    cmbAzAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                    //else
+                    //    cmbAzAnbar.Properties.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
 
                 }
                 catch (Exception ex)
@@ -156,11 +204,59 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     _AzAnbarId = Convert.ToInt32(cmbAzAnbar.EditValue);
-                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.Id != _AzAnbarId).OrderBy(s => s.Code).ToList();
+                    var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.Id != _AzAnbarId).OrderBy(s => s.Code).ToList();
+
+                    foreach (var item in q1)
+                    {
+                        IList<int> List1 = new List<int>();
+                        string _Id1 = String.Empty;
+                        if (item.TabagheKalaId != null)
+                        {
+                            char[] item1 = item.TabagheKalaId.ToArray();
+                            for (int i = 0; i < item1.Count(); i++)
+                            {
+                                if (i == 0)
+                                {
+                                    _Id1 = _Id1 + item1[i].ToString();
+                                }
+                                else
+                                {
+                                    if (item1[i] == ',')
+                                    {
+                                        int _Id2 = Convert.ToInt32(_Id1);
+                                        List1.Add(_Id2);
+                                        _Id1 = String.Empty;
+                                    }
+                                    else
+                                    {
+                                        _Id1 = _Id1 + item1[i].ToString();
+                                    }
+
+                                }
+                            }
+
+                            string _KalaId = String.Empty;
+                            foreach (var item2 in List1)
+                            {
+                                _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
+                            }
+                            item.TabagheKalaIdName_NM = _KalaId;
+                        }
+
+                    }
+
                     if (En1 == EnumCED.Edit)
-                        cmbBeAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                        epListAnbarhasBindingSource1.DataSource = q1.Count > 0 ? q1 : null;
                     else
-                        cmbBeAnbar.Properties.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
+                        epListAnbarhasBindingSource1.DataSource = q1.Where(s => s.IsActive == true).ToList().Count > 0 ? q1.Where(s => s.IsActive == true) : null;
+
+                    //_SalId = Convert.ToInt32(lblSalId.Text);
+                    //_AzAnbarId = Convert.ToInt32(cmbAzAnbar.EditValue);
+                    //var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.Id != _AzAnbarId).OrderBy(s => s.Code).ToList();
+                    //if (En1 == EnumCED.Edit)
+                    //    cmbBeAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                    //else
+                    //    cmbBeAnbar.Properties.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
                 }
                 catch (Exception ex)
                 {
@@ -415,7 +511,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                     }
                 }
 
-            }        }
+            }
+        }
 
         private void FrmJabejaeeKala_Load(object sender, EventArgs e)
         {
@@ -514,11 +611,23 @@ namespace AnbarVaKala.AmaliatRozaneh
             {
                 this.Close();
 
-            }        }
+            }
+        }
 
+        bool _IsActiveRow = true;
         private void cmbControl_CustomDrawCell(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawCellArgs e)
         {
-            HelpClass1.LookupEdit_CustomDrawCell(sender, e);
+            if (!_IsActiveRow)
+                e.Appearance.ForeColor = Color.Red;
+
+            if (e.Header.Caption == "فعال" && e.DisplayText == "True")
+                e.DisplayText = "بله";
+            if (e.Header.Caption == "فعال" && e.DisplayText == "False")
+                e.DisplayText = "خیر";
+            if (e.Header.Caption == "اجازه موجودی منفی" && e.DisplayText == "True")
+                e.DisplayText = "بله";
+            if (e.Header.Caption == "اجازه موجودی منفی" && e.DisplayText == "False")
+                e.DisplayText = "خیر";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -609,6 +718,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         string _DateTimeSanad = Convert.ToDateTime(gridView.GetFocusedRowCellValue("DateTimeSanad")).ToString();
                         bool _IsRiali = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsRiali"));
                         string _lblSanadNamber = gridView.GetFocusedRowCellValue("SanadNamber").ToString();
+                        FillCmbAzAnbar();
                         int _AzAnbarId = Convert.ToInt32(gridView.GetFocusedRowCellValue("AzAnbarId"));
                         int _BeAnbarId = Convert.ToInt32(gridView.GetFocusedRowCellValue("BeAnbarId"));
                         //string _BeAnbarId = gridView.GetFocusedRowCellValue("HesabTafsiliId").ToString();
@@ -875,7 +985,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 DateTime _DateTimeEdit = DateTime.Now;
                                 BindingList<AkKhorojeKala_Riz> list = (BindingList<AkKhorojeKala_Riz>)akKhorojeKala_RizsBindingSource.DataSource;
                                 var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal && s.NoeSanadText == "حواله (جابجایی)").ToList();
-                                var q21 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId &&  s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                var q21 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                                 foreach (var item in q2)
                                 {
                                     if (!list.Any(s => s.Id == item.Id))
@@ -886,7 +996,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     }
                                 }
 
-                                var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId  && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                                 var k = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeHavale && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                                 var v = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCodeResid && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
                                 for (int i = 0; i < list.Count; i++)
@@ -1263,7 +1373,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                     }
                 }
 
-            }        }
+            }
+        }
 
         private void gridView_AmaliatAddVaEdit_RowCountChanged(object sender, EventArgs e)
         {
@@ -1322,7 +1433,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                     }
                 }
 
-            }        }
+            }
+        }
 
         private void btnSaveAndPrintAndClosed_Click_1(object sender, EventArgs e)
         {
@@ -1330,7 +1442,8 @@ namespace AnbarVaKala.AmaliatRozaneh
             {
                 btnSaveAndClosed_Click(null, null);
 
-            }        }
+            }
+        }
 
         private void FrmJabejaeeKala_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1481,7 +1594,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void cmbControl_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
         {
-            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
+            _IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
         }
     }
 }

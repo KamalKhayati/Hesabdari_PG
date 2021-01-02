@@ -25,7 +25,6 @@ namespace AnbarVaKala.AmaliatRozaneh
         public FrmMojodiAvalDoreKala()
         {
             InitializeComponent();
-            dbContext = new MyContext();
         }
 
         public EnumCED En1 = EnumCED.Cancel;
@@ -135,8 +134,56 @@ namespace AnbarVaKala.AmaliatRozaneh
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
-                    cmbNameAnbar.Properties.DataSource = q.Count > 0 ? q : null;
+                    //var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
+
+                    var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+
+                    foreach (var item in q1)
+                    {
+                        IList<int> List1 = new List<int>();
+                        string _Id1 = String.Empty;
+                        if (item.TabagheKalaId != null)
+                        {
+                            char[] item1 = item.TabagheKalaId.ToArray();
+                            for (int i = 0; i < item1.Count(); i++)
+                            {
+                                if (i == 0)
+                                {
+                                    _Id1 = _Id1 + item1[i].ToString();
+                                }
+                                else
+                                {
+                                    if (item1[i] == ',')
+                                    {
+                                        int _Id2 = Convert.ToInt32(_Id1);
+                                        List1.Add(_Id2);
+                                        _Id1 = String.Empty;
+                                    }
+                                    else
+                                    {
+                                        _Id1 = _Id1 + item1[i].ToString();
+                                    }
+
+                                }
+                            }
+
+                            string _KalaId = String.Empty;
+                            foreach (var item2 in List1)
+                            {
+                                _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
+                            }
+                            item.TabagheKalaIdName_NM = _KalaId;
+                        }
+
+                    }
+                    if (q1.Count > 0)
+                        epListAnbarhasBindingSource.DataSource = q1;
+                    else
+                        epListAnbarhasBindingSource.Clear();
+
+                    //_SalId = Convert.ToInt32(lblSalId.Text);
+                    //var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                    //cmbNameAnbar.Properties.DataSource = q.Count > 0 ? q : null;
                 }
                 catch (Exception ex)
                 {
@@ -501,7 +548,7 @@ namespace AnbarVaKala.AmaliatRozaneh
             gridView = gridView_MojodiAvalDore;
             // XtraTabControl1_1.SelectedTabPageIndex = 0;
             FillCmbNameAnbar();
-            cmbNameAnbar.Focus();
+            textEdit1.Focus();
         }
 
         int NoeAmaliatTabpageIndex = 0;
@@ -1368,7 +1415,8 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void FrmMojodiAvalDoreKala_FormClosed(object sender, FormClosedEventArgs e)
         {
-            dbContext.Dispose();
+            if (dbContext != null)
+                dbContext.Dispose();
 
         }
 
@@ -1448,14 +1496,32 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         }
 
+        bool _IsActiveRow = true;
         private void cmbControl_CustomDrawCell(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawCellArgs e)
         {
-            HelpClass1.LookupEdit_CustomDrawCell(sender, e);
+            if (!_IsActiveRow)
+                e.Appearance.ForeColor = Color.Red;
+
+            if (e.Header.Caption == "فعال" && e.DisplayText == "True")
+                e.DisplayText = "بله";
+            if (e.Header.Caption == "فعال" && e.DisplayText == "False")
+                e.DisplayText = "خیر";
+            if (e.Header.Caption == "اجازه موجودی منفی" && e.DisplayText == "True")
+                e.DisplayText = "بله";
+            if (e.Header.Caption == "اجازه موجودی منفی" && e.DisplayText == "False")
+                e.DisplayText = "خیر";
         }
 
         private void cmbControl_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
         {
-            HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
+            _IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
+        }
+
+        private void cmbNameAnbar_Enter_1(object sender, EventArgs e)
+        {
+            if (cmbNameAnbar.Text == "")
+                cmbNameAnbar.ShowPopup();
+
         }
     }
 }

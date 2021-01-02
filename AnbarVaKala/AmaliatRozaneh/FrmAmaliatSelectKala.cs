@@ -157,10 +157,12 @@ namespace AnbarVaKala.AmaliatRozaneh
                 db = new MyContext();
                 _SallId = Convert.ToInt32(lblSalId.Text);
                 var q = db.EpNameKalas.Where(s => s.SalId == _SallId).OrderBy(s => s.Code).ToList();
+
+
                 foreach (var item in q)
                 {
-                    item.GroupAsliName = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
-                    item.GroupFareeName = item.EpGroupFareeKala1.Name;
+                    item.GroupAsliName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
+                    item.GroupFareeName_NM = item.EpGroupFareeKala1.Name;
                 }
                 if (Fm != null)
                 {

@@ -61,13 +61,19 @@ namespace DBHesabdari_PG.Models.AK
         /// </summary>
         [NotMapped]
         [MaxLength(100)]
+        public string KalaName { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
         public string AnbarName { get; set; }
         [NotMapped]
         [MaxLength(100)]
-        public string VahedKala { get; set; }
+        public string VahedeKalaName { get; set; }
         [NotMapped]
         [MaxLength(100)]
         public string HesabTafsiliName { get; set; }
+        [NotMapped]
+        [MaxLength(20)]
+        public string KalaCode { get; set; }
         [NotMapped]
         public decimal MeghdarMo { get; set; }
         [NotMapped]
@@ -92,6 +98,8 @@ namespace DBHesabdari_PG.Models.AK
         public decimal NerkhMa { get; set; }
         [NotMapped]
         public decimal MablagMa { get; set; }
+        [NotMapped]
+        public string DateTimeSanadString { get; set; }
 
 
         public virtual AkVorodeKala_Riz AkVorodeKala_Riz1 { get; set; }

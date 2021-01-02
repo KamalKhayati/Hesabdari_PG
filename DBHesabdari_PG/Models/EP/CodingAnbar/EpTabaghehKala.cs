@@ -29,5 +29,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }
         public virtual ICollection<EpGroupAsliKala> EpGroupAsliKalas { get; set; }
+        public virtual ICollection<R_EpListAnbarha_B_EpTabaghehKala> R_EpListAnbarha_B_EpTabaghehKalas { get; set; }
+
     }
 }
