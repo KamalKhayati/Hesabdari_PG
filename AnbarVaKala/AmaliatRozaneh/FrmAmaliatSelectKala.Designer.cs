@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAmaliatSelectKala));
             this.btnReload_NameKala = new DevExpress.XtraEditors.SimpleButton();
             this.cmb_NameKala = new DevExpress.XtraEditors.LookUpEdit();
-            this.epNameKalasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnReloadNameKala = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -62,7 +61,7 @@
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnSaveAndClosed = new DevExpress.XtraEditors.SimpleButton();
             this.btnKardes = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKholase = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMojodiAnbarVKala = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.btnSaveAndNext = new DevExpress.XtraEditors.SimpleButton();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
@@ -72,8 +71,10 @@
             this.txtMeghdar = new DevExpress.XtraEditors.TextEdit();
             this.lblVahedeAsli = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.epNameKalasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.txtMeghdarMa = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.cmb_NameKala.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epNameKalasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVahed1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmojodi1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmojodi2.Properties)).BeginInit();
@@ -90,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTedadeDarVahed2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTedadeDarVahed1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeghdar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNameKalasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReload_NameKala
@@ -101,6 +103,7 @@
             this.btnReload_NameKala.Location = new System.Drawing.Point(64, 10);
             this.btnReload_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload_NameKala.Name = "btnReload_NameKala";
+            this.btnReload_NameKala.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnReload_NameKala.Size = new System.Drawing.Size(47, 37);
             this.btnReload_NameKala.TabIndex = 13;
             this.btnReload_NameKala.TabStop = false;
@@ -116,15 +119,20 @@
             this.cmb_NameKala.Name = "cmb_NameKala";
             this.cmb_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmb_NameKala.Properties.Appearance.Options.UseForeColor = true;
+            this.cmb_NameKala.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmb_NameKala.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmb_NameKala.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmb_NameKala.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmb_NameKala.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 220, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("VahedAsliName", "واحد اصلی", 180, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupFareeName", "گروه فرعی", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupAsliName", "گروه اصلی", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("VahedAsliName", "واحد اصلی", 135, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MeghdarMa_NM", "موجودی", 150, DevExpress.Utils.FormatType.Numeric, "c3", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupFareeName_NM", "گروه فرعی", 320, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupAsliName_NM", "گروه اصلی", 280, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaName_NM", "طبقه کالا", 230, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 75, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmb_NameKala.Properties.DataSource = this.epNameKalasBindingSource;
             this.cmb_NameKala.Properties.DisplayMember = "Name";
@@ -133,7 +141,7 @@
             this.cmb_NameKala.Properties.NullText = "";
             this.cmb_NameKala.Properties.NullValuePrompt = "انتخاب نام کالا ...";
             this.cmb_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmb_NameKala.Properties.PopupWidth = 1150;
+            this.cmb_NameKala.Properties.PopupWidth = 1300;
             this.cmb_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmb_NameKala.Properties.ValueMember = "Id";
             this.cmb_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -144,10 +152,6 @@
             this.cmb_NameKala.EditValueChanged += new System.EventHandler(this.cmb_NameKala_EditValueChanged);
             this.cmb_NameKala.Enter += new System.EventHandler(this.cmb_NameKala_Enter);
             // 
-            // epNameKalasBindingSource
-            // 
-            this.epNameKalasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpNameKala);
-            // 
             // btnReloadNameKala
             // 
             this.btnReloadNameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -157,6 +161,7 @@
             this.btnReloadNameKala.Location = new System.Drawing.Point(9, 10);
             this.btnReloadNameKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadNameKala.Name = "btnReloadNameKala";
+            this.btnReloadNameKala.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnReloadNameKala.Size = new System.Drawing.Size(47, 37);
             this.btnReloadNameKala.TabIndex = 14;
             this.btnReloadNameKala.TabStop = false;
@@ -192,10 +197,10 @@
             this.labelControl1.AutoEllipsis = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl1.Location = new System.Drawing.Point(576, 145);
+            this.labelControl1.Location = new System.Drawing.Point(593, 145);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(162, 39);
+            this.labelControl1.Size = new System.Drawing.Size(145, 39);
             this.labelControl1.TabIndex = 221;
             this.labelControl1.Text = "موجودی";
             // 
@@ -243,7 +248,7 @@
             this.txtmojodi1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtmojodi1.EditValue = "0";
             this.txtmojodi1.EnterMoveNextControl = true;
-            this.txtmojodi1.Location = new System.Drawing.Point(576, 269);
+            this.txtmojodi1.Location = new System.Drawing.Point(593, 269);
             this.txtmojodi1.Margin = new System.Windows.Forms.Padding(4);
             this.txtmojodi1.Name = "txtmojodi1";
             this.txtmojodi1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -253,7 +258,7 @@
             this.txtmojodi1.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtmojodi1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtmojodi1.Properties.ReadOnly = true;
-            this.txtmojodi1.Size = new System.Drawing.Size(162, 36);
+            this.txtmojodi1.Size = new System.Drawing.Size(145, 36);
             this.txtmojodi1.TabIndex = 224;
             this.txtmojodi1.TabStop = false;
             // 
@@ -262,7 +267,7 @@
             this.txtmojodi2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtmojodi2.EditValue = "0";
             this.txtmojodi2.EnterMoveNextControl = true;
-            this.txtmojodi2.Location = new System.Drawing.Point(576, 228);
+            this.txtmojodi2.Location = new System.Drawing.Point(593, 228);
             this.txtmojodi2.Margin = new System.Windows.Forms.Padding(4);
             this.txtmojodi2.Name = "txtmojodi2";
             this.txtmojodi2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -272,7 +277,7 @@
             this.txtmojodi2.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtmojodi2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtmojodi2.Properties.ReadOnly = true;
-            this.txtmojodi2.Size = new System.Drawing.Size(162, 36);
+            this.txtmojodi2.Size = new System.Drawing.Size(145, 36);
             this.txtmojodi2.TabIndex = 227;
             this.txtmojodi2.TabStop = false;
             // 
@@ -320,7 +325,7 @@
             this.txtmojodi3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtmojodi3.EditValue = "0";
             this.txtmojodi3.EnterMoveNextControl = true;
-            this.txtmojodi3.Location = new System.Drawing.Point(576, 186);
+            this.txtmojodi3.Location = new System.Drawing.Point(593, 186);
             this.txtmojodi3.Margin = new System.Windows.Forms.Padding(4);
             this.txtmojodi3.Name = "txtmojodi3";
             this.txtmojodi3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -330,7 +335,7 @@
             this.txtmojodi3.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtmojodi3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtmojodi3.Properties.ReadOnly = true;
-            this.txtmojodi3.Size = new System.Drawing.Size(162, 36);
+            this.txtmojodi3.Size = new System.Drawing.Size(145, 36);
             this.txtmojodi3.TabIndex = 230;
             this.txtmojodi3.TabStop = false;
             // 
@@ -409,7 +414,7 @@
             this.txtNerkh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtNerkh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtNerkh.Properties.MaxLength = 19;
-            this.txtNerkh.Size = new System.Drawing.Size(205, 36);
+            this.txtNerkh.Size = new System.Drawing.Size(166, 36);
             this.txtNerkh.TabIndex = 2;
             this.txtNerkh.EditValueChanged += new System.EventHandler(this.txtNerkh_EditValueChanged);
             // 
@@ -496,7 +501,7 @@
             this.labelControl6.Location = new System.Drawing.Point(419, 57);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(205, 39);
+            this.labelControl6.Size = new System.Drawing.Size(166, 39);
             this.labelControl6.TabIndex = 233;
             this.labelControl6.Text = "نرخ";
             // 
@@ -591,7 +596,7 @@
             this.txtTedadeDarVahed3.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtTedadeDarVahed3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtTedadeDarVahed3.Properties.ReadOnly = true;
-            this.txtTedadeDarVahed3.Size = new System.Drawing.Size(149, 36);
+            this.txtTedadeDarVahed3.Size = new System.Drawing.Size(166, 36);
             this.txtTedadeDarVahed3.TabIndex = 256;
             this.txtTedadeDarVahed3.TabStop = false;
             // 
@@ -610,7 +615,7 @@
             this.txtTedadeDarVahed2.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtTedadeDarVahed2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtTedadeDarVahed2.Properties.ReadOnly = true;
-            this.txtTedadeDarVahed2.Size = new System.Drawing.Size(149, 36);
+            this.txtTedadeDarVahed2.Size = new System.Drawing.Size(166, 36);
             this.txtTedadeDarVahed2.TabIndex = 255;
             this.txtTedadeDarVahed2.TabStop = false;
             // 
@@ -629,7 +634,7 @@
             this.txtTedadeDarVahed1.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtTedadeDarVahed1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtTedadeDarVahed1.Properties.ReadOnly = true;
-            this.txtTedadeDarVahed1.Size = new System.Drawing.Size(149, 36);
+            this.txtTedadeDarVahed1.Size = new System.Drawing.Size(166, 36);
             this.txtTedadeDarVahed1.TabIndex = 254;
             this.txtTedadeDarVahed1.TabStop = false;
             // 
@@ -649,7 +654,7 @@
             this.labelControl12.Location = new System.Drawing.Point(419, 146);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(149, 39);
+            this.labelControl12.Size = new System.Drawing.Size(166, 39);
             this.labelControl12.TabIndex = 253;
             this.labelControl12.Text = "تعداد در هر واحد";
             // 
@@ -692,17 +697,19 @@
             this.btnKardes.Size = new System.Drawing.Size(183, 44);
             this.btnKardes.TabIndex = 12;
             this.btnKardes.Text = "کاردکس کالا";
+            this.btnKardes.Click += new System.EventHandler(this.btnKardes_Click);
             // 
-            // btnKholase
+            // btnMojodiAnbarVKala
             // 
-            this.btnKholase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKholase.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKholase.ImageOptions.SvgImage")));
-            this.btnKholase.Location = new System.Drawing.Point(9, 57);
-            this.btnKholase.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKholase.Name = "btnKholase";
-            this.btnKholase.Size = new System.Drawing.Size(182, 44);
-            this.btnKholase.TabIndex = 11;
-            this.btnKholase.Text = "خلاصه کاردکس";
+            this.btnMojodiAnbarVKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMojodiAnbarVKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKholase.ImageOptions.SvgImage")));
+            this.btnMojodiAnbarVKala.Location = new System.Drawing.Point(9, 57);
+            this.btnMojodiAnbarVKala.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMojodiAnbarVKala.Name = "btnMojodiAnbarVKala";
+            this.btnMojodiAnbarVKala.Size = new System.Drawing.Size(182, 44);
+            this.btnMojodiAnbarVKala.TabIndex = 11;
+            this.btnMojodiAnbarVKala.Text = "موجودی انبار وکالا";
+            this.btnMojodiAnbarVKala.Click += new System.EventHandler(this.btnMojodiAnbarVKala_Click);
             // 
             // labelControl13
             // 
@@ -715,10 +722,10 @@
             this.labelControl13.AutoEllipsis = true;
             this.labelControl13.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl13.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl13.Location = new System.Drawing.Point(632, 57);
+            this.labelControl13.Location = new System.Drawing.Point(593, 57);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(189, 39);
+            this.labelControl13.Size = new System.Drawing.Size(145, 39);
             this.labelControl13.TabIndex = 262;
             this.labelControl13.Text = "مقدار / تعداد";
             // 
@@ -785,7 +792,7 @@
             this.txtMeghdar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMeghdar.EditValue = "";
             this.txtMeghdar.EnterMoveNextControl = true;
-            this.txtMeghdar.Location = new System.Drawing.Point(632, 98);
+            this.txtMeghdar.Location = new System.Drawing.Point(593, 98);
             this.txtMeghdar.Margin = new System.Windows.Forms.Padding(4);
             this.txtMeghdar.Name = "txtMeghdar";
             this.txtMeghdar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -798,7 +805,7 @@
             this.txtMeghdar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMeghdar.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMeghdar.Properties.MaxLength = 19;
-            this.txtMeghdar.Size = new System.Drawing.Size(189, 36);
+            this.txtMeghdar.Size = new System.Drawing.Size(145, 36);
             this.txtMeghdar.TabIndex = 1;
             this.txtMeghdar.EditValueChanged += new System.EventHandler(this.txtMeghdar_EditValueChanged);
             this.txtMeghdar.Leave += new System.EventHandler(this.txtMeghdar_Leave);
@@ -818,10 +825,10 @@
             this.lblVahedeAsli.AutoEllipsis = true;
             this.lblVahedeAsli.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblVahedeAsli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.lblVahedeAsli.Location = new System.Drawing.Point(829, 98);
+            this.lblVahedeAsli.Location = new System.Drawing.Point(746, 98);
             this.lblVahedeAsli.Margin = new System.Windows.Forms.Padding(4);
             this.lblVahedeAsli.Name = "lblVahedeAsli";
-            this.lblVahedeAsli.Size = new System.Drawing.Size(102, 39);
+            this.lblVahedeAsli.Size = new System.Drawing.Size(89, 36);
             this.lblVahedeAsli.TabIndex = 269;
             // 
             // labelControl9
@@ -837,12 +844,57 @@
             this.labelControl9.AutoEllipsis = true;
             this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl9.Location = new System.Drawing.Point(829, 57);
+            this.labelControl9.Location = new System.Drawing.Point(746, 57);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(102, 39);
+            this.labelControl9.Size = new System.Drawing.Size(89, 39);
             this.labelControl9.TabIndex = 270;
             this.labelControl9.Text = "واحد اصلی";
+            // 
+            // epNameKalasBindingSource
+            // 
+            this.epNameKalasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpNameKala);
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("IRANSans(FaNum)", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Appearance.Options.UseForeColor = true;
+            this.labelControl10.Appearance.Options.UseTextOptions = true;
+            this.labelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl10.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.labelControl10.AutoEllipsis = true;
+            this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.labelControl10.Location = new System.Drawing.Point(842, 57);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(89, 39);
+            this.labelControl10.TabIndex = 272;
+            this.labelControl10.Text = "موجودی";
+            // 
+            // txtMeghdarMa
+            // 
+            this.txtMeghdarMa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMeghdarMa.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtMeghdarMa.Appearance.Font = new System.Drawing.Font("IRANSans(FaNum)", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMeghdarMa.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.txtMeghdarMa.Appearance.Options.UseBackColor = true;
+            this.txtMeghdarMa.Appearance.Options.UseFont = true;
+            this.txtMeghdarMa.Appearance.Options.UseForeColor = true;
+            this.txtMeghdarMa.Appearance.Options.UseTextOptions = true;
+            this.txtMeghdarMa.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtMeghdarMa.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtMeghdarMa.AutoEllipsis = true;
+            this.txtMeghdarMa.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.txtMeghdarMa.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.txtMeghdarMa.Location = new System.Drawing.Point(842, 98);
+            this.txtMeghdarMa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMeghdarMa.Name = "txtMeghdarMa";
+            this.txtMeghdarMa.Size = new System.Drawing.Size(89, 36);
+            this.txtMeghdarMa.TabIndex = 271;
             // 
             // FrmAmaliatSelectKala
             // 
@@ -851,13 +903,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(939, 369);
+            this.Controls.Add(this.labelControl10);
+            this.Controls.Add(this.txtMeghdarMa);
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.lblVahedeAsli);
             this.Controls.Add(this.txtMeghdar);
             this.Controls.Add(this.btnSaveAndNext);
             this.Controls.Add(this.labelControl13);
             this.Controls.Add(this.btnKardes);
-            this.Controls.Add(this.btnKholase);
+            this.Controls.Add(this.btnMojodiAnbarVKala);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSaveAndClosed);
             this.Controls.Add(this.txtTedadeDarVahed3);
@@ -907,7 +961,6 @@
             this.Load += new System.EventHandler(this.FrmAmaliatSelectKala_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAmaliatSelectKala_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cmb_NameKala.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epNameKalasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVahed1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmojodi1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmojodi2.Properties)).EndInit();
@@ -924,6 +977,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTedadeDarVahed2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTedadeDarVahed1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeghdar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNameKalasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -962,7 +1016,7 @@
         public DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnSaveAndClosed;
         public DevExpress.XtraEditors.SimpleButton btnKardes;
-        private DevExpress.XtraEditors.SimpleButton btnKholase;
+        private DevExpress.XtraEditors.SimpleButton btnMojodiAnbarVKala;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.SimpleButton btnSaveAndNext;
         private System.Windows.Forms.BindingSource epNameKalasBindingSource;
@@ -973,5 +1027,7 @@
         public DevExpress.XtraEditors.TextEdit txtMeghdar;
         private DevExpress.XtraEditors.LabelControl lblVahedeAsli;
         private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl txtMeghdarMa;
     }
 }

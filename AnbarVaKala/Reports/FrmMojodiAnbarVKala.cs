@@ -321,6 +321,7 @@ namespace AnbarVaKala.Reports
 
         }
 
+        public int _EditValueId = 0;
         private void FrmMojodiAnbarVKala_Load(object sender, EventArgs e)
         {
             cmbNoeGozaresh.SelectedIndex = 0;
@@ -349,7 +350,11 @@ namespace AnbarVaKala.Reports
 
             FillcmbAnbarName();
             int a = _ListAnbarha.FirstOrDefault(s => s.SalId == _SalId).Id;
-            cmbAnbarName.SetEditValue(a);
+            if(_EditValueId != 0)
+            cmbAnbarName.SetEditValue(_EditValueId);
+            else
+                cmbAnbarName.SetEditValue(a);
+
             FillbandedGridView();
         }
 

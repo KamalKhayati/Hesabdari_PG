@@ -914,16 +914,16 @@
         private System.Windows.Forms.BindingSource epListAnbarhasBindingSource;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtTaTarikh;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit txtAzTarikh;
         private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbNoeGozaresh;
         private DevExpress.XtraEditors.LabelControl labelControl62;
         private System.Windows.Forms.BindingSource akAllAmaliateRozanehsBindingSource;
         public DevExpress.XtraEditors.SimpleButton btnKardeksKala;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
         public DevExpress.XtraEditors.CheckEdit chkIsEdgham;
+        public DevExpress.XtraEditors.TextEdit txtTaTarikh;
+        public DevExpress.XtraEditors.TextEdit txtAzTarikh;
+        public DevExpress.XtraEditors.ComboBoxEdit cmbNoeGozaresh;
     }
 }

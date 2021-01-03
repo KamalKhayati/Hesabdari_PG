@@ -49,6 +49,7 @@
             this.panelControl_NameAnbar = new DevExpress.XtraEditors.PanelControl();
             this.cmbNameAnbar = new DevExpress.XtraEditors.LookUpEdit();
             this.epListAnbarhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btnReloadNameAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.xtcAmaliatRozaneh = new DevExpress.XtraTab.XtraTabControl();
@@ -553,7 +554,6 @@
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).BeginInit();
             this.panelControl0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
@@ -562,6 +562,7 @@
             this.panelControl_NameAnbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNameAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatRozaneh)).BeginInit();
             this.xtcAmaliatRozaneh.SuspendLayout();
             this.xtpVrodeKala.SuspendLayout();
@@ -645,7 +646,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl0
@@ -944,6 +944,14 @@
             // epListAnbarhasBindingSource
             // 
             this.epListAnbarhasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpListAnbarha);
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.EnterMoveNextControl = true;
+            this.textEdit1.Location = new System.Drawing.Point(429, 10);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(68, 34);
+            this.textEdit1.TabIndex = 0;
             // 
             // btnReloadNameAnbar
             // 
@@ -9277,14 +9285,6 @@
             this.lblSalMali.Text = "سال مالی";
             this.lblSalMali.Visible = false;
             // 
-            // textEdit1
-            // 
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(429, 10);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(68, 34);
-            this.textEdit1.TabIndex = 0;
-            // 
             // FrmAmaliatRozaneh
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -9318,6 +9318,7 @@
             this.panelControl_NameAnbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNameAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatRozaneh)).EndInit();
             this.xtcAmaliatRozaneh.ResumeLayout(false);
             this.xtpVrodeKala.ResumeLayout(false);
@@ -9402,7 +9403,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

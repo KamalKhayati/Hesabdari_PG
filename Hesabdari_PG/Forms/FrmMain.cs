@@ -729,7 +729,7 @@ namespace Hesabdari_PG.Forms
             ActiveForm(fm);
 
         }
-
+        //bool _SelectAnbar_NextSanad = true;
         private void btnMojodiAvalDoreKala_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmMojodiAvalDoreKala fm = new FrmMojodiAvalDoreKala();

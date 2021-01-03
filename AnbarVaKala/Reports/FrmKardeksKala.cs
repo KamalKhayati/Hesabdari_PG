@@ -16,6 +16,7 @@ using DevExpress.XtraGrid;
 using DevExpress.Data;
 using DBHesabdari_PG.Models.AK;
 using DevExpress.XtraGrid.Views.Grid;
+using DBHesabdari_PG.Models.EP.CodingAnbar;
 
 namespace AnbarVaKala.Reports
 {
@@ -34,47 +35,65 @@ namespace AnbarVaKala.Reports
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     //var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
+                    #region MyRegion
+                    //foreach (var item in q1)
+                    //{
+                    //    List<int> List1 = new List<int>();
+                    //    string _Id1 = String.Empty;
+                    //    if (item.TabagheKalaId != null)
+                    //    {
+                    //        char[] item1 = item.TabagheKalaId.ToArray();
+                    //        for (int i = 0; i < item1.Count(); i++)
+                    //        {
+                    //            if (i == 0)
+                    //            {
+                    //                _Id1 = _Id1 + item1[i].ToString();
+                    //            }
+                    //            else
+                    //            {
+                    //                if (item1[i] == ',')
+                    //                {
+                    //                    int _Id2 = Convert.ToInt32(_Id1);
+                    //                    List1.Add(_Id2);
+                    //                    _Id1 = String.Empty;
+                    //                }
+                    //                else
+                    //                {
+                    //                    _Id1 = _Id1 + item1[i].ToString();
+                    //                }
+
+                    //            }
+                    //        }
+
+                    //        string _KalaId = String.Empty;
+                    //        foreach (var item2 in List1)
+                    //        {
+                    //            _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
+                    //        }
+                    //        item.TabagheKalaIdName_NM = _KalaId;
+                    //    }
+
+                    //}
+
+                    #endregion
 
                     var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                    var q2 = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).ToList();
 
                     foreach (var item in q1)
                     {
-                        IList<int> List1 = new List<int>();
-                        string _Id1 = String.Empty;
-                        if (item.TabagheKalaId != null)
+                        var qq = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == item.Id).Select(s => s.TabagheKalaId).ToList();
+                        if (qq.Count > 0)
                         {
-                            char[] item1 = item.TabagheKalaId.ToArray();
-                            for (int i = 0; i < item1.Count(); i++)
-                            {
-                                if (i == 0)
-                                {
-                                    _Id1 = _Id1 + item1[i].ToString();
-                                }
-                                else
-                                {
-                                    if (item1[i] == ',')
-                                    {
-                                        int _Id2 = Convert.ToInt32(_Id1);
-                                        List1.Add(_Id2);
-                                        _Id1 = String.Empty;
-                                    }
-                                    else
-                                    {
-                                        _Id1 = _Id1 + item1[i].ToString();
-                                    }
-
-                                }
-                            }
-
                             string _KalaId = String.Empty;
-                            foreach (var item2 in List1)
+                            foreach (var item2 in qq)
                             {
-                                _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
+                                _KalaId += q2.FirstOrDefault(s => s.Id == item2).Name + ",";
                             }
                             item.TabagheKalaIdName_NM = _KalaId;
                         }
-
                     }
+
                     if (q1.Count > 0)
                         epListAnbarhasBindingSource.DataSource = q1;
                     else
@@ -97,26 +116,35 @@ namespace AnbarVaKala.Reports
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     int _AnbarhId = Convert.ToInt32(cmbAnbarName.EditValue);
-                    var q1 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
-                    var q5 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
+                    //var q1 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
+                    //var q5 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
                     var q2 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
-                    var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
-                    var q4 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == _AnbarhId).ToList();
-                    var q6 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarhId).ToArray();
-                    foreach (var item in q5)
+                    //var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
+                    var q4 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == _AnbarhId).Select(s => s.TabagheKalaId).ToList();
+                    var q6 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarhId).ToList();
+
+                    List<EpNameKala> List1 = new List<EpNameKala>();
+                    foreach (var item in q4)
                     {
-                        int _TabagheId = item.EpGroupFareeKala1.EpGroupAsliKala1.TabaghehId;
-                        if (!q4.Any(s => s.TabagheKalaId == _TabagheId))
-                        {
-                            q1.Remove(item);
-                        }
+                        var q5 = db.EpNameKalas.Where(s => s.SalId == _SalId && s.EpGroupFareeKala1.EpGroupAsliKala1.TabaghehId == item).ToList();
+                        List1.AddRange(q5);
                     }
+                    var q1 = List1.OrderBy(s => s.Code).ToList();
+
+                    //foreach (var item in q5)
+                    //{
+                    //    int _TabagheId = item.EpGroupFareeKala1.EpGroupAsliKala1.TabaghehId;
+                    //    if (!q4.Any(s => s.TabagheKalaId == _TabagheId))
+                    //    {
+                    //        q1.Remove(item);
+                    //    }
+                    //}
                     foreach (var item in q1)
                     {
-                        item.VahedAsliName = q2.FirstOrDefault(s => s.Id == item.VahedAsliId).Name;
-                        item.GroupFareeName_NM = q3.FirstOrDefault(s => s.Id == item.GroupFareeId).LevelName;
-                        item.GroupAsliName_NM = q3.FirstOrDefault(s => s.Id == item.EpGroupFareeKala1.GroupAsliId).LevelName;
-                        item.TabagheKalaName_NM = q3.FirstOrDefault(s => s.Id == item.EpGroupFareeKala1.EpGroupAsliKala1.TabaghehId).LevelName;
+                        item.VahedAsliName = db.EpVahedKalas.FirstOrDefault(s => s.SalId == _SalId &&  s.Id == item.VahedAsliId).Name;
+                        item.TabagheKalaName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.Name;
+                        item.GroupAsliName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
+                        item.GroupFareeName_NM = item.EpGroupFareeKala1.Name;
                         item.MeghdarMa_NM = q6.Where(s => s.KalaId == item.Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Sum(s => s.Meghdar) - q6.Where(s => s.KalaId == item.Id && s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
                     }
 

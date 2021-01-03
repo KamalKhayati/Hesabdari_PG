@@ -134,48 +134,23 @@ namespace AnbarVaKala.AmaliatRozaneh
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    //var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
-
                     var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                    var q2 = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).ToList();
 
                     foreach (var item in q1)
                     {
-                        IList<int> List1 = new List<int>();
-                        string _Id1 = String.Empty;
-                        if (item.TabagheKalaId != null)
+                        var qq = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == item.Id).Select(s => s.TabagheKalaId).ToList();
+                        if (qq.Count > 0)
                         {
-                            char[] item1 = item.TabagheKalaId.ToArray();
-                            for (int i = 0; i < item1.Count(); i++)
-                            {
-                                if (i == 0)
-                                {
-                                    _Id1 = _Id1 + item1[i].ToString();
-                                }
-                                else
-                                {
-                                    if (item1[i] == ',')
-                                    {
-                                        int _Id2 = Convert.ToInt32(_Id1);
-                                        List1.Add(_Id2);
-                                        _Id1 = String.Empty;
-                                    }
-                                    else
-                                    {
-                                        _Id1 = _Id1 + item1[i].ToString();
-                                    }
-
-                                }
-                            }
-
                             string _KalaId = String.Empty;
-                            foreach (var item2 in List1)
+                            foreach (var item2 in qq)
                             {
-                                _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
+                                _KalaId += q2.FirstOrDefault(s => s.Id == item2).Name + ",";
                             }
                             item.TabagheKalaIdName_NM = _KalaId;
                         }
-
                     }
+
                     if (q1.Count > 0)
                         epListAnbarhasBindingSource.DataSource = q1;
                     else
@@ -201,7 +176,11 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     var q = db.EpHesabMoin1s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                    cmbHesabMoin.Properties.DataSource = q.Count > 0 ? q : null;
+                    if (En1 == EnumCED.Edit)
+                        cmbHesabMoin.Properties.DataSource = q.Count > 0 ? q : null;
+                    else
+                        cmbHesabMoin.Properties.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true).ToList() : null;
+
                 }
                 catch (Exception ex)
                 {
@@ -255,9 +234,19 @@ namespace AnbarVaKala.AmaliatRozaneh
                         ////BindingList<EpAllHesabTafsili> ok = new BindingList<EpAllHesabTafsili>(list);
                         //db.EpAllHesabTafsili_HesabMovaghats.Load(); 
                         #endregion
-                        cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.LevelNamber == 1).OrderBy(s => s.Code);
-                        cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.LevelNamber == 2).OrderBy(s => s.Code);
-                        cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.LevelNamber == 3).OrderBy(s => s.Code);
+                        if (En1 == EnumCED.Create)
+                        {
+                            cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNamber == 1).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNamber == 1).OrderBy(s => s.Code).ToList() : null;
+                            cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNamber == 2).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNamber == 2).OrderBy(s => s.Code).ToList() : null;
+                            cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNamber == 3).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNamber == 3).OrderBy(s => s.Code).ToList() : null;
+
+                        }
+                        else
+                        {
+                            cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.LevelNamber == 1).OrderBy(s => s.Code);
+                            cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.LevelNamber == 2).OrderBy(s => s.Code);
+                            cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.LevelNamber == 3).OrderBy(s => s.Code);
+                        }
                     }
                     else
                     {
@@ -379,6 +368,7 @@ namespace AnbarVaKala.AmaliatRozaneh
             fm.lblUserName.Text = lblUserName.Text;
             fm.lblSalId.Text = lblSalId.Text;
             fm.lblSalMali.Text = lblSalMali.Text;
+            fm.AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
             fm.ShowDialog();
 
             //gridView_AmaliatAddVaEdit.AddNewRow();
@@ -705,6 +695,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 fm.lblUserName.Text = lblUserName.Text;
                 fm.lblSalId.Text = lblSalId.Text;
                 fm.lblSalMali.Text = lblSalMali.Text;
+                fm.AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
                 fm.ShowDialog();
 
             }

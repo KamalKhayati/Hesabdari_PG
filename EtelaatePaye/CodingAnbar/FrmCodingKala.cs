@@ -1158,21 +1158,21 @@ namespace EtelaatePaye.CodingAnbar
                         NameKalaBeforeEdit = txtName.Text;
                         FillcmbTaminKonande();
                         FillcmbTabaghehKala();
-                        using (var db = new MyContext())
-                        {
-                            try
-                            {
-                                _SalId = Convert.ToInt32(lblSalId.Text);
-                                int RowId = Convert.ToInt32(txtId.Text);
-                                var q = db.AkAllAmaliateRozanehs.FirstOrDefault(s => s.KalaId == RowId && s.SalId == _SalId);
-                                cmbVahedAsli.Enabled = q != null ? false : true;
-                            }
-                            catch (Exception ex)
-                            {
-                                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
+                        //using (var db = new MyContext())
+                        //{
+                        //    try
+                        //    {
+                        //        _SalId = Convert.ToInt32(lblSalId.Text);
+                        //        int RowId = Convert.ToInt32(txtId.Text);
+                        //        var q = db.AkAllAmaliateRozanehs.FirstOrDefault(s => s.KalaId == RowId && s.SalId == _SalId);
+                        //        cmbVahedAsli.Enabled = q != null ? false : true;
+                        //    }
+                        //    catch (Exception ex)
+                        //    {
+                        //        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        //            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //    }
+                        //}
 
                         cmbTabaghehKala.Focus();
                     }
@@ -2880,6 +2880,7 @@ namespace EtelaatePaye.CodingAnbar
             // if (!string.IsNullOrEmpty(cmbVahedKala2.Text))
             labelControl24.Text = cmbVahedKala1_NameKala.Text;
             FillcmbVahedAsli();
+            cmbVahedAsli.EditValue = cmbVahedKala.EditValue;
         }
 
         private void cmbVahedKala2_EditValueChanged(object sender, EventArgs e)
