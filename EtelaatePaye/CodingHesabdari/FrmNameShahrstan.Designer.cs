@@ -448,6 +448,9 @@
             this.cmbNameOstan.Location = new System.Drawing.Point(55, 5);
             this.cmbNameOstan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbNameOstan.Name = "cmbNameOstan";
+            this.cmbNameOstan.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbNameOstan.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbNameOstan.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbNameOstan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbNameOstan.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -459,6 +462,9 @@
             this.cmbNameOstan.Properties.ImmediatePopup = true;
             this.cmbNameOstan.Properties.MaxLength = 50;
             this.cmbNameOstan.Properties.NullText = "";
+            this.cmbNameOstan.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbNameOstan.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbNameOstan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNameOstan.Properties.ValueMember = "Id";
             this.cmbNameOstan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbNameOstan.Size = new System.Drawing.Size(233, 34);
@@ -520,7 +526,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(377, 576);
+            this.MinimumSize = new System.Drawing.Size(369, 551);
             this.Name = "FrmNameShahrstan";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -27,7 +27,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         // public int HesabColId { get; set; }
         //public int HesabMoinId { get; set; }
         [Required]
-        public int VahedKalaId { get; set; }
+        public int VahedAsliKalaId { get; set; }
         //[Required, MaxLength(50)]
         //public string VahedAsliName { get; set; }
         public bool IsActive { get; set; }
@@ -35,7 +35,6 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual EpGroupAsliKala EpGroupAsliKala1 { get; set; }
         public virtual EpGroupFareeKala EpGroupFareeKala1 { get; set; }
         public virtual EpNameKala EpNameKala1 { get; set; }
-        public virtual EpVahedKala EpVahedKala1 { get; set; }
-        public virtual ICollection<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }
+        public virtual EpVahedKala EpVahedAsliKala { get; set; }
     }
 }

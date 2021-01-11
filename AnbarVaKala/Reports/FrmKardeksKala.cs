@@ -141,7 +141,7 @@ namespace AnbarVaKala.Reports
                     //}
                     foreach (var item in q1)
                     {
-                        item.VahedAsliName = db.EpVahedKalas.FirstOrDefault(s => s.SalId == _SalId &&  s.Id == item.VahedAsliId).Name;
+                        item.VahedAsliName_NM = db.EpVahedKalas.FirstOrDefault(s => s.SalId == _SalId &&  s.Id == item.VahedAsliId).Name;
                         item.TabagheKalaName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.Name;
                         item.GroupAsliName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
                         item.GroupFareeName_NM = item.EpGroupFareeKala1.Name;
@@ -204,7 +204,7 @@ namespace AnbarVaKala.Reports
                             {
                                 //AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                 q1[0].Id = 0;
-                                q1[0].Seryal = 0;
+                                q1[0].Seryal_darSelectNoe = 0;
                                 q1[0].DateTimeSanadString = txtAzTarikh.Text;
                                 q1[0].AnbarName = cmbAnbarName.Text;
                                 q1[0].NoeSanadText = "جمع مانده از قبل";
@@ -236,7 +236,7 @@ namespace AnbarVaKala.Reports
                                 q1[0].NerkhMo = q1[0].MeghdarMo != 0 ? q1[0].MablagMo / q1[0].MeghdarMo : 0;
 
                                 q1[0].HesabTafsiliName = "جمع مانده از قبل";
-                                q1[0].SanadNamber = 0;
+                                q1[0].RozaneSanadNumber = 0;
 
                                 q1.RemoveRange(1, q7.Count - 1);
 
@@ -319,7 +319,7 @@ namespace AnbarVaKala.Reports
                             {
                                 //AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                 q1[0].Id = 0;
-                                q1[0].Seryal = 0;
+                                q1[0].Seryal_darSelectNoe = 0;
                                 q1[0].DateTimeSanadString = txtAzTarikh.Text;
                                 q1[0].AnbarName = cmbAnbarName.Text;
                                 q1[0].NoeSanadText = "جمع مانده از قبل";
@@ -333,7 +333,7 @@ namespace AnbarVaKala.Reports
                                 q1[0].MablagSa = q7.Where(s => s.NoeAmaliatCode == 3).Sum(s => s.Mablag);
                                 q1[0].NerkhSa = q1[0].MeghdarSa != 0 ? q1[0].MablagSa / q1[0].MeghdarSa : 0;
                                 q1[0].HesabTafsiliName = "جمع مانده از قبل";
-                                q1[0].SanadNamber = 0;
+                                q1[0].RozaneSanadNumber = 0;
 
                                 q1.RemoveRange(1, q7.Count - 1);
 

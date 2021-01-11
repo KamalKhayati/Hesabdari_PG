@@ -643,7 +643,7 @@
             "قراردادها",
             "انبارها",
             "سایر"});
-            this.cmbTabaghehGroup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbTabaghehGroup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehGroup.Size = new System.Drawing.Size(502, 34);
             this.cmbTabaghehGroup.TabIndex = 1;
             this.cmbTabaghehGroup.Enter += new System.EventHandler(this.cmbTabaghehGroup_Enter);
@@ -1286,6 +1286,9 @@
             this.cmbGruopLevel1_2.Name = "cmbGruopLevel1_2";
             this.cmbGruopLevel1_2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGruopLevel1_2.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbGruopLevel1_2.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbGruopLevel1_2.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbGruopLevel1_2.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbGruopLevel1_2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGruopLevel1_2.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1298,7 +1301,10 @@
             this.cmbGruopLevel1_2.Properties.DropDownRows = 10;
             this.cmbGruopLevel1_2.Properties.ImmediatePopup = true;
             this.cmbGruopLevel1_2.Properties.NullText = "";
+            this.cmbGruopLevel1_2.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGruopLevel1_2.Properties.PopupWidth = 545;
+            this.cmbGruopLevel1_2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGruopLevel1_2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGruopLevel1_2.Properties.ValueMember = "Id";
             this.cmbGruopLevel1_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel1_2.Size = new System.Drawing.Size(447, 34);
@@ -1868,6 +1874,9 @@
             this.cmbGruopLevel1_3.Name = "cmbGruopLevel1_3";
             this.cmbGruopLevel1_3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGruopLevel1_3.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbGruopLevel1_3.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbGruopLevel1_3.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbGruopLevel1_3.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbGruopLevel1_3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGruopLevel1_3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1880,7 +1889,10 @@
             this.cmbGruopLevel1_3.Properties.DropDownRows = 10;
             this.cmbGruopLevel1_3.Properties.ImmediatePopup = true;
             this.cmbGruopLevel1_3.Properties.NullText = "";
+            this.cmbGruopLevel1_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGruopLevel1_3.Properties.PopupWidth = 545;
+            this.cmbGruopLevel1_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGruopLevel1_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGruopLevel1_3.Properties.ValueMember = "Id";
             this.cmbGruopLevel1_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel1_3.Size = new System.Drawing.Size(447, 34);
@@ -1951,6 +1963,9 @@
             this.cmbGruopLevel2_3.Name = "cmbGruopLevel2_3";
             this.cmbGruopLevel2_3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGruopLevel2_3.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbGruopLevel2_3.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbGruopLevel2_3.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbGruopLevel2_3.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbGruopLevel2_3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGruopLevel2_3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1963,7 +1978,10 @@
             this.cmbGruopLevel2_3.Properties.DropDownRows = 10;
             this.cmbGruopLevel2_3.Properties.ImmediatePopup = true;
             this.cmbGruopLevel2_3.Properties.NullText = "";
+            this.cmbGruopLevel2_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGruopLevel2_3.Properties.PopupWidth = 545;
+            this.cmbGruopLevel2_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGruopLevel2_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGruopLevel2_3.Properties.ValueMember = "Id";
             this.cmbGruopLevel2_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel2_3.Size = new System.Drawing.Size(447, 34);
@@ -2401,7 +2419,7 @@
             this.Controls.Add(this.lblUserId);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmGroupTafsili.IconOptions.Icon")));
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(1066, 636);
+            this.MinimumSize = new System.Drawing.Size(1058, 610);
             this.Name = "FrmGroupTafsili";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

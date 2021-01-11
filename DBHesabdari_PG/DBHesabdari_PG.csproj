@@ -82,7 +82,6 @@
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AK\AkAllAmaliateRozaneh.cs" />
-    <Compile Include="Models\AK\AkJabejaeeKala.cs" />
     <Compile Include="Models\AK\AkKhorojeKala_Riz.cs" />
     <Compile Include="Models\AK\AkVorodeKala_Riz.cs" />
     <Compile Include="Models\EnumCED.cs" />
@@ -93,7 +92,6 @@
     <Compile Include="Models\EP\CodingAnbar\EpNameKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpTabaghehKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpVahedKala.cs" />
-    <Compile Include="Models\EP\CodingHesabdari\EpAllHesabTafsili_HesabMovaghat.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpAllGroupTafsili.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpAllHesabTafsili.cs" />
     <Compile Include="Models\EP\CodingHesabdari\EpDarsadRanande_A.cs" />

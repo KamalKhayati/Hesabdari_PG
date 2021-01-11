@@ -1232,7 +1232,7 @@ namespace EtelaatePaye.CodingAnbar
                                     n1.ParentCode = _Code;
                                     n1.LevelName = _Name;
                                     n1.LevelNamber = _LevelNumber;
-                                    n1.VahedKalaId = _VahedKalaId;
+                                    n1.VahedAsliKalaId = _VahedKalaId;
                                     n1.IsActive = _IsActive;
                                     n1.EpTabaghehKala1 = obj;
                                     db.EpAllCodingKalas.Add(n1);
@@ -1264,7 +1264,7 @@ namespace EtelaatePaye.CodingAnbar
                                     n1.ParentCode = Convert.ToInt32(txtGroupCode.Text);
                                     n1.LevelName = _Name;
                                     n1.LevelNamber = _LevelNumber;
-                                    n1.VahedKalaId = _VahedKalaId;
+                                    n1.VahedAsliKalaId = _VahedKalaId;
                                     n1.IsActive = _IsActive;
                                     n1.EpGroupAsliKala1 = obj;
                                     db.EpAllCodingKalas.Add(n1);
@@ -1294,7 +1294,7 @@ namespace EtelaatePaye.CodingAnbar
                                     n1.ParentCode = Convert.ToInt32(txtGroupCode.Text);
                                     n1.LevelName = _Name;
                                     n1.LevelNamber = _LevelNumber;
-                                    n1.VahedKalaId = _VahedKalaId;
+                                    n1.VahedAsliKalaId = _VahedKalaId;
                                     n1.IsActive = _IsActive;
                                     n1.EpGroupFareeKala1 = obj;
                                     db.EpAllCodingKalas.Add(n1);
@@ -1323,9 +1323,9 @@ namespace EtelaatePaye.CodingAnbar
                                     obj.Name = _Name;
                                     obj.IsActive = _IsActive;
                                     obj.VahedKala1Id = _VahedKalaId;
-                                    obj.VahedKala1Name = cmbVahedKala.Text;
+                                    //obj.VahedKala1Name = cmbVahedKala.Text;
                                     obj.VahedAsliId = Convert.ToInt32(cmbVahedAsli.EditValue);
-                                    obj.VahedAsliName = cmbVahedAsli.Text;
+                                    //obj.VahedAsliName_NM = cmbVahedAsli.Text;
                                     obj.SharhHesab = _SharhHesab;
                                     obj.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
 
@@ -1357,7 +1357,7 @@ namespace EtelaatePaye.CodingAnbar
                                     if (chkVahedKala2_NameKala.Checked && !string.IsNullOrEmpty(cmbVahedKala2_NameKala.Text))
                                     {
                                         obj.VahedKala2Id = Convert.ToInt32(cmbVahedKala2_NameKala.EditValue);
-                                        obj.VahedKala2Name = cmbVahedKala2_NameKala.Text;
+                                        //obj.VahedKala2Name = cmbVahedKala2_NameKala.Text;
                                         if (!string.IsNullOrEmpty(txtHarBaste_NameKala.Text))
                                             obj.HarBaste = Convert.ToInt32(txtHarBaste_NameKala.Text);
                                     }
@@ -1366,7 +1366,7 @@ namespace EtelaatePaye.CodingAnbar
                                     if (chkVahedKala3_NameKala.Checked && !string.IsNullOrEmpty(cmbVahedKala3_NameKala.Text))
                                     {
                                         obj.VahedKala3Id = Convert.ToInt32(cmbVahedKala3_NameKala.EditValue);
-                                        obj.VahedKala3Name = cmbVahedKala3_NameKala.Text;
+                                        //obj.VahedKala3Name = cmbVahedKala3_NameKala.Text;
                                         if (!string.IsNullOrEmpty(txtHarKarton_NameKala.Text))
                                             obj.HarKarton = Convert.ToInt32(txtHarKarton_NameKala.Text);
                                     }
@@ -1433,7 +1433,7 @@ namespace EtelaatePaye.CodingAnbar
                                     n1.ParentCode = Convert.ToInt32(txtGroupCode.Text);
                                     n1.LevelName = _Name;
                                     n1.LevelNamber = _LevelNumber;
-                                    n1.VahedKalaId = _VahedKalaId;
+                                    n1.VahedAsliKalaId = _VahedKalaId;
                                     n1.IsActive = _IsActive;
                                     n1.EpNameKala1 = obj;
                                     db.EpAllCodingKalas.Add(n1);
@@ -1551,7 +1551,7 @@ namespace EtelaatePaye.CodingAnbar
                                         q2.ParentCode = _Code;
                                         q2.LevelName = _Name;
                                         q2.LevelNamber = _LevelNumber;
-                                        q2.VahedKalaId = _VahedKalaId;
+                                        q2.VahedAsliKalaId = _VahedKalaId;
                                         q2.IsActive = _IsActive;
                                         q2.EpTabaghehKala1 = q;
 
@@ -1694,7 +1694,7 @@ namespace EtelaatePaye.CodingAnbar
                                         q2.ParentCode = Convert.ToInt32(txtGroupCode.Text);
                                         q2.LevelName = _Name;
                                         q2.LevelNamber = _LevelNumber;
-                                        q2.VahedKalaId = _VahedKalaId;
+                                        q2.VahedAsliKalaId = _VahedKalaId;
                                         q2.IsActive = _IsActive;
                                         q2.EpGroupAsliKala1 = q;
 
@@ -1834,7 +1834,7 @@ namespace EtelaatePaye.CodingAnbar
                                         q2.ParentCode = Convert.ToInt64(txtGroupCode.Text);
                                         q2.LevelName = _Name;
                                         q2.LevelNamber = _LevelNumber;
-                                        q2.VahedKalaId = _VahedKalaId;
+                                        q2.VahedAsliKalaId = _VahedKalaId;
                                         q2.IsActive = _IsActive;
                                         q2.EpGroupFareeKala1 = q;
 
@@ -1958,9 +1958,9 @@ namespace EtelaatePaye.CodingAnbar
                                         q.Name = _Name;
                                         q.IsActive = _IsActive;
                                         q.VahedKala1Id = _VahedKalaId;
-                                        q.VahedKala1Name = cmbVahedKala.Text;
+                                        //q.VahedKala1Name = cmbVahedKala.Text;
                                         q.VahedAsliId = Convert.ToInt32(cmbVahedAsli.EditValue);
-                                        q.VahedAsliName = cmbVahedAsli.Text;
+                                        //q.VahedAsliName_NM = cmbVahedAsli.Text;
                                         q.SharhHesab = _SharhHesab;
                                         q.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
 
@@ -1999,14 +1999,14 @@ namespace EtelaatePaye.CodingAnbar
                                         if (chkVahedKala2_NameKala.Checked && !string.IsNullOrEmpty(cmbVahedKala2_NameKala.Text))
                                         {
                                             q.VahedKala2Id = Convert.ToInt32(cmbVahedKala2_NameKala.EditValue);
-                                            q.VahedKala2Name = cmbVahedKala2_NameKala.Text;
+                                            //q.VahedKala2Name = cmbVahedKala2_NameKala.Text;
                                             if (!string.IsNullOrEmpty(txtHarBaste_NameKala.Text))
                                                 q.HarBaste = Convert.ToInt32(txtHarBaste_NameKala.Text);
                                         }
                                         else
                                         {
                                             q.VahedKala2Id = null;
-                                            q.VahedKala2Name = null;
+                                            //q.VahedKala2Name = null;
                                             q.HarBaste = null;
                                         }
 
@@ -2014,14 +2014,14 @@ namespace EtelaatePaye.CodingAnbar
                                         if (chkVahedKala3_NameKala.Checked && !string.IsNullOrEmpty(cmbVahedKala3_NameKala.Text))
                                         {
                                             q.VahedKala3Id = Convert.ToInt32(cmbVahedKala3_NameKala.EditValue);
-                                            q.VahedKala3Name = cmbVahedKala3_NameKala.Text;
+                                            //q.VahedKala3Name = cmbVahedKala3_NameKala.Text;
                                             if (!string.IsNullOrEmpty(txtHarKarton_NameKala.Text))
                                                 q.HarKarton = Convert.ToInt32(txtHarKarton_NameKala.Text);
                                         }
                                         else
                                         {
                                             q.VahedKala3Id = null;
-                                            q.VahedKala3Name = null;
+                                            //q.VahedKala3Name = null;
                                             q.HarKarton = null;
 
                                         }
@@ -2126,7 +2126,7 @@ namespace EtelaatePaye.CodingAnbar
                                             q2.ParentCode = Convert.ToInt32(txtGroupCode.Text);
                                             q2.LevelName = _Name;
                                             q2.LevelNamber = _LevelNumber;
-                                            q2.VahedKalaId = _VahedKalaId;
+                                            q2.VahedAsliKalaId = _VahedKalaId;
                                             q2.IsActive = _IsActive;
                                             q2.EpNameKala1 = q;
                                             /////////////////////////////////////////متد اصلاح کد و نام در جدول رابطه بین کاربران و لیست سطح دسترسی به کدینگ حسابداری  WillCascadeOnUpdate////////////////////////////////////// 

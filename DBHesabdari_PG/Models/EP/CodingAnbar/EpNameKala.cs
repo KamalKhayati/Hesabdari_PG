@@ -1,4 +1,5 @@
-﻿using DBHesabdari_PG.Models.EP.CodingHesabdari;
+﻿using DBHesabdari_PG.Models.AK;
+using DBHesabdari_PG.Models.EP.CodingHesabdari;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -25,7 +26,9 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public int? CodeEkhtesasi { get; set; }
         [Column(TypeName = "Date")]
         public DateTime TarikhEjad { get; set; }
+        [MaxLength(1000)]
         public string TaminKonandeId { get; set; }
+        [MaxLength(1000)]
         public string TaminKonandeName { get; set; }
         [Required]
         public bool IsActive { get; set; }
@@ -33,18 +36,16 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public string SharhHesab { get; set; }
         [Required]
         public int VahedKala1Id { get; set; }
-        [Required, MaxLength(50)]
-        public string VahedKala1Name { get; set; }
+        //[Required, MaxLength(50)]
+        //public string VahedKala1Name { get; set; }
         public int? VahedKala2Id { get; set; }
-        [MaxLength(50)]
-        public string VahedKala2Name { get; set; }
+        //[MaxLength(50)]
+        //public string VahedKala2Name { get; set; }
         public int? VahedKala3Id { get; set; }
-        [MaxLength(50)]
-        public string VahedKala3Name { get; set; }
+        //[MaxLength(50)]
+        //public string VahedKala3Name { get; set; }
         [Required]
         public int VahedAsliId { get; set; }
-        [Required, MaxLength(50)]
-        public string VahedAsliName { get; set; }
         public double? HarBaste { get; set; }
         public double? HarKarton { get; set; }
         [Required]
@@ -76,6 +77,10 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [Required]
         public bool IsArzeshAfzode { get; set; }
         public byte[] Pictuer { get; set; }
+
+
+        [MaxLength(50), NotMapped]
+        public string VahedAsliName_NM { get; set; }
         [NotMapped]
         [MaxLength(100)]
         public string GroupAsliName_NM { get; set; }
@@ -90,6 +95,12 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
 
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }
+        public virtual EpVahedKala EpVahedKala2 { get; set; }
+        public virtual EpVahedKala EpVahedKala3 { get; set; }
+        public virtual EpVahedKala EpVahedAsliKala { get; set; }
         public virtual EpGroupFareeKala EpGroupFareeKala1 { get; set; }
+        public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Rizs { get; set; }
+        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
+        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
     }
 }

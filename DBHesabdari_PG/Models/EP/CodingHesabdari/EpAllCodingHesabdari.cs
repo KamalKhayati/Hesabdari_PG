@@ -7,6 +7,7 @@
 *	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 8   11:41 ق.ظ
 *	
 ***********************************************************************************/
+using DBHesabdari_PG.Models.EP.CodingAnbar;
 using DBHesabdari_PG.Models.Ms.ActiveSystem;
 using DBHesabdari_PG.Models.Ms.SystemUsers;
 using System;
@@ -37,44 +38,18 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //public int HesabGroupId { get; set; }
         // public int HesabColId { get; set; }
         //public int HesabMoinId { get; set; }
+        [Required]
         public bool IsActive { get; set; }
-        public virtual ICollection<RmsUserBallCodingHesabdari> RmsUserBallCodingHesabdaris { get; set; }
+        public virtual ICollection<R_MsUser_B_AllCodingHesabdari> RmsUserBallCodingHesabdaris { get; set; }
         public virtual EpHesabTabagheh EpHesabTabagheh1 { get; set; }
         public virtual EpHesabGroup EpHesabGroup1 { get; set; }
         public virtual EpHesabCol EpHesabCol1 { get; set; }
         public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
-        public virtual ICollection<REpAllCodingHesabdariBEpAllGroupTafsili> REpAllCodingHesabdariBEpAllGroupTafsilis { get; set; }
-        public virtual ICollection<REpAllCodingHesabdariBMsActiveSystem> REpAllCodingHesabdariBMsActiveSystems { get; set; }
+        public virtual ICollection<R_EpAllCodingHesabdari_B_MsActiveSystem> R_EpAllCodingHesabdari_B_MsActiveSystems { get; set; }
     }
 
-    public class REpAllCodingHesabdariBEpAllGroupTafsili
-    {
-        //[Column(Order = 0)]
-        // public int Id { get; set; }
-        [Required, Column(Order = 0)]
-        public int SalId { get; set; }
-        [Key]
-        [Required, Column(Order = 1)]
-        public int AllCodingHesabdariId { get; set; }
-        [Key]
-        [Required, Column(Order = 2)]
-        public int AllGroupTafsiliId { get; set; }
-        [Required, Column(Order = 3)]
-        public int LevelNamber { get; set; }
 
-        //[Required, Column(Order = 3)]
-        //public int NumberLevel { get; set; }
-        //[Required, Column(Order = 4)]
-        //public int MoinCode { get; set; }
-        //[Required, Column(Order = 4)]
-        //public int GroupTafsiliCode { get; set; }
-
-        public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
-        public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
-
-    }
-
-    public class REpAllCodingHesabdariBMsActiveSystem
+    public class R_EpAllCodingHesabdari_B_MsActiveSystem
     {
         //[Column(Order = 0)]
         // public int Id { get; set; }

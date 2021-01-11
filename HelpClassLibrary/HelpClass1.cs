@@ -69,7 +69,8 @@ namespace HelpClassLibrary
         //    }
         //}
 
-
+        // تبدیل دیتاسورس به بایندینگ  لیست Conver datasource to BindingList
+        //BindingList<AkVorodeKala_Riz> list = (BindingList<AkVorodeKala_Riz>)akVorodeKala_RizsBindingSource.DataSource;
 
         /// <summary>
         /// جلوگیری از باز شدن فرمها بیش از یک بار

@@ -7,6 +7,8 @@
 *	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 2 / 10   14:16
 *	
 ***********************************************************************************/
+using DBHesabdari_PG.Models.AK;
+using DBHesabdari_PG.Models.EP.CodingAnbar;
 using DBHesabdari_PG.Models.Ms.ActiveSystem;
 using System;
 using System.Collections.Generic;
@@ -50,15 +52,46 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public bool IsActive { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
-        [MaxLength(500)]
-        public string SelectedGroupTafsiliLevel1 { get; set; }
+        [MaxLength(1000)]
+        public string SelectedGroupTafsiliLevels { get; set; }
         [MaxLength(500)]
         public string SelectedActivesystem { get; set; }
 
         public virtual EpHesabCol EpHesabCol1 { get; set; }
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual ICollection<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
-        public virtual ICollection<EpAllHesabTafsili_HesabMovaghat> EpAllHesabTafsili_HesabMovaghats { get; set; }
+        public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Rizs { get; set; }
+        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
+        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
+        public virtual ICollection<EpListAnbarha> EpListAnbarhas { get; set; }
+        public virtual ICollection<R_EpHesabMoin1_B_EpAllGroupTafsili> R_EpHesabMoin1_B_EpAllGroupTafsilis { get; set; }
+    }
+
+    public class R_EpHesabMoin1_B_EpAllGroupTafsili
+    {
+        //[Column(Order = 0)]
+        // public int Id { get; set; }
+        [Required, Column(Order = 0)]
+        public int SalId { get; set; }
+        [Key]
+        [Required, Column(Order = 1)]
+        public int EpHesabMoin1Id { get; set; }
+        [Key]
+        [Required, Column(Order = 2)]
+        public int AllGroupTafsiliId { get; set; }
+        [Required, Column(Order = 3)]
+        public int LevelNamber { get; set; }
+
+        //[Required, Column(Order = 3)]
+        //public int NumberLevel { get; set; }
+        //[Required, Column(Order = 4)]
+        //public int MoinCode { get; set; }
+        //[Required, Column(Order = 4)]
+        //public int GroupTafsiliCode { get; set; }
+
+        public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
+        public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
+
     }
 
 }

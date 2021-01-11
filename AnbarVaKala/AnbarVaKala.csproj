@@ -66,11 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AmaliatRozaneh\FrmAmaliatRozaneh.cs">
+    <Compile Include="AmaliatRozaneh\FrmAmaliatRozanehAnbarVKala.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AmaliatRozaneh\FrmAmaliatRozaneh.Designer.cs">
-      <DependentUpon>FrmAmaliatRozaneh.cs</DependentUpon>
+    <Compile Include="AmaliatRozaneh\FrmAmaliatRozanehAnbarVKala.Designer.cs">
+      <DependentUpon>FrmAmaliatRozanehAnbarVKala.cs</DependentUpon>
     </Compile>
     <Compile Include="AmaliatRozaneh\FrmAmaliatSelectKala.cs">
       <SubType>Form</SubType>
@@ -104,8 +104,9 @@
     <Compile Include="Reports\FrmMojodiAnbarVKala.Designer.cs">
       <DependentUpon>FrmMojodiAnbarVKala.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatRozaneh.resx">
-      <DependentUpon>FrmAmaliatRozaneh.cs</DependentUpon>
+    <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatRozanehAnbarVKala.resx">
+      <DependentUpon>FrmAmaliatRozanehAnbarVKala.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AmaliatRozaneh\FrmAmaliatSelectKala.resx">
       <DependentUpon>FrmAmaliatSelectKala.cs</DependentUpon>

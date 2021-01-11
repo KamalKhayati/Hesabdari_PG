@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public string SharhHesab { get; set; }
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }
+        public virtual EpAllGroupTafsili EpAllGroupTafsili1 { get; set; }
         public virtual ICollection<EpGroupAsliKala> EpGroupAsliKalas { get; set; }
         public virtual ICollection<R_EpListAnbarha_B_EpTabaghehKala> R_EpListAnbarha_B_EpTabaghehKalas { get; set; }
 

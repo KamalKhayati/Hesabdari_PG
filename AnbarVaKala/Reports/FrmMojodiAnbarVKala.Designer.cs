@@ -115,7 +115,7 @@
             this.panelControl_NameAnbar.Controls.Add(this.btnReloadNameAnbar);
             this.panelControl_NameAnbar.Controls.Add(this.labelControl22);
             this.panelControl_NameAnbar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl_NameAnbar.Location = new System.Drawing.Point(817, 2);
+            this.panelControl_NameAnbar.Location = new System.Drawing.Point(669, 2);
             this.panelControl_NameAnbar.Name = "panelControl_NameAnbar";
             this.panelControl_NameAnbar.Size = new System.Drawing.Size(802, 93);
             this.panelControl_NameAnbar.TabIndex = 0;
@@ -189,7 +189,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(205, 8);
+            this.btnClose.Location = new System.Drawing.Point(57, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -205,7 +205,7 @@
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.Enabled = false;
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(260, 8);
+            this.btnPrintPreview.Location = new System.Drawing.Point(112, 8);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -242,14 +242,14 @@
             this.panelControl_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl_Button.Location = new System.Drawing.Point(2, 2);
             this.panelControl_Button.Name = "panelControl_Button";
-            this.panelControl_Button.Size = new System.Drawing.Size(815, 93);
+            this.panelControl_Button.Size = new System.Drawing.Size(667, 93);
             this.panelControl_Button.TabIndex = 1;
             // 
             // chkIsEdgham
             // 
             this.chkIsEdgham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsEdgham.EnterMoveNextControl = true;
-            this.chkIsEdgham.Location = new System.Drawing.Point(155, 50);
+            this.chkIsEdgham.Location = new System.Drawing.Point(7, 50);
             this.chkIsEdgham.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chkIsEdgham.Name = "chkIsEdgham";
             this.chkIsEdgham.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -271,7 +271,7 @@
             this.btnKardeksKala.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnKardeksKala.AppearanceHovered.Options.UseBackColor = true;
             this.btnKardeksKala.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnKardeksKala.Location = new System.Drawing.Point(370, 50);
+            this.btnKardeksKala.Location = new System.Drawing.Point(222, 50);
             this.btnKardeksKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnKardeksKala.Name = "btnKardeksKala";
             this.btnKardeksKala.Size = new System.Drawing.Size(156, 37);
@@ -286,7 +286,7 @@
             // 
             this.cmbNoeGozaresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNoeGozaresh.EnterMoveNextControl = true;
-            this.cmbNoeGozaresh.Location = new System.Drawing.Point(594, 51);
+            this.cmbNoeGozaresh.Location = new System.Drawing.Point(446, 51);
             this.cmbNoeGozaresh.Name = "cmbNoeGozaresh";
             this.cmbNoeGozaresh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbNoeGozaresh.Properties.Appearance.Options.UseForeColor = true;
@@ -307,7 +307,7 @@
             this.labelControl62.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl62.Appearance.Options.UseForeColor = true;
             this.labelControl62.AutoEllipsis = true;
-            this.labelControl62.Location = new System.Drawing.Point(757, 54);
+            this.labelControl62.Location = new System.Drawing.Point(609, 54);
             this.labelControl62.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl62.Name = "labelControl62";
             this.labelControl62.Size = new System.Drawing.Size(48, 27);
@@ -318,7 +318,7 @@
             // 
             this.btnDisplyList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyList.ImageOptions.SvgImage")));
-            this.btnDisplyList.Location = new System.Drawing.Point(315, 8);
+            this.btnDisplyList.Location = new System.Drawing.Point(167, 8);
             this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDisplyList.Name = "btnDisplyList";
             this.btnDisplyList.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -333,7 +333,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.AutoEllipsis = true;
-            this.labelControl2.Location = new System.Drawing.Point(534, 14);
+            this.labelControl2.Location = new System.Drawing.Point(386, 14);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(52, 27);
@@ -344,7 +344,7 @@
             // 
             this.txtTaTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTaTarikh.EnterMoveNextControl = true;
-            this.txtTaTarikh.Location = new System.Drawing.Point(370, 11);
+            this.txtTaTarikh.Location = new System.Drawing.Point(222, 11);
             this.txtTaTarikh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTaTarikh.Name = "txtTaTarikh";
             this.txtTaTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -364,7 +364,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl7.Appearance.Options.UseForeColor = true;
             this.labelControl7.AutoEllipsis = true;
-            this.labelControl7.Location = new System.Drawing.Point(758, 14);
+            this.labelControl7.Location = new System.Drawing.Point(610, 14);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(50, 27);
@@ -375,7 +375,7 @@
             // 
             this.txtAzTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAzTarikh.EnterMoveNextControl = true;
-            this.txtAzTarikh.Location = new System.Drawing.Point(594, 11);
+            this.txtAzTarikh.Location = new System.Drawing.Point(446, 11);
             this.txtAzTarikh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAzTarikh.Name = "txtAzTarikh";
             this.txtAzTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -417,7 +417,7 @@
             this.panelControl0.Location = new System.Drawing.Point(0, 0);
             this.panelControl0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl0.Name = "panelControl0";
-            this.panelControl0.Size = new System.Drawing.Size(1621, 97);
+            this.panelControl0.Size = new System.Drawing.Size(1473, 97);
             this.panelControl0.TabIndex = 75;
             // 
             // gridControl_MeghdariVRiali
@@ -429,7 +429,7 @@
             this.gridControl_MeghdariVRiali.MainView = this.bandedGridView_MeghdariVRiali;
             this.gridControl_MeghdariVRiali.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl_MeghdariVRiali.Name = "gridControl_MeghdariVRiali";
-            this.gridControl_MeghdariVRiali.Size = new System.Drawing.Size(1617, 577);
+            this.gridControl_MeghdariVRiali.Size = new System.Drawing.Size(1469, 577);
             this.gridControl_MeghdariVRiali.TabIndex = 37;
             this.gridControl_MeghdariVRiali.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView_MeghdariVRiali});
@@ -835,14 +835,14 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 97);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1621, 581);
+            this.panelControl1.Size = new System.Drawing.Size(1473, 581);
             this.panelControl1.TabIndex = 80;
             // 
             // FrmMojodiAnbarVKala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1621, 678);
+            this.ClientSize = new System.Drawing.Size(1473, 678);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl0);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmMojodiAnbarVKala.IconOptions.Icon")));

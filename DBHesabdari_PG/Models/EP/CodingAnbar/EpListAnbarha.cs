@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBHesabdari_PG.Models.AK;
+using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -36,10 +38,23 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [Required]
         public int TafsiliId3 { get; set; }
         public string TabagheKalaId { get; set; }
+        public string TabagheKalaName { get; set; }
+
+
         [NotMapped]
         public string TabagheKalaIdName_NM { get; set; }
 
         public virtual ICollection<R_EpListAnbarha_B_EpTabaghehKala> R_EpListAnbarha_B_EpTabaghehKalas { get; set; }
+        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh1s { get; set; }
+        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh2s { get; set; }
+        public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Riz1s { get; set; }
+        public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Riz2s { get; set; }
+        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz1s { get; set; }
+        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz2s { get; set; }
+        public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili2 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili3 { get; set; }
 
     }
 

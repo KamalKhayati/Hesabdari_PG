@@ -657,6 +657,9 @@
             this.cmbHesabTabagheh_3.Name = "cmbHesabTabagheh_3";
             this.cmbHesabTabagheh_3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbHesabTabagheh_3.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTabagheh_3.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbHesabTabagheh_3.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbHesabTabagheh_3.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbHesabTabagheh_3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbHesabTabagheh_3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -669,7 +672,10 @@
             this.cmbHesabTabagheh_3.Properties.DropDownRows = 10;
             this.cmbHesabTabagheh_3.Properties.ImmediatePopup = true;
             this.cmbHesabTabagheh_3.Properties.NullText = "";
+            this.cmbHesabTabagheh_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabTabagheh_3.Properties.PopupWidth = 545;
+            this.cmbHesabTabagheh_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbHesabTabagheh_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHesabTabagheh_3.Properties.ValueMember = "Id";
             this.cmbHesabTabagheh_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_3.Size = new System.Drawing.Size(460, 34);
@@ -754,6 +760,9 @@
             this.cmbListHesabGroup_3.Name = "cmbListHesabGroup_3";
             this.cmbListHesabGroup_3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbListHesabGroup_3.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbListHesabGroup_3.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbListHesabGroup_3.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbListHesabGroup_3.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbListHesabGroup_3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbListHesabGroup_3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -766,7 +775,10 @@
             this.cmbListHesabGroup_3.Properties.DropDownRows = 10;
             this.cmbListHesabGroup_3.Properties.ImmediatePopup = true;
             this.cmbListHesabGroup_3.Properties.NullText = "";
+            this.cmbListHesabGroup_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbListHesabGroup_3.Properties.PopupWidth = 545;
+            this.cmbListHesabGroup_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbListHesabGroup_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbListHesabGroup_3.Properties.ValueMember = "Id";
             this.cmbListHesabGroup_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup_3.Size = new System.Drawing.Size(460, 34);
@@ -1076,6 +1088,9 @@
             this.cmbHesabTabagheh_2.Name = "cmbHesabTabagheh_2";
             this.cmbHesabTabagheh_2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbHesabTabagheh_2.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTabagheh_2.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbHesabTabagheh_2.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbHesabTabagheh_2.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbHesabTabagheh_2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbHesabTabagheh_2.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1088,6 +1103,9 @@
             this.cmbHesabTabagheh_2.Properties.DropDownRows = 10;
             this.cmbHesabTabagheh_2.Properties.ImmediatePopup = true;
             this.cmbHesabTabagheh_2.Properties.NullText = "";
+            this.cmbHesabTabagheh_2.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbHesabTabagheh_2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbHesabTabagheh_2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHesabTabagheh_2.Properties.ValueMember = "Id";
             this.cmbHesabTabagheh_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_2.Size = new System.Drawing.Size(447, 34);
@@ -2201,7 +2219,7 @@
             this.colSelectedGroupTafsiliLevel1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSelectedGroupTafsiliLevel1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colSelectedGroupTafsiliLevel1.Caption = "ارتباط معین با گروه های تفصیلی";
-            this.colSelectedGroupTafsiliLevel1.FieldName = "SelectedGroupTafsiliLevel1";
+            this.colSelectedGroupTafsiliLevel1.FieldName = "SelectedGroupTafsiliLevels";
             this.colSelectedGroupTafsiliLevel1.MinWidth = 22;
             this.colSelectedGroupTafsiliLevel1.Name = "colSelectedGroupTafsiliLevel1";
             this.colSelectedGroupTafsiliLevel1.Visible = true;
@@ -2483,6 +2501,9 @@
             this.cmbHesabTabagheh_4.Name = "cmbHesabTabagheh_4";
             this.cmbHesabTabagheh_4.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbHesabTabagheh_4.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTabagheh_4.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbHesabTabagheh_4.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbHesabTabagheh_4.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbHesabTabagheh_4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbHesabTabagheh_4.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -2495,7 +2516,10 @@
             this.cmbHesabTabagheh_4.Properties.DropDownRows = 10;
             this.cmbHesabTabagheh_4.Properties.ImmediatePopup = true;
             this.cmbHesabTabagheh_4.Properties.NullText = "";
+            this.cmbHesabTabagheh_4.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabTabagheh_4.Properties.PopupWidth = 545;
+            this.cmbHesabTabagheh_4.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbHesabTabagheh_4.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHesabTabagheh_4.Properties.ValueMember = "Id";
             this.cmbHesabTabagheh_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_4.Size = new System.Drawing.Size(418, 34);
@@ -2616,6 +2640,9 @@
             this.cmbListHesabGroup_4.Name = "cmbListHesabGroup_4";
             this.cmbListHesabGroup_4.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbListHesabGroup_4.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbListHesabGroup_4.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbListHesabGroup_4.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbListHesabGroup_4.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbListHesabGroup_4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbListHesabGroup_4.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -2628,7 +2655,10 @@
             this.cmbListHesabGroup_4.Properties.DropDownRows = 10;
             this.cmbListHesabGroup_4.Properties.ImmediatePopup = true;
             this.cmbListHesabGroup_4.Properties.NullText = "";
+            this.cmbListHesabGroup_4.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbListHesabGroup_4.Properties.PopupWidth = 545;
+            this.cmbListHesabGroup_4.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbListHesabGroup_4.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbListHesabGroup_4.Properties.ValueMember = "Id";
             this.cmbListHesabGroup_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup_4.Size = new System.Drawing.Size(418, 34);
@@ -2694,6 +2724,9 @@
             this.cmbListHesabCol_4.Name = "cmbListHesabCol_4";
             this.cmbListHesabCol_4.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbListHesabCol_4.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbListHesabCol_4.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbListHesabCol_4.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbListHesabCol_4.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbListHesabCol_4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbListHesabCol_4.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -2706,7 +2739,10 @@
             this.cmbListHesabCol_4.Properties.DropDownRows = 10;
             this.cmbListHesabCol_4.Properties.ImmediatePopup = true;
             this.cmbListHesabCol_4.Properties.NullText = "";
+            this.cmbListHesabCol_4.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbListHesabCol_4.Properties.PopupWidth = 636;
+            this.cmbListHesabCol_4.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbListHesabCol_4.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbListHesabCol_4.Properties.ValueMember = "Id";
             this.cmbListHesabCol_4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabCol_4.Size = new System.Drawing.Size(418, 34);
@@ -2800,7 +2836,7 @@
             this.xtraTabPage2.Controls.Add(this.xtraTabControl2);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1050, 245);
-            this.xtraTabPage2.Text = "ارتباط معین با سطوح تفضیلی";
+            this.xtraTabPage2.Text = "ارتباط معین با سطوح تفصیلی";
             // 
             // xtraTabControl2
             // 

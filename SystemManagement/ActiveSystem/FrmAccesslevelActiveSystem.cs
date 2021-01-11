@@ -149,7 +149,7 @@ namespace SystemManagement.ActiveSystem
                     {
                         if (item.CheckState == CheckState.Unchecked)
                         {
-                            REpAllCodingHesabdariBMsActiveSystem obj1 = new REpAllCodingHesabdariBMsActiveSystem();
+                            R_EpAllCodingHesabdari_B_MsActiveSystem obj1 = new R_EpAllCodingHesabdari_B_MsActiveSystem();
                             obj1.ActiveSystemId = _ActiveSystemId;
                             obj1.AllCodingHesabdariId = Convert.ToInt32(item.GetValue(colId));
 

@@ -282,7 +282,7 @@ namespace EtelaatePaye.CodingHesabdari
                             catch (DbUpdateException)
                             {
                                 XtraMessageBox.Show("حذف این حساب بانک مقدور نیست \n" +
-                                    " جهت حذف حساب بانک مورد نظر ، در ابتدا بایستی ارتباط این حساب با حساب تفضیلی بانکهای خودمان واشخاص حذف گردد",
+                                    " جهت حذف حساب بانک مورد نظر ، در ابتدا بایستی ارتباط این حساب با حساب تفصیلی بانکهای خودمان واشخاص حذف گردد",
                                     "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             catch (Exception ex)

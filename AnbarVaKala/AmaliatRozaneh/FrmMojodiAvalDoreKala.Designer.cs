@@ -41,6 +41,8 @@
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView_AmaliatAddVaEdit = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTozihat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colKalaId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAzAnbarId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl_AmaliatAddVaEdit = new DevExpress.XtraGrid.GridControl();
             this.akVorodeKala_RizsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -73,6 +75,7 @@
             this.txtSeryal = new DevExpress.XtraEditors.TextEdit();
             this.txtNoeSanad1 = new DevExpress.XtraEditors.TextEdit();
             this.txtNoeAmaliat1 = new DevExpress.XtraEditors.TextEdit();
+            this.epListAnbarhasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridColumn362 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn347 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn345 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,6 +101,7 @@
             this.gridColumn328 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn329 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn330 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
@@ -143,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatRozaneh)).BeginInit();
             this.xtcAmaliatRozaneh.SuspendLayout();
             this.xtpMojodiAvalDore.SuspendLayout();
@@ -317,7 +322,9 @@
             this.colMeghdar,
             this.colNerkh,
             this.colMablag,
-            this.colTozihat});
+            this.colTozihat,
+            this.colKalaId,
+            this.colAzAnbarId});
             this.gridView_AmaliatAddVaEdit.DetailHeight = 341;
             this.gridView_AmaliatAddVaEdit.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_AmaliatAddVaEdit.GridControl = this.gridControl_AmaliatAddVaEdit;
@@ -357,6 +364,20 @@
             this.colTozihat.VisibleIndex = 6;
             this.colTozihat.Width = 455;
             // 
+            // colKalaId
+            // 
+            this.colKalaId.FieldName = "KalaId";
+            this.colKalaId.MinWidth = 25;
+            this.colKalaId.Name = "colKalaId";
+            this.colKalaId.Width = 94;
+            // 
+            // colAzAnbarId
+            // 
+            this.colAzAnbarId.FieldName = "AzAnbarId";
+            this.colAzAnbarId.MinWidth = 25;
+            this.colAzAnbarId.Name = "colAzAnbarId";
+            this.colAzAnbarId.Width = 94;
+            // 
             // gridControl_AmaliatAddVaEdit
             // 
             this.gridControl_AmaliatAddVaEdit.DataSource = this.akVorodeKala_RizsBindingSource;
@@ -366,7 +387,7 @@
             this.gridControl_AmaliatAddVaEdit.MainView = this.gridView_AmaliatAddVaEdit;
             this.gridControl_AmaliatAddVaEdit.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl_AmaliatAddVaEdit.Name = "gridControl_AmaliatAddVaEdit";
-            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1360, 425);
+            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1490, 421);
             this.gridControl_AmaliatAddVaEdit.TabIndex = 37;
             this.gridControl_AmaliatAddVaEdit.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AmaliatAddVaEdit});
@@ -379,9 +400,9 @@
             // 
             this.panelControl1.Controls.Add(this.gridControl_AmaliatAddVaEdit);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 153);
+            this.panelControl1.Location = new System.Drawing.Point(0, 157);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1364, 429);
+            this.panelControl1.Size = new System.Drawing.Size(1494, 425);
             this.panelControl1.TabIndex = 3;
             // 
             // xtpAmaliatAddVEdit
@@ -390,7 +411,7 @@
             this.xtpAmaliatAddVEdit.Controls.Add(this.panelControl_AddVaEdit);
             this.xtpAmaliatAddVEdit.Name = "xtpAmaliatAddVEdit";
             this.xtpAmaliatAddVEdit.PageVisible = false;
-            this.xtpAmaliatAddVEdit.Size = new System.Drawing.Size(1364, 582);
+            this.xtpAmaliatAddVEdit.Size = new System.Drawing.Size(1494, 582);
             this.xtpAmaliatAddVEdit.Text = "عملیات موجودی اول دوره";
             // 
             // panelControl_AddVaEdit
@@ -425,7 +446,7 @@
             this.panelControl_AddVaEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl_AddVaEdit.Location = new System.Drawing.Point(0, 0);
             this.panelControl_AddVaEdit.Name = "panelControl_AddVaEdit";
-            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1364, 153);
+            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1494, 157);
             this.panelControl_AddVaEdit.TabIndex = 2;
             // 
             // labelControl4
@@ -433,7 +454,7 @@
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(1286, 81);
+            this.labelControl4.Location = new System.Drawing.Point(1416, 82);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(62, 27);
@@ -446,7 +467,7 @@
             this.btnReloadHesabTafsili3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadHesabTafsili3.Appearance.Options.UseForeColor = true;
             this.btnReloadHesabTafsili3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabTafsili3.ImageOptions.SvgImage")));
-            this.btnReloadHesabTafsili3.Location = new System.Drawing.Point(81, 115);
+            this.btnReloadHesabTafsili3.Location = new System.Drawing.Point(8, 117);
             this.btnReloadHesabTafsili3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadHesabTafsili3.Name = "btnReloadHesabTafsili3";
             this.btnReloadHesabTafsili3.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -461,11 +482,14 @@
             // 
             this.cmbHesabTafsili3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbHesabTafsili3.EnterMoveNextControl = true;
-            this.cmbHesabTafsili3.Location = new System.Drawing.Point(127, 115);
+            this.cmbHesabTafsili3.Location = new System.Drawing.Point(60, 115);
             this.cmbHesabTafsili3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbHesabTafsili3.Name = "cmbHesabTafsili3";
             this.cmbHesabTafsili3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbHesabTafsili3.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTafsili3.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbHesabTafsili3.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbHesabTafsili3.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbHesabTafsili3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbHesabTafsili3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -482,11 +506,12 @@
             this.cmbHesabTafsili3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabTafsili3.Properties.PopupWidth = 636;
             this.cmbHesabTafsili3.Properties.ReadOnly = true;
+            this.cmbHesabTafsili3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbHesabTafsili3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHesabTafsili3.Properties.ValueMember = "Id";
             this.cmbHesabTafsili3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbHesabTafsili3.Size = new System.Drawing.Size(430, 34);
-            this.cmbHesabTafsili3.TabIndex = 5;
+            this.cmbHesabTafsili3.Size = new System.Drawing.Size(553, 34);
+            this.cmbHesabTafsili3.TabIndex = 6;
             this.cmbHesabTafsili3.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbHesabTafsili3.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbHesabTafsili3.Enter += new System.EventHandler(this.cmbHesabTafsili3_Enter);
@@ -496,7 +521,7 @@
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(564, 118);
+            this.labelControl5.Location = new System.Drawing.Point(620, 118);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(138, 27);
@@ -509,7 +534,7 @@
             this.btnReloadHesabTafsili2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadHesabTafsili2.Appearance.Options.UseForeColor = true;
             this.btnReloadHesabTafsili2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabTafsili2.ImageOptions.SvgImage")));
-            this.btnReloadHesabTafsili2.Location = new System.Drawing.Point(81, 78);
+            this.btnReloadHesabTafsili2.Location = new System.Drawing.Point(8, 80);
             this.btnReloadHesabTafsili2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadHesabTafsili2.Name = "btnReloadHesabTafsili2";
             this.btnReloadHesabTafsili2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -524,11 +549,14 @@
             // 
             this.cmbHesabTafsili2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbHesabTafsili2.EnterMoveNextControl = true;
-            this.cmbHesabTafsili2.Location = new System.Drawing.Point(127, 78);
+            this.cmbHesabTafsili2.Location = new System.Drawing.Point(60, 78);
             this.cmbHesabTafsili2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbHesabTafsili2.Name = "cmbHesabTafsili2";
             this.cmbHesabTafsili2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbHesabTafsili2.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTafsili2.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbHesabTafsili2.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbHesabTafsili2.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbHesabTafsili2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbHesabTafsili2.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -545,11 +573,12 @@
             this.cmbHesabTafsili2.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabTafsili2.Properties.PopupWidth = 636;
             this.cmbHesabTafsili2.Properties.ReadOnly = true;
+            this.cmbHesabTafsili2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbHesabTafsili2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHesabTafsili2.Properties.ValueMember = "Id";
             this.cmbHesabTafsili2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbHesabTafsili2.Size = new System.Drawing.Size(430, 34);
-            this.cmbHesabTafsili2.TabIndex = 4;
+            this.cmbHesabTafsili2.Size = new System.Drawing.Size(553, 34);
+            this.cmbHesabTafsili2.TabIndex = 5;
             this.cmbHesabTafsili2.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbHesabTafsili2.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbHesabTafsili2.Enter += new System.EventHandler(this.cmbHesabTafsili2_Enter);
@@ -559,7 +588,7 @@
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(567, 81);
+            this.labelControl2.Location = new System.Drawing.Point(623, 81);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(135, 27);
@@ -571,7 +600,7 @@
             this.txtSharhSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhSanad.EditValue = "";
             this.txtSharhSanad.EnterMoveNextControl = true;
-            this.txtSharhSanad.Location = new System.Drawing.Point(719, 78);
+            this.txtSharhSanad.Location = new System.Drawing.Point(774, 79);
             this.txtSharhSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSharhSanad.Name = "txtSharhSanad";
             this.txtSharhSanad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -580,18 +609,21 @@
             this.txtSharhSanad.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtSharhSanad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtSharhSanad.Properties.MaxLength = 500;
-            this.txtSharhSanad.Size = new System.Drawing.Size(564, 36);
-            this.txtSharhSanad.TabIndex = 1;
+            this.txtSharhSanad.Size = new System.Drawing.Size(639, 36);
+            this.txtSharhSanad.TabIndex = 2;
             // 
             // cmbHesabTafsili1
             // 
             this.cmbHesabTafsili1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbHesabTafsili1.EnterMoveNextControl = true;
-            this.cmbHesabTafsili1.Location = new System.Drawing.Point(128, 41);
+            this.cmbHesabTafsili1.Location = new System.Drawing.Point(60, 41);
             this.cmbHesabTafsili1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbHesabTafsili1.Name = "cmbHesabTafsili1";
             this.cmbHesabTafsili1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbHesabTafsili1.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabTafsili1.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbHesabTafsili1.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbHesabTafsili1.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbHesabTafsili1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbHesabTafsili1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -608,11 +640,12 @@
             this.cmbHesabTafsili1.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabTafsili1.Properties.PopupWidth = 591;
             this.cmbHesabTafsili1.Properties.ReadOnly = true;
+            this.cmbHesabTafsili1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbHesabTafsili1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHesabTafsili1.Properties.ValueMember = "Id";
             this.cmbHesabTafsili1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbHesabTafsili1.Size = new System.Drawing.Size(430, 34);
-            this.cmbHesabTafsili1.TabIndex = 3;
+            this.cmbHesabTafsili1.Size = new System.Drawing.Size(554, 34);
+            this.cmbHesabTafsili1.TabIndex = 4;
             this.cmbHesabTafsili1.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbHesabTafsili1.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbHesabTafsili1.Enter += new System.EventHandler(this.cmbHesabTafsili_Enter);
@@ -629,10 +662,10 @@
             this.lblSanadNamber.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblSanadNamber.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblSanadNamber.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblSanadNamber.Location = new System.Drawing.Point(719, 5);
+            this.lblSanadNamber.Location = new System.Drawing.Point(774, 42);
             this.lblSanadNamber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblSanadNamber.Name = "lblSanadNamber";
-            this.lblSanadNamber.Size = new System.Drawing.Size(158, 32);
+            this.lblSanadNamber.Size = new System.Drawing.Size(176, 32);
             this.lblSanadNamber.TabIndex = 163;
             this.lblSanadNamber.Text = ".............";
             // 
@@ -641,7 +674,7 @@
             this.chkIsSanadHesabdari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsSanadHesabdari.EditValue = true;
             this.chkIsSanadHesabdari.EnterMoveNextControl = true;
-            this.chkIsSanadHesabdari.Location = new System.Drawing.Point(884, 4);
+            this.chkIsSanadHesabdari.Location = new System.Drawing.Point(958, 42);
             this.chkIsSanadHesabdari.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chkIsSanadHesabdari.Name = "chkIsSanadHesabdari";
             this.chkIsSanadHesabdari.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -650,7 +683,7 @@
             this.chkIsSanadHesabdari.Properties.Caption = "سند حسابداری";
             this.chkIsSanadHesabdari.Properties.ReadOnly = true;
             this.chkIsSanadHesabdari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkIsSanadHesabdari.Size = new System.Drawing.Size(151, 35);
+            this.chkIsSanadHesabdari.Size = new System.Drawing.Size(132, 35);
             this.chkIsSanadHesabdari.TabIndex = 162;
             // 
             // labelControl3
@@ -658,7 +691,7 @@
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(1043, 44);
+            this.labelControl3.Location = new System.Drawing.Point(1098, 7);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 27);
@@ -670,7 +703,7 @@
             this.txtNoeSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoeSanad.EditValue = "";
             this.txtNoeSanad.EnterMoveNextControl = true;
-            this.txtNoeSanad.Location = new System.Drawing.Point(719, 41);
+            this.txtNoeSanad.Location = new System.Drawing.Point(774, 4);
             this.txtNoeSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeSanad.Name = "txtNoeSanad";
             this.txtNoeSanad.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -689,12 +722,12 @@
             // 
             this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnInsert.ImageOptions.SvgImage")));
-            this.btnInsert.Location = new System.Drawing.Point(1240, 115);
+            this.btnInsert.Location = new System.Drawing.Point(1370, 117);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnInsert.Size = new System.Drawing.Size(43, 33);
-            this.btnInsert.TabIndex = 6;
+            this.btnInsert.TabIndex = 7;
             this.btnInsert.ToolTip = "جدید";
             this.btnInsert.ToolTipTitle = "F2";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -704,7 +737,7 @@
             this.btnEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit1.Enabled = false;
             this.btnEdit1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit1.ImageOptions.SvgImage")));
-            this.btnEdit1.Location = new System.Drawing.Point(1126, 115);
+            this.btnEdit1.Location = new System.Drawing.Point(1256, 117);
             this.btnEdit1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEdit1.Name = "btnEdit1";
             this.btnEdit1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -719,7 +752,7 @@
             this.btnDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete1.Enabled = false;
             this.btnDelete1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete1.ImageOptions.SvgImage")));
-            this.btnDelete1.Location = new System.Drawing.Point(1183, 115);
+            this.btnDelete1.Location = new System.Drawing.Point(1313, 117);
             this.btnDelete1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete1.Name = "btnDelete1";
             this.btnDelete1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -735,7 +768,7 @@
             this.btnReloadHesabMoin.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadHesabMoin.Appearance.Options.UseForeColor = true;
             this.btnReloadHesabMoin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabMoin.ImageOptions.SvgImage")));
-            this.btnReloadHesabMoin.Location = new System.Drawing.Point(81, 4);
+            this.btnReloadHesabMoin.Location = new System.Drawing.Point(8, 6);
             this.btnReloadHesabMoin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadHesabMoin.Name = "btnReloadHesabMoin";
             this.btnReloadHesabMoin.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -750,7 +783,7 @@
             this.lblHesabMoin.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblHesabMoin.Appearance.Options.UseForeColor = true;
             this.lblHesabMoin.AutoEllipsis = true;
-            this.lblHesabMoin.Location = new System.Drawing.Point(568, 9);
+            this.lblHesabMoin.Location = new System.Drawing.Point(624, 9);
             this.lblHesabMoin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblHesabMoin.Name = "lblHesabMoin";
             this.lblHesabMoin.Size = new System.Drawing.Size(87, 27);
@@ -761,11 +794,14 @@
             // 
             this.cmbHesabMoin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbHesabMoin.EnterMoveNextControl = true;
-            this.cmbHesabMoin.Location = new System.Drawing.Point(127, 5);
+            this.cmbHesabMoin.Location = new System.Drawing.Point(59, 5);
             this.cmbHesabMoin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbHesabMoin.Name = "cmbHesabMoin";
             this.cmbHesabMoin.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbHesabMoin.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbHesabMoin.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbHesabMoin.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbHesabMoin.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbHesabMoin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbHesabMoin.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -780,10 +816,12 @@
             this.cmbHesabMoin.Properties.NullText = "";
             this.cmbHesabMoin.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabMoin.Properties.PopupWidth = 591;
+            this.cmbHesabMoin.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbHesabMoin.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbHesabMoin.Properties.ValueMember = "Id";
             this.cmbHesabMoin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbHesabMoin.Size = new System.Drawing.Size(431, 34);
-            this.cmbHesabMoin.TabIndex = 2;
+            this.cmbHesabMoin.Size = new System.Drawing.Size(555, 34);
+            this.cmbHesabMoin.TabIndex = 3;
             this.cmbHesabMoin.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbHesabMoin.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbHesabMoin.EditValueChanged += new System.EventHandler(this.cmbHesabMoin_EditValueChanged);
@@ -795,7 +833,7 @@
             this.btnReloadHesabTafsili.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadHesabTafsili.Appearance.Options.UseForeColor = true;
             this.btnReloadHesabTafsili.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabTafsili.ImageOptions.SvgImage")));
-            this.btnReloadHesabTafsili.Location = new System.Drawing.Point(81, 41);
+            this.btnReloadHesabTafsili.Location = new System.Drawing.Point(8, 43);
             this.btnReloadHesabTafsili.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadHesabTafsili.Name = "btnReloadHesabTafsili";
             this.btnReloadHesabTafsili.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -809,7 +847,7 @@
             this.lblHesabTafsili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHesabTafsili.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblHesabTafsili.Appearance.Options.UseForeColor = true;
-            this.lblHesabTafsili.Location = new System.Drawing.Point(567, 44);
+            this.lblHesabTafsili.Location = new System.Drawing.Point(623, 44);
             this.lblHesabTafsili.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblHesabTafsili.Name = "lblHesabTafsili";
             this.lblHesabTafsili.Size = new System.Drawing.Size(132, 27);
@@ -822,7 +860,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl7.Appearance.Options.UseForeColor = true;
             this.labelControl7.AutoEllipsis = true;
-            this.labelControl7.Location = new System.Drawing.Point(1290, 44);
+            this.labelControl7.Location = new System.Drawing.Point(1421, 45);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(36, 27);
@@ -833,7 +871,7 @@
             // 
             this.txtTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTarikh.EnterMoveNextControl = true;
-            this.txtTarikh.Location = new System.Drawing.Point(1126, 41);
+            this.txtTarikh.Location = new System.Drawing.Point(1257, 42);
             this.txtTarikh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTarikh.Name = "txtTarikh";
             this.txtTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -844,7 +882,7 @@
             this.txtTarikh.Properties.Mask.BeepOnError = true;
             this.txtTarikh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTarikh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTarikh.Size = new System.Drawing.Size(156, 34);
+            this.txtTarikh.Size = new System.Drawing.Size(155, 34);
             this.txtTarikh.TabIndex = 0;
             // 
             // labelControl1
@@ -852,7 +890,7 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(1292, 8);
+            this.labelControl1.Location = new System.Drawing.Point(1422, 8);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(41, 27);
@@ -864,7 +902,7 @@
             this.txtSeryal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSeryal.EditValue = "";
             this.txtSeryal.EnterMoveNextControl = true;
-            this.txtSeryal.Location = new System.Drawing.Point(1126, 6);
+            this.txtSeryal.Location = new System.Drawing.Point(1257, 6);
             this.txtSeryal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSeryal.Name = "txtSeryal";
             this.txtSeryal.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -875,7 +913,7 @@
             this.txtSeryal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSeryal.Properties.MaxLength = 4;
             this.txtSeryal.Properties.ReadOnly = true;
-            this.txtSeryal.Size = new System.Drawing.Size(156, 34);
+            this.txtSeryal.Size = new System.Drawing.Size(155, 34);
             this.txtSeryal.TabIndex = 29;
             this.txtSeryal.TabStop = false;
             // 
@@ -885,7 +923,7 @@
             this.txtNoeSanad1.EditValue = "";
             this.txtNoeSanad1.Enabled = false;
             this.txtNoeSanad1.EnterMoveNextControl = true;
-            this.txtNoeSanad1.Location = new System.Drawing.Point(818, 41);
+            this.txtNoeSanad1.Location = new System.Drawing.Point(878, 4);
             this.txtNoeSanad1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeSanad1.Name = "txtNoeSanad1";
             this.txtNoeSanad1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -904,7 +942,7 @@
             this.txtNoeAmaliat1.EditValue = "";
             this.txtNoeAmaliat1.Enabled = false;
             this.txtNoeAmaliat1.EnterMoveNextControl = true;
-            this.txtNoeAmaliat1.Location = new System.Drawing.Point(863, 41);
+            this.txtNoeAmaliat1.Location = new System.Drawing.Point(923, 4);
             this.txtNoeAmaliat1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeAmaliat1.Name = "txtNoeAmaliat1";
             this.txtNoeAmaliat1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -916,6 +954,10 @@
             this.txtNoeAmaliat1.TabIndex = 165;
             this.txtNoeAmaliat1.TabStop = false;
             this.txtNoeAmaliat1.Visible = false;
+            // 
+            // epListAnbarhasBindingSource1
+            // 
+            this.epListAnbarhasBindingSource1.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpListAnbarha);
             // 
             // gridColumn362
             // 
@@ -1194,7 +1236,7 @@
             this.xtcAmaliatRozaneh.Location = new System.Drawing.Point(0, 55);
             this.xtcAmaliatRozaneh.Name = "xtcAmaliatRozaneh";
             this.xtcAmaliatRozaneh.SelectedTabPage = this.xtpMojodiAvalDore;
-            this.xtcAmaliatRozaneh.Size = new System.Drawing.Size(1366, 623);
+            this.xtcAmaliatRozaneh.Size = new System.Drawing.Size(1496, 623);
             this.xtcAmaliatRozaneh.TabIndex = 68;
             this.xtcAmaliatRozaneh.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpMojodiAvalDore,
@@ -1205,7 +1247,7 @@
             // 
             this.xtpMojodiAvalDore.Controls.Add(this.gridControl_MojodiAvalDore);
             this.xtpMojodiAvalDore.Name = "xtpMojodiAvalDore";
-            this.xtpMojodiAvalDore.Size = new System.Drawing.Size(1364, 582);
+            this.xtpMojodiAvalDore.Size = new System.Drawing.Size(1494, 582);
             this.xtpMojodiAvalDore.Text = "موجودی اول دوره";
             // 
             // gridControl_MojodiAvalDore
@@ -1216,7 +1258,7 @@
             this.gridControl_MojodiAvalDore.MainView = this.gridView_MojodiAvalDore;
             this.gridControl_MojodiAvalDore.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl_MojodiAvalDore.Name = "gridControl_MojodiAvalDore";
-            this.gridControl_MojodiAvalDore.Size = new System.Drawing.Size(1364, 582);
+            this.gridControl_MojodiAvalDore.Size = new System.Drawing.Size(1494, 582);
             this.gridControl_MojodiAvalDore.TabIndex = 37;
             this.gridControl_MojodiAvalDore.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_MojodiAvalDore});
@@ -1245,7 +1287,8 @@
             this.gridColumn345,
             this.gridColumn346,
             this.gridColumn347,
-            this.gridColumn362});
+            this.gridColumn362,
+            this.gridColumn1});
             this.gridView_MojodiAvalDore.DetailHeight = 341;
             this.gridView_MojodiAvalDore.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_MojodiAvalDore.GridControl = this.gridControl_MojodiAvalDore;
@@ -1328,6 +1371,14 @@
             this.gridColumn330.VisibleIndex = 2;
             this.gridColumn330.Width = 122;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "gridColumn1";
+            this.gridColumn1.FieldName = "AzAnbarId";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Width = 94;
+            // 
             // lblUserId
             // 
             this.lblUserId.Location = new System.Drawing.Point(60, 208);
@@ -1387,15 +1438,14 @@
             this.panelControl_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl_Button.Location = new System.Drawing.Point(2, 2);
             this.panelControl_Button.Name = "panelControl_Button";
-            this.panelControl_Button.Size = new System.Drawing.Size(741, 51);
+            this.panelControl_Button.Size = new System.Drawing.Size(877, 51);
             this.panelControl_Button.TabIndex = 1;
             // 
             // btnDisplyList
             // 
             this.btnDisplyList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisplyList.Enabled = false;
             this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyList.ImageOptions.SvgImage")));
-            this.btnDisplyList.Location = new System.Drawing.Point(137, 7);
+            this.btnDisplyList.Location = new System.Drawing.Point(273, 7);
             this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDisplyList.Name = "btnDisplyList";
             this.btnDisplyList.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1410,7 +1460,7 @@
             this.btnSaveAndPrintAndClosed.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveAndPrintAndClosed.Enabled = false;
             this.btnSaveAndPrintAndClosed.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndPrintAndClosed.ImageOptions.SvgImage")));
-            this.btnSaveAndPrintAndClosed.Location = new System.Drawing.Point(437, 7);
+            this.btnSaveAndPrintAndClosed.Location = new System.Drawing.Point(573, 7);
             this.btnSaveAndPrintAndClosed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveAndPrintAndClosed.Name = "btnSaveAndPrintAndClosed";
             this.btnSaveAndPrintAndClosed.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1425,7 +1475,7 @@
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Enabled = false;
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(687, 7);
+            this.btnCreate.Location = new System.Drawing.Point(823, 7);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1439,7 +1489,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(37, 7);
+            this.btnClose.Location = new System.Drawing.Point(173, 7);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1455,7 +1505,7 @@
             this.btnNext.Enabled = false;
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(287, 7);
+            this.btnNext.Location = new System.Drawing.Point(423, 7);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNext.Name = "btnNext";
             this.btnNext.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1469,7 +1519,7 @@
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.Enabled = false;
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(337, 7);
+            this.btnLast.Location = new System.Drawing.Point(473, 7);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLast.Name = "btnLast";
             this.btnLast.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1484,7 +1534,7 @@
             this.btnSaveAndNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveAndNext.Enabled = false;
             this.btnSaveAndNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndNext.ImageOptions.SvgImage")));
-            this.btnSaveAndNext.Location = new System.Drawing.Point(487, 7);
+            this.btnSaveAndNext.Location = new System.Drawing.Point(623, 7);
             this.btnSaveAndNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveAndNext.Name = "btnSaveAndNext";
             this.btnSaveAndNext.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1499,7 +1549,7 @@
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.Enabled = false;
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(87, 7);
+            this.btnPrintPreview.Location = new System.Drawing.Point(223, 7);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1516,7 +1566,7 @@
             this.btnPreview.Enabled = false;
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(237, 7);
+            this.btnPreview.Location = new System.Drawing.Point(373, 7);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1530,7 +1580,7 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(587, 7);
+            this.btnEdit.Location = new System.Drawing.Point(723, 7);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1545,7 +1595,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(637, 7);
+            this.btnDelete.Location = new System.Drawing.Point(773, 7);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1560,7 +1610,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(387, 7);
+            this.btnCancel.Location = new System.Drawing.Point(523, 7);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1575,7 +1625,7 @@
             this.btnFirst.Enabled = false;
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(187, 7);
+            this.btnFirst.Location = new System.Drawing.Point(323, 7);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1589,7 +1639,7 @@
             this.btnSaveAndClosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAndClosed.Enabled = false;
             this.btnSaveAndClosed.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndClosed.ImageOptions.SvgImage")));
-            this.btnSaveAndClosed.Location = new System.Drawing.Point(537, 7);
+            this.btnSaveAndClosed.Location = new System.Drawing.Point(673, 7);
             this.btnSaveAndClosed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveAndClosed.Name = "btnSaveAndClosed";
             this.btnSaveAndClosed.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1605,7 +1655,7 @@
             this.btnReloadNameAnbar.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadNameAnbar.Appearance.Options.UseForeColor = true;
             this.btnReloadNameAnbar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadNameAnbar.ImageOptions.SvgImage")));
-            this.btnReloadNameAnbar.Location = new System.Drawing.Point(11, 8);
+            this.btnReloadNameAnbar.Location = new System.Drawing.Point(5, 8);
             this.btnReloadNameAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadNameAnbar.Name = "btnReloadNameAnbar";
             this.btnReloadNameAnbar.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1620,7 +1670,7 @@
             this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl22.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl22.Appearance.Options.UseForeColor = true;
-            this.labelControl22.Location = new System.Drawing.Point(550, 11);
+            this.labelControl22.Location = new System.Drawing.Point(544, 11);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(48, 27);
@@ -1634,16 +1684,16 @@
             this.panelControl_NameAnbar.Controls.Add(this.btnReloadNameAnbar);
             this.panelControl_NameAnbar.Controls.Add(this.labelControl22);
             this.panelControl_NameAnbar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl_NameAnbar.Location = new System.Drawing.Point(743, 2);
+            this.panelControl_NameAnbar.Location = new System.Drawing.Point(879, 2);
             this.panelControl_NameAnbar.Name = "panelControl_NameAnbar";
-            this.panelControl_NameAnbar.Size = new System.Drawing.Size(621, 51);
+            this.panelControl_NameAnbar.Size = new System.Drawing.Size(615, 51);
             this.panelControl_NameAnbar.TabIndex = 0;
             // 
             // cmbNameAnbar
             // 
             this.cmbNameAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameAnbar.EnterMoveNextControl = true;
-            this.cmbNameAnbar.Location = new System.Drawing.Point(66, 8);
+            this.cmbNameAnbar.Location = new System.Drawing.Point(60, 8);
             this.cmbNameAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbNameAnbar.Name = "cmbNameAnbar";
             this.cmbNameAnbar.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
@@ -1671,12 +1721,11 @@
             this.cmbNameAnbar.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbNameAnbar.Properties.ValueMember = "Id";
             this.cmbNameAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameAnbar.Size = new System.Drawing.Size(475, 34);
+            this.cmbNameAnbar.Size = new System.Drawing.Size(474, 34);
             this.cmbNameAnbar.TabIndex = 1;
             this.cmbNameAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbNameAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbNameAnbar.EditValueChanged += new System.EventHandler(this.cmbNameAnbar_EditValueChanged);
-            this.cmbNameAnbar.Enter += new System.EventHandler(this.cmbNameAnbar_Enter_1);
             // 
             // epListAnbarhasBindingSource
             // 
@@ -1698,7 +1747,7 @@
             this.panelControl0.Location = new System.Drawing.Point(0, 0);
             this.panelControl0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl0.Name = "panelControl0";
-            this.panelControl0.Size = new System.Drawing.Size(1366, 55);
+            this.panelControl0.Size = new System.Drawing.Size(1496, 55);
             this.panelControl0.TabIndex = 69;
             // 
             // FrmMojodiAvalDoreKala
@@ -1706,7 +1755,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 678);
+            this.ClientSize = new System.Drawing.Size(1496, 678);
             this.Controls.Add(this.xtcAmaliatRozaneh);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblUserName);
@@ -1743,6 +1792,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatRozaneh)).EndInit();
             this.xtcAmaliatRozaneh.ResumeLayout(false);
             this.xtpMojodiAvalDore.ResumeLayout(false);
@@ -1858,5 +1908,9 @@
         public DevExpress.XtraEditors.LookUpEdit cmbNameAnbar;
         private System.Windows.Forms.BindingSource epListAnbarhasBindingSource;
         private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.BindingSource epListAnbarhasBindingSource1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colAzAnbarId;
+        private DevExpress.XtraGrid.Columns.GridColumn colKalaId;
     }
 }

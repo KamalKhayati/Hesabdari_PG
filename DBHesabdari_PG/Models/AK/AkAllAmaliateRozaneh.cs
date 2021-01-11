@@ -1,4 +1,5 @@
 ﻿using DBHesabdari_PG.Models.EP.CodingAnbar;
+using DBHesabdari_PG.Models.EP.CodingHesabdari;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,8 +23,25 @@ namespace DBHesabdari_PG.Models.AK
         public int KalaId { get; set; }
         [Required]
         public int VahedeKalaId { get; set; }
+
         [Required]
-        public int Seryal { get; set; }
+        public int Seryal_darColAnbarha { get; set; }
+        [Required]
+        public int Seryal_darSelectAnbar { get; set; }
+        [Required]
+        public int Seryal_darSelectNoe { get; set; }
+        //[Required]
+        public int? GhateySanadNamber { get; set; }
+        [Required]
+        public int SabetAtefNumber { get; set; }
+        [Required]
+        public int RozaneSanadNumber { get; set; }
+        //[Required]
+        public int? PaygiriNumber { get; set; }
+
+
+        //[Required]
+        //public int Seryal_darSelectNoe { get; set; }
         [Required]
         public int NoeAmaliatCode { get; set; }
         [Required]
@@ -40,8 +58,8 @@ namespace DBHesabdari_PG.Models.AK
         //public bool IsMeghdari { get; set; }
         [Required]
         public bool IsRiali { get; set; }
-        [Required]
-        public int SanadNamber { get; set; }
+        //[Required]
+        //public int RozaneSanadNumber { get; set; }
         [Required]
         public int HesabMoinId { get; set; }
         [Required]
@@ -104,21 +122,29 @@ namespace DBHesabdari_PG.Models.AK
 
         public virtual AkVorodeKala_Riz AkVorodeKala_Riz1 { get; set; }
         public virtual AkKhorojeKala_Riz AkKhorojeKala_Riz1 { get; set; }
-        public virtual ICollection<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }
+        public virtual EpListAnbarha EpListAnbarha1 { get; set; }
+        public virtual EpListAnbarha EpListAnbarha2 { get; set; }
+        public virtual EpVahedKala EpVahedKala1 { get; set; }
+        public virtual EpNameKala EpNameKala1 { get; set; }
+        public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili2 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili3 { get; set; }
+        //public virtual ICollection<R_EpAllCodingKala_B_AkAllAmaliateRozaneh> R_EpAllCodingKala_B_AkAllAmaliateRozanehs { get; set; }
     }
 
-    public class R_EpAllCodingKala_B_AkAllAmaliateRozaneh
-    {
-        [Required, Column(Order = 0)]
-        public int SalId { get; set; }
-        [Key]
-        [Required, Column(Order = 1)]
-        public int KalaId { get; set; }
-        [Key]
-        [Required, Column(Order = 2)]
-        public long AmaliatId { get; set; }
+    //public class R_EpAllCodingKala_B_AkAllAmaliateRozaneh
+    //{
+    //    [Required, Column(Order = 0)]
+    //    public int SalId { get; set; }
+    //    [Key]
+    //    [Required, Column(Order = 1)]
+    //    public int KalaId { get; set; }
+    //    [Key]
+    //    [Required, Column(Order = 2)]
+    //    public long AmaliatId { get; set; }
 
-        public virtual AkAllAmaliateRozaneh AkAllAmaliateRozaneh1 { get; set; }
-        public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
-    }
+    //    public virtual AkAllAmaliateRozaneh AkAllAmaliateRozaneh1 { get; set; }
+    //    public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }
+    //}
 }

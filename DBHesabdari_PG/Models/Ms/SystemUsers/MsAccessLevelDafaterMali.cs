@@ -32,7 +32,7 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public int ShobeId { get; set; }
         public int DoreMaliId { get; set; }
         public bool IsActive { get; set; }
-        public virtual ICollection<RmsUserBmsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
+        public virtual ICollection<R_MsUser_B_MsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
 
     }
 }

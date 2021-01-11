@@ -397,7 +397,7 @@ namespace SystemManagement.UsersSystem
                     {
                         if (item.CheckState == CheckState.Unchecked)
                         {
-                            RmsUserBmsAccessLevelDafaterMali obj1 = new RmsUserBmsAccessLevelDafaterMali();
+                            R_MsUser_B_MsAccessLevelDafaterMali obj1 = new R_MsUser_B_MsAccessLevelDafaterMali();
                             obj1.MsUserId = _UserId;
                             obj1.Name = cmbUsersList.Edit.GetDisplayText(cmbUsersList.EditValue);
                             obj1.MsAccessLevelDafaterMaliId = Convert.ToInt32(item.GetValue(colMsAccessLevelDafaterMaliId1));

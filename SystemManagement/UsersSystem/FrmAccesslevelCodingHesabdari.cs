@@ -100,7 +100,7 @@ namespace SystemManagement.UsersSystem
                     {
                         if (item.CheckState == CheckState.Unchecked)
                         {
-                            RmsUserBallCodingHesabdari obj1 = new RmsUserBallCodingHesabdari();
+                            R_MsUser_B_AllCodingHesabdari obj1 = new R_MsUser_B_AllCodingHesabdari();
                             obj1.UserId = _UserId;
                             obj1.CodingHesabdariId = Convert.ToInt32(item.GetValue(colId2));
                             obj1.KeyCode = Convert.ToInt32(item.GetValue(colKeyId2));

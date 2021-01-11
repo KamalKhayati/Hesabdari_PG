@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DBHesabdari_PG.Models.EP.CodingAnbar;
+using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -30,8 +32,25 @@ namespace DBHesabdari_PG.Models.AK
         public int AzAnbarId { get; set; }
         [Required]
         public int BeAnbarId { get; set; }
+        //[Required]
+        //public int Seryal_darSelectNoe { get; set; }
+
         [Required]
-        public int Seryal { get; set; }
+        public int Seryal_darColAnbarha { get; set; }
+        [Required]
+        public int Seryal_darSelectAnbar { get; set; }
+        [Required]
+        public int Seryal_darSelectNoe { get; set; }
+        //[Required]
+        public int? GhateySanadNamber { get; set; }
+        [Required]
+        public int SabetAtefNumber { get; set; }
+        [Required]
+        public int RozaneSanadNumber { get; set; }
+        //[Required]
+        public int? PaygiriNumber { get; set; }
+
+
         [Required]
         public DateTime DateTimeSanad { get; set; }
         [Required]
@@ -53,8 +72,8 @@ namespace DBHesabdari_PG.Models.AK
         //public bool IsMeghdari { get; set; }
         [Required]
         public bool IsRiali { get; set; }
-        [Required]
-        public int SanadNamber { get; set; }
+        //[Required]
+        //public int RozaneSanadNumber { get; set; }
         [Required]
         public int HesabMoinId { get; set; }
         [NotMapped]
@@ -87,5 +106,13 @@ namespace DBHesabdari_PG.Models.AK
         [MaxLength(500)]
         public string SharhSanad { get; set; }
         public virtual AkAllAmaliateRozaneh AkAllAmaliateRozaneh1 { get; set; }
+        public virtual EpListAnbarha EpListAnbarha1 { get; set; }
+        public virtual EpListAnbarha EpListAnbarha2 { get; set; }
+        public virtual EpVahedKala EpVahedKala1 { get; set; }
+        public virtual EpNameKala EpNameKala1 { get; set; }
+        public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili2 { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili3 { get; set; }
     }
 }

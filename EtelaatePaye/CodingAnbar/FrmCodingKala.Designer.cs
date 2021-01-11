@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCodingKala));
-            DevExpress.Utils.SuperToolTip superToolTip26 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem26 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip27 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem27 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip25 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem25 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip28 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem28 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
             this.btnSaveNext = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -1010,6 +1010,9 @@
             this.cmbVahedKala_Tabagheh.Name = "cmbVahedKala_Tabagheh";
             this.cmbVahedKala_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbVahedKala_Tabagheh.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbVahedKala_Tabagheh.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbVahedKala_Tabagheh.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbVahedKala_Tabagheh.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbVahedKala_Tabagheh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbVahedKala_Tabagheh.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1020,6 +1023,9 @@
             this.cmbVahedKala_Tabagheh.Properties.DropDownRows = 10;
             this.cmbVahedKala_Tabagheh.Properties.ImmediatePopup = true;
             this.cmbVahedKala_Tabagheh.Properties.NullText = "";
+            this.cmbVahedKala_Tabagheh.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbVahedKala_Tabagheh.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbVahedKala_Tabagheh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbVahedKala_Tabagheh.Properties.ValueMember = "Id";
             this.cmbVahedKala_Tabagheh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala_Tabagheh.Size = new System.Drawing.Size(176, 34);
@@ -1194,9 +1200,9 @@
             this.btnNewCode_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_Tabagheh.Name = "btnNewCode_Tabagheh";
             this.btnNewCode_Tabagheh.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem26.Text = "Alt+N";
-            superToolTip26.Items.Add(toolTipTitleItem26);
-            this.btnNewCode_Tabagheh.SuperTip = superToolTip26;
+            toolTipTitleItem1.Text = "Alt+N";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnNewCode_Tabagheh.SuperTip = superToolTip1;
             this.btnNewCode_Tabagheh.TabIndex = 29;
             this.btnNewCode_Tabagheh.TabStop = false;
             this.btnNewCode_Tabagheh.Text = "کد جدید";
@@ -1237,6 +1243,9 @@
             this.cmbGroupTafsili_Tabagheh.Name = "cmbGroupTafsili_Tabagheh";
             this.cmbGroupTafsili_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGroupTafsili_Tabagheh.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbGroupTafsili_Tabagheh.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbGroupTafsili_Tabagheh.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbGroupTafsili_Tabagheh.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbGroupTafsili_Tabagheh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGroupTafsili_Tabagheh.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1251,6 +1260,8 @@
             this.cmbGroupTafsili_Tabagheh.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGroupTafsili_Tabagheh.Properties.PopupSizeable = false;
             this.cmbGroupTafsili_Tabagheh.Properties.PopupWidth = 545;
+            this.cmbGroupTafsili_Tabagheh.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGroupTafsili_Tabagheh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupTafsili_Tabagheh.Properties.ValueMember = "Id";
             this.cmbGroupTafsili_Tabagheh.Size = new System.Drawing.Size(469, 34);
             this.cmbGroupTafsili_Tabagheh.TabIndex = 0;
@@ -1392,7 +1403,7 @@
             this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn1.Caption = "واحد گروه اصلی";
-            this.gridColumn1.FieldName = "VahedKalaName";
+            this.gridColumn1.FieldName = "EpVahedKala1.Name";
             this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -1538,6 +1549,9 @@
             this.cmbTabaghehKala_GroupAsli.Name = "cmbTabaghehKala_GroupAsli";
             this.cmbTabaghehKala_GroupAsli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbTabaghehKala_GroupAsli.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbTabaghehKala_GroupAsli.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbTabaghehKala_GroupAsli.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbTabaghehKala_GroupAsli.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbTabaghehKala_GroupAsli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTabaghehKala_GroupAsli.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1550,7 +1564,10 @@
             this.cmbTabaghehKala_GroupAsli.Properties.DropDownRows = 10;
             this.cmbTabaghehKala_GroupAsli.Properties.ImmediatePopup = true;
             this.cmbTabaghehKala_GroupAsli.Properties.NullText = "";
+            this.cmbTabaghehKala_GroupAsli.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbTabaghehKala_GroupAsli.Properties.PopupWidth = 545;
+            this.cmbTabaghehKala_GroupAsli.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbTabaghehKala_GroupAsli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehKala_GroupAsli.Properties.ValueMember = "Id";
             this.cmbTabaghehKala_GroupAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_GroupAsli.Size = new System.Drawing.Size(463, 34);
@@ -1611,6 +1628,9 @@
             this.cmbVahedKala_GroupAsli.Name = "cmbVahedKala_GroupAsli";
             this.cmbVahedKala_GroupAsli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbVahedKala_GroupAsli.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbVahedKala_GroupAsli.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbVahedKala_GroupAsli.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbVahedKala_GroupAsli.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbVahedKala_GroupAsli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbVahedKala_GroupAsli.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -1621,6 +1641,9 @@
             this.cmbVahedKala_GroupAsli.Properties.DropDownRows = 10;
             this.cmbVahedKala_GroupAsli.Properties.ImmediatePopup = true;
             this.cmbVahedKala_GroupAsli.Properties.NullText = "";
+            this.cmbVahedKala_GroupAsli.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbVahedKala_GroupAsli.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbVahedKala_GroupAsli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbVahedKala_GroupAsli.Properties.ValueMember = "Id";
             this.cmbVahedKala_GroupAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala_GroupAsli.Size = new System.Drawing.Size(176, 34);
@@ -1766,9 +1789,9 @@
             this.btnNewCode_GroupAsli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_GroupAsli.Name = "btnNewCode_GroupAsli";
             this.btnNewCode_GroupAsli.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem27.Text = "Alt+N";
-            superToolTip27.Items.Add(toolTipTitleItem27);
-            this.btnNewCode_GroupAsli.SuperTip = superToolTip27;
+            toolTipTitleItem2.Text = "Alt+N";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnNewCode_GroupAsli.SuperTip = superToolTip2;
             this.btnNewCode_GroupAsli.TabIndex = 189;
             this.btnNewCode_GroupAsli.TabStop = false;
             this.btnNewCode_GroupAsli.Text = "کد جدید";
@@ -1931,7 +1954,7 @@
             this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn5.Caption = "واحد گروه فرعی";
-            this.gridColumn5.FieldName = "VahedKalaName";
+            this.gridColumn5.FieldName = "EpVahedKala1.Name";
             this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -2093,6 +2116,9 @@
             this.cmbTabaghehKala_GroupFaree.Name = "cmbTabaghehKala_GroupFaree";
             this.cmbTabaghehKala_GroupFaree.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbTabaghehKala_GroupFaree.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbTabaghehKala_GroupFaree.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbTabaghehKala_GroupFaree.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbTabaghehKala_GroupFaree.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbTabaghehKala_GroupFaree.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTabaghehKala_GroupFaree.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -2105,7 +2131,10 @@
             this.cmbTabaghehKala_GroupFaree.Properties.DropDownRows = 10;
             this.cmbTabaghehKala_GroupFaree.Properties.ImmediatePopup = true;
             this.cmbTabaghehKala_GroupFaree.Properties.NullText = "";
+            this.cmbTabaghehKala_GroupFaree.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbTabaghehKala_GroupFaree.Properties.PopupWidth = 545;
+            this.cmbTabaghehKala_GroupFaree.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbTabaghehKala_GroupFaree.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehKala_GroupFaree.Properties.ValueMember = "Id";
             this.cmbTabaghehKala_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_GroupFaree.Size = new System.Drawing.Size(470, 34);
@@ -2155,6 +2184,9 @@
             this.cmbGroupAsli_GroupFaree.Name = "cmbGroupAsli_GroupFaree";
             this.cmbGroupAsli_GroupFaree.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGroupAsli_GroupFaree.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbGroupAsli_GroupFaree.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbGroupAsli_GroupFaree.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbGroupAsli_GroupFaree.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbGroupAsli_GroupFaree.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGroupAsli_GroupFaree.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -2167,7 +2199,10 @@
             this.cmbGroupAsli_GroupFaree.Properties.DropDownRows = 10;
             this.cmbGroupAsli_GroupFaree.Properties.ImmediatePopup = true;
             this.cmbGroupAsli_GroupFaree.Properties.NullText = "";
+            this.cmbGroupAsli_GroupFaree.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGroupAsli_GroupFaree.Properties.PopupWidth = 591;
+            this.cmbGroupAsli_GroupFaree.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGroupAsli_GroupFaree.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupAsli_GroupFaree.Properties.ValueMember = "Id";
             this.cmbGroupAsli_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupAsli_GroupFaree.Size = new System.Drawing.Size(470, 34);
@@ -2190,6 +2225,9 @@
             this.cmbVahedKala_GroupFaree.Name = "cmbVahedKala_GroupFaree";
             this.cmbVahedKala_GroupFaree.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbVahedKala_GroupFaree.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbVahedKala_GroupFaree.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbVahedKala_GroupFaree.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbVahedKala_GroupFaree.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbVahedKala_GroupFaree.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbVahedKala_GroupFaree.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -2200,6 +2238,9 @@
             this.cmbVahedKala_GroupFaree.Properties.DropDownRows = 10;
             this.cmbVahedKala_GroupFaree.Properties.ImmediatePopup = true;
             this.cmbVahedKala_GroupFaree.Properties.NullText = "";
+            this.cmbVahedKala_GroupFaree.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbVahedKala_GroupFaree.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbVahedKala_GroupFaree.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbVahedKala_GroupFaree.Properties.ValueMember = "Id";
             this.cmbVahedKala_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala_GroupFaree.Size = new System.Drawing.Size(176, 34);
@@ -2384,9 +2425,9 @@
             this.btnNewCode_GroupFaree.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_GroupFaree.Name = "btnNewCode_GroupFaree";
             this.btnNewCode_GroupFaree.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem25.Text = "Alt+N";
-            superToolTip25.Items.Add(toolTipTitleItem25);
-            this.btnNewCode_GroupFaree.SuperTip = superToolTip25;
+            toolTipTitleItem3.Text = "Alt+N";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnNewCode_GroupFaree.SuperTip = superToolTip3;
             this.btnNewCode_GroupFaree.TabIndex = 191;
             this.btnNewCode_GroupFaree.TabStop = false;
             this.btnNewCode_GroupFaree.Text = "کد جدید";
@@ -2609,7 +2650,7 @@
             this.colVahedAsliName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colVahedAsliName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colVahedAsliName.Caption = "واحد اصلی کالا";
-            this.colVahedAsliName.FieldName = "VahedAsliName";
+            this.colVahedAsliName.FieldName = "EpVahedAsliKala.Name";
             this.colVahedAsliName.MinWidth = 23;
             this.colVahedAsliName.Name = "colVahedAsliName";
             this.colVahedAsliName.Visible = true;
@@ -2625,7 +2666,7 @@
             this.gridColumn16.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn16.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn16.Caption = "واحد اول کالا ";
-            this.gridColumn16.FieldName = "VahedKala1Name";
+            this.gridColumn16.FieldName = "EpVahedKala1.Name";
             this.gridColumn16.MinWidth = 23;
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
@@ -2641,7 +2682,7 @@
             this.gridColumn34.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn34.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn34.Caption = "واحد دوم کالا ";
-            this.gridColumn34.FieldName = "VahedKala2Name";
+            this.gridColumn34.FieldName = "EpVahedKala2.Name";
             this.gridColumn34.MinWidth = 23;
             this.gridColumn34.Name = "gridColumn34";
             this.gridColumn34.Visible = true;
@@ -2657,7 +2698,7 @@
             this.gridColumn35.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn35.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn35.Caption = "واحد سوم کالا ";
-            this.gridColumn35.FieldName = "VahedKala3Name";
+            this.gridColumn35.FieldName = "EpVahedKala3.Name";
             this.gridColumn35.MinWidth = 23;
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.Visible = true;
@@ -3326,6 +3367,9 @@
             this.cmbTabaghehKala_NameKala.Name = "cmbTabaghehKala_NameKala";
             this.cmbTabaghehKala_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbTabaghehKala_NameKala.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbTabaghehKala_NameKala.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbTabaghehKala_NameKala.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbTabaghehKala_NameKala.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbTabaghehKala_NameKala.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTabaghehKala_NameKala.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -3338,7 +3382,10 @@
             this.cmbTabaghehKala_NameKala.Properties.DropDownRows = 10;
             this.cmbTabaghehKala_NameKala.Properties.ImmediatePopup = true;
             this.cmbTabaghehKala_NameKala.Properties.NullText = "";
+            this.cmbTabaghehKala_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbTabaghehKala_NameKala.Properties.PopupWidth = 545;
+            this.cmbTabaghehKala_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbTabaghehKala_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehKala_NameKala.Properties.ValueMember = "Id";
             this.cmbTabaghehKala_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_NameKala.Size = new System.Drawing.Size(551, 34);
@@ -3364,6 +3411,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTaminKonande_NameKala.Properties.DataSource = this.epAllHesabTafsilisBindingSource;
             this.cmbTaminKonande_NameKala.Properties.DisplayMember = "Name";
+            this.cmbTaminKonande_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTaminKonande_NameKala.Properties.ValueMember = "Id";
             this.cmbTaminKonande_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTaminKonande_NameKala.Size = new System.Drawing.Size(551, 34);
@@ -3524,6 +3572,9 @@
             this.cmbGroupFaree_NameKala.Name = "cmbGroupFaree_NameKala";
             this.cmbGroupFaree_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGroupFaree_NameKala.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbGroupFaree_NameKala.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbGroupFaree_NameKala.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbGroupFaree_NameKala.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbGroupFaree_NameKala.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGroupFaree_NameKala.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -3536,7 +3587,10 @@
             this.cmbGroupFaree_NameKala.Properties.DropDownRows = 10;
             this.cmbGroupFaree_NameKala.Properties.ImmediatePopup = true;
             this.cmbGroupFaree_NameKala.Properties.NullText = "";
+            this.cmbGroupFaree_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGroupFaree_NameKala.Properties.PopupWidth = 591;
+            this.cmbGroupFaree_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGroupFaree_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupFaree_NameKala.Properties.ValueMember = "Id";
             this.cmbGroupFaree_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupFaree_NameKala.Size = new System.Drawing.Size(551, 34);
@@ -3559,6 +3613,9 @@
             this.cmbGroupAsli_NameKala.Name = "cmbGroupAsli_NameKala";
             this.cmbGroupAsli_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGroupAsli_NameKala.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbGroupAsli_NameKala.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbGroupAsli_NameKala.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbGroupAsli_NameKala.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.cmbGroupAsli_NameKala.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGroupAsli_NameKala.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -3571,7 +3628,10 @@
             this.cmbGroupAsli_NameKala.Properties.DropDownRows = 10;
             this.cmbGroupAsli_NameKala.Properties.ImmediatePopup = true;
             this.cmbGroupAsli_NameKala.Properties.NullText = "";
+            this.cmbGroupAsli_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGroupAsli_NameKala.Properties.PopupWidth = 591;
+            this.cmbGroupAsli_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGroupAsli_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupAsli_NameKala.Properties.ValueMember = "Id";
             this.cmbGroupAsli_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupAsli_NameKala.Size = new System.Drawing.Size(551, 34);
@@ -3596,9 +3656,9 @@
             this.btnNewCode_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_NameKala.Name = "btnNewCode_NameKala";
             this.btnNewCode_NameKala.Size = new System.Drawing.Size(43, 36);
-            toolTipTitleItem28.Text = "Alt+N";
-            superToolTip28.Items.Add(toolTipTitleItem28);
-            this.btnNewCode_NameKala.SuperTip = superToolTip28;
+            toolTipTitleItem4.Text = "Alt+N";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnNewCode_NameKala.SuperTip = superToolTip4;
             this.btnNewCode_NameKala.TabIndex = 29;
             this.btnNewCode_NameKala.TabStop = false;
             this.btnNewCode_NameKala.ToolTip = "کد جدید";

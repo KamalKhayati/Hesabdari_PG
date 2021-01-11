@@ -898,9 +898,9 @@ namespace EtelaatePaye.CodingHesabdari
                                     XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا حذف نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                else if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                                else if (XtraMessageBox.Show("آیا گروه تفصیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                                 {
-                                    IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                                    //IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
                                     EditRowIndex = gridView1.FocusedRowHandle;
                                     int _RowId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id").ToString());
                                     //var q = db.EpGroupTafsiliLevel1s.FirstOrDefault(s => s.Id == _RowId && s.SalId == _SalId);
@@ -932,9 +932,9 @@ namespace EtelaatePaye.CodingHesabdari
                                     XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا حذف نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                else if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                                else if (XtraMessageBox.Show("آیا گروه تفصیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                                 {
-                                    IsActiveBeforeEdit = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
+                                    //IsActiveBeforeEdit = Convert.ToBoolean(gridView2.GetFocusedRowCellValue("IsActive"));
                                     EditRowIndex = gridView2.FocusedRowHandle;
                                     int _RowId = Convert.ToInt32(gridView2.GetFocusedRowCellValue("Id").ToString());
                                     // var q = db.EpGroupTafsiliLevel2s.FirstOrDefault(s => s.Id == _RowId);
@@ -965,9 +965,9 @@ namespace EtelaatePaye.CodingHesabdari
                                     XtraMessageBox.Show("گروه تفصیلی فوق سیستمی است \n لذا نمیتوان آنرا حذف نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                else if (XtraMessageBox.Show("آیا گروه تفضیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                                else if (XtraMessageBox.Show("آیا گروه تفصیلی انتخابی حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                                 {
-                                    IsActiveBeforeEdit = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
+                                    //IsActiveBeforeEdit = Convert.ToBoolean(gridView3.GetFocusedRowCellValue("IsActive"));
                                     EditRowIndex = gridView3.FocusedRowHandle;
                                     int _RowId = Convert.ToInt32(gridView3.GetFocusedRowCellValue("Id").ToString());
                                     // var q = db.EpGroupTafsiliLevel3s.FirstOrDefault(s => s.Id == _RowId);
@@ -992,25 +992,25 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (xtraTabControl1.SelectedTabPageIndex == 0)
                         {
-                            XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
-                                " جهت حذف گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
-                                " حسابهای معین ، گروه تفضیلی سطح 2 و 3 و حسابهای تفضیلی حذف گردد" +
+                            XtraMessageBox.Show("حذف این گروه تفصیلی مقدور نیست \n" +
+                                " جهت حذف گروه تفصیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
+                                " گروه تفصیلی سطح 2 و 3 و حسابهای تفصیلی حذف گردد" +
                                 "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         else if (xtraTabControl1.SelectedTabPageIndex == 1)
                         {
-                            XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
-                                " جهت حذف گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
-                                " حسابهای معین ، گروه تفضیلی سطح 3 و حسابهای تفضیلی حذف گردد" +
+                            XtraMessageBox.Show("حذف این گروه تفصیلی مقدور نیست \n" +
+                                " جهت حذف گروه تفصیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
+                                " گروه تفصیلی سطح 3 ، حسابهای تفصیلی و طبقه کالا حذف گردد" +
                                 "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         else if (xtraTabControl1.SelectedTabPageIndex == 2)
                         {
-                            XtraMessageBox.Show("حذف این گروه تفضیلی مقدور نیست \n" +
-                                " جهت حذف گروه تفضیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
-                                " حسابهای معین و حسابهای تفضیلی حذف گردد" +
+                            XtraMessageBox.Show("حذف این گروه تفصیلی مقدور نیست \n" +
+                                " جهت حذف گروه تفصیلی فوق در ابتدا بایستی کلیه ارتباط های این گروه با\n" +
+                                "  حسابهای تفصیلی حذف گردد" +
                                 "", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
@@ -1053,7 +1053,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     XtraMessageBox.Show("با گروه تفصیلی فوق در سطح دوم گروه تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                else if (db.REpAllCodingHesabdariBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                else if (db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
                                 {
                                     XtraMessageBox.Show("گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
@@ -1118,7 +1118,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     XtraMessageBox.Show("با گروه تفصیلی فوق در سطح سوم گروه تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                else if (db.REpAllCodingHesabdariBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                else if (db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
                                 {
                                     XtraMessageBox.Show(" گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
@@ -1182,7 +1182,7 @@ namespace EtelaatePaye.CodingHesabdari
                                     XtraMessageBox.Show("با گروه تفصیلی فوق ، حساب تفصیلی تعریف شده است \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                else if (db.REpAllCodingHesabdariBEpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
+                                else if (db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Any(s => s.AllGroupTafsiliId == _RowId && s.SalId == _SalId))
                                 {
                                     XtraMessageBox.Show("گروه تفصیلی فوق با حساب معین ارتباط دارد \n لذا نمیتوان آنرا ویرایش نمود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;

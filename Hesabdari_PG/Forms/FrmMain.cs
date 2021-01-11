@@ -708,7 +708,7 @@ namespace Hesabdari_PG.Forms
 
         private void btnAmaliatRozaneh_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmAmaliatRozaneh fm = new FrmAmaliatRozaneh();
+            FrmAmaliatRozanehAnbarVKala fm = new FrmAmaliatRozanehAnbarVKala();
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
@@ -729,7 +729,6 @@ namespace Hesabdari_PG.Forms
             ActiveForm(fm);
 
         }
-        //bool _SelectAnbar_NextSanad = true;
         private void btnMojodiAvalDoreKala_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmMojodiAvalDoreKala fm = new FrmMojodiAvalDoreKala();

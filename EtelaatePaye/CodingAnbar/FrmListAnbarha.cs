@@ -14,6 +14,7 @@ using HelpClassLibrary;
 using System.Data.Entity.Infrastructure;
 using DBHesabdari_PG.Models.EP.CodingAnbar;
 using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using EtelaatePaye.CodingHesabdari;
 
 namespace EtelaatePaye.CodingAnbar
 {
@@ -28,88 +29,97 @@ namespace EtelaatePaye.CodingAnbar
         int _SalId = 0;
         public void FillDataGrid()
         {
-            using (var db = new MyContext())
+            MyContext dbContext = new MyContext();
+            dbContext.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).LoadAsync().ContinueWith(loadTask =>
             {
-                try
-                {
-                    btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
-                    _SalId = Convert.ToInt32(lblSalId.Text);
+                epListAnbarhasBindingSource.DataSource = dbContext.EpListAnbarhas.Local.ToBindingList();
+            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
 
-                    var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+            #region MyRegion
 
-                    foreach (var item in q1)
-                    {
-                        //List<int> List1 = null;
-                        IList<int> List1 = new List<int>();
-                        //Array List2 = null;
-                        string _Id1 = String.Empty;
-                        if (item.TabagheKalaId != null)
-                        {
-                            char[] item1 = item.TabagheKalaId.ToArray();
-                            //string _Id = string.Empty;
-                            for (int i = 0; i < item1.Count(); i++)
-                            {
-                                if (i == 0)
-                                {
-                                    _Id1 = _Id1 + item1[i].ToString();
-                                }
-                                else
-                                {
-                                    if (item1[i] == ',')
-                                    {
-                                        int _Id2 = Convert.ToInt32(_Id1);
-                                        List1.Add(_Id2);
-                                        _Id1 = String.Empty;
-                                    }
-                                    else
-                                    {
-                                        _Id1 = _Id1 + item1[i].ToString();
-                                    }
+            //using (var db = new MyContext())
+            //{
+            //    try
+            //    {
+            //        btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
+            //        _SalId = Convert.ToInt32(lblSalId.Text);
 
-                                }
-                            }
 
-                            string _KalaId = String.Empty;
-                            foreach (var item2 in List1)
-                            {
-                                _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
-                            }
-                            item.TabagheKalaIdName_NM = _KalaId;
-                        }
-                    }
-                    if (lblUserId.Text == "1")
-                        epListAnbarhasBindingSource.DataSource = q1.Count > 0 ? q1 : null;
-                    //else
-                    //{
-                    //    int _UserId = Convert.ToInt32(lblUserId.Text);
-                    //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 ).Select(s => s.HesabMoinId).ToList();
+            //        var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+            //        //foreach (var item in q1)
+            //        //{
+            //        //    //List<int> List1 = null;
+            //        //    IList<int> List1 = new List<int>();
+            //        //    //Array List2 = null;
+            //        //    string _Id1 = String.Empty;
+            //        //    if (item.TabagheKalaId != null)
+            //        //    {
+            //        //        char[] item1 = item.TabagheKalaId.ToArray();
+            //        //        //string _Id = string.Empty;
+            //        //        for (int i = 0; i < item1.Count(); i++)
+            //        //        {
+            //        //            if (i == 0)
+            //        //            {
+            //        //                _Id1 = _Id1 + item1[i].ToString();
+            //        //            }
+            //        //            else
+            //        //            {
+            //        //                if (item1[i] == ',')
+            //        //                {
+            //        //                    int _Id2 = Convert.ToInt32(_Id1);
+            //        //                    List1.Add(_Id2);
+            //        //                    _Id1 = String.Empty;
+            //        //                }
+            //        //                else
+            //        //                {
+            //        //                    _Id1 = _Id1 + item1[i].ToString();
+            //        //                }
 
-                    //    if (q1.Count > 0)
-                    //    {
-                    //        if (q2.Count > 0)
-                    //        {
-                    //            q2.ForEach(item2 =>
-                    //            {
-                    //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
-                    //            });
-                    //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
-                    //        }
-                    //        else
-                    //        {
-                    //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
-                    //        }
-                    //    }
-                    //    else
-                    //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
-                    //}
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //        //            }
+            //        //        }
 
+            //        //        string _KalaId = String.Empty;
+            //        //        foreach (var item2 in List1)
+            //        //        {
+            //        //            _KalaId += db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == item2).Name + ",";
+            //        //        }
+            //        //        item.TabagheKalaIdName_NM = _KalaId;
+            //        //    }
+            //        //}
+
+            //        if (lblUserId.Text == "1")
+            //        epListAnbarhasBindingSource.DataSource = q1.Count > 0 ? q1 : null;
+            //        //else
+            //        //{
+            //        //    int _UserId = Convert.ToInt32(lblUserId.Text);
+            //        //    var q2 = dataContext.RmsUserBallCodingHesabdaris.Where(s => s.UserId == _UserId && s.HesabMoinId > 0 ).Select(s => s.HesabMoinId).ToList();
+
+            //        //    if (q1.Count > 0)
+            //        //    {
+            //        //        if (q2.Count > 0)
+            //        //        {
+            //        //            q2.ForEach(item2 =>
+            //        //            {
+            //        //                q1.Remove(dataContext.EpHesabTafsiliSandoghs.FirstOrDefault(s => s.Id == item2));
+            //        //            });
+            //        //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
+            //        //        }
+            //        //        else
+            //        //        {
+            //        //            epHesabTafsiliSandoghsBindingSource.DataSource = q1;
+            //        //        }
+            //        //    }
+            //        //    else
+            //        //        epHesabTafsiliSandoghsBindingSource.DataSource = null;
+            //        //}
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+            //            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
+            #endregion
         }
 
 
@@ -269,7 +279,7 @@ namespace EtelaatePaye.CodingAnbar
                 cmbHesabTafsili3.Focus();
                 return false;
             }
-            else if (cmbTabagheKala.EditValue == null || string.IsNullOrEmpty(cmbTabagheKala.EditValue.ToString()))
+            else if (cmbTabagheKala.EditValue == null || string.IsNullOrEmpty(cmbTabagheKala.EditValue.ToString()) || cmbTabagheKala.Text == "")
             {
                 XtraMessageBox.Show("لطفاً ارتباط انبار با طبقه کالا را مشخص کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 xtraTabControl1.SelectedTabPageIndex = 2;
@@ -486,7 +496,7 @@ namespace EtelaatePaye.CodingAnbar
                 {
                     if (XtraMessageBox.Show("آیا انبار فوق حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
-                        IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
+                        //IsActiveBeforeEdit = Convert.ToBoolean(gridView1.GetFocusedRowCellValue("IsActive"));
                         EditRowIndex = gridView1.FocusedRowHandle;
                         using (var db = new MyContext())
                         {
@@ -628,10 +638,10 @@ namespace EtelaatePaye.CodingAnbar
 
                                         }
                                         obj.TabagheKalaId = CheckedItems;
+                                        obj.TabagheKalaName = cmbTabagheKala.Text;
                                         obj.R_EpListAnbarha_B_EpTabaghehKalas = obj03;
                                     }
                                 }
-
 
                                 db.EpListAnbarhas.Add(obj);
                                 db.SaveChanges();
@@ -722,6 +732,7 @@ namespace EtelaatePaye.CodingAnbar
                                             CheckedItems = string.Empty;
 
                                         q.TabagheKalaId = CheckedItems;
+                                        q.TabagheKalaName = cmbTabagheKala.Text;
                                         q.R_EpListAnbarha_B_EpTabaghehKalas = obj03;
 
                                     }
@@ -837,22 +848,18 @@ namespace EtelaatePaye.CodingAnbar
                         cmbHesabTafsili1.Text = new MyContext().EpAllHesabTafsilis.FirstOrDefault(s => s.Id == s1).Name;
                         cmbHesabTafsili2.Text = new MyContext().EpAllHesabTafsilis.FirstOrDefault(s => s.Id == s2).Name;
                         cmbHesabTafsili3.Text = new MyContext().EpAllHesabTafsilis.FirstOrDefault(s => s.Id == s3).Name;
-                        FillCmbTabagheKala();
-                        if (gridView1.GetFocusedRowCellValue("TabagheKalaId") != null)
-                            cmbTabagheKala.SetEditValue(gridView1.GetFocusedRowCellValue("TabagheKalaId"));
-                        else
-                            cmbTabagheKala.SetEditValue(0);
-
-                        // int s2 = Convert.ToInt32(gridView1.GetFocusedRowCellValue("TafsiliId").ToString());
-                        // int s = Convert.ToInt32(cmbHesabTafsili1.EditValue);
-
-                        FillCmbTabagheKala();
                     }
                     catch (Exception es)
                     {
                         XtraMessageBox.Show("خطا در ارتباط انبار با کدینگ حسابداری" + "\n" + es.Message,
                                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                    FillCmbTabagheKala();
+                    if (gridView1.GetFocusedRowCellValue("TabagheKalaId") != null)
+                        cmbTabagheKala.SetEditValue(gridView1.GetFocusedRowCellValue("TabagheKalaId"));
+                    else
+                        cmbTabagheKala.SetEditValue(0);
                 }
             }
             catch (Exception ex)
@@ -957,7 +964,7 @@ namespace EtelaatePaye.CodingAnbar
                     // list = null;
                     list = new List<EpAllHesabTafsili>();
 
-                    var q1 = db.REpAllCodingHesabdariBEpAllGroupTafsilis.Where(s => s.AllCodingHesabdariId == _HesabMoinId && s.SalId == _SalId).Select(s => s.AllGroupTafsiliId).ToList();
+                    var q1 = db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Where(s => s.EpHesabMoin1Id == _HesabMoinId && s.SalId == _SalId).Select(s => s.AllGroupTafsiliId).ToList();
                     if (q1.Count > 0)
                     {
                         foreach (var item in q1)
@@ -1125,7 +1132,7 @@ namespace EtelaatePaye.CodingAnbar
                 cmbHesabTafsili2.ShowPopup();
             }
             if (cmbHesabTafsili2.ReadOnly == false)
-                memoEdit1.Text = "پیشنهاد : در صورتیکه میخواهید در حسابداری زیر گروه تفصیلی سطح 1 حساب معین انبار ، لیست کالاها بیاید  " +
+                memoEdit1.Text = "پیشنهاد : در صورتیکه میخواهید در حسابداری در سطح دوم تفصیلی حساب معین انبار ، لیست کالاها بیاید  " +
                 "اولین کالای تعریف شده دراین قسمت انتخاب شود در غیر اینصورت گزینه سایر 2 را انتخاب نمایید";
 
             //memoEdit1.Text = " پیشنهاد : در صورتیکه در حساب تفصیلی سطح 1  ، نام کالا انتخاب شده است و ضمناً واحد تجاری دارای چندین انبار می باشد  " +
@@ -1177,10 +1184,10 @@ namespace EtelaatePaye.CodingAnbar
 
         }
 
-        private void btnTabagheKala_Click(object sender, EventArgs e)
+        private void btnReloadTabagheKala_Click(object sender, EventArgs e)
         {
             FillCmbTabagheKala();
-            cmbTabagheKala.SetEditValue(0);
+            //cmbTabagheKala.SetEditValue(0);
 
         }
 
@@ -1197,6 +1204,75 @@ namespace EtelaatePaye.CodingAnbar
             {
                 cmbTabagheKala.ShowPopup();
             }
+
+        }
+
+        private void btnCodingHesabdari_Click(object sender, EventArgs e)
+        {
+            FrmCodingHesabdari fm = new FrmCodingHesabdari();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = lblUserId.Text;
+            fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
+            fm.ShowDialog();
+
+        }
+
+        private void btnHesabTafsili1_Click(object sender, EventArgs e)
+        {
+            FrmHesabhaTafsili fm = new FrmHesabhaTafsili();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = lblUserId.Text;
+            fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
+            fm._levelNamber = 1;
+            fm.Name = "FrmHesabhaTafsiliLevel1";
+            fm.Text = "حسابهای تفصیلی سطح 1";
+            fm.ShowDialog();
+
+        }
+
+        private void btnHesabTafsili2_Click(object sender, EventArgs e)
+        {
+            FrmHesabhaTafsili fm = new FrmHesabhaTafsili();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = lblUserId.Text;
+            fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
+            fm._levelNamber = 2;
+            fm.Name = "FrmHesabhaTafsiliLevel2";
+            fm.Text = "حسابهای تفصیلی سطح 2";
+            fm.ShowDialog();
+
+        }
+
+        private void btnHesabTafsili3_Click(object sender, EventArgs e)
+        {
+            FrmHesabhaTafsili fm = new FrmHesabhaTafsili();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = lblUserId.Text;
+            fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
+            fm._levelNamber = 3;
+            fm.Name = "FrmHesabhaTafsiliLevel3";
+            fm.Text = "حسابهای تفصیلی سطح 3";
+            fm.ShowDialog();
+
+        }
+
+        private void btnTabagheKala_Click(object sender, EventArgs e)
+        {
+            FrmCodingKala fm = new FrmCodingKala();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = lblUserId.Text;
+            fm.lblUserName.Text = lblUserName.Text;
+            fm.lblSalId.Text = lblSalId.Text;
+            fm.lblSalMali.Text = lblSalMali.Text;
+            fm.ShowDialog();
 
         }
     }

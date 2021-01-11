@@ -254,7 +254,7 @@ namespace SystemManagement.UsersSystem
                         {
                             if (item.CheckState == CheckState.Unchecked)
                             {
-                                RmsUserBmsAccessLevelMenu obj1 = new RmsUserBmsAccessLevelMenu();
+                                R_MsUser_B_MsAccessLevelMenu obj1 = new R_MsUser_B_MsAccessLevelMenu();
                                 obj1.MsUserId = _UserId;
                                 obj1.Name = cmbUsersList.Edit.GetDisplayText(cmbUsersList.EditValue);
                                 obj1.MsAccessLevelMenuId = Convert.ToInt32(item.GetValue(MsAccessLevelMenuId));

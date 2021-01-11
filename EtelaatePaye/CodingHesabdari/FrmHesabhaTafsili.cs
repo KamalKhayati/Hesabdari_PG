@@ -291,8 +291,8 @@ namespace EtelaatePaye.CodingHesabdari
                         }
                         else
                         {
-                            XtraMessageBox.Show("اعمال محدودیت تعریف  " + _CodeTafsiliMaxCode + " حساب تفضیلی برای هر گروه تفضیلی ..." + "\n" +
-                                "توجه : نمیتوان بیشتر از  " + _CodeTafsiliMaxCode + "  حساب تفضیلی برای هر گروه تفضیلی تعریف کرد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            XtraMessageBox.Show("اعمال محدودیت تعریف  " + _CodeTafsiliMaxCode + " حساب تفصیلی برای هر گروه تفصیلی ..." + "\n" +
+                                "توجه : نمیتوان بیشتر از  " + _CodeTafsiliMaxCode + "  حساب تفصیلی برای هر گروه تفصیلی تعریف کرد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
@@ -411,7 +411,7 @@ namespace EtelaatePaye.CodingHesabdari
             }
             else if (string.IsNullOrEmpty(_txtName) || _txtName == "0")
             {
-                XtraMessageBox.Show("لطفاً نام حساب تفضیلی را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("لطفاً نام حساب تفصیلی را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtName.Focus();
                 return false;
             }
@@ -638,7 +638,7 @@ namespace EtelaatePaye.CodingHesabdari
                             return;
                         }
                     }
-                    if (XtraMessageBox.Show("آیا حساب تفضیلی مورد نظر حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (XtraMessageBox.Show("آیا حساب تفصیلی مورد نظر حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         _IsActiveBeforeEdit = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsActive"));
                         EditRowIndex = gridView.FocusedRowHandle;
@@ -666,8 +666,8 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             catch (DbUpdateException)
                             {
-                                XtraMessageBox.Show("حذف این حساب تفضیلی مقدور نیست \n" +
-                                    " زیرا با حساب تفضیلی فوق سند صادر گردیده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                XtraMessageBox.Show("حذف این حساب تفصیلی مقدور نیست \n" +
+                                    " زیرا با حساب تفصیلی فوق سند صادر گردیده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             catch (Exception ex)
                             {
@@ -1070,7 +1070,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 {
                                     case "xtpAshkhas":
                                         {
-                                            if (XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد" + "\n" + "آیا مایلید اطلاعات بیشتری برای این حساب تفضیلی تعریف کنید ؟", "پیغام", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                                            if (XtraMessageBox.Show("عملیات ایجاد با موفقیت انجام شد" + "\n" + "آیا مایلید اطلاعات بیشتری برای این حساب تفصیلی تعریف کنید ؟", "پیغام", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                                             {
                                                 FrmEtelaateAshkhas fm = new FrmEtelaateAshkhas();
                                                 //fm.MdiParent = this;

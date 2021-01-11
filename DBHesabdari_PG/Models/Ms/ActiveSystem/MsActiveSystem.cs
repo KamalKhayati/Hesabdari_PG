@@ -30,7 +30,7 @@ namespace DBHesabdari_PG.Models.Ms.ActiveSystem
         public string Name { get; set; }
         [Required]
         public bool IsActive { get; set; }
-        public virtual ICollection<REpAllCodingHesabdariBMsActiveSystem> REpAllCodingHesabdariBMsActiveSystems { get; set; }
+        public virtual ICollection<R_EpAllCodingHesabdari_B_MsActiveSystem> REpAllCodingHesabdariBMsActiveSystems { get; set; }
 
     }
 

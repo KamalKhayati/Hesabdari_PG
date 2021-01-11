@@ -24,7 +24,7 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         [Required]
         public int ParentId { get; set; }
         public string LevelName { get; set; }
-        public virtual ICollection<RmsUserBmsAccessLevelMenu> RmsUserhaBmsAccessLevelMenuhas { get; set; }
+        public virtual ICollection<R_MsUser_B_MsAccessLevelMenu> RmsUserhaBmsAccessLevelMenuhas { get; set; }
 
     }
 }

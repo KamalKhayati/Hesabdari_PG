@@ -35,12 +35,12 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public bool UserIsActive { get; set; }
 
         public virtual MsDefault MsDefault1 { get; set; }
-        public virtual ICollection<RmsUserBmsAccessLevelMenu> RmsUserBmsAccessLevelMenus { get; set; }
-        public virtual ICollection<RmsUserBmsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
-        public virtual ICollection<RmsUserBallCodingHesabdari> RmsUserBallCodingHesabdaris { get; set; }
+        public virtual ICollection<R_MsUser_B_MsAccessLevelMenu> R_MsUser_B_MsAccessLevelMenus { get; set; }
+        public virtual ICollection<R_MsUser_B_MsAccessLevelDafaterMali> R_MsUser_B_MsAccessLevelDafaterMalis { get; set; }
+        public virtual ICollection<R_MsUser_B_AllCodingHesabdari> R_MsUser_B_AllCodingHesabdaris { get; set; }
     }
 
-    public class RmsUserBallCodingHesabdari
+    public class R_MsUser_B_AllCodingHesabdari
     {
         [Required]
         [Column(Order = 0)]
@@ -76,7 +76,7 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
     }
 
-    public class RmsUserBmsAccessLevelMenu
+    public class R_MsUser_B_MsAccessLevelMenu
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(Order = 0)]
@@ -101,7 +101,7 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public virtual MsUser MsUser1 { get; set; }
         public virtual MsAccessLevelMenu MsAccessLevelMenu1 { get; set; }
     }
-    public class RmsUserBmsAccessLevelDafaterMali
+    public class R_MsUser_B_MsAccessLevelDafaterMali
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column(Order = 0)]

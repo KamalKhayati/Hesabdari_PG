@@ -94,6 +94,7 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 try
                 {
+                    //var ll = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId).EpAllCodingHesabdari1.LevelName;
                     btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
                     _SalId = Convert.ToInt32(lblSalId.Text);
 
@@ -421,7 +422,7 @@ namespace EtelaatePaye.CodingHesabdari
 
                     if (db.EpGroupTafsiliLevel2s.Any())
                     {
-                        db.EpGroupTafsiliLevel2s.Where(s =>s.SalId == _SalId).OrderBy(s => s.Code).Load();
+                        db.EpGroupTafsiliLevel2s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).Load();
                         epGroupTafsiliLevel2sBindingSource.DataSource = db.EpGroupTafsiliLevel2s.Local.ToBindingList();
                     }
                     else
@@ -432,7 +433,7 @@ namespace EtelaatePaye.CodingHesabdari
 
                     if (db.EpGroupTafsiliLevel3s.Any())
                     {
-                        db.EpGroupTafsiliLevel3s.Where(s =>  s.SalId == _SalId).OrderBy(s => s.Code).Load();
+                        db.EpGroupTafsiliLevel3s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).Load();
                         epGroupTafsiliLevel3sBindingSource.DataSource = db.EpGroupTafsiliLevel3s.Local.ToBindingList();
                     }
                     else
@@ -929,30 +930,115 @@ namespace EtelaatePaye.CodingHesabdari
                                     obj.SharhHesab = _SharhHesab;
                                     /////////////
                                     string GroupTafsili = string.Empty;
+                                    if (cmbGroupTafsiliLevels_4.SelectedIndex == 1)
+                                    {
+                                        GroupTafsili = "سطح 1 : ";
+                                        for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                            }
+                                        }
+
+                                    }
+                                    else if (cmbGroupTafsiliLevels_4.SelectedIndex == 2)
+                                    {
+                                        GroupTafsili = "سطح 1 : ";
+                                        for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                            }
+                                        }
+
+                                        GroupTafsili += "/" + "سطح 2 : ";
+                                        for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                GroupTafsili += chkListBoxLevel2.GetDisplayItemValue(i).ToString() + ",";
+                                            }
+                                        }
+
+                                    }
+                                    else if (cmbGroupTafsiliLevels_4.SelectedIndex == 3)
+                                    {
+                                        GroupTafsili = "سطح 1 : ";
+                                        for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                            }
+                                        }
+
+                                        GroupTafsili += "/" + "سطح 2 : ";
+                                        for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                GroupTafsili += chkListBoxLevel2.GetDisplayItemValue(i).ToString() + ",";
+                                            }
+                                        }
+
+                                        GroupTafsili += "/" + "سطح 3 : ";
+                                        for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                GroupTafsili += chkListBoxLevel3.GetDisplayItemValue(i).ToString() + ",";
+                                            }
+                                        }
+
+                                    }
+                                    obj.SelectedGroupTafsiliLevels = GroupTafsili;
+
+                                    //////////////////
+                                    List<R_EpHesabMoin1_B_EpAllGroupTafsili> obj03 = new List<R_EpHesabMoin1_B_EpAllGroupTafsili>();
                                     for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
                                     {
                                         if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
                                         {
-                                            GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                            int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel1.GetItemValue(i));
+
+                                            R_EpHesabMoin1_B_EpAllGroupTafsili obj1 = new R_EpHesabMoin1_B_EpAllGroupTafsili();
+                                            obj1.SalId = _SalId;
+                                            obj1.AllGroupTafsiliId = _GroupTafsiliId;
+                                            obj1.LevelNamber = 1;
+                                            obj03.Add(obj1);
                                         }
                                     }
-                                    GroupTafsili += "/";
                                     for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
                                     {
                                         if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
                                         {
-                                            GroupTafsili += chkListBoxLevel2.GetDisplayItemValue(i).ToString() + ",";
+                                            int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel2.GetItemValue(i));
+
+                                            R_EpHesabMoin1_B_EpAllGroupTafsili obj1 = new R_EpHesabMoin1_B_EpAllGroupTafsili();
+                                            obj1.SalId = _SalId;
+                                            obj1.AllGroupTafsiliId = _GroupTafsiliId;
+                                            obj1.LevelNamber = 2;
+                                            obj03.Add(obj1);
                                         }
                                     }
-                                    GroupTafsili += "/";
                                     for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
                                     {
                                         if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
                                         {
-                                            GroupTafsili += chkListBoxLevel3.GetDisplayItemValue(i).ToString() + ",";
+                                            int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel3.GetItemValue(i));
+
+                                            R_EpHesabMoin1_B_EpAllGroupTafsili obj1 = new R_EpHesabMoin1_B_EpAllGroupTafsili();
+                                            obj1.SalId = _SalId;
+                                            obj1.AllGroupTafsiliId = _GroupTafsiliId;
+                                            obj1.LevelNamber = 3;
+                                            obj03.Add(obj1);
                                         }
                                     }
-                                    obj.SelectedGroupTafsiliLevel1 = GroupTafsili;
+
+                                    obj.R_EpHesabMoin1_B_EpAllGroupTafsilis = obj03;
+
                                     ////////////
                                     string ActiveSystem = string.Empty;
                                     for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
@@ -986,58 +1072,15 @@ namespace EtelaatePaye.CodingHesabdari
                                     n1.IsActive = _IsActive;
                                     n1.EpHesabMoin1 = obj;
 
-                                    //////////////////
-                                    List<REpAllCodingHesabdariBEpAllGroupTafsili> obj03 = new List<REpAllCodingHesabdariBEpAllGroupTafsili>();
-                                    for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
-                                    {
-                                        if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
-                                        {
-                                            int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel1.GetItemValue(i));
-
-                                            REpAllCodingHesabdariBEpAllGroupTafsili obj1 = new REpAllCodingHesabdariBEpAllGroupTafsili();
-                                            obj1.SalId = _SalId;
-                                            obj1.AllGroupTafsiliId = _GroupTafsiliId;
-                                            obj1.LevelNamber = 1;
-                                            obj03.Add(obj1);
-                                        }
-                                    }
-                                    for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
-                                    {
-                                        if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
-                                        {
-                                            int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel2.GetItemValue(i));
-
-                                            REpAllCodingHesabdariBEpAllGroupTafsili obj1 = new REpAllCodingHesabdariBEpAllGroupTafsili();
-                                            obj1.SalId = _SalId;
-                                            obj1.AllGroupTafsiliId = _GroupTafsiliId;
-                                            obj1.LevelNamber = 2;
-                                            obj03.Add(obj1);
-                                        }
-                                    }
-                                    for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
-                                    {
-                                        if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
-                                        {
-                                            int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel3.GetItemValue(i));
-
-                                            REpAllCodingHesabdariBEpAllGroupTafsili obj1 = new REpAllCodingHesabdariBEpAllGroupTafsili();
-                                            obj1.SalId = _SalId;
-                                            obj1.AllGroupTafsiliId = _GroupTafsiliId;
-                                            obj1.LevelNamber = 3;
-                                            obj03.Add(obj1);
-                                        }
-                                    }
-
-                                    n1.REpAllCodingHesabdariBEpAllGroupTafsilis = obj03;
                                     /////////////
-                                    List<REpAllCodingHesabdariBMsActiveSystem> obj02 = new List<REpAllCodingHesabdariBMsActiveSystem>();
+                                    List<R_EpAllCodingHesabdari_B_MsActiveSystem> obj02 = new List<R_EpAllCodingHesabdari_B_MsActiveSystem>();
                                     for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
                                     {
                                         if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Unchecked)
                                         {
                                             int _ActiveSystemId = Convert.ToInt32(chkListBoxActiveSystem.GetItemValue(i));
 
-                                            REpAllCodingHesabdariBMsActiveSystem obj1 = new REpAllCodingHesabdariBMsActiveSystem();
+                                            R_EpAllCodingHesabdari_B_MsActiveSystem obj1 = new R_EpAllCodingHesabdari_B_MsActiveSystem();
                                             obj1.SalId = _SalId;
                                             obj1.ActiveSystemId = _ActiveSystemId;
                                             //obj1.ActiveSystemCode = db.MsActiveSystems.FirstOrDefault(s =>s.Id == _ActiveSystemId).Code;
@@ -1045,7 +1088,7 @@ namespace EtelaatePaye.CodingHesabdari
                                             obj02.Add(obj1);
                                         }
                                     }
-                                    n1.REpAllCodingHesabdariBMsActiveSystems = obj02;
+                                    n1.R_EpAllCodingHesabdari_B_MsActiveSystems = obj02;
                                     /////////////
 
                                     db.EpAllCodingHesabdaris.Add(n1);
@@ -1430,6 +1473,57 @@ namespace EtelaatePaye.CodingHesabdari
                                         q.IndexMahiatHesab = cmbMahiatHesab_4.SelectedIndex;
                                         q.MahiatHesab = cmbMahiatHesab_4.Text;
                                         q.SharhHesab = _SharhHesab;
+
+                                        //////////////////
+                                        var q3 = db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Where(s => s.EpHesabMoin1Id == RowId && s.SalId == _SalId).ToList();
+                                        if (q3.Count > 0)
+                                        {
+                                            db.R_EpHesabMoin1_B_EpAllGroupTafsilis.RemoveRange(q3);
+                                        }
+
+                                        List<R_EpHesabMoin1_B_EpAllGroupTafsili> obj03 = new List<R_EpHesabMoin1_B_EpAllGroupTafsili>();
+                                        for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel1.GetItemValue(i));
+
+                                                R_EpHesabMoin1_B_EpAllGroupTafsili obj1 = new R_EpHesabMoin1_B_EpAllGroupTafsili();
+                                                obj1.SalId = _SalId;
+                                                obj1.AllGroupTafsiliId = _GroupTafsiliId;
+                                                obj1.LevelNamber = 1;
+                                                obj03.Add(obj1);
+                                            }
+                                        }
+                                        for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel2.GetItemValue(i));
+
+                                                R_EpHesabMoin1_B_EpAllGroupTafsili obj1 = new R_EpHesabMoin1_B_EpAllGroupTafsili();
+                                                obj1.SalId = _SalId;
+                                                obj1.AllGroupTafsiliId = _GroupTafsiliId;
+                                                obj1.LevelNamber = 2;
+                                                obj03.Add(obj1);
+                                            }
+                                        }
+                                        for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
+                                        {
+                                            if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
+                                            {
+                                                int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel3.GetItemValue(i));
+
+                                                R_EpHesabMoin1_B_EpAllGroupTafsili obj1 = new R_EpHesabMoin1_B_EpAllGroupTafsili();
+                                                obj1.SalId = _SalId;
+                                                obj1.AllGroupTafsiliId = _GroupTafsiliId;
+                                                obj1.LevelNamber = 3;
+                                                obj03.Add(obj1);
+                                            }
+                                        }
+
+                                        q.R_EpHesabMoin1_B_EpAllGroupTafsilis = obj03;
+
                                         ///////////////
                                         string ActiveSystem = string.Empty;
                                         for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
@@ -1442,31 +1536,99 @@ namespace EtelaatePaye.CodingHesabdari
                                         q.SelectedActivesystem = ActiveSystem;
                                         ////////
                                         string GroupTafsili = string.Empty;
-                                        for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                        if (cmbGroupTafsiliLevels_4.SelectedIndex == 1)
                                         {
-                                            if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                            GroupTafsili = "سطح 1 : ";
+                                            for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
                                             {
-                                                GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                                if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                                {
+                                                    GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                                }
                                             }
+
                                         }
-                                        GroupTafsili += "/";
-                                        for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
+                                        else if (cmbGroupTafsiliLevels_4.SelectedIndex == 2)
                                         {
-                                            if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
+                                            GroupTafsili = "سطح 1 : ";
+                                            for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
                                             {
-                                                GroupTafsili += chkListBoxLevel2.GetDisplayItemValue(i).ToString() + ",";
+                                                if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                                {
+                                                    GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                                }
                                             }
+
+                                            GroupTafsili += "/" + "سطح 2 : ";
+                                            for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
+                                            {
+                                                if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
+                                                {
+                                                    GroupTafsili += chkListBoxLevel2.GetDisplayItemValue(i).ToString() + ",";
+                                                }
+                                            }
+
                                         }
-                                        GroupTafsili += "/";
-                                        for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
+                                        else if (cmbGroupTafsiliLevels_4.SelectedIndex == 3)
                                         {
-                                            if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
+                                            GroupTafsili = "سطح 1 : ";
+                                            for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
                                             {
-                                                GroupTafsili += chkListBoxLevel3.GetDisplayItemValue(i).ToString() + ",";
+                                                if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                                {
+                                                    GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                                }
                                             }
+
+                                            GroupTafsili += "/" + "سطح 2 : ";
+                                            for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
+                                            {
+                                                if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
+                                                {
+                                                    GroupTafsili += chkListBoxLevel2.GetDisplayItemValue(i).ToString() + ",";
+                                                }
+                                            }
+
+                                            GroupTafsili += "/" + "سطح 3 : ";
+                                            for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
+                                            {
+                                                if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
+                                                {
+                                                    GroupTafsili += chkListBoxLevel3.GetDisplayItemValue(i).ToString() + ",";
+                                                }
+                                            }
+
                                         }
 
-                                        q.SelectedGroupTafsiliLevel1 = GroupTafsili;
+                                        q.SelectedGroupTafsiliLevels = GroupTafsili;
+
+
+                                        //string GroupTafsili = string.Empty;
+                                        //for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
+                                        //{
+                                        //    if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
+                                        //    {
+                                        //        GroupTafsili += chkListBoxLevel1.GetDisplayItemValue(i).ToString() + ",";
+                                        //    }
+                                        //}
+                                        //GroupTafsili += "/";
+                                        //for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
+                                        //{
+                                        //    if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
+                                        //    {
+                                        //        GroupTafsili += chkListBoxLevel2.GetDisplayItemValue(i).ToString() + ",";
+                                        //    }
+                                        //}
+                                        //GroupTafsili += "/";
+                                        //for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
+                                        //{
+                                        //    if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
+                                        //    {
+                                        //        GroupTafsili += chkListBoxLevel3.GetDisplayItemValue(i).ToString() + ",";
+                                        //    }
+                                        //}
+
+                                        //q.SelectedGroupTafsiliLevels = GroupTafsili;
                                         ////////////////////////////////////////////////////////////////////////////////
                                         var q1 = db.EpSharhStandardMoins.Where(s => s.MoinId == RowId && s.SalId == _SalId).ToList();
                                         if (q1.Count > 0)
@@ -1498,55 +1660,6 @@ namespace EtelaatePaye.CodingHesabdari
                                             q10.IsActive = _IsActive;
                                             q10.EpHesabMoin1 = q;
 
-                                            //////////////////
-                                            var q3 = db.REpAllCodingHesabdariBEpAllGroupTafsilis.Where(s => s.AllCodingHesabdariId == RowId && s.SalId == _SalId).ToList();
-                                            if (q3.Count > 0)
-                                            {
-                                                db.REpAllCodingHesabdariBEpAllGroupTafsilis.RemoveRange(q3);
-                                            }
-
-                                            List<REpAllCodingHesabdariBEpAllGroupTafsili> obj03 = new List<REpAllCodingHesabdariBEpAllGroupTafsili>();
-                                            for (int i = 0; i < chkListBoxLevel1.ItemCount; i++)
-                                            {
-                                                if (chkListBoxLevel1.GetItemCheckState(i) == CheckState.Checked)
-                                                {
-                                                    int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel1.GetItemValue(i));
-
-                                                    REpAllCodingHesabdariBEpAllGroupTafsili obj1 = new REpAllCodingHesabdariBEpAllGroupTafsili();
-                                                    obj1.SalId = _SalId;
-                                                    obj1.AllGroupTafsiliId = _GroupTafsiliId;
-                                                    obj1.LevelNamber = 1;
-                                                    obj03.Add(obj1);
-                                                }
-                                            }
-                                            for (int i = 0; i < chkListBoxLevel2.ItemCount; i++)
-                                            {
-                                                if (chkListBoxLevel2.GetItemCheckState(i) == CheckState.Checked)
-                                                {
-                                                    int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel2.GetItemValue(i));
-
-                                                    REpAllCodingHesabdariBEpAllGroupTafsili obj1 = new REpAllCodingHesabdariBEpAllGroupTafsili();
-                                                    obj1.SalId = _SalId;
-                                                    obj1.AllGroupTafsiliId = _GroupTafsiliId;
-                                                    obj1.LevelNamber = 2;
-                                                    obj03.Add(obj1);
-                                                }
-                                            }
-                                            for (int i = 0; i < chkListBoxLevel3.ItemCount; i++)
-                                            {
-                                                if (chkListBoxLevel3.GetItemCheckState(i) == CheckState.Checked)
-                                                {
-                                                    int _GroupTafsiliId = Convert.ToInt32(chkListBoxLevel3.GetItemValue(i));
-
-                                                    REpAllCodingHesabdariBEpAllGroupTafsili obj1 = new REpAllCodingHesabdariBEpAllGroupTafsili();
-                                                    obj1.SalId = _SalId;
-                                                    obj1.AllGroupTafsiliId = _GroupTafsiliId;
-                                                    obj1.LevelNamber = 3;
-                                                    obj03.Add(obj1);
-                                                }
-                                            }
-
-                                            q10.REpAllCodingHesabdariBEpAllGroupTafsilis = obj03;
 
                                             /////////////////////////////////////////////////////////////////////////////////////
                                             var q2 = db.REpAllCodingHesabdariBMsActiveSystems.Where(s => s.AllCodingHesabdariId == RowId && s.SalId == _SalId).ToList();
@@ -1555,14 +1668,14 @@ namespace EtelaatePaye.CodingHesabdari
                                                 db.REpAllCodingHesabdariBMsActiveSystems.RemoveRange(q2);
                                             }
 
-                                            List<REpAllCodingHesabdariBMsActiveSystem> obj02 = new List<REpAllCodingHesabdariBMsActiveSystem>();
+                                            List<R_EpAllCodingHesabdari_B_MsActiveSystem> obj02 = new List<R_EpAllCodingHesabdari_B_MsActiveSystem>();
                                             for (int i = 0; i < chkListBoxActiveSystem.ItemCount; i++)
                                             {
                                                 if (chkListBoxActiveSystem.GetItemCheckState(i) == CheckState.Unchecked)
                                                 {
                                                     int _ActiveSystemId = Convert.ToInt32(chkListBoxActiveSystem.GetItemValue(i));
 
-                                                    REpAllCodingHesabdariBMsActiveSystem obj1 = new REpAllCodingHesabdariBMsActiveSystem();
+                                                    R_EpAllCodingHesabdari_B_MsActiveSystem obj1 = new R_EpAllCodingHesabdari_B_MsActiveSystem();
                                                     obj1.SalId = _SalId;
                                                     obj1.ActiveSystemId = _ActiveSystemId;
                                                     //obj1.ActiveSystemCode = db.MsActiveSystems.FirstOrDefault(s =>s.Id == _ActiveSystemId).Code;
@@ -1572,7 +1685,7 @@ namespace EtelaatePaye.CodingHesabdari
                                                     obj02.Add(obj1);
                                                 }
                                             }
-                                            q10.REpAllCodingHesabdariBMsActiveSystems = obj02;
+                                            q10.R_EpAllCodingHesabdari_B_MsActiveSystems = obj02;
                                             /////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -1874,7 +1987,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 this.Close();
 
-            }        }
+            }
+        }
 
         private void FrmCodingHesabdari_KeyDown(object sender, KeyEventArgs e)
         {
@@ -2081,7 +2195,8 @@ namespace EtelaatePaye.CodingHesabdari
                     FillcmbHesabTabagheh();
                     FillListBoxActiveSystem();
                     FillListBoxGroupTafsiliLevels();
-                    chkListBoxActiveSystem.Enabled = true;
+                    //chkListBoxActiveSystem.Enabled = true;
+                    chkListBoxActiveSystem.ReadOnly = false;
                     gridControl5.Enabled = true;
                     epSharhStandardMoinsBindingSource.Clear();
 
@@ -2297,35 +2412,35 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-                En = EnumCED.Cancel;
-                gridControl.Enabled = true;
-                HelpClass1.ActiveButtons(panelControl_Button);
-                HelpClass1.ClearControls(PanelControl);
-                HelpClass1.InActiveControls(PanelControl);
-                if (xtraTabControl1.SelectedTabPage == xtraTabPage_MoinLevel1)
-                {
-                    gridControl5.Enabled = false;
-                    chkListBoxLevel1.ReadOnly = true;
-                    chkListBoxLevel2.ReadOnly = true;
-                    chkListBoxLevel3.ReadOnly = true;
-                    chkListBoxActiveSystem.ReadOnly = true;
-                    xtraTabControl3.SelectedTabPageIndex = 1;
-                    xtraTabControl2.SelectedTabPageIndex = 0;
-                    chkListBoxLevel1.UnCheckAll();
-                    xtraTabControl2.SelectedTabPageIndex = 1;
-                    chkListBoxLevel2.UnCheckAll();
-                    xtraTabControl2.SelectedTabPageIndex = 2;
-                    chkListBoxLevel3.UnCheckAll();
-                    xtraTabControl3.SelectedTabPageIndex = 2;
-                    chkListBoxActiveSystem.UnCheckAll();
-                    xtraTabControl3.SelectedTabPageIndex = _IndexTabControl3;
+            En = EnumCED.Cancel;
+            gridControl.Enabled = true;
+            HelpClass1.ActiveButtons(panelControl_Button);
+            HelpClass1.ClearControls(PanelControl);
+            HelpClass1.InActiveControls(PanelControl);
+            if (xtraTabControl1.SelectedTabPage == xtraTabPage_MoinLevel1)
+            {
+                gridControl5.Enabled = false;
+                chkListBoxLevel1.ReadOnly = true;
+                chkListBoxLevel2.ReadOnly = true;
+                chkListBoxLevel3.ReadOnly = true;
+                chkListBoxActiveSystem.ReadOnly = true;
+                xtraTabControl3.SelectedTabPageIndex = 1;
+                xtraTabControl2.SelectedTabPageIndex = 0;
+                chkListBoxLevel1.UnCheckAll();
+                xtraTabControl2.SelectedTabPageIndex = 1;
+                chkListBoxLevel2.UnCheckAll();
+                xtraTabControl2.SelectedTabPageIndex = 2;
+                chkListBoxLevel3.UnCheckAll();
+                xtraTabControl3.SelectedTabPageIndex = 2;
+                chkListBoxActiveSystem.UnCheckAll();
+                xtraTabControl3.SelectedTabPageIndex = _IndexTabControl3;
 
-                    epSharhStandardMoinsBindingSource.Clear();
-                    //db.Dispose();
-                    // epSharhStandardMoinsBindingSource.cle;
-                }
-                btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
-                btnCreate.Focus();
+                epSharhStandardMoinsBindingSource.Clear();
+                //db.Dispose();
+                // epSharhStandardMoinsBindingSource.cle;
+            }
+            btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
+            btnCreate.Focus();
         }
 
         private void cmbNoeHesab_Enter(object sender, EventArgs e)
@@ -2459,7 +2574,7 @@ namespace EtelaatePaye.CodingHesabdari
                                 xtraTabControl2.SelectedTabPageIndex = 0;
                                 xtraTabControl3.SelectedTabPageIndex = _IndexTabControl3;
 
-                                var q1 = db.REpAllCodingHesabdariBEpAllGroupTafsilis.Where(s => s.AllCodingHesabdariId == RowId && s.SalId == _SalId && s.LevelNamber == 1).Select(s => s.AllGroupTafsiliId).ToList();
+                                var q1 = db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Where(s => s.EpHesabMoin1Id == RowId && s.SalId == _SalId && s.LevelNamber == 1).Select(s => s.AllGroupTafsiliId).ToList();
                                 if (q1.Count > 0)
                                 {
                                     if (chkListBoxLevel1.DataSource != null)
@@ -2477,7 +2592,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         }
                                     }
                                 }
-                                var q2 = db.REpAllCodingHesabdariBEpAllGroupTafsilis.Where(s => s.AllCodingHesabdariId == RowId && s.SalId == _SalId && s.LevelNamber == 2).Select(s => s.AllGroupTafsiliId).ToList();
+                                var q2 = db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Where(s => s.EpHesabMoin1Id == RowId && s.SalId == _SalId && s.LevelNamber == 2).Select(s => s.AllGroupTafsiliId).ToList();
                                 if (q2.Count > 0)
                                 {
                                     if (chkListBoxLevel2.DataSource != null)
@@ -2495,7 +2610,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         }
                                     }
                                 }
-                                var q3 = db.REpAllCodingHesabdariBEpAllGroupTafsilis.Where(s => s.AllCodingHesabdariId == RowId && s.SalId == _SalId && s.LevelNamber == 3).Select(s => s.AllGroupTafsiliId).ToList();
+                                var q3 = db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Where(s => s.EpHesabMoin1Id == RowId && s.SalId == _SalId && s.LevelNamber == 3).Select(s => s.AllGroupTafsiliId).ToList();
                                 if (q3.Count > 0)
                                 {
                                     if (chkListBoxLevel3.DataSource != null)
@@ -2916,9 +3031,19 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             else
                             {
-                                XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح دوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                chkListBoxLevel2.ReadOnly = true;
-                                cmbGroupTafsiliLevels_4.SelectedIndex = 1;
+                                if (q.IsActiveGroupTafsiliLevel1 == true)
+                                {
+                                    XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح 2 گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    chkListBoxLevel2.ReadOnly = true;
+                                    cmbGroupTafsiliLevels_4.SelectedIndex = 1;
+                                }
+                                else if (q.IsActiveGroupTafsiliLevel1 == false)
+                                {
+                                    XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به موارد ذیل را فعال کنید \n سطح 1 گروه تفصیلی فعال شود \n سطح 2 گروه تفصیلی فعال شود ", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    chkListBoxLevel1.ReadOnly = true;
+                                    chkListBoxLevel2.ReadOnly = true;
+                                    cmbGroupTafsiliLevels_4.SelectedIndex = 0;
+                                }
                             }
                         }
                         catch (Exception ex)
@@ -2945,9 +3070,33 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             else
                             {
-                                XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح سوم گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                chkListBoxLevel3.ReadOnly = true;
-                                cmbGroupTafsiliLevels_4.SelectedIndex = 2;
+                                if (q.IsActiveGroupTafsiliLevel2 == true)
+                                {
+                                    XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به (سطح 3 گروه تفصیلی فعال شود) را فعال کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    chkListBoxLevel3.ReadOnly = true;
+                                    cmbGroupTafsiliLevels_4.SelectedIndex = 2;
+
+                                }
+                                else if (q.IsActiveGroupTafsiliLevel2 == false)
+                                {
+                                    if (q.IsActiveGroupTafsiliLevel1 == true)
+                                    {
+                                        XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به موارد ذیل را فعال کنید \n سطح 2 گروه تفصیلی فعال شود \n سطح 3 گروه تفصیلی فعال شود ", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        chkListBoxLevel2.ReadOnly = true;
+                                        chkListBoxLevel3.ReadOnly = true;
+                                        cmbGroupTafsiliLevels_4.SelectedIndex = 1;
+                                    }
+                                    else if (q.IsActiveGroupTafsiliLevel1 == false)
+                                    {
+                                        XtraMessageBox.Show("لطفاً در ابتدا از قسمت اطلاعات پایه => تنظیمات ویژه => تنظیمات کدینگ حسابداری تیک مربوط به موارد ذیل را فعال کنید \n سطح 1 گروه تفصیلی فعال شود \n سطح 2 گروه تفصیلی فعال شود \n سطح 3 گروه تفصیلی فعال شود ", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        chkListBoxLevel1.ReadOnly = true;
+                                        chkListBoxLevel2.ReadOnly = true;
+                                        chkListBoxLevel3.ReadOnly = true;
+                                        cmbGroupTafsiliLevels_4.SelectedIndex = 0;
+
+                                    }
+                                }
+
                             }
                         }
                         catch (Exception ex)
@@ -3019,7 +3168,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void chkIsActive_4_Leave(object sender, EventArgs e)
         {
-            if (cmbGroupTafsiliLevels_4.SelectedIndex!=0)
+            if (cmbGroupTafsiliLevels_4.SelectedIndex != 0)
             {
                 xtraTabControl3.SelectedTabPageIndex = 1;
                 xtraTabControl2.SelectedTabPageIndex = 0;

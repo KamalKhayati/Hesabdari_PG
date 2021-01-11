@@ -242,7 +242,7 @@ namespace AnbarVaKala.Reports
                                 obj2.KalaId = q1[RowCounter];
                                 obj2.KalaCode = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).KeyCode.ToString();
                                 obj2.KalaName = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).LevelName;
-                                int _VahedKalaId = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).VahedKalaId;
+                                int _VahedKalaId = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).VahedAsliKalaId;
                                 obj2.VahedeKalaName = q5.FirstOrDefault(s => s.Id == _VahedKalaId).Name;
 
                                 obj2.MeghdarMo = 0;

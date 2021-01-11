@@ -19,10 +19,10 @@ using DevExpress.XtraTab;
 
 namespace AnbarVaKala.AmaliatRozaneh
 {
-    public partial class FrmAmaliatRozaneh : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAmaliatRozanehAnbarVKala : DevExpress.XtraEditors.XtraForm
     {
         MyContext dbContext;
-        public FrmAmaliatRozaneh()
+        public FrmAmaliatRozanehAnbarVKala()
         {
             InitializeComponent();
         }
@@ -58,6 +58,7 @@ namespace AnbarVaKala.AmaliatRozaneh
         int _HesabTafsili3Id = 0;
         string _SharhSanad = string.Empty;
 
+        public string _KalaId = string.Empty;
         public string _KalaCode = string.Empty;
         public string _KalaName = string.Empty;
         public string _VahedeKala = string.Empty;
@@ -75,7 +76,7 @@ namespace AnbarVaKala.AmaliatRozaneh
         int _NoeSanadCode = 0;
 
         int _SalId = 0;
-        int _AzAnbarId = 0;
+        public int _AzAnbarId = 0;
         int _TabPageCount = 0;
         int EditRowIndex = 0;
         bool IsClosed_AmaliatAddVEit = true;
@@ -86,7 +87,40 @@ namespace AnbarVaKala.AmaliatRozaneh
             {
                 try
                 {
-                    int _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                    List<AkVorodeKala_Riz> q = new List<AkVorodeKala_Riz>();
+                    List<AkKhorojeKala_Riz> q4 = new List<AkKhorojeKala_Riz>();
+                    if (_FirstSelectAnbar_NextSanad)
+                    {
+                        _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                        if (NoeAmaliatTabpageName == "xtpVrodeKala")
+                        {
+                            var list = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal_darSelectNoe).ToList();
+                            q = list;
+                        }
+                        else if (NoeAmaliatTabpageName == "xtpKhrojeKala")
+                        {
+                            //var list = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal).ToList();
+                            var list = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal_darSelectNoe).ToList();
+                            q4 = list;
+                        }
+                    }
+                    else
+                    {
+                        if (NoeAmaliatTabpageName == "xtpVrodeKala")
+                        {
+                            var list = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal_darSelectNoe).ToList();
+                            q = list;
+                        }
+                        else if (NoeAmaliatTabpageName == "xtpKhrojeKala")
+                        {
+                            var list = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal_darSelectNoe).ToList();
+                            q4 = list;
+
+                        }
+                    }
+
+
+                    //int _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
                     var q1 = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId).ToList();
                     var q2 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
                     var q3 = db.EpHesabMoin1s.Where(s => s.SalId == _SalId).ToList();
@@ -99,10 +133,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 {
                                     case "xtp_ResidKharid":
                                         {
-                                            var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal).ToList();
-                                            if (q.Count() > 0)
+                                            var qq = q.Where(s => s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal_darSelectNoe).ToList();
+                                            if (qq.Count() > 0)
                                             {
-                                                foreach (var item in q.ToList())
+                                                foreach (var item in qq.ToList())
                                                 {
                                                     item.MoinCode = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Code.ToString();
                                                     item.MoinName = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Name;
@@ -110,7 +144,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                     item.TafsiliName = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name;
                                                     item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
                                                     item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
+                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                                                 }
 
                                                 //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
@@ -119,7 +153,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                 //    gridControl.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
                                                 //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
 
-                                                gridControl.DataSource = q.OrderBy(s => s.Seryal);
+                                                gridControl.DataSource = qq.OrderBy(s => s.Seryal_darSelectNoe);
                                             }
                                             else
                                                 gridControl.DataSource = null;
@@ -155,7 +189,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         }
                                     case "xtp_AllVorode":
                                         {
-                                            var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal).ToList();
+                                            //var qq = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal).ToList();
                                             if (q.Count() > 0)
                                             {
                                                 foreach (var item in q.ToList())
@@ -166,7 +200,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                     item.TafsiliName = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name;
                                                     item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
                                                     item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
+                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                                                 }
 
                                                 //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
@@ -175,7 +209,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                 //    gridControl.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
                                                 //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
 
-                                                gridControl.DataSource = q.OrderBy(s => s.Seryal);
+                                                gridControl.DataSource = q.OrderBy(s => s.Seryal_darSelectNoe);
                                             }
                                             else
                                                 gridControl.DataSource = null;
@@ -190,10 +224,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 {
                                     case "xtp_BargashtAzKharid":
                                         {
-                                            var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal).ToList();
-                                            if (q.Count() > 0)
+                                            var qq4 = q4.Where(s => s.NoeSanadCode == _NoeSanadCode).OrderBy(s => s.Seryal_darSelectNoe).ToList();
+                                            if (qq4.Count() > 0)
                                             {
-                                                foreach (var item in q.ToList())
+                                                foreach (var item in qq4.ToList())
                                                 {
                                                     item.MoinCode = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Code.ToString();
                                                     item.MoinName = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Name;
@@ -201,7 +235,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                     item.TafsiliName = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name;
                                                     item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
                                                     item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
+                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                                                 }
 
                                                 //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
@@ -210,7 +244,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                 //    gridControl.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
                                                 //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
 
-                                                gridControl.DataSource = q.OrderBy(s => s.Seryal);
+                                                gridControl.DataSource = qq4.OrderBy(s => s.Seryal_darSelectNoe);
                                             }
                                             else
                                                 gridControl.DataSource = null;
@@ -246,10 +280,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         }
                                     case "xtp_AllKhoroji":
                                         {
-                                            var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal).ToList();
-                                            if (q.Count() > 0)
+                                            //var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode).OrderBy(s => s.Seryal).ToList();
+                                            if (q4.Count() > 0)
                                             {
-                                                foreach (var item in q.ToList())
+                                                foreach (var item in q4.ToList())
                                                 {
                                                     item.MoinCode = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Code.ToString();
                                                     item.MoinName = q3.FirstOrDefault(s => s.Id == item.HesabMoinId).Name;
@@ -257,7 +291,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                     item.TafsiliName = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name;
                                                     item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
                                                     item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
+                                                    item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                                                 }
 
                                                 //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
@@ -266,7 +300,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                 //    gridControl.DataSource = dbContext.AkVorodeKala_Rizs.Local.ToBindingList();
                                                 //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
 
-                                                gridControl.DataSource = q.OrderBy(s => s.Seryal);
+                                                gridControl.DataSource = q4.OrderBy(s => s.Seryal_darSelectNoe);
                                             }
                                             else
                                                 gridControl.DataSource = null;
@@ -350,7 +384,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                     #endregion
 
-                    var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId  && s.IsActive == true).OrderBy(s => s.Code).ToList();
+                    var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId && s.IsActive == true).OrderBy(s => s.Code).ToList();
                     var q2 = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).ToList();
 
                     foreach (var item in q1)
@@ -416,7 +450,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                     List<EpAllHesabTafsili> list = new List<EpAllHesabTafsili>();
 
-                    var q1 = db.REpAllCodingHesabdariBEpAllGroupTafsilis.Where(s => s.AllCodingHesabdariId == _HesabMoinId && s.SalId == _SalId).Select(s => s.AllGroupTafsiliId).ToList();
+                    var q1 = db.R_EpHesabMoin1_B_EpAllGroupTafsilis.Where(s => s.EpHesabMoin1Id == _HesabMoinId && s.SalId == _SalId).Select(s => s.AllGroupTafsiliId).ToList();
                     if (q1.Count > 0)
                     {
                         foreach (var item in q1)
@@ -538,10 +572,26 @@ namespace AnbarVaKala.AmaliatRozaneh
                 cmbHesabTafsili1.Focus();
                 return false;
             }
-            else if (string.IsNullOrEmpty(txtSeryal.Text))
+            else if (string.IsNullOrEmpty(txtSeryal_darColAnbar.Text))
             {
-                XtraMessageBox.Show("فیلد سریال خالی است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSeryal.Focus();
+                XtraMessageBox.Show("فیلد " + lblSeryal_darColAnbarha.Text + " خالی است ", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSeryal_darColAnbar.Focus();
+                return false;
+            }
+            else if (string.IsNullOrEmpty(txtSeryal_darSelectAnbar.Text))
+            {
+                if (_FirstSelectAnbar_NextSanad)
+                {
+                    XtraMessageBox.Show("فیلد " + lblSeryal_darSelectAnbar.Text + " خالی است ", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSeryal_darSelectAnbar.Focus();
+                    return false;
+
+                }
+            }
+            else if (string.IsNullOrEmpty(txtSeryal_darSelectNoe.Text))
+            {
+                XtraMessageBox.Show("فیلد " + lblSeryal_darSelectNoe.Text + " خالی است ", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSeryal_darSelectNoe.Focus();
                 return false;
             }
             else if (string.IsNullOrEmpty(txtTarikh.Text))
@@ -550,10 +600,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                 txtTarikh.Focus();
                 return false;
             }
-            else if (string.IsNullOrEmpty(txtNoeSanad.Text) || string.IsNullOrEmpty(txtNoeSanad1.Text) || string.IsNullOrEmpty(txtNoeAmaliat1.Text))
+            else if (string.IsNullOrEmpty(txtNoeSanad1.Text) || string.IsNullOrEmpty(txtNoeAmaliat1.Text))
             {
                 XtraMessageBox.Show("نوع سند مشخص نیست", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNoeSanad.Focus();
+                //txtNoeSanad.Focus();
                 return false;
             }
             else if (gridView_AmaliatAddVaEdit.RowCount == 0)
@@ -583,7 +633,8 @@ namespace AnbarVaKala.AmaliatRozaneh
             fm.lblUserName.Text = lblUserName.Text;
             fm.lblSalId.Text = lblSalId.Text;
             fm.lblSalMali.Text = lblSalMali.Text;
-            fm.AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+            if (_FirstSelectAnbar_NextSanad)
+                fm.AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
             fm.ShowDialog();
 
             //gridView_AmaliatAddVaEdit.AddNewRow();
@@ -639,6 +690,8 @@ namespace AnbarVaKala.AmaliatRozaneh
             view.SetRowCellValue(e.RowHandle, "Nerkh", _Nerkh);
             view.SetRowCellValue(e.RowHandle, "Mablag", _Mablag);
             view.SetRowCellValue(e.RowHandle, "Tozihat", _Tozihat);
+            view.SetRowCellValue(e.RowHandle, "AzAnbarId", _AzAnbarId);
+            view.SetRowCellValue(e.RowHandle, "KalaId", _KalaId);
 
             // gridView_AmaliatAddVaEdit.AddNewRow();
         }
@@ -661,47 +714,61 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     try
                     {
-                        _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
-                        if (_AzAnbarId == 0)
-                        {
-                            XtraMessageBox.Show("لطفاً انبار مورد نظر را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            cmbNameAnbar.ShowPopup();
-                            return;
-                        }
-
                         En1 = EnumCED.Create;
                         ActiveButtons();
-                        panelControl_NameAnbar.Enabled = false;
-                        _SalId = Convert.ToInt32(lblSalId.Text);
+                        string NoeSanad = "عملیات ایجاد";
+                        //panelControl_NameAnbar.Enabled = false;
                         switch (NoeAmaliatTabpageName)
                         {
                             case "xtpVrodeKala":
                                 {
+                                    var qp = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode).ToList();
+                                    txtSeryal_darColAnbar.Text = qp.Count > 0 ? (qp.Max(s => s.Seryal_darColAnbarha) + 1).ToString() : "1";
+
                                     XtraTabControl1_1 = xtc_VorodeKala;
                                     //_IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
                                     //NoeSanadTabpageName = XtraTabControl1_1.SelectedTabPage.Name;
                                     txtNoeAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
                                     txtNoeSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                                    txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
+                                    //txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
                                     //txtNoeSanad.BackColor = Color.LightGreen;
                                     //lblSanadNamber.BackColor = Color.LightGreen;
                                     xtpAmaliatAddVEdit.PageVisible = true;
                                     xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.LightGreen;
-                                    xtpAmaliatAddVEdit.Text = "عملیات ایجاد";
                                     HelpClass1.DateTimeMask(txtTarikh);
                                     txtTarikh.Text = DateTime.Now.ToString();
-                                    chkIsSanadHesabdari.Checked = true;
+                                    //chkIsSanadHesabdari.Checked = true;
                                     switch (NoeSanadTabpageName)
                                     {
                                         case "xtp_ResidKharid":
                                             {
-                                                var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
-                                                if (q.Count > 0)
+                                                if (_FirstSelectAnbar_NextSanad)
                                                 {
-                                                    txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
+                                                    _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                                                    if (_AzAnbarId == 0)
+                                                    {
+                                                        XtraMessageBox.Show("لطفاً انبار مورد نظر را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                        cmbNameAnbar.ShowPopup();
+                                                        return;
+                                                    }
+
+                                                    panelControl_NameAnbar.Enabled = false;
+
+                                                    var q = qp.Where(s => s.AzAnbarId == _AzAnbarId).ToList();
+                                                    txtSeryal_darSelectAnbar.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectAnbar) + 1).ToString() : "1";
+
+                                                    var qq = q.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                                    txtSeryal_darSelectNoe.Text = qq.Count > 0 ? (qq.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
                                                 }
                                                 else
-                                                    txtSeryal.Text = "1";
+                                                {
+                                                    var q = qp.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                                    txtSeryal_darSelectNoe.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
+                                                    txtSeryal_darSelectAnbar.Text = "0";
+                                                    txtSeryal_darSelectAnbar.Visible = lblSeryal_darSelectAnbar.Visible = false;
+
+                                                }
+                                                NoeSanad = NoeSanad + " : نوع رسید " + ": " + XtraTabControl1_1.SelectedTabPage.Text;
                                                 break;
                                             }
                                         case "xtp_BargashtAzFroosh":
@@ -738,6 +805,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     }
                                     // _TabPageCount = xtcAmaliatRozaneh.TabPages.Count;
                                     xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
+                                    lblSeryal_darColAnbarha.Text = "ش رسید در کل انبارها";
+                                    lblSeryal_darSelectAnbar.Text = "ش رسید در انبار انتخابی";
+                                    lblSeryal_darSelectNoe.Text = "ش رسید در نوع رسید";
 
                                     dbContext = new MyContext();
                                     //dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).LoadAsync().ContinueWith(loadTask =>
@@ -754,31 +824,53 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 }
                             case "xtpKhrojeKala":
                                 {
+                                    var qp = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode).ToList();
+                                    txtSeryal_darColAnbar.Text = qp.Count > 0 ? (qp.Max(s => s.Seryal_darColAnbarha) + 1).ToString() : "1";
+
                                     XtraTabControl1_1 = xtc_KhorojeKala;
                                     //_IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
                                     //NoeSanadTabpageName = XtraTabControl1_1.SelectedTabPage.Name;
                                     txtNoeAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
                                     txtNoeSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                                    txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
+                                    //txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
                                     //txtNoeSanad.BackColor = Color.LightGreen;
                                     //lblSanadNamber.BackColor = Color.LightGreen;
                                     xtpAmaliatAddVEdit.PageVisible = true;
                                     xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.LightGreen;
-                                    xtpAmaliatAddVEdit.Text = "عملیات ایجاد";
+                                    //xtpAmaliatAddVEdit.Text = "عملیات ایجاد";
                                     HelpClass1.DateTimeMask(txtTarikh);
                                     txtTarikh.Text = DateTime.Now.ToString();
-                                    chkIsSanadHesabdari.Checked = true;
+                                    //chkIsSanadHesabdari.Checked = true;
                                     switch (NoeSanadTabpageName)
                                     {
                                         case "xtp_BargashtAzKharid":
                                             {
-                                                var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
-                                                if (q.Count > 0)
+                                                if (_FirstSelectAnbar_NextSanad)
                                                 {
-                                                    txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
+                                                    _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                                                    if (_AzAnbarId == 0)
+                                                    {
+                                                        XtraMessageBox.Show("لطفاً انبار مورد نظر را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                        cmbNameAnbar.ShowPopup();
+                                                        return;
+                                                    }
+
+                                                    panelControl_NameAnbar.Enabled = false;
+
+                                                    var q = qp.Where(s => s.AzAnbarId == _AzAnbarId).ToList();
+                                                    txtSeryal_darSelectAnbar.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectAnbar) + 1).ToString() : "1";
+
+                                                    var qq = q.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                                    txtSeryal_darSelectNoe.Text = qq.Count > 0 ? (qq.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
                                                 }
                                                 else
-                                                    txtSeryal.Text = "1";
+                                                {
+                                                    var q = qp.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                                    txtSeryal_darSelectNoe.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
+                                                    txtSeryal_darSelectAnbar.Text = "0";
+                                                    txtSeryal_darSelectAnbar.Visible = lblSeryal_darSelectAnbar.Visible = false;
+                                                }
+                                                NoeSanad = NoeSanad + " : نوع حواله " + ": " + XtraTabControl1_1.SelectedTabPage.Text;
                                                 break;
                                             }
                                         case "xtp_HavaleFroosh":
@@ -815,6 +907,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     }
                                     // _TabPageCount = xtcAmaliatRozaneh.TabPages.Count;
                                     xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
+                                    lblSeryal_darColAnbarha.Text = "ش حواله در کل انبارها";
+                                    lblSeryal_darSelectAnbar.Text = "ش حواله در انبار انتخابی";
+                                    lblSeryal_darSelectNoe.Text = "ش حواله در نوع انتخابی";
+
 
                                     dbContext = new MyContext();
                                     //dbContext.AkVorodeKala_Rizs.Where(s => s.Id == 0).LoadAsync().ContinueWith(loadTask =>
@@ -849,6 +945,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         //}
                         // xtpAmaliatAddVEdit.PageEnabled = true;
                         FillCmbHesabMoin();
+                        xtpAmaliatAddVEdit.Text = NoeSanad;
                         txtTarikh.Focus();
                     }
                     catch (Exception ex)
@@ -860,8 +957,8 @@ namespace AnbarVaKala.AmaliatRozaneh
 
             }
         }
-
-        private void FrmAmaliatRozaneh_Load(object sender, EventArgs e)
+        public bool _FirstSelectAnbar_NextSanad = false;
+        private void FrmAmaliatRozanehAnbarVKala_Load(object sender, EventArgs e)
         {
             _SalId = Convert.ToInt32(lblSalId.Text);
             //En1 = EnumCED.None;
@@ -879,8 +976,25 @@ namespace AnbarVaKala.AmaliatRozaneh
             gridControl = gridControl_ResidKharid_Riz;
             gridView = gridView_ResidKharid_Riz;
             // XtraTabControl1_1.SelectedTabPageIndex = 0;
-            FillCmbNameAnbar();
-            textEdit1.Focus();
+            //FillCmbNameAnbar();
+            //textEdit1.Focus();
+
+            if (_FirstSelectAnbar_NextSanad)
+            {
+                FillCmbNameAnbar();
+                btnDisplyList.Enabled = false;
+                textEdit1.Focus();
+            }
+            else
+            {
+                panelControl_NameAnbar.Enabled = false;
+                panelControl_NameAnbar.Visible = false;
+                panelControl_NameAnbar.Width = 0;
+                xtcAmaliatRozaneh.Enabled = true;
+                btnDisplyList_Click(null, null);
+                btnCreate.Focus();
+            }
+
         }
 
         int NoeAmaliatTabpageIndex = 0;
@@ -1280,6 +1394,8 @@ namespace AnbarVaKala.AmaliatRozaneh
             if (gridView_AmaliatAddVaEdit.RowCount > 0)
             {
                 En2 = EnumCED.Edit;
+                _AzAnbarId = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetFocusedRowCellValue("AzAnbarId"));
+                _KalaId = gridView_AmaliatAddVaEdit.GetFocusedRowCellDisplayText("KalaId");
                 _KalaCode = gridView_AmaliatAddVaEdit.GetFocusedRowCellDisplayText("KalaCode");
                 _KalaName = gridView_AmaliatAddVaEdit.GetFocusedRowCellDisplayText("KalaName");
                 _VahedeKala = gridView_AmaliatAddVaEdit.GetFocusedRowCellDisplayText("VahedeKala");
@@ -1295,7 +1411,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 fm.lblUserName.Text = lblUserName.Text;
                 fm.lblSalId.Text = lblSalId.Text;
                 fm.lblSalMali.Text = lblSalMali.Text;
-                fm.AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                //fm.AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
                 fm.ShowDialog();
 
             }
@@ -1326,9 +1442,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                             try
                             {
                                 _SalId = Convert.ToInt32(lblSalId.Text);
-                                _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
-                                int _Seryal = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal").ToString());
-                                var q = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                //_AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                                int _Seryal_darColAnbarha = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal_darColAnbarha").ToString());
+                                var q = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darColAnbarha == _Seryal_darColAnbarha).ToList();
                                 if (q.Count > 0)
                                 {
                                     db.AkAllAmaliateRozanehs.RemoveRange(q);
@@ -1373,7 +1489,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                     try
                     {
-                        int _Seryal = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal").ToString());
+                        int _Seryal = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal_darColAnbarha").ToString());
 
                     }
                     catch (Exception)
@@ -1386,12 +1502,33 @@ namespace AnbarVaKala.AmaliatRozaneh
                     {
                         dbContext = new MyContext();
                         En1 = EnumCED.Edit;
-                        int _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                        string NoeSanad = "عملیات ویرایش";
+                        //int _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
                         _SalId = Convert.ToInt32(lblSalId.Text);
                         // _IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
                         // btnSaveAndNext.Enabled = false;
-                        panelControl_NameAnbar.Enabled = false;
-                        int _Seryal = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal").ToString());
+                        if (_FirstSelectAnbar_NextSanad)
+                        {
+                            _AzAnbarId = Convert.ToInt32(gridView.GetFocusedRowCellValue("AzAnbarId"));
+                            panelControl_NameAnbar.Enabled = false;
+                        }
+                        else
+                        {
+                            txtSeryal_darSelectAnbar.Text = "0";
+                            txtSeryal_darSelectAnbar.Visible = lblSeryal_darSelectAnbar.Visible = false;
+                        }
+
+                        int _Seryal_darColAnbarha = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal_darColAnbarha").ToString());
+                        int _Seryal_darSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal_darSelectAnbar").ToString());
+                        int _Seryal_darSelectNoe = Convert.ToInt32(gridView.GetFocusedRowCellValue("Seryal_darSelectNoe").ToString());
+                        int? _GhateySanadNamber = null;
+                        if (gridView.GetFocusedRowCellValue("GhateySanadNamber") != null)
+                            _GhateySanadNamber = Convert.ToInt32(gridView.GetFocusedRowCellValue("GhateySanadNamber").ToString());
+                        int _SabetAtefNumber = Convert.ToInt32(gridView.GetFocusedRowCellValue("SabetAtefNumber").ToString());
+                        int _RozaneSanadNumber = Convert.ToInt32(gridView.GetFocusedRowCellValue("RozaneSanadNumber").ToString());
+                        int? _PaygiriNumber = null;
+                        if (gridView.GetFocusedRowCellValue("PaygiriNumber") != null)
+                            _PaygiriNumber = Convert.ToInt32(gridView.GetFocusedRowCellValue("PaygiriNumber").ToString());
                         string _DateTimeSanad = Convert.ToDateTime(gridView.GetFocusedRowCellValue("DateTimeSanad")).ToString();
                         bool _IsRiali = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsRiali"));
                         string _lblSanadNamber = gridView.GetFocusedRowCellValue("SanadNamber").ToString();
@@ -1418,27 +1555,37 @@ namespace AnbarVaKala.AmaliatRozaneh
                         {
                             case "xtpVrodeKala":
                                 {
-                                    var q = dbContext.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                    var q = dbContext.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darColAnbarha == _Seryal_darColAnbarha).ToList();
                                     if (q.Count > 0)
                                     {
                                         // _IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
-                                        txtSeryal.Text = _Seryal.ToString();
+                                        txtSeryal_darColAnbar.Text = _Seryal_darColAnbarha.ToString();
+                                        txtSeryal_darSelectAnbar.Text = _Seryal_darSelectAnbar.ToString();
+                                        txtSeryal_darSelectNoe.Text = _Seryal_darSelectNoe.ToString();
+                                        txtGhateySanadNumber.Text = _GhateySanadNamber != null ? _GhateySanadNamber.ToString() : "";
+                                        txtSabetAtefNumber.Text = _SabetAtefNumber.ToString();
+                                        txtRozaneSanadNumber.Text = _RozaneSanadNumber.ToString();
+                                        txtPaygiriNumber.Text = _PaygiriNumber != null ? _PaygiriNumber.ToString() : "";
                                         txtNoeAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
                                         txtNoeSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                                        txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
+                                        //txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
                                         //txtNoeSanad.BackColor = Color.Yellow;
                                         HelpClass1.DateTimeMask(txtTarikh);
                                         txtTarikh.Text = _DateTimeSanad;
-                                        chkIsSanadHesabdari.Checked = _IsRiali;
-                                        lblSanadNamber.Text = _lblSanadNamber;
+                                        //chkIsSanadHesabdari.Checked = _IsRiali;
+                                        txtSabetAtefNumber.Text = _lblSanadNamber;
                                         txtSharhSanad.Text = _SharhSanad;
                                         //lblSanadNamber.BackColor = Color.Yellow;
                                         // _TabPageCount = XtraTabControl1_1.TabPages.Count;
                                         xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled = false;
                                         xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
                                         xtpAmaliatAddVEdit.PageVisible = true;
-                                        xtpAmaliatAddVEdit.Text = "عملیات ویرایش";
+                                        NoeSanad = NoeSanad + " : نوع رسید " + ": " + XtraTabControl1_1.SelectedTabPage.Text;
+                                        xtpAmaliatAddVEdit.Text = NoeSanad;
                                         xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.Pink;
+                                        lblSeryal_darColAnbarha.Text = "ش رسید در کل انبارها";
+                                        lblSeryal_darSelectAnbar.Text = "ش رسید در انبار انتخابی";
+                                        lblSeryal_darSelectNoe.Text = "ش رسید در نوع رسید";
                                         FillCmbHesabMoin();
                                         cmbHesabMoin.EditValue = _MoinId;
                                         cmbHesabTafsili1.Text = q3.Find(s => s.Id == _Tafsili1Id).Name.ToString();
@@ -1459,7 +1606,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         {
                                             item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
                                             item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                            item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
+                                            item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                                         }
 
                                         //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
@@ -1489,27 +1636,37 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 }
                             case "xtpKhrojeKala":
                                 {
-                                    var q = dbContext.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                    var q = dbContext.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darColAnbarha == _Seryal_darColAnbarha).ToList();
                                     if (q.Count > 0)
                                     {
                                         // _IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
-                                        txtSeryal.Text = _Seryal.ToString();
+                                        txtSeryal_darColAnbar.Text = _Seryal_darColAnbarha.ToString();
+                                        txtSeryal_darSelectAnbar.Text = _Seryal_darSelectAnbar.ToString();
+                                        txtSeryal_darSelectNoe.Text = _Seryal_darSelectNoe.ToString();
+                                        txtGhateySanadNumber.Text = _GhateySanadNamber != null ? _GhateySanadNamber.ToString() : "";
+                                        txtSabetAtefNumber.Text = _SabetAtefNumber.ToString();
+                                        txtRozaneSanadNumber.Text = _RozaneSanadNumber.ToString();
+                                        txtPaygiriNumber.Text = _PaygiriNumber != null ? _PaygiriNumber.ToString() : "";
                                         txtNoeAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
                                         txtNoeSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                                        txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
+                                        //txtNoeSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
                                         //txtNoeSanad.BackColor = Color.Yellow;
                                         HelpClass1.DateTimeMask(txtTarikh);
                                         txtTarikh.Text = _DateTimeSanad;
-                                        chkIsSanadHesabdari.Checked = _IsRiali;
-                                        lblSanadNamber.Text = _lblSanadNamber;
+                                        //chkIsSanadHesabdari.Checked = _IsRiali;
+                                        txtSabetAtefNumber.Text = _lblSanadNamber;
                                         txtSharhSanad.Text = _SharhSanad;
                                         //lblSanadNamber.BackColor = Color.Yellow;
                                         // _TabPageCount = XtraTabControl1_1.TabPages.Count;
                                         xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled = false;
                                         xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
                                         xtpAmaliatAddVEdit.PageVisible = true;
-                                        xtpAmaliatAddVEdit.Text = "عملیات ویرایش";
+                                        NoeSanad = NoeSanad + " : نوع حواله " + ": " + XtraTabControl1_1.SelectedTabPage.Text;
+                                        xtpAmaliatAddVEdit.Text = NoeSanad;
                                         xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.Pink;
+                                        lblSeryal_darColAnbarha.Text = "ش حواله در کل انبارها";
+                                        lblSeryal_darSelectAnbar.Text = "ش حواله در انبار انتخابی";
+                                        lblSeryal_darSelectNoe.Text = "ش حواله در نوع حواله";
                                         FillCmbHesabMoin();
                                         cmbHesabMoin.EditValue = _MoinId;
                                         cmbHesabTafsili1.Text = q3.Find(s => s.Id == _Tafsili1Id).Name.ToString();
@@ -1530,7 +1687,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                         {
                                             item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
                                             item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                            item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName;
+                                            item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                                         }
 
                                         //dbContext.AkVorodeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
@@ -1607,8 +1764,24 @@ namespace AnbarVaKala.AmaliatRozaneh
                     try
                     {
                         _SalId = Convert.ToInt32(lblSalId.Text);
-                        _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
-                        int _Seryal = Convert.ToInt32(txtSeryal.Text);
+                        if (_FirstSelectAnbar_NextSanad)
+                        {
+                            _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+
+                        }
+
+                        int _Seryal_darColAnbarha = Convert.ToInt32(txtSeryal_darColAnbar.Text);
+                        int _Seryal_darSelectAnbar = Convert.ToInt32(txtSeryal_darSelectAnbar.Text);
+                        int _Seryal_darSelectNoe = Convert.ToInt32(txtSeryal_darSelectNoe.Text);
+                        int? _GhateySanadNamber = null;
+                        int _SabetAtefNumber = 0;
+                        //int _RozaneSanadNumber = 0;
+                        int _RozaneSanadNumber = Convert.ToInt32(txtRozaneSanadNumber.Text);
+                        int? _PaygiriNumber = null;
+                        if (txtPaygiriNumber.Text != "")
+                            _PaygiriNumber = Convert.ToInt32(txtPaygiriNumber.Text);
+
+                        //int _Seryal = Convert.ToInt32(txtSeryal_darSelectNoe.Text);
                         //DateTime _DateTimeSanad = Convert.ToDateTime(DateTime.Now.ToString().Replace(DateTime.Now.ToString().Substring(0, 10), txtTarikh.Text));
                         DateTime _DateTimeSanad = Convert.ToDateTime(txtTarikh.Text);
                         DateTime _DateTimeInsert = DateTime.Now;
@@ -1635,6 +1808,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                         List<AkAllAmaliateRozaneh> List = new List<AkAllAmaliateRozaneh>();
                                                         for (int i = 0; i < gridView_AmaliatAddVaEdit.RowCount; i++)
                                                         {
+                                                            _AzAnbarId = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "AzAnbarId"));
                                                             long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
                                                             decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
                                                             decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
@@ -1646,7 +1820,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj1.AzAnbarId = _AzAnbarId;
                                                             obj1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                             obj1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                            obj1.Seryal = _Seryal;
+                                                            obj1.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                            obj1.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                            obj1.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                            obj1.GhateySanadNamber = _GhateySanadNamber;
+                                                            obj1.SabetAtefNumber = _SabetAtefNumber;
+                                                            obj1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                            obj1.PaygiriNumber = _PaygiriNumber;
                                                             obj1.DateTimeSanad = _DateTimeSanad;
                                                             obj1.DateTimeInsert = _DateTimeInsert;
                                                             obj1.NoeAmaliatCode = _NoeAmaliatCode;
@@ -1659,7 +1839,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj1.Radif = i + 1;
                                                             obj1.Tozihat = _Tozihat;
                                                             obj1.SharhSanad = _SharhSanad;
-                                                            obj1.SanadNamber = 1;
+                                                            //obj1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                            //obj1.PaygiriNumber = _PaygiriNumber;
                                                             obj1.HesabMoinId = _HesabMoinId;
                                                             obj1.HesabTafsili1Id = _HesabTafsili1Id;
                                                             obj1.HesabTafsili2Id = _HesabTafsili2Id;
@@ -1671,7 +1852,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj.AzAnbarId = _AzAnbarId;
                                                             obj.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                             obj.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                            obj.Seryal = _Seryal;
+                                                            obj.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                            obj.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                            obj.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                            obj.GhateySanadNamber = _GhateySanadNamber;
+                                                            obj.SabetAtefNumber = _SabetAtefNumber;
+                                                            obj.RozaneSanadNumber = _RozaneSanadNumber;
+                                                            obj.PaygiriNumber = _PaygiriNumber;
                                                             obj.DateTimeSanad = _DateTimeSanad;
                                                             obj.NoeAmaliatCode = _NoeAmaliatCode;
                                                             obj.NoeSanadCode = _NoeSanadCode;
@@ -1681,7 +1868,8 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj.Mablag = _Mablag;
                                                             obj.IsRiali = _Mablag > 0 ? true : false;
                                                             obj.Radif = i + 1;
-                                                            obj.SanadNamber = 1;
+                                                            //obj.RozaneSanadNumber = _RozaneSanadNumber;
+                                                            //obj.PaygiriNumber = _PaygiriNumber;
                                                             obj.AkVorodeKala_Riz1 = obj1;
                                                             obj.HesabMoinId = _HesabMoinId;
                                                             obj.HesabTafsili1Id = _HesabTafsili1Id;
@@ -1708,7 +1896,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                         //DateTime _DateTimeInsert = DateTime.Now;
                                                         DateTime _DateTimeEdit = DateTime.Now;
                                                         BindingList<AkVorodeKala_Riz> list = (BindingList<AkVorodeKala_Riz>)akVorodeKala_RizsBindingSource.DataSource;
-                                                        var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                                        var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darColAnbarha == _Seryal_darColAnbarha).ToList();
                                                         foreach (var item in q2)
                                                         {
                                                             if (!list.Any(s => s.Id == item.Id))
@@ -1718,25 +1906,29 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             }
                                                         }
 
-                                                        var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                                        var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                                        //var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId  && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darSelectNoe == _Seryal).ToList();
+                                                        var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darColAnbarha == _Seryal_darColAnbarha).ToList();
                                                         for (int i = 0; i < list.Count; i++)
                                                         {
+                                                            _AzAnbarId = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "AzAnbarId"));
+                                                            long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
+                                                            decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
+                                                            decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
+                                                            decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
+                                                            string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
+
                                                             if (list[i].Id > 0)
                                                             {
-                                                                long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                                                decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                                                decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                                                decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                                                string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
 
                                                                 var v1 = q.FirstOrDefault(s => s.Id == list[i].Id);
 
                                                                 v1.SalId = _SalId;
                                                                 v1.AzAnbarId = _AzAnbarId;
+                                                                v1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                v1.PaygiriNumber = _PaygiriNumber;
                                                                 v1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 v1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                v1.Seryal = _Seryal;
+                                                                //v1.Seryal_darSelectNoe = _Seryal;
                                                                 v1.DateTimeSanad = _DateTimeSanad;
                                                                 v1.DateTimeEdit = _DateTimeEdit;
                                                                 v1.NoeAmaliatCode = _NoeAmaliatCode;
@@ -1749,19 +1941,20 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 v1.Radif = i + 1;
                                                                 v1.Tozihat = _Tozihat;
                                                                 v1.SharhSanad = _SharhSanad;
-                                                                v1.SanadNamber = 1;
                                                                 v1.HesabMoinId = _HesabMoinId;
                                                                 v1.HesabTafsili1Id = _HesabTafsili1Id;
                                                                 v1.HesabTafsili2Id = _HesabTafsili2Id;
                                                                 v1.HesabTafsili3Id = _HesabTafsili3Id;
 
-                                                                var A1 = q1.FirstOrDefault(s => s.Id == v1.Id);
+                                                                var A1 = q2.FirstOrDefault(s => s.Id == v1.Id);
 
                                                                 A1.SalId = _SalId;
                                                                 A1.AzAnbarId = _AzAnbarId;
+                                                                A1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                A1.PaygiriNumber = _PaygiriNumber;
                                                                 A1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 A1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                A1.Seryal = _Seryal;
+                                                                //A1.Seryal_darSelectNoe = _Seryal;
                                                                 A1.DateTimeSanad = _DateTimeSanad;
                                                                 A1.NoeAmaliatCode = _NoeAmaliatCode;
                                                                 A1.NoeSanadCode = _NoeSanadCode;
@@ -1771,7 +1964,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 A1.Mablag = _Mablag;
                                                                 A1.IsRiali = _Mablag > 0 ? true : false;
                                                                 A1.Radif = i + 1;
-                                                                A1.SanadNamber = 1;
+                                                                //A1.RozaneSanadNumber = 1;
                                                                 A1.AkVorodeKala_Riz1 = v1;
                                                                 A1.HesabMoinId = _HesabMoinId;
                                                                 A1.HesabTafsili1Id = _HesabTafsili1Id;
@@ -1782,18 +1975,25 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             }
                                                             else
                                                             {
-                                                                long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                                                decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                                                decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                                                decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                                                string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
+                                                                //long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
+                                                                //decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
+                                                                //decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
+                                                                //decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
+                                                                //string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
 
                                                                 AkVorodeKala_Riz obj1 = new AkVorodeKala_Riz();
                                                                 obj1.SalId = _SalId;
                                                                 obj1.AzAnbarId = _AzAnbarId;
+                                                                obj1.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                                obj1.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                                obj1.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                                obj1.GhateySanadNamber = _GhateySanadNamber;
+                                                                obj1.SabetAtefNumber = _SabetAtefNumber;
+                                                                obj1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                obj1.PaygiriNumber = _PaygiriNumber;
                                                                 obj1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 obj1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                obj1.Seryal = _Seryal;
+                                                                //obj1.Seryal_darSelectNoe = _Seryal;
                                                                 obj1.DateTimeSanad = _DateTimeSanad;
                                                                 obj1.DateTimeInsert = _DateTimeInsert;
                                                                 obj1.NoeAmaliatCode = _NoeAmaliatCode;
@@ -1806,7 +2006,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 obj1.Radif = i + 1;
                                                                 obj1.Tozihat = _Tozihat;
                                                                 obj1.SharhSanad = _SharhSanad;
-                                                                obj1.SanadNamber = 1;
+                                                                //obj1.RozaneSanadNumber = 1;
                                                                 obj1.HesabMoinId = _HesabMoinId;
                                                                 obj1.HesabTafsili1Id = _HesabTafsili1Id;
                                                                 obj1.HesabTafsili2Id = _HesabTafsili2Id;
@@ -1816,9 +2016,16 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                                                 obj.SalId = _SalId;
                                                                 obj.AzAnbarId = _AzAnbarId;
+                                                                obj.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                                obj.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                                obj.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                                obj.GhateySanadNamber = _GhateySanadNamber;
+                                                                obj.SabetAtefNumber = _SabetAtefNumber;
+                                                                obj.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                obj.PaygiriNumber = _PaygiriNumber;
                                                                 obj.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 obj.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                obj.Seryal = _Seryal;
+                                                                //obj.Seryal_darSelectNoe = _Seryal;
                                                                 obj.DateTimeSanad = _DateTimeSanad;
                                                                 obj.NoeAmaliatCode = _NoeAmaliatCode;
                                                                 obj.NoeSanadCode = _NoeSanadCode;
@@ -1828,7 +2035,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 obj.Mablag = _Mablag;
                                                                 obj.IsRiali = _Mablag > 0 ? true : false;
                                                                 obj.Radif = i + 1;
-                                                                obj.SanadNamber = 1;
+                                                                //obj.RozaneSanadNumber = 1;
                                                                 obj.AkVorodeKala_Riz1 = obj1;
                                                                 obj.HesabMoinId = _HesabMoinId;
                                                                 obj.HesabTafsili1Id = _HesabTafsili1Id;
@@ -1972,6 +2179,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                         List<AkAllAmaliateRozaneh> List = new List<AkAllAmaliateRozaneh>();
                                                         for (int i = 0; i < gridView_AmaliatAddVaEdit.RowCount; i++)
                                                         {
+                                                            _AzAnbarId = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "AzAnbarId"));
                                                             long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
                                                             decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
                                                             decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
@@ -1983,7 +2191,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj1.AzAnbarId = _AzAnbarId;
                                                             obj1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                             obj1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                            obj1.Seryal = _Seryal;
+                                                            obj1.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                            obj1.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                            obj1.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                            obj1.GhateySanadNamber = _GhateySanadNamber;
+                                                            obj1.SabetAtefNumber = _SabetAtefNumber;
+                                                            obj1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                            obj1.PaygiriNumber = _PaygiriNumber;
                                                             obj1.DateTimeSanad = _DateTimeSanad;
                                                             obj1.DateTimeInsert = _DateTimeInsert;
                                                             obj1.NoeAmaliatCode = _NoeAmaliatCode;
@@ -1996,7 +2210,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj1.Radif = i + 1;
                                                             obj1.Tozihat = _Tozihat;
                                                             obj1.SharhSanad = _SharhSanad;
-                                                            obj1.SanadNamber = 1;
+                                                            //obj1.RozaneSanadNumber = 1;
                                                             obj1.HesabMoinId = _HesabMoinId;
                                                             obj1.HesabTafsili1Id = _HesabTafsili1Id;
                                                             obj1.HesabTafsili2Id = _HesabTafsili2Id;
@@ -2008,7 +2222,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj.AzAnbarId = _AzAnbarId;
                                                             obj.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                             obj.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                            obj.Seryal = _Seryal;
+                                                            obj.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                            obj.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                            obj.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                            obj.GhateySanadNamber = _GhateySanadNamber;
+                                                            obj.SabetAtefNumber = _SabetAtefNumber;
+                                                            obj.RozaneSanadNumber = _RozaneSanadNumber;
+                                                            obj.PaygiriNumber = _PaygiriNumber;
                                                             obj.DateTimeSanad = _DateTimeSanad;
                                                             obj.NoeAmaliatCode = _NoeAmaliatCode;
                                                             obj.NoeSanadCode = _NoeSanadCode;
@@ -2018,7 +2238,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             obj.Mablag = _Mablag;
                                                             obj.IsRiali = _Mablag > 0 ? true : false;
                                                             obj.Radif = i + 1;
-                                                            obj.SanadNamber = 1;
+                                                            //obj.RozaneSanadNumber = 1;
                                                             obj.AkKhorojeKala_Riz1 = obj1;
                                                             obj.HesabMoinId = _HesabMoinId;
                                                             obj.HesabTafsili1Id = _HesabTafsili1Id;
@@ -2045,7 +2265,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                         //DateTime _DateTimeInsert = DateTime.Now;
                                                         DateTime _DateTimeEdit = DateTime.Now;
                                                         BindingList<AkKhorojeKala_Riz> list = (BindingList<AkKhorojeKala_Riz>)akVorodeKala_RizsBindingSource.DataSource;
-                                                        var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                                        var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darColAnbarha == _Seryal_darColAnbarha).ToList();
                                                         foreach (var item in q2)
                                                         {
                                                             if (!list.Any(s => s.Id == item.Id))
@@ -2055,26 +2275,27 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             }
                                                         }
 
-                                                        var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
-                                                        var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal == _Seryal).ToList();
+                                                        //var q2 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darSelectNoe == _Seryal).ToList();
+                                                        var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode && s.Seryal_darColAnbarha == _Seryal_darColAnbarha).ToList();
                                                         for (int i = 0; i < list.Count; i++)
                                                         {
+                                                            _AzAnbarId = Convert.ToInt32(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "AzAnbarId"));
+                                                            long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
+                                                            decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
+                                                            decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
+                                                            decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
+                                                            string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
+
                                                             if (list[i].Id > 0)
                                                             {
-
-                                                                long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                                                decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                                                decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                                                decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                                                string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
-
                                                                 var k1 = q.FirstOrDefault(s => s.Id == list[i].Id);
 
                                                                 k1.SalId = _SalId;
                                                                 k1.AzAnbarId = _AzAnbarId;
+                                                                k1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                k1.PaygiriNumber = _PaygiriNumber;
                                                                 k1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 k1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                k1.Seryal = _Seryal;
                                                                 k1.DateTimeSanad = _DateTimeSanad;
                                                                 k1.DateTimeEdit = _DateTimeEdit;
                                                                 k1.NoeAmaliatCode = _NoeAmaliatCode;
@@ -2087,19 +2308,20 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 k1.Radif = i + 1;
                                                                 k1.Tozihat = _Tozihat;
                                                                 k1.SharhSanad = _SharhSanad;
-                                                                k1.SanadNamber = 1;
+                                                                //k1.RozaneSanadNumber = 1;
                                                                 k1.HesabMoinId = _HesabMoinId;
                                                                 k1.HesabTafsili1Id = _HesabTafsili1Id;
                                                                 k1.HesabTafsili2Id = _HesabTafsili2Id;
                                                                 k1.HesabTafsili3Id = _HesabTafsili3Id;
 
-                                                                var A1 = q1.FirstOrDefault(s => s.Id == k1.Id);
+                                                                var A1 = q2.FirstOrDefault(s => s.Id == k1.Id);
 
                                                                 A1.SalId = _SalId;
                                                                 A1.AzAnbarId = _AzAnbarId;
+                                                                A1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                A1.PaygiriNumber = _PaygiriNumber;
                                                                 A1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 A1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                A1.Seryal = _Seryal;
                                                                 A1.DateTimeSanad = _DateTimeSanad;
                                                                 A1.NoeAmaliatCode = _NoeAmaliatCode;
                                                                 A1.NoeSanadCode = _NoeSanadCode;
@@ -2109,7 +2331,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 A1.Mablag = _Mablag;
                                                                 A1.IsRiali = _Mablag > 0 ? true : false;
                                                                 A1.Radif = i + 1;
-                                                                A1.SanadNamber = 1;
+                                                                //A1.RozaneSanadNumber = 1;
                                                                 A1.AkKhorojeKala_Riz1 = k1;
                                                                 A1.HesabMoinId = _HesabMoinId;
                                                                 A1.HesabTafsili1Id = _HesabTafsili1Id;
@@ -2120,18 +2342,24 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                             }
                                                             else
                                                             {
-                                                                long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
-                                                                decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
-                                                                decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
-                                                                decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
-                                                                string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
+                                                                //long _Code = Convert.ToInt64(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "KalaCode"));
+                                                                //decimal _Meghdar = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Meghdar"));
+                                                                //decimal _Nerkh = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Nerkh"));
+                                                                //decimal _Mablag = Convert.ToDecimal(gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Mablag"));
+                                                                //string _Tozihat = gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat") != null ? gridView_AmaliatAddVaEdit.GetRowCellValue(i, "Tozihat").ToString() : null;
 
                                                                 AkKhorojeKala_Riz obj1 = new AkKhorojeKala_Riz();
                                                                 obj1.SalId = _SalId;
                                                                 obj1.AzAnbarId = _AzAnbarId;
+                                                                obj1.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                                obj1.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                                obj1.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                                obj1.GhateySanadNamber = _GhateySanadNamber;
+                                                                obj1.SabetAtefNumber = _SabetAtefNumber;
+                                                                obj1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                obj1.PaygiriNumber = _PaygiriNumber;
                                                                 obj1.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 obj1.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                obj1.Seryal = _Seryal;
                                                                 obj1.DateTimeSanad = _DateTimeSanad;
                                                                 obj1.DateTimeInsert = _DateTimeInsert;
                                                                 obj1.NoeAmaliatCode = _NoeAmaliatCode;
@@ -2144,7 +2372,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 obj1.Radif = i + 1;
                                                                 obj1.Tozihat = _Tozihat;
                                                                 obj1.SharhSanad = _SharhSanad;
-                                                                obj1.SanadNamber = 1;
+                                                                //obj1.RozaneSanadNumber = 1;
                                                                 obj1.HesabMoinId = _HesabMoinId;
                                                                 obj1.HesabTafsili1Id = _HesabTafsili1Id;
                                                                 obj1.HesabTafsili2Id = _HesabTafsili2Id;
@@ -2154,9 +2382,15 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                                                 obj.SalId = _SalId;
                                                                 obj.AzAnbarId = _AzAnbarId;
+                                                                obj1.Seryal_darColAnbarha = _Seryal_darColAnbarha;
+                                                                obj1.Seryal_darSelectAnbar = _Seryal_darSelectAnbar;
+                                                                obj1.Seryal_darSelectNoe = _Seryal_darSelectNoe;
+                                                                obj1.GhateySanadNamber = _GhateySanadNamber;
+                                                                obj1.SabetAtefNumber = _SabetAtefNumber;
+                                                                obj1.RozaneSanadNumber = _RozaneSanadNumber;
+                                                                obj1.PaygiriNumber = _PaygiriNumber;
                                                                 obj.KalaId = qq.FirstOrDefault(s => s.Code == _Code).Id;
                                                                 obj.VahedeKalaId = qq.FirstOrDefault(s => s.Code == _Code).VahedAsliId;
-                                                                obj.Seryal = _Seryal;
                                                                 obj.DateTimeSanad = _DateTimeSanad;
                                                                 obj.NoeAmaliatCode = _NoeAmaliatCode;
                                                                 obj.NoeSanadCode = _NoeSanadCode;
@@ -2166,7 +2400,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                                 obj.Mablag = _Mablag;
                                                                 obj.IsRiali = _Mablag > 0 ? true : false;
                                                                 obj.Radif = i + 1;
-                                                                obj.SanadNamber = 1;
+                                                                //obj.RozaneSanadNumber = 1;
                                                                 obj.AkKhorojeKala_Riz1 = obj1;
                                                                 obj.HesabMoinId = _HesabMoinId;
                                                                 obj.HesabTafsili1Id = _HesabTafsili1Id;
@@ -2345,29 +2579,71 @@ namespace AnbarVaKala.AmaliatRozaneh
                         {
                             if (txtNoeAmaliat1.Text == "xtpVrodeKala")
                             {
-                                var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
-                                if (q.Count > 0)
+                                var qp = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode).ToList();
+                                txtSeryal_darColAnbar.Text = qp.Count > 0 ? (qp.Max(s => s.Seryal_darColAnbarha) + 1).ToString() : "1";
+                                if (_FirstSelectAnbar_NextSanad)
                                 {
-                                    txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
+                                    _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+
+                                    var q = qp.Where(s => s.AzAnbarId == _AzAnbarId).ToList();
+                                    txtSeryal_darSelectAnbar.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectAnbar) + 1).ToString() : "1";
+
+                                    var qq = q.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                    txtSeryal_darSelectNoe.Text = qq.Count > 0 ? (qq.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
                                 }
                                 else
-                                    txtSeryal.Text = "1";
+                                {
+                                    var q = qp.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                    txtSeryal_darSelectNoe.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
+                                    txtSeryal_darSelectAnbar.Text = "0";
+                                    txtSeryal_darSelectAnbar.Visible = lblSeryal_darSelectAnbar.Visible = false;
+                                }
+
+
+                                //var q = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
+                                //if (q.Count > 0)
+                                //{
+                                //    txtSeryal_darSelectNoe.Text = (q.Max(s => s.Seryal_darSelectNoe) + 1).ToString();
+                                //}
+                                //else
+                                //    txtSeryal_darSelectNoe.Text = "1";
 
                                 txtTarikh.Text = DateTime.Now.ToString();
-                                chkIsSanadHesabdari.Checked = true;
+                                //chkIsSanadHesabdari.Checked = true;
                             }
                             else if (txtNoeAmaliat1.Text == "xtpKhrojeKala")
                             {
-                                var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
-                                if (q.Count > 0)
+                                var qp = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.NoeAmaliatCode == _NoeAmaliatCode).ToList();
+                                txtSeryal_darColAnbar.Text = qp.Count > 0 ? (qp.Max(s => s.Seryal_darColAnbarha) + 1).ToString() : "1";
+                                if (_FirstSelectAnbar_NextSanad)
                                 {
-                                    txtSeryal.Text = (q.Max(s => s.Seryal) + 1).ToString();
+                                    _AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+
+                                    var q = qp.Where(s => s.AzAnbarId == _AzAnbarId).ToList();
+                                    txtSeryal_darSelectAnbar.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectAnbar) + 1).ToString() : "1";
+
+                                    var qq = q.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                    txtSeryal_darSelectNoe.Text = qq.Count > 0 ? (qq.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
                                 }
                                 else
-                                    txtSeryal.Text = "1";
+                                {
+                                    var q = qp.Where(s => s.NoeSanadCode == _NoeSanadCode).ToList();
+                                    txtSeryal_darSelectNoe.Text = q.Count > 0 ? (q.Max(s => s.Seryal_darSelectNoe) + 1).ToString() : "1";
+                                    txtSeryal_darSelectAnbar.Text = "0";
+                                    txtSeryal_darSelectAnbar.Visible = lblSeryal_darSelectAnbar.Visible = false;
+                                }
+
+
+                                //var q = db.AkKhorojeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AzAnbarId && s.NoeAmaliatCode == _NoeAmaliatCode && s.NoeSanadCode == _NoeSanadCode).ToList();
+                                //if (q.Count > 0)
+                                //{
+                                //    txtSeryal_darSelectNoe.Text = (q.Max(s => s.Seryal_darSelectNoe) + 1).ToString();
+                                //}
+                                //else
+                                //    txtSeryal_darSelectNoe.Text = "1";
 
                                 txtTarikh.Text = DateTime.Now.ToString();
-                                chkIsSanadHesabdari.Checked = true;
+                                //chkIsSanadHesabdari.Checked = true;
                             }
 
                             // ActiveButtons();
@@ -2399,7 +2675,7 @@ namespace AnbarVaKala.AmaliatRozaneh
             }
         }
 
-        private void FrmAmaliatRozaneh_KeyDown(object sender, KeyEventArgs e)
+        private void FrmAmaliatRozanehAnbarVKala_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2)
             {
@@ -2486,7 +2762,7 @@ namespace AnbarVaKala.AmaliatRozaneh
             gridView_RowCellClick(null, null);
         }
 
-        private void FrmAmaliatRozaneh_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmAmaliatRozanehAnbarVKala_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (dbContext != null)
                 dbContext.Dispose();
