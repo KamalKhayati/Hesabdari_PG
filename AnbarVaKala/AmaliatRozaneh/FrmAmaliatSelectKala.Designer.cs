@@ -153,7 +153,6 @@
             this.cmb_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmb_NameKala.Properties.PopupWidth = 1300;
             this.cmb_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmb_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmb_NameKala.Properties.ValueMember = "Id";
             this.cmb_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmb_NameKala.Size = new System.Drawing.Size(756, 34);
@@ -194,7 +193,7 @@
             this.labelControl37.AutoEllipsis = true;
             this.labelControl37.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl37.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl37.Location = new System.Drawing.Point(746, 182);
+            this.labelControl37.Location = new System.Drawing.Point(746, 220);
             this.labelControl37.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(145, 39);
@@ -212,7 +211,7 @@
             this.labelControl1.AutoEllipsis = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl1.Location = new System.Drawing.Point(593, 181);
+            this.labelControl1.Location = new System.Drawing.Point(593, 219);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(145, 39);
@@ -230,7 +229,7 @@
             this.labelControl2.AutoEllipsis = true;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl2.Location = new System.Drawing.Point(899, 223);
+            this.labelControl2.Location = new System.Drawing.Point(899, 261);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(32, 36);
@@ -242,7 +241,7 @@
             this.txtVahed1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVahed1.EditValue = "";
             this.txtVahed1.EnterMoveNextControl = true;
-            this.txtVahed1.Location = new System.Drawing.Point(746, 306);
+            this.txtVahed1.Location = new System.Drawing.Point(746, 344);
             this.txtVahed1.Margin = new System.Windows.Forms.Padding(4);
             this.txtVahed1.Name = "txtVahed1";
             this.txtVahed1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -263,7 +262,7 @@
             this.txtmojodi1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtmojodi1.EditValue = "0";
             this.txtmojodi1.EnterMoveNextControl = true;
-            this.txtmojodi1.Location = new System.Drawing.Point(593, 305);
+            this.txtmojodi1.Location = new System.Drawing.Point(593, 343);
             this.txtmojodi1.Margin = new System.Windows.Forms.Padding(4);
             this.txtmojodi1.Name = "txtmojodi1";
             this.txtmojodi1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -282,7 +281,7 @@
             this.txtmojodi2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtmojodi2.EditValue = "0";
             this.txtmojodi2.EnterMoveNextControl = true;
-            this.txtmojodi2.Location = new System.Drawing.Point(593, 264);
+            this.txtmojodi2.Location = new System.Drawing.Point(593, 302);
             this.txtmojodi2.Margin = new System.Windows.Forms.Padding(4);
             this.txtmojodi2.Name = "txtmojodi2";
             this.txtmojodi2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -301,7 +300,7 @@
             this.txtVahed2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVahed2.EditValue = "";
             this.txtVahed2.EnterMoveNextControl = true;
-            this.txtVahed2.Location = new System.Drawing.Point(746, 265);
+            this.txtVahed2.Location = new System.Drawing.Point(746, 303);
             this.txtVahed2.Margin = new System.Windows.Forms.Padding(4);
             this.txtVahed2.Name = "txtVahed2";
             this.txtVahed2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -328,7 +327,7 @@
             this.labelControl3.AutoEllipsis = true;
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl3.Location = new System.Drawing.Point(899, 264);
+            this.labelControl3.Location = new System.Drawing.Point(899, 302);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(32, 37);
@@ -340,7 +339,7 @@
             this.txtmojodi3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtmojodi3.EditValue = "0";
             this.txtmojodi3.EnterMoveNextControl = true;
-            this.txtmojodi3.Location = new System.Drawing.Point(593, 222);
+            this.txtmojodi3.Location = new System.Drawing.Point(593, 260);
             this.txtmojodi3.Margin = new System.Windows.Forms.Padding(4);
             this.txtmojodi3.Name = "txtmojodi3";
             this.txtmojodi3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -359,7 +358,7 @@
             this.txtVahed3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVahed3.EditValue = "";
             this.txtVahed3.EnterMoveNextControl = true;
-            this.txtVahed3.Location = new System.Drawing.Point(746, 223);
+            this.txtVahed3.Location = new System.Drawing.Point(746, 261);
             this.txtVahed3.Margin = new System.Windows.Forms.Padding(4);
             this.txtVahed3.Name = "txtVahed3";
             this.txtVahed3.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -386,7 +385,7 @@
             this.labelControl4.AutoEllipsis = true;
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl4.Location = new System.Drawing.Point(899, 308);
+            this.labelControl4.Location = new System.Drawing.Point(899, 346);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(32, 34);
@@ -404,7 +403,7 @@
             this.labelControl5.AutoEllipsis = true;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl5.Location = new System.Drawing.Point(899, 182);
+            this.labelControl5.Location = new System.Drawing.Point(899, 220);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(32, 39);
@@ -438,7 +437,7 @@
             this.txtMeghdar3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMeghdar3.EditValue = "0";
             this.txtMeghdar3.EnterMoveNextControl = true;
-            this.txtMeghdar3.Location = new System.Drawing.Point(198, 223);
+            this.txtMeghdar3.Location = new System.Drawing.Point(198, 261);
             this.txtMeghdar3.Margin = new System.Windows.Forms.Padding(4);
             this.txtMeghdar3.Name = "txtMeghdar3";
             this.txtMeghdar3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -453,7 +452,7 @@
             this.txtMeghdar3.Properties.MaxLength = 19;
             this.txtMeghdar3.Properties.ReadOnly = true;
             this.txtMeghdar3.Size = new System.Drawing.Size(213, 36);
-            this.txtMeghdar3.TabIndex = 4;
+            this.txtMeghdar3.TabIndex = 253;
             this.txtMeghdar3.TabStop = false;
             // 
             // txtMeghdar2
@@ -461,7 +460,7 @@
             this.txtMeghdar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMeghdar2.EditValue = "0";
             this.txtMeghdar2.EnterMoveNextControl = true;
-            this.txtMeghdar2.Location = new System.Drawing.Point(198, 265);
+            this.txtMeghdar2.Location = new System.Drawing.Point(198, 303);
             this.txtMeghdar2.Margin = new System.Windows.Forms.Padding(4);
             this.txtMeghdar2.Name = "txtMeghdar2";
             this.txtMeghdar2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -476,7 +475,7 @@
             this.txtMeghdar2.Properties.MaxLength = 19;
             this.txtMeghdar2.Properties.ReadOnly = true;
             this.txtMeghdar2.Size = new System.Drawing.Size(213, 36);
-            this.txtMeghdar2.TabIndex = 5;
+            this.txtMeghdar2.TabIndex = 252;
             this.txtMeghdar2.TabStop = false;
             // 
             // txtMeghdar1
@@ -484,7 +483,7 @@
             this.txtMeghdar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMeghdar1.EditValue = "";
             this.txtMeghdar1.EnterMoveNextControl = true;
-            this.txtMeghdar1.Location = new System.Drawing.Point(198, 306);
+            this.txtMeghdar1.Location = new System.Drawing.Point(198, 344);
             this.txtMeghdar1.Margin = new System.Windows.Forms.Padding(4);
             this.txtMeghdar1.Name = "txtMeghdar1";
             this.txtMeghdar1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -499,7 +498,7 @@
             this.txtMeghdar1.Properties.MaxLength = 19;
             this.txtMeghdar1.Properties.ReadOnly = true;
             this.txtMeghdar1.Size = new System.Drawing.Size(213, 36);
-            this.txtMeghdar1.TabIndex = 6;
+            this.txtMeghdar1.TabIndex = 251;
             this.txtMeghdar1.TabStop = false;
             // 
             // labelControl6
@@ -531,7 +530,7 @@
             this.labelControl7.AutoEllipsis = true;
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl7.Location = new System.Drawing.Point(198, 182);
+            this.labelControl7.Location = new System.Drawing.Point(198, 220);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(213, 39);
@@ -583,7 +582,7 @@
             this.txtTozihat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTozihat.EditValue = "";
             this.txtTozihat.EnterMoveNextControl = true;
-            this.txtTozihat.Location = new System.Drawing.Point(9, 352);
+            this.txtTozihat.Location = new System.Drawing.Point(200, 176);
             this.txtTozihat.Margin = new System.Windows.Forms.Padding(4);
             this.txtTozihat.Name = "txtTozihat";
             this.txtTozihat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -593,7 +592,7 @@
             this.txtTozihat.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtTozihat.Properties.MaxLength = 350;
             this.txtTozihat.Properties.NullValuePrompt = "توضیحات ...";
-            this.txtTozihat.Size = new System.Drawing.Size(922, 36);
+            this.txtTozihat.Size = new System.Drawing.Size(732, 36);
             this.txtTozihat.TabIndex = 5;
             // 
             // txtTedadeDarVahed3
@@ -601,7 +600,7 @@
             this.txtTedadeDarVahed3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTedadeDarVahed3.EditValue = "0";
             this.txtTedadeDarVahed3.EnterMoveNextControl = true;
-            this.txtTedadeDarVahed3.Location = new System.Drawing.Point(419, 223);
+            this.txtTedadeDarVahed3.Location = new System.Drawing.Point(419, 261);
             this.txtTedadeDarVahed3.Margin = new System.Windows.Forms.Padding(4);
             this.txtTedadeDarVahed3.Name = "txtTedadeDarVahed3";
             this.txtTedadeDarVahed3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -620,7 +619,7 @@
             this.txtTedadeDarVahed2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTedadeDarVahed2.EditValue = "0";
             this.txtTedadeDarVahed2.EnterMoveNextControl = true;
-            this.txtTedadeDarVahed2.Location = new System.Drawing.Point(419, 265);
+            this.txtTedadeDarVahed2.Location = new System.Drawing.Point(419, 303);
             this.txtTedadeDarVahed2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTedadeDarVahed2.Name = "txtTedadeDarVahed2";
             this.txtTedadeDarVahed2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -639,7 +638,7 @@
             this.txtTedadeDarVahed1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTedadeDarVahed1.EditValue = "0";
             this.txtTedadeDarVahed1.EnterMoveNextControl = true;
-            this.txtTedadeDarVahed1.Location = new System.Drawing.Point(419, 306);
+            this.txtTedadeDarVahed1.Location = new System.Drawing.Point(419, 344);
             this.txtTedadeDarVahed1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTedadeDarVahed1.Name = "txtTedadeDarVahed1";
             this.txtTedadeDarVahed1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -666,7 +665,7 @@
             this.labelControl12.AutoEllipsis = true;
             this.labelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl12.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.labelControl12.Location = new System.Drawing.Point(419, 182);
+            this.labelControl12.Location = new System.Drawing.Point(419, 220);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(166, 39);
@@ -678,7 +677,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(9, 298);
+            this.btnClose.Location = new System.Drawing.Point(10, 336);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(181, 44);
@@ -692,7 +691,7 @@
             // 
             this.btnSaveAndClosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAndClosed.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndClosed.ImageOptions.SvgImage")));
-            this.btnSaveAndClosed.Location = new System.Drawing.Point(9, 246);
+            this.btnSaveAndClosed.Location = new System.Drawing.Point(9, 284);
             this.btnSaveAndClosed.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndClosed.Name = "btnSaveAndClosed";
             this.btnSaveAndClosed.Size = new System.Drawing.Size(182, 44);
@@ -706,7 +705,7 @@
             // 
             this.btnKardes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKardes.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKardes.ImageOptions.SvgImage")));
-            this.btnKardes.Location = new System.Drawing.Point(8, 142);
+            this.btnKardes.Location = new System.Drawing.Point(8, 180);
             this.btnKardes.Margin = new System.Windows.Forms.Padding(4);
             this.btnKardes.Name = "btnKardes";
             this.btnKardes.Size = new System.Drawing.Size(183, 44);
@@ -718,7 +717,7 @@
             // 
             this.btnMojodiAnbarVKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMojodiAnbarVKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMojodiAnbarVKala.ImageOptions.SvgImage")));
-            this.btnMojodiAnbarVKala.Location = new System.Drawing.Point(9, 90);
+            this.btnMojodiAnbarVKala.Location = new System.Drawing.Point(9, 128);
             this.btnMojodiAnbarVKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnMojodiAnbarVKala.Name = "btnMojodiAnbarVKala";
             this.btnMojodiAnbarVKala.Size = new System.Drawing.Size(182, 44);
@@ -748,7 +747,7 @@
             // 
             this.btnSaveAndNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAndNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndNext.ImageOptions.SvgImage")));
-            this.btnSaveAndNext.Location = new System.Drawing.Point(9, 194);
+            this.btnSaveAndNext.Location = new System.Drawing.Point(9, 232);
             this.btnSaveAndNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndNext.Name = "btnSaveAndNext";
             this.btnSaveAndNext.Size = new System.Drawing.Size(182, 44);

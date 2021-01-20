@@ -136,7 +136,7 @@ namespace EtelaatePaye.Tanzimat
                 try
                 {
                     int _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupLevelsId == 2);
+                    var q = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupTafsiliLevelsIndex == 2);
                     if (q != null)
                     {
                         chkIsActiveGroupTafsiliLevel2.ReadOnly = true;
@@ -144,7 +144,7 @@ namespace EtelaatePaye.Tanzimat
                     else
                         chkIsActiveGroupTafsiliLevel2.ReadOnly = false;
 
-                    var q1 = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupLevelsId == 3);
+                    var q1 = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId && s.GroupTafsiliLevelsIndex == 3);
                     if (q1 != null)
                     {
                         chkIsActiveGroupTafsiliLevel3.ReadOnly = true;

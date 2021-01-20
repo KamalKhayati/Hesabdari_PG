@@ -14,6 +14,7 @@ using HelpClassLibrary;
 using EtelaatePaye.CodingAnbar;
 using DBHesabdari_PG.Models.EP.CodingAnbar;
 using AnbarVaKala.Reports;
+using DBHesabdari_PG.Models.AK;
 
 namespace AnbarVaKala.AmaliatRozaneh
 {
@@ -98,7 +99,10 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void FrmAmaliatSelectKala_Load(object sender, EventArgs e)
         {
+            _SalId = Convert.ToInt32(lblSalId.Text);
             FillCmbNameAnbar2();
+            db = new MyContext();
+            var qq = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
             if (Fm != null)
             {
                 if (Fm.En2 == EnumCED.Create)
@@ -124,7 +128,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         {
                             cmbNameAnbar2.EditValue = Fm._AzAnbarId;
                             cmb_NameKala.EditValue = Convert.ToInt32(Fm._KalaId);
-                            lblVahedeAsli.Text = Fm._VahedeKala;
+                            lblVahedeAsli.Text = qq.FirstOrDefault(s => s.Id == Fm._VahedeKalaId).Name;
                             txtMeghdar.Text = Fm._Meghdar;
                             txtNerkh.Text = Fm._Nerkh;
                             txtMablag.Text = Fm._Mablag;
@@ -206,13 +210,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                     {
                         try
                         {
-                            long _CodeKala = Convert.ToInt64(Dm._KalaCode);
+                            long _CodeKala = Convert.ToInt64(Dm._KalaCode_NM);
                             var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Code == _CodeKala);
                             if (q != null)
                             {
                                 cmbNameAnbar2.EditValue = Dm._AzAnbarId;
                                 cmb_NameKala.EditValue = Convert.ToInt32(Dm._KalaId);
-                                lblVahedeAsli.Text = Dm._VahedeKala;
+                                lblVahedeAsli.Text = Dm._VahedeKala_NM;
                                 txtMeghdar.Text = Dm._Meghdar;
                                 txtNerkh.Text = Dm._Nerkh;
                                 txtMablag.Text = Dm._Mablag;
@@ -251,7 +255,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         public int AzAnbarId = 0;
         public int BeAnbarId = 0;
-
+        string AzAnbarName = string.Empty;
         public void FillcmbNameKala()
         {
             try
@@ -379,7 +383,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void txtMeghdar_EditValueChanged(object sender, EventArgs e)
         {
-            
+
             if (txtMeghdar.IsHandleCreated)
             {
                 if (!string.IsNullOrEmpty(txtMeghdar.Text.Trim()) && txtMeghdar.Text.Trim() != "0/000")
@@ -538,9 +542,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
                     var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId);
-                    txtVahed3.Text = q != null ? q.EpVahedKala3.Name : string.Empty;
-                    txtVahed2.Text = q != null ? q.EpVahedKala2.Name : string.Empty;
-                    txtVahed1.Text = q != null ? q.EpVahedKala1.Name : string.Empty;
+                    txtVahed3.Text = q != null && q.EpVahedKala3 != null ? q.EpVahedKala3.Name : string.Empty;
+                    txtVahed2.Text = q != null && q.EpVahedKala2 != null ? q.EpVahedKala2.Name : string.Empty;
+                    txtVahed1.Text = q != null && q.EpVahedKala1 != null ? q.EpVahedKala1.Name : string.Empty;
                     lblVahedeAsli.Text = q != null ? q.EpVahedAsliKala.Name : string.Empty;
                     txtTedadeDarVahed3.Text = q != null ? q.HarKarton.ToString() : string.Empty;
                     txtTedadeDarVahed2.Text = q != null ? q.HarBaste.ToString() : string.Empty;
@@ -677,21 +681,25 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     if (IsValidation())
                     {
+                        if (sender == btnSaveAndClosed)
+                            IsClosed = true;
                         AzAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
-
+                        AzAnbarName = db.EpListAnbarhas.FirstOrDefault(s => s.SalId == _SalId && s.Id == AzAnbarId).Name;
                         if (Fm != null)
                         {
                             if (Fm.En2 == EnumCED.Create)
                             {
-                                int _NameKalaId = Convert.ToInt32(cmb_NameKala.EditValue);
-                                var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _NameKalaId);
+                                int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                                var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId);
                                 if (q != null)
                                 {
                                     Fm._AzAnbarId = AzAnbarId;
-                                    Fm._KalaId = q.Id.ToString();
-                                    Fm._KalaCode = q.Code.ToString();
-                                    Fm._KalaName = q.Name;
-                                    Fm._VahedeKala = q.VahedAsliName_NM;
+                                    Fm._KalaId = _KalaId;
+                                    Fm._VahedeKalaId = q.VahedAsliId;
+                                    Fm._KalaCode_NM = q.Code.ToString();
+                                    Fm._KalaName_NM = q.Name;
+                                    Fm._VahedeKala_NM = q.EpVahedAsliKala.Name;
+                                    Fm._AzAnbarName_NM = AzAnbarName;
                                     Fm._Meghdar = txtMeghdar.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Fm._Nerkh = txtNerkh.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Fm._Mablag = txtMablag.Text.Trim().Replace(",", "");
@@ -703,34 +711,35 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     Fm.gridView_AmaliatAddVaEdit.AddNewRow();
                                     Fm.gridView_AmaliatAddVaEdit.FocusInvalidRow();
 
-                                    if (IsClosed)
-                                    {
-                                        this.Close();
-                                    }
                                 }
                             }
                             else if (Fm.En2 == EnumCED.Edit)
                             {
-                                int _NameKalaId = Convert.ToInt32(cmb_NameKala.EditValue);
-                                var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _NameKalaId);
+                                int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                                var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId);
                                 if (q != null)
                                 {
                                     Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "AzAnbarId", AzAnbarId);
                                     Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "KalaId", q.Id);
-                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "KalaCode", q.Code);
-                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "KalaName", q.Name);
-                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "VahedeKala", q.VahedAsliName_NM);
+                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "VahedeKalaId", q.VahedAsliId);
+                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "KalaCode_NM", q.Code);
+                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "KalaName_NM", q.Name);
+                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "VahedeKala_NM", q.EpVahedAsliKala.Name);
+                                    Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "AzAnbarName_NM", AzAnbarName);
                                     Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "Meghdar", txtMeghdar.Text.Trim().Replace(",", "").Replace("/", "."));
                                     Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "Nerkh", txtNerkh.Text.Trim().Replace(",", "").Replace("/", "."));
                                     Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "Mablag", txtMablag.Text.Trim().Replace(",", ""));
                                     Fm.gridView_AmaliatAddVaEdit.SetRowCellValue(Fm._RowHandle, "Tozihat", txtTozihat.Text.Trim());
 
-                                    if (IsClosed)
-                                    {
-                                        this.Close();
-                                    }
                                 }
+
                             }
+
+                            if (IsClosed)
+                            {
+                                this.Close();
+                            }
+
                         }
                         else if (Jm != null)
                         {
@@ -744,7 +753,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     Jm._KalaId = q.Id.ToString();
                                     Jm._KalaCode = q.Code.ToString();
                                     Jm._KalaName = q.Name;
-                                    Jm._VahedeKala = q.VahedAsliName_NM;
+                                    Jm._VahedeKala = q.EpVahedAsliKala.Name;
                                     Jm._Meghdar = txtMeghdar.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Jm._Nerkh = txtNerkh.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Jm._Mablag = txtMablag.Text.Trim().Replace(",", "");
@@ -756,10 +765,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     Jm.gridView_AmaliatAddVaEdit.AddNewRow();
                                     Jm.gridView_AmaliatAddVaEdit.FocusInvalidRow();
 
-                                    if (IsClosed)
-                                    {
-                                        this.Close();
-                                    }
                                 }
                             }
                             else if (Jm.En2 == EnumCED.Edit)
@@ -772,18 +777,20 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "KalaId", q.Id);
                                     Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "KalaCode", q.Code);
                                     Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "KalaName", q.Name);
-                                    Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "VahedeKala", q.VahedAsliName_NM);
+                                    Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "VahedeKala", q.EpVahedAsliKala.Name);
                                     Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "Meghdar", txtMeghdar.Text.Trim().Replace(",", "").Replace("/", "."));
                                     Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "Nerkh", txtNerkh.Text.Trim().Replace(",", "").Replace("/", "."));
                                     Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "Mablag", txtMablag.Text.Trim().Replace(",", ""));
                                     Jm.gridView_AmaliatAddVaEdit.SetRowCellValue(Jm._RowHandle, "Tozihat", txtTozihat.Text.Trim());
 
-                                    if (IsClosed)
-                                    {
-                                        this.Close();
-                                    }
                                 }
                             }
+
+                            if (IsClosed)
+                            {
+                                this.Close();
+                            }
+
                         }
                         else if (Dm != null)
                         {
@@ -794,10 +801,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 if (q != null)
                                 {
                                     Dm._AzAnbarId = AzAnbarId;
-                                    Dm._KalaId = q.Id.ToString();
-                                    Dm._KalaCode = q.Code.ToString();
-                                    Dm._KalaName = q.Name;
-                                    Dm._VahedeKala = q.VahedAsliName_NM;
+                                    Dm._KalaId = q.Id;
+                                    Dm._KalaCode_NM = q.Code.ToString();
+                                    Dm._KalaName_NM = q.Name;
+                                    Dm._VahedeKala_NM = q.EpVahedAsliKala.Name;
                                     Dm._Meghdar = txtMeghdar.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Dm._Nerkh = txtNerkh.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Dm._Mablag = txtMablag.Text.Trim().Replace(",", "");
@@ -809,10 +816,6 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     Dm.gridView_AmaliatAddVaEdit.AddNewRow();
                                     Dm.gridView_AmaliatAddVaEdit.FocusInvalidRow();
 
-                                    if (IsClosed)
-                                    {
-                                        this.Close();
-                                    }
                                 }
                             }
                             else if (Dm.En2 == EnumCED.Edit)
@@ -825,18 +828,20 @@ namespace AnbarVaKala.AmaliatRozaneh
                                     Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "KalaId", q.Id);
                                     Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "KalaCode", q.Code);
                                     Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "KalaName", q.Name);
-                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "VahedeKala", q.VahedAsliName_NM);
+                                    Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "VahedeKala", q.EpVahedAsliKala.Name);
                                     Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Meghdar", txtMeghdar.Text.Trim().Replace(",", "").Replace("/", "."));
                                     Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Nerkh", txtNerkh.Text.Trim().Replace(",", "").Replace("/", "."));
                                     Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Mablag", txtMablag.Text.Trim().Replace(",", ""));
                                     Dm.gridView_AmaliatAddVaEdit.SetRowCellValue(Dm._RowHandle, "Tozihat", txtTozihat.Text.Trim());
 
-                                    if (IsClosed)
-                                    {
-                                        this.Close();
-                                    }
                                 }
                             }
+
+                            if (IsClosed)
+                            {
+                                this.Close();
+                            }
+
                         }
 
                     }
@@ -888,7 +893,7 @@ namespace AnbarVaKala.AmaliatRozaneh
             fm.lblSalMali.Text = lblSalMali.Text;
             //fm.xtraTabControl_CodingKala.SelectedTabPageIndex = 0;
             //fm.xtraTabControl_CodingKala.SelectedTabPageIndex = 3;
-            fm.Show();
+            fm.ShowDialog();
         }
 
         private void txtMablag_EditValueChanged(object sender, EventArgs e)

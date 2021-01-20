@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListAnbarha));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.txtSharhHesab = new DevExpress.XtraEditors.MemoEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -372,9 +372,9 @@
             this.btnNewCode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem1.Text = "Alt+N";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnNewCode.SuperTip = superToolTip1;
+            toolTipTitleItem2.Text = "Alt+N";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnNewCode.SuperTip = superToolTip2;
             this.btnNewCode.TabIndex = 29;
             this.btnNewCode.TabStop = false;
             this.btnNewCode.Text = "کد جدید";
@@ -820,7 +820,7 @@
             // 
             this.btnTabagheKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTabagheKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTabagheKala.ImageOptions.SvgImage")));
-            this.btnTabagheKala.Location = new System.Drawing.Point(425, 9);
+            this.btnTabagheKala.Location = new System.Drawing.Point(435, 10);
             this.btnTabagheKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnTabagheKala.Name = "btnTabagheKala";
             this.btnTabagheKala.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;

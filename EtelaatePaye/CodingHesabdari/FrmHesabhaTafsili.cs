@@ -816,7 +816,7 @@ namespace EtelaatePaye.CodingHesabdari
                                             objDaraeha.GroupTafsiliId = _cmbGroupTafsiliId;
                                             objDaraeha.CodeAmval = !string.IsNullOrEmpty(txtCodeAmval_Daraeha.Text) ? Convert.ToInt32(txtCodeAmval_Daraeha.Text) : 0;
                                             objDaraeha.IndexRaveshEstehlak = cmbRaveshEstehlak_Daraeha.SelectedIndex != -1 ? Convert.ToInt32(cmbRaveshEstehlak_Daraeha.SelectedIndex) : -1;
-                                            objDaraeha.RaveshEstehlak = cmbRaveshEstehlak_Daraeha.SelectedIndex != -1 ? cmbRaveshEstehlak_Daraeha.Text : "";
+                                            objDaraeha.RaveshEstehlak = cmbRaveshEstehlak_Daraeha.SelectedIndex != -1 ? cmbRaveshEstehlak_Daraeha.Text : null;
                                             objDaraeha.OmreMofid = !string.IsNullOrEmpty(txtOmreMofid_Daraeha.Text) ? Convert.ToInt32(txtOmreMofid_Daraeha.Text) : 0;
                                             objDaraeha.DarsadEstehlak = !string.IsNullOrEmpty(txtDarsadEstehlak_Daraeha.Text) ? Convert.ToSingle(txtDarsadEstehlak_Daraeha.Text) : 0;
                                             objDaraeha.ArzeshEsghat = !string.IsNullOrEmpty(txtArzeshEsghat_Daraeha.Text) ? Convert.ToDecimal(txtArzeshEsghat_Daraeha.Text) : 0;
@@ -1432,7 +1432,7 @@ namespace EtelaatePaye.CodingHesabdari
                     txtName.Text = gridView.GetFocusedRowCellValue("Name").ToString();
                     txtTarikhEjad.Text = gridView.GetFocusedRowCellValue("TarikhEjad") != null ? gridView.GetFocusedRowCellValue("TarikhEjad").ToString().Substring(0, 10) : "";
                     chkIsActive.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsActive"));
-                    txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab").ToString();
+                    txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab") !=null ? gridView.GetFocusedRowCellValue("SharhHesab").ToString() : "";
                     txtIndex.Text = gridView.FocusedRowHandle.ToString();
 
                     switch (_SelectedTabPage)
@@ -1465,7 +1465,7 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                         case "xtpSandoghha":
                             {
-                                txtNameMasol_Sandogh.Text = gridView.GetFocusedRowCellValue("NameMasol").ToString();
+                                txtNameMasol_Sandogh.Text = gridView.GetFocusedRowCellValue("NameMasol") !=null ? gridView.GetFocusedRowCellValue("NameMasol").ToString() : "";
                                 chkIsDefault_Sandogh.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
                                 break;
                             }
@@ -1476,11 +1476,11 @@ namespace EtelaatePaye.CodingHesabdari
                                 cmbNoeArz_Bank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NoeArzId").ToString());
                                 chkIsDefault_Bank.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
                                 txtNameShobe_Bank.Text = gridView.GetFocusedRowCellValue("NameShobe").ToString();
-                                txtCodeShobe_Bank.Text = gridView.GetFocusedRowCellValue("CodeShobe").ToString();
+                                txtCodeShobe_Bank.Text = gridView.GetFocusedRowCellValue("CodeShobe") != null ? gridView.GetFocusedRowCellValue("CodeShobe").ToString() :"" ;
                                 txtShomareHesab_Bank.Text = gridView.GetFocusedRowCellValue("ShomareHesab").ToString();
-                                txtShomareKart_Bank.Text = gridView.GetFocusedRowCellValue("ShomareKart").ToString();
-                                txtShomareShaba_Bank.Text = gridView.GetFocusedRowCellValue("ShomareShaba").ToString();
-                                txtShomareMoshtari_Bank.Text = gridView.GetFocusedRowCellValue("ShomareMoshtari").ToString();
+                                txtShomareKart_Bank.Text = gridView.GetFocusedRowCellValue("ShomareKart") !=null? gridView.GetFocusedRowCellValue("ShomareKart").ToString():"";
+                                txtShomareShaba_Bank.Text = gridView.GetFocusedRowCellValue("ShomareShaba") != null ? gridView.GetFocusedRowCellValue("ShomareShaba").ToString():"";
+                                txtShomareMoshtari_Bank.Text = gridView.GetFocusedRowCellValue("ShomareMoshtari") != null ? gridView.GetFocusedRowCellValue("ShomareMoshtari").ToString():"";
                                 break;
                             }
                         case "xtpVamha":

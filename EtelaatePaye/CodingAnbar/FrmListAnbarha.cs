@@ -1052,7 +1052,7 @@ namespace EtelaatePaye.CodingAnbar
                     if (q != null)
                     {
                         //cmbHesabTafsili1.EditValue = cmbHesabTafsili2.EditValue = cmbHesabTafsili3.EditValue = 0;
-                        switch (q.GroupLevelsId)
+                        switch (q.GroupTafsiliLevelsIndex)
                         {
                             case 0:
                                 {

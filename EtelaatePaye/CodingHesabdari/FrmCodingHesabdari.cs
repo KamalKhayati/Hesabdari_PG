@@ -90,8 +90,6 @@ namespace EtelaatePaye.CodingHesabdari
 
         public void FillGridviewCodingHesabdari()
         {
-            using (var db = new MyContext())
-            {
                 try
                 {
                     //var ll = db.EpHesabMoin1s.FirstOrDefault(s => s.SalId == _SalId).EpAllCodingHesabdari1.LevelName;
@@ -102,7 +100,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q1 = db.EpHesabTabaghehs.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                            var q1 = db1.EpHesabTabaghehs.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                             if (q1.Count > 0)
                             {
                                 gridControl1.DataSource = q1;
@@ -142,7 +140,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q1 = db.EpHesabGroups.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                            var q1 = db1.EpHesabGroups.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                             if (q1.Count > 0)
                                 gridControl2.DataSource = q1;
                             else
@@ -180,7 +178,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q1 = db.EpHesabCols.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                            var q1 = db1.EpHesabCols.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                             if (q1.Count > 0)
                                 gridControl3.DataSource = q1;
                             else
@@ -218,7 +216,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         if (lblUserId.Text == "1")
                         {
-                            var q1 = db.EpHesabMoin1s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                            var q1 = db1.EpHesabMoin1s.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
                             if (q1.Count > 0)
                                 gridControl4.DataSource = q1;
                             else
@@ -254,7 +252,7 @@ namespace EtelaatePaye.CodingHesabdari
                     }
                     else if (xtraTabControl1.SelectedTabPage == xtraTabPage_DerakhtVareh)
                     {
-                        var q1 = db.EpAllCodingHesabdaris.Where(s => s.SalId == _SalId).ToList();
+                        var q1 = db1.EpAllCodingHesabdaris.Where(s => s.SalId == _SalId).ToList();
                         if (q1.Count > 0)
                         {
                             epAllCodingHesabdarisBindingSource.DataSource = q1;
@@ -270,7 +268,6 @@ namespace EtelaatePaye.CodingHesabdari
                     XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
                         "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
         }
 
         public void FillcmbHesabTabagheh()
@@ -920,8 +917,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     obj.SalId = _SalId;
                                     obj.Code = _Code;
                                     obj.Name = _Name;
-                                    obj.GroupLevelsId = _GroupTafsiliLevelId;
-                                    obj.GroupLevelsName = cmbGroupTafsiliLevels_4.Text;
+                                    obj.GroupTafsiliLevelsIndex = _GroupTafsiliLevelId;
+                                    obj.GroupTafsiliLevelsName = cmbGroupTafsiliLevels_4.Text;
                                     obj.IsActive = _IsActive;
                                     obj.ColId = _ColId;
                                     obj.LevelNamber = _LevelNamber;
@@ -1467,8 +1464,8 @@ namespace EtelaatePaye.CodingHesabdari
                                         q.Code = _Code;
                                         q.Name = _Name;
                                         q.ColId = _ColId;
-                                        q.GroupLevelsId = _GroupTafsiliLevelId;
-                                        q.GroupLevelsName = cmbGroupTafsiliLevels_4.Text;
+                                        q.GroupTafsiliLevelsIndex = _GroupTafsiliLevelId;
+                                        q.GroupTafsiliLevelsName = cmbGroupTafsiliLevels_4.Text;
                                         q.IsActive = _IsActive;
                                         q.IndexMahiatHesab = cmbMahiatHesab_4.SelectedIndex;
                                         q.MahiatHesab = cmbMahiatHesab_4.Text;
@@ -2456,7 +2453,7 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void cmbNoeHesab_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblNoeHesab.Text = (cmbNoeHesab.SelectedIndex == 0 || cmbNoeHesab.SelectedIndex == 2) ? "دائم" : (cmbNoeHesab_1.SelectedIndex == 1) ? "موقت" : ".";
+            lblNoeHesab.Text = (cmbNoeHesab.SelectedIndex == 0 || cmbNoeHesab.SelectedIndex == 2) ? "دائم" : (cmbNoeHesab.SelectedIndex == 1) ? "موقت" : ".";
         }
 
         private void gridView_KeyDown(object sender, KeyEventArgs e)
@@ -2480,7 +2477,7 @@ namespace EtelaatePaye.CodingHesabdari
                     txtId.Text = gridView.GetFocusedRowCellValue("Id").ToString();
                     txtName.Text = gridView.GetFocusedRowCellValue("Name").ToString();
                     chkIsActive.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsActive"));
-                    txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab").ToString();
+                    txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab") !=null? gridView.GetFocusedRowCellValue("SharhHesab").ToString() : "";
 
                     if (xtraTabControl1.SelectedTabPage == xtraTabPage_Tabagheh)
                     {

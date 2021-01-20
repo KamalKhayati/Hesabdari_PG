@@ -33,9 +33,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, MaxLength(70)]
         public string Name { get; set; }
         [Required]
-        public int GroupLevelsId { get; set; }
+        public int GroupTafsiliLevelsIndex { get; set; }
         [Required, MaxLength(20)]
-        public string GroupLevelsName { get; set; }
+        public string GroupTafsiliLevelsName { get; set; }
         //[Required]
         //public int GroupId { get; set; }
         //[Required, MaxLength(50)]

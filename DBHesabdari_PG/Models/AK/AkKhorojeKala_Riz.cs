@@ -17,27 +17,44 @@ namespace DBHesabdari_PG.Models.AK
         public int SalId { get; set; }
         [Required]
         public int KalaId { get; set; }
-        [NotMapped]
-        [MaxLength(16)]
-        public string KalaCode { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string KalaName { get; set; }
         [Required]
         public int VahedeKalaId { get; set; }
+
+
+        [NotMapped]
+        [MaxLength(16)]
+        public string KalaCode_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string KalaName_NM { get; set; }
         [NotMapped]
         [MaxLength(20)]
-        public string VahedeKala { get; set; }
+        public string VahedeKala_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string AzAnbarName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string BeAnbarName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(9)]
+        public string MoinCode_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string MoinName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(9)]
+        public string TafsiliCode_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string TafsiliName_NM { get; set; }
+
+
+
         [Required]
         public int AzAnbarId { get; set; }
         [Required]
         public int BeAnbarId { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string AzAnbarName { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string BeAnbarName { get; set; }
         [Required]
         public int Seryal_darColAnbarha { get; set; }
         [Required]
@@ -76,24 +93,14 @@ namespace DBHesabdari_PG.Models.AK
         public bool IsRiali { get; set; }
         [Required]
         public int HesabMoinId { get; set; }
-        [NotMapped]
-        [MaxLength(9)]
-        public string MoinCode { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string MoinName { get; set; }
         [Required]
         public int HesabTafsili1Id { get; set; }
         [Required]
         public int HesabTafsili2Id { get; set; }
         [Required]
         public int HesabTafsili3Id { get; set; }
-        [NotMapped]
-        [MaxLength(9)]
-        public string TafsiliCode { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string TafsiliName { get; set; }
+
+
         [Required]
         public int Radif { get; set; }
         public int? FactorNamber { get; set; }

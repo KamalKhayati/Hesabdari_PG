@@ -781,7 +781,7 @@
             this.gridColumn21.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn21.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn21.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn21.Caption = "کد گروه اصلی";
+            this.gridColumn21.Caption = "کد طبقه ";
             this.gridColumn21.FieldName = "Code";
             this.gridColumn21.MinWidth = 21;
             this.gridColumn21.Name = "gridColumn21";
@@ -796,7 +796,7 @@
             this.gridColumn22.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn22.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn22.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn22.Caption = "نام گروه اصلی";
+            this.gridColumn22.Caption = "نام طبقه";
             this.gridColumn22.FieldName = "Name";
             this.gridColumn22.MinWidth = 21;
             this.gridColumn22.Name = "gridColumn22";
@@ -812,7 +812,7 @@
             this.gridColumn23.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn23.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn23.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn23.Caption = "واحد گروه اصلی";
+            this.gridColumn23.Caption = "واحد طبقه";
             this.gridColumn23.FieldName = "EpVahedKala1.Name";
             this.gridColumn23.MinWidth = 23;
             this.gridColumn23.Name = "gridColumn23";
@@ -1025,7 +1025,6 @@
             this.cmbVahedKala_Tabagheh.Properties.NullText = "";
             this.cmbVahedKala_Tabagheh.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbVahedKala_Tabagheh.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbVahedKala_Tabagheh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbVahedKala_Tabagheh.Properties.ValueMember = "Id";
             this.cmbVahedKala_Tabagheh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala_Tabagheh.Size = new System.Drawing.Size(176, 34);
@@ -1261,7 +1260,6 @@
             this.cmbGroupTafsili_Tabagheh.Properties.PopupSizeable = false;
             this.cmbGroupTafsili_Tabagheh.Properties.PopupWidth = 545;
             this.cmbGroupTafsili_Tabagheh.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGroupTafsili_Tabagheh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupTafsili_Tabagheh.Properties.ValueMember = "Id";
             this.cmbGroupTafsili_Tabagheh.Size = new System.Drawing.Size(469, 34);
             this.cmbGroupTafsili_Tabagheh.TabIndex = 0;
@@ -1567,7 +1565,6 @@
             this.cmbTabaghehKala_GroupAsli.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbTabaghehKala_GroupAsli.Properties.PopupWidth = 545;
             this.cmbTabaghehKala_GroupAsli.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbTabaghehKala_GroupAsli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehKala_GroupAsli.Properties.ValueMember = "Id";
             this.cmbTabaghehKala_GroupAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_GroupAsli.Size = new System.Drawing.Size(463, 34);
@@ -1643,7 +1640,6 @@
             this.cmbVahedKala_GroupAsli.Properties.NullText = "";
             this.cmbVahedKala_GroupAsli.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbVahedKala_GroupAsli.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbVahedKala_GroupAsli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbVahedKala_GroupAsli.Properties.ValueMember = "Id";
             this.cmbVahedKala_GroupAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala_GroupAsli.Size = new System.Drawing.Size(176, 34);
@@ -1655,7 +1651,6 @@
             this.btnVahedKala_GroupAsli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVahedKala_GroupAsli.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala_GroupAsli.Appearance.Options.UseForeColor = true;
-            this.btnVahedKala_GroupAsli.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVahedKala_GroupAsli.ImageOptions.Image")));
             this.btnVahedKala_GroupAsli.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala_GroupAsli.ImageOptions.SvgImage")));
             this.btnVahedKala_GroupAsli.Location = new System.Drawing.Point(866, 126);
             this.btnVahedKala_GroupAsli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -2134,7 +2129,6 @@
             this.cmbTabaghehKala_GroupFaree.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbTabaghehKala_GroupFaree.Properties.PopupWidth = 545;
             this.cmbTabaghehKala_GroupFaree.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbTabaghehKala_GroupFaree.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehKala_GroupFaree.Properties.ValueMember = "Id";
             this.cmbTabaghehKala_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_GroupFaree.Size = new System.Drawing.Size(470, 34);
@@ -2202,7 +2196,6 @@
             this.cmbGroupAsli_GroupFaree.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGroupAsli_GroupFaree.Properties.PopupWidth = 591;
             this.cmbGroupAsli_GroupFaree.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGroupAsli_GroupFaree.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupAsli_GroupFaree.Properties.ValueMember = "Id";
             this.cmbGroupAsli_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupAsli_GroupFaree.Size = new System.Drawing.Size(470, 34);
@@ -2240,7 +2233,6 @@
             this.cmbVahedKala_GroupFaree.Properties.NullText = "";
             this.cmbVahedKala_GroupFaree.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbVahedKala_GroupFaree.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbVahedKala_GroupFaree.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbVahedKala_GroupFaree.Properties.ValueMember = "Id";
             this.cmbVahedKala_GroupFaree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala_GroupFaree.Size = new System.Drawing.Size(176, 34);
@@ -2265,7 +2257,6 @@
             this.btnVahedKala_GroupFaree.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVahedKala_GroupFaree.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala_GroupFaree.Appearance.Options.UseForeColor = true;
-            this.btnVahedKala_GroupFaree.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVahedKala_GroupFaree.ImageOptions.Image")));
             this.btnVahedKala_GroupFaree.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala_GroupFaree.ImageOptions.SvgImage")));
             this.btnVahedKala_GroupFaree.Location = new System.Drawing.Point(874, 169);
             this.btnVahedKala_GroupFaree.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -3385,7 +3376,6 @@
             this.cmbTabaghehKala_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbTabaghehKala_NameKala.Properties.PopupWidth = 545;
             this.cmbTabaghehKala_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbTabaghehKala_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehKala_NameKala.Properties.ValueMember = "Id";
             this.cmbTabaghehKala_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbTabaghehKala_NameKala.Size = new System.Drawing.Size(551, 34);
@@ -3590,7 +3580,6 @@
             this.cmbGroupFaree_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGroupFaree_NameKala.Properties.PopupWidth = 591;
             this.cmbGroupFaree_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGroupFaree_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupFaree_NameKala.Properties.ValueMember = "Id";
             this.cmbGroupFaree_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupFaree_NameKala.Size = new System.Drawing.Size(551, 34);
@@ -3631,7 +3620,6 @@
             this.cmbGroupAsli_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGroupAsli_NameKala.Properties.PopupWidth = 591;
             this.cmbGroupAsli_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGroupAsli_NameKala.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupAsli_NameKala.Properties.ValueMember = "Id";
             this.cmbGroupAsli_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGroupAsli_NameKala.Size = new System.Drawing.Size(551, 34);
@@ -3863,7 +3851,7 @@
             this.txtZekhamat_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtZekhamat_NameKala.Properties.MaxLength = 9;
             this.txtZekhamat_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtZekhamat_NameKala.TabIndex = 10;
+            this.txtZekhamat_NameKala.TabIndex = 12;
             // 
             // labelControl56
             // 
@@ -3892,7 +3880,7 @@
             this.txtSaiz_NameKala.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSaiz_NameKala.Properties.MaxLength = 20;
             this.txtSaiz_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtSaiz_NameKala.TabIndex = 14;
+            this.txtSaiz_NameKala.TabIndex = 16;
             this.txtSaiz_NameKala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaiz_NameKala_KeyPress);
             // 
             // txtMohit_NameKala
@@ -3911,7 +3899,7 @@
             this.txtMohit_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMohit_NameKala.Properties.MaxLength = 9;
             this.txtMohit_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtMohit_NameKala.TabIndex = 12;
+            this.txtMohit_NameKala.TabIndex = 14;
             // 
             // txtMasahat_NameKala
             // 
@@ -3929,7 +3917,7 @@
             this.txtMasahat_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMasahat_NameKala.Properties.MaxLength = 9;
             this.txtMasahat_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtMasahat_NameKala.TabIndex = 11;
+            this.txtMasahat_NameKala.TabIndex = 13;
             // 
             // txtHajm_NameKala
             // 
@@ -3947,7 +3935,7 @@
             this.txtHajm_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHajm_NameKala.Properties.MaxLength = 9;
             this.txtHajm_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtHajm_NameKala.TabIndex = 13;
+            this.txtHajm_NameKala.TabIndex = 15;
             // 
             // labelControl39
             // 
@@ -4017,7 +4005,7 @@
             this.txtErtefae_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtErtefae_NameKala.Properties.MaxLength = 9;
             this.txtErtefae_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtErtefae_NameKala.TabIndex = 9;
+            this.txtErtefae_NameKala.TabIndex = 11;
             // 
             // txtArz_NameKala
             // 
@@ -4035,7 +4023,7 @@
             this.txtArz_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtArz_NameKala.Properties.MaxLength = 9;
             this.txtArz_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtArz_NameKala.TabIndex = 8;
+            this.txtArz_NameKala.TabIndex = 10;
             // 
             // txtTool_NameKala
             // 
@@ -4053,7 +4041,7 @@
             this.txtTool_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTool_NameKala.Properties.MaxLength = 9;
             this.txtTool_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtTool_NameKala.TabIndex = 7;
+            this.txtTool_NameKala.TabIndex = 9;
             // 
             // txtVazn_NameKala
             // 
@@ -4071,7 +4059,7 @@
             this.txtVazn_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtVazn_NameKala.Properties.MaxLength = 9;
             this.txtVazn_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtVazn_NameKala.TabIndex = 6;
+            this.txtVazn_NameKala.TabIndex = 8;
             // 
             // labelControl33
             // 
@@ -4136,7 +4124,6 @@
             this.chkVahedKala3_NameKala.Properties.Caption = "";
             this.chkVahedKala3_NameKala.Size = new System.Drawing.Size(22, 24);
             this.chkVahedKala3_NameKala.TabIndex = 4;
-            this.chkVahedKala3_NameKala.TabStop = false;
             this.chkVahedKala3_NameKala.CheckedChanged += new System.EventHandler(this.chkVahedKala3_CheckedChanged);
             // 
             // chkVahedKala2_NameKala
@@ -4150,7 +4137,6 @@
             this.chkVahedKala2_NameKala.Properties.Caption = "";
             this.chkVahedKala2_NameKala.Size = new System.Drawing.Size(22, 24);
             this.chkVahedKala2_NameKala.TabIndex = 1;
-            this.chkVahedKala2_NameKala.TabStop = false;
             this.chkVahedKala2_NameKala.CheckedChanged += new System.EventHandler(this.chkVahedKala2_CheckedChanged);
             // 
             // txtHarKarton_NameKala
@@ -4170,7 +4156,7 @@
             this.txtHarKarton_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHarKarton_NameKala.Properties.MaxLength = 9;
             this.txtHarKarton_NameKala.Size = new System.Drawing.Size(70, 34);
-            this.txtHarKarton_NameKala.TabIndex = 4;
+            this.txtHarKarton_NameKala.TabIndex = 6;
             // 
             // txtHarBaste_NameKala
             // 
@@ -4189,7 +4175,7 @@
             this.txtHarBaste_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHarBaste_NameKala.Properties.MaxLength = 9;
             this.txtHarBaste_NameKala.Size = new System.Drawing.Size(70, 34);
-            this.txtHarBaste_NameKala.TabIndex = 2;
+            this.txtHarBaste_NameKala.TabIndex = 3;
             // 
             // labelControl21
             // 
@@ -4313,7 +4299,7 @@
             this.cmbVahedKala3_NameKala.Properties.ValueMember = "Id";
             this.cmbVahedKala3_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala3_NameKala.Size = new System.Drawing.Size(186, 34);
-            this.cmbVahedKala3_NameKala.TabIndex = 3;
+            this.cmbVahedKala3_NameKala.TabIndex = 5;
             this.cmbVahedKala3_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbVahedKala3_NameKala.EditValueChanged += new System.EventHandler(this.cmbVahedKala3_EditValueChanged);
             this.cmbVahedKala3_NameKala.Enter += new System.EventHandler(this.cmbVahedKala3_Enter);
@@ -4323,7 +4309,6 @@
             this.btnVahedKala3_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVahedKala3_NameKala.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala3_NameKala.Appearance.Options.UseForeColor = true;
-            this.btnVahedKala3_NameKala.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVahedKala3_NameKala.ImageOptions.Image")));
             this.btnVahedKala3_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala3_NameKala.ImageOptions.SvgImage")));
             this.btnVahedKala3_NameKala.Location = new System.Drawing.Point(852, 98);
             this.btnVahedKala3_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -4371,7 +4356,7 @@
             this.cmbVahedKala2_NameKala.Properties.ValueMember = "Id";
             this.cmbVahedKala2_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala2_NameKala.Size = new System.Drawing.Size(186, 34);
-            this.cmbVahedKala2_NameKala.TabIndex = 1;
+            this.cmbVahedKala2_NameKala.TabIndex = 2;
             this.cmbVahedKala2_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbVahedKala2_NameKala.EditValueChanged += new System.EventHandler(this.cmbVahedKala2_EditValueChanged);
             this.cmbVahedKala2_NameKala.Enter += new System.EventHandler(this.cmbVahedKala2_Enter);
@@ -4381,7 +4366,6 @@
             this.btnVahedKala2_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVahedKala2_NameKala.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala2_NameKala.Appearance.Options.UseForeColor = true;
-            this.btnVahedKala2_NameKala.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVahedKala2_NameKala.ImageOptions.Image")));
             this.btnVahedKala2_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala2_NameKala.ImageOptions.SvgImage")));
             this.btnVahedKala2_NameKala.Location = new System.Drawing.Point(852, 55);
             this.btnVahedKala2_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -4438,7 +4422,6 @@
             this.btnVahedKala1_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVahedKala1_NameKala.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala1_NameKala.Appearance.Options.UseForeColor = true;
-            this.btnVahedKala1_NameKala.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVahedKala1_NameKala.ImageOptions.Image")));
             this.btnVahedKala1_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala1_NameKala.ImageOptions.SvgImage")));
             this.btnVahedKala1_NameKala.Location = new System.Drawing.Point(852, 11);
             this.btnVahedKala1_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -4484,7 +4467,7 @@
             this.cmbVahedAsli.Properties.ValueMember = "Id";
             this.cmbVahedAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedAsli.Size = new System.Drawing.Size(186, 34);
-            this.cmbVahedAsli.TabIndex = 5;
+            this.cmbVahedAsli.TabIndex = 7;
             this.cmbVahedAsli.Enter += new System.EventHandler(this.cmbVahedAsli_Enter);
             // 
             // epVahedKalasBindingSource1

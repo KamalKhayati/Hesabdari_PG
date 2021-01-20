@@ -94,13 +94,13 @@ namespace AnbarVaKala.AmaliatRozaneh
                         foreach (var item in q.ToList())
                         {
                             //item.AzAnbarName = q1.FirstOrDefault(s => s.Id == item.HesabMoinId).Code.ToString();
-                            item.AzAnbarName = q1.FirstOrDefault(s => s.Id == item.AzAnbarId).Name;
-                            item.BeAnbarName = q1.FirstOrDefault(s => s.Id == item.BeAnbarId).Name;
+                            item.AzAnbarName_NM = q1.FirstOrDefault(s => s.Id == item.AzAnbarId).Name;
+                            item.BeAnbarName_NM = q1.FirstOrDefault(s => s.Id == item.BeAnbarId).Name;
                             //item.TafsiliCode = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Code.ToString();
                             //item.TafsiliName = q1.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name;
-                            item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
-                            item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                            item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
+                            item.KalaCode_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
+                            item.KalaName_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
+                            item.VahedeKala_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                         }
 
                         //dbContext.AkKhorojeKala_Rizs.LoadAsync().ContinueWith(loadTask =>
@@ -732,9 +732,9 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                             foreach (var item in q)
                             {
-                                item.KalaCode = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
-                                item.KalaName = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                                item.VahedeKala = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
+                                item.KalaCode_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
+                                item.KalaName_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
+                                item.VahedeKala_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).VahedAsliName_NM;
                             }
 
                             //dbContext.AkKhorojeKala_Rizs.LoadAsync().ContinueWith(loadTask =>

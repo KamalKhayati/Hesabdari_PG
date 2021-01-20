@@ -240,23 +240,23 @@ namespace AnbarVaKala.Reports
                                 AkAllAmaliateRozaneh obj2 = new AkAllAmaliateRozaneh();
 
                                 obj2.KalaId = q1[RowCounter];
-                                obj2.KalaCode = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).KeyCode.ToString();
-                                obj2.KalaName = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).LevelName;
+                                obj2.KalaCode_NM = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).KeyCode.ToString();
+                                obj2.KalaName_NM = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).LevelName;
                                 int _VahedKalaId = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).VahedAsliKalaId;
-                                obj2.VahedeKalaName = q5.FirstOrDefault(s => s.Id == _VahedKalaId).Name;
+                                obj2.VahedeKalaName_NM = q5.FirstOrDefault(s => s.Id == _VahedKalaId).Name;
 
-                                obj2.MeghdarMo = 0;
-                                obj2.NerkhMo = 0;
-                                obj2.MablagMo = 0;
-                                obj2.MeghdarVa = 0;
-                                obj2.NerkhVa = 0;
-                                obj2.MablagVa = 0;
-                                obj2.MeghdarSa = 0;
-                                obj2.NerkhSa = 0;
-                                obj2.MablagSa = 0;
-                                obj2.MeghdarMa = 0;
-                                obj2.NerkhMa = 0;
-                                obj2.MablagMa = 0;
+                                obj2.MeghdarMo_NM = 0;
+                                obj2.NerkhMo_NM = 0;
+                                obj2.MablagMo_NM = 0;
+                                obj2.MeghdarVa_NM = 0;
+                                obj2.NerkhVa_NM = 0;
+                                obj2.MablagVa_NM = 0;
+                                obj2.MeghdarSa_NM = 0;
+                                obj2.NerkhSa_NM = 0;
+                                obj2.MablagSa_NM = 0;
+                                obj2.MeghdarMa_NM = 0;
+                                obj2.NerkhMa_NM = 0;
+                                obj2.MablagMa_NM = 0;
 
                                 foreach (var item in CheckedList)
                                 {
@@ -266,37 +266,37 @@ namespace AnbarVaKala.Reports
 
                                         if (chkIsEdgham.Checked)
                                         {
-                                            decimal _MeghdarMo = obj2.MeghdarMo + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
-                                            decimal _MablagMo = obj2.MablagMo + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
-                                            decimal _MeghdarSa = obj2.MeghdarSa + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
-                                            decimal _MablagSa = obj2.MablagSa + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
-                                            obj2.MeghdarMo = _MeghdarMo - _MeghdarSa;
-                                            obj2.MablagMo = _MablagMo - _MablagSa;
-                                            obj2.NerkhMo = obj2.MeghdarMo != 0 ? obj2.MablagMo / obj2.MeghdarMo : 0;
+                                            decimal _MeghdarMo = obj2.MeghdarMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
+                                            decimal _MablagMo = obj2.MablagMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
+                                            decimal _MeghdarSa = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
+                                            decimal _MablagSa = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
+                                            obj2.MeghdarMo_NM = _MeghdarMo - _MeghdarSa;
+                                            obj2.MablagMo_NM = _MablagMo - _MablagSa;
+                                            obj2.NerkhMo_NM = obj2.MeghdarMo_NM != 0 ? obj2.MablagMo_NM / obj2.MeghdarMo_NM : 0;
 
-                                            obj2.MeghdarVa = obj2.MeghdarVa + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
-                                            obj2.MablagVa = obj2.MablagVa + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
-                                            obj2.NerkhVa = obj2.MeghdarVa != 0 ? obj2.MablagVa / obj2.MeghdarVa : 0;
+                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
+                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
+                                            obj2.NerkhVa_NM = obj2.MeghdarVa_NM != 0 ? obj2.MablagVa_NM / obj2.MeghdarVa_NM : 0;
 
-                                            obj2.MeghdarSa = obj2.MeghdarSa + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
-                                            obj2.MablagSa = obj2.MablagSa + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
-                                            obj2.NerkhSa = obj2.MeghdarSa != 0 ? obj2.MablagSa / obj2.MeghdarSa : 0;
+                                            obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
+                                            obj2.MablagSa_NM = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
+                                            obj2.NerkhSa_NM = obj2.MeghdarSa_NM != 0 ? obj2.MablagSa_NM / obj2.MeghdarSa_NM : 0;
                                         }
                                         else
                                         {
-                                            obj2.MeghdarVa = obj2.MeghdarVa + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                                            obj2.MablagVa = obj2.MablagVa + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
-                                            obj2.NerkhVa = obj2.MeghdarVa != 0 ? obj2.MablagVa / obj2.MeghdarVa : 0;
+                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
+                                            obj2.NerkhVa_NM = obj2.MeghdarVa_NM != 0 ? obj2.MablagVa_NM / obj2.MeghdarVa_NM : 0;
 
-                                            obj2.MeghdarSa = obj2.MeghdarSa + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                                            obj2.MablagSa = obj2.MablagSa + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
-                                            obj2.NerkhSa = obj2.MeghdarSa != 0 ? obj2.MablagSa / obj2.MeghdarSa : 0;
+                                            obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                                            obj2.MablagSa_NM = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
+                                            obj2.NerkhSa_NM = obj2.MeghdarSa_NM != 0 ? obj2.MablagSa_NM / obj2.MeghdarSa_NM : 0;
                                         }
                                     }
                                 }
-                                obj2.MeghdarMa = obj2.MeghdarMo + obj2.MeghdarVa - obj2.MeghdarSa;
-                                obj2.MablagMa = obj2.MablagMo + obj2.MablagVa - obj2.MablagSa;
-                                obj2.NerkhMa = obj2.MeghdarMa != 0 ? obj2.MablagMa / obj2.MeghdarMa : 0;
+                                obj2.MeghdarMa_NM = obj2.MeghdarMo_NM + obj2.MeghdarVa_NM - obj2.MeghdarSa_NM;
+                                obj2.MablagMa_NM = obj2.MablagMo_NM + obj2.MablagVa_NM - obj2.MablagSa_NM;
+                                obj2.NerkhMa_NM = obj2.MeghdarMa_NM != 0 ? obj2.MablagMa_NM / obj2.MeghdarMa_NM : 0;
 
                                 _List2.Add(obj2);
                             }

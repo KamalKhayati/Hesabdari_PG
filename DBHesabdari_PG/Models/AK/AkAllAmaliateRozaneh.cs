@@ -79,45 +79,45 @@ namespace DBHesabdari_PG.Models.AK
         /// </summary>
         [NotMapped]
         [MaxLength(100)]
-        public string KalaName { get; set; }
+        public string KalaName_NM { get; set; }
         [NotMapped]
         [MaxLength(100)]
-        public string AnbarName { get; set; }
+        public string AnbarName_NM { get; set; }
         [NotMapped]
         [MaxLength(100)]
-        public string VahedeKalaName { get; set; }
+        public string VahedeKalaName_NM { get; set; }
         [NotMapped]
         [MaxLength(100)]
-        public string HesabTafsiliName { get; set; }
+        public string HesabTafsiliName_NM { get; set; }
         [NotMapped]
         [MaxLength(20)]
-        public string KalaCode { get; set; }
+        public string KalaCode_NM { get; set; }
         [NotMapped]
-        public decimal MeghdarMo { get; set; }
+        public decimal MeghdarMo_NM { get; set; }
         [NotMapped]
-        public decimal NerkhMo { get; set; }
+        public decimal NerkhMo_NM { get; set; }
         [NotMapped]
-        public decimal MablagMo { get; set; }
+        public decimal MablagMo_NM { get; set; }
         [NotMapped]
-        public decimal MeghdarVa { get; set; }
+        public decimal MeghdarVa_NM { get; set; }
         [NotMapped]
-        public decimal NerkhVa { get; set; }
+        public decimal NerkhVa_NM { get; set; }
         [NotMapped]
-        public decimal MablagVa { get; set; }
+        public decimal MablagVa_NM { get; set; }
         [NotMapped]
-        public decimal MeghdarSa { get; set; }
+        public decimal MeghdarSa_NM { get; set; }
         [NotMapped]
-        public decimal NerkhSa { get; set; }
+        public decimal NerkhSa_NM { get; set; }
         [NotMapped]
-        public decimal MablagSa { get; set; }
+        public decimal MablagSa_NM { get; set; }
         [NotMapped]
-        public decimal MeghdarMa { get; set; }
+        public decimal MeghdarMa_NM { get; set; }
         [NotMapped]
-        public decimal NerkhMa { get; set; }
+        public decimal NerkhMa_NM { get; set; }
         [NotMapped]
-        public decimal MablagMa { get; set; }
+        public decimal MablagMa_NM { get; set; }
         [NotMapped]
-        public string DateTimeSanadString { get; set; }
+        public string DateTimeSanadString_NM { get; set; }
 
 
         public virtual AkVorodeKala_Riz AkVorodeKala_Riz1 { get; set; }

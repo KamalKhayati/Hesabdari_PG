@@ -205,25 +205,25 @@ namespace AnbarVaKala.Reports
                                 //AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                 q1[0].Id = 0;
                                 q1[0].Seryal_darSelectNoe = 0;
-                                q1[0].DateTimeSanadString = txtAzTarikh.Text;
-                                q1[0].AnbarName = cmbAnbarName.Text;
+                                q1[0].DateTimeSanadString_NM = txtAzTarikh.Text;
+                                q1[0].AnbarName_NM = cmbAnbarName.Text;
                                 q1[0].NoeSanadText = "جمع مانده از قبل";
                                 //q1[0].FactorNamber = 0;
                                 q1[0].Radif = 0;
-                                q1[0].VahedeKalaName = q5.FirstOrDefault(s => s.Id == q7[0].VahedeKalaId).Name;
+                                q1[0].VahedeKalaName_NM = q5.FirstOrDefault(s => s.Id == q7[0].VahedeKalaId).Name;
 
-                                q1[0].MeghdarMo = 0;
-                                q1[0].NerkhMo = 0;
-                                q1[0].MablagMo = 0;
-                                q1[0].MeghdarVa = 0;
-                                q1[0].NerkhVa = 0;
-                                q1[0].MablagVa = 0;
-                                q1[0].MeghdarSa = 0;
-                                q1[0].NerkhSa = 0;
-                                q1[0].MablagSa = 0;
-                                q1[0].MeghdarMa = 0;
-                                q1[0].NerkhMa = 0;
-                                q1[0].MablagMa = 0;
+                                q1[0].MeghdarMo_NM = 0;
+                                q1[0].NerkhMo_NM = 0;
+                                q1[0].MablagMo_NM = 0;
+                                q1[0].MeghdarVa_NM = 0;
+                                q1[0].NerkhVa_NM = 0;
+                                q1[0].MablagVa_NM = 0;
+                                q1[0].MeghdarSa_NM = 0;
+                                q1[0].NerkhSa_NM = 0;
+                                q1[0].MablagSa_NM = 0;
+                                q1[0].MeghdarMa_NM = 0;
+                                q1[0].NerkhMa_NM = 0;
+                                q1[0].MablagMa_NM = 0;
 
                                 decimal _MeghdarMo = q7.Where(s => s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2).Sum(s => s.Meghdar);
                                 decimal _MablagMo = q7.Where(s => s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2).Sum(s => s.Mablag);
@@ -231,11 +231,11 @@ namespace AnbarVaKala.Reports
                                 decimal _MeghdarSa = q7.Where(s => s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
                                 decimal _MablagSa = q7.Where(s => s.NoeAmaliatCode == 3).Sum(s => s.Mablag);
                                 //q1[0].NerkhSa = q1[0].MeghdarSa != 0 ? q1[0].MablagSa / q1[0].MeghdarSa : 0;
-                                q1[0].MeghdarMo = _MeghdarMo - _MeghdarSa;
-                                q1[0].MablagMo = _MablagMo - _MablagSa;
-                                q1[0].NerkhMo = q1[0].MeghdarMo != 0 ? q1[0].MablagMo / q1[0].MeghdarMo : 0;
+                                q1[0].MeghdarMo_NM = _MeghdarMo - _MeghdarSa;
+                                q1[0].MablagMo_NM = _MablagMo - _MablagSa;
+                                q1[0].NerkhMo_NM = q1[0].MeghdarMo_NM != 0 ? q1[0].MablagMo_NM / q1[0].MeghdarMo_NM : 0;
 
-                                q1[0].HesabTafsiliName = "جمع مانده از قبل";
+                                q1[0].HesabTafsiliName_NM = "جمع مانده از قبل";
                                 q1[0].RozaneSanadNumber = 0;
 
                                 q1.RemoveRange(1, q7.Count - 1);
@@ -244,33 +244,33 @@ namespace AnbarVaKala.Reports
                                 {
                                     if (i == 0)
                                     {
-                                        q1[i].MeghdarMa = q1[i].MeghdarMo + q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i].MablagMo + q1[i].MablagVa - q1[i].MablagSa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].MeghdarMa_NM = q1[i].MeghdarMo_NM + q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i].MablagMo_NM + q1[i].MablagVa_NM - q1[i].MablagSa_NM;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                     else
                                     {
-                                        q1[i].DateTimeSanadString = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
-                                        q1[i].AnbarName = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
-                                        q1[i].VahedeKalaName = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
-                                        q1[i].HesabTafsiliName = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
+                                        q1[i].DateTimeSanadString_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
+                                        q1[i].AnbarName_NM = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
+                                        q1[i].VahedeKalaName_NM = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
+                                        q1[i].HesabTafsiliName_NM = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
                                         if (q1.Any(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)))
                                         {
-                                            q1[i].MeghdarVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
-                                            q1[i].NerkhVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
-                                            q1[i].MablagVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
+                                            q1[i].MeghdarVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
+                                            q1[i].NerkhVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
+                                            q1[i].MablagVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
                                         }
 
                                         if (q1.Any(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3))
                                         {
-                                            q1[i].MeghdarSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
-                                            q1[i].NerkhSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
-                                            q1[i].MablagSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
+                                            q1[i].MeghdarSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
+                                            q1[i].NerkhSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
+                                            q1[i].MablagSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
                                         }
 
-                                        q1[i].MeghdarMa = q1[i - 1].MeghdarMa + q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i - 1].MablagMa + q1[i].MablagVa - q1[i].MablagSa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].MeghdarMa_NM = q1[i - 1].MeghdarMa_NM + q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i - 1].MablagMa_NM + q1[i].MablagVa_NM - q1[i].MablagSa_NM;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                 }
                             }
@@ -278,37 +278,37 @@ namespace AnbarVaKala.Reports
                             {
                                 for (int i = 0; i < q1.Count; i++)
                                 {
-                                    q1[i].DateTimeSanadString = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
-                                    q1[i].AnbarName = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
-                                    q1[i].VahedeKalaName = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
-                                    q1[i].HesabTafsiliName = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
+                                    q1[i].DateTimeSanadString_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
+                                    q1[i].AnbarName_NM = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
+                                    q1[i].VahedeKalaName_NM = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
+                                    q1[i].HesabTafsiliName_NM = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
                                     if (q1.Any(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)))
                                     {
-                                        q1[i].MeghdarVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
-                                        q1[i].NerkhVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
-                                        q1[i].MablagVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
+                                        q1[i].MeghdarVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
+                                        q1[i].NerkhVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
+                                        q1[i].MablagVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
                                     }
 
                                     if (q1.Any(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3))
                                     {
-                                        q1[i].MeghdarSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
-                                        q1[i].NerkhSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
-                                        q1[i].MablagSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
+                                        q1[i].MeghdarSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
+                                        q1[i].NerkhSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
+                                        q1[i].MablagSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
                                     }
 
                                     if (i == 0)
                                     {
-                                        q1[i].MeghdarMa = q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i].MablagVa - q1[i].MablagSa;
+                                        q1[i].MeghdarMa_NM = q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i].MablagVa_NM - q1[i].MablagSa_NM;
                                         //q1[i].NerkhMa = q1[i].MablagMa / q1[i].MeghdarMa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                     else
                                     {
-                                        q1[i].MeghdarMa = q1[i - 1].MeghdarMa + q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i - 1].MablagMa + q1[i].MablagVa - q1[i].MablagSa;
+                                        q1[i].MeghdarMa_NM = q1[i - 1].MeghdarMa_NM + q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i - 1].MablagMa_NM + q1[i].MablagVa_NM - q1[i].MablagSa_NM;
                                         //q1[i].NerkhMa = q1[i].MablagMa / q1[i].MeghdarMa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                 }
                             }
@@ -320,19 +320,19 @@ namespace AnbarVaKala.Reports
                                 //AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                 q1[0].Id = 0;
                                 q1[0].Seryal_darSelectNoe = 0;
-                                q1[0].DateTimeSanadString = txtAzTarikh.Text;
-                                q1[0].AnbarName = cmbAnbarName.Text;
+                                q1[0].DateTimeSanadString_NM = txtAzTarikh.Text;
+                                q1[0].AnbarName_NM = cmbAnbarName.Text;
                                 q1[0].NoeSanadText = "جمع مانده از قبل";
                                 //q1[0].FactorNamber = 0;
                                 q1[0].Radif = 0;
-                                q1[0].VahedeKalaName = q5.FirstOrDefault(s => s.Id == q7[0].VahedeKalaId).Name;
-                                q1[0].MeghdarVa = q7.Where(s => s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2).Sum(s => s.Meghdar);
-                                q1[0].MablagVa = q7.Where(s => s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2).Sum(s => s.Mablag);
-                                q1[0].NerkhVa = q1[0].MeghdarVa != 0 ? q1[0].MablagVa / q1[0].MeghdarVa : 0;
-                                q1[0].MeghdarSa = q7.Where(s => s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
-                                q1[0].MablagSa = q7.Where(s => s.NoeAmaliatCode == 3).Sum(s => s.Mablag);
-                                q1[0].NerkhSa = q1[0].MeghdarSa != 0 ? q1[0].MablagSa / q1[0].MeghdarSa : 0;
-                                q1[0].HesabTafsiliName = "جمع مانده از قبل";
+                                q1[0].VahedeKalaName_NM = q5.FirstOrDefault(s => s.Id == q7[0].VahedeKalaId).Name;
+                                q1[0].MeghdarVa_NM = q7.Where(s => s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2).Sum(s => s.Meghdar);
+                                q1[0].MablagVa_NM = q7.Where(s => s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2).Sum(s => s.Mablag);
+                                q1[0].NerkhVa_NM = q1[0].MeghdarVa_NM != 0 ? q1[0].MablagVa_NM / q1[0].MeghdarVa_NM : 0;
+                                q1[0].MeghdarSa_NM = q7.Where(s => s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
+                                q1[0].MablagSa_NM = q7.Where(s => s.NoeAmaliatCode == 3).Sum(s => s.Mablag);
+                                q1[0].NerkhSa_NM = q1[0].MeghdarSa_NM != 0 ? q1[0].MablagSa_NM / q1[0].MeghdarSa_NM : 0;
+                                q1[0].HesabTafsiliName_NM = "جمع مانده از قبل";
                                 q1[0].RozaneSanadNumber = 0;
 
                                 q1.RemoveRange(1, q7.Count - 1);
@@ -341,33 +341,33 @@ namespace AnbarVaKala.Reports
                                 {
                                     if (i == 0)
                                     {
-                                        q1[i].MeghdarMa = q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i].MablagVa - q1[i].MablagSa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].MeghdarMa_NM = q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i].MablagVa_NM - q1[i].MablagSa_NM;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                     else
                                     {
-                                        q1[i].DateTimeSanadString = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
-                                        q1[i].AnbarName = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
-                                        q1[i].VahedeKalaName = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
-                                        q1[i].HesabTafsiliName = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
+                                        q1[i].DateTimeSanadString_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
+                                        q1[i].AnbarName_NM = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
+                                        q1[i].VahedeKalaName_NM = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
+                                        q1[i].HesabTafsiliName_NM = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
                                         if (q1.Any(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)))
                                         {
-                                            q1[i].MeghdarVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
-                                            q1[i].NerkhVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
-                                            q1[i].MablagVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
+                                            q1[i].MeghdarVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
+                                            q1[i].NerkhVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
+                                            q1[i].MablagVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
                                         }
 
                                         if (q1.Any(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3))
                                         {
-                                            q1[i].MeghdarSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
-                                            q1[i].NerkhSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
-                                            q1[i].MablagSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
+                                            q1[i].MeghdarSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
+                                            q1[i].NerkhSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
+                                            q1[i].MablagSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
                                         }
 
-                                        q1[i].MeghdarMa = q1[i - 1].MeghdarMa + q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i - 1].MablagMa + q1[i].MablagVa - q1[i].MablagSa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].MeghdarMa_NM = q1[i - 1].MeghdarMa_NM + q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i - 1].MablagMa_NM + q1[i].MablagVa_NM - q1[i].MablagSa_NM;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                 }
                             }
@@ -375,37 +375,37 @@ namespace AnbarVaKala.Reports
                             {
                                 for (int i = 0; i < q1.Count; i++)
                                 {
-                                    q1[i].DateTimeSanadString = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
-                                    q1[i].AnbarName = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
-                                    q1[i].VahedeKalaName = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
-                                    q1[i].HesabTafsiliName = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
+                                    q1[i].DateTimeSanadString_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id).DateTimeSanad.ToString().Substring(0, 10);
+                                    q1[i].AnbarName_NM = q4.FirstOrDefault(s => s.Id == q1[i].AzAnbarId).Name;
+                                    q1[i].VahedeKalaName_NM = q5.FirstOrDefault(s => s.Id == q1[i].VahedeKalaId).Name;
+                                    q1[i].HesabTafsiliName_NM = q6.FirstOrDefault(s => s.Id == q1[i].HesabTafsili1Id).Name;
                                     if (q1.Any(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)))
                                     {
-                                        q1[i].MeghdarVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
-                                        q1[i].NerkhVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
-                                        q1[i].MablagVa = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
+                                        q1[i].MeghdarVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Meghdar;
+                                        q1[i].NerkhVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Nerkh;
+                                        q1[i].MablagVa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Mablag;
                                     }
 
                                     if (q1.Any(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3))
                                     {
-                                        q1[i].MeghdarSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
-                                        q1[i].NerkhSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
-                                        q1[i].MablagSa = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
+                                        q1[i].MeghdarSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Meghdar;
+                                        q1[i].NerkhSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Nerkh;
+                                        q1[i].MablagSa_NM = q1.FirstOrDefault(s => s.Id == q1[i].Id && s.NoeAmaliatCode == 3).Mablag;
                                     }
 
                                     if (i == 0)
                                     {
-                                        q1[i].MeghdarMa = q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i].MablagVa - q1[i].MablagSa;
+                                        q1[i].MeghdarMa_NM = q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i].MablagVa_NM - q1[i].MablagSa_NM;
                                         //q1[i].NerkhMa = q1[i].MablagMa / q1[i].MeghdarMa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                     else
                                     {
-                                        q1[i].MeghdarMa = q1[i - 1].MeghdarMa + q1[i].MeghdarVa - q1[i].MeghdarSa;
-                                        q1[i].MablagMa = q1[i - 1].MablagMa + q1[i].MablagVa - q1[i].MablagSa;
+                                        q1[i].MeghdarMa_NM = q1[i - 1].MeghdarMa_NM + q1[i].MeghdarVa_NM - q1[i].MeghdarSa_NM;
+                                        q1[i].MablagMa_NM = q1[i - 1].MablagMa_NM + q1[i].MablagVa_NM - q1[i].MablagSa_NM;
                                         //q1[i].NerkhMa = q1[i].MablagMa / q1[i].MeghdarMa;
-                                        q1[i].NerkhMa = q1[i].MeghdarMa != 0 ? q1[i].MablagMa / q1[i].MeghdarMa : 0;
+                                        q1[i].NerkhMa_NM = q1[i].MeghdarMa_NM != 0 ? q1[i].MablagMa_NM / q1[i].MeghdarMa_NM : 0;
                                     }
                                 }
                             }
