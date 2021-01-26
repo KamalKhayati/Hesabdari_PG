@@ -19,34 +19,6 @@ namespace DBHesabdari_PG.Models.AK
         public int KalaId { get; set; }
         [Required]
         public int VahedeKalaId { get; set; }
-
-
-        [NotMapped]
-        [MaxLength(16)]
-        public string KalaCode_NM { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string KalaName_NM { get; set; }
-        [NotMapped]
-        [MaxLength(20)]
-        public string VahedeKala_NM { get; set; }
-        [NotMapped]
-        [MaxLength(9)]
-        public string TafsiliCode_NM { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string TafsiliName_NM { get; set; }
-        [NotMapped]
-        [MaxLength(9)]
-        public string MoinCode_NM { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string MoinName_NM { get; set; }
-        [NotMapped]
-        [MaxLength(100)]
-        public string AzAnbarName_NM { get; set; }
-
-
         [Required]
         public int AzAnbarId { get; set; }
         [Required]
@@ -54,11 +26,13 @@ namespace DBHesabdari_PG.Models.AK
         //[Required]
         //public int Seryal_darSelectNoe { get; set; }
         [Required]
-        public int Seryal_darColAnbarha { get; set; }
+        public int SeryalCol_darColAnbarha { get; set; }
         [Required]
-        public int Seryal_darSelectAnbar { get; set; }
+        public int SeryalJoze_darColAnbarha { get; set; }
         [Required]
-        public int Seryal_darSelectNoe { get; set; }
+        public int SeryalCol_darSelectAnbar { get; set; }
+        [Required]
+        public int SeryalJoze_darSelectAnbar { get; set; }
         //[Required]
         public int? GhateySanadNamber { get; set; }
         [Required]
@@ -74,6 +48,8 @@ namespace DBHesabdari_PG.Models.AK
         public DateTime? DateTimeEdit { get; set; }
         [Required]
         public int NoeAmaliatCode { get; set; }
+        [Required]
+        public int NoeSanadIndex { get; set; }
         [Required]
         public int NoeSanadCode { get; set; }
         [MaxLength(150)]
@@ -109,7 +85,79 @@ namespace DBHesabdari_PG.Models.AK
         public string Tozihat { get; set; }
         [MaxLength(500)]
         public string SharhSanad { get; set; }
-        public virtual AkAllAmaliateRozaneh AkAllAmaliateRozaneh1 { get; set; }
+
+
+        /// <summary>
+        /// فیلدهای پین شده به جدول
+        /// </summary>
+        [NotMapped]
+        [MaxLength(16)]
+        public string KalaCode_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string KalaName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(20)]
+        public string VahedeKala_NM { get; set; }
+        [NotMapped]
+        [MaxLength(9)]
+        public string TafsiliCode_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string TafsiliName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(9)]
+        public string MoinCode_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string MoinName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string AzAnbarName_NM { get; set; }
+
+        //[NotMapped]
+        //[MaxLength(100)]
+        //public string KalaName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string AnbarName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string VahedeKalaName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string HesabTafsiliName_NM { get; set; }
+        //[NotMapped]
+        //[MaxLength(20)]
+        //public string KalaCode_NM { get; set; }
+        [NotMapped]
+        public decimal MeghdarMo_NM { get; set; }
+        [NotMapped]
+        public decimal NerkhMo_NM { get; set; }
+        [NotMapped]
+        public decimal MablagMo_NM { get; set; }
+        [NotMapped]
+        public decimal MeghdarVa_NM { get; set; }
+        [NotMapped]
+        public decimal NerkhVa_NM { get; set; }
+        [NotMapped]
+        public decimal MablagVa_NM { get; set; }
+        [NotMapped]
+        public decimal MeghdarSa_NM { get; set; }
+        [NotMapped]
+        public decimal NerkhSa_NM { get; set; }
+        [NotMapped]
+        public decimal MablagSa_NM { get; set; }
+        [NotMapped]
+        public decimal MeghdarMa_NM { get; set; }
+        [NotMapped]
+        public decimal NerkhMa_NM { get; set; }
+        [NotMapped]
+        public decimal MablagMa_NM { get; set; }
+        [NotMapped]
+        public string DateTimeSanadString_NM { get; set; }
+
+        //public virtual AkAllAmaliateRozaneh AkAllAmaliateRozaneh1 { get; set; }
         public virtual EpListAnbarha EpListAnbarha1 { get; set; }
         public virtual EpListAnbarha EpListAnbarha2 { get; set; }
         public virtual EpVahedKala EpVahedKala1 { get; set; }

@@ -675,6 +675,7 @@
             this.cmbHesabTabagheh_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabTabagheh_3.Properties.PopupWidth = 545;
             this.cmbHesabTabagheh_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbHesabTabagheh_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbHesabTabagheh_3.Properties.ValueMember = "Id";
             this.cmbHesabTabagheh_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_3.Size = new System.Drawing.Size(460, 34);
@@ -777,6 +778,7 @@
             this.cmbListHesabGroup_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbListHesabGroup_3.Properties.PopupWidth = 545;
             this.cmbListHesabGroup_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbListHesabGroup_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbListHesabGroup_3.Properties.ValueMember = "Id";
             this.cmbListHesabGroup_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbListHesabGroup_3.Size = new System.Drawing.Size(460, 34);
@@ -1103,6 +1105,7 @@
             this.cmbHesabTabagheh_2.Properties.NullText = "";
             this.cmbHesabTabagheh_2.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbHesabTabagheh_2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbHesabTabagheh_2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbHesabTabagheh_2.Properties.ValueMember = "Id";
             this.cmbHesabTabagheh_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbHesabTabagheh_2.Size = new System.Drawing.Size(447, 34);
@@ -2781,7 +2784,7 @@
             this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl17.Appearance.Options.UseForeColor = true;
             this.labelControl17.AutoEllipsis = true;
-            this.labelControl17.Location = new System.Drawing.Point(916, 202);
+            this.labelControl17.Location = new System.Drawing.Point(918, 206);
             this.labelControl17.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(99, 27);
@@ -2807,7 +2810,7 @@
             // 
             this.cmbMahiatHesab_4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbMahiatHesab_4.EnterMoveNextControl = true;
-            this.cmbMahiatHesab_4.Location = new System.Drawing.Point(624, 199);
+            this.cmbMahiatHesab_4.Location = new System.Drawing.Point(623, 203);
             this.cmbMahiatHesab_4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbMahiatHesab_4.Name = "cmbMahiatHesab_4";
             this.cmbMahiatHesab_4.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));

@@ -121,7 +121,7 @@ namespace AnbarVaKala.Reports
                     var q2 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
                     //var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
                     var q4 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == _AnbarhId).Select(s => s.TabagheKalaId).ToList();
-                    var q6 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarhId).ToList();
+                    var q6 = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarhId).ToList();
 
                     List<EpNameKala> List1 = new List<EpNameKala>();
                     foreach (var item in q4)
@@ -189,7 +189,7 @@ namespace AnbarVaKala.Reports
                     //Mydate d1 = new Mydate(yyyy1, MM1, dd1);
                     //d1.DecrementDay();
                     //var q = db.AsnadeHesabdariRows.Where(f => f.HesabTafId == TafziliId && f.Tarikh <= EndData).OrderBy(f => f.Tarikh).ToList();
-                    var q1 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.KalaId == _KalaId && s.DateTimeSanad <= EndDate).OrderBy(s => s.DateTimeSanad).ToList();
+                    var q1 = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.KalaId == _KalaId && s.DateTimeSanad <= EndDate).OrderBy(s => s.DateTimeSanad).ToList();
                     var q7 = q1.Where(s => s.DateTimeSanad < StartDate).OrderBy(s => s.DateTimeSanad).ThenBy(s => s.Id).ToList();
                     var q4 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
                     var q5 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
@@ -204,7 +204,7 @@ namespace AnbarVaKala.Reports
                             {
                                 //AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                 q1[0].Id = 0;
-                                q1[0].Seryal_darSelectNoe = 0;
+                                q1[0].SeryalJoze_darSelectAnbar = 0;
                                 q1[0].DateTimeSanadString_NM = txtAzTarikh.Text;
                                 q1[0].AnbarName_NM = cmbAnbarName.Text;
                                 q1[0].NoeSanadText = "جمع مانده از قبل";
@@ -319,7 +319,7 @@ namespace AnbarVaKala.Reports
                             {
                                 //AkAllAmaliateRozaneh obj = new AkAllAmaliateRozaneh();
                                 q1[0].Id = 0;
-                                q1[0].Seryal_darSelectNoe = 0;
+                                q1[0].SeryalJoze_darSelectAnbar = 0;
                                 q1[0].DateTimeSanadString_NM = txtAzTarikh.Text;
                                 q1[0].AnbarName_NM = cmbAnbarName.Text;
                                 q1[0].NoeSanadText = "جمع مانده از قبل";

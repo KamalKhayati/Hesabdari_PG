@@ -48,18 +48,18 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual EpHesabTafsiliAnbarha EpHesabTafsiliAnbarha1 { get; set; }
         public virtual EpHesabTafsiliSayer EpHesabTafsiliSayer1 { get; set; }
 
-        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh1s { get; set; }
-        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh2s { get; set; }
-        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh3s { get; set; }
+        //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh1s { get; set; }
+        //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh2s { get; set; }
+        //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh3s { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarha1s { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarha2s { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarha3s { get; set; }
         public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Riz1s { get; set; }
         public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Riz2s { get; set; }
         public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Riz3s { get; set; }
-        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz1s { get; set; }
-        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz2s { get; set; }
-        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz3s { get; set; }
+       // public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz1s { get; set; }
+        //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz2s { get; set; }
+        //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz3s { get; set; }
     }
 
 }

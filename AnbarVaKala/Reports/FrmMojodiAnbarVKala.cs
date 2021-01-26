@@ -215,12 +215,12 @@ namespace AnbarVaKala.Reports
                     var CheckedList = cmbAnbarName.Properties.GetItems().GetCheckedValues();
                     if (CheckedList.Count > 0)
                     {
-                        List<AkAllAmaliateRozaneh> _List1 = new List<AkAllAmaliateRozaneh>();
+                        List<AkVorodeKala_Riz> _List1 = new List<AkVorodeKala_Riz>();
 
                         foreach (var item in CheckedList)
                         {
                             int _AnbarId = Convert.ToInt32(item);
-                            var q6 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.DateTimeSanad <= EndDate).ToList();
+                            var q6 = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.DateTimeSanad <= EndDate).ToList();
                             if (q6.Count > 0)
                                 _List1.AddRange(q6);
                         }
@@ -233,11 +233,11 @@ namespace AnbarVaKala.Reports
                             var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNamber == 4).ToList();
                             var q5 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
 
-                            List<AkAllAmaliateRozaneh> _List2 = new List<AkAllAmaliateRozaneh>();
+                            List<AkVorodeKala_Riz> _List2 = new List<AkVorodeKala_Riz>();
 
                             for (int RowCounter = 0; RowCounter < q1.Count; RowCounter++)
                             {
-                                AkAllAmaliateRozaneh obj2 = new AkAllAmaliateRozaneh();
+                                AkVorodeKala_Riz obj2 = new AkVorodeKala_Riz();
 
                                 obj2.KalaId = q1[RowCounter];
                                 obj2.KalaCode_NM = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).KeyCode.ToString();

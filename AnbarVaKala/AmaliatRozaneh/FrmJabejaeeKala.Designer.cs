@@ -43,41 +43,57 @@
             this.colAzAnbarId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKalaId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl_AmaliatAddVaEdit = new DevExpress.XtraGrid.GridControl();
+            this.akKhorojeKala_RizsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.akKhorojeKala_RizsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.xtpAmaliatAddVEdit = new DevExpress.XtraTab.XtraTabPage();
+            this.xtp_AmaliatAddVEdit = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl_AddVaEdit = new DevExpress.XtraEditors.PanelControl();
+            this.txtGhateySanadNumber = new DevExpress.XtraEditors.TextEdit();
+            this.lblGhatySanadNumber = new DevExpress.XtraEditors.LabelControl();
+            this.txtSabetAtefNumber = new DevExpress.XtraEditors.TextEdit();
+            this.lblAtefSanadNumber = new DevExpress.XtraEditors.LabelControl();
+            this.lblRozaneSanadNumber = new DevExpress.XtraEditors.LabelControl();
+            this.txtRozaneSanadNumber = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalJoze_darColAnbarha = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalJoze_darColAnbarha = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalCol_darSelectAnbar = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalCol_darSelectAnbar = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalCol_darColAnbarha = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalCol_darColAnbarha = new DevExpress.XtraEditors.TextEdit();
+            this.cmbNoeSanad = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cmbBeAnbar = new DevExpress.XtraEditors.LookUpEdit();
             this.epListAnbarhasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cmbAzAnbar = new DevExpress.XtraEditors.LookUpEdit();
             this.epListAnbarhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtSharhSanad = new DevExpress.XtraEditors.TextEdit();
-            this.lblSanadNamber = new DevExpress.XtraEditors.LabelControl();
             this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete1 = new DevExpress.XtraEditors.SimpleButton();
-            this.chkIsSanadHesabdari = new DevExpress.XtraEditors.CheckEdit();
             this.btnReloadAzAnbar = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lblAzAnbar = new DevExpress.XtraEditors.LabelControl();
-            this.txtNoeSanad = new DevExpress.XtraEditors.TextEdit();
             this.btnReloadBeAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.txtNoeSanad1 = new DevExpress.XtraEditors.TextEdit();
             this.lblBeAnbar = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtTarikh = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSeryal = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalJoze_darSelectAnbar = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalJoze_darSelectAnbar = new DevExpress.XtraEditors.TextEdit();
             this.txtNoeAmaliat1 = new DevExpress.XtraEditors.TextEdit();
-            this.xtcAmaliatJabejaee = new DevExpress.XtraTab.XtraTabControl();
-            this.xtpJabejaeeKala = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl_JabejaeeKala = new DevExpress.XtraGrid.GridControl();
-            this.gridView_JabejaeeKala = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.xtc_AmaliatJabejaee = new DevExpress.XtraTab.XtraTabControl();
+            this.xtp_JabejaeeKala = new DevExpress.XtraTab.XtraTabPage();
+            this.xtc_JabejaeeKala = new DevExpress.XtraTab.XtraTabControl();
+            this.xtp_Havalejabejaee = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_Havalejabejaee = new DevExpress.XtraGrid.GridControl();
+            this.gridView_Havalejabejaee = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn363 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn364 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalCol_darColAnbarha = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalJoze_darColAnbarha = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalCol_darSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalJoze_darSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNoeSanadText = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn365 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn366 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSabetAtefNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn367 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn368 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn369 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -93,9 +109,12 @@
             this.gridColumn379 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn380 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn381 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRozaneSanadNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGhateySanadNamber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPaygiriNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn382 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn383 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn384 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtp_Residjabejaee = new DevExpress.XtraTab.XtraTabPage();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
@@ -116,34 +135,52 @@
             this.btnSaveAndClosed = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
             this.panelControl0 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl_NameAnbar = new DevExpress.XtraEditors.PanelControl();
+            this.cmbNameAnbar = new DevExpress.XtraEditors.LookUpEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.btnReloadNameAnbar = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_AmaliatAddVaEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_AmaliatAddVaEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.akKhorojeKala_RizsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.akKhorojeKala_RizsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            this.xtpAmaliatAddVEdit.SuspendLayout();
+            this.xtp_AmaliatAddVEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_AddVaEdit)).BeginInit();
             this.panelControl_AddVaEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGhateySanadNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSabetAtefNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRozaneSanadNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_darColAnbarha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_darSelectAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_darColAnbarha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeSanad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIsSanadHesabdari.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_darSelectAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatJabejaee)).BeginInit();
-            this.xtcAmaliatJabejaee.SuspendLayout();
-            this.xtpJabejaeeKala.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_JabejaeeKala)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_JabejaeeKala)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtc_AmaliatJabejaee)).BeginInit();
+            this.xtc_AmaliatJabejaee.SuspendLayout();
+            this.xtp_JabejaeeKala.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtc_JabejaeeKala)).BeginInit();
+            this.xtc_JabejaeeKala.SuspendLayout();
+            this.xtp_Havalejabejaee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Havalejabejaee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Havalejabejaee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
             this.panelControl_Button.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).BeginInit();
             this.panelControl0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_NameAnbar)).BeginInit();
+            this.panelControl_NameAnbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNameAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Line
@@ -189,7 +226,7 @@
             this.gridView_AmaliatAddVaEdit.DetailHeight = 341;
             this.gridView_AmaliatAddVaEdit.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridView_AmaliatAddVaEdit.GridControl = this.gridControl_AmaliatAddVaEdit;
-            this.gridView_AmaliatAddVaEdit.IndicatorWidth = 25;
+            this.gridView_AmaliatAddVaEdit.IndicatorWidth = 50;
             this.gridView_AmaliatAddVaEdit.Name = "gridView_AmaliatAddVaEdit";
             this.gridView_AmaliatAddVaEdit.OptionsBehavior.Editable = false;
             this.gridView_AmaliatAddVaEdit.OptionsFind.AllowFindPanel = false;
@@ -346,74 +383,313 @@
             // 
             // gridControl_AmaliatAddVaEdit
             // 
-            this.gridControl_AmaliatAddVaEdit.DataSource = this.akKhorojeKala_RizsBindingSource;
+            this.gridControl_AmaliatAddVaEdit.DataSource = this.akKhorojeKala_RizsBindingSource1;
             this.gridControl_AmaliatAddVaEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl_AmaliatAddVaEdit.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl_AmaliatAddVaEdit.Location = new System.Drawing.Point(2, 2);
             this.gridControl_AmaliatAddVaEdit.MainView = this.gridView_AmaliatAddVaEdit;
             this.gridControl_AmaliatAddVaEdit.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl_AmaliatAddVaEdit.Name = "gridControl_AmaliatAddVaEdit";
-            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1292, 462);
+            this.gridControl_AmaliatAddVaEdit.Size = new System.Drawing.Size(1428, 377);
             this.gridControl_AmaliatAddVaEdit.TabIndex = 37;
             this.gridControl_AmaliatAddVaEdit.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AmaliatAddVaEdit});
-            // 
-            // akKhorojeKala_RizsBindingSource
-            // 
-            this.akKhorojeKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AkKhorojeKala_Riz);
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.gridControl_AmaliatAddVaEdit);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 118);
+            this.panelControl1.Location = new System.Drawing.Point(0, 203);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1296, 466);
+            this.panelControl1.Size = new System.Drawing.Size(1432, 381);
             this.panelControl1.TabIndex = 3;
             // 
-            // xtpAmaliatAddVEdit
+            // xtp_AmaliatAddVEdit
             // 
-            this.xtpAmaliatAddVEdit.Controls.Add(this.panelControl1);
-            this.xtpAmaliatAddVEdit.Controls.Add(this.panelControl_AddVaEdit);
-            this.xtpAmaliatAddVEdit.Name = "xtpAmaliatAddVEdit";
-            this.xtpAmaliatAddVEdit.PageVisible = false;
-            this.xtpAmaliatAddVEdit.Size = new System.Drawing.Size(1296, 584);
-            this.xtpAmaliatAddVEdit.Text = "عملیات جابجایی کالا";
+            this.xtp_AmaliatAddVEdit.Controls.Add(this.panelControl1);
+            this.xtp_AmaliatAddVEdit.Controls.Add(this.panelControl_AddVaEdit);
+            this.xtp_AmaliatAddVEdit.Name = "xtp_AmaliatAddVEdit";
+            this.xtp_AmaliatAddVEdit.PageVisible = false;
+            this.xtp_AmaliatAddVEdit.Size = new System.Drawing.Size(1432, 584);
+            this.xtp_AmaliatAddVEdit.Text = "عملیات جابجایی کالا";
             // 
             // panelControl_AddVaEdit
             // 
+            this.panelControl_AddVaEdit.Controls.Add(this.txtGhateySanadNumber);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblGhatySanadNumber);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSabetAtefNumber);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblAtefSanadNumber);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblRozaneSanadNumber);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtRozaneSanadNumber);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalJoze_darColAnbarha);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalJoze_darColAnbarha);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalCol_darSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalCol_darSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalCol_darColAnbarha);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalCol_darColAnbarha);
+            this.panelControl_AddVaEdit.Controls.Add(this.cmbNoeSanad);
+            this.panelControl_AddVaEdit.Controls.Add(this.labelControl2);
             this.panelControl_AddVaEdit.Controls.Add(this.cmbBeAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.cmbAzAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.labelControl4);
             this.panelControl_AddVaEdit.Controls.Add(this.txtSharhSanad);
-            this.panelControl_AddVaEdit.Controls.Add(this.lblSanadNamber);
             this.panelControl_AddVaEdit.Controls.Add(this.btnInsert);
             this.panelControl_AddVaEdit.Controls.Add(this.btnEdit1);
             this.panelControl_AddVaEdit.Controls.Add(this.btnDelete1);
-            this.panelControl_AddVaEdit.Controls.Add(this.chkIsSanadHesabdari);
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadAzAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.labelControl3);
             this.panelControl_AddVaEdit.Controls.Add(this.lblAzAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.txtNoeSanad);
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadBeAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.txtNoeSanad1);
             this.panelControl_AddVaEdit.Controls.Add(this.lblBeAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.labelControl7);
             this.panelControl_AddVaEdit.Controls.Add(this.txtTarikh);
-            this.panelControl_AddVaEdit.Controls.Add(this.labelControl1);
-            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryal);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalJoze_darSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalJoze_darSelectAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.txtNoeAmaliat1);
             this.panelControl_AddVaEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl_AddVaEdit.Location = new System.Drawing.Point(0, 0);
             this.panelControl_AddVaEdit.Name = "panelControl_AddVaEdit";
-            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1296, 118);
+            this.panelControl_AddVaEdit.Size = new System.Drawing.Size(1432, 203);
             this.panelControl_AddVaEdit.TabIndex = 2;
+            // 
+            // txtGhateySanadNumber
+            // 
+            this.txtGhateySanadNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGhateySanadNumber.EditValue = "";
+            this.txtGhateySanadNumber.EnterMoveNextControl = true;
+            this.txtGhateySanadNumber.Location = new System.Drawing.Point(878, 6);
+            this.txtGhateySanadNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGhateySanadNumber.Name = "txtGhateySanadNumber";
+            this.txtGhateySanadNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtGhateySanadNumber.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtGhateySanadNumber.Properties.Appearance.Options.UseBackColor = true;
+            this.txtGhateySanadNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtGhateySanadNumber.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGhateySanadNumber.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtGhateySanadNumber.Properties.MaxLength = 9;
+            this.txtGhateySanadNumber.Properties.ReadOnly = true;
+            this.txtGhateySanadNumber.Size = new System.Drawing.Size(155, 34);
+            this.txtGhateySanadNumber.TabIndex = 4;
+            this.txtGhateySanadNumber.TabStop = false;
+            // 
+            // lblGhatySanadNumber
+            // 
+            this.lblGhatySanadNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGhatySanadNumber.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblGhatySanadNumber.Appearance.Options.UseForeColor = true;
+            this.lblGhatySanadNumber.Location = new System.Drawing.Point(1041, 11);
+            this.lblGhatySanadNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblGhatySanadNumber.Name = "lblGhatySanadNumber";
+            this.lblGhatySanadNumber.Size = new System.Drawing.Size(96, 27);
+            this.lblGhatySanadNumber.TabIndex = 228;
+            this.lblGhatySanadNumber.Text = "ش سند قطعی";
+            // 
+            // txtSabetAtefNumber
+            // 
+            this.txtSabetAtefNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSabetAtefNumber.EditValue = "";
+            this.txtSabetAtefNumber.EnterMoveNextControl = true;
+            this.txtSabetAtefNumber.Location = new System.Drawing.Point(878, 44);
+            this.txtSabetAtefNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSabetAtefNumber.Name = "txtSabetAtefNumber";
+            this.txtSabetAtefNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSabetAtefNumber.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSabetAtefNumber.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSabetAtefNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSabetAtefNumber.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSabetAtefNumber.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSabetAtefNumber.Properties.MaxLength = 9;
+            this.txtSabetAtefNumber.Properties.ReadOnly = true;
+            this.txtSabetAtefNumber.Size = new System.Drawing.Size(155, 34);
+            this.txtSabetAtefNumber.TabIndex = 5;
+            this.txtSabetAtefNumber.TabStop = false;
+            // 
+            // lblAtefSanadNumber
+            // 
+            this.lblAtefSanadNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAtefSanadNumber.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblAtefSanadNumber.Appearance.Options.UseForeColor = true;
+            this.lblAtefSanadNumber.Location = new System.Drawing.Point(1041, 49);
+            this.lblAtefSanadNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblAtefSanadNumber.Name = "lblAtefSanadNumber";
+            this.lblAtefSanadNumber.Size = new System.Drawing.Size(99, 27);
+            this.lblAtefSanadNumber.TabIndex = 227;
+            this.lblAtefSanadNumber.Text = "ش عطف ثابت";
+            // 
+            // lblRozaneSanadNumber
+            // 
+            this.lblRozaneSanadNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRozaneSanadNumber.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblRozaneSanadNumber.Appearance.Options.UseForeColor = true;
+            this.lblRozaneSanadNumber.Location = new System.Drawing.Point(1041, 85);
+            this.lblRozaneSanadNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblRozaneSanadNumber.Name = "lblRozaneSanadNumber";
+            this.lblRozaneSanadNumber.Size = new System.Drawing.Size(91, 27);
+            this.lblRozaneSanadNumber.TabIndex = 226;
+            this.lblRozaneSanadNumber.Text = "ش سند روزانه";
+            // 
+            // txtRozaneSanadNumber
+            // 
+            this.txtRozaneSanadNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRozaneSanadNumber.EditValue = "";
+            this.txtRozaneSanadNumber.EnterMoveNextControl = true;
+            this.txtRozaneSanadNumber.Location = new System.Drawing.Point(878, 82);
+            this.txtRozaneSanadNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRozaneSanadNumber.Name = "txtRozaneSanadNumber";
+            this.txtRozaneSanadNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtRozaneSanadNumber.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtRozaneSanadNumber.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRozaneSanadNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtRozaneSanadNumber.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRozaneSanadNumber.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtRozaneSanadNumber.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Optimistic;
+            this.txtRozaneSanadNumber.Properties.Mask.EditMask = "f";
+            this.txtRozaneSanadNumber.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtRozaneSanadNumber.Properties.MaxLength = 9;
+            this.txtRozaneSanadNumber.Size = new System.Drawing.Size(155, 34);
+            this.txtRozaneSanadNumber.TabIndex = 6;
+            // 
+            // lblSeryalJoze_darColAnbarha
+            // 
+            this.lblSeryalJoze_darColAnbarha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalJoze_darColAnbarha.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSeryalJoze_darColAnbarha.Appearance.Options.UseForeColor = true;
+            this.lblSeryalJoze_darColAnbarha.Location = new System.Drawing.Point(1317, 47);
+            this.lblSeryalJoze_darColAnbarha.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSeryalJoze_darColAnbarha.Name = "lblSeryalJoze_darColAnbarha";
+            this.lblSeryalJoze_darColAnbarha.Size = new System.Drawing.Size(97, 27);
+            this.lblSeryalJoze_darColAnbarha.TabIndex = 222;
+            this.lblSeryalJoze_darColAnbarha.Text = "ش سریال جزء";
+            this.lblSeryalJoze_darColAnbarha.ToolTip = "ش سریال جزء در همه انبارها";
+            // 
+            // txtSeryalJoze_darColAnbarha
+            // 
+            this.txtSeryalJoze_darColAnbarha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalJoze_darColAnbarha.EditValue = "";
+            this.txtSeryalJoze_darColAnbarha.EnterMoveNextControl = true;
+            this.txtSeryalJoze_darColAnbarha.Location = new System.Drawing.Point(1149, 44);
+            this.txtSeryalJoze_darColAnbarha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeryalJoze_darColAnbarha.Name = "txtSeryalJoze_darColAnbarha";
+            this.txtSeryalJoze_darColAnbarha.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalJoze_darColAnbarha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalJoze_darColAnbarha.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalJoze_darColAnbarha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalJoze_darColAnbarha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalJoze_darColAnbarha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalJoze_darColAnbarha.Properties.MaxLength = 9;
+            this.txtSeryalJoze_darColAnbarha.Properties.ReadOnly = true;
+            this.txtSeryalJoze_darColAnbarha.Size = new System.Drawing.Size(155, 34);
+            this.txtSeryalJoze_darColAnbarha.TabIndex = 1;
+            this.txtSeryalJoze_darColAnbarha.TabStop = false;
+            this.txtSeryalJoze_darColAnbarha.ToolTip = "ش سریال جزء در همه انبارها";
+            // 
+            // lblSeryalCol_darSelectAnbar
+            // 
+            this.lblSeryalCol_darSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalCol_darSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSeryalCol_darSelectAnbar.Appearance.Options.UseForeColor = true;
+            this.lblSeryalCol_darSelectAnbar.Location = new System.Drawing.Point(1317, 88);
+            this.lblSeryalCol_darSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSeryalCol_darSelectAnbar.Name = "lblSeryalCol_darSelectAnbar";
+            this.lblSeryalCol_darSelectAnbar.Size = new System.Drawing.Size(90, 27);
+            this.lblSeryalCol_darSelectAnbar.TabIndex = 221;
+            this.lblSeryalCol_darSelectAnbar.Text = "ش سریال کل";
+            this.lblSeryalCol_darSelectAnbar.ToolTip = "ش سریال کل در انبار انتخابی";
+            // 
+            // txtSeryalCol_darSelectAnbar
+            // 
+            this.txtSeryalCol_darSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalCol_darSelectAnbar.EditValue = "";
+            this.txtSeryalCol_darSelectAnbar.EnterMoveNextControl = true;
+            this.txtSeryalCol_darSelectAnbar.Location = new System.Drawing.Point(1149, 82);
+            this.txtSeryalCol_darSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeryalCol_darSelectAnbar.Name = "txtSeryalCol_darSelectAnbar";
+            this.txtSeryalCol_darSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalCol_darSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalCol_darSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalCol_darSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalCol_darSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalCol_darSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalCol_darSelectAnbar.Properties.MaxLength = 9;
+            this.txtSeryalCol_darSelectAnbar.Properties.ReadOnly = true;
+            this.txtSeryalCol_darSelectAnbar.Size = new System.Drawing.Size(155, 34);
+            this.txtSeryalCol_darSelectAnbar.TabIndex = 2;
+            this.txtSeryalCol_darSelectAnbar.TabStop = false;
+            this.txtSeryalCol_darSelectAnbar.ToolTip = "ش سریال کل در انبار انتخابی";
+            // 
+            // lblSeryalCol_darColAnbarha
+            // 
+            this.lblSeryalCol_darColAnbarha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalCol_darColAnbarha.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSeryalCol_darColAnbarha.Appearance.Options.UseForeColor = true;
+            this.lblSeryalCol_darColAnbarha.Location = new System.Drawing.Point(1317, 9);
+            this.lblSeryalCol_darColAnbarha.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSeryalCol_darColAnbarha.Name = "lblSeryalCol_darColAnbarha";
+            this.lblSeryalCol_darColAnbarha.Size = new System.Drawing.Size(90, 27);
+            this.lblSeryalCol_darColAnbarha.TabIndex = 220;
+            this.lblSeryalCol_darColAnbarha.Text = "ش سریال کل";
+            this.lblSeryalCol_darColAnbarha.ToolTip = "ش سریال کل در همه انبارها";
+            // 
+            // txtSeryalCol_darColAnbarha
+            // 
+            this.txtSeryalCol_darColAnbarha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalCol_darColAnbarha.EditValue = "";
+            this.txtSeryalCol_darColAnbarha.EnterMoveNextControl = true;
+            this.txtSeryalCol_darColAnbarha.Location = new System.Drawing.Point(1149, 6);
+            this.txtSeryalCol_darColAnbarha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeryalCol_darColAnbarha.Name = "txtSeryalCol_darColAnbarha";
+            this.txtSeryalCol_darColAnbarha.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalCol_darColAnbarha.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalCol_darColAnbarha.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalCol_darColAnbarha.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalCol_darColAnbarha.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalCol_darColAnbarha.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalCol_darColAnbarha.Properties.MaxLength = 9;
+            this.txtSeryalCol_darColAnbarha.Properties.ReadOnly = true;
+            this.txtSeryalCol_darColAnbarha.Size = new System.Drawing.Size(155, 34);
+            this.txtSeryalCol_darColAnbarha.TabIndex = 0;
+            this.txtSeryalCol_darColAnbarha.TabStop = false;
+            this.txtSeryalCol_darColAnbarha.ToolTip = "ش سریال کل در همه انبارها";
+            // 
+            // cmbNoeSanad
+            // 
+            this.cmbNoeSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbNoeSanad.EnterMoveNextControl = true;
+            this.cmbNoeSanad.Location = new System.Drawing.Point(367, 5);
+            this.cmbNoeSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNoeSanad.Name = "cmbNoeSanad";
+            this.cmbNoeSanad.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.cmbNoeSanad.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbNoeSanad.Properties.AppearanceItemSelected.ForeColor = System.Drawing.Color.Red;
+            this.cmbNoeSanad.Properties.AppearanceItemSelected.Options.UseForeColor = true;
+            this.cmbNoeSanad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbNoeSanad.Properties.DropDownRows = 10;
+            this.cmbNoeSanad.Properties.Items.AddRange(new object[] {
+            "جابجایی کالا بین انبارها"});
+            this.cmbNoeSanad.Properties.NullValuePrompt = "لطفاً نوع سند را انتخاب کنید ...";
+            this.cmbNoeSanad.Properties.ReadOnly = true;
+            this.cmbNoeSanad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbNoeSanad.Size = new System.Drawing.Size(426, 34);
+            this.cmbNoeSanad.TabIndex = 215;
+            this.cmbNoeSanad.TabStop = false;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Location = new System.Drawing.Point(806, 8);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(55, 27);
+            this.labelControl2.TabIndex = 216;
+            this.labelControl2.Text = "نوع سند";
             // 
             // cmbBeAnbar
             // 
             this.cmbBeAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBeAnbar.EnterMoveNextControl = true;
-            this.cmbBeAnbar.Location = new System.Drawing.Point(59, 43);
+            this.cmbBeAnbar.Location = new System.Drawing.Point(367, 83);
             this.cmbBeAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbBeAnbar.Name = "cmbBeAnbar";
             this.cmbBeAnbar.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
@@ -428,7 +704,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaName", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbBeAnbar.Properties.DataSource = this.epListAnbarhasBindingSource1;
@@ -441,8 +717,8 @@
             this.cmbBeAnbar.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbBeAnbar.Properties.ValueMember = "Id";
             this.cmbBeAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbBeAnbar.Size = new System.Drawing.Size(577, 34);
-            this.cmbBeAnbar.TabIndex = 2;
+            this.cmbBeAnbar.Size = new System.Drawing.Size(426, 34);
+            this.cmbBeAnbar.TabIndex = 9;
             this.cmbBeAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbBeAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbBeAnbar.Enter += new System.EventHandler(this.cmbBeAnbar_Enter);
@@ -455,7 +731,7 @@
             // 
             this.cmbAzAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAzAnbar.EnterMoveNextControl = true;
-            this.cmbAzAnbar.Location = new System.Drawing.Point(59, 4);
+            this.cmbAzAnbar.Location = new System.Drawing.Point(367, 44);
             this.cmbAzAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbAzAnbar.Name = "cmbAzAnbar";
             this.cmbAzAnbar.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
@@ -470,7 +746,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaName", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbAzAnbar.Properties.DataSource = this.epListAnbarhasBindingSource;
@@ -483,8 +759,8 @@
             this.cmbAzAnbar.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbAzAnbar.Properties.ValueMember = "Id";
             this.cmbAzAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbAzAnbar.Size = new System.Drawing.Size(577, 34);
-            this.cmbAzAnbar.TabIndex = 1;
+            this.cmbAzAnbar.Size = new System.Drawing.Size(426, 34);
+            this.cmbAzAnbar.TabIndex = 8;
             this.cmbAzAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
             this.cmbAzAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbControl_CustomDrawCell);
             this.cmbAzAnbar.EditValueChanged += new System.EventHandler(this.cmbAzAnbar_EditValueChanged);
@@ -494,24 +770,12 @@
             // 
             this.epListAnbarhasBindingSource.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingAnbar.EpListAnbarha);
             // 
-            // labelControl4
-            // 
-            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(975, 81);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(62, 27);
-            this.labelControl4.TabIndex = 166;
-            this.labelControl4.Text = "شرح سند";
-            // 
             // txtSharhSanad
             // 
             this.txtSharhSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhSanad.EditValue = "";
             this.txtSharhSanad.EnterMoveNextControl = true;
-            this.txtSharhSanad.Location = new System.Drawing.Point(59, 78);
+            this.txtSharhSanad.Location = new System.Drawing.Point(367, 160);
             this.txtSharhSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSharhSanad.Name = "txtSharhSanad";
             this.txtSharhSanad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -520,38 +784,19 @@
             this.txtSharhSanad.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtSharhSanad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtSharhSanad.Properties.MaxLength = 500;
-            this.txtSharhSanad.Size = new System.Drawing.Size(910, 36);
-            this.txtSharhSanad.TabIndex = 3;
-            // 
-            // lblSanadNamber
-            // 
-            this.lblSanadNamber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSanadNamber.Appearance.BackColor = System.Drawing.Color.White;
-            this.lblSanadNamber.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblSanadNamber.Appearance.Options.UseBackColor = true;
-            this.lblSanadNamber.Appearance.Options.UseForeColor = true;
-            this.lblSanadNamber.Appearance.Options.UseTextOptions = true;
-            this.lblSanadNamber.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblSanadNamber.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblSanadNamber.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSanadNamber.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblSanadNamber.Location = new System.Drawing.Point(706, 5);
-            this.lblSanadNamber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.lblSanadNamber.Name = "lblSanadNamber";
-            this.lblSanadNamber.Size = new System.Drawing.Size(104, 32);
-            this.lblSanadNamber.TabIndex = 163;
-            this.lblSanadNamber.Text = ".............";
+            this.txtSharhSanad.Size = new System.Drawing.Size(862, 36);
+            this.txtSharhSanad.TabIndex = 10;
             // 
             // btnInsert
             // 
             this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnInsert.ImageOptions.SvgImage")));
-            this.btnInsert.Location = new System.Drawing.Point(1185, 79);
+            this.btnInsert.Location = new System.Drawing.Point(1360, 161);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnInsert.Size = new System.Drawing.Size(43, 33);
-            this.btnInsert.TabIndex = 4;
+            this.btnInsert.TabIndex = 11;
             this.btnInsert.ToolTip = "جدید";
             this.btnInsert.ToolTipTitle = "F2";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -561,12 +806,12 @@
             this.btnEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit1.Enabled = false;
             this.btnEdit1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit1.ImageOptions.SvgImage")));
-            this.btnEdit1.Location = new System.Drawing.Point(1072, 79);
+            this.btnEdit1.Location = new System.Drawing.Point(1247, 161);
             this.btnEdit1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEdit1.Name = "btnEdit1";
             this.btnEdit1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnEdit1.Size = new System.Drawing.Size(43, 33);
-            this.btnEdit1.TabIndex = 6;
+            this.btnEdit1.TabIndex = 13;
             this.btnEdit1.ToolTip = "ویرایش";
             this.btnEdit1.ToolTipTitle = "F4";
             this.btnEdit1.Click += new System.EventHandler(this.btnEdit1_Click);
@@ -576,32 +821,15 @@
             this.btnDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete1.Enabled = false;
             this.btnDelete1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete1.ImageOptions.SvgImage")));
-            this.btnDelete1.Location = new System.Drawing.Point(1129, 79);
+            this.btnDelete1.Location = new System.Drawing.Point(1304, 161);
             this.btnDelete1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete1.Name = "btnDelete1";
             this.btnDelete1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnDelete1.Size = new System.Drawing.Size(43, 33);
-            this.btnDelete1.TabIndex = 5;
+            this.btnDelete1.TabIndex = 12;
             this.btnDelete1.ToolTip = "حذف";
             this.btnDelete1.ToolTipTitle = "F3";
             this.btnDelete1.Click += new System.EventHandler(this.btnDelete1_Click);
-            // 
-            // chkIsSanadHesabdari
-            // 
-            this.chkIsSanadHesabdari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkIsSanadHesabdari.EditValue = true;
-            this.chkIsSanadHesabdari.EnterMoveNextControl = true;
-            this.chkIsSanadHesabdari.Location = new System.Drawing.Point(822, 4);
-            this.chkIsSanadHesabdari.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.chkIsSanadHesabdari.Name = "chkIsSanadHesabdari";
-            this.chkIsSanadHesabdari.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.chkIsSanadHesabdari.Properties.Appearance.Options.UseForeColor = true;
-            this.chkIsSanadHesabdari.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.chkIsSanadHesabdari.Properties.Caption = "سند حسابداری";
-            this.chkIsSanadHesabdari.Properties.ReadOnly = true;
-            this.chkIsSanadHesabdari.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkIsSanadHesabdari.Size = new System.Drawing.Size(146, 35);
-            this.chkIsSanadHesabdari.TabIndex = 162;
             // 
             // btnReloadAzAnbar
             // 
@@ -609,7 +837,7 @@
             this.btnReloadAzAnbar.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadAzAnbar.Appearance.Options.UseForeColor = true;
             this.btnReloadAzAnbar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadAzAnbar.ImageOptions.SvgImage")));
-            this.btnReloadAzAnbar.Location = new System.Drawing.Point(14, 4);
+            this.btnReloadAzAnbar.Location = new System.Drawing.Point(316, 45);
             this.btnReloadAzAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadAzAnbar.Name = "btnReloadAzAnbar";
             this.btnReloadAzAnbar.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -618,50 +846,18 @@
             this.btnReloadAzAnbar.TabStop = false;
             this.btnReloadAzAnbar.Click += new System.EventHandler(this.btnReloadAzAnbar_Click);
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(975, 44);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(55, 27);
-            this.labelControl3.TabIndex = 161;
-            this.labelControl3.Text = "نوع سند";
-            // 
             // lblAzAnbar
             // 
             this.lblAzAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAzAnbar.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblAzAnbar.Appearance.Options.UseForeColor = true;
             this.lblAzAnbar.AutoEllipsis = true;
-            this.lblAzAnbar.Location = new System.Drawing.Point(644, 8);
+            this.lblAzAnbar.Location = new System.Drawing.Point(801, 48);
             this.lblAzAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblAzAnbar.Name = "lblAzAnbar";
             this.lblAzAnbar.Size = new System.Drawing.Size(38, 27);
             this.lblAzAnbar.TabIndex = 145;
             this.lblAzAnbar.Text = "از انبار";
-            // 
-            // txtNoeSanad
-            // 
-            this.txtNoeSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNoeSanad.EditValue = "";
-            this.txtNoeSanad.EnterMoveNextControl = true;
-            this.txtNoeSanad.Location = new System.Drawing.Point(706, 41);
-            this.txtNoeSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNoeSanad.Name = "txtNoeSanad";
-            this.txtNoeSanad.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtNoeSanad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtNoeSanad.Properties.Appearance.Options.UseBackColor = true;
-            this.txtNoeSanad.Properties.Appearance.Options.UseForeColor = true;
-            this.txtNoeSanad.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtNoeSanad.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtNoeSanad.Properties.MaxLength = 4;
-            this.txtNoeSanad.Properties.ReadOnly = true;
-            this.txtNoeSanad.Size = new System.Drawing.Size(262, 34);
-            this.txtNoeSanad.TabIndex = 160;
-            this.txtNoeSanad.TabStop = false;
             // 
             // btnReloadBeAnbar
             // 
@@ -669,7 +865,7 @@
             this.btnReloadBeAnbar.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadBeAnbar.Appearance.Options.UseForeColor = true;
             this.btnReloadBeAnbar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadBeAnbar.ImageOptions.SvgImage")));
-            this.btnReloadBeAnbar.Location = new System.Drawing.Point(14, 40);
+            this.btnReloadBeAnbar.Location = new System.Drawing.Point(316, 81);
             this.btnReloadBeAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadBeAnbar.Name = "btnReloadBeAnbar";
             this.btnReloadBeAnbar.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -684,7 +880,7 @@
             this.txtNoeSanad1.EditValue = "";
             this.txtNoeSanad1.Enabled = false;
             this.txtNoeSanad1.EnterMoveNextControl = true;
-            this.txtNoeSanad1.Location = new System.Drawing.Point(745, 40);
+            this.txtNoeSanad1.Location = new System.Drawing.Point(903, 160);
             this.txtNoeSanad1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeSanad1.Name = "txtNoeSanad1";
             this.txtNoeSanad1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -702,7 +898,7 @@
             this.lblBeAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBeAnbar.Appearance.ForeColor = System.Drawing.Color.Red;
             this.lblBeAnbar.Appearance.Options.UseForeColor = true;
-            this.lblBeAnbar.Location = new System.Drawing.Point(644, 46);
+            this.lblBeAnbar.Location = new System.Drawing.Point(801, 86);
             this.lblBeAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblBeAnbar.Name = "lblBeAnbar";
             this.lblBeAnbar.Size = new System.Drawing.Size(42, 27);
@@ -715,7 +911,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl7.Appearance.Options.UseForeColor = true;
             this.labelControl7.AutoEllipsis = true;
-            this.labelControl7.Location = new System.Drawing.Point(1235, 43);
+            this.labelControl7.Location = new System.Drawing.Point(1041, 122);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(36, 27);
@@ -726,7 +922,7 @@
             // 
             this.txtTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTarikh.EnterMoveNextControl = true;
-            this.txtTarikh.Location = new System.Drawing.Point(1072, 41);
+            this.txtTarikh.Location = new System.Drawing.Point(878, 120);
             this.txtTarikh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTarikh.Name = "txtTarikh";
             this.txtTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -738,39 +934,39 @@
             this.txtTarikh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTarikh.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTarikh.Size = new System.Drawing.Size(156, 34);
-            this.txtTarikh.TabIndex = 0;
+            this.txtTarikh.TabIndex = 7;
             // 
-            // labelControl1
+            // lblSeryalJoze_darSelectAnbar
             // 
-            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(1237, 7);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(41, 27);
-            this.labelControl1.TabIndex = 30;
-            this.labelControl1.Text = "سریال";
+            this.lblSeryalJoze_darSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalJoze_darSelectAnbar.Location = new System.Drawing.Point(1313, 123);
+            this.lblSeryalJoze_darSelectAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.lblSeryalJoze_darSelectAnbar.Name = "lblSeryalJoze_darSelectAnbar";
+            this.lblSeryalJoze_darSelectAnbar.Size = new System.Drawing.Size(97, 27);
+            this.lblSeryalJoze_darSelectAnbar.TabIndex = 30;
+            this.lblSeryalJoze_darSelectAnbar.Text = "ش سریال جزء";
+            this.lblSeryalJoze_darSelectAnbar.ToolTip = "ش سریال جزء در انبار انتخابی";
             // 
-            // txtSeryal
+            // txtSeryalJoze_darSelectAnbar
             // 
-            this.txtSeryal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSeryal.EditValue = "";
-            this.txtSeryal.EnterMoveNextControl = true;
-            this.txtSeryal.Location = new System.Drawing.Point(1072, 5);
-            this.txtSeryal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSeryal.Name = "txtSeryal";
-            this.txtSeryal.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtSeryal.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtSeryal.Properties.Appearance.Options.UseBackColor = true;
-            this.txtSeryal.Properties.Appearance.Options.UseForeColor = true;
-            this.txtSeryal.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtSeryal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtSeryal.Properties.MaxLength = 4;
-            this.txtSeryal.Properties.ReadOnly = true;
-            this.txtSeryal.Size = new System.Drawing.Size(156, 34);
-            this.txtSeryal.TabIndex = 29;
-            this.txtSeryal.TabStop = false;
+            this.txtSeryalJoze_darSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalJoze_darSelectAnbar.EditValue = "";
+            this.txtSeryalJoze_darSelectAnbar.EnterMoveNextControl = true;
+            this.txtSeryalJoze_darSelectAnbar.Location = new System.Drawing.Point(1149, 120);
+            this.txtSeryalJoze_darSelectAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSeryalJoze_darSelectAnbar.Name = "txtSeryalJoze_darSelectAnbar";
+            this.txtSeryalJoze_darSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalJoze_darSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalJoze_darSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalJoze_darSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalJoze_darSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalJoze_darSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalJoze_darSelectAnbar.Properties.MaxLength = 4;
+            this.txtSeryalJoze_darSelectAnbar.Properties.ReadOnly = true;
+            this.txtSeryalJoze_darSelectAnbar.Size = new System.Drawing.Size(156, 34);
+            this.txtSeryalJoze_darSelectAnbar.TabIndex = 3;
+            this.txtSeryalJoze_darSelectAnbar.TabStop = false;
+            this.txtSeryalJoze_darSelectAnbar.ToolTip = "ش سریال جزء در انبار انتخابی";
             // 
             // txtNoeAmaliat1
             // 
@@ -778,7 +974,7 @@
             this.txtNoeAmaliat1.EditValue = "";
             this.txtNoeAmaliat1.Enabled = false;
             this.txtNoeAmaliat1.EnterMoveNextControl = true;
-            this.txtNoeAmaliat1.Location = new System.Drawing.Point(793, 41);
+            this.txtNoeAmaliat1.Location = new System.Drawing.Point(953, 160);
             this.txtNoeAmaliat1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNoeAmaliat1.Name = "txtNoeAmaliat1";
             this.txtNoeAmaliat1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -791,48 +987,72 @@
             this.txtNoeAmaliat1.TabStop = false;
             this.txtNoeAmaliat1.Visible = false;
             // 
-            // xtcAmaliatJabejaee
+            // xtc_AmaliatJabejaee
             // 
-            this.xtcAmaliatJabejaee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtcAmaliatJabejaee.Location = new System.Drawing.Point(0, 53);
-            this.xtcAmaliatJabejaee.Name = "xtcAmaliatJabejaee";
-            this.xtcAmaliatJabejaee.SelectedTabPage = this.xtpJabejaeeKala;
-            this.xtcAmaliatJabejaee.Size = new System.Drawing.Size(1298, 625);
-            this.xtcAmaliatJabejaee.TabIndex = 68;
-            this.xtcAmaliatJabejaee.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtpJabejaeeKala,
-            this.xtpAmaliatAddVEdit});
-            this.xtcAmaliatJabejaee.TabStop = false;
-            this.xtcAmaliatJabejaee.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtcAmaliatRozaneh_SelectedPageChanged);
+            this.xtc_AmaliatJabejaee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtc_AmaliatJabejaee.Location = new System.Drawing.Point(0, 53);
+            this.xtc_AmaliatJabejaee.Name = "xtc_AmaliatJabejaee";
+            this.xtc_AmaliatJabejaee.SelectedTabPage = this.xtp_JabejaeeKala;
+            this.xtc_AmaliatJabejaee.Size = new System.Drawing.Size(1434, 625);
+            this.xtc_AmaliatJabejaee.TabIndex = 68;
+            this.xtc_AmaliatJabejaee.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtp_JabejaeeKala,
+            this.xtp_AmaliatAddVEdit});
+            this.xtc_AmaliatJabejaee.TabStop = false;
+            this.xtc_AmaliatJabejaee.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtcAmaliatRozaneh_SelectedPageChanged);
             // 
-            // xtpJabejaeeKala
+            // xtp_JabejaeeKala
             // 
-            this.xtpJabejaeeKala.Controls.Add(this.gridControl_JabejaeeKala);
-            this.xtpJabejaeeKala.Name = "xtpJabejaeeKala";
-            this.xtpJabejaeeKala.Size = new System.Drawing.Size(1296, 584);
-            this.xtpJabejaeeKala.Text = "جابجایی کالا بین انبارها";
+            this.xtp_JabejaeeKala.Controls.Add(this.xtc_JabejaeeKala);
+            this.xtp_JabejaeeKala.Name = "xtp_JabejaeeKala";
+            this.xtp_JabejaeeKala.Size = new System.Drawing.Size(1432, 584);
+            this.xtp_JabejaeeKala.Text = "جابجایی کالا بین انبارها";
             // 
-            // gridControl_JabejaeeKala
+            // xtc_JabejaeeKala
             // 
-            this.gridControl_JabejaeeKala.DataSource = this.akKhorojeKala_RizsBindingSource;
-            this.gridControl_JabejaeeKala.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_JabejaeeKala.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl_JabejaeeKala.Location = new System.Drawing.Point(0, 0);
-            this.gridControl_JabejaeeKala.MainView = this.gridView_JabejaeeKala;
-            this.gridControl_JabejaeeKala.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl_JabejaeeKala.Name = "gridControl_JabejaeeKala";
-            this.gridControl_JabejaeeKala.Size = new System.Drawing.Size(1296, 584);
-            this.gridControl_JabejaeeKala.TabIndex = 38;
-            this.gridControl_JabejaeeKala.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView_JabejaeeKala});
+            this.xtc_JabejaeeKala.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtc_JabejaeeKala.Location = new System.Drawing.Point(0, 0);
+            this.xtc_JabejaeeKala.Name = "xtc_JabejaeeKala";
+            this.xtc_JabejaeeKala.SelectedTabPage = this.xtp_Havalejabejaee;
+            this.xtc_JabejaeeKala.Size = new System.Drawing.Size(1432, 584);
+            this.xtc_JabejaeeKala.TabIndex = 39;
+            this.xtc_JabejaeeKala.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtp_Havalejabejaee,
+            this.xtp_Residjabejaee});
+            this.xtc_JabejaeeKala.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtc_JabejaeeKala_SelectedPageChanged);
             // 
-            // gridView_JabejaeeKala
+            // xtp_Havalejabejaee
             // 
-            this.gridView_JabejaeeKala.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.xtp_Havalejabejaee.Controls.Add(this.gridControl_Havalejabejaee);
+            this.xtp_Havalejabejaee.Name = "xtp_Havalejabejaee";
+            this.xtp_Havalejabejaee.Size = new System.Drawing.Size(1430, 543);
+            this.xtp_Havalejabejaee.Text = "حواله (جابجایی)";
+            // 
+            // gridControl_Havalejabejaee
+            // 
+            this.gridControl_Havalejabejaee.DataSource = this.akKhorojeKala_RizsBindingSource;
+            this.gridControl_Havalejabejaee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_Havalejabejaee.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl_Havalejabejaee.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_Havalejabejaee.MainView = this.gridView_Havalejabejaee;
+            this.gridControl_Havalejabejaee.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl_Havalejabejaee.Name = "gridControl_Havalejabejaee";
+            this.gridControl_Havalejabejaee.Size = new System.Drawing.Size(1430, 543);
+            this.gridControl_Havalejabejaee.TabIndex = 38;
+            this.gridControl_Havalejabejaee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView_Havalejabejaee});
+            // 
+            // gridView_Havalejabejaee
+            // 
+            this.gridView_Havalejabejaee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn363,
-            this.gridColumn364,
+            this.colSeryalCol_darColAnbarha,
+            this.colSeryalJoze_darColAnbarha,
+            this.colSeryalCol_darSelectAnbar,
+            this.colSeryalJoze_darSelectAnbar,
+            this.colNoeSanadText,
             this.gridColumn365,
-            this.gridColumn366,
+            this.colSabetAtefNumber,
             this.gridColumn367,
             this.gridColumn368,
             this.gridColumn369,
@@ -848,34 +1068,33 @@
             this.gridColumn379,
             this.gridColumn380,
             this.gridColumn381,
+            this.colRozaneSanadNumber,
+            this.colGhateySanadNamber,
+            this.colPaygiriNumber,
             this.gridColumn382,
-            this.gridColumn383,
             this.gridColumn384});
-            this.gridView_JabejaeeKala.DetailHeight = 341;
-            this.gridView_JabejaeeKala.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
-            this.gridView_JabejaeeKala.GridControl = this.gridControl_JabejaeeKala;
-            this.gridView_JabejaeeKala.GroupCount = 1;
-            this.gridView_JabejaeeKala.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
-            this.gridView_JabejaeeKala.IndicatorWidth = 25;
-            this.gridView_JabejaeeKala.Name = "gridView_JabejaeeKala";
-            this.gridView_JabejaeeKala.OptionsBehavior.AutoSelectAllInEditor = false;
-            this.gridView_JabejaeeKala.OptionsBehavior.Editable = false;
-            this.gridView_JabejaeeKala.OptionsFind.AllowFindPanel = false;
-            this.gridView_JabejaeeKala.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
-            this.gridView_JabejaeeKala.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
-            this.gridView_JabejaeeKala.OptionsMenu.ShowFooterItem = true;
-            this.gridView_JabejaeeKala.OptionsNavigation.AutoFocusNewRow = true;
-            this.gridView_JabejaeeKala.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView_JabejaeeKala.OptionsView.ColumnAutoWidth = false;
-            this.gridView_JabejaeeKala.OptionsView.RowAutoHeight = true;
-            this.gridView_JabejaeeKala.OptionsView.ShowAutoFilterRow = true;
-            this.gridView_JabejaeeKala.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn383, DevExpress.Data.ColumnSortOrder.Ascending)});
-            this.gridView_JabejaeeKala.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
-            this.gridView_JabejaeeKala.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
-            this.gridView_JabejaeeKala.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridView_CustomDrawRowIndicator);
-            this.gridView_JabejaeeKala.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
-            this.gridView_JabejaeeKala.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            this.gridView_Havalejabejaee.DetailHeight = 341;
+            this.gridView_Havalejabejaee.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView_Havalejabejaee.GridControl = this.gridControl_Havalejabejaee;
+            this.gridView_Havalejabejaee.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
+            this.gridView_Havalejabejaee.IndicatorWidth = 55;
+            this.gridView_Havalejabejaee.Name = "gridView_Havalejabejaee";
+            this.gridView_Havalejabejaee.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gridView_Havalejabejaee.OptionsBehavior.Editable = false;
+            this.gridView_Havalejabejaee.OptionsFind.AllowFindPanel = false;
+            this.gridView_Havalejabejaee.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView_Havalejabejaee.OptionsFind.FindNullPrompt = "متنی برای جستجو تایپ کنید ...";
+            this.gridView_Havalejabejaee.OptionsMenu.ShowFooterItem = true;
+            this.gridView_Havalejabejaee.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView_Havalejabejaee.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView_Havalejabejaee.OptionsView.ColumnAutoWidth = false;
+            this.gridView_Havalejabejaee.OptionsView.RowAutoHeight = true;
+            this.gridView_Havalejabejaee.OptionsView.ShowAutoFilterRow = true;
+            this.gridView_Havalejabejaee.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView_RowCellClick);
+            this.gridView_Havalejabejaee.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridView_CustomDrawRowIndicator);
+            this.gridView_Havalejabejaee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyDown);
+            this.gridView_Havalejabejaee.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
+            this.gridView_Havalejabejaee.RowCountChanged += new System.EventHandler(this.gridView_HavaleJabejaee_RowCountChanged);
             // 
             // gridColumn363
             // 
@@ -884,21 +1103,84 @@
             this.gridColumn363.Name = "gridColumn363";
             this.gridColumn363.Width = 76;
             // 
-            // gridColumn364
+            // colSeryalCol_darColAnbarha
             // 
-            this.gridColumn364.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn364.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn364.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn364.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn364.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn364.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn364.Caption = "سریال";
-            this.gridColumn364.FieldName = "Seryal";
-            this.gridColumn364.MinWidth = 19;
-            this.gridColumn364.Name = "gridColumn364";
-            this.gridColumn364.Visible = true;
-            this.gridColumn364.VisibleIndex = 0;
-            this.gridColumn364.Width = 109;
+            this.colSeryalCol_darColAnbarha.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol_darColAnbarha.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_darColAnbarha.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_darColAnbarha.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol_darColAnbarha.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_darColAnbarha.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_darColAnbarha.Caption = "سریال کل";
+            this.colSeryalCol_darColAnbarha.FieldName = "SeryalCol_darColAnbarha";
+            this.colSeryalCol_darColAnbarha.MinWidth = 25;
+            this.colSeryalCol_darColAnbarha.Name = "colSeryalCol_darColAnbarha";
+            this.colSeryalCol_darColAnbarha.Visible = true;
+            this.colSeryalCol_darColAnbarha.VisibleIndex = 0;
+            this.colSeryalCol_darColAnbarha.Width = 130;
+            // 
+            // colSeryalJoze_darColAnbarha
+            // 
+            this.colSeryalJoze_darColAnbarha.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalJoze_darColAnbarha.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_darColAnbarha.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_darColAnbarha.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalJoze_darColAnbarha.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_darColAnbarha.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_darColAnbarha.Caption = "سریال جزء";
+            this.colSeryalJoze_darColAnbarha.FieldName = "SeryalJoze_darColAnbarha";
+            this.colSeryalJoze_darColAnbarha.MinWidth = 25;
+            this.colSeryalJoze_darColAnbarha.Name = "colSeryalJoze_darColAnbarha";
+            this.colSeryalJoze_darColAnbarha.Visible = true;
+            this.colSeryalJoze_darColAnbarha.VisibleIndex = 1;
+            this.colSeryalJoze_darColAnbarha.Width = 130;
+            // 
+            // colSeryalCol_darSelectAnbar
+            // 
+            this.colSeryalCol_darSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol_darSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_darSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_darSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol_darSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_darSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_darSelectAnbar.Caption = "سریال کل";
+            this.colSeryalCol_darSelectAnbar.FieldName = "SeryalCol_darSelectAnbar";
+            this.colSeryalCol_darSelectAnbar.MinWidth = 25;
+            this.colSeryalCol_darSelectAnbar.Name = "colSeryalCol_darSelectAnbar";
+            this.colSeryalCol_darSelectAnbar.Visible = true;
+            this.colSeryalCol_darSelectAnbar.VisibleIndex = 2;
+            this.colSeryalCol_darSelectAnbar.Width = 130;
+            // 
+            // colSeryalJoze_darSelectAnbar
+            // 
+            this.colSeryalJoze_darSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalJoze_darSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_darSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_darSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalJoze_darSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_darSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_darSelectAnbar.Caption = "سریال جزء";
+            this.colSeryalJoze_darSelectAnbar.FieldName = "SeryalJoze_darSelectAnbar";
+            this.colSeryalJoze_darSelectAnbar.MinWidth = 19;
+            this.colSeryalJoze_darSelectAnbar.Name = "colSeryalJoze_darSelectAnbar";
+            this.colSeryalJoze_darSelectAnbar.Visible = true;
+            this.colSeryalJoze_darSelectAnbar.VisibleIndex = 3;
+            this.colSeryalJoze_darSelectAnbar.Width = 130;
+            // 
+            // colNoeSanadText
+            // 
+            this.colNoeSanadText.AppearanceCell.Options.UseTextOptions = true;
+            this.colNoeSanadText.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colNoeSanadText.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNoeSanadText.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNoeSanadText.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colNoeSanadText.Caption = "نوع سند";
+            this.colNoeSanadText.FieldName = "NoeSanadText";
+            this.colNoeSanadText.MinWidth = 25;
+            this.colNoeSanadText.Name = "colNoeSanadText";
+            this.colNoeSanadText.Visible = true;
+            this.colNoeSanadText.VisibleIndex = 4;
+            this.colNoeSanadText.Width = 188;
             // 
             // gridColumn365
             // 
@@ -915,24 +1197,24 @@
             this.gridColumn365.MinWidth = 19;
             this.gridColumn365.Name = "gridColumn365";
             this.gridColumn365.Visible = true;
-            this.gridColumn365.VisibleIndex = 1;
+            this.gridColumn365.VisibleIndex = 5;
             this.gridColumn365.Width = 140;
             // 
-            // gridColumn366
+            // colSabetAtefNumber
             // 
-            this.gridColumn366.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn366.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn366.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn366.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn366.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn366.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn366.Caption = "شماره سند";
-            this.gridColumn366.FieldName = "SanadNamber";
-            this.gridColumn366.MinWidth = 21;
-            this.gridColumn366.Name = "gridColumn366";
-            this.gridColumn366.Visible = true;
-            this.gridColumn366.VisibleIndex = 2;
-            this.gridColumn366.Width = 122;
+            this.colSabetAtefNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colSabetAtefNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSabetAtefNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSabetAtefNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSabetAtefNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSabetAtefNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSabetAtefNumber.Caption = "ش عطف ثابت";
+            this.colSabetAtefNumber.FieldName = "SabetAtefNumber";
+            this.colSabetAtefNumber.MinWidth = 21;
+            this.colSabetAtefNumber.Name = "colSabetAtefNumber";
+            this.colSabetAtefNumber.Visible = true;
+            this.colSabetAtefNumber.VisibleIndex = 6;
+            this.colSabetAtefNumber.Width = 128;
             // 
             // gridColumn367
             // 
@@ -942,11 +1224,11 @@
             this.gridColumn367.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn367.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn367.Caption = "از انبار";
-            this.gridColumn367.FieldName = "AzAnbarName";
+            this.gridColumn367.FieldName = "EpListAnbarha1.Name";
             this.gridColumn367.MinWidth = 19;
             this.gridColumn367.Name = "gridColumn367";
             this.gridColumn367.Visible = true;
-            this.gridColumn367.VisibleIndex = 3;
+            this.gridColumn367.VisibleIndex = 7;
             this.gridColumn367.Width = 282;
             // 
             // gridColumn368
@@ -957,11 +1239,11 @@
             this.gridColumn368.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn368.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn368.Caption = "به انبار";
-            this.gridColumn368.FieldName = "BeAnbarName";
+            this.gridColumn368.FieldName = "EpListAnbarha2.Name";
             this.gridColumn368.MinWidth = 19;
             this.gridColumn368.Name = "gridColumn368";
             this.gridColumn368.Visible = true;
-            this.gridColumn368.VisibleIndex = 4;
+            this.gridColumn368.VisibleIndex = 8;
             this.gridColumn368.Width = 277;
             // 
             // gridColumn369
@@ -991,7 +1273,7 @@
             this.gridColumn370.MinWidth = 23;
             this.gridColumn370.Name = "gridColumn370";
             this.gridColumn370.Visible = true;
-            this.gridColumn370.VisibleIndex = 5;
+            this.gridColumn370.VisibleIndex = 9;
             this.gridColumn370.Width = 69;
             // 
             // gridColumn371
@@ -1003,12 +1285,12 @@
             this.gridColumn371.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn371.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn371.Caption = "کد کالا";
-            this.gridColumn371.FieldName = "KalaCode";
+            this.gridColumn371.FieldName = "EpNameKala1.Code";
             this.gridColumn371.MinWidth = 23;
             this.gridColumn371.Name = "gridColumn371";
             this.gridColumn371.Visible = true;
-            this.gridColumn371.VisibleIndex = 6;
-            this.gridColumn371.Width = 141;
+            this.gridColumn371.VisibleIndex = 10;
+            this.gridColumn371.Width = 151;
             // 
             // gridColumn372
             // 
@@ -1018,11 +1300,11 @@
             this.gridColumn372.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn372.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn372.Caption = "نام کالا";
-            this.gridColumn372.FieldName = "KalaName";
+            this.gridColumn372.FieldName = "EpNameKala1.Name";
             this.gridColumn372.MinWidth = 23;
             this.gridColumn372.Name = "gridColumn372";
             this.gridColumn372.Visible = true;
-            this.gridColumn372.VisibleIndex = 7;
+            this.gridColumn372.VisibleIndex = 11;
             this.gridColumn372.Width = 331;
             // 
             // gridColumn373
@@ -1034,12 +1316,12 @@
             this.gridColumn373.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn373.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn373.Caption = "واحد کالا";
-            this.gridColumn373.FieldName = "VahedeKala";
+            this.gridColumn373.FieldName = "EpVahedKala1.Name";
             this.gridColumn373.MinWidth = 23;
             this.gridColumn373.Name = "gridColumn373";
             this.gridColumn373.Visible = true;
-            this.gridColumn373.VisibleIndex = 8;
-            this.gridColumn373.Width = 109;
+            this.gridColumn373.VisibleIndex = 12;
+            this.gridColumn373.Width = 115;
             // 
             // gridColumn374
             // 
@@ -1056,7 +1338,7 @@
             this.gridColumn374.MinWidth = 23;
             this.gridColumn374.Name = "gridColumn374";
             this.gridColumn374.Visible = true;
-            this.gridColumn374.VisibleIndex = 9;
+            this.gridColumn374.VisibleIndex = 13;
             this.gridColumn374.Width = 146;
             // 
             // gridColumn375
@@ -1074,7 +1356,7 @@
             this.gridColumn375.MinWidth = 23;
             this.gridColumn375.Name = "gridColumn375";
             this.gridColumn375.Visible = true;
-            this.gridColumn375.VisibleIndex = 10;
+            this.gridColumn375.VisibleIndex = 14;
             this.gridColumn375.Width = 147;
             // 
             // gridColumn376
@@ -1092,7 +1374,7 @@
             this.gridColumn376.MinWidth = 23;
             this.gridColumn376.Name = "gridColumn376";
             this.gridColumn376.Visible = true;
-            this.gridColumn376.VisibleIndex = 11;
+            this.gridColumn376.VisibleIndex = 15;
             this.gridColumn376.Width = 191;
             // 
             // gridColumn377
@@ -1108,7 +1390,7 @@
             this.gridColumn377.MinWidth = 23;
             this.gridColumn377.Name = "gridColumn377";
             this.gridColumn377.Visible = true;
-            this.gridColumn377.VisibleIndex = 12;
+            this.gridColumn377.VisibleIndex = 16;
             this.gridColumn377.Width = 96;
             // 
             // gridColumn378
@@ -1126,7 +1408,7 @@
             this.gridColumn378.MinWidth = 23;
             this.gridColumn378.Name = "gridColumn378";
             this.gridColumn378.Visible = true;
-            this.gridColumn378.VisibleIndex = 13;
+            this.gridColumn378.VisibleIndex = 17;
             this.gridColumn378.Width = 252;
             // 
             // gridColumn379
@@ -1144,7 +1426,7 @@
             this.gridColumn379.MinWidth = 23;
             this.gridColumn379.Name = "gridColumn379";
             this.gridColumn379.Visible = true;
-            this.gridColumn379.VisibleIndex = 14;
+            this.gridColumn379.VisibleIndex = 18;
             this.gridColumn379.Width = 259;
             // 
             // gridColumn380
@@ -1174,6 +1456,54 @@
             this.gridColumn381.Name = "gridColumn381";
             this.gridColumn381.Width = 303;
             // 
+            // colRozaneSanadNumber
+            // 
+            this.colRozaneSanadNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colRozaneSanadNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colRozaneSanadNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colRozaneSanadNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colRozaneSanadNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colRozaneSanadNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colRozaneSanadNumber.Caption = "ش سند روزانه";
+            this.colRozaneSanadNumber.FieldName = "RozaneSanadNumber";
+            this.colRozaneSanadNumber.MinWidth = 25;
+            this.colRozaneSanadNumber.Name = "colRozaneSanadNumber";
+            this.colRozaneSanadNumber.Visible = true;
+            this.colRozaneSanadNumber.VisibleIndex = 19;
+            this.colRozaneSanadNumber.Width = 115;
+            // 
+            // colGhateySanadNamber
+            // 
+            this.colGhateySanadNamber.AppearanceCell.Options.UseTextOptions = true;
+            this.colGhateySanadNamber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGhateySanadNamber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colGhateySanadNamber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colGhateySanadNamber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colGhateySanadNamber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colGhateySanadNamber.Caption = "ش سند قطعی";
+            this.colGhateySanadNamber.FieldName = "GhateySanadNamber";
+            this.colGhateySanadNamber.MinWidth = 25;
+            this.colGhateySanadNamber.Name = "colGhateySanadNamber";
+            this.colGhateySanadNamber.Visible = true;
+            this.colGhateySanadNamber.VisibleIndex = 20;
+            this.colGhateySanadNamber.Width = 115;
+            // 
+            // colPaygiriNumber
+            // 
+            this.colPaygiriNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colPaygiriNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPaygiriNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colPaygiriNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPaygiriNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPaygiriNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colPaygiriNumber.Caption = "ش پیگیری";
+            this.colPaygiriNumber.FieldName = "PaygiriNumber";
+            this.colPaygiriNumber.MinWidth = 25;
+            this.colPaygiriNumber.Name = "colPaygiriNumber";
+            this.colPaygiriNumber.Visible = true;
+            this.colPaygiriNumber.VisibleIndex = 21;
+            this.colPaygiriNumber.Width = 101;
+            // 
             // gridColumn382
             // 
             this.gridColumn382.AppearanceCell.Options.UseTextOptions = true;
@@ -1186,32 +1516,29 @@
             this.gridColumn382.MinWidth = 23;
             this.gridColumn382.Name = "gridColumn382";
             this.gridColumn382.Visible = true;
-            this.gridColumn382.VisibleIndex = 15;
-            this.gridColumn382.Width = 455;
-            // 
-            // gridColumn383
-            // 
-            this.gridColumn383.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn383.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn383.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn383.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn383.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn383.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn383.Caption = "سریال";
-            this.gridColumn383.FieldName = "Seryal";
-            this.gridColumn383.MinWidth = 23;
-            this.gridColumn383.Name = "gridColumn383";
-            this.gridColumn383.Visible = true;
-            this.gridColumn383.VisibleIndex = 19;
-            this.gridColumn383.Width = 101;
+            this.gridColumn382.VisibleIndex = 22;
+            this.gridColumn382.Width = 500;
             // 
             // gridColumn384
             // 
+            this.gridColumn384.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn384.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn384.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn384.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn384.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn384.Caption = "شرح سند";
             this.gridColumn384.FieldName = "SharhSanad";
             this.gridColumn384.MinWidth = 23;
             this.gridColumn384.Name = "gridColumn384";
-            this.gridColumn384.Width = 85;
+            this.gridColumn384.Visible = true;
+            this.gridColumn384.VisibleIndex = 23;
+            this.gridColumn384.Width = 600;
+            // 
+            // xtp_Residjabejaee
+            // 
+            this.xtp_Residjabejaee.Name = "xtp_Residjabejaee";
+            this.xtp_Residjabejaee.Size = new System.Drawing.Size(1430, 543);
+            this.xtp_Residjabejaee.Text = "رسید (جابجایی)";
             // 
             // lblUserId
             // 
@@ -1258,7 +1585,7 @@
             this.btnDisplyList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyList.Enabled = false;
             this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyList.ImageOptions.SvgImage")));
-            this.btnDisplyList.Location = new System.Drawing.Point(634, 7);
+            this.btnDisplyList.Location = new System.Drawing.Point(121, 7);
             this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDisplyList.Name = "btnDisplyList";
             this.btnDisplyList.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1273,7 +1600,7 @@
             this.btnSaveAndPrintAndClosed.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveAndPrintAndClosed.Enabled = false;
             this.btnSaveAndPrintAndClosed.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndPrintAndClosed.ImageOptions.SvgImage")));
-            this.btnSaveAndPrintAndClosed.Location = new System.Drawing.Point(964, 7);
+            this.btnSaveAndPrintAndClosed.Location = new System.Drawing.Point(451, 7);
             this.btnSaveAndPrintAndClosed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveAndPrintAndClosed.Name = "btnSaveAndPrintAndClosed";
             this.btnSaveAndPrintAndClosed.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1288,7 +1615,7 @@
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Enabled = false;
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(1239, 7);
+            this.btnCreate.Location = new System.Drawing.Point(726, 7);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1302,7 +1629,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(524, 7);
+            this.btnClose.Location = new System.Drawing.Point(11, 7);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1318,7 +1645,7 @@
             this.btnNext.Enabled = false;
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(799, 7);
+            this.btnNext.Location = new System.Drawing.Point(286, 7);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNext.Name = "btnNext";
             this.btnNext.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1332,7 +1659,7 @@
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.Enabled = false;
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(854, 7);
+            this.btnLast.Location = new System.Drawing.Point(341, 7);
             this.btnLast.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLast.Name = "btnLast";
             this.btnLast.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1347,7 +1674,7 @@
             this.btnSaveAndNext.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSaveAndNext.Enabled = false;
             this.btnSaveAndNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndNext.ImageOptions.SvgImage")));
-            this.btnSaveAndNext.Location = new System.Drawing.Point(1019, 7);
+            this.btnSaveAndNext.Location = new System.Drawing.Point(506, 7);
             this.btnSaveAndNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveAndNext.Name = "btnSaveAndNext";
             this.btnSaveAndNext.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1362,7 +1689,7 @@
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.Enabled = false;
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(579, 7);
+            this.btnPrintPreview.Location = new System.Drawing.Point(66, 7);
             this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1379,7 +1706,7 @@
             this.btnPreview.Enabled = false;
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(744, 7);
+            this.btnPreview.Location = new System.Drawing.Point(231, 7);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1393,7 +1720,7 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(1129, 7);
+            this.btnEdit.Location = new System.Drawing.Point(616, 7);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1408,7 +1735,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(1184, 7);
+            this.btnDelete.Location = new System.Drawing.Point(671, 7);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1424,7 +1751,7 @@
             this.btnFirst.Enabled = false;
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(689, 7);
+            this.btnFirst.Location = new System.Drawing.Point(176, 7);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1438,7 +1765,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(909, 7);
+            this.btnCancel.Location = new System.Drawing.Point(396, 7);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1452,7 +1779,7 @@
             this.btnSaveAndClosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAndClosed.Enabled = false;
             this.btnSaveAndClosed.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndClosed.ImageOptions.SvgImage")));
-            this.btnSaveAndClosed.Location = new System.Drawing.Point(1074, 7);
+            this.btnSaveAndClosed.Location = new System.Drawing.Point(561, 7);
             this.btnSaveAndClosed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveAndClosed.Name = "btnSaveAndClosed";
             this.btnSaveAndClosed.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1481,26 +1808,115 @@
             this.panelControl_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl_Button.Location = new System.Drawing.Point(2, 2);
             this.panelControl_Button.Name = "panelControl_Button";
-            this.panelControl_Button.Size = new System.Drawing.Size(1294, 49);
+            this.panelControl_Button.Size = new System.Drawing.Size(781, 49);
             this.panelControl_Button.TabIndex = 1;
             // 
             // panelControl0
             // 
             this.panelControl0.Controls.Add(this.panelControl_Button);
+            this.panelControl0.Controls.Add(this.panelControl_NameAnbar);
             this.panelControl0.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl0.Location = new System.Drawing.Point(0, 0);
             this.panelControl0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl0.Name = "panelControl0";
-            this.panelControl0.Size = new System.Drawing.Size(1298, 53);
+            this.panelControl0.Size = new System.Drawing.Size(1434, 53);
             this.panelControl0.TabIndex = 69;
+            // 
+            // panelControl_NameAnbar
+            // 
+            this.panelControl_NameAnbar.Controls.Add(this.cmbNameAnbar);
+            this.panelControl_NameAnbar.Controls.Add(this.textEdit1);
+            this.panelControl_NameAnbar.Controls.Add(this.btnReloadNameAnbar);
+            this.panelControl_NameAnbar.Controls.Add(this.labelControl22);
+            this.panelControl_NameAnbar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl_NameAnbar.Location = new System.Drawing.Point(783, 2);
+            this.panelControl_NameAnbar.Name = "panelControl_NameAnbar";
+            this.panelControl_NameAnbar.Size = new System.Drawing.Size(649, 49);
+            this.panelControl_NameAnbar.TabIndex = 2;
+            // 
+            // cmbNameAnbar
+            // 
+            this.cmbNameAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbNameAnbar.EnterMoveNextControl = true;
+            this.cmbNameAnbar.Location = new System.Drawing.Point(61, 10);
+            this.cmbNameAnbar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameAnbar.Name = "cmbNameAnbar";
+            this.cmbNameAnbar.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
+            this.cmbNameAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbNameAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbNameAnbar.Properties.AppearanceDropDownHeader.Options.UseTextOptions = true;
+            this.cmbNameAnbar.Properties.AppearanceDropDownHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbNameAnbar.Properties.AppearanceDropDownHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.cmbNameAnbar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbNameAnbar.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaName", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.cmbNameAnbar.Properties.DataSource = this.epListAnbarhasBindingSource;
+            this.cmbNameAnbar.Properties.DisplayMember = "Name";
+            this.cmbNameAnbar.Properties.DropDownRows = 10;
+            this.cmbNameAnbar.Properties.ImmediatePopup = true;
+            this.cmbNameAnbar.Properties.NullText = "";
+            this.cmbNameAnbar.Properties.NullValuePrompt = "انبار مورد نظر را انتخاب کنید";
+            this.cmbNameAnbar.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbNameAnbar.Properties.PopupWidth = 1000;
+            this.cmbNameAnbar.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbNameAnbar.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbNameAnbar.Properties.ValueMember = "Id";
+            this.cmbNameAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbNameAnbar.Size = new System.Drawing.Size(514, 34);
+            this.cmbNameAnbar.TabIndex = 1;
+            this.cmbNameAnbar.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbNameAnbar_CustomDrawRow);
+            this.cmbNameAnbar.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbNameAnbar_CustomDrawCell);
+            this.cmbNameAnbar.EditValueChanged += new System.EventHandler(this.cmbNameAnbar_EditValueChanged);
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.EnterMoveNextControl = true;
+            this.textEdit1.Location = new System.Drawing.Point(429, 10);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(68, 34);
+            this.textEdit1.TabIndex = 0;
+            // 
+            // btnReloadNameAnbar
+            // 
+            this.btnReloadNameAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReloadNameAnbar.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.btnReloadNameAnbar.Appearance.Options.UseForeColor = true;
+            this.btnReloadNameAnbar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadNameAnbar.ImageOptions.SvgImage")));
+            this.btnReloadNameAnbar.Location = new System.Drawing.Point(6, 5);
+            this.btnReloadNameAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReloadNameAnbar.Name = "btnReloadNameAnbar";
+            this.btnReloadNameAnbar.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnReloadNameAnbar.Size = new System.Drawing.Size(47, 37);
+            this.btnReloadNameAnbar.TabIndex = 206;
+            this.btnReloadNameAnbar.TabStop = false;
+            this.btnReloadNameAnbar.ToolTipTitle = "بعدی";
+            this.btnReloadNameAnbar.Click += new System.EventHandler(this.btnReloadNameAnbar_Click);
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl22.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl22.Appearance.Options.UseForeColor = true;
+            this.labelControl22.Location = new System.Drawing.Point(583, 13);
+            this.labelControl22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(48, 27);
+            this.labelControl22.TabIndex = 205;
+            this.labelControl22.Text = "نام انبار";
             // 
             // FrmJabejaeeKala
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 678);
-            this.Controls.Add(this.xtcAmaliatJabejaee);
+            this.ClientSize = new System.Drawing.Size(1434, 678);
+            this.Controls.Add(this.xtc_AmaliatJabejaee);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblSalId);
@@ -1518,33 +1934,47 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmJabejaeeKala_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridView_AmaliatAddVaEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_AmaliatAddVaEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.akKhorojeKala_RizsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.akKhorojeKala_RizsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            this.xtpAmaliatAddVEdit.ResumeLayout(false);
+            this.xtp_AmaliatAddVEdit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_AddVaEdit)).EndInit();
             this.panelControl_AddVaEdit.ResumeLayout(false);
             this.panelControl_AddVaEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGhateySanadNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSabetAtefNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRozaneSanadNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_darColAnbarha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_darSelectAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_darColAnbarha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeSanad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkIsSanadHesabdari.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeSanad1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_darSelectAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoeAmaliat1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtcAmaliatJabejaee)).EndInit();
-            this.xtcAmaliatJabejaee.ResumeLayout(false);
-            this.xtpJabejaeeKala.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_JabejaeeKala)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView_JabejaeeKala)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtc_AmaliatJabejaee)).EndInit();
+            this.xtc_AmaliatJabejaee.ResumeLayout(false);
+            this.xtp_JabejaeeKala.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtc_JabejaeeKala)).EndInit();
+            this.xtc_JabejaeeKala.ResumeLayout(false);
+            this.xtp_Havalejabejaee.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Havalejabejaee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView_Havalejabejaee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).EndInit();
             this.panelControl_Button.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).EndInit();
             this.panelControl0.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_NameAnbar)).EndInit();
+            this.panelControl_NameAnbar.ResumeLayout(false);
+            this.panelControl_NameAnbar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNameAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1564,14 +1994,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTozihat;
         private DevExpress.XtraGrid.GridControl gridControl_AmaliatAddVaEdit;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraTab.XtraTabPage xtpAmaliatAddVEdit;
+        private DevExpress.XtraTab.XtraTabPage xtp_AmaliatAddVEdit;
         private DevExpress.XtraEditors.PanelControl panelControl_AddVaEdit;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         public DevExpress.XtraEditors.TextEdit txtSharhSanad;
-        private DevExpress.XtraEditors.LabelControl lblSanadNamber;
-        public DevExpress.XtraEditors.CheckEdit chkIsSanadHesabdari;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        public DevExpress.XtraEditors.TextEdit txtNoeSanad;
         private DevExpress.XtraEditors.SimpleButton btnInsert;
         private DevExpress.XtraEditors.SimpleButton btnEdit1;
         private DevExpress.XtraEditors.SimpleButton btnDelete1;
@@ -1581,12 +2006,12 @@
         private DevExpress.XtraEditors.LabelControl lblBeAnbar;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit txtTarikh;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        public DevExpress.XtraEditors.TextEdit txtSeryal;
+        private DevExpress.XtraEditors.LabelControl lblSeryalJoze_darSelectAnbar;
+        public DevExpress.XtraEditors.TextEdit txtSeryalJoze_darSelectAnbar;
         public DevExpress.XtraEditors.TextEdit txtNoeSanad1;
         public DevExpress.XtraEditors.TextEdit txtNoeAmaliat1;
-        private DevExpress.XtraTab.XtraTabControl xtcAmaliatJabejaee;
-        private DevExpress.XtraTab.XtraTabPage xtpJabejaeeKala;
+        private DevExpress.XtraTab.XtraTabControl xtc_AmaliatJabejaee;
+        private DevExpress.XtraTab.XtraTabPage xtp_JabejaeeKala;
         public DevExpress.XtraEditors.LabelControl lblUserId;
         public DevExpress.XtraEditors.LabelControl lblUserName;
         public DevExpress.XtraEditors.LabelControl lblSalId;
@@ -1607,12 +2032,12 @@
         private DevExpress.XtraEditors.SimpleButton btnSaveAndClosed;
         private DevExpress.XtraEditors.PanelControl panelControl_Button;
         private DevExpress.XtraEditors.PanelControl panelControl0;
-        private DevExpress.XtraGrid.GridControl gridControl_JabejaeeKala;
-        public DevExpress.XtraGrid.Views.Grid.GridView gridView_JabejaeeKala;
+        private DevExpress.XtraGrid.GridControl gridControl_Havalejabejaee;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView_Havalejabejaee;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn363;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn364;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalJoze_darSelectAnbar;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn365;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn366;
+        private DevExpress.XtraGrid.Columns.GridColumn colSabetAtefNumber;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn367;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn368;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn369;
@@ -1629,7 +2054,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn380;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn381;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn382;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn383;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn384;
         private System.Windows.Forms.BindingSource akKhorojeKala_RizsBindingSource;
         public DevExpress.XtraEditors.LookUpEdit cmbBeAnbar;
@@ -1638,5 +2062,35 @@
         private System.Windows.Forms.BindingSource epListAnbarhasBindingSource1;
         private DevExpress.XtraGrid.Columns.GridColumn colAzAnbarId;
         private DevExpress.XtraGrid.Columns.GridColumn colKalaId;
+        private DevExpress.XtraEditors.PanelControl panelControl_NameAnbar;
+        public DevExpress.XtraEditors.LookUpEdit cmbNameAnbar;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.SimpleButton btnReloadNameAnbar;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbNoeSanad;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl lblSeryalJoze_darColAnbarha;
+        public DevExpress.XtraEditors.TextEdit txtSeryalJoze_darColAnbarha;
+        private DevExpress.XtraEditors.LabelControl lblSeryalCol_darSelectAnbar;
+        public DevExpress.XtraEditors.TextEdit txtSeryalCol_darSelectAnbar;
+        private DevExpress.XtraEditors.LabelControl lblSeryalCol_darColAnbarha;
+        public DevExpress.XtraEditors.TextEdit txtSeryalCol_darColAnbarha;
+        public DevExpress.XtraEditors.TextEdit txtGhateySanadNumber;
+        private DevExpress.XtraEditors.LabelControl lblGhatySanadNumber;
+        public DevExpress.XtraEditors.TextEdit txtSabetAtefNumber;
+        private DevExpress.XtraEditors.LabelControl lblAtefSanadNumber;
+        private DevExpress.XtraEditors.LabelControl lblRozaneSanadNumber;
+        public DevExpress.XtraEditors.TextEdit txtRozaneSanadNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_darColAnbarha;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalJoze_darColAnbarha;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_darSelectAnbar;
+        private DevExpress.XtraGrid.Columns.GridColumn colGhateySanadNamber;
+        private DevExpress.XtraGrid.Columns.GridColumn colRozaneSanadNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colPaygiriNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colNoeSanadText;
+        private DevExpress.XtraTab.XtraTabControl xtc_JabejaeeKala;
+        private DevExpress.XtraTab.XtraTabPage xtp_Havalejabejaee;
+        private DevExpress.XtraTab.XtraTabPage xtp_Residjabejaee;
+        private System.Windows.Forms.BindingSource akKhorojeKala_RizsBindingSource1;
     }
 }

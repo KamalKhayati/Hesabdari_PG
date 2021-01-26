@@ -61,8 +61,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }
         public virtual ICollection<EpSharhStandardMoin> EpSharhStandardMoins { get; set; }
         public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Rizs { get; set; }
-        public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
-        public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
+        //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
+        //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarhas { get; set; }
         public virtual ICollection<R_EpHesabMoin1_B_EpAllGroupTafsili> R_EpHesabMoin1_B_EpAllGroupTafsilis { get; set; }
     }

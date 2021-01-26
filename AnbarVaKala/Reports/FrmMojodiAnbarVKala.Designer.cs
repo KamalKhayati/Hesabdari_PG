@@ -434,10 +434,6 @@
             this.gridControl_MeghdariVRiali.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView_MeghdariVRiali});
             // 
-            // akAllAmaliateRozanehsBindingSource
-            // 
-            this.akAllAmaliateRozanehsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AkAllAmaliateRozaneh);
-            // 
             // bandedGridView_MeghdariVRiali
             // 
             this.bandedGridView_MeghdariVRiali.Appearance.FooterPanel.Options.UseTextOptions = true;

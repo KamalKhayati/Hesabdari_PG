@@ -171,7 +171,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         {
                             cmbNameAnbar2.EditValue = Jm._AzAnbarId;
                             cmb_NameKala.EditValue = Convert.ToInt32(Jm._KalaId);
-                            lblVahedeAsli.Text = Jm._VahedeKala;
+                            lblVahedeAsli.Text = Jm._VahedeKala_NM;
                             txtMeghdar.Text = Jm._Meghdar;
                             txtNerkh.Text = Jm._Nerkh;
                             txtMablag.Text = Jm._Mablag;
@@ -264,7 +264,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                 _SalId = Convert.ToInt32(lblSalId.Text);
                 AzAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
                 //var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
-                var q6 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId && s.AzAnbarId == AzAnbarId).ToList();
+                var q6 = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == AzAnbarId).ToList();
                 var q1 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == AzAnbarId).Select(s => s.TabagheKalaId).ToList();
                 List<EpNameKala> List1 = new List<EpNameKala>();
                 IEnumerable<int> List2 = null;
@@ -750,10 +750,10 @@ namespace AnbarVaKala.AmaliatRozaneh
                                 if (q != null)
                                 {
                                     Jm._AzAnbarId = AzAnbarId;
-                                    Jm._KalaId = q.Id.ToString();
-                                    Jm._KalaCode = q.Code.ToString();
-                                    Jm._KalaName = q.Name;
-                                    Jm._VahedeKala = q.EpVahedAsliKala.Name;
+                                    Jm._KalaId = q.Id;
+                                    Jm._KalaCode_NM = q.Code.ToString();
+                                    Jm._KalaName_NM = q.Name;
+                                    Jm._VahedeKala_NM = q.EpVahedAsliKala.Name;
                                     Jm._Meghdar = txtMeghdar.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Jm._Nerkh = txtNerkh.Text.Trim().Replace(",", "").Replace("/", ".");
                                     Jm._Mablag = txtMablag.Text.Trim().Replace(",", "");
@@ -860,26 +860,40 @@ namespace AnbarVaKala.AmaliatRozaneh
             {
                 IsClosed = false;
                 btnSaveAndClosed_Click(null, null);
-                if (Fm != null)
-                {
-                    Fm.En2 = EnumCED.Create;
-                }
-                else if (Jm != null)
-                {
-                    Jm.En2 = EnumCED.Create;
-                }
-                else if (Dm != null)
-                {
-                    Dm.En2 = EnumCED.Create;
-                }
-                cmb_NameKala.EditValue = 0;
+                //cmbNameAnbar2.EditValue = 0;
+                //cmb_NameKala.EditValue = 0;
                 txtMeghdar.Text = txtNerkh.Text = "0";
                 txtMablag.Text = "0";
                 txtMeghdar1.Text = "0";
                 txtMeghdar2.Text = "0";
                 txtMeghdar3.Text = "0";
                 txtTozihat.Text = string.Empty;
-                cmb_NameKala.Focus();
+
+                if (Fm != null)
+                {
+                    Fm.En2 = EnumCED.Create;
+                    if (Fm._FirstSelectAnbar_NextSanad)
+                        cmb_NameKala.Focus();
+                    else
+                        cmbNameAnbar2.Focus();
+
+                }
+                else if (Jm != null)
+                {
+                    Jm.En2 = EnumCED.Create;
+                    if (Fm._FirstSelectAnbar_NextSanad)
+                        cmb_NameKala.Focus();
+                    else
+                        cmbNameAnbar2.Focus();
+                }
+                else if (Dm != null)
+                {
+                    Dm.En2 = EnumCED.Create;
+                    if (Fm._FirstSelectAnbar_NextSanad)
+                        cmb_NameKala.Focus();
+                    else
+                        cmbNameAnbar2.Focus();
+                }
             }
         }
 
@@ -1054,10 +1068,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         private void cmbNameAnbar2_Enter(object sender, EventArgs e)
         {
-            if (cmbNameAnbar2.Text == "")
-            {
                 cmbNameAnbar2.ShowPopup();
-            }
 
         }
         bool _IsActiveRow = true;
