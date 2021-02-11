@@ -99,7 +99,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual EpVahedKala EpVahedKala3 { get; set; }
         public virtual EpVahedKala EpVahedAsliKala { get; set; }
         public virtual EpGroupFareeKala EpGroupFareeKala1 { get; set; }
-        public virtual ICollection<AkVorodeKala_Riz> AkVorodeKala_Rizs { get; set; }
+        public virtual ICollection<AmaliatAnbarVKala_Riz> AmaliatAnbarVKala_Rizs { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
     }

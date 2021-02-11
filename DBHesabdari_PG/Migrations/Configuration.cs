@@ -366,6 +366,7 @@ namespace DBHesabdari_PG.Migrations
                         context.Entry(new EpVahedKala() { SalId = 1, Code = 14, Name = "گالن" }).State = context.EpVahedKalas.Any(s => s.SalId == 1 && s.Code == 14) ? EntityState.Detached : EntityState.Added;
                         context.Entry(new EpVahedKala() { SalId = 1, Code = 15, Name = "بشکه" }).State = context.EpVahedKalas.Any(s => s.SalId == 1 && s.Code == 15) ? EntityState.Detached : EntityState.Added;
                         context.Entry(new EpVahedKala() { SalId = 1, Code = 16, Name = "جفت" }).State = context.EpVahedKalas.Any(s => s.SalId == 1 && s.Code == 16) ? EntityState.Detached : EntityState.Added;
+                        context.SaveChanges();
 
                         ////////////////  تعریف طبقه اقلام انبار
                         var _VahedAsliKalaId1 = context.EpVahedKalas.FirstOrDefault(s => s.SalId == 1 && s.Name == ".");
@@ -381,6 +382,7 @@ namespace DBHesabdari_PG.Migrations
 
                         var _GroupTafsiliId1_4 = context.EpAllGroupTafsilis.FirstOrDefault(s => s.SalId == 1 && s.LevelNamber == 2 && s.KeyCode == 751);
                         context.Entry(new EpAllCodingKala() { SalId = 1, KeyCode = 751, ParentCode = 751, LevelNamber = 1, LevelName = "کالاها", IsActive = true, VahedAsliKalaId = _VahedAsliKalaId1.Id, EpTabaghehKala1 = new EpTabaghehKala() { SalId = 1, Code = 751, Name = "کالاها", VahedKalaId = _VahedAsliKalaId1.Id, GroupTafsiliId = _GroupTafsiliId1_4.Id, IsActive = true, SharhHesab = null } }).State = context.EpAllCodingKalas.Any(s => s.SalId == 1 && s.KeyCode == 751) ? EntityState.Detached : EntityState.Added;
+                        context.SaveChanges();
 
                         ////////////////  تعریف گروه اصلی اقلام انبار
                         var _VahedAsliKalaId2_1 = context.EpVahedKalas.FirstOrDefault(s => s.SalId == 1 && s.Name == "متر");

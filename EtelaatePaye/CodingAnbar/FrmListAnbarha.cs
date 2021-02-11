@@ -750,7 +750,7 @@ namespace EtelaatePaye.CodingAnbar
                                                     int _TabagheKalaId = Convert.ToInt32(TabagheKalaId);
                                                     string _TabagheKalaName = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabagheKalaId).Name;
                                                     //var q2 = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Item1).Code;
-                                                    var q4 = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId).Select(s => s.KalaId).Distinct().ToList();
+                                                    var q4 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId).Select(s => s.KalaId).Distinct().ToList();
                                                     if (q4.Count > 0)
                                                         foreach (var KalaId in q4)
                                                         {

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFroosh = new DevExpress.XtraBars.BarButtonItem();
             this.btnBargashtFroosh = new DevExpress.XtraBars.BarButtonItem();
@@ -56,9 +56,7 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnAmaliatRozaneh = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnJabejaeeKala = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
@@ -145,7 +143,6 @@
             this.mbsTanzimatEp = new DevExpress.XtraBars.BarSubItem();
             this.btnTanzimatCodingHesabdari = new DevExpress.XtraBars.BarButtonItem();
             this.btnTanzimatCodingAnbarVKala = new DevExpress.XtraBars.BarButtonItem();
-            this.btnMojodiAvalDoreKala = new DevExpress.XtraBars.BarButtonItem();
             this.rpKharidFroosh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgFroosh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgKharid = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -260,9 +257,7 @@
             this.barButtonItem1,
             this.btnAmaliatRozaneh,
             this.barButtonItem4,
-            this.barButtonItem5,
             this.barButtonItem6,
-            this.btnJabejaeeKala,
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
@@ -338,7 +333,6 @@
             this.btnHesabhaTafsiliLevel2,
             this.btnHesabhaTafsiliLevel3,
             this.btnCodingKala,
-            this.btnMojodiAvalDoreKala,
             this.btnMojodiAnbarVKala,
             this.btnKardeksKala,
             this.btnTanzimatAnbaVKala});
@@ -561,6 +555,7 @@
             this.btnAmaliatRozaneh.Caption = "عملیات ورود و خروج کالا";
             this.btnAmaliatRozaneh.Id = 34;
             this.btnAmaliatRozaneh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAmaliatRozaneh.ImageOptions.SvgImage")));
+            this.btnAmaliatRozaneh.LargeWidth = 100;
             this.btnAmaliatRozaneh.Name = "btnAmaliatRozaneh";
             this.btnAmaliatRozaneh.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnAmaliatRozaneh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAmaliatRozaneh_ItemClick);
@@ -573,14 +568,6 @@
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "لیست ورود و خروج کالا";
-            this.barButtonItem5.Id = 37;
-            this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
             // barButtonItem6
             // 
             this.barButtonItem6.Caption = "لیست انبارگردانی";
@@ -588,15 +575,6 @@
             this.barButtonItem6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem6.ImageOptions.SvgImage")));
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // btnJabejaeeKala
-            // 
-            this.btnJabejaeeKala.Caption = "جابجایی کالا بین انبارها";
-            this.btnJabejaeeKala.Id = 39;
-            this.btnJabejaeeKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnJabejaeeKala.ImageOptions.SvgImage")));
-            this.btnJabejaeeKala.Name = "btnJabejaeeKala";
-            this.btnJabejaeeKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnJabejaeeKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnJabejaeeKala_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -1227,10 +1205,10 @@
             this.chkDefault.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.chkDefault.Id = 124;
             this.chkDefault.Name = "chkDefault";
-            toolTipItem1.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
+            toolTipItem2.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
     "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نیست";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.chkDefault.SuperTip = superToolTip1;
+            superToolTip2.Items.Add(toolTipItem2);
+            this.chkDefault.SuperTip = superToolTip2;
             this.chkDefault.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkDefault_CheckedChanged);
             // 
             // txtUserName
@@ -1296,15 +1274,6 @@
             this.btnTanzimatCodingAnbarVKala.Id = 159;
             this.btnTanzimatCodingAnbarVKala.Name = "btnTanzimatCodingAnbarVKala";
             this.btnTanzimatCodingAnbarVKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTanzimatCodingAnbarVKala_ItemClick);
-            // 
-            // btnMojodiAvalDoreKala
-            // 
-            this.btnMojodiAvalDoreKala.Caption = "موجودی اول دوره کالا";
-            this.btnMojodiAvalDoreKala.Id = 176;
-            this.btnMojodiAvalDoreKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMojodiAvalDoreKala.ImageOptions.SvgImage")));
-            this.btnMojodiAvalDoreKala.Name = "btnMojodiAvalDoreKala";
-            this.btnMojodiAvalDoreKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnMojodiAvalDoreKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMojodiAvalDoreKala_ItemClick);
             // 
             // rpKharidFroosh
             // 
@@ -1478,9 +1447,6 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnAmaliatRozaneh, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnJabejaeeKala, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnMojodiAvalDoreKala, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem5, true);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ورود و خروج کالا";
             // 
@@ -1838,9 +1804,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnAmaliatRozaneh;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarButtonItem btnJabejaeeKala;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
@@ -1971,7 +1935,6 @@
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel2;
         private DevExpress.XtraBars.BarButtonItem btnHesabhaTafsiliLevel3;
         private DevExpress.XtraBars.BarButtonItem btnCodingKala;
-        private DevExpress.XtraBars.BarButtonItem btnMojodiAvalDoreKala;
         private DevExpress.XtraBars.BarButtonItem btnMojodiAnbarVKala;
         private DevExpress.XtraBars.BarButtonItem btnKardeksKala;
         private DevExpress.XtraBars.BarButtonItem btnTanzimatAnbaVKala;

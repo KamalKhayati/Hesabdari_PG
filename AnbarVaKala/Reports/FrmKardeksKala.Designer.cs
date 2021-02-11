@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKardeksKala));
             this.bandedGridView_MeghdariVRiali = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.Col_Seryal = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colSeryalCol = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colSeryalJoze = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Col_Tarikh = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Col_AnbarName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.Col_KalaNeme = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -59,9 +59,10 @@
             this.colIsRiali = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colHesabTafsiliName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colSanadNamber = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn327 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridControl_MeghdariVRiali = new DevExpress.XtraGrid.GridControl();
-            this.akAllAmaliateRozanehsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.amaliatAnbarVKala_RizsBindingSource = new System.Windows.Forms.BindingSource();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
@@ -81,17 +82,17 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl_NameAnbar = new DevExpress.XtraEditors.PanelControl();
             this.cmbAnbarName = new DevExpress.XtraEditors.LookUpEdit();
-            this.epListAnbarhasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.epListAnbarhasBindingSource = new System.Windows.Forms.BindingSource();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btnReloadKalaName = new DevExpress.XtraEditors.SimpleButton();
             this.cmbKalaName = new DevExpress.XtraEditors.LookUpEdit();
-            this.epNameKalasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.epNameKalasBindingSource = new System.Windows.Forms.BindingSource();
             this.btnReloadNameAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView_MeghdariVRiali)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_MeghdariVRiali)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.akAllAmaliateRozanehsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amaliatAnbarVKala_RizsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).BeginInit();
@@ -124,7 +125,8 @@
             this.gridBand5,
             this.gridBand16});
             this.bandedGridView_MeghdariVRiali.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
-            this.Col_Seryal,
+            this.colSeryalCol,
+            this.colSeryalJoze,
             this.Col_Tarikh,
             this.Col_AnbarName,
             this.Col_KalaNeme,
@@ -146,12 +148,13 @@
             this.colIsRiali,
             this.colHesabTafsiliName,
             this.colSanadNamber,
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar,
             this.gridColumn327});
             this.bandedGridView_MeghdariVRiali.DetailHeight = 341;
             this.bandedGridView_MeghdariVRiali.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.bandedGridView_MeghdariVRiali.GridControl = this.gridControl_MeghdariVRiali;
             this.bandedGridView_MeghdariVRiali.GroupPanelText = "جهت گروه بندی گزارش سر ستون را به این قسمت بکشید و رها کنید";
-            this.bandedGridView_MeghdariVRiali.IndicatorWidth = 55;
+            this.bandedGridView_MeghdariVRiali.IndicatorWidth = 50;
             this.bandedGridView_MeghdariVRiali.Name = "bandedGridView_MeghdariVRiali";
             this.bandedGridView_MeghdariVRiali.OptionsBehavior.AutoSelectAllInEditor = false;
             this.bandedGridView_MeghdariVRiali.OptionsBehavior.Editable = false;
@@ -175,32 +178,47 @@
             this.gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridBand1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridBand1.Caption = "شرح";
-            this.gridBand1.Columns.Add(this.Col_Seryal);
+            this.gridBand1.Columns.Add(this.colSeryalCol);
+            this.gridBand1.Columns.Add(this.colSeryalJoze);
             this.gridBand1.Columns.Add(this.Col_Tarikh);
             this.gridBand1.Columns.Add(this.Col_AnbarName);
             this.gridBand1.Columns.Add(this.Col_KalaNeme);
             this.gridBand1.Columns.Add(this.Col_FaktorNumber);
             this.gridBand1.Columns.Add(this.colRadif);
             this.gridBand1.Columns.Add(this.Col_VahedKala);
-            this.gridBand1.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 767;
+            this.gridBand1.Width = 867;
             // 
-            // Col_Seryal
+            // colSeryalCol
             // 
-            this.Col_Seryal.AppearanceCell.Options.UseTextOptions = true;
-            this.Col_Seryal.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Col_Seryal.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.Col_Seryal.AppearanceHeader.Options.UseTextOptions = true;
-            this.Col_Seryal.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Col_Seryal.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.Col_Seryal.Caption = "سریال";
-            this.Col_Seryal.FieldName = "Seryal";
-            this.Col_Seryal.MinWidth = 23;
-            this.Col_Seryal.Name = "Col_Seryal";
-            this.Col_Seryal.Visible = true;
-            this.Col_Seryal.Width = 100;
+            this.colSeryalCol.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol.Caption = "سریال کل";
+            this.colSeryalCol.FieldName = "SeryalCol_NM";
+            this.colSeryalCol.MinWidth = 25;
+            this.colSeryalCol.Name = "colSeryalCol";
+            this.colSeryalCol.Visible = true;
+            this.colSeryalCol.Width = 100;
+            // 
+            // colSeryalJoze
+            // 
+            this.colSeryalJoze.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalJoze.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalJoze.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze.Caption = "سریال جزء";
+            this.colSeryalJoze.FieldName = "SeryalJoze_NM";
+            this.colSeryalJoze.MinWidth = 25;
+            this.colSeryalJoze.Name = "colSeryalJoze";
+            this.colSeryalJoze.Visible = true;
+            this.colSeryalJoze.Width = 100;
             // 
             // Col_Tarikh
             // 
@@ -213,7 +231,7 @@
             this.Col_Tarikh.Caption = "تاریخ";
             this.Col_Tarikh.DisplayFormat.FormatString = "d";
             this.Col_Tarikh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.Col_Tarikh.FieldName = "DateTimeSanadString";
+            this.Col_Tarikh.FieldName = "DateTimeSanadString_NM";
             this.Col_Tarikh.MinWidth = 25;
             this.Col_Tarikh.Name = "Col_Tarikh";
             this.Col_Tarikh.Visible = true;
@@ -227,7 +245,7 @@
             this.Col_AnbarName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Col_AnbarName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Col_AnbarName.Caption = "نام انبار";
-            this.Col_AnbarName.FieldName = "AnbarName";
+            this.Col_AnbarName.FieldName = "AnbarName_NM";
             this.Col_AnbarName.MinWidth = 25;
             this.Col_AnbarName.Name = "Col_AnbarName";
             this.Col_AnbarName.Width = 175;
@@ -285,7 +303,7 @@
             this.Col_VahedKala.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Col_VahedKala.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Col_VahedKala.Caption = "واحد کالا";
-            this.Col_VahedKala.FieldName = "VahedeKalaName";
+            this.Col_VahedKala.FieldName = "VahedeKalaName_NM";
             this.Col_VahedKala.MinWidth = 23;
             this.Col_VahedKala.Name = "Col_VahedKala";
             this.Col_VahedKala.Visible = true;
@@ -316,11 +334,11 @@
             this.Col_MeghdarMo.Caption = "مقدار مانده";
             this.Col_MeghdarMo.DisplayFormat.FormatString = "c3";
             this.Col_MeghdarMo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_MeghdarMo.FieldName = "MeghdarMo";
+            this.Col_MeghdarMo.FieldName = "MeghdarMo_NM";
             this.Col_MeghdarMo.MinWidth = 25;
             this.Col_MeghdarMo.Name = "Col_MeghdarMo";
             this.Col_MeghdarMo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarMo", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarMo_NM", "{0:c3}")});
             this.Col_MeghdarMo.Visible = true;
             this.Col_MeghdarMo.Width = 104;
             // 
@@ -335,7 +353,7 @@
             this.Col_NerkhMo.Caption = "نرخ";
             this.Col_NerkhMo.DisplayFormat.FormatString = "c3";
             this.Col_NerkhMo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_NerkhMo.FieldName = "NerkhMo";
+            this.Col_NerkhMo.FieldName = "NerkhMo_NM";
             this.Col_NerkhMo.MinWidth = 25;
             this.Col_NerkhMo.Name = "Col_NerkhMo";
             this.Col_NerkhMo.Visible = true;
@@ -352,11 +370,11 @@
             this.Col_MablagMo.Caption = "مبلغ مانده";
             this.Col_MablagMo.DisplayFormat.FormatString = "n";
             this.Col_MablagMo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_MablagMo.FieldName = "MablagMo";
+            this.Col_MablagMo.FieldName = "MablagMo_NM";
             this.Col_MablagMo.MinWidth = 25;
             this.Col_MablagMo.Name = "Col_MablagMo";
             this.Col_MablagMo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagMo", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagMo_NM", "{0:n}")});
             this.Col_MablagMo.Visible = true;
             this.Col_MablagMo.Width = 170;
             // 
@@ -384,11 +402,11 @@
             this.Col_Meghdar_Va.Caption = "مقدار / تعداد";
             this.Col_Meghdar_Va.DisplayFormat.FormatString = "c3";
             this.Col_Meghdar_Va.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Meghdar_Va.FieldName = "MeghdarVa";
+            this.Col_Meghdar_Va.FieldName = "MeghdarVa_NM";
             this.Col_Meghdar_Va.MinWidth = 25;
             this.Col_Meghdar_Va.Name = "Col_Meghdar_Va";
             this.Col_Meghdar_Va.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarVa", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarVa_NM", "{0:c3}")});
             this.Col_Meghdar_Va.Visible = true;
             this.Col_Meghdar_Va.Width = 104;
             // 
@@ -403,7 +421,7 @@
             this.Col_Nerkh_Va.Caption = "نرخ";
             this.Col_Nerkh_Va.DisplayFormat.FormatString = "c3";
             this.Col_Nerkh_Va.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Nerkh_Va.FieldName = "NerkhVa";
+            this.Col_Nerkh_Va.FieldName = "NerkhVa_NM";
             this.Col_Nerkh_Va.MinWidth = 25;
             this.Col_Nerkh_Va.Name = "Col_Nerkh_Va";
             this.Col_Nerkh_Va.Visible = true;
@@ -420,11 +438,11 @@
             this.Col_Mablagh_Va.Caption = "مبلغ";
             this.Col_Mablagh_Va.DisplayFormat.FormatString = "n";
             this.Col_Mablagh_Va.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Mablagh_Va.FieldName = "MablagVa";
+            this.Col_Mablagh_Va.FieldName = "MablagVa_NM";
             this.Col_Mablagh_Va.MinWidth = 25;
             this.Col_Mablagh_Va.Name = "Col_Mablagh_Va";
             this.Col_Mablagh_Va.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagVa", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagVa_NM", "{0:n}")});
             this.Col_Mablagh_Va.Visible = true;
             this.Col_Mablagh_Va.Width = 170;
             // 
@@ -452,11 +470,11 @@
             this.Col_Meghdar_Sa.Caption = "مقدار / تعداد";
             this.Col_Meghdar_Sa.DisplayFormat.FormatString = "c3";
             this.Col_Meghdar_Sa.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Meghdar_Sa.FieldName = "MeghdarSa";
+            this.Col_Meghdar_Sa.FieldName = "MeghdarSa_NM";
             this.Col_Meghdar_Sa.MinWidth = 25;
             this.Col_Meghdar_Sa.Name = "Col_Meghdar_Sa";
             this.Col_Meghdar_Sa.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarSa", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarSa_NM", "{0:c3}")});
             this.Col_Meghdar_Sa.Visible = true;
             this.Col_Meghdar_Sa.Width = 104;
             // 
@@ -471,7 +489,7 @@
             this.Col_Nerkh_Sa.Caption = "نرخ";
             this.Col_Nerkh_Sa.DisplayFormat.FormatString = "c3";
             this.Col_Nerkh_Sa.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Nerkh_Sa.FieldName = "NerkhSa";
+            this.Col_Nerkh_Sa.FieldName = "NerkhSa_NM";
             this.Col_Nerkh_Sa.MinWidth = 25;
             this.Col_Nerkh_Sa.Name = "Col_Nerkh_Sa";
             this.Col_Nerkh_Sa.Visible = true;
@@ -488,11 +506,11 @@
             this.Col_Mablagh_Sa.Caption = "مبلغ";
             this.Col_Mablagh_Sa.DisplayFormat.FormatString = "n";
             this.Col_Mablagh_Sa.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Mablagh_Sa.FieldName = "MablagSa";
+            this.Col_Mablagh_Sa.FieldName = "MablagSa_NM";
             this.Col_Mablagh_Sa.MinWidth = 25;
             this.Col_Mablagh_Sa.Name = "Col_Mablagh_Sa";
             this.Col_Mablagh_Sa.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagSa", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagSa_NM", "{0:n}")});
             this.Col_Mablagh_Sa.Visible = true;
             this.Col_Mablagh_Sa.Width = 170;
             // 
@@ -520,11 +538,11 @@
             this.Col_Meghdar_Ma.Caption = "مقدار / تعداد";
             this.Col_Meghdar_Ma.DisplayFormat.FormatString = "c3";
             this.Col_Meghdar_Ma.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Meghdar_Ma.FieldName = "MeghdarMa";
+            this.Col_Meghdar_Ma.FieldName = "MeghdarMa_NM";
             this.Col_Meghdar_Ma.MinWidth = 25;
             this.Col_Meghdar_Ma.Name = "Col_Meghdar_Ma";
             this.Col_Meghdar_Ma.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "MeghdarMa", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "MeghdarMa_NM", "{0:c3}")});
             this.Col_Meghdar_Ma.Visible = true;
             this.Col_Meghdar_Ma.Width = 104;
             // 
@@ -539,7 +557,7 @@
             this.Col_Nerkh_Ma.Caption = "نرخ";
             this.Col_Nerkh_Ma.DisplayFormat.FormatString = "c3";
             this.Col_Nerkh_Ma.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Nerkh_Ma.FieldName = "NerkhMa";
+            this.Col_Nerkh_Ma.FieldName = "NerkhMa_NM";
             this.Col_Nerkh_Ma.MinWidth = 25;
             this.Col_Nerkh_Ma.Name = "Col_Nerkh_Ma";
             this.Col_Nerkh_Ma.Visible = true;
@@ -556,11 +574,11 @@
             this.Col_Mablagh_Ma.Caption = "مبلغ";
             this.Col_Mablagh_Ma.DisplayFormat.FormatString = "n";
             this.Col_Mablagh_Ma.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Mablagh_Ma.FieldName = "MablagMa";
+            this.Col_Mablagh_Ma.FieldName = "MablagMa_NM";
             this.Col_Mablagh_Ma.MinWidth = 25;
             this.Col_Mablagh_Ma.Name = "Col_Mablagh_Ma";
             this.Col_Mablagh_Ma.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "MablagMa", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "MablagMa_NM", "{0:n}")});
             this.Col_Mablagh_Ma.Visible = true;
             this.Col_Mablagh_Ma.Width = 170;
             // 
@@ -573,10 +591,11 @@
             this.gridBand16.Columns.Add(this.colIsRiali);
             this.gridBand16.Columns.Add(this.colHesabTafsiliName);
             this.gridBand16.Columns.Add(this.colSanadNamber);
+            this.gridBand16.Columns.Add(this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar);
             this.gridBand16.Columns.Add(this.gridColumn327);
             this.gridBand16.Name = "gridBand16";
             this.gridBand16.VisibleIndex = 4;
-            this.gridBand16.Width = 604;
+            this.gridBand16.Width = 665;
             // 
             // colIsRiali
             // 
@@ -601,7 +620,7 @@
             this.colHesabTafsiliName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colHesabTafsiliName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colHesabTafsiliName.Caption = "حساب طرف سند";
-            this.colHesabTafsiliName.FieldName = "HesabTafsiliName";
+            this.colHesabTafsiliName.FieldName = "HesabTafsiliName_NM";
             this.colHesabTafsiliName.MinWidth = 25;
             this.colHesabTafsiliName.Name = "colHesabTafsiliName";
             this.colHesabTafsiliName.Visible = true;
@@ -615,12 +634,27 @@
             this.colSanadNamber.AppearanceHeader.Options.UseTextOptions = true;
             this.colSanadNamber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSanadNamber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSanadNamber.Caption = "شماره سند حسابداری";
-            this.colSanadNamber.FieldName = "SanadNamber";
+            this.colSanadNamber.Caption = "ش عطف ثابت";
+            this.colSanadNamber.FieldName = "SabetAtefNumber";
             this.colSanadNamber.MinWidth = 25;
             this.colSanadNamber.Name = "colSanadNamber";
             this.colSanadNamber.Visible = true;
-            this.colSanadNamber.Width = 170;
+            this.colSanadNamber.Width = 123;
+            // 
+            // colSeryalCol_BeNoeAmaliat_BeSelectAnbar
+            // 
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Caption = "سریال ترتیبی";
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.FieldName = "SeryalCol_BeNoeAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.MinWidth = 25;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Name = "colSeryalCol_BeNoeAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Visible = true;
+            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Width = 108;
             // 
             // gridColumn327
             // 
@@ -639,7 +673,7 @@
             // 
             // gridControl_MeghdariVRiali
             // 
-            this.gridControl_MeghdariVRiali.DataSource = this.akAllAmaliateRozanehsBindingSource;
+            this.gridControl_MeghdariVRiali.DataSource = this.amaliatAnbarVKala_RizsBindingSource;
             this.gridControl_MeghdariVRiali.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl_MeghdariVRiali.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl_MeghdariVRiali.Location = new System.Drawing.Point(2, 2);
@@ -651,6 +685,9 @@
             this.gridControl_MeghdariVRiali.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView_MeghdariVRiali});
             // 
+            // amaliatAnbarVKala_RizsBindingSource
+            // 
+            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
             // 
             // panelControl1
             // 
@@ -934,6 +971,7 @@
             this.cmbAnbarName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbAnbarName.Properties.PopupWidth = 1000;
             this.cmbAnbarName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbAnbarName.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbAnbarName.Properties.ValueMember = "Id";
             this.cmbAnbarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbAnbarName.Size = new System.Drawing.Size(653, 34);
@@ -941,7 +979,6 @@
             this.cmbAnbarName.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbAnbarName_CustomDrawRow);
             this.cmbAnbarName.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbAnbarName_CustomDrawCell);
             this.cmbAnbarName.EditValueChanged += new System.EventHandler(this.cmbAnbarName_EditValueChanged);
-            this.cmbAnbarName.Enter += new System.EventHandler(this.cmbAnbarName_Enter);
             // 
             // epListAnbarhasBindingSource
             // 
@@ -954,6 +991,7 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(68, 34);
             this.textEdit1.TabIndex = 0;
+            this.textEdit1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit1_KeyPress);
             // 
             // btnReloadKalaName
             // 
@@ -1073,7 +1111,7 @@
             this.Load += new System.EventHandler(this.FrmKardeksKala_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView_MeghdariVRiali)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_MeghdariVRiali)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.akAllAmaliateRozanehsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amaliatAnbarVKala_RizsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -1103,7 +1141,6 @@
 
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView_MeghdariVRiali;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gridColumn327;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_Seryal;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_KalaNeme;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_VahedKala;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_Meghdar_Va;
@@ -1139,7 +1176,6 @@
         public DevExpress.XtraEditors.LookUpEdit cmbKalaName;
         private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         private System.Windows.Forms.BindingSource epNameKalasBindingSource;
-        private System.Windows.Forms.BindingSource akAllAmaliateRozanehsBindingSource;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colRadif;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colIsRiali;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colHesabTafsiliName;
@@ -1154,11 +1190,15 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_MeghdarMo;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_NerkhMo;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn Col_MablagMo;
+        private System.Windows.Forms.BindingSource amaliatAnbarVKala_RizsBindingSource;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSeryalCol;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSeryalJoze;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand16;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSeryalCol_BeNoeAmaliat_BeSelectAnbar;
     }
 }

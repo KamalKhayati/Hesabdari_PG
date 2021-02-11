@@ -182,7 +182,7 @@
             // 
             // akVorodeKala_RizsBindingSource
             // 
-            this.akVorodeKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AkVorodeKala_Riz);
+            this.akVorodeKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
             // 
             // panelControl1
             // 
@@ -1115,7 +1115,7 @@
             // 
             // akVorodeKala_RizsBindingSource1
             // 
-            this.akVorodeKala_RizsBindingSource1.DataSource = typeof(DBHesabdari_PG.Models.AK.AkVorodeKala_Riz);
+            this.akVorodeKala_RizsBindingSource1.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
             // 
             // gridView_MojodiAvalDore
             // 

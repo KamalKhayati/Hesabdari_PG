@@ -54,7 +54,7 @@
             this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
             this.panelControl0 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl_MeghdariVRiali = new DevExpress.XtraGrid.GridControl();
-            this.akAllAmaliateRozanehsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.amaliatAnbarVKala_RizsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bandedGridView_MeghdariVRiali = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.Col_KalaCode = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -92,7 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).BeginInit();
             this.panelControl0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_MeghdariVRiali)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.akAllAmaliateRozanehsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amaliatAnbarVKala_RizsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView_MeghdariVRiali)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -137,7 +137,6 @@
             this.cmbAnbarName.Properties.DataSource = this.epListAnbarhasBindingSource;
             this.cmbAnbarName.Properties.DisplayMember = "Name";
             this.cmbAnbarName.Properties.NullValuePrompt = "همه انبارها";
-            this.cmbAnbarName.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbAnbarName.Properties.ValueMember = "Id";
             this.cmbAnbarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbAnbarName.Size = new System.Drawing.Size(663, 34);
@@ -156,6 +155,7 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(83, 34);
             this.textEdit1.TabIndex = 0;
+            this.textEdit1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit1_KeyPress);
             // 
             // btnReloadNameAnbar
             // 
@@ -422,7 +422,7 @@
             // 
             // gridControl_MeghdariVRiali
             // 
-            this.gridControl_MeghdariVRiali.DataSource = this.akAllAmaliateRozanehsBindingSource;
+            this.gridControl_MeghdariVRiali.DataSource = this.amaliatAnbarVKala_RizsBindingSource;
             this.gridControl_MeghdariVRiali.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl_MeghdariVRiali.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl_MeghdariVRiali.Location = new System.Drawing.Point(2, 2);
@@ -433,6 +433,10 @@
             this.gridControl_MeghdariVRiali.TabIndex = 37;
             this.gridControl_MeghdariVRiali.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView_MeghdariVRiali});
+            // 
+            // amaliatAnbarVKala_RizsBindingSource
+            // 
+            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
             // 
             // bandedGridView_MeghdariVRiali
             // 
@@ -505,7 +509,7 @@
             this.Col_KalaCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Col_KalaCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Col_KalaCode.Caption = "کد کالا";
-            this.Col_KalaCode.FieldName = "KalaCode";
+            this.Col_KalaCode.FieldName = "KalaCode_NM";
             this.Col_KalaCode.MinWidth = 23;
             this.Col_KalaCode.Name = "Col_KalaCode";
             this.Col_KalaCode.Visible = true;
@@ -519,7 +523,7 @@
             this.Col_KalaNeme.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Col_KalaNeme.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Col_KalaNeme.Caption = "نام کالا";
-            this.Col_KalaNeme.FieldName = "KalaName";
+            this.Col_KalaNeme.FieldName = "KalaName_NM";
             this.Col_KalaNeme.MinWidth = 23;
             this.Col_KalaNeme.Name = "Col_KalaNeme";
             this.Col_KalaNeme.Visible = true;
@@ -534,7 +538,7 @@
             this.Col_VahedKala.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Col_VahedKala.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Col_VahedKala.Caption = "واحد کالا";
-            this.Col_VahedKala.FieldName = "VahedeKala";
+            this.Col_VahedKala.FieldName = "VahedeKalaName_NM";
             this.Col_VahedKala.MinWidth = 23;
             this.Col_VahedKala.Name = "Col_VahedKala";
             this.Col_VahedKala.Visible = true;
@@ -565,11 +569,11 @@
             this.Col_Meghdar_Mo.Caption = "مقدار مانده";
             this.Col_Meghdar_Mo.DisplayFormat.FormatString = "c3";
             this.Col_Meghdar_Mo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Meghdar_Mo.FieldName = "MeghdarMo";
+            this.Col_Meghdar_Mo.FieldName = "MeghdarMo_NM";
             this.Col_Meghdar_Mo.MinWidth = 25;
             this.Col_Meghdar_Mo.Name = "Col_Meghdar_Mo";
             this.Col_Meghdar_Mo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarMo", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarMo_NM", "{0:c3}")});
             this.Col_Meghdar_Mo.Visible = true;
             this.Col_Meghdar_Mo.Width = 104;
             // 
@@ -584,7 +588,7 @@
             this.Col_Nerkh_Mo.Caption = "نرخ";
             this.Col_Nerkh_Mo.DisplayFormat.FormatString = "c3";
             this.Col_Nerkh_Mo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Nerkh_Mo.FieldName = "NerkhMo";
+            this.Col_Nerkh_Mo.FieldName = "NerkhMo_NM";
             this.Col_Nerkh_Mo.MinWidth = 25;
             this.Col_Nerkh_Mo.Name = "Col_Nerkh_Mo";
             this.Col_Nerkh_Mo.Visible = true;
@@ -601,11 +605,11 @@
             this.Col_Mablagh_Mo.Caption = "مبلغ مانده";
             this.Col_Mablagh_Mo.DisplayFormat.FormatString = "n";
             this.Col_Mablagh_Mo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Mablagh_Mo.FieldName = "MablagMo";
+            this.Col_Mablagh_Mo.FieldName = "MablagMo_NM";
             this.Col_Mablagh_Mo.MinWidth = 25;
             this.Col_Mablagh_Mo.Name = "Col_Mablagh_Mo";
             this.Col_Mablagh_Mo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagMo", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagMo_NM", "{0:n}")});
             this.Col_Mablagh_Mo.Visible = true;
             this.Col_Mablagh_Mo.Width = 170;
             // 
@@ -633,11 +637,11 @@
             this.Col_Meghdar_Va.Caption = "مقدار / تعداد";
             this.Col_Meghdar_Va.DisplayFormat.FormatString = "c3";
             this.Col_Meghdar_Va.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Meghdar_Va.FieldName = "MeghdarVa";
+            this.Col_Meghdar_Va.FieldName = "MeghdarVa_NM";
             this.Col_Meghdar_Va.MinWidth = 25;
             this.Col_Meghdar_Va.Name = "Col_Meghdar_Va";
             this.Col_Meghdar_Va.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarVa", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarVa_NM", "{0:c3}")});
             this.Col_Meghdar_Va.Visible = true;
             this.Col_Meghdar_Va.Width = 104;
             // 
@@ -652,7 +656,7 @@
             this.Col_Nerkh_Va.Caption = "نرخ";
             this.Col_Nerkh_Va.DisplayFormat.FormatString = "c3";
             this.Col_Nerkh_Va.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Nerkh_Va.FieldName = "NerkhVa";
+            this.Col_Nerkh_Va.FieldName = "NerkhVa_NM";
             this.Col_Nerkh_Va.MinWidth = 25;
             this.Col_Nerkh_Va.Name = "Col_Nerkh_Va";
             this.Col_Nerkh_Va.Visible = true;
@@ -669,11 +673,11 @@
             this.Col_Mablagh_Va.Caption = "مبلغ";
             this.Col_Mablagh_Va.DisplayFormat.FormatString = "n";
             this.Col_Mablagh_Va.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Mablagh_Va.FieldName = "MablagVa";
+            this.Col_Mablagh_Va.FieldName = "MablagVa_NM";
             this.Col_Mablagh_Va.MinWidth = 25;
             this.Col_Mablagh_Va.Name = "Col_Mablagh_Va";
             this.Col_Mablagh_Va.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagVa", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagVa_NM", "{0:n}")});
             this.Col_Mablagh_Va.Visible = true;
             this.Col_Mablagh_Va.Width = 170;
             // 
@@ -701,11 +705,11 @@
             this.Col_Meghdar_Sa.Caption = "مقدار / تعداد";
             this.Col_Meghdar_Sa.DisplayFormat.FormatString = "c3";
             this.Col_Meghdar_Sa.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Meghdar_Sa.FieldName = "MeghdarSa";
+            this.Col_Meghdar_Sa.FieldName = "MeghdarSa_NM";
             this.Col_Meghdar_Sa.MinWidth = 25;
             this.Col_Meghdar_Sa.Name = "Col_Meghdar_Sa";
             this.Col_Meghdar_Sa.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarSa", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarSa_NM", "{0:c3}")});
             this.Col_Meghdar_Sa.Visible = true;
             this.Col_Meghdar_Sa.Width = 104;
             // 
@@ -720,7 +724,7 @@
             this.Col_Nerkh_Sa.Caption = "نرخ";
             this.Col_Nerkh_Sa.DisplayFormat.FormatString = "c3";
             this.Col_Nerkh_Sa.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Nerkh_Sa.FieldName = "NerkhSa";
+            this.Col_Nerkh_Sa.FieldName = "NerkhSa_NM";
             this.Col_Nerkh_Sa.MinWidth = 25;
             this.Col_Nerkh_Sa.Name = "Col_Nerkh_Sa";
             this.Col_Nerkh_Sa.Visible = true;
@@ -737,11 +741,11 @@
             this.Col_Mablagh_Sa.Caption = "مبلغ";
             this.Col_Mablagh_Sa.DisplayFormat.FormatString = "n";
             this.Col_Mablagh_Sa.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Mablagh_Sa.FieldName = "MablagSa";
+            this.Col_Mablagh_Sa.FieldName = "MablagSa_NM";
             this.Col_Mablagh_Sa.MinWidth = 25;
             this.Col_Mablagh_Sa.Name = "Col_Mablagh_Sa";
             this.Col_Mablagh_Sa.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagSa", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagSa_NM", "{0:n}")});
             this.Col_Mablagh_Sa.Visible = true;
             this.Col_Mablagh_Sa.Width = 170;
             // 
@@ -769,11 +773,11 @@
             this.Col_Meghdar_Ma.Caption = "مقدار / تعداد";
             this.Col_Meghdar_Ma.DisplayFormat.FormatString = "c3";
             this.Col_Meghdar_Ma.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Meghdar_Ma.FieldName = "MeghdarMa";
+            this.Col_Meghdar_Ma.FieldName = "MeghdarMa_NM";
             this.Col_Meghdar_Ma.MinWidth = 25;
             this.Col_Meghdar_Ma.Name = "Col_Meghdar_Ma";
             this.Col_Meghdar_Ma.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarMa", "{0:c3}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MeghdarMa_NM", "{0:c3}")});
             this.Col_Meghdar_Ma.Visible = true;
             this.Col_Meghdar_Ma.Width = 104;
             // 
@@ -788,7 +792,7 @@
             this.Col_Nerkh_Ma.Caption = "نرخ";
             this.Col_Nerkh_Ma.DisplayFormat.FormatString = "c3";
             this.Col_Nerkh_Ma.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Nerkh_Ma.FieldName = "NerkhMa";
+            this.Col_Nerkh_Ma.FieldName = "NerkhMa_NM";
             this.Col_Nerkh_Ma.MinWidth = 25;
             this.Col_Nerkh_Ma.Name = "Col_Nerkh_Ma";
             this.Col_Nerkh_Ma.Visible = true;
@@ -805,11 +809,11 @@
             this.Col_Mablagh_Ma.Caption = "مبلغ";
             this.Col_Mablagh_Ma.DisplayFormat.FormatString = "n";
             this.Col_Mablagh_Ma.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.Col_Mablagh_Ma.FieldName = "MablagMa";
+            this.Col_Mablagh_Ma.FieldName = "MablagMa_NM";
             this.Col_Mablagh_Ma.MinWidth = 25;
             this.Col_Mablagh_Ma.Name = "Col_Mablagh_Ma";
             this.Col_Mablagh_Ma.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagMa", "{0:n}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MablagMa_NM", "{0:n}")});
             this.Col_Mablagh_Ma.Visible = true;
             this.Col_Mablagh_Ma.Width = 170;
             // 
@@ -863,7 +867,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl0)).EndInit();
             this.panelControl0.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_MeghdariVRiali)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.akAllAmaliateRozanehsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.amaliatAnbarVKala_RizsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView_MeghdariVRiali)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -914,12 +918,12 @@
         private DevExpress.XtraEditors.SimpleButton btnDisplyList;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl62;
-        private System.Windows.Forms.BindingSource akAllAmaliateRozanehsBindingSource;
         public DevExpress.XtraEditors.SimpleButton btnKardeksKala;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
         public DevExpress.XtraEditors.CheckEdit chkIsEdgham;
         public DevExpress.XtraEditors.TextEdit txtTaTarikh;
         public DevExpress.XtraEditors.TextEdit txtAzTarikh;
         public DevExpress.XtraEditors.ComboBoxEdit cmbNoeGozaresh;
+        private System.Windows.Forms.BindingSource amaliatAnbarVKala_RizsBindingSource;
     }
 }

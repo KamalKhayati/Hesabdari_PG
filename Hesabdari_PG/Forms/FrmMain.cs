@@ -720,24 +720,10 @@ namespace Hesabdari_PG.Forms
 
         private void btnJabejaeeKala_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmJabejaeeKala fm = new FrmJabejaeeKala();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            fm.lblSalId.Text = _SalId;
-            fm.lblSalMali.Text = _SalMali;
-            ActiveForm(fm);
 
         }
         private void btnMojodiAvalDoreKala_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmMojodiAvalDoreKala fm = new FrmMojodiAvalDoreKala();
-            fm.MdiParent = this;
-            fm.lblUserId.Text = txtUserId.Caption;
-            fm.lblUserName.Text = txtUserName.Caption;
-            fm.lblSalId.Text = _SalId;
-            fm.lblSalMali.Text = _SalMali;
-            ActiveForm(fm);
         }
 
         private void btnMojodiAnbarVKala_ItemClick(object sender, ItemClickEventArgs e)

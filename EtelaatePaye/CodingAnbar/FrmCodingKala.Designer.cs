@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCodingKala));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
             this.btnSaveNext = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -1188,6 +1188,7 @@
             this.chkEditCode_Tabagheh.TabStop = false;
             this.chkEditCode_Tabagheh.ToolTip = "ویرایش یا تغییر کد بصورت دستی";
             this.chkEditCode_Tabagheh.Visible = false;
+            this.chkEditCode_Tabagheh.CheckedChanged += new System.EventHandler(this.chkEditCode_CheckedChanged);
             // 
             // btnNewCode_Tabagheh
             // 
@@ -1199,9 +1200,9 @@
             this.btnNewCode_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_Tabagheh.Name = "btnNewCode_Tabagheh";
             this.btnNewCode_Tabagheh.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem1.Text = "Alt+N";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnNewCode_Tabagheh.SuperTip = superToolTip1;
+            toolTipTitleItem5.Text = "Alt+N";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            this.btnNewCode_Tabagheh.SuperTip = superToolTip5;
             this.btnNewCode_Tabagheh.TabIndex = 29;
             this.btnNewCode_Tabagheh.TabStop = false;
             this.btnNewCode_Tabagheh.Text = "کد جدید";
@@ -1784,9 +1785,9 @@
             this.btnNewCode_GroupAsli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_GroupAsli.Name = "btnNewCode_GroupAsli";
             this.btnNewCode_GroupAsli.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem2.Text = "Alt+N";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnNewCode_GroupAsli.SuperTip = superToolTip2;
+            toolTipTitleItem6.Text = "Alt+N";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            this.btnNewCode_GroupAsli.SuperTip = superToolTip6;
             this.btnNewCode_GroupAsli.TabIndex = 189;
             this.btnNewCode_GroupAsli.TabStop = false;
             this.btnNewCode_GroupAsli.Text = "کد جدید";
@@ -2416,9 +2417,9 @@
             this.btnNewCode_GroupFaree.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_GroupFaree.Name = "btnNewCode_GroupFaree";
             this.btnNewCode_GroupFaree.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem3.Text = "Alt+N";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.btnNewCode_GroupFaree.SuperTip = superToolTip3;
+            toolTipTitleItem7.Text = "Alt+N";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            this.btnNewCode_GroupFaree.SuperTip = superToolTip7;
             this.btnNewCode_GroupFaree.TabIndex = 191;
             this.btnNewCode_GroupFaree.TabStop = false;
             this.btnNewCode_GroupFaree.Text = "کد جدید";
@@ -3644,9 +3645,9 @@
             this.btnNewCode_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_NameKala.Name = "btnNewCode_NameKala";
             this.btnNewCode_NameKala.Size = new System.Drawing.Size(43, 36);
-            toolTipTitleItem4.Text = "Alt+N";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            this.btnNewCode_NameKala.SuperTip = superToolTip4;
+            toolTipTitleItem8.Text = "Alt+N";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            this.btnNewCode_NameKala.SuperTip = superToolTip8;
             this.btnNewCode_NameKala.TabIndex = 29;
             this.btnNewCode_NameKala.TabStop = false;
             this.btnNewCode_NameKala.ToolTip = "کد جدید";

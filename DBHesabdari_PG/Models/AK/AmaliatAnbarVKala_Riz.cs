@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.AK
 {
-   public class AkVorodeKala_Riz
+   public class AmaliatAnbarVKala_Riz
     {
+        //[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
         [Required]
         public int SalId { get; set; }
@@ -23,16 +24,18 @@ namespace DBHesabdari_PG.Models.AK
         public int AzAnbarId { get; set; }
         [Required]
         public int BeAnbarId { get; set; }
+        [Required]
+        public int SeryalCol_BeNoeAmaliat_BeSelectAnbar { get; set; }
         //[Required]
-        //public int Seryal_darSelectNoe { get; set; }
+        //public int SeryalCol_BeNoeAmaliat_BaSelectAnbar { get; set; }
         [Required]
-        public int SeryalCol_darColAnbarha { get; set; }
+        public int SeryalCol_BaNoeAmaliat_BeSelectAnbar { get; set; }
         [Required]
-        public int SeryalJoze_darColAnbarha { get; set; }
+        public int SeryalJoze_BaNoeSanad_BeSelectAnbar { get; set; }
         [Required]
-        public int SeryalCol_darSelectAnbar { get; set; }
+        public int SeryalCol_BaNoeAmaliat_BaSelectAnbar { get; set; }
         [Required]
-        public int SeryalJoze_darSelectAnbar { get; set; }
+        public int SeryalJoze_BaNoeSanad_BaSelectAnbar { get; set; }
         //[Required]
         public int? GhateySanadNamber { get; set; }
         [Required]
@@ -41,6 +44,8 @@ namespace DBHesabdari_PG.Models.AK
         public int RozaneSanadNumber { get; set; }
         //[Required]
         public int? PaygiriNumber { get; set; }
+        //[Required]
+        public DateTime? DateTimePaygiri { get; set; }
         [Required]
         public DateTime DateTimeSanad { get; set; }
         [Required]
@@ -80,7 +85,7 @@ namespace DBHesabdari_PG.Models.AK
         //public string Tafsili3Name { get; set; }
         [Required]
         public int Radif { get; set; }
-        public int? FactorNamber { get; set; }
+        public int? FactorNumber { get; set; }
         [MaxLength(350)]
         public string Tozihat { get; set; }
         [MaxLength(500)]
@@ -90,6 +95,12 @@ namespace DBHesabdari_PG.Models.AK
         /// <summary>
         /// فیلدهای پین شده به جدول
         /// </summary>
+        [NotMapped]
+        [MaxLength(16)]
+        public string SeryalCol_NM { get; set; }
+        [NotMapped]
+        [MaxLength(16)]
+        public string SeryalJoze_NM { get; set; }
         [NotMapped]
         [MaxLength(16)]
         public string KalaCode_NM { get; set; }
@@ -114,6 +125,9 @@ namespace DBHesabdari_PG.Models.AK
         [NotMapped]
         [MaxLength(100)]
         public string AzAnbarName_NM { get; set; }
+        [NotMapped]
+        [MaxLength(100)]
+        public string BeAnbarName_NM { get; set; }
 
         //[NotMapped]
         //[MaxLength(100)]

@@ -215,14 +215,24 @@ namespace AnbarVaKala.Reports
                     var CheckedList = cmbAnbarName.Properties.GetItems().GetCheckedValues();
                     if (CheckedList.Count > 0)
                     {
-                        List<AkVorodeKala_Riz> _List1 = new List<AkVorodeKala_Riz>();
+                        List<AmaliatAnbarVKala_Riz> _List1 = new List<AmaliatAnbarVKala_Riz>();
 
                         foreach (var item in CheckedList)
                         {
                             int _AnbarId = Convert.ToInt32(item);
-                            var q6 = db.AkVorodeKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.DateTimeSanad <= EndDate).ToList();
-                            if (q6.Count > 0)
-                                _List1.AddRange(q6);
+                            var qq1 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.DateTimeSanad <= EndDate).ToList();
+                            var qq2 = qq1.Where(s => s.BeAnbarId == _AnbarId && s.NoeAmaliatCode == 2).ToList();
+                            var qq3 = qq1.Where(s => s.AzAnbarId == _AnbarId && s.NoeAmaliatCode == 3).ToList();
+                            //List<AmaliatAnbarVKala_Riz> List = new List<AmaliatAnbarVKala_Riz>();
+                            if (qq2.Count > 0)
+                                _List1.AddRange(qq2);
+                            if (qq3.Count > 0)
+                                _List1.AddRange(qq3);
+
+
+                            //var q6 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.DateTimeSanad <= EndDate).ToList();
+                            //if (q6.Count > 0)
+                            //    _List1.AddRange(q6);
                         }
 
                         if (_List1.Count > 0)
@@ -233,11 +243,11 @@ namespace AnbarVaKala.Reports
                             var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNamber == 4).ToList();
                             var q5 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
 
-                            List<AkVorodeKala_Riz> _List2 = new List<AkVorodeKala_Riz>();
+                            List<AmaliatAnbarVKala_Riz> _List2 = new List<AmaliatAnbarVKala_Riz>();
 
                             for (int RowCounter = 0; RowCounter < q1.Count; RowCounter++)
                             {
-                                AkVorodeKala_Riz obj2 = new AkVorodeKala_Riz();
+                                AmaliatAnbarVKala_Riz obj2 = new AmaliatAnbarVKala_Riz();
 
                                 obj2.KalaId = q1[RowCounter];
                                 obj2.KalaCode_NM = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).KeyCode.ToString();
@@ -266,16 +276,16 @@ namespace AnbarVaKala.Reports
 
                                         if (chkIsEdgham.Checked)
                                         {
-                                            decimal _MeghdarMo = obj2.MeghdarMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
-                                            decimal _MablagMo = obj2.MablagMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
+                                            decimal _MeghdarMo = obj2.MeghdarMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
+                                            decimal _MablagMo = obj2.MablagMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
                                             decimal _MeghdarSa = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
                                             decimal _MablagSa = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
                                             obj2.MeghdarMo_NM = _MeghdarMo - _MeghdarSa;
                                             obj2.MablagMo_NM = _MablagMo - _MablagSa;
                                             obj2.NerkhMo_NM = obj2.MeghdarMo_NM != 0 ? obj2.MablagMo_NM / obj2.MeghdarMo_NM : 0;
 
-                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
-                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
+                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
+                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
                                             obj2.NerkhVa_NM = obj2.MeghdarVa_NM != 0 ? obj2.MablagVa_NM / obj2.MeghdarVa_NM : 0;
 
                                             obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
@@ -284,8 +294,8 @@ namespace AnbarVaKala.Reports
                                         }
                                         else
                                         {
-                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2) && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
+                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId).Sum(s => s.Mablag);
                                             obj2.NerkhVa_NM = obj2.MeghdarVa_NM != 0 ? obj2.MablagVa_NM / obj2.MeghdarVa_NM : 0;
 
                                             obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
@@ -302,15 +312,15 @@ namespace AnbarVaKala.Reports
                             }
 
                             if (_List2.Count > 0)
-                                akAllAmaliateRozanehsBindingSource.DataSource = _List2;
+                                amaliatAnbarVKala_RizsBindingSource.DataSource = _List2;
                             else
-                                akAllAmaliateRozanehsBindingSource.Clear();
+                                amaliatAnbarVKala_RizsBindingSource.Clear();
                         }
                         else
-                            akAllAmaliateRozanehsBindingSource.Clear();
+                            amaliatAnbarVKala_RizsBindingSource.Clear();
                     }
                     else
-                        akAllAmaliateRozanehsBindingSource.Clear();
+                        amaliatAnbarVKala_RizsBindingSource.Clear();
                 }
                 catch (Exception ex)
                 {
@@ -350,8 +360,8 @@ namespace AnbarVaKala.Reports
 
             FillcmbAnbarName();
             int a = _ListAnbarha.FirstOrDefault(s => s.SalId == _SalId).Id;
-            if(_EditValueId != 0)
-            cmbAnbarName.SetEditValue(_EditValueId);
+            if (_EditValueId != 0)
+                cmbAnbarName.SetEditValue(_EditValueId);
             else
                 cmbAnbarName.SetEditValue(a);
 
@@ -362,7 +372,7 @@ namespace AnbarVaKala.Reports
         {
             FillcmbAnbarName();
             cmbAnbarName.SetEditValue(0);
-            akAllAmaliateRozanehsBindingSource.Clear();
+            amaliatAnbarVKala_RizsBindingSource.Clear();
         }
 
         private void cmbAnbarName_EditValueChanged(object sender, EventArgs e)
@@ -511,6 +521,13 @@ namespace AnbarVaKala.Reports
         {
             gridBand2.Visible = chkIsEdgham.Checked ? true : false;
             btnDisplyList_Click(null, null);
+        }
+
+        private void textEdit1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                cmbAnbarName.ShowPopup();
+
         }
     }
 }

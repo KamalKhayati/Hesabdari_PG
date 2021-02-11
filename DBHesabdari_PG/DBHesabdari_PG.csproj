@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AK\AkVorodeKala_Riz.cs" />
+    <Compile Include="Models\AK\AmaliatAnbarVKala_Riz.cs" />
     <Compile Include="Models\EnumCED.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpAllCodingKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpGroupAsliKala.cs" />
