@@ -88,6 +88,7 @@
             this.colParentId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colRmsUserhaBmsAccessLevelMenuhas = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.msAccessLevelMenusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msUserBindingSource)).BeginInit();
@@ -97,6 +98,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msAccessLevelMenusBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -209,12 +212,12 @@
             // 
             // btnSave
             // 
-            this.btnSave.Caption = "ویرایش کردن";
+            this.btnSave.Caption = "ذخیره کردن";
             this.btnSave.Id = 1;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnSave.Name = "btnSave";
-            toolTipTitleItem2.Text = "ویرایش";
+            toolTipTitleItem2.Text = "ذخیره";
             toolTipItem2.LeftIndent = 6;
             toolTipItem2.Text = "F5";
             superToolTip2.Items.Add(toolTipTitleItem2);
@@ -292,17 +295,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlTop.Size = new System.Drawing.Size(1495, 60);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlTop.Size = new System.Drawing.Size(1359, 60);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 661);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 576);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1495, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1359, 0);
             // 
             // barDockControlLeft
             // 
@@ -310,17 +313,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 601);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 516);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1495, 60);
+            this.barDockControlRight.Location = new System.Drawing.Point(1359, 60);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 601);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 516);
             // 
             // btnDisplyActiveList
             // 
@@ -395,20 +398,20 @@
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(15, 124);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.lblUserName.Location = new System.Drawing.Point(14, 108);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(61, 31);
+            this.lblUserName.Size = new System.Drawing.Size(53, 27);
             this.lblUserName.TabIndex = 25;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(15, 86);
-            this.lblUserId.Margin = new System.Windows.Forms.Padding(4);
+            this.lblUserId.Location = new System.Drawing.Point(14, 75);
+            this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(85, 31);
+            this.lblUserId.Size = new System.Drawing.Size(72, 27);
             this.lblUserId.TabIndex = 24;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
@@ -431,11 +434,12 @@
             this.treeList1.DataSource = this.msAccessLevelMenusBindingSource;
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeList1.KeyFieldName = "MsAccessLevelMenuId";
-            this.treeList1.Location = new System.Drawing.Point(0, 60);
-            this.treeList1.Margin = new System.Windows.Forms.Padding(4);
-            this.treeList1.MinWidth = 24;
+            this.treeList1.Location = new System.Drawing.Point(2, 2);
+            this.treeList1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.treeList1.MinWidth = 22;
             this.treeList1.Name = "treeList1";
             this.treeList1.OptionsBehavior.Editable = false;
+            this.treeList1.OptionsBehavior.PopulateServiceColumns = true;
             this.treeList1.OptionsFilter.ExpandNodesOnFiltering = true;
             this.treeList1.OptionsSelection.MultiSelect = true;
             this.treeList1.OptionsView.CheckBoxStyle = DevExpress.XtraTreeList.DefaultNodeCheckBoxStyle.Check;
@@ -444,9 +448,9 @@
             this.treeList1.OptionsView.ShowIndicator = false;
             this.treeList1.ParentFieldName = "ParentId";
             this.treeList1.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeList1.Size = new System.Drawing.Size(1495, 601);
+            this.treeList1.Size = new System.Drawing.Size(1355, 512);
             this.treeList1.TabIndex = 30;
-            this.treeList1.TreeLevelWidth = 31;
+            this.treeList1.TreeLevelWidth = 28;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
             this.treeList1.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterCheckNode);
             // 
@@ -456,12 +460,12 @@
             this.LevelName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.LevelName.Caption = "تعیین سطح دسترسی کاربران به منو ها، زیر منو ها و محتویات فرمها";
             this.LevelName.FieldName = "LevelName";
-            this.LevelName.MaxWidth = 856;
-            this.LevelName.MinWidth = 24;
+            this.LevelName.MaxWidth = 778;
+            this.LevelName.MinWidth = 22;
             this.LevelName.Name = "LevelName";
             this.LevelName.Visible = true;
             this.LevelName.VisibleIndex = 0;
-            this.LevelName.Width = 856;
+            this.LevelName.Width = 778;
             // 
             // MsAccessLevelMenuId
             // 
@@ -473,45 +477,54 @@
             this.MsAccessLevelMenuId.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.MsAccessLevelMenuId.Caption = "آیدی";
             this.MsAccessLevelMenuId.FieldName = "MsAccessLevelMenuId";
-            this.MsAccessLevelMenuId.MaxWidth = 122;
-            this.MsAccessLevelMenuId.MinWidth = 24;
+            this.MsAccessLevelMenuId.MaxWidth = 111;
+            this.MsAccessLevelMenuId.MinWidth = 22;
             this.MsAccessLevelMenuId.Name = "MsAccessLevelMenuId";
             this.MsAccessLevelMenuId.Visible = true;
             this.MsAccessLevelMenuId.VisibleIndex = 1;
-            this.MsAccessLevelMenuId.Width = 24;
+            this.MsAccessLevelMenuId.Width = 22;
             // 
             // colParentId
             // 
             this.colParentId.FieldName = "ParentId";
-            this.colParentId.MinWidth = 24;
+            this.colParentId.MinWidth = 22;
             this.colParentId.Name = "colParentId";
-            this.colParentId.Width = 92;
+            this.colParentId.Width = 84;
             // 
             // colRmsUserhaBmsAccessLevelMenuhas
             // 
             this.colRmsUserhaBmsAccessLevelMenuhas.FieldName = "RmsUserhaBmsAccessLevelMenuhas";
-            this.colRmsUserhaBmsAccessLevelMenuhas.MinWidth = 24;
+            this.colRmsUserhaBmsAccessLevelMenuhas.MinWidth = 22;
             this.colRmsUserhaBmsAccessLevelMenuhas.Name = "colRmsUserhaBmsAccessLevelMenuhas";
-            this.colRmsUserhaBmsAccessLevelMenuhas.Width = 92;
+            this.colRmsUserhaBmsAccessLevelMenuhas.Width = 84;
             // 
             // msAccessLevelMenusBindingSource
             // 
             this.msAccessLevelMenusBindingSource.DataSource = typeof(DBHesabdari_PG.Models.Ms.SystemUsers.MsAccessLevelMenu);
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.treeList1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(0, 60);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1359, 516);
+            this.panelControl1.TabIndex = 35;
+            // 
             // FrmAccesslevelMenuh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1495, 661);
-            this.Controls.Add(this.treeList1);
+            this.ClientSize = new System.Drawing.Size(1359, 576);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmAccesslevelMenuh.IconOptions.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmAccesslevelMenuh";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -526,6 +539,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msAccessLevelMenusBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,5 +582,6 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn MsAccessLevelMenuId;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colParentId;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colRmsUserhaBmsAccessLevelMenuhas;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

@@ -176,7 +176,7 @@
             this.rpgOperationDafaterVaDoreMali = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgUsers = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.Tz = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -352,7 +352,7 @@
             this.ribbonPage2,
             this.Ap,
             this.Ms,
-            this.ribbonPage5,
+            this.Tz,
             this.ribbonPage6,
             this.ribbonPage8});
             this.ribbon.QuickToolbarItemLinks.Add(this.barHeaderItem1);
@@ -959,6 +959,7 @@
             this.btnTanzimatAnbaVKala.Caption = "تنظیمات مربوط به عملیات انبار و کالا";
             this.btnTanzimatAnbaVKala.Id = 179;
             this.btnTanzimatAnbaVKala.Name = "btnTanzimatAnbaVKala";
+            this.btnTanzimatAnbaVKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTanzimatAnbaVKala_ItemClick);
             // 
             // barSubItem1
             // 
@@ -1529,11 +1530,10 @@
             this.ribbonPageGroup4.Text = "سیستمهای فعال";
             this.ribbonPageGroup4.Visible = false;
             // 
-            // ribbonPage5
+            // Tz
             // 
-            this.ribbonPage5.Name = "ribbonPage5";
-            this.ribbonPage5.Text = "تنظیمات ";
-            this.ribbonPage5.Visible = false;
+            this.Tz.Name = "Tz";
+            this.Tz.Text = "تنظیمات ";
             // 
             // ribbonPage6
             // 
@@ -1812,7 +1812,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage Ap;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgTarifCoding;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgUsers;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPage Tz;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;

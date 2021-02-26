@@ -23,6 +23,7 @@ namespace DBHesabdari_PG
     using DBHesabdari_PG.Models.EP.Tanzimat;
     using DBHesabdari_PG.Models.AK;
     using System.Reflection.Emit;
+    using DBHesabdari_PG.Models.Tz;
 
     public class MyContext : DbContext
     {
@@ -69,6 +70,8 @@ namespace DBHesabdari_PG
         public virtual DbSet<MsDefault> MsDefaults { get; set; }
         public virtual DbSet<MsAccessLevelDafaterMali> MsAccessLevelDafaterMalis { get; set; }
         public virtual DbSet<R_MsUser_B_MsAccessLevelDafaterMali> RmsUserBmsAccessLevelDafaterMalis { get; set; }
+        public virtual DbSet<TzTanzimatSystem> TzTanzimatSystems { get; set; }
+        public virtual DbSet<R_MsUser_B_TzTanzimatSystem> R_MsUser_B_TzTanzimatSystems { get; set; }
 
 
         public virtual DbSet<EpTanzimatCodingHesabdari> EpTanzimatCodingHesabdaris { get; set; }
@@ -169,6 +172,9 @@ namespace DBHesabdari_PG
             modelBuilder.Entity<MsMajmoe>().HasMany(m => m.MsVaheds).WithRequired(m => m.MsMajmoe1).HasForeignKey(m => m.MsMajmoeId).WillCascadeOnDelete(false);
             modelBuilder.Entity<MsVahed>().HasMany(m => m.MsShobes).WithRequired(m => m.MsVahed1).HasForeignKey(m => m.MsVahedId).WillCascadeOnDelete(false);
             modelBuilder.Entity<MsShobe>().HasMany(m => m.MsDoreMalis).WithRequired(m => m.MsShobe1).HasForeignKey(m => m.MsShobeId).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MsUser>().HasMany(m => m.R_MsUser_B_TzTanzimatSystems).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<TzTanzimatSystem>().HasMany(m => m.R_MsUser_B_TzTanzimatSystems).WithRequired(m => m.TzTanzimatSystem1).HasForeignKey(m => m.TanzimatSystemId).WillCascadeOnDelete(true);
 
 
             modelBuilder.Entity<MsUser>().HasMany(m => m.R_MsUser_B_MsAccessLevelMenus).WithRequired(m => m.MsUser1).HasForeignKey(m => m.MsUserId).WillCascadeOnDelete(true);

@@ -40,6 +40,7 @@ using EtelaatePaye.CodingAnbar;
 using EtelaatePaye.Tanzimat;
 using AnbarVaKala.AmaliatRozaneh;
 using AnbarVaKala.Reports;
+using AnbarVaKala.Tanzimat;
 
 namespace Hesabdari_PG.Forms
 {
@@ -746,6 +747,17 @@ namespace Hesabdari_PG.Forms
             fm.lblUserName.Text = txtUserName.Caption;
             fm.lblSalId.Text = _SalId;
             fm.lblSalMali.Text = _SalMali;
+            ActiveForm(fm);
+        }
+
+        private void btnTanzimatAnbaVKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmTanzimatAnbarVKala fm = new FrmTanzimatAnbarVKala();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            //fm.lblSalId.Text = _SalId;
+            //fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
         }
     }

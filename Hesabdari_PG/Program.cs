@@ -41,7 +41,7 @@ namespace Hesabdari_PG
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.ToString());
                 }
             }
 

@@ -1284,6 +1284,22 @@ namespace AnbarVaKala.AmaliatRozaneh
         GridControl objGridControl = null;
         private void FrmAmaliatRozanehAnbarVKala_Load(object sender, EventArgs e)
         {
+            using (var db = new MyContext())
+            {
+                try
+                {
+                    var q = db.TzTanzimatSystems.FirstOrDefault(s=>s.KeyId==4401001);
+                    if (q != null)
+                        _FirstSelectAnbar_NextSanad = q.IsChecked;
+
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
             _SalId = Convert.ToInt32(lblSalId.Text);
             //En1 = EnumCED.None;
             //ActiveButtons();

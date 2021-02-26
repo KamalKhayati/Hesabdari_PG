@@ -10,6 +10,7 @@
 using DBHesabdari_PG;
 using DBHesabdari_PG.Models.EP.CodingHesabdari;
 using DBHesabdari_PG.Models.Ms.DafaterMali;
+using DBHesabdari_PG.Models.Tz;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -38,6 +39,7 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public virtual ICollection<R_MsUser_B_MsAccessLevelMenu> R_MsUser_B_MsAccessLevelMenus { get; set; }
         public virtual ICollection<R_MsUser_B_MsAccessLevelDafaterMali> R_MsUser_B_MsAccessLevelDafaterMalis { get; set; }
         public virtual ICollection<R_MsUser_B_AllCodingHesabdari> R_MsUser_B_AllCodingHesabdaris { get; set; }
+        public virtual ICollection<R_MsUser_B_TzTanzimatSystem> R_MsUser_B_TzTanzimatSystems { get; set; }
     }
 
     public class R_MsUser_B_AllCodingHesabdari
@@ -101,6 +103,7 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         public virtual MsUser MsUser1 { get; set; }
         public virtual MsAccessLevelMenu MsAccessLevelMenu1 { get; set; }
     }
+
     public class R_MsUser_B_MsAccessLevelDafaterMali
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -134,6 +137,32 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
 
         public virtual MsUser MsUser1 { get; set; }
         public virtual MsAccessLevelDafaterMali MsAccessLevelDafaterMali1 { get; set; }
+    }
+
+    public class R_MsUser_B_TzTanzimatSystem
+    {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column(Order = 0)]
+        public int Id { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        public int MsUserId { get; set; }
+
+        //[Column(Order = 2)]
+        //[Required, MaxLength(50)]
+        //public string Name { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        public int TanzimatSystemId { get; set; }
+
+        //[Column(Order = 3)]
+        //[Required, MaxLength(500)]
+        //public string LevelName { get; set; }
+
+        public virtual MsUser MsUser1 { get; set; }
+        public virtual TzTanzimatSystem TzTanzimatSystem1 { get; set; }
     }
 
 }

@@ -23,6 +23,7 @@ namespace DBHesabdari_PG.Migrations
     using DBHesabdari_PG.Models.EP.Tanzimat;
     using System.Collections.Generic;
     using DBHesabdari_PG.Models.EP.CodingAnbar;
+    using DBHesabdari_PG.Models.Tz;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DBHesabdari_PG.MyContext>
     {
@@ -707,6 +708,14 @@ namespace DBHesabdari_PG.Migrations
 
                     }
 
+                    /////////////// تعریف گزینه های مربوط به تنظیمات سیستم
+                    {
+                        context.Entry(new TzTanzimatSystem() { KeyId = 44, ParentId = 44, LevelName = "تنظیمات انبار و کالا", IsSetAllUser = true, IsChecked = true }).State = context.TzTanzimatSystems.Any(s => s.KeyId == 44) ? EntityState.Detached : EntityState.Added;
+
+                        context.Entry(new TzTanzimatSystem() { KeyId = 4401, ParentId = 44, LevelName = "عملیات ورود و خروج کالا", IsSetAllUser = true, IsChecked = true }).State = context.TzTanzimatSystems.Any(s => s.KeyId == 4401) ? EntityState.Detached : EntityState.Added;
+                        context.Entry(new TzTanzimatSystem() { KeyId = 4401001, ParentId = 4401, LevelName = "در عملیات ورود و خروج کالا اول انبار مورد نظر انتخاب شود سپس کاربر اقدام به ثبت رسید و یا حواله نماید ", IsSetAllUser = true, IsChecked = true }).State = context.TzTanzimatSystems.Any(s => s.KeyId == 4401001) ? EntityState.Detached : EntityState.Added;
+
+                    }
                     context.SaveChanges();
                     base.Seed(context);
                 }

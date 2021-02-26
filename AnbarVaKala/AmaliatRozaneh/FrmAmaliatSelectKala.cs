@@ -23,8 +23,6 @@ namespace AnbarVaKala.AmaliatRozaneh
     public partial class FrmAmaliatSelectKala : DevExpress.XtraEditors.XtraForm
     {
         FrmAmaliatRozanehAnbarVKala Fm;
-        FrmJabejaeeKala Jm;
-        FrmMojodiAvalDoreKala Dm;
         MyContext db;
         public GridControl gridControl;
         public GridView gridView;
@@ -40,16 +38,6 @@ namespace AnbarVaKala.AmaliatRozaneh
         {
             InitializeComponent();
             Fm = fm;
-        }
-        public FrmAmaliatSelectKala(FrmJabejaeeKala jm)
-        {
-            InitializeComponent();
-            Jm = jm;
-        }
-        public FrmAmaliatSelectKala(FrmMojodiAvalDoreKala dm)
-        {
-            InitializeComponent();
-            Dm = dm;
         }
         int _SalId = 0;
         //public EnumCED En3 = EnumCED.Cancel;
@@ -281,8 +269,18 @@ namespace AnbarVaKala.AmaliatRozaneh
                 db = new MyContext();
                 _SalId = Convert.ToInt32(lblSalId.Text);
                 AzAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
+                BeAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
+                List<AmaliatAnbarVKala_Riz> _List3 = new List<AmaliatAnbarVKala_Riz>();
+                var qq1 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId ).ToList();
+                var qq2 = qq1.Where(s => s.BeAnbarId == BeAnbarId && s.NoeAmaliatCode == 2).ToList();
+                var qq3 = qq1.Where(s => s.AzAnbarId == AzAnbarId && s.NoeAmaliatCode == 3).ToList();
+                if (qq2.Count > 0)
+                    _List3.AddRange(qq2);
+                if (qq3.Count > 0)
+                    _List3.AddRange(qq3);
+
                 //var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
-                var q6 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == AzAnbarId).ToList();
+                //var q6 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == AzAnbarId).ToList();
                 var q1 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == AzAnbarId).Select(s => s.TabagheKalaId).ToList();
                 List<EpNameKala> List1 = new List<EpNameKala>();
                 IEnumerable<int> List2 = null;
@@ -314,7 +312,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                     item.TabagheKalaName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.Name;
                     item.GroupAsliName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
                     item.GroupFareeName_NM = item.EpGroupFareeKala1.Name;
-                    item.MeghdarMa_NM = q6.Where(s => s.KalaId == item.Id && (s.NoeAmaliatCode == 1 || s.NoeAmaliatCode == 2)).Sum(s => s.Meghdar) - q6.Where(s => s.KalaId == item.Id && s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
+                    item.MeghdarMa_NM = _List3.Where(s => s.KalaId == item.Id && s.NoeAmaliatCode == 2).Sum(s => s.Meghdar) - _List3.Where(s => s.KalaId == item.Id && s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
                 }
 
 

@@ -174,6 +174,11 @@ namespace AnbarVaKala.Reports
             {
                 try
                 {
+                    var q = db.TzTanzimatSystems.FirstOrDefault(s => s.KeyId == 4401001);
+                    if (q != null)
+                        _FirstSelectAnbar_NextSanad = q.IsChecked;
+
+
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     //DataSet ds = new DataSet();
 
