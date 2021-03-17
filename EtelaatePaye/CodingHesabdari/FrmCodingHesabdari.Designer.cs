@@ -214,7 +214,7 @@
             this.treeListCodingHesabdari = new DevExpress.XtraTreeList.TreeList();
             this.colLevelName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colKeyCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colLevelNamber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colLevelNumber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIsActive1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.epAllCodingHesabdarisBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -235,6 +235,7 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
+            this.colGroupTafsiliLevelsIndex = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3_1)).BeginInit();
             this.panelControl3_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
@@ -2027,6 +2028,7 @@
             this.colGroupStaticId,
             this.colColStaticId,
             this.colEpHesabCol1,
+            this.colGroupTafsiliLevelsIndex,
             this.gridColumn26});
             this.gridView4.DetailHeight = 378;
             this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
@@ -3111,7 +3113,7 @@
             this.treeListCodingHesabdari.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colLevelName,
             this.colKeyCode,
-            this.colLevelNamber,
+            this.colLevelNumber,
             this.colIsActive1,
             this.treeListColumn1});
             this.treeListCodingHesabdari.Cursor = System.Windows.Forms.Cursors.Default;
@@ -3146,12 +3148,12 @@
             this.colLevelName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colLevelName.Caption = "کدینگ حسابداری (طبقه ،گروه ،کل ،معین) ";
             this.colLevelName.FieldName = "LevelName";
-            this.colLevelName.MaxWidth = 545;
-            this.colLevelName.MinWidth = 22;
+            this.colLevelName.MaxWidth = 550;
+            this.colLevelName.MinWidth = 550;
             this.colLevelName.Name = "colLevelName";
             this.colLevelName.Visible = true;
             this.colLevelName.VisibleIndex = 0;
-            this.colLevelName.Width = 532;
+            this.colLevelName.Width = 550;
             // 
             // colKeyCode
             // 
@@ -3166,26 +3168,24 @@
             this.colKeyCode.MaxWidth = 118;
             this.colKeyCode.MinWidth = 18;
             this.colKeyCode.Name = "colKeyCode";
-            this.colKeyCode.Visible = true;
-            this.colKeyCode.VisibleIndex = 1;
             this.colKeyCode.Width = 118;
             // 
-            // colLevelNamber
+            // colLevelNumber
             // 
-            this.colLevelNamber.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.Caption = "سطح";
-            this.colLevelNamber.FieldName = "LevelNamber";
-            this.colLevelNamber.MaxWidth = 73;
-            this.colLevelNamber.MinWidth = 18;
-            this.colLevelNamber.Name = "colLevelNamber";
-            this.colLevelNamber.Visible = true;
-            this.colLevelNamber.VisibleIndex = 2;
-            this.colLevelNamber.Width = 73;
+            this.colLevelNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.Caption = "سطح";
+            this.colLevelNumber.FieldName = "LevelNumber";
+            this.colLevelNumber.MaxWidth = 80;
+            this.colLevelNumber.MinWidth = 80;
+            this.colLevelNumber.Name = "colLevelNumber";
+            this.colLevelNumber.Visible = true;
+            this.colLevelNumber.VisibleIndex = 1;
+            this.colLevelNumber.Width = 80;
             // 
             // colIsActive1
             // 
@@ -3197,12 +3197,12 @@
             this.colIsActive1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colIsActive1.Caption = "فعال";
             this.colIsActive1.FieldName = "IsActive";
-            this.colIsActive1.MaxWidth = 73;
-            this.colIsActive1.MinWidth = 18;
+            this.colIsActive1.MaxWidth = 80;
+            this.colIsActive1.MinWidth = 80;
             this.colIsActive1.Name = "colIsActive1";
             this.colIsActive1.Visible = true;
-            this.colIsActive1.VisibleIndex = 3;
-            this.colIsActive1.Width = 73;
+            this.colIsActive1.VisibleIndex = 2;
+            this.colIsActive1.Width = 80;
             // 
             // treeListColumn1
             // 
@@ -3212,11 +3212,11 @@
             this.treeListColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.treeListColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.treeListColumn1.Caption = "توضیح یا تشریح حساب";
-            this.treeListColumn1.MinWidth = 18;
+            this.treeListColumn1.MinWidth = 550;
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.Visible = true;
-            this.treeListColumn1.VisibleIndex = 4;
-            this.treeListColumn1.Width = 249;
+            this.treeListColumn1.VisibleIndex = 3;
+            this.treeListColumn1.Width = 636;
             // 
             // epAllCodingHesabdarisBindingSource
             // 
@@ -3459,6 +3459,13 @@
             this.panelControl_Button.Name = "panelControl_Button";
             this.panelControl_Button.Size = new System.Drawing.Size(1058, 51);
             this.panelControl_Button.TabIndex = 41;
+            // 
+            // colGroupTafsiliLevelsIndex
+            // 
+            this.colGroupTafsiliLevelsIndex.FieldName = "GroupTafsiliLevelsIndex";
+            this.colGroupTafsiliLevelsIndex.MinWidth = 25;
+            this.colGroupTafsiliLevelsIndex.Name = "colGroupTafsiliLevelsIndex";
+            this.colGroupTafsiliLevelsIndex.Width = 94;
             // 
             // FrmCodingHesabdari
             // 
@@ -3793,7 +3800,7 @@
         private System.Windows.Forms.BindingSource msActiveSystemsBindingSource;
         private System.Windows.Forms.BindingSource epAllCodingHesabdarisBindingSource;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colKeyCode;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelNamber;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelNumber;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.ComboBoxEdit cmbGroupTafsiliLevels_4;
@@ -3806,5 +3813,6 @@
         public DevExpress.XtraEditors.TextEdit txtIndex_Group;
         public DevExpress.XtraEditors.TextEdit txtIndex_Tabagheh;
         public DevExpress.XtraEditors.TextEdit txtIndex_Moin;
+        private DevExpress.XtraGrid.Columns.GridColumn colGroupTafsiliLevelsIndex;
     }
 }

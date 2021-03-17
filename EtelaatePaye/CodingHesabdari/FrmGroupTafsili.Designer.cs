@@ -161,7 +161,7 @@
             this.treeListGroupTafsili = new DevExpress.XtraTreeList.TreeList();
             this.colLevelName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colKeyCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colLevelNamber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colLevelNumber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIsActive1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.epAllGroupTafsilisBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -643,7 +643,6 @@
             "قراردادها",
             "انبارها",
             "سایر"});
-            this.cmbTabaghehGroup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTabaghehGroup.Size = new System.Drawing.Size(502, 34);
             this.cmbTabaghehGroup.TabIndex = 1;
             this.cmbTabaghehGroup.Enter += new System.EventHandler(this.cmbTabaghehGroup_Enter);
@@ -1304,7 +1303,6 @@
             this.cmbGruopLevel1_2.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGruopLevel1_2.Properties.PopupWidth = 545;
             this.cmbGruopLevel1_2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGruopLevel1_2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGruopLevel1_2.Properties.ValueMember = "Id";
             this.cmbGruopLevel1_2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel1_2.Size = new System.Drawing.Size(447, 34);
@@ -1892,7 +1890,6 @@
             this.cmbGruopLevel1_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGruopLevel1_3.Properties.PopupWidth = 545;
             this.cmbGruopLevel1_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGruopLevel1_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGruopLevel1_3.Properties.ValueMember = "Id";
             this.cmbGruopLevel1_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel1_3.Size = new System.Drawing.Size(447, 34);
@@ -1981,7 +1978,6 @@
             this.cmbGruopLevel2_3.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbGruopLevel2_3.Properties.PopupWidth = 545;
             this.cmbGruopLevel2_3.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGruopLevel2_3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGruopLevel2_3.Properties.ValueMember = "Id";
             this.cmbGruopLevel2_3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbGruopLevel2_3.Size = new System.Drawing.Size(447, 34);
@@ -2254,7 +2250,7 @@
             this.treeListGroupTafsili.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colLevelName,
             this.colKeyCode,
-            this.colLevelNamber,
+            this.colLevelNumber,
             this.colIsActive1,
             this.treeListColumn1});
             this.treeListGroupTafsili.Cursor = System.Windows.Forms.Cursors.Default;
@@ -2289,12 +2285,12 @@
             this.colLevelName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colLevelName.Caption = "گروه های تفصیلی (سطح1,2,3) ";
             this.colLevelName.FieldName = "LevelName";
-            this.colLevelName.MaxWidth = 545;
-            this.colLevelName.MinWidth = 22;
+            this.colLevelName.MaxWidth = 500;
+            this.colLevelName.MinWidth = 500;
             this.colLevelName.Name = "colLevelName";
             this.colLevelName.Visible = true;
             this.colLevelName.VisibleIndex = 0;
-            this.colLevelName.Width = 455;
+            this.colLevelName.Width = 500;
             // 
             // colKeyCode
             // 
@@ -2309,26 +2305,24 @@
             this.colKeyCode.MaxWidth = 109;
             this.colKeyCode.MinWidth = 18;
             this.colKeyCode.Name = "colKeyCode";
-            this.colKeyCode.Visible = true;
-            this.colKeyCode.VisibleIndex = 1;
             this.colKeyCode.Width = 109;
             // 
-            // colLevelNamber
+            // colLevelNumber
             // 
-            this.colLevelNamber.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.Caption = "سطح";
-            this.colLevelNamber.FieldName = "LevelNamber";
-            this.colLevelNamber.MaxWidth = 73;
-            this.colLevelNamber.MinWidth = 18;
-            this.colLevelNamber.Name = "colLevelNamber";
-            this.colLevelNamber.Visible = true;
-            this.colLevelNamber.VisibleIndex = 2;
-            this.colLevelNamber.Width = 58;
+            this.colLevelNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.Caption = "سطح";
+            this.colLevelNumber.FieldName = "LevelNumber";
+            this.colLevelNumber.MaxWidth = 80;
+            this.colLevelNumber.MinWidth = 80;
+            this.colLevelNumber.Name = "colLevelNumber";
+            this.colLevelNumber.Visible = true;
+            this.colLevelNumber.VisibleIndex = 1;
+            this.colLevelNumber.Width = 80;
             // 
             // colIsActive1
             // 
@@ -2340,12 +2334,12 @@
             this.colIsActive1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colIsActive1.Caption = "فعال";
             this.colIsActive1.FieldName = "IsActive";
-            this.colIsActive1.MaxWidth = 73;
-            this.colIsActive1.MinWidth = 18;
+            this.colIsActive1.MaxWidth = 80;
+            this.colIsActive1.MinWidth = 80;
             this.colIsActive1.Name = "colIsActive1";
             this.colIsActive1.Visible = true;
-            this.colIsActive1.VisibleIndex = 3;
-            this.colIsActive1.Width = 58;
+            this.colIsActive1.VisibleIndex = 2;
+            this.colIsActive1.Width = 80;
             // 
             // treeListColumn1
             // 
@@ -2356,11 +2350,11 @@
             this.treeListColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.treeListColumn1.Caption = "توضیح یا تشریح حساب";
             this.treeListColumn1.FieldName = "توضیح یا تشریح حساب";
-            this.treeListColumn1.MinWidth = 18;
+            this.treeListColumn1.MinWidth = 550;
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.Visible = true;
-            this.treeListColumn1.VisibleIndex = 4;
-            this.treeListColumn1.Width = 407;
+            this.treeListColumn1.VisibleIndex = 3;
+            this.treeListColumn1.Width = 708;
             // 
             // epAllGroupTafsilisBindingSource
             // 
@@ -2631,7 +2625,7 @@
         private DevExpress.XtraTreeList.TreeList treeListGroupTafsili;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelName;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colKeyCode;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelNamber;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelNumber;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private System.Windows.Forms.BindingSource epAllGroupTafsilisBindingSource;
         private DevExpress.XtraEditors.LabelControl labelControl19;

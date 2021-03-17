@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCodingKala));
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
             this.btnSaveNext = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -319,9 +319,10 @@
             this.treeListCodingKala = new DevExpress.XtraTreeList.TreeList();
             this.colLevelName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colKeyCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colLevelNamber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colLevelNumber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIsActive1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
             this.panelControl_Button.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_CodingKala)).BeginInit();
@@ -451,6 +452,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lstSerialKala_NameKala.Properties)).BeginInit();
             this.xtraTabPage_DerakhtVareh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingKala)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl_Button
@@ -667,7 +669,7 @@
             this.xtraTabControl_CodingKala.Location = new System.Drawing.Point(0, 51);
             this.xtraTabControl_CodingKala.Name = "xtraTabControl_CodingKala";
             this.xtraTabControl_CodingKala.SelectedTabPage = this.xtraTabPage_TabaghehKala;
-            this.xtraTabControl_CodingKala.Size = new System.Drawing.Size(1227, 545);
+            this.xtraTabControl_CodingKala.Size = new System.Drawing.Size(1227, 607);
             this.xtraTabControl_CodingKala.TabIndex = 1;
             this.xtraTabControl_CodingKala.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage_TabaghehKala,
@@ -683,7 +685,7 @@
             this.xtraTabPage_TabaghehKala.Controls.Add(this.panelControl3);
             this.xtraTabPage_TabaghehKala.Controls.Add(this.panelControl_Tabagheh);
             this.xtraTabPage_TabaghehKala.Name = "xtraTabPage_TabaghehKala";
-            this.xtraTabPage_TabaghehKala.Size = new System.Drawing.Size(1225, 504);
+            this.xtraTabPage_TabaghehKala.Size = new System.Drawing.Size(1225, 566);
             this.xtraTabPage_TabaghehKala.Text = "طبقه کالا";
             // 
             // panelControl3
@@ -696,7 +698,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1225, 331);
+            this.panelControl3.Size = new System.Drawing.Size(1225, 320);
             this.panelControl3.TabIndex = 59;
             // 
             // gridControl_TabaghehKala
@@ -708,7 +710,7 @@
             this.gridControl_TabaghehKala.MainView = this.gridView_TabaghehKala;
             this.gridControl_TabaghehKala.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_TabaghehKala.Name = "gridControl_TabaghehKala";
-            this.gridControl_TabaghehKala.Size = new System.Drawing.Size(1221, 327);
+            this.gridControl_TabaghehKala.Size = new System.Drawing.Size(1221, 316);
             this.gridControl_TabaghehKala.TabIndex = 34;
             this.gridControl_TabaghehKala.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_TabaghehKala});
@@ -907,6 +909,7 @@
             // 
             // panelControl_Tabagheh
             // 
+            this.panelControl_Tabagheh.Controls.Add(this.radioGroup1);
             this.panelControl_Tabagheh.Controls.Add(this.txtIndex_TabaghehKala);
             this.panelControl_Tabagheh.Controls.Add(this.btnReloadGroupTafsili_Tabagheh);
             this.panelControl_Tabagheh.Controls.Add(this.labelControl58);
@@ -927,9 +930,9 @@
             this.panelControl_Tabagheh.Controls.Add(this.cmbGroupTafsili_Tabagheh);
             this.panelControl_Tabagheh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_Tabagheh.Enabled = false;
-            this.panelControl_Tabagheh.Location = new System.Drawing.Point(0, 331);
+            this.panelControl_Tabagheh.Location = new System.Drawing.Point(0, 320);
             this.panelControl_Tabagheh.Name = "panelControl_Tabagheh";
-            this.panelControl_Tabagheh.Size = new System.Drawing.Size(1225, 173);
+            this.panelControl_Tabagheh.Size = new System.Drawing.Size(1225, 246);
             this.panelControl_Tabagheh.TabIndex = 58;
             // 
             // txtIndex_TabaghehKala
@@ -1200,9 +1203,9 @@
             this.btnNewCode_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_Tabagheh.Name = "btnNewCode_Tabagheh";
             this.btnNewCode_Tabagheh.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem5.Text = "Alt+N";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            this.btnNewCode_Tabagheh.SuperTip = superToolTip5;
+            toolTipTitleItem1.Text = "Alt+N";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnNewCode_Tabagheh.SuperTip = superToolTip1;
             this.btnNewCode_Tabagheh.TabIndex = 29;
             this.btnNewCode_Tabagheh.TabStop = false;
             this.btnNewCode_Tabagheh.Text = "کد جدید";
@@ -1252,7 +1255,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KeyCode", "کد", 90, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelName", "نام حساب", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNamber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LevelNumber", "سطح", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbGroupTafsili_Tabagheh.Properties.DataSource = typeof(DBHesabdari_PG.Models.EP.CodingHesabdari.EpAllGroupTafsili);
             this.cmbGroupTafsili_Tabagheh.Properties.DisplayMember = "LevelName";
@@ -1785,9 +1788,9 @@
             this.btnNewCode_GroupAsli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_GroupAsli.Name = "btnNewCode_GroupAsli";
             this.btnNewCode_GroupAsli.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem6.Text = "Alt+N";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            this.btnNewCode_GroupAsli.SuperTip = superToolTip6;
+            toolTipTitleItem2.Text = "Alt+N";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnNewCode_GroupAsli.SuperTip = superToolTip2;
             this.btnNewCode_GroupAsli.TabIndex = 189;
             this.btnNewCode_GroupAsli.TabStop = false;
             this.btnNewCode_GroupAsli.Text = "کد جدید";
@@ -2417,9 +2420,9 @@
             this.btnNewCode_GroupFaree.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_GroupFaree.Name = "btnNewCode_GroupFaree";
             this.btnNewCode_GroupFaree.Size = new System.Drawing.Size(125, 36);
-            toolTipTitleItem7.Text = "Alt+N";
-            superToolTip7.Items.Add(toolTipTitleItem7);
-            this.btnNewCode_GroupFaree.SuperTip = superToolTip7;
+            toolTipTitleItem3.Text = "Alt+N";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnNewCode_GroupFaree.SuperTip = superToolTip3;
             this.btnNewCode_GroupFaree.TabIndex = 191;
             this.btnNewCode_GroupFaree.TabStop = false;
             this.btnNewCode_GroupFaree.Text = "کد جدید";
@@ -3645,9 +3648,9 @@
             this.btnNewCode_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_NameKala.Name = "btnNewCode_NameKala";
             this.btnNewCode_NameKala.Size = new System.Drawing.Size(43, 36);
-            toolTipTitleItem8.Text = "Alt+N";
-            superToolTip8.Items.Add(toolTipTitleItem8);
-            this.btnNewCode_NameKala.SuperTip = superToolTip8;
+            toolTipTitleItem4.Text = "Alt+N";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnNewCode_NameKala.SuperTip = superToolTip4;
             this.btnNewCode_NameKala.TabIndex = 29;
             this.btnNewCode_NameKala.TabStop = false;
             this.btnNewCode_NameKala.ToolTip = "کد جدید";
@@ -3852,7 +3855,7 @@
             this.txtZekhamat_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtZekhamat_NameKala.Properties.MaxLength = 9;
             this.txtZekhamat_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtZekhamat_NameKala.TabIndex = 12;
+            this.txtZekhamat_NameKala.TabIndex = 10;
             // 
             // labelControl56
             // 
@@ -3881,7 +3884,7 @@
             this.txtSaiz_NameKala.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSaiz_NameKala.Properties.MaxLength = 20;
             this.txtSaiz_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtSaiz_NameKala.TabIndex = 16;
+            this.txtSaiz_NameKala.TabIndex = 14;
             this.txtSaiz_NameKala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaiz_NameKala_KeyPress);
             // 
             // txtMohit_NameKala
@@ -3900,7 +3903,7 @@
             this.txtMohit_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMohit_NameKala.Properties.MaxLength = 9;
             this.txtMohit_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtMohit_NameKala.TabIndex = 14;
+            this.txtMohit_NameKala.TabIndex = 12;
             // 
             // txtMasahat_NameKala
             // 
@@ -3918,7 +3921,7 @@
             this.txtMasahat_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMasahat_NameKala.Properties.MaxLength = 9;
             this.txtMasahat_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtMasahat_NameKala.TabIndex = 13;
+            this.txtMasahat_NameKala.TabIndex = 11;
             // 
             // txtHajm_NameKala
             // 
@@ -3936,7 +3939,7 @@
             this.txtHajm_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHajm_NameKala.Properties.MaxLength = 9;
             this.txtHajm_NameKala.Size = new System.Drawing.Size(82, 34);
-            this.txtHajm_NameKala.TabIndex = 15;
+            this.txtHajm_NameKala.TabIndex = 13;
             // 
             // labelControl39
             // 
@@ -4006,7 +4009,7 @@
             this.txtErtefae_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtErtefae_NameKala.Properties.MaxLength = 9;
             this.txtErtefae_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtErtefae_NameKala.TabIndex = 11;
+            this.txtErtefae_NameKala.TabIndex = 9;
             // 
             // txtArz_NameKala
             // 
@@ -4024,7 +4027,7 @@
             this.txtArz_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtArz_NameKala.Properties.MaxLength = 9;
             this.txtArz_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtArz_NameKala.TabIndex = 10;
+            this.txtArz_NameKala.TabIndex = 8;
             // 
             // txtTool_NameKala
             // 
@@ -4042,7 +4045,7 @@
             this.txtTool_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTool_NameKala.Properties.MaxLength = 9;
             this.txtTool_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtTool_NameKala.TabIndex = 9;
+            this.txtTool_NameKala.TabIndex = 7;
             // 
             // txtVazn_NameKala
             // 
@@ -4060,7 +4063,7 @@
             this.txtVazn_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtVazn_NameKala.Properties.MaxLength = 9;
             this.txtVazn_NameKala.Size = new System.Drawing.Size(85, 34);
-            this.txtVazn_NameKala.TabIndex = 8;
+            this.txtVazn_NameKala.TabIndex = 6;
             // 
             // labelControl33
             // 
@@ -4125,6 +4128,7 @@
             this.chkVahedKala3_NameKala.Properties.Caption = "";
             this.chkVahedKala3_NameKala.Size = new System.Drawing.Size(22, 24);
             this.chkVahedKala3_NameKala.TabIndex = 4;
+            this.chkVahedKala3_NameKala.TabStop = false;
             this.chkVahedKala3_NameKala.CheckedChanged += new System.EventHandler(this.chkVahedKala3_CheckedChanged);
             // 
             // chkVahedKala2_NameKala
@@ -4138,6 +4142,7 @@
             this.chkVahedKala2_NameKala.Properties.Caption = "";
             this.chkVahedKala2_NameKala.Size = new System.Drawing.Size(22, 24);
             this.chkVahedKala2_NameKala.TabIndex = 1;
+            this.chkVahedKala2_NameKala.TabStop = false;
             this.chkVahedKala2_NameKala.CheckedChanged += new System.EventHandler(this.chkVahedKala2_CheckedChanged);
             // 
             // txtHarKarton_NameKala
@@ -4157,7 +4162,7 @@
             this.txtHarKarton_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHarKarton_NameKala.Properties.MaxLength = 9;
             this.txtHarKarton_NameKala.Size = new System.Drawing.Size(70, 34);
-            this.txtHarKarton_NameKala.TabIndex = 6;
+            this.txtHarKarton_NameKala.TabIndex = 4;
             // 
             // txtHarBaste_NameKala
             // 
@@ -4176,7 +4181,7 @@
             this.txtHarBaste_NameKala.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHarBaste_NameKala.Properties.MaxLength = 9;
             this.txtHarBaste_NameKala.Size = new System.Drawing.Size(70, 34);
-            this.txtHarBaste_NameKala.TabIndex = 3;
+            this.txtHarBaste_NameKala.TabIndex = 2;
             // 
             // labelControl21
             // 
@@ -4300,7 +4305,7 @@
             this.cmbVahedKala3_NameKala.Properties.ValueMember = "Id";
             this.cmbVahedKala3_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala3_NameKala.Size = new System.Drawing.Size(186, 34);
-            this.cmbVahedKala3_NameKala.TabIndex = 5;
+            this.cmbVahedKala3_NameKala.TabIndex = 3;
             this.cmbVahedKala3_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbVahedKala3_NameKala.EditValueChanged += new System.EventHandler(this.cmbVahedKala3_EditValueChanged);
             this.cmbVahedKala3_NameKala.Enter += new System.EventHandler(this.cmbVahedKala3_Enter);
@@ -4310,6 +4315,7 @@
             this.btnVahedKala3_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVahedKala3_NameKala.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala3_NameKala.Appearance.Options.UseForeColor = true;
+            this.btnVahedKala3_NameKala.Enabled = false;
             this.btnVahedKala3_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala3_NameKala.ImageOptions.SvgImage")));
             this.btnVahedKala3_NameKala.Location = new System.Drawing.Point(852, 98);
             this.btnVahedKala3_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -4357,7 +4363,7 @@
             this.cmbVahedKala2_NameKala.Properties.ValueMember = "Id";
             this.cmbVahedKala2_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala2_NameKala.Size = new System.Drawing.Size(186, 34);
-            this.cmbVahedKala2_NameKala.TabIndex = 2;
+            this.cmbVahedKala2_NameKala.TabIndex = 1;
             this.cmbVahedKala2_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.LookupEdit_CustomDrawCell);
             this.cmbVahedKala2_NameKala.EditValueChanged += new System.EventHandler(this.cmbVahedKala2_EditValueChanged);
             this.cmbVahedKala2_NameKala.Enter += new System.EventHandler(this.cmbVahedKala2_Enter);
@@ -4367,6 +4373,7 @@
             this.btnVahedKala2_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVahedKala2_NameKala.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala2_NameKala.Appearance.Options.UseForeColor = true;
+            this.btnVahedKala2_NameKala.Enabled = false;
             this.btnVahedKala2_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala2_NameKala.ImageOptions.SvgImage")));
             this.btnVahedKala2_NameKala.Location = new System.Drawing.Point(852, 55);
             this.btnVahedKala2_NameKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -4468,7 +4475,7 @@
             this.cmbVahedAsli.Properties.ValueMember = "Id";
             this.cmbVahedAsli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedAsli.Size = new System.Drawing.Size(186, 34);
-            this.cmbVahedAsli.TabIndex = 7;
+            this.cmbVahedAsli.TabIndex = 5;
             this.cmbVahedAsli.Enter += new System.EventHandler(this.cmbVahedAsli_Enter);
             // 
             // epVahedKalasBindingSource1
@@ -4994,7 +5001,7 @@
             this.treeListCodingKala.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colLevelName,
             this.colKeyCode,
-            this.colLevelNamber,
+            this.colLevelNumber,
             this.colIsActive1,
             this.treeListColumn1});
             this.treeListCodingKala.Cursor = System.Windows.Forms.Cursors.Default;
@@ -5029,12 +5036,12 @@
             this.colLevelName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colLevelName.Caption = "کدینگ کالا  ";
             this.colLevelName.FieldName = "LevelName";
-            this.colLevelName.MaxWidth = 545;
-            this.colLevelName.MinWidth = 22;
+            this.colLevelName.MaxWidth = 550;
+            this.colLevelName.MinWidth = 550;
             this.colLevelName.Name = "colLevelName";
             this.colLevelName.Visible = true;
             this.colLevelName.VisibleIndex = 0;
-            this.colLevelName.Width = 455;
+            this.colLevelName.Width = 550;
             // 
             // colKeyCode
             // 
@@ -5049,26 +5056,24 @@
             this.colKeyCode.MaxWidth = 109;
             this.colKeyCode.MinWidth = 18;
             this.colKeyCode.Name = "colKeyCode";
-            this.colKeyCode.Visible = true;
-            this.colKeyCode.VisibleIndex = 1;
             this.colKeyCode.Width = 109;
             // 
-            // colLevelNamber
+            // colLevelNumber
             // 
-            this.colLevelNamber.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.Caption = "سطح";
-            this.colLevelNamber.FieldName = "LevelNamber";
-            this.colLevelNamber.MaxWidth = 73;
-            this.colLevelNamber.MinWidth = 18;
-            this.colLevelNamber.Name = "colLevelNamber";
-            this.colLevelNamber.Visible = true;
-            this.colLevelNamber.VisibleIndex = 2;
-            this.colLevelNamber.Width = 58;
+            this.colLevelNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.Caption = "سطح";
+            this.colLevelNumber.FieldName = "LevelNumber";
+            this.colLevelNumber.MaxWidth = 80;
+            this.colLevelNumber.MinWidth = 80;
+            this.colLevelNumber.Name = "colLevelNumber";
+            this.colLevelNumber.Visible = true;
+            this.colLevelNumber.VisibleIndex = 1;
+            this.colLevelNumber.Width = 80;
             // 
             // colIsActive1
             // 
@@ -5080,12 +5085,12 @@
             this.colIsActive1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colIsActive1.Caption = "فعال";
             this.colIsActive1.FieldName = "IsActive";
-            this.colIsActive1.MaxWidth = 73;
-            this.colIsActive1.MinWidth = 18;
+            this.colIsActive1.MaxWidth = 80;
+            this.colIsActive1.MinWidth = 80;
             this.colIsActive1.Name = "colIsActive1";
             this.colIsActive1.Visible = true;
-            this.colIsActive1.VisibleIndex = 3;
-            this.colIsActive1.Width = 58;
+            this.colIsActive1.VisibleIndex = 2;
+            this.colIsActive1.Width = 80;
             // 
             // treeListColumn1
             // 
@@ -5096,17 +5101,25 @@
             this.treeListColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.treeListColumn1.Caption = "توضیح یا تشریح حساب";
             this.treeListColumn1.FieldName = "توضیح یا تشریح حساب";
-            this.treeListColumn1.MinWidth = 18;
+            this.treeListColumn1.MinWidth = 550;
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.Visible = true;
-            this.treeListColumn1.VisibleIndex = 4;
-            this.treeListColumn1.Width = 407;
+            this.treeListColumn1.VisibleIndex = 3;
+            this.treeListColumn1.Width = 587;
+            // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Location = new System.Drawing.Point(866, 179);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Columns = 3;
+            this.radioGroup1.Size = new System.Drawing.Size(231, 36);
+            this.radioGroup1.TabIndex = 212;
             // 
             // FrmCodingKala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 596);
+            this.ClientSize = new System.Drawing.Size(1227, 658);
             this.Controls.Add(this.xtraTabControl_CodingKala);
             this.Controls.Add(this.panelControl_Button);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmCodingKala.IconOptions.Icon")));
@@ -5257,6 +5270,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lstSerialKala_NameKala.Properties)).EndInit();
             this.xtraTabPage_DerakhtVareh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingKala)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5484,7 +5498,7 @@
         private DevExpress.XtraTreeList.TreeList treeListCodingKala;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelName;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colKeyCode;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelNamber;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelNumber;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colIsActive1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private DevExpress.XtraGrid.GridControl gridControl_TabaghehKala;
@@ -5547,5 +5561,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl40;
         private DevExpress.XtraEditors.MemoEdit lstShomareFani_NameKala;
         private DevExpress.XtraEditors.MemoEdit lstSerialKala_NameKala;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }

@@ -84,7 +84,7 @@
             this.colEpAllHesabTafsili1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTarikhEjad1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLevelNamber1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLevelNumber1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEpAllHesabTafsili12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCreateName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -153,7 +153,7 @@
             this.colIsKharidar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsFroshandeh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTarikhEjad = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLevelNamber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLevelNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEpAllHesabTafsili11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEpGroupTafsiliLevel11 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -174,7 +174,7 @@
             this.colCodeShobe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNoeHesab = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTarikhEjad2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLevelNamber2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLevelNumber2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -221,7 +221,7 @@
             this.colIsDefault = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNameMasol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTarikhEjad3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLevelNamber3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLevelNumber3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -268,7 +268,7 @@
             this.colNoeArz = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsDefault1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTarikhEjad6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLevelNamber4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLevelNumber4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -329,7 +329,7 @@
             this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTarikhEjad4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLevelNamber5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLevelNumber5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -1224,7 +1224,7 @@
             this.colEpAllHesabTafsili1,
             this.gridColumn11,
             this.colTarikhEjad1,
-            this.colLevelNamber1,
+            this.colLevelNumber1,
             this.colEpAllHesabTafsili12,
             this.colCreateName,
             this.gridColumn15,
@@ -1373,21 +1373,21 @@
             this.colTarikhEjad1.VisibleIndex = 6;
             this.colTarikhEjad1.Width = 136;
             // 
-            // colLevelNamber1
+            // colLevelNumber1
             // 
-            this.colLevelNamber1.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber1.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber1.Caption = "سطح";
-            this.colLevelNamber1.FieldName = "LevelNamber";
-            this.colLevelNamber1.MinWidth = 23;
-            this.colLevelNamber1.Name = "colLevelNamber1";
-            this.colLevelNamber1.Visible = true;
-            this.colLevelNamber1.VisibleIndex = 7;
-            this.colLevelNamber1.Width = 84;
+            this.colLevelNumber1.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber1.Caption = "سطح";
+            this.colLevelNumber1.FieldName = "LevelNumber";
+            this.colLevelNumber1.MinWidth = 23;
+            this.colLevelNumber1.Name = "colLevelNumber1";
+            this.colLevelNumber1.Visible = true;
+            this.colLevelNumber1.VisibleIndex = 7;
+            this.colLevelNumber1.Width = 84;
             // 
             // colEpAllHesabTafsili12
             // 
@@ -2112,7 +2112,7 @@
             this.colEndCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEndCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colEndCode.Caption = "سطح";
-            this.colEndCode.FieldName = "LevelNamber";
+            this.colEndCode.FieldName = "LevelNumber";
             this.colEndCode.MinWidth = 22;
             this.colEndCode.Name = "colEndCode";
             this.colEndCode.Visible = true;
@@ -2199,7 +2199,7 @@
             this.colIsKharidar,
             this.colIsFroshandeh,
             this.colTarikhEjad,
-            this.colLevelNamber,
+            this.colLevelNumber,
             this.colEpAllHesabTafsili11,
             this.gridColumn6,
             this.colEpGroupTafsiliLevel11,
@@ -2458,21 +2458,21 @@
             this.colTarikhEjad.VisibleIndex = 13;
             this.colTarikhEjad.Width = 138;
             // 
-            // colLevelNamber
+            // colLevelNumber
             // 
-            this.colLevelNamber.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber.Caption = "سطح";
-            this.colLevelNamber.FieldName = "LevelNamber";
-            this.colLevelNamber.MinWidth = 22;
-            this.colLevelNamber.Name = "colLevelNamber";
-            this.colLevelNamber.Visible = true;
-            this.colLevelNamber.VisibleIndex = 14;
-            this.colLevelNamber.Width = 85;
+            this.colLevelNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.Caption = "سطح";
+            this.colLevelNumber.FieldName = "LevelNumber";
+            this.colLevelNumber.MinWidth = 22;
+            this.colLevelNumber.Name = "colLevelNumber";
+            this.colLevelNumber.Visible = true;
+            this.colLevelNumber.VisibleIndex = 14;
+            this.colLevelNumber.Width = 85;
             // 
             // colEpAllHesabTafsili11
             // 
@@ -2564,7 +2564,7 @@
             this.colCodeShobe,
             this.colNoeHesab,
             this.colTarikhEjad2,
-            this.colLevelNamber2,
+            this.colLevelNumber2,
             this.gridColumn21,
             this.gridColumn22,
             this.gridColumn23});
@@ -2776,21 +2776,21 @@
             this.colTarikhEjad2.VisibleIndex = 10;
             this.colTarikhEjad2.Width = 143;
             // 
-            // colLevelNamber2
+            // colLevelNumber2
             // 
-            this.colLevelNamber2.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber2.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber2.Caption = "سطح";
-            this.colLevelNamber2.FieldName = "LevelNamber";
-            this.colLevelNamber2.MinWidth = 23;
-            this.colLevelNamber2.Name = "colLevelNamber2";
-            this.colLevelNamber2.Visible = true;
-            this.colLevelNamber2.VisibleIndex = 11;
-            this.colLevelNamber2.Width = 85;
+            this.colLevelNumber2.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber2.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber2.Caption = "سطح";
+            this.colLevelNumber2.FieldName = "LevelNumber";
+            this.colLevelNumber2.MinWidth = 23;
+            this.colLevelNumber2.Name = "colLevelNumber2";
+            this.colLevelNumber2.Visible = true;
+            this.colLevelNumber2.VisibleIndex = 11;
+            this.colLevelNumber2.Width = 85;
             // 
             // gridColumn21
             // 
@@ -3386,7 +3386,7 @@
             this.colIsDefault,
             this.colNameMasol,
             this.colTarikhEjad3,
-            this.colLevelNamber3,
+            this.colLevelNumber3,
             this.gridColumn31,
             this.gridColumn29,
             this.gridColumn30});
@@ -3547,21 +3547,21 @@
             this.colTarikhEjad3.VisibleIndex = 7;
             this.colTarikhEjad3.Width = 135;
             // 
-            // colLevelNamber3
+            // colLevelNumber3
             // 
-            this.colLevelNamber3.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber3.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber3.Caption = "سطح";
-            this.colLevelNamber3.FieldName = "LevelNamber";
-            this.colLevelNamber3.MinWidth = 23;
-            this.colLevelNamber3.Name = "colLevelNamber3";
-            this.colLevelNamber3.Visible = true;
-            this.colLevelNamber3.VisibleIndex = 8;
-            this.colLevelNamber3.Width = 85;
+            this.colLevelNumber3.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber3.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber3.Caption = "سطح";
+            this.colLevelNumber3.FieldName = "LevelNumber";
+            this.colLevelNumber3.MinWidth = 23;
+            this.colLevelNumber3.Name = "colLevelNumber3";
+            this.colLevelNumber3.Visible = true;
+            this.colLevelNumber3.VisibleIndex = 8;
+            this.colLevelNumber3.Width = 85;
             // 
             // gridColumn31
             // 
@@ -4017,7 +4017,7 @@
             this.colNoeArz,
             this.colIsDefault1,
             this.colTarikhEjad6,
-            this.colLevelNamber4,
+            this.colLevelNumber4,
             this.gridColumn41,
             this.gridColumn42,
             this.gridColumn43});
@@ -4307,21 +4307,21 @@
             this.colTarikhEjad6.VisibleIndex = 15;
             this.colTarikhEjad6.Width = 134;
             // 
-            // colLevelNamber4
+            // colLevelNumber4
             // 
-            this.colLevelNamber4.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber4.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber4.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber4.Caption = "سطح";
-            this.colLevelNamber4.FieldName = "LevelNamber";
-            this.colLevelNamber4.MinWidth = 23;
-            this.colLevelNamber4.Name = "colLevelNamber4";
-            this.colLevelNamber4.Visible = true;
-            this.colLevelNamber4.VisibleIndex = 16;
-            this.colLevelNamber4.Width = 89;
+            this.colLevelNumber4.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber4.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber4.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber4.Caption = "سطح";
+            this.colLevelNumber4.FieldName = "LevelNumber";
+            this.colLevelNumber4.MinWidth = 23;
+            this.colLevelNumber4.Name = "colLevelNumber4";
+            this.colLevelNumber4.Visible = true;
+            this.colLevelNumber4.VisibleIndex = 16;
+            this.colLevelNumber4.Width = 89;
             // 
             // gridColumn41
             // 
@@ -5105,7 +5105,7 @@
             this.gridColumn50,
             this.gridColumn51,
             this.colTarikhEjad4,
-            this.colLevelNamber5,
+            this.colLevelNumber5,
             this.gridColumn55,
             this.gridColumn53,
             this.gridColumn54});
@@ -5315,21 +5315,21 @@
             this.colTarikhEjad4.VisibleIndex = 10;
             this.colTarikhEjad4.Width = 145;
             // 
-            // colLevelNamber5
+            // colLevelNumber5
             // 
-            this.colLevelNamber5.AppearanceCell.Options.UseTextOptions = true;
-            this.colLevelNamber5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber5.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber5.AppearanceHeader.Options.UseTextOptions = true;
-            this.colLevelNamber5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colLevelNamber5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colLevelNamber5.Caption = "سطح";
-            this.colLevelNamber5.FieldName = "LevelNamber";
-            this.colLevelNamber5.MinWidth = 23;
-            this.colLevelNamber5.Name = "colLevelNamber5";
-            this.colLevelNamber5.Visible = true;
-            this.colLevelNamber5.VisibleIndex = 11;
-            this.colLevelNamber5.Width = 85;
+            this.colLevelNumber5.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber5.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber5.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber5.Caption = "سطح";
+            this.colLevelNumber5.FieldName = "LevelNumber";
+            this.colLevelNumber5.MinWidth = 23;
+            this.colLevelNumber5.Name = "colLevelNumber5";
+            this.colLevelNumber5.Visible = true;
+            this.colLevelNumber5.VisibleIndex = 11;
+            this.colLevelNumber5.Width = 85;
             // 
             // gridColumn55
             // 
@@ -6056,7 +6056,7 @@
             this.gridColumn68.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn68.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn68.Caption = "سطح";
-            this.gridColumn68.FieldName = "LevelNamber";
+            this.gridColumn68.FieldName = "LevelNumber";
             this.gridColumn68.MinWidth = 23;
             this.gridColumn68.Name = "gridColumn68";
             this.gridColumn68.Visible = true;
@@ -6603,7 +6603,7 @@
             this.gridColumn74.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn74.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn74.Caption = "سطح";
-            this.gridColumn74.FieldName = "LevelNamber";
+            this.gridColumn74.FieldName = "LevelNumber";
             this.gridColumn74.MinWidth = 23;
             this.gridColumn74.Name = "gridColumn74";
             this.gridColumn74.Visible = true;
@@ -7150,7 +7150,7 @@
             this.gridColumn85.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn85.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn85.Caption = "سطح";
-            this.gridColumn85.FieldName = "LevelNamber";
+            this.gridColumn85.FieldName = "LevelNumber";
             this.gridColumn85.MinWidth = 23;
             this.gridColumn85.Name = "gridColumn85";
             this.gridColumn85.Visible = true;
@@ -7697,7 +7697,7 @@
             this.gridColumn96.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn96.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn96.Caption = "سطح";
-            this.gridColumn96.FieldName = "LevelNamber";
+            this.gridColumn96.FieldName = "LevelNumber";
             this.gridColumn96.MinWidth = 23;
             this.gridColumn96.Name = "gridColumn96";
             this.gridColumn96.Visible = true;
@@ -8243,7 +8243,7 @@
             this.gridColumn118.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn118.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn118.Caption = "سطح";
-            this.gridColumn118.FieldName = "LevelNamber";
+            this.gridColumn118.FieldName = "LevelNumber";
             this.gridColumn118.MinWidth = 23;
             this.gridColumn118.Name = "gridColumn118";
             this.gridColumn118.Visible = true;
@@ -8790,7 +8790,7 @@
             this.gridColumn107.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn107.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn107.Caption = "سطح";
-            this.gridColumn107.FieldName = "LevelNamber";
+            this.gridColumn107.FieldName = "LevelNumber";
             this.gridColumn107.MinWidth = 23;
             this.gridColumn107.Name = "gridColumn107";
             this.gridColumn107.Visible = true;
@@ -9805,7 +9805,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colIsRanande;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn colLevelNamber;
+        private DevExpress.XtraGrid.Columns.GridColumn colLevelNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllGroupTafsili1;
         private DevExpress.XtraGrid.Columns.GridColumn colIsKharidar;
         private DevExpress.XtraGrid.Columns.GridColumn colIsFroshandeh;
@@ -9823,7 +9823,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllHesabTafsili1;
         private DevExpress.XtraGrid.Columns.GridColumn colTarikhEjad1;
-        private DevExpress.XtraGrid.Columns.GridColumn colLevelNamber1;
+        private DevExpress.XtraGrid.Columns.GridColumn colLevelNumber1;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllGroupTafsili11;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllHesabTafsili11;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllHesabTafsili12;
@@ -9874,7 +9874,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllHesabTafsili13;
         private DevExpress.XtraGrid.Columns.GridColumn colCodeAmval;
         private DevExpress.XtraGrid.Columns.GridColumn colTarikhEjad2;
-        private DevExpress.XtraGrid.Columns.GridColumn colLevelNamber2;
+        private DevExpress.XtraGrid.Columns.GridColumn colLevelNumber2;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.PanelControl panelControl_Sandogh;
         public DevExpress.XtraEditors.LookUpEdit cmbGroupTafsili_Sandogh;
@@ -9911,7 +9911,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllHesabTafsili14;
         private DevExpress.XtraGrid.Columns.GridColumn colIsDefault;
         private DevExpress.XtraGrid.Columns.GridColumn colTarikhEjad3;
-        private DevExpress.XtraGrid.Columns.GridColumn colLevelNamber3;
+        private DevExpress.XtraGrid.Columns.GridColumn colLevelNumber3;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraGrid.GridControl gridControl_Bank;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView_Bank;
@@ -9935,7 +9935,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllHesabTafsili15;
         private DevExpress.XtraGrid.Columns.GridColumn colIsDefault1;
-        private DevExpress.XtraGrid.Columns.GridColumn colLevelNamber4;
+        private DevExpress.XtraGrid.Columns.GridColumn colLevelNumber4;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.PanelControl panelControl_Vam;
         private DevExpress.XtraEditors.LabelControl labelControl20;
@@ -9982,7 +9982,7 @@
         private DevExpress.XtraEditors.TextEdit txtTedadAghsat_Vam;
         private DevExpress.XtraEditors.TextEdit txtNerkhBahre_Vam;
         private DevExpress.XtraGrid.Columns.GridColumn colEpAllHesabTafsili16;
-        private DevExpress.XtraGrid.Columns.GridColumn colLevelNamber5;
+        private DevExpress.XtraGrid.Columns.GridColumn colLevelNumber5;
         private DevExpress.XtraGrid.Columns.GridColumn colTarikhEjad4;
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraGrid.GridControl gridControl_Marakez;

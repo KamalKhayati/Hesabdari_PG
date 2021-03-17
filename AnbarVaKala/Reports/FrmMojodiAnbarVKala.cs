@@ -75,7 +75,7 @@ namespace AnbarVaKala.Reports
                     //dt.Columns[15].DataType = typeof(decimal);
                     //dt.Columns[16].DataType = typeof(decimal);
 
-                    //var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNamber == 4).ToList();
+                    //var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNumber == 4).ToList();
                     //var q3 = db.AkAllAmaliateRozanehs.Where(s => s.SalId == _SalId).ToList();
                     //var q1 = q3.Select(s => s.KalaId).Distinct().ToList();
                     //if (q3.Count > 0)
@@ -240,7 +240,7 @@ namespace AnbarVaKala.Reports
                             _List1 = _List1.OrderBy(s => s.DateTimeSanad).ThenBy(s => s.Id).ToList();
                             var q1 = _List1.Select(s => s.KalaId).Distinct().ToList();
 
-                            var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNamber == 4).ToList();
+                            var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNumber == 4).ToList();
                             var q5 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
 
                             List<AmaliatAnbarVKala_Riz> _List2 = new List<AmaliatAnbarVKala_Riz>();
@@ -271,7 +271,7 @@ namespace AnbarVaKala.Reports
                                 foreach (var item in CheckedList)
                                 {
                                     int _AnbarId = Convert.ToInt32(item);
-                                    if (_List1.Any(s => s.AzAnbarId == _AnbarId && s.KalaId == q1[RowCounter]))
+                                    if (_List1.Any(s => s.KalaId == q1[RowCounter]))
                                     {
 
                                         if (chkIsEdgham.Checked)

@@ -652,7 +652,53 @@ namespace HelpClassLibrary
         }
         public static void SwitchToPersianLanguage()
         {
+            //CultureInfo faIR = new CultureInfo("fa-IR");
+            //Thread.CurrentThread.CurrentCulture = faIR;
+            //Thread.CurrentThread.CurrentUICulture = faIR;
+
+            //faIR = CultureInfo.CreateSpecificCulture("fa-IR");
+            //InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(faIR);
+
             InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(System.Globalization.CultureInfo.CreateSpecificCulture("fa-IR"));
+
+            //Calendar defaultCalendar = faIR.Calendar;
+
+            //if (defaultCalendar is GregorianCalendar)
+            //    Console.WriteLine(" ({0})",
+            //                      ((GregorianCalendar)defaultCalendar).CalendarType);
+            //else
+            //    XtraMessageBox.Show(defaultCalendar.AlgorithmType.ToString(),
+            //            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public static bool IsSetGregorianCalendar()
+        {
+
+
+            if (CultureInfo.CurrentCulture.Calendar.ToString() != "System.Globalization.GregorianCalendar")
+            {
+
+                string tg = string.Empty;
+                //string tg1 = CultureInfo.CurrentCulture.Calendar.ToString();
+                if (CultureInfo.CurrentCulture.Calendar.ToString() == "System.Globalization.PersianCalendar")
+                {
+                    tg = "تقویم هجری شمسی";
+                }
+                else if (CultureInfo.CurrentCulture.Calendar.ToString() == "System.Globalization.HijriCalendar")
+                {
+                    tg = "تقویم هجری قمری";
+                }
+                else
+                {
+                    tg = "گزینه مورد نظر برنامه";
+                }
+                XtraMessageBox.Show("تقویم سیستم روی " + "( " + tg + " ) تنظیم شده است" + Environment.NewLine + "لطفاً آنرا روی ( تقویم میلادی (محلی شده) ) تنظیم کنید در غیر اینصورت نمایش و ذخیره اطلاعات با مشکل مواجه خواهد شد", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
         }
         public static void SetRegionAndLanguage()
         {
@@ -685,11 +731,15 @@ namespace HelpClassLibrary
             regkey.SetValue("s2359", "ب.ظ");
             regkey.SetValue("sCountry", "Iran");
             regkey.SetValue("sCurrency", " ");
+            regkey.SetValue("sCurrencySymbol", " ");
             regkey.SetValue("sDate", "/");
             regkey.SetValue("sDecimal", ".");
             regkey.SetValue("sGrouping", "3;0");
             regkey.SetValue("sLanguage", "FAR");
             regkey.SetValue("sList", ";");
+            //regkey.SetValue("sShortDate", "dd/MM/yyyy");
+            //regkey.SetValue("sLongDate", "dd/MM/yyyy");
+            regkey.SetValue("sShortDate", "yyyy/MM/dd");
             regkey.SetValue("sLongDate", "yyyy/MM/dd");
             regkey.SetValue("sMonDecimalSep", "/");
             regkey.SetValue("sMonGrouping", "3;0");
@@ -697,10 +747,13 @@ namespace HelpClassLibrary
             regkey.SetValue("sNativeDigits", "۰۱۲۳۴۵۶۷۸۹");
             regkey.SetValue("sNegativeSign", "-");
             regkey.SetValue("sPositiveSign", "");
-            regkey.SetValue("sShortDate", "yyyy/MM/dd");
             regkey.SetValue("sShortTime", "hh:mm tt");
+            regkey.SetValue("sLongTime", "hh:mm:ss tt");
+            //regkey.SetValue("sShortTime", "HH:mm");
+            //regkey.SetValue("sLongTime", "HH:mm:ss");
             regkey.SetValue("sThousand", ",");
             regkey.SetValue("sTime", ":");
+            //regkey.SetValue("sTimeFormat", "HH:mm:ss");
             regkey.SetValue("sTimeFormat", "hh:mm:ss tt");
             regkey.SetValue("sYearMonth", "MMMM,yyyy");
 
@@ -741,6 +794,7 @@ namespace HelpClassLibrary
             //rkey.Close();
             /////////////////////////////////////////////////////////////
         }
+
         public static void MoveLast(GridView gridView)
         {
             gridView.MoveLast();

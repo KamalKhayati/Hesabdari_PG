@@ -182,7 +182,7 @@ namespace AnbarVaKala.Reports
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     //DataSet ds = new DataSet();
 
-                    //var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNamber==4).ToList();
+                    //var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNumber==4).ToList();
                     int _AnbarId = Convert.ToInt32(cmbAnbarName.EditValue);
                     int _KalaId = Convert.ToInt32(cmbKalaName.EditValue);
 
@@ -205,7 +205,7 @@ namespace AnbarVaKala.Reports
                     var q7 = q1.Where(s => s.DateTimeSanad < StartDate).OrderBy(s => s.DateTimeSanad).ThenBy(s => s.Id).ToList();
                     var q4 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
                     var q5 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
-                    var q6 = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == 1).ToList();
+                    var q6 = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == 1).ToList();
                     //var q8 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
 
                     if (q1.Count > 0)

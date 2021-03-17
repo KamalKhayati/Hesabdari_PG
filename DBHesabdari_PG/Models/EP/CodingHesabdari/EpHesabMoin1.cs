@@ -27,8 +27,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
-        public int LevelNamber { get; set; }
-        [Required]
         public int Code { get; set; }
         [Required, MaxLength(70)]
         public string Name { get; set; }
@@ -50,6 +48,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public string MahiatHesab { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        [Required]
+        public int LevelNumber { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         [MaxLength(1000)]
@@ -80,7 +80,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required, Column(Order = 2)]
         public int AllGroupTafsiliId { get; set; }
         [Required, Column(Order = 3)]
-        public int LevelNamber { get; set; }
+        public int LevelNumber { get; set; }
 
         //[Required, Column(Order = 3)]
         //public int NumberLevel { get; set; }

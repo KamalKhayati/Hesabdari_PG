@@ -94,79 +94,79 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             case "xtpAllHesabTafsili":
                                 {
-                                    var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpAshkhas":
                                 {
-                                    var q = db.EpHesabTafsiliAshkhass.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliAshkhass.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpAghlamAnbar":
                                 {
-                                    var q = db.EpHesabTafsiliAghlamAnbars.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliAghlamAnbars.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpDaraeha":
                                 {
-                                    var q = db.EpHesabTafsiliDaraehas.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliDaraehas.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpSandoghha":
                                 {
-                                    var q = db.EpHesabTafsiliSandoghs.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliSandoghs.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpBankha":
                                 {
-                                    var q = db.EpHesabTafsiliBankhas.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliBankhas.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpVamha":
                                 {
-                                    var q = db.EpHesabTafsiliVams.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliVams.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpMarakezHazine":
                                 {
-                                    var q = db.EpHesabTafsiliMarakezHazines.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliMarakezHazines.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpShoabat":
                                 {
-                                    var q = db.EpHesabTafsiliShoabats.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliShoabats.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpProzheha":
                                 {
-                                    var q = db.EpHesabTafsiliProzhes.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliProzhes.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpGharardadha":
                                 {
-                                    var q = db.EpHesabTafsiliGharardads.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliGharardads.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpAnbarha":
                                 {
-                                    var q = db.EpHesabTafsiliAnbarhas.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliAnbarhas.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
                             case "xtpSayer":
                                 {
-                                    var q = db.EpHesabTafsiliSayers.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+                                    var q = db.EpHesabTafsiliSayers.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
                                     gridControl.DataSource = q.Count > 0 ? q : null;
                                     break;
                                 }
@@ -193,17 +193,17 @@ namespace EtelaatePaye.CodingHesabdari
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     if (_levelNamber == 1)
                     {
-                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
+                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber && s.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
                         cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
                     }
                     else if (_levelNamber == 2)
                     {
-                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
+                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber && s.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
                         cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
                     }
                     else if (_levelNamber == 3)
                     {
-                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.EpGroupTafsiliLevel3.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
+                        var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber && s.EpGroupTafsiliLevel3.EpGroupTafsiliLevel2.EpGroupTafsiliLevel1.TabaghehIndex == _TabaghehIndex).OrderBy(s => s.KeyCode).ToList();
                         cmbGroupTafsili.Properties.DataSource = q.Count > 0 ? q : null;
                     }
                 }
@@ -280,7 +280,7 @@ namespace EtelaatePaye.CodingHesabdari
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.GroupTafsiliId == _cmbGroupTafsiliId && s.Code <= 9999999999).OrderBy(s => s.Code).ToList();
+                    var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber && s.GroupTafsiliId == _cmbGroupTafsiliId && s.Code <= 9999999999).OrderBy(s => s.Code).ToList();
 
                     if (q.Count > 0)
                     {
@@ -460,7 +460,7 @@ namespace EtelaatePaye.CodingHesabdari
 
                         if (En == EnumCED.Create)
                         {
-                            var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.GroupTafsiliId == _cmbGroupTafsiliId).ToList();
+                            var q = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber && s.GroupTafsiliId == _cmbGroupTafsiliId).ToList();
                             if (q.Count > 0)
                             {
                                 var q1 = q.FirstOrDefault(s => s.Code == _CodeTafsili);
@@ -482,7 +482,7 @@ namespace EtelaatePaye.CodingHesabdari
                         else if (En == EnumCED.Edit)
                         {
                             int RowId = Convert.ToInt32(txtId.Text);
-                            var q = db.EpAllHesabTafsilis.Where(s => s.Id != RowId && s.SalId == _SalId && s.LevelNamber == _levelNamber && s.GroupTafsiliId == _cmbGroupTafsiliId).ToList();
+                            var q = db.EpAllHesabTafsilis.Where(s => s.Id != RowId && s.SalId == _SalId && s.LevelNumber == _levelNamber && s.GroupTafsiliId == _cmbGroupTafsiliId).ToList();
                             if (q.Count > 0)
                             {
                                 var q1 = q.FirstOrDefault(s => s.Code == _CodeTafsili);
@@ -648,7 +648,7 @@ namespace EtelaatePaye.CodingHesabdari
                             {
                                 _SalId = Convert.ToInt32(lblSalId.Text);
                                 int RowId = Convert.ToInt32(gridView.GetFocusedRowCellValue("Id").ToString());
-                                var q = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.Id == RowId);
+                                var q = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == _levelNamber && s.Id == RowId);
                                 if (q != null)
                                 {
                                     db.EpAllHesabTafsilis.Remove(q);
@@ -769,7 +769,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objAshkhas = new EpHesabTafsiliAshkhas();
                                             objAshkhas.SalId = _SalId;
-                                            objAshkhas.LevelNamber = _levelNamber;
+                                            objAshkhas.LevelNumber = _levelNamber;
                                             objAshkhas.Code = _CodeTafsili;
                                             objAshkhas.Name = _txtName;
                                             objAshkhas.TarikhEjad = _TarikhEjad;
@@ -790,7 +790,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objAghlamAnbar = new EpHesabTafsiliAghlamAnbar();
                                             objAghlamAnbar.SalId = _SalId;
-                                            objAghlamAnbar.LevelNamber = _levelNamber;
+                                            objAghlamAnbar.LevelNumber = _levelNamber;
                                             objAghlamAnbar.Code = _CodeTafsili;
                                             objAghlamAnbar.Name = _txtName;
                                             objAghlamAnbar.TarikhEjad = _TarikhEjad;
@@ -807,7 +807,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objDaraeha = new EpHesabTafsiliDaraeha();
                                             objDaraeha.SalId = _SalId;
-                                            objDaraeha.LevelNamber = _levelNamber;
+                                            objDaraeha.LevelNumber = _levelNamber;
                                             objDaraeha.Code = _CodeTafsili;
                                             objDaraeha.Name = _txtName;
                                             objDaraeha.TarikhEjad = _TarikhEjad;
@@ -826,7 +826,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objSandogh = new EpHesabTafsiliSandogh();
                                             objSandogh.SalId = _SalId;
-                                            objSandogh.LevelNamber = _levelNamber;
+                                            objSandogh.LevelNumber = _levelNamber;
                                             objSandogh.Code = _CodeTafsili;
                                             objSandogh.Name = _txtName;
                                             objSandogh.TarikhEjad = _TarikhEjad;
@@ -841,7 +841,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objBankha = new EpHesabTafsiliBankha();
                                             objBankha.SalId = _SalId;
-                                            objBankha.LevelNamber = _levelNamber;
+                                            objBankha.LevelNumber = _levelNamber;
                                             objBankha.Code = _CodeTafsili;
                                             objBankha.Name = _txtName;
                                             objBankha.TarikhEjad = _TarikhEjad;
@@ -867,7 +867,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objVamha = new EpHesabTafsiliVam();
                                             objVamha.SalId = _SalId;
-                                            objVamha.LevelNamber = _levelNamber;
+                                            objVamha.LevelNumber = _levelNamber;
                                             objVamha.Code = _CodeTafsili;
                                             objVamha.Name = _txtName;
                                             objVamha.TarikhEjad = _TarikhEjad;
@@ -888,7 +888,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objMarakez = new EpHesabTafsiliMarakezHazine();
                                             objMarakez.SalId = _SalId;
-                                            objMarakez.LevelNamber = _levelNamber;
+                                            objMarakez.LevelNumber = _levelNamber;
                                             objMarakez.Code = _CodeTafsili;
                                             objMarakez.Name = _txtName;
                                             objMarakez.TarikhEjad = _TarikhEjad;
@@ -901,7 +901,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objShoabat = new EpHesabTafsiliShoabat();
                                             objShoabat.SalId = _SalId;
-                                            objShoabat.LevelNamber = _levelNamber;
+                                            objShoabat.LevelNumber = _levelNamber;
                                             objShoabat.Code = _CodeTafsili;
                                             objShoabat.Name = _txtName;
                                             objShoabat.TarikhEjad = _TarikhEjad;
@@ -914,7 +914,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objProzhe = new EpHesabTafsiliProzhe();
                                             objProzhe.SalId = _SalId;
-                                            objProzhe.LevelNamber = _levelNamber;
+                                            objProzhe.LevelNumber = _levelNamber;
                                             objProzhe.Code = _CodeTafsili;
                                             objProzhe.Name = _txtName;
                                             objProzhe.TarikhEjad = _TarikhEjad;
@@ -927,7 +927,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objGharardad = new EpHesabTafsiliGharardad();
                                             objGharardad.SalId = _SalId;
-                                            objGharardad.LevelNamber = _levelNamber;
+                                            objGharardad.LevelNumber = _levelNamber;
                                             objGharardad.Code = _CodeTafsili;
                                             objGharardad.Name = _txtName;
                                             objGharardad.TarikhEjad = _TarikhEjad;
@@ -940,7 +940,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objAnbarha = new EpHesabTafsiliAnbarha();
                                             objAnbarha.SalId = _SalId;
-                                            objAnbarha.LevelNamber = _levelNamber;
+                                            objAnbarha.LevelNumber = _levelNamber;
                                             objAnbarha.Code = _CodeTafsili;
                                             objAnbarha.Name = _txtName;
                                             objAnbarha.TarikhEjad = _TarikhEjad;
@@ -953,7 +953,7 @@ namespace EtelaatePaye.CodingHesabdari
                                         {
                                             objSayer = new EpHesabTafsiliSayer();
                                             objSayer.SalId = _SalId;
-                                            objSayer.LevelNamber = _levelNamber;
+                                            objSayer.LevelNumber = _levelNamber;
                                             objSayer.Code = _CodeTafsili;
                                             objSayer.Name = _txtName;
                                             objSayer.TarikhEjad = _TarikhEjad;
@@ -973,7 +973,7 @@ namespace EtelaatePaye.CodingHesabdari
 
                                 EpAllHesabTafsili obj1 = new EpAllHesabTafsili();
                                 obj1.SalId = _SalId;
-                                obj1.LevelNamber = _levelNamber;
+                                obj1.LevelNumber = _levelNamber;
                                 obj1.Code = _CodeTafsili;
                                 obj1.Name = _txtName;
                                 obj1.GroupTafsiliId = _cmbGroupTafsiliId;
@@ -1080,7 +1080,7 @@ namespace EtelaatePaye.CodingHesabdari
                                                 fm.lblSalMali.Text = lblSalMali.Text;
                                                 //fm._levelNamber = _levelNamber;
                                                 fm._GroupTafsiliId = _cmbGroupTafsiliId;
-                                                var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _CodeTafsili && s.SalId == _SalId && s.LevelNamber == _levelNamber);
+                                                var q = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _CodeTafsili && s.SalId == _SalId && s.LevelNumber == _levelNamber);
                                                 if (q != null)
                                                     fm._AshkhasId = q.Id;
                                                 fm.cmbGroupTafsili.ReadOnly = fm.cmbTafsiliAshkhas.ReadOnly = true;
@@ -1096,11 +1096,11 @@ namespace EtelaatePaye.CodingHesabdari
                             else if (En == EnumCED.Edit)
                             {
                                 int RowId = Convert.ToInt32(txtId.Text);
-                                var q = db.EpAllHesabTafsilis.FirstOrDefault(s => s.Id == RowId && s.SalId == _SalId && s.LevelNamber == _levelNamber);
+                                var q = db.EpAllHesabTafsilis.FirstOrDefault(s => s.Id == RowId && s.SalId == _SalId && s.LevelNumber == _levelNamber);
                                 if (q != null)
                                 {
                                     //q.SalId = _SalId;
-                                    //q.LevelNamber = _levelNamber;
+                                    //q.LevelNumber = _levelNamber;
                                     //q.TabaghehGroupIndex = _TabaghehIndex;
                                     q.Code = _CodeTafsili;
                                     q.Name = _txtName;
@@ -1295,7 +1295,7 @@ namespace EtelaatePaye.CodingHesabdari
                                                 fm.lblSalMali.Text = lblSalMali.Text;
                                                 // ActiveForm(fm);
                                                 fm.cmbGroupTafsili.EditValue = _cmbGroupTafsiliId;
-                                                var q1 = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _CodeTafsili && s.SalId == _SalId && s.LevelNamber == _levelNamber);
+                                                var q1 = db.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.Code == _CodeTafsili && s.SalId == _SalId && s.LevelNumber == _levelNamber);
                                                 if (q1 != null)
                                                     fm.cmbTafsiliAshkhas.EditValue = q1.Id;
                                                 fm.cmbGroupTafsili.ReadOnly = fm.cmbTafsiliAshkhas.ReadOnly = true;
@@ -1359,7 +1359,7 @@ namespace EtelaatePaye.CodingHesabdari
                     {
                         _cmbGroupTafsiliId = Convert.ToInt32(cmbGroupTafsili.EditValue);
                         _SalId = Convert.ToInt32(lblSalId.Text);
-                        var q = db.EpAllGroupTafsilis.FirstOrDefault(s => s.Id == _cmbGroupTafsiliId && s.SalId == _SalId && s.LevelNamber == _levelNamber);
+                        var q = db.EpAllGroupTafsilis.FirstOrDefault(s => s.Id == _cmbGroupTafsiliId && s.SalId == _SalId && s.LevelNumber == _levelNamber);
                         if (q != null)
                         {
                             txtGroupCode.Text = q.KeyCode.ToString();

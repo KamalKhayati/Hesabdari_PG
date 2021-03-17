@@ -76,6 +76,8 @@ namespace Hesabdari_PG.Forms
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            HelpClass1.SwitchToPersianLanguage();
+            HelpClass1.SetRegionAndLanguage();
             //_UserId = Convert.ToInt32(txtUserId.Caption.ToString());
             _UserId = 1;
             txtUserId.Caption = _UserId.ToString();
@@ -532,6 +534,8 @@ namespace Hesabdari_PG.Forms
             fm.MdiParent = this;
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
 
         }

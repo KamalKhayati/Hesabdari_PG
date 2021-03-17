@@ -55,9 +55,9 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         [Required]
         [Column(Order = 2)]
         public int CodingHesabdariId { get; set; }
-        [Required]
-        [Column(Order = 3)]
-        public int KeyCode { get; set; }
+        //[Required]
+        //[Column(Order = 3)]
+        //public int KeyCode { get; set; }
         //[Required]
         //[Column(Order = 4)]
         //public int HesabTabaghehId { get; set; }
@@ -70,9 +70,9 @@ namespace DBHesabdari_PG.Models.Ms.SystemUsers
         //[Required]
         //[Column(Order = 7)]
         //public int HesabMoinId { get; set; }
-        [Required]
-        [Column(Order = 4)]
-        public bool IsActive { get; set; }
+        //[Required]
+        //[Column(Order = 4)]
+        //public bool IsActive { get; set; }
 
         public virtual MsUser MsUser1 { get; set; }
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }

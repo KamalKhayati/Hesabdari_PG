@@ -14,7 +14,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int SalId { get; set; }
         [Required]
-        public int LevelNamber { get; set; }
+        public int LevelNumber { get; set; }
         [Required]
         public long Code { get; set; }
         [Required, MaxLength(100)]

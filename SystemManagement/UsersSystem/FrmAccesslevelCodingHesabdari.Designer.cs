@@ -36,13 +36,6 @@
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.treeListCodingHesabdari = new DevExpress.XtraTreeList.TreeList();
             this.colLevelName2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colKeyId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colParentId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colHesabGroupId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colHesabColId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colHesabMoinId2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colIsActive2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.EpAllCodingHesabdarisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -68,6 +61,13 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
+            this.colId = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colLevelNumber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colIsActive = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
+            this.lblSalId = new DevExpress.XtraEditors.LabelControl();
+            this.colKeyCode = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingHesabdari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EpAllCodingHesabdarisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -85,31 +85,30 @@
             // 
             this.treeListCodingHesabdari.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colLevelName2,
-            this.colKeyId2,
-            this.colId2,
-            this.colParentId2,
-            this.colHesabGroupId2,
-            this.colHesabColId2,
-            this.colHesabMoinId2,
-            this.colIsActive2});
+            this.colLevelNumber,
+            this.colIsActive,
+            this.treeListColumn1,
+            this.colId,
+            this.colKeyCode});
             this.treeListCodingHesabdari.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeListCodingHesabdari.DataSource = this.EpAllCodingHesabdarisBindingSource;
             this.treeListCodingHesabdari.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeListCodingHesabdari.KeyFieldName = "KeyId";
+            this.treeListCodingHesabdari.KeyFieldName = "KeyCode";
             this.treeListCodingHesabdari.Location = new System.Drawing.Point(0, 60);
             this.treeListCodingHesabdari.Margin = new System.Windows.Forms.Padding(4);
             this.treeListCodingHesabdari.MinWidth = 22;
             this.treeListCodingHesabdari.Name = "treeListCodingHesabdari";
             this.treeListCodingHesabdari.OptionsBehavior.Editable = false;
+            this.treeListCodingHesabdari.OptionsBehavior.PopulateServiceColumns = true;
             this.treeListCodingHesabdari.OptionsFilter.ExpandNodesOnFiltering = true;
             this.treeListCodingHesabdari.OptionsSelection.MultiSelect = true;
             this.treeListCodingHesabdari.OptionsView.CheckBoxStyle = DevExpress.XtraTreeList.DefaultNodeCheckBoxStyle.Check;
             this.treeListCodingHesabdari.OptionsView.ShowAutoFilterRow = true;
             this.treeListCodingHesabdari.OptionsView.ShowHorzLines = false;
             this.treeListCodingHesabdari.OptionsView.ShowIndicator = false;
-            this.treeListCodingHesabdari.ParentFieldName = "ParentId";
+            this.treeListCodingHesabdari.ParentFieldName = "ParentCode";
             this.treeListCodingHesabdari.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeListCodingHesabdari.Size = new System.Drawing.Size(1359, 537);
+            this.treeListCodingHesabdari.Size = new System.Drawing.Size(1359, 516);
             this.treeListCodingHesabdari.TabIndex = 37;
             this.treeListCodingHesabdari.TreeLevelWidth = 28;
             this.treeListCodingHesabdari.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
@@ -124,71 +123,12 @@
             this.colLevelName2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colLevelName2.Caption = "نام سطوح کدینگ حسابداری (طبقه ،گروه ،کل ،معین) ";
             this.colLevelName2.FieldName = "LevelName";
-            this.colLevelName2.MaxWidth = 778;
-            this.colLevelName2.MinWidth = 22;
+            this.colLevelName2.MaxWidth = 550;
+            this.colLevelName2.MinWidth = 550;
             this.colLevelName2.Name = "colLevelName2";
             this.colLevelName2.Visible = true;
             this.colLevelName2.VisibleIndex = 0;
-            this.colLevelName2.Width = 778;
-            // 
-            // colKeyId2
-            // 
-            this.colKeyId2.AppearanceCell.Options.UseTextOptions = true;
-            this.colKeyId2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colKeyId2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colKeyId2.AppearanceHeader.Options.UseTextOptions = true;
-            this.colKeyId2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colKeyId2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colKeyId2.Caption = "کد";
-            this.colKeyId2.FieldName = "KeyCode";
-            this.colKeyId2.MaxWidth = 136;
-            this.colKeyId2.MinWidth = 22;
-            this.colKeyId2.Name = "colKeyId2";
-            this.colKeyId2.Visible = true;
-            this.colKeyId2.VisibleIndex = 1;
-            this.colKeyId2.Width = 128;
-            // 
-            // colId2
-            // 
-            this.colId2.FieldName = "Id";
-            this.colId2.MinWidth = 22;
-            this.colId2.Name = "colId2";
-            this.colId2.Width = 84;
-            // 
-            // colParentId2
-            // 
-            this.colParentId2.FieldName = "ParentId";
-            this.colParentId2.MinWidth = 22;
-            this.colParentId2.Name = "colParentId2";
-            this.colParentId2.Width = 84;
-            // 
-            // colHesabGroupId2
-            // 
-            this.colHesabGroupId2.FieldName = "HesabGroupId";
-            this.colHesabGroupId2.MinWidth = 22;
-            this.colHesabGroupId2.Name = "colHesabGroupId2";
-            this.colHesabGroupId2.Width = 84;
-            // 
-            // colHesabColId2
-            // 
-            this.colHesabColId2.FieldName = "HesabColId";
-            this.colHesabColId2.MinWidth = 22;
-            this.colHesabColId2.Name = "colHesabColId2";
-            this.colHesabColId2.Width = 84;
-            // 
-            // colHesabMoinId2
-            // 
-            this.colHesabMoinId2.FieldName = "HesabMoinId";
-            this.colHesabMoinId2.MinWidth = 22;
-            this.colHesabMoinId2.Name = "colHesabMoinId2";
-            this.colHesabMoinId2.Width = 84;
-            // 
-            // colIsActive2
-            // 
-            this.colIsActive2.FieldName = "IsActive";
-            this.colIsActive2.MinWidth = 22;
-            this.colIsActive2.Name = "colIsActive2";
-            this.colIsActive2.Width = 84;
+            this.colLevelName2.Width = 550;
             // 
             // EpAllCodingHesabdarisBindingSource
             // 
@@ -343,7 +283,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 597);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 576);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.barDockControlBottom.Size = new System.Drawing.Size(1359, 0);
@@ -355,7 +295,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 60);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 537);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 516);
             // 
             // barDockControlRight
             // 
@@ -364,7 +304,7 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1359, 60);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 537);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 516);
             // 
             // repositoryItemTextEdit1
             // 
@@ -404,37 +344,123 @@
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(14, 43);
+            this.lblUserId.Location = new System.Drawing.Point(13, 157);
             this.lblUserId.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(82, 30);
+            this.lblUserId.Size = new System.Drawing.Size(72, 27);
             this.lblUserId.TabIndex = 30;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(14, 79);
+            this.lblUserName.Location = new System.Drawing.Point(13, 192);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(59, 30);
+            this.lblUserName.Size = new System.Drawing.Size(53, 27);
             this.lblUserName.TabIndex = 31;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
             // 
+            // colId
+            // 
+            this.colId.AppearanceCell.Options.UseTextOptions = true;
+            this.colId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colId.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colId.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colLevelNumber
+            // 
+            this.colLevelNumber.AppearanceCell.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.Options.UseTextOptions = true;
+            this.colLevelNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colLevelNumber.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colLevelNumber.Caption = "سطح";
+            this.colLevelNumber.FieldName = "LevelNumber";
+            this.colLevelNumber.MaxWidth = 80;
+            this.colLevelNumber.MinWidth = 80;
+            this.colLevelNumber.Name = "colLevelNumber";
+            this.colLevelNumber.Visible = true;
+            this.colLevelNumber.VisibleIndex = 1;
+            this.colLevelNumber.Width = 80;
+            // 
+            // colIsActive
+            // 
+            this.colIsActive.AppearanceCell.Options.UseTextOptions = true;
+            this.colIsActive.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsActive.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsActive.AppearanceHeader.Options.UseTextOptions = true;
+            this.colIsActive.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIsActive.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colIsActive.Caption = "فعال";
+            this.colIsActive.FieldName = "IsActive";
+            this.colIsActive.MaxWidth = 80;
+            this.colIsActive.MinWidth = 80;
+            this.colIsActive.Name = "colIsActive";
+            this.colIsActive.Visible = true;
+            this.colIsActive.VisibleIndex = 2;
+            this.colIsActive.Width = 80;
+            // 
+            // treeListColumn1
+            // 
+            this.treeListColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.treeListColumn1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.treeListColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.treeListColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.treeListColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.treeListColumn1.Caption = "تشریح یا توضیح حساب";
+            this.treeListColumn1.MinWidth = 550;
+            this.treeListColumn1.Name = "treeListColumn1";
+            this.treeListColumn1.Visible = true;
+            this.treeListColumn1.VisibleIndex = 3;
+            this.treeListColumn1.Width = 707;
+            // 
+            // lblSalMali
+            // 
+            this.lblSalMali.Location = new System.Drawing.Point(12, 302);
+            this.lblSalMali.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblSalMali.Name = "lblSalMali";
+            this.lblSalMali.Size = new System.Drawing.Size(64, 27);
+            this.lblSalMali.TabIndex = 48;
+            this.lblSalMali.Text = "سال مالی";
+            this.lblSalMali.Visible = false;
+            // 
+            // lblSalId
+            // 
+            this.lblSalId.Location = new System.Drawing.Point(12, 251);
+            this.lblSalId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblSalId.Name = "lblSalId";
+            this.lblSalId.Size = new System.Drawing.Size(66, 27);
+            this.lblSalId.TabIndex = 47;
+            this.lblSalId.Text = "آیدی سال";
+            this.lblSalId.Visible = false;
+            // 
+            // colKeyCode
+            // 
+            this.colKeyCode.FieldName = "KeyCode";
+            this.colKeyCode.Name = "colKeyCode";
+            // 
             // FrmAccesslevelCodingHesabdari
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 597);
+            this.ClientSize = new System.Drawing.Size(1359, 576);
             this.Controls.Add(this.treeListCodingHesabdari);
+            this.Controls.Add(this.lblSalMali);
+            this.Controls.Add(this.lblSalId);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmAccesslevelCodingHesabdari.IconOptions.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAccesslevelCodingHesabdari";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -481,16 +507,16 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
         private DevExpress.XtraTreeList.TreeList treeListCodingHesabdari;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelName2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colKeyId2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colId2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colParentId2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colHesabGroupId2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colHesabColId2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colHesabMoinId2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colIsActive2;
         private System.Windows.Forms.BindingSource EpAllCodingHesabdarisBindingSource;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private System.Windows.Forms.BindingSource msUserBindingSource;
         private DevExpress.XtraBars.BarButtonItem btnReloadList;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colLevelNumber;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colIsActive;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colId;
+        public DevExpress.XtraEditors.LabelControl lblSalMali;
+        public DevExpress.XtraEditors.LabelControl lblSalId;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colKeyCode;
     }
 }

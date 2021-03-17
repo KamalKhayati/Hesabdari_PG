@@ -100,13 +100,13 @@ namespace EtelaatePaye.CodingHesabdari
             //        if (Convert.ToInt32(cmbGroupTafsili.EditValue) != 0)
             //        {
             //            int _GroupTafsiliId = Convert.ToInt32(cmbGroupTafsili.EditValue);
-            //            var q = db.EpHesabTafsiliAshkhass.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber && s.GroupTafsiliId == _GroupTafsiliId).OrderBy(s => s.Code).ToList();
+            //            var q = db.EpHesabTafsiliAshkhass.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber && s.GroupTafsiliId == _GroupTafsiliId).OrderBy(s => s.Code).ToList();
             //            epHesabTafsiliAshkhassBindingSource.DataSource = q.Count > 0 ? q : null;
             //        }
             //        else if (Convert.ToInt32(cmbGroupTafsili.EditValue) == 0)
             //        {
             //            // int _GroupTafsiliId = Convert.ToInt32(cmbGroupTafsili.EditValue);
-            //            var q = db.EpHesabTafsiliAshkhass.Where(s => s.SalId == _SalId && s.LevelNamber == _levelNamber).OrderBy(s => s.Code).ToList();
+            //            var q = db.EpHesabTafsiliAshkhass.Where(s => s.SalId == _SalId && s.LevelNumber == _levelNamber).OrderBy(s => s.Code).ToList();
             //            epHesabTafsiliAshkhassBindingSource.DataSource = q.Count > 0 ? q : null;
             //        }
             //    }

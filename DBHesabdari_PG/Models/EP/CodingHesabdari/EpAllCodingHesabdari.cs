@@ -31,7 +31,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [Required]
         public int ParentCode { get; set; }
         [Required]
-        public int LevelNamber { get; set; }
+        public int LevelNumber { get; set; }
         [Required, MaxLength(70)]
         public string LevelName { get; set; }
         //public int HesabTabaghehId { get; set; }

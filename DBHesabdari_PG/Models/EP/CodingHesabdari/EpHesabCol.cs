@@ -43,6 +43,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //public string NoeHesab { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        [Required]
+        public int LevelNumber { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         public virtual EpAllCodingHesabdari EpAllCodingHesabdari1 { get; set; }

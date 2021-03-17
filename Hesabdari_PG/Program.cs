@@ -60,13 +60,16 @@ namespace Hesabdari_PG
             //Thread.CurrentThread.CurrentUICulture = cinfo;
             //Application.CurrentCulture = cinfo;
 
-            HelpClass1.SwitchToPersianLanguage();
-            Cultures.InitializePersianCulture();
-            HelpClass1.SetRegionAndLanguage();
-
             BonusSkins.Register();
             //new FrmLogin().Show();
-            Application.Run(new AppContext());
+            if (HelpClass1.IsSetGregorianCalendar())
+            {
+                Cultures.InitializePersianCulture();
+                Application.Run(new AppContext());
+            }
+            else
+                Application.Exit();
+
         }
         public class AppContext : ApplicationContext
         {

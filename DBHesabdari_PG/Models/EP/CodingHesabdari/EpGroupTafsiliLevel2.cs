@@ -23,11 +23,13 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //[Required, MaxLength(50)]
         //public string Level1Name { get; set; }
         [Required]
-        public int StartCode { get; set; }
+        public long StartCode { get; set; }
         [Required]
-        public int EndCode { get; set; }
+        public long EndCode { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        [Required]
+        public int LevelNumber { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         public virtual EpGroupTafsiliLevel1 EpGroupTafsiliLevel1 { get; set; }

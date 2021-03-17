@@ -583,7 +583,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                         //    EpAllHesabTafsili_HesabMovaghat obj = new EpAllHesabTafsili_HesabMovaghat();
                         //    obj.Id = item.Id;
                         //    obj.SalId = item.SalId;
-                        //    obj.LevelNamber = item.LevelNamber;
+                        //    obj.LevelNumber = item.LevelNumber;
                         //    obj.Code = item.Code;
                         //    obj.Name = item.Name;
                         //    obj.GroupTafsiliId = item.GroupTafsiliId;
@@ -602,16 +602,16 @@ namespace AnbarVaKala.AmaliatRozaneh
                         #endregion
                         if (En1 == EnumCED.Create)
                         {
-                            cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNamber == 1).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNamber == 1).OrderBy(s => s.Code).ToList() : null;
-                            cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNamber == 2).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNamber == 2).OrderBy(s => s.Code).ToList() : null;
-                            cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNamber == 3).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNamber == 3).OrderBy(s => s.Code).ToList() : null;
+                            cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNumber == 1).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNumber == 1).OrderBy(s => s.Code).ToList() : null;
+                            cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNumber == 2).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNumber == 2).OrderBy(s => s.Code).ToList() : null;
+                            cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.IsActive == true && s.LevelNumber == 3).Count() > 0 ? list.Where(s => s.IsActive == true && s.LevelNumber == 3).OrderBy(s => s.Code).ToList() : null;
 
                         }
                         else
                         {
-                            cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.LevelNamber == 1).OrderBy(s => s.Code);
-                            cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.LevelNamber == 2).OrderBy(s => s.Code);
-                            cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.LevelNamber == 3).OrderBy(s => s.Code);
+                            cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.LevelNumber == 1).OrderBy(s => s.Code);
+                            cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.LevelNumber == 2).OrderBy(s => s.Code);
+                            cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.LevelNumber == 3).OrderBy(s => s.Code);
                         }
                     }
                     else
@@ -1737,17 +1737,17 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                 if (_FirstSelectAnbar_NextSanad)
                 {
-                    if (XtraTabControl1_1.SelectedTabPageIndex == 0)
+                   // if (XtraTabControl1_1.SelectedTabPageIndex == 0)
                         gridView.Columns["SeryalCol_BaNoeAmaliat_BaSelectAnbar"].GroupIndex = 0;
-                    else
-                        gridView.Columns["SeryalJoze_BaNoeSanad_BaSelectAnbar"].GroupIndex = 0;
+                   // else
+                     //   gridView.Columns["SeryalJoze_BaNoeSanad_BaSelectAnbar"].GroupIndex = 0;
                 }
                 else
                 {
-                    if (XtraTabControl1_1.SelectedTabPageIndex == 0)
+                   // if (XtraTabControl1_1.SelectedTabPageIndex == 0)
                         gridView.Columns["SeryalCol_BaNoeAmaliat_BeSelectAnbar"].GroupIndex = 0;
-                    else
-                        gridView.Columns["SeryalJoze_BaNoeSanad_BeSelectAnbar"].GroupIndex = 0;
+                   // else
+                   //     gridView.Columns["SeryalJoze_BaNoeSanad_BeSelectAnbar"].GroupIndex = 0;
                 }
 
                 objXtraTabPage.Controls.Add(objGridControl);
@@ -2517,9 +2517,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                 if (IsValidation())
                                                 {
                                                     _HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                                                    _HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 1 && s.EpAllGroupTafsili1.Id == 19 && s.Name == "سایر 1").Id : Convert.ToInt32(cmbHesabTafsili1.EditValue);
-                                                    _HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 2 && s.EpAllGroupTafsili1.Id == 38 && s.Name == "سایر 2").Id : Convert.ToInt32(cmbHesabTafsili2.EditValue);
-                                                    _HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 3 && s.EpAllGroupTafsili1.Id == 57 && s.Name == "سایر 3").Id : Convert.ToInt32(cmbHesabTafsili3.EditValue);
+                                                    _HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == 1 && s.EpAllGroupTafsili1.Id == 19 && s.Name == "سایر 1").Id : Convert.ToInt32(cmbHesabTafsili1.EditValue);
+                                                    _HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == 2 && s.EpAllGroupTafsili1.Id == 38 && s.Name == "سایر 2").Id : Convert.ToInt32(cmbHesabTafsili2.EditValue);
+                                                    _HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == 3 && s.EpAllGroupTafsili1.Id == 57 && s.Name == "سایر 3").Id : Convert.ToInt32(cmbHesabTafsili3.EditValue);
 
                                                     var qq = db.EpNameKalas.Where(s => s.SalId == _SalId);
 
@@ -3732,9 +3732,9 @@ namespace AnbarVaKala.AmaliatRozaneh
                                                 if (IsValidation())
                                                 {
                                                     _HesabMoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
-                                                    _HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 1 && s.EpAllGroupTafsili1.Id == 19 && s.Name == "سایر 1").Id : Convert.ToInt32(cmbHesabTafsili1.EditValue);
-                                                    _HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 2 && s.EpAllGroupTafsili1.Id == 38 && s.Name == "سایر 2").Id : Convert.ToInt32(cmbHesabTafsili2.EditValue);
-                                                    _HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNamber == 3 && s.EpAllGroupTafsili1.Id == 57 && s.Name == "سایر 3").Id : Convert.ToInt32(cmbHesabTafsili3.EditValue);
+                                                    _HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == 1 && s.EpAllGroupTafsili1.Id == 19 && s.Name == "سایر 1").Id : Convert.ToInt32(cmbHesabTafsili1.EditValue);
+                                                    _HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == 2 && s.EpAllGroupTafsili1.Id == 38 && s.Name == "سایر 2").Id : Convert.ToInt32(cmbHesabTafsili2.EditValue);
+                                                    _HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == 3 && s.EpAllGroupTafsili1.Id == 57 && s.Name == "سایر 3").Id : Convert.ToInt32(cmbHesabTafsili3.EditValue);
 
                                                     var qq = db.EpNameKalas.Where(s => s.SalId == _SalId);
 

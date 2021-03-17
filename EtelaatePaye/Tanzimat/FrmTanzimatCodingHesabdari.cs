@@ -112,7 +112,7 @@ namespace EtelaatePaye.Tanzimat
                     else
                         txtColCarakter.ReadOnly = false;
 
-                    if (db.EpHesabMoin1s.Any(s => s.SalId == _SalId && s.LevelNamber == 4))
+                    if (db.EpHesabMoin1s.Any(s => s.SalId == _SalId && s.LevelNumber == 4))
                         txtMoinLevel1Carakter.ReadOnly = true;
                     else
                         txtMoinLevel1Carakter.ReadOnly = false;

@@ -613,9 +613,9 @@ namespace EtelaatePaye.CodingAnbar
                                 obj.SharhHesab = txtSharhHesab.Text;
                                 obj.MoinId = Convert.ToInt32(cmbHesabMoin.EditValue);
                                 var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.EpAllGroupTafsili1.TabaghehGroupName == "سایر");
-                                obj.TafsiliId1 = Convert.ToInt32(cmbHesabTafsili1.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili1.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 1 && s.Name == "سایر 1").Id;
-                                obj.TafsiliId2 = Convert.ToInt32(cmbHesabTafsili2.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili2.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 2 && s.Name == "سایر 2").Id;
-                                obj.TafsiliId3 = Convert.ToInt32(cmbHesabTafsili3.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili3.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 3 && s.Name == "سایر 3").Id;
+                                obj.TafsiliId1 = Convert.ToInt32(cmbHesabTafsili1.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili1.EditValue) : qq.FirstOrDefault(s => s.LevelNumber == 1 && s.Name == "سایر 1").Id;
+                                obj.TafsiliId2 = Convert.ToInt32(cmbHesabTafsili2.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili2.EditValue) : qq.FirstOrDefault(s => s.LevelNumber == 2 && s.Name == "سایر 2").Id;
+                                obj.TafsiliId3 = Convert.ToInt32(cmbHesabTafsili3.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili3.EditValue) : qq.FirstOrDefault(s => s.LevelNumber == 3 && s.Name == "سایر 3").Id;
 
                                 if (cmbTabagheKala.EditValue != null && cmbTabagheKala.EditValue.ToString() != "")
                                 {
@@ -694,9 +694,9 @@ namespace EtelaatePaye.CodingAnbar
                                     //q.TafsiliId2 = Convert.ToInt32(cmbHesabTafsili2.EditValue);
                                     //q.TafsiliId3 = Convert.ToInt32(cmbHesabTafsili3.EditValue);
                                     var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.EpAllGroupTafsili1.TabaghehGroupName == "سایر");
-                                    q.TafsiliId1 = Convert.ToInt32(cmbHesabTafsili1.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili1.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 1 && s.Name == "سایر 1").Id;
-                                    q.TafsiliId2 = Convert.ToInt32(cmbHesabTafsili2.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili2.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 2 && s.Name == "سایر 2").Id;
-                                    q.TafsiliId3 = Convert.ToInt32(cmbHesabTafsili3.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili3.EditValue) : qq.FirstOrDefault(s => s.LevelNamber == 3 && s.Name == "سایر 3").Id;
+                                    q.TafsiliId1 = Convert.ToInt32(cmbHesabTafsili1.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili1.EditValue) : qq.FirstOrDefault(s => s.LevelNumber == 1 && s.Name == "سایر 1").Id;
+                                    q.TafsiliId2 = Convert.ToInt32(cmbHesabTafsili2.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili2.EditValue) : qq.FirstOrDefault(s => s.LevelNumber == 2 && s.Name == "سایر 2").Id;
+                                    q.TafsiliId3 = Convert.ToInt32(cmbHesabTafsili3.EditValue) > 0 ? Convert.ToInt32(cmbHesabTafsili3.EditValue) : qq.FirstOrDefault(s => s.LevelNumber == 3 && s.Name == "سایر 3").Id;
 
                                     //cmbTabagheKala.ShowPopup();
                                     //cmbTabagheKala.ClosePopup();
@@ -981,7 +981,7 @@ namespace EtelaatePaye.CodingAnbar
                         //     EpAllHesabTafsili_HesabMovaghat obj = new EpAllHesabTafsili_HesabMovaghat();
                         //     obj.Id = item.Id;
                         //     obj.SalId = item.SalId;
-                        //     obj.LevelNamber = item.LevelNamber;
+                        //     obj.LevelNumber = item.LevelNumber;
                         //     obj.Code = item.Code;
                         //     obj.Name = item.Name;
                         //     obj.GroupTafsiliId = item.GroupTafsiliId;
@@ -999,9 +999,9 @@ namespace EtelaatePaye.CodingAnbar
                         // db.EpAllHesabTafsili_HesabMovaghats.Load();
                         // epHesabTafsiliAnbarhasBindingSource.DataSource = db.EpAllHesabTafsili_HesabMovaghats.Local.ToBindingList(); 
                         #endregion
-                        cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.LevelNamber == 1).OrderBy(s => s.Code).Count() > 0 && En != EnumCED.Create ? list.Where(s => s.LevelNamber == 1).OrderBy(s => s.Code) : list.Where(s => s.LevelNamber == 1).OrderBy(s => s.Code).Count() > 0 && En == EnumCED.Create ? list.Where(s => s.LevelNamber == 1 && s.IsActive == true).OrderBy(s => s.Code) : null;
-                        cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.LevelNamber == 2).OrderBy(s => s.Code).Count() > 0 && En != EnumCED.Create ? list.Where(s => s.LevelNamber == 2).OrderBy(s => s.Code) : list.Where(s => s.LevelNamber == 2).OrderBy(s => s.Code).Count() > 0 && En == EnumCED.Create ? list.Where(s => s.LevelNamber == 2 && s.IsActive == true).OrderBy(s => s.Code) : null;
-                        cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.LevelNamber == 3).OrderBy(s => s.Code).Count() > 0 && En != EnumCED.Create ? list.Where(s => s.LevelNamber == 3).OrderBy(s => s.Code) : list.Where(s => s.LevelNamber == 3).OrderBy(s => s.Code).Count() > 0 && En == EnumCED.Create ? list.Where(s => s.LevelNamber == 3 && s.IsActive == true).OrderBy(s => s.Code) : null;
+                        cmbHesabTafsili1.Properties.DataSource = list.Where(s => s.LevelNumber == 1).OrderBy(s => s.Code).Count() > 0 && En != EnumCED.Create ? list.Where(s => s.LevelNumber == 1).OrderBy(s => s.Code) : list.Where(s => s.LevelNumber == 1).OrderBy(s => s.Code).Count() > 0 && En == EnumCED.Create ? list.Where(s => s.LevelNumber == 1 && s.IsActive == true).OrderBy(s => s.Code) : null;
+                        cmbHesabTafsili2.Properties.DataSource = list.Where(s => s.LevelNumber == 2).OrderBy(s => s.Code).Count() > 0 && En != EnumCED.Create ? list.Where(s => s.LevelNumber == 2).OrderBy(s => s.Code) : list.Where(s => s.LevelNumber == 2).OrderBy(s => s.Code).Count() > 0 && En == EnumCED.Create ? list.Where(s => s.LevelNumber == 2 && s.IsActive == true).OrderBy(s => s.Code) : null;
+                        cmbHesabTafsili3.Properties.DataSource = list.Where(s => s.LevelNumber == 3).OrderBy(s => s.Code).Count() > 0 && En != EnumCED.Create ? list.Where(s => s.LevelNumber == 3).OrderBy(s => s.Code) : list.Where(s => s.LevelNumber == 3).OrderBy(s => s.Code).Count() > 0 && En == EnumCED.Create ? list.Where(s => s.LevelNumber == 3 && s.IsActive == true).OrderBy(s => s.Code) : null;
                     }
                     else
                     {
