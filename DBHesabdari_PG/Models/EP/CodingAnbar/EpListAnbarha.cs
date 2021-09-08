@@ -1,5 +1,6 @@
 ﻿using DBHesabdari_PG.Models.AK;
 using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using DBHesabdari_PG.Models.FK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -43,12 +44,15 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
 
         [NotMapped]
         public string TabagheKalaIdName_NM { get; set; }
+        [NotMapped]
+        public decimal MeghdarMa_NM { get; set; }
 
         public virtual ICollection<R_EpListAnbarha_B_EpTabaghehKala> R_EpListAnbarha_B_EpTabaghehKalas { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh1s { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh2s { get; set; }
-        public virtual ICollection<AmaliatAnbarVKala_Riz> AmaliatAnbarVKala_Riz1s { get; set; }
-        public virtual ICollection<AmaliatAnbarVKala_Riz> AmaliatAnbarVKala_Riz2s { get; set; }
+        //public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz1s { get; set; }
+        public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz1s { get; set; }
+        public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz2s { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz1s { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz2s { get; set; }
         public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }

@@ -63,7 +63,9 @@
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNoeTabagheName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNoeTabagheIndex = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
@@ -71,6 +73,8 @@
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
             this.lblSalMali = new DevExpress.XtraEditors.LabelControl();
             this.panelControl_Tabagheh = new DevExpress.XtraEditors.PanelControl();
+            this.cmbNoeTabagheh = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl59 = new DevExpress.XtraEditors.LabelControl();
             this.txtIndex_TabaghehKala = new DevExpress.XtraEditors.TextEdit();
             this.btnReloadGroupTafsili_Tabagheh = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl58 = new DevExpress.XtraEditors.LabelControl();
@@ -322,7 +326,6 @@
             this.colLevelNumber = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colIsActive1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
             this.panelControl_Button.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_CodingKala)).BeginInit();
@@ -334,6 +337,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView_TabaghehKala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Tabagheh)).BeginInit();
             this.panelControl_Tabagheh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeTabagheh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIndex_TabaghehKala.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodeGroup_TabaghehKala.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedKala_Tabagheh.Properties)).BeginInit();
@@ -452,7 +456,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lstSerialKala_NameKala.Properties)).BeginInit();
             this.xtraTabPage_DerakhtVareh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingKala)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl_Button
@@ -698,7 +701,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1225, 320);
+            this.panelControl3.Size = new System.Drawing.Size(1225, 352);
             this.panelControl3.TabIndex = 59;
             // 
             // gridControl_TabaghehKala
@@ -710,7 +713,7 @@
             this.gridControl_TabaghehKala.MainView = this.gridView_TabaghehKala;
             this.gridControl_TabaghehKala.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_TabaghehKala.Name = "gridControl_TabaghehKala";
-            this.gridControl_TabaghehKala.Size = new System.Drawing.Size(1221, 316);
+            this.gridControl_TabaghehKala.Size = new System.Drawing.Size(1221, 348);
             this.gridControl_TabaghehKala.TabIndex = 34;
             this.gridControl_TabaghehKala.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_TabaghehKala});
@@ -724,7 +727,9 @@
             this.gridColumn22,
             this.gridColumn23,
             this.gridColumn24,
+            this.colNoeTabagheName,
             this.gridColumn25,
+            this.colNoeTabagheIndex,
             this.gridColumn26,
             this.gridColumn27});
             this.gridView_TabaghehKala.DetailHeight = 378;
@@ -838,12 +843,35 @@
             this.gridColumn24.VisibleIndex = 4;
             this.gridColumn24.Width = 84;
             // 
+            // colNoeTabagheName
+            // 
+            this.colNoeTabagheName.AppearanceCell.Options.UseTextOptions = true;
+            this.colNoeTabagheName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNoeTabagheName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colNoeTabagheName.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNoeTabagheName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNoeTabagheName.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colNoeTabagheName.Caption = "نوع طبقه";
+            this.colNoeTabagheName.FieldName = "NoeTabagheName";
+            this.colNoeTabagheName.MinWidth = 25;
+            this.colNoeTabagheName.Name = "colNoeTabagheName";
+            this.colNoeTabagheName.Visible = true;
+            this.colNoeTabagheName.VisibleIndex = 5;
+            this.colNoeTabagheName.Width = 182;
+            // 
             // gridColumn25
             // 
             this.gridColumn25.FieldName = "EpGroupTafsiliLevel11";
             this.gridColumn25.MinWidth = 22;
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Width = 84;
+            // 
+            // colNoeTabagheIndex
+            // 
+            this.colNoeTabagheIndex.FieldName = "NoeTabagheIndex";
+            this.colNoeTabagheIndex.MinWidth = 25;
+            this.colNoeTabagheIndex.Name = "colNoeTabagheIndex";
+            this.colNoeTabagheIndex.Width = 94;
             // 
             // gridColumn26
             // 
@@ -864,7 +892,7 @@
             this.gridColumn27.MinWidth = 21;
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 5;
+            this.gridColumn27.VisibleIndex = 6;
             this.gridColumn27.Width = 545;
             // 
             // lblUserId
@@ -909,7 +937,8 @@
             // 
             // panelControl_Tabagheh
             // 
-            this.panelControl_Tabagheh.Controls.Add(this.radioGroup1);
+            this.panelControl_Tabagheh.Controls.Add(this.cmbNoeTabagheh);
+            this.panelControl_Tabagheh.Controls.Add(this.labelControl59);
             this.panelControl_Tabagheh.Controls.Add(this.txtIndex_TabaghehKala);
             this.panelControl_Tabagheh.Controls.Add(this.btnReloadGroupTafsili_Tabagheh);
             this.panelControl_Tabagheh.Controls.Add(this.labelControl58);
@@ -930,17 +959,53 @@
             this.panelControl_Tabagheh.Controls.Add(this.cmbGroupTafsili_Tabagheh);
             this.panelControl_Tabagheh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_Tabagheh.Enabled = false;
-            this.panelControl_Tabagheh.Location = new System.Drawing.Point(0, 320);
+            this.panelControl_Tabagheh.Location = new System.Drawing.Point(0, 352);
             this.panelControl_Tabagheh.Name = "panelControl_Tabagheh";
-            this.panelControl_Tabagheh.Size = new System.Drawing.Size(1225, 246);
+            this.panelControl_Tabagheh.Size = new System.Drawing.Size(1225, 214);
             this.panelControl_Tabagheh.TabIndex = 58;
+            // 
+            // cmbNoeTabagheh
+            // 
+            this.cmbNoeTabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbNoeTabagheh.EnterMoveNextControl = true;
+            this.cmbNoeTabagheh.Location = new System.Drawing.Point(929, 6);
+            this.cmbNoeTabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNoeTabagheh.Name = "cmbNoeTabagheh";
+            this.cmbNoeTabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.cmbNoeTabagheh.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbNoeTabagheh.Properties.Appearance.Options.UseTextOptions = true;
+            this.cmbNoeTabagheh.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.cmbNoeTabagheh.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.cmbNoeTabagheh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbNoeTabagheh.Properties.Items.AddRange(new object[] {
+            "کالا",
+            "خدمات"});
+            this.cmbNoeTabagheh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbNoeTabagheh.Size = new System.Drawing.Size(176, 34);
+            this.cmbNoeTabagheh.TabIndex = 0;
+            this.cmbNoeTabagheh.TabStop = false;
+            this.cmbNoeTabagheh.SelectedIndexChanged += new System.EventHandler(this.cmbNoeTabagheh_SelectedIndexChanged);
+            // 
+            // labelControl59
+            // 
+            this.labelControl59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl59.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.labelControl59.Appearance.Options.UseForeColor = true;
+            this.labelControl59.AutoEllipsis = true;
+            this.labelControl59.Location = new System.Drawing.Point(1113, 9);
+            this.labelControl59.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl59.Name = "labelControl59";
+            this.labelControl59.Size = new System.Drawing.Size(61, 27);
+            this.labelControl59.TabIndex = 213;
+            this.labelControl59.Text = "نوع طبقه";
             // 
             // txtIndex_TabaghehKala
             // 
             this.txtIndex_TabaghehKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_TabaghehKala.EditValue = "";
             this.txtIndex_TabaghehKala.Enabled = false;
-            this.txtIndex_TabaghehKala.Location = new System.Drawing.Point(637, 48);
+            this.txtIndex_TabaghehKala.Location = new System.Drawing.Point(646, 85);
             this.txtIndex_TabaghehKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtIndex_TabaghehKala.Name = "txtIndex_TabaghehKala";
             this.txtIndex_TabaghehKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -962,7 +1027,7 @@
             this.btnReloadGroupTafsili_Tabagheh.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadGroupTafsili_Tabagheh.Appearance.Options.UseForeColor = true;
             this.btnReloadGroupTafsili_Tabagheh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadGroupTafsili_Tabagheh.ImageOptions.SvgImage")));
-            this.btnReloadGroupTafsili_Tabagheh.Location = new System.Drawing.Point(574, 7);
+            this.btnReloadGroupTafsili_Tabagheh.Location = new System.Drawing.Point(583, 44);
             this.btnReloadGroupTafsili_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReloadGroupTafsili_Tabagheh.Name = "btnReloadGroupTafsili_Tabagheh";
             this.btnReloadGroupTafsili_Tabagheh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -979,7 +1044,7 @@
             this.labelControl58.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl58.Appearance.Options.UseForeColor = true;
             this.labelControl58.AutoEllipsis = true;
-            this.labelControl58.Location = new System.Drawing.Point(1104, 11);
+            this.labelControl58.Location = new System.Drawing.Point(1113, 48);
             this.labelControl58.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl58.Name = "labelControl58";
             this.labelControl58.Size = new System.Drawing.Size(85, 27);
@@ -992,7 +1057,7 @@
             this.txtCodeGroup_TabaghehKala.EditValue = "";
             this.txtCodeGroup_TabaghehKala.Enabled = false;
             this.txtCodeGroup_TabaghehKala.EnterMoveNextControl = true;
-            this.txtCodeGroup_TabaghehKala.Location = new System.Drawing.Point(736, 48);
+            this.txtCodeGroup_TabaghehKala.Location = new System.Drawing.Point(745, 85);
             this.txtCodeGroup_TabaghehKala.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCodeGroup_TabaghehKala.Name = "txtCodeGroup_TabaghehKala";
             this.txtCodeGroup_TabaghehKala.Properties.Appearance.Options.UseTextOptions = true;
@@ -1008,7 +1073,7 @@
             // 
             this.cmbVahedKala_Tabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbVahedKala_Tabagheh.EnterMoveNextControl = true;
-            this.cmbVahedKala_Tabagheh.Location = new System.Drawing.Point(920, 131);
+            this.cmbVahedKala_Tabagheh.Location = new System.Drawing.Point(929, 168);
             this.cmbVahedKala_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbVahedKala_Tabagheh.Name = "cmbVahedKala_Tabagheh";
             this.cmbVahedKala_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1031,7 +1096,7 @@
             this.cmbVahedKala_Tabagheh.Properties.ValueMember = "Id";
             this.cmbVahedKala_Tabagheh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbVahedKala_Tabagheh.Size = new System.Drawing.Size(176, 34);
-            this.cmbVahedKala_Tabagheh.TabIndex = 3;
+            this.cmbVahedKala_Tabagheh.TabIndex = 4;
             this.cmbVahedKala_Tabagheh.Enter += new System.EventHandler(this.cmbVahedKala1_Enter);
             // 
             // epVahedKalasBindingSource
@@ -1044,7 +1109,7 @@
             this.btnVahedKala_Tabagheh.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnVahedKala_Tabagheh.Appearance.Options.UseForeColor = true;
             this.btnVahedKala_Tabagheh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala_Tabagheh.ImageOptions.SvgImage")));
-            this.btnVahedKala_Tabagheh.Location = new System.Drawing.Point(866, 128);
+            this.btnVahedKala_Tabagheh.Location = new System.Drawing.Point(875, 165);
             this.btnVahedKala_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVahedKala_Tabagheh.Name = "btnVahedKala_Tabagheh";
             this.btnVahedKala_Tabagheh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1061,7 +1126,7 @@
             this.labelControl62.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl62.Appearance.Options.UseForeColor = true;
             this.labelControl62.AutoEllipsis = true;
-            this.labelControl62.Location = new System.Drawing.Point(1106, 133);
+            this.labelControl62.Location = new System.Drawing.Point(1115, 170);
             this.labelControl62.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl62.Name = "labelControl62";
             this.labelControl62.Size = new System.Drawing.Size(70, 27);
@@ -1073,7 +1138,7 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(1106, 51);
+            this.labelControl1.Location = new System.Drawing.Point(1115, 88);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(54, 27);
@@ -1086,7 +1151,7 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl6.Appearance.Options.UseForeColor = true;
             this.labelControl6.AutoEllipsis = true;
-            this.labelControl6.Location = new System.Drawing.Point(645, 133);
+            this.labelControl6.Location = new System.Drawing.Point(654, 170);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(104, 27);
@@ -1098,7 +1163,7 @@
             this.chkIsActive_Tabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkIsActive_Tabagheh.EditValue = true;
             this.chkIsActive_Tabagheh.EnterMoveNextControl = true;
-            this.chkIsActive_Tabagheh.Location = new System.Drawing.Point(573, 130);
+            this.chkIsActive_Tabagheh.Location = new System.Drawing.Point(582, 167);
             this.chkIsActive_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chkIsActive_Tabagheh.Name = "chkIsActive_Tabagheh";
             this.chkIsActive_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1107,14 +1172,14 @@
             this.chkIsActive_Tabagheh.Properties.Caption = "فعال";
             this.chkIsActive_Tabagheh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkIsActive_Tabagheh.Size = new System.Drawing.Size(64, 35);
-            this.chkIsActive_Tabagheh.TabIndex = 4;
+            this.chkIsActive_Tabagheh.TabIndex = 5;
             // 
             // txtId_Tabagheh
             // 
             this.txtId_Tabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId_Tabagheh.EditValue = "";
             this.txtId_Tabagheh.Enabled = false;
-            this.txtId_Tabagheh.Location = new System.Drawing.Point(681, 48);
+            this.txtId_Tabagheh.Location = new System.Drawing.Point(690, 85);
             this.txtId_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtId_Tabagheh.Name = "txtId_Tabagheh";
             this.txtId_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1134,11 +1199,11 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txtSharhHesab_Tabagheh);
-            this.groupBox2.Location = new System.Drawing.Point(77, 7);
+            this.groupBox2.Location = new System.Drawing.Point(86, 9);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(488, 157);
+            this.groupBox2.Size = new System.Drawing.Size(488, 192);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "توضیح یا تشریح حساب (اختیاری)";
@@ -1152,7 +1217,7 @@
             this.txtSharhHesab_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSharhHesab_Tabagheh.Properties.Appearance.Options.UseForeColor = true;
             this.txtSharhHesab_Tabagheh.Properties.MaxLength = 500;
-            this.txtSharhHesab_Tabagheh.Size = new System.Drawing.Size(480, 124);
+            this.txtSharhHesab_Tabagheh.Size = new System.Drawing.Size(480, 159);
             this.txtSharhHesab_Tabagheh.TabIndex = 0;
             this.txtSharhHesab_Tabagheh.TabStop = false;
             // 
@@ -1162,7 +1227,7 @@
             this.txtCode_Tabagheh.EditValue = "";
             this.txtCode_Tabagheh.Enabled = false;
             this.txtCode_Tabagheh.EnterMoveNextControl = true;
-            this.txtCode_Tabagheh.Location = new System.Drawing.Point(1009, 49);
+            this.txtCode_Tabagheh.Location = new System.Drawing.Point(1018, 86);
             this.txtCode_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCode_Tabagheh.Name = "txtCode_Tabagheh";
             this.txtCode_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1174,13 +1239,13 @@
             this.txtCode_Tabagheh.Properties.MaxLength = 4;
             this.txtCode_Tabagheh.Properties.ReadOnly = true;
             this.txtCode_Tabagheh.Size = new System.Drawing.Size(87, 34);
-            this.txtCode_Tabagheh.TabIndex = 1;
+            this.txtCode_Tabagheh.TabIndex = 2;
             this.txtCode_Tabagheh.TabStop = false;
             // 
             // chkEditCode_Tabagheh
             // 
             this.chkEditCode_Tabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkEditCode_Tabagheh.Location = new System.Drawing.Point(975, 55);
+            this.chkEditCode_Tabagheh.Location = new System.Drawing.Point(984, 92);
             this.chkEditCode_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chkEditCode_Tabagheh.Name = "chkEditCode_Tabagheh";
             this.chkEditCode_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1199,7 +1264,7 @@
             this.btnNewCode_Tabagheh.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnNewCode_Tabagheh.Appearance.Options.UseForeColor = true;
             this.btnNewCode_Tabagheh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewCode_Tabagheh.ImageOptions.SvgImage")));
-            this.btnNewCode_Tabagheh.Location = new System.Drawing.Point(845, 47);
+            this.btnNewCode_Tabagheh.Location = new System.Drawing.Point(854, 84);
             this.btnNewCode_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnNewCode_Tabagheh.Name = "btnNewCode_Tabagheh";
             this.btnNewCode_Tabagheh.Size = new System.Drawing.Size(125, 36);
@@ -1215,14 +1280,14 @@
             // 
             this.txtName_Tabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName_Tabagheh.EnterMoveNextControl = true;
-            this.txtName_Tabagheh.Location = new System.Drawing.Point(573, 89);
+            this.txtName_Tabagheh.Location = new System.Drawing.Point(582, 126);
             this.txtName_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtName_Tabagheh.Name = "txtName_Tabagheh";
             this.txtName_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtName_Tabagheh.Properties.Appearance.Options.UseForeColor = true;
             this.txtName_Tabagheh.Properties.MaxLength = 100;
             this.txtName_Tabagheh.Size = new System.Drawing.Size(524, 34);
-            this.txtName_Tabagheh.TabIndex = 2;
+            this.txtName_Tabagheh.TabIndex = 3;
             // 
             // labelControl2
             // 
@@ -1230,7 +1295,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.AutoEllipsis = true;
-            this.labelControl2.Location = new System.Drawing.Point(1106, 91);
+            this.labelControl2.Location = new System.Drawing.Point(1115, 128);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 27);
@@ -1241,7 +1306,7 @@
             // 
             this.cmbGroupTafsili_Tabagheh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbGroupTafsili_Tabagheh.EnterMoveNextControl = true;
-            this.cmbGroupTafsili_Tabagheh.Location = new System.Drawing.Point(627, 9);
+            this.cmbGroupTafsili_Tabagheh.Location = new System.Drawing.Point(636, 46);
             this.cmbGroupTafsili_Tabagheh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbGroupTafsili_Tabagheh.Name = "cmbGroupTafsili_Tabagheh";
             this.cmbGroupTafsili_Tabagheh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -1264,9 +1329,10 @@
             this.cmbGroupTafsili_Tabagheh.Properties.PopupSizeable = false;
             this.cmbGroupTafsili_Tabagheh.Properties.PopupWidth = 545;
             this.cmbGroupTafsili_Tabagheh.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbGroupTafsili_Tabagheh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbGroupTafsili_Tabagheh.Properties.ValueMember = "Id";
             this.cmbGroupTafsili_Tabagheh.Size = new System.Drawing.Size(469, 34);
-            this.cmbGroupTafsili_Tabagheh.TabIndex = 0;
+            this.cmbGroupTafsili_Tabagheh.TabIndex = 1;
             this.cmbGroupTafsili_Tabagheh.ToolTip = "گروه های تفصیلی تعریف شده در کدینگ حسابداری با توجه\r\n به سطح انتخاب شده ، در این " +
     "قسمت نشان داده خواهد شد \r\nبرای هر گروه تعریف شده فقط یک طبقه کالا میتوان تعریف ن" +
     "مود\r\n";
@@ -1280,7 +1346,7 @@
             this.xtraTabPage_GroupAsli.Controls.Add(this.panelControl4);
             this.xtraTabPage_GroupAsli.Controls.Add(this.panelControl_GroupAsli);
             this.xtraTabPage_GroupAsli.Name = "xtraTabPage_GroupAsli";
-            this.xtraTabPage_GroupAsli.Size = new System.Drawing.Size(1225, 504);
+            this.xtraTabPage_GroupAsli.Size = new System.Drawing.Size(1225, 566);
             this.xtraTabPage_GroupAsli.Text = "گروه اصلی کالا";
             // 
             // panelControl4
@@ -1289,7 +1355,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1225, 336);
+            this.panelControl4.Size = new System.Drawing.Size(1225, 398);
             this.panelControl4.TabIndex = 61;
             // 
             // gridControl_GroupAsli
@@ -1301,7 +1367,7 @@
             this.gridControl_GroupAsli.MainView = this.gridView_GroupAsli;
             this.gridControl_GroupAsli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_GroupAsli.Name = "gridControl_GroupAsli";
-            this.gridControl_GroupAsli.Size = new System.Drawing.Size(1221, 332);
+            this.gridControl_GroupAsli.Size = new System.Drawing.Size(1221, 394);
             this.gridControl_GroupAsli.TabIndex = 33;
             this.gridControl_GroupAsli.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_GroupAsli});
@@ -1480,7 +1546,7 @@
             this.panelControl_GroupAsli.Controls.Add(this.labelControl7);
             this.panelControl_GroupAsli.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_GroupAsli.Enabled = false;
-            this.panelControl_GroupAsli.Location = new System.Drawing.Point(0, 336);
+            this.panelControl_GroupAsli.Location = new System.Drawing.Point(0, 398);
             this.panelControl_GroupAsli.Name = "panelControl_GroupAsli";
             this.panelControl_GroupAsli.Size = new System.Drawing.Size(1225, 168);
             this.panelControl_GroupAsli.TabIndex = 60;
@@ -1827,7 +1893,7 @@
             this.xtraTabPage_GroupFaree.Controls.Add(this.panelControl6);
             this.xtraTabPage_GroupFaree.Controls.Add(this.panelControl_GroupFaree);
             this.xtraTabPage_GroupFaree.Name = "xtraTabPage_GroupFaree";
-            this.xtraTabPage_GroupFaree.Size = new System.Drawing.Size(1225, 504);
+            this.xtraTabPage_GroupFaree.Size = new System.Drawing.Size(1225, 566);
             this.xtraTabPage_GroupFaree.Text = "گروه فرعی کالا";
             // 
             // panelControl6
@@ -1836,7 +1902,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1225, 291);
+            this.panelControl6.Size = new System.Drawing.Size(1225, 353);
             this.panelControl6.TabIndex = 61;
             // 
             // gridControl_GroupFaree
@@ -1848,7 +1914,7 @@
             this.gridControl_GroupFaree.MainView = this.gridView_GroupFaree;
             this.gridControl_GroupFaree.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_GroupFaree.Name = "gridControl_GroupFaree";
-            this.gridControl_GroupFaree.Size = new System.Drawing.Size(1221, 287);
+            this.gridControl_GroupFaree.Size = new System.Drawing.Size(1221, 349);
             this.gridControl_GroupFaree.TabIndex = 33;
             this.gridControl_GroupFaree.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_GroupFaree});
@@ -2046,7 +2112,7 @@
             this.panelControl_GroupFaree.Controls.Add(this.labelControl13);
             this.panelControl_GroupFaree.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_GroupFaree.Enabled = false;
-            this.panelControl_GroupFaree.Location = new System.Drawing.Point(0, 291);
+            this.panelControl_GroupFaree.Location = new System.Drawing.Point(0, 353);
             this.panelControl_GroupFaree.Name = "panelControl_GroupFaree";
             this.panelControl_GroupFaree.Size = new System.Drawing.Size(1225, 213);
             this.panelControl_GroupFaree.TabIndex = 60;
@@ -2458,7 +2524,7 @@
             this.xtraTabPage_NameKala.Controls.Add(this.panelControl8);
             this.xtraTabPage_NameKala.Controls.Add(this.panelControl_NameKala);
             this.xtraTabPage_NameKala.Name = "xtraTabPage_NameKala";
-            this.xtraTabPage_NameKala.Size = new System.Drawing.Size(1225, 504);
+            this.xtraTabPage_NameKala.Size = new System.Drawing.Size(1225, 566);
             this.xtraTabPage_NameKala.Text = "نــام کــالا";
             // 
             // panelControl8
@@ -2467,7 +2533,7 @@
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl8.Location = new System.Drawing.Point(0, 0);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(1225, 219);
+            this.panelControl8.Size = new System.Drawing.Size(1225, 281);
             this.panelControl8.TabIndex = 61;
             // 
             // gridControl_NameKala
@@ -2479,7 +2545,7 @@
             this.gridControl_NameKala.MainView = this.gridView_NameKala;
             this.gridControl_NameKala.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl_NameKala.Name = "gridControl_NameKala";
-            this.gridControl_NameKala.Size = new System.Drawing.Size(1221, 215);
+            this.gridControl_NameKala.Size = new System.Drawing.Size(1221, 277);
             this.gridControl_NameKala.TabIndex = 33;
             this.gridControl_NameKala.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_NameKala});
@@ -3161,7 +3227,7 @@
             // 
             this.panelControl_NameKala.Controls.Add(this.xtraTabControl_NameKala);
             this.panelControl_NameKala.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl_NameKala.Location = new System.Drawing.Point(0, 219);
+            this.panelControl_NameKala.Location = new System.Drawing.Point(0, 281);
             this.panelControl_NameKala.Name = "panelControl_NameKala";
             this.panelControl_NameKala.Size = new System.Drawing.Size(1225, 285);
             this.panelControl_NameKala.TabIndex = 60;
@@ -4993,7 +5059,7 @@
             // 
             this.xtraTabPage_DerakhtVareh.Controls.Add(this.treeListCodingKala);
             this.xtraTabPage_DerakhtVareh.Name = "xtraTabPage_DerakhtVareh";
-            this.xtraTabPage_DerakhtVareh.Size = new System.Drawing.Size(1225, 504);
+            this.xtraTabPage_DerakhtVareh.Size = new System.Drawing.Size(1225, 566);
             this.xtraTabPage_DerakhtVareh.Text = "درختواره کدینگ کالا";
             // 
             // treeListCodingKala
@@ -5021,7 +5087,7 @@
             this.treeListCodingKala.OptionsView.ShowIndicator = false;
             this.treeListCodingKala.ParentFieldName = "ParentCode";
             this.treeListCodingKala.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeListCodingKala.Size = new System.Drawing.Size(1225, 504);
+            this.treeListCodingKala.Size = new System.Drawing.Size(1225, 566);
             this.treeListCodingKala.TabIndex = 40;
             this.treeListCodingKala.TreeLevelWidth = 28;
             this.treeListCodingKala.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeList;
@@ -5107,14 +5173,6 @@
             this.treeListColumn1.VisibleIndex = 3;
             this.treeListColumn1.Width = 587;
             // 
-            // radioGroup1
-            // 
-            this.radioGroup1.Location = new System.Drawing.Point(866, 179);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Columns = 3;
-            this.radioGroup1.Size = new System.Drawing.Size(231, 36);
-            this.radioGroup1.TabIndex = 212;
-            // 
             // FrmCodingKala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
@@ -5145,6 +5203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Tabagheh)).EndInit();
             this.panelControl_Tabagheh.ResumeLayout(false);
             this.panelControl_Tabagheh.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeTabagheh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIndex_TabaghehKala.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodeGroup_TabaghehKala.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbVahedKala_Tabagheh.Properties)).EndInit();
@@ -5270,7 +5329,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lstSerialKala_NameKala.Properties)).EndInit();
             this.xtraTabPage_DerakhtVareh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeListCodingKala)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5561,6 +5619,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl40;
         private DevExpress.XtraEditors.MemoEdit lstShomareFani_NameKala;
         private DevExpress.XtraEditors.MemoEdit lstSerialKala_NameKala;
-        private DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private DevExpress.XtraEditors.LabelControl labelControl59;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbNoeTabagheh;
+        private DevExpress.XtraGrid.Columns.GridColumn colNoeTabagheName;
+        private DevExpress.XtraGrid.Columns.GridColumn colNoeTabagheIndex;
     }
 }

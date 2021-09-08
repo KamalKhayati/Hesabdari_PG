@@ -632,8 +632,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTabaghehGroup.Properties.Items.AddRange(new object[] {
             "اشخاص",
-            "اقلام انبار",
-            "دارائیها",
+            "اقلام انبار و اموال",
+            "---------",
             "صندوقها",
             "بانکها",
             "وامها",

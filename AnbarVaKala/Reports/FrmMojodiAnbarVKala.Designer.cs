@@ -436,7 +436,7 @@
             // 
             // amaliatAnbarVKala_RizsBindingSource
             // 
-            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
+            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AKAmaliatAnbarVKala_Riz);
             // 
             // bandedGridView_MeghdariVRiali
             // 

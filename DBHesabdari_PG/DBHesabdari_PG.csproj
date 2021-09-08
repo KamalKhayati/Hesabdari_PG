@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AK\AmaliatAnbarVKala_Riz.cs" />
+    <Compile Include="Models\AK\AKAmaliatAnbarVKala_Riz.cs" />
     <Compile Include="Models\EnumCED.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpAllCodingKala.cs" />
     <Compile Include="Models\EP\CodingAnbar\EpGroupAsliKala.cs" />
@@ -133,6 +133,9 @@
     <Compile Include="Models\EP\Tanzimat\EpTanzimatAnbarVKala.cs" />
     <Compile Include="Models\EP\Tanzimat\EpTanzimatCodingHesabdari.cs" />
     <Compile Include="Models\EP\Tanzimat\EpTanzimatGroupTafsili.cs" />
+    <Compile Include="Models\FK\FkAmaliatFrooshVKharid_Riz.cs" />
+    <Compile Include="Models\FK\Taarif\FKTarifEz_Ks_Factor.cs" />
+    <Compile Include="Models\FK\Tanzimat\FKTanzimatFactor.cs" />
     <Compile Include="Models\Ms\ActiveSystem\MsActiveSystem.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsDefault.cs" />
     <Compile Include="Models\Ms\DafaterMali\MsDoreMali.cs" />
@@ -173,7 +176,6 @@
   <ItemGroup>
     <Folder Include="Models\AS\" />
     <Folder Include="Models\DP\" />
-    <Folder Include="Models\FK\" />
     <Folder Include="Models\Ms\SalMali\" />
   </ItemGroup>
   <ItemGroup>

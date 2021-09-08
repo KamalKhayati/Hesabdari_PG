@@ -750,7 +750,7 @@ namespace EtelaatePaye.CodingAnbar
                                                     int _TabagheKalaId = Convert.ToInt32(TabagheKalaId);
                                                     string _TabagheKalaName = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabagheKalaId).Name;
                                                     //var q2 = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Item1).Code;
-                                                    var q4 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId).Select(s => s.KalaId).Distinct().ToList();
+                                                    var q4 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId).Select(s => s.KalaId).Distinct().ToList();
                                                     if (q4.Count > 0)
                                                         foreach (var KalaId in q4)
                                                         {
@@ -923,7 +923,7 @@ namespace EtelaatePaye.CodingAnbar
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
+                    var q = db.EpTabaghehKalas.Where(s => s.SalId == _SalId && s.NoeTabagheIndex==0).OrderBy(s => s.Code).ToList();
                     epTabaghehKalasBindingSource.DataSource = q.Count > 0 && En != EnumCED.Create ? q : q.Count > 0 && En == EnumCED.Create ? q.Where(s => s.IsActive == true).ToList() : null;
                 }
                 catch (Exception ex)

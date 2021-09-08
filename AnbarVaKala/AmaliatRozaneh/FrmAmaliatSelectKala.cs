@@ -49,44 +49,80 @@ namespace AnbarVaKala.AmaliatRozaneh
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
                     var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                    var q2 = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).ToList();
-
-                    foreach (var item in q1)
+                    if (Fm._FirstSelectAnbar_NextSanad)
                     {
-                        var qq = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == item.Id).Select(s => s.TabagheKalaId).ToList();
+                        var q2 = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).ToList();
+
+                        foreach (var item in q1)
+                        {
+                            var qq = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == item.Id).Select(s => s.TabagheKalaId).ToList();
+                            if (qq.Count > 0)
+                            {
+                                string _TabagheKala = String.Empty;
+                                foreach (var item2 in qq)
+                                {
+                                    _TabagheKala += q2.FirstOrDefault(s => s.Id == item2).Name + ",";
+                                }
+                                item.TabagheKalaIdName_NM = _TabagheKala;
+                            }
+                        }
+
+                        if (Fm != null)
+                        {
+                            if (Fm.En2 == EnumCED.Edit)
+                                epListAnbarhasBindingSource.DataSource = q1.Count > 0 ? q1.OrderBy(s => s.Code).ToList() : null;
+                            else
+                                epListAnbarhasBindingSource.DataSource = q1.Where(s => s.IsActive == true).ToList().Count > 0 ? q1.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList() : null;
+                        }
+
+                    }
+                    else
+                    {
+                        int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                        int _TabagheKalaId = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId).EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.Id;
+                        var qq = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.TabagheKalaId == _TabagheKalaId).Select(s => s.AnbarhId).ToList();
+                        var q = db.EpListAnbarhas.Where(s => s.SalId == _SalId).ToList();
+                        List<EpListAnbarha> List1 = new List<EpListAnbarha>();
                         if (qq.Count > 0)
                         {
-                            string _KalaId = String.Empty;
-                            foreach (var item2 in qq)
+                            foreach (var item in qq)
                             {
-                                _KalaId += q2.FirstOrDefault(s => s.Id == item2).Name + ",";
+                                var qp1 = q.FirstOrDefault(s => s.Id == item);
+                                List1.Add(qp1);
                             }
-                            item.TabagheKalaIdName_NM = _KalaId;
                         }
-                    }
-
-                    if (Fm != null)
-                    {
-                        if (Fm.En2 == EnumCED.Edit)
-                            epListAnbarhasBindingSource.DataSource = q1.Count > 0 ? q1 : null;
                         else
-                            epListAnbarhasBindingSource.DataSource = q1.Where(s => s.IsActive == true).ToList().Count > 0 ? q1.Where(s => s.IsActive == true).ToList() : null;
-                    }
-                    //else if (Jm != null)
-                    //{
-                    //    if (Jm.En2 == EnumCED.Edit)
-                    //        epListAnbarhasBindingSource.DataSource = q1.Count > 0 ? q1 : null;
-                    //    else
-                    //        epListAnbarhasBindingSource.DataSource = q1.Where(s => s.IsActive == true).ToList().Count > 0 ? q1.Where(s => s.IsActive == true).ToList() : null;
+                        {
+                            List1 = q;
+                        }
 
-                    //}
-                    //else if (Dm != null)
-                    //{
-                    //    if (Dm.En2 == EnumCED.Edit)
-                    //        epListAnbarhasBindingSource.DataSource = q1.Count > 0 ? q1 : null;
-                    //    else
-                    //        epListAnbarhasBindingSource.DataSource = q1.Where(s => s.IsActive == true).ToList().Count > 0 ? q1.Where(s => s.IsActive == true).ToList() : null;
-                    //}
+                        var q2 = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).ToList();
+
+                        foreach (var item in List1)
+                        {
+                            var qq1 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == item.Id).Select(s => s.TabagheKalaId).ToList();
+                            if (qq.Count > 0)
+                            {
+                                string _TabagheKala = String.Empty;
+                                foreach (var item2 in qq1)
+                                {
+                                    _TabagheKala += q2.FirstOrDefault(s => s.Id == item2).Name + ",";
+                                }
+                                item.TabagheKalaIdName_NM = _TabagheKala;
+                            }
+                            var qq2 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId).ToList();
+                            item.MeghdarMa_NM = qq2.Where(s => s.KalaId == _KalaId && s.BeAnbarId == item.Id && s.NameAmaliatCode == 2).Sum(s => s.Meghdar) - qq2.Where(s => s.KalaId == _KalaId && s.AzAnbarId == item.Id && s.NameAmaliatCode == 3).Sum(s => s.Meghdar);
+                        }
+
+                        if (Fm != null)
+                        {
+                            if (Fm.En2 == EnumCED.Edit)
+                                epListAnbarhasBindingSource.DataSource = List1.Count > 0 ? List1.OrderBy(s => s.Code).ToList() : null;
+                            else
+                                epListAnbarhasBindingSource.DataSource = List1.Where(s => s.IsActive == true).ToList().Count > 0 ? List1.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList() : null;
+                        }
+
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -99,18 +135,25 @@ namespace AnbarVaKala.AmaliatRozaneh
         private void FrmAmaliatSelectKala_Load(object sender, EventArgs e)
         {
             _SalId = Convert.ToInt32(lblSalId.Text);
-            FillCmbNameAnbar2();
+            if (Fm._FirstSelectAnbar_NextSanad)
+                FillCmbNameAnbar2();
+            else
+                FillcmbNameKala();
             db = new MyContext();
             var qq = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
             if (Fm != null)
             {
                 if (Fm.En2 == EnumCED.Create)
                 {
-                    if (btnInsert.Name == "btnInsert1")
-                        cmbNameAnbar2.EditValue = Fm._AzAnbarId;
-                    else if (btnInsert.Name == "btnInsert2")
-                        cmbNameAnbar2.EditValue = Fm._BeAnbarId;
+                    if (Fm._FirstSelectAnbar_NextSanad)
+                    {
+                        if (btnInsert.Name == "btnInsert1")
+                            cmbNameAnbar2.EditValue = Fm._AzAnbarId;
+                        else if (btnInsert.Name == "btnInsert2")
+                            cmbNameAnbar2.EditValue = Fm._BeAnbarId;
+                    }
 
+                    cmb_NameKala.ShowPopup();
 
                 }
                 else if (Fm.En2 == EnumCED.Edit)
@@ -120,11 +163,33 @@ namespace AnbarVaKala.AmaliatRozaneh
                         try
                         {
                             if (btnEdit.Name == "btnEdit1")
-                                cmbNameAnbar2.EditValue = Fm._AzAnbarId;
+                            {
+                                if (Fm._FirstSelectAnbar_NextSanad)
+                                {
+                                    cmbNameAnbar2.EditValue = Fm._AzAnbarId;
+                                    cmb_NameKala.EditValue = Fm._KalaId;
+                                }
+                                else
+                                {
+                                    cmb_NameKala.EditValue = Fm._KalaId;
+                                    cmbNameAnbar2.EditValue = Fm._AzAnbarId;
+                                }
+                            }
                             else if (btnEdit.Name == "btnEdit2")
-                                cmbNameAnbar2.EditValue = Fm._BeAnbarId;
+                            {
+                                if (Fm._FirstSelectAnbar_NextSanad)
+                                {
+                                    cmbNameAnbar2.EditValue = Fm._BeAnbarId;
+                                    cmb_NameKala.EditValue = Fm._KalaId;
+                                }
+                                else
+                                {
+                                    cmb_NameKala.EditValue = Fm._KalaId;
+                                    cmbNameAnbar2.EditValue = Fm._BeAnbarId;
+                                }
+                            }
 
-                            cmb_NameKala.EditValue = Fm._KalaId;
+
                             lblVahedeAsli.Text = qq.FirstOrDefault(s => s.Id == Fm._VahedeKalaId).Name;
                             txtMeghdar.Text = Fm._Meghdar;
                             txtNerkh.Text = Fm._Nerkh;
@@ -141,7 +206,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                 }
 
-                if (Fm._NoeSanadIndex == 8 || Fm._NoeSanadIndex == 9)
+                if (Fm._NameSanadIndex == 8 || Fm._NameSanadIndex == 9)
                 {
                     cmbNameAnbar2.Enabled = false;
                     btnReloadNameAnbar2.Enabled = false;
@@ -150,111 +215,17 @@ namespace AnbarVaKala.AmaliatRozaneh
                 }
                 else
                 {
-                    if (Fm._FirstSelectAnbar_NextSanad == true)
-                    {
-                        cmb_NameKala.Focus();
-                    }
-                    else
+                    if (Fm._FirstSelectAnbar_NextSanad == false)
                     {
                         cmbNameAnbar2.Enabled = true;
                         btnReloadNameAnbar2.Enabled = true;
-                        cmbNameAnbar2.Focus();
                     }
+                    cmb_NameKala.Focus();
 
                 }
 
 
             }
-            //else if (Jm != null)
-            //{
-            //    if (Jm.En2 == EnumCED.Create)
-            //    {
-            //        cmbNameAnbar2.EditValue = AzAnbarId;
-            //        cmb_NameKala.Focus();
-            //    }
-            //    else if (Jm.En2 == EnumCED.Edit)
-            //    {
-            //        using (var db = new MyContext())
-            //        {
-            //            try
-            //            {
-            //                cmbNameAnbar2.EditValue = Jm._AzAnbarId;
-            //                cmb_NameKala.EditValue = Convert.ToInt32(Jm._KalaId);
-            //                lblVahedeAsli.Text = Jm._VahedeKala_NM;
-            //                txtMeghdar.Text = Jm._Meghdar;
-            //                txtNerkh.Text = Jm._Nerkh;
-            //                txtMablag.Text = Jm._Mablag;
-            //                txtTozihat.Text = Jm._Tozihat;
-            //                // btnSaveAndNext.Enabled = false;
-            //                cmb_NameKala.Focus();
-            //            }
-            //            catch (Exception ex)
-            //            {
-            //                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-            //                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            }
-            //        }
-
-            //    }
-            //}
-            //else if (Dm != null)
-            //{
-            //    if (Dm.En2 == EnumCED.Create)
-            //    {
-            //        if (Dm._FirstSelectAnbar_NextSanad == false)
-            //        {
-            //            cmbNameAnbar2.Enabled = true;
-            //            btnReloadNameAnbar2.Enabled = true;
-            //            cmbNameAnbar2.Focus();
-            //        }
-            //        else
-            //        {
-            //            cmbNameAnbar2.EditValue = AzAnbarId;
-            //            cmb_NameKala.Focus();
-            //        }
-            //    }
-            //    else if (Dm.En2 == EnumCED.Edit)
-            //    {
-            //        using (var db = new MyContext())
-            //        {
-            //            try
-            //            {
-            //                long _CodeKala = Convert.ToInt64(Dm._KalaCode_NM);
-            //                var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Code == _CodeKala);
-            //                if (q != null)
-            //                {
-            //                    cmbNameAnbar2.EditValue = Dm._AzAnbarId;
-            //                    cmb_NameKala.EditValue = Convert.ToInt32(Dm._KalaId);
-            //                    lblVahedeAsli.Text = Dm._VahedeKala_NM;
-            //                    txtMeghdar.Text = Dm._Meghdar;
-            //                    txtNerkh.Text = Dm._Nerkh;
-            //                    txtMablag.Text = Dm._Mablag;
-            //                    txtTozihat.Text = Dm._Tozihat;
-            //                    // btnSaveAndNext.Enabled = false;
-            //                    if (Dm._FirstSelectAnbar_NextSanad == false)
-            //                    {
-            //                        cmbNameAnbar2.Enabled = true;
-            //                        btnReloadNameAnbar2.Enabled = true;
-            //                        cmbNameAnbar2.Focus();
-            //                    }
-            //                    else
-            //                    {
-            //                        cmb_NameKala.Focus();
-
-            //                    }
-            //                }
-            //            }
-            //            catch (Exception ex)
-            //            {
-            //                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-            //                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            }
-            //        }
-
-            //    }
-
-
-            //}
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -266,84 +237,110 @@ namespace AnbarVaKala.AmaliatRozaneh
         {
             try
             {
-                db = new MyContext();
-                _SalId = Convert.ToInt32(lblSalId.Text);
-                AzAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
-                BeAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
-                List<AmaliatAnbarVKala_Riz> _List3 = new List<AmaliatAnbarVKala_Riz>();
-                var qq1 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId ).ToList();
-                var qq2 = qq1.Where(s => s.BeAnbarId == BeAnbarId && s.NoeAmaliatCode == 2).ToList();
-                var qq3 = qq1.Where(s => s.AzAnbarId == AzAnbarId && s.NoeAmaliatCode == 3).ToList();
-                if (qq2.Count > 0)
-                    _List3.AddRange(qq2);
-                if (qq3.Count > 0)
-                    _List3.AddRange(qq3);
-
-                //var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
-                //var q6 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == AzAnbarId).ToList();
-                var q1 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == AzAnbarId).Select(s => s.TabagheKalaId).ToList();
-                List<EpNameKala> List1 = new List<EpNameKala>();
-                IEnumerable<int> List2 = null;
-
-                if (Fm != null)
+                if (Fm._FirstSelectAnbar_NextSanad)
                 {
-                    List2 = q1;
+                    db = new MyContext();
+                    _SalId = Convert.ToInt32(lblSalId.Text);
+                    AzAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
+                    BeAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
+                    List<AKAmaliatAnbarVKala_Riz> _List3 = new List<AKAmaliatAnbarVKala_Riz>();
+                    var qq1 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId).ToList();
+                    var qq2 = qq1.Where(s => s.BeAnbarId == BeAnbarId && s.NameAmaliatCode == 2).ToList();
+                    var qq3 = qq1.Where(s => s.AzAnbarId == AzAnbarId && s.NameAmaliatCode == 3).ToList();
+                    if (qq2.Count > 0)
+                        _List3.AddRange(qq2);
+                    if (qq3.Count > 0)
+                        _List3.AddRange(qq3);
+
+                    //var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
+                    //var q6 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == AzAnbarId).ToList();
+                    var q1 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == AzAnbarId).Select(s => s.TabagheKalaId).ToList();
+                    List<EpNameKala> List1 = new List<EpNameKala>();
+                    IEnumerable<int> List2 = null;
+
+                    if (Fm != null)
+                    {
+                        List2 = q1;
+                    }
+
+                    foreach (var item in List2)
+                    {
+                        var q5 = db.EpNameKalas.Where(s => s.SalId == _SalId && s.EpGroupFareeKala1.EpGroupAsliKala1.TabaghehId == item).ToList();
+                        List1.AddRange(q5);
+                    }
+                    var q = List1.OrderBy(s => s.Code).ToList();
+                    foreach (var item in q)
+                    {
+                        item.TabagheKalaName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.Name;
+                        item.GroupAsliName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
+                        item.GroupFareeName_NM = item.EpGroupFareeKala1.Name;
+                        item.VahedAsliName_NM = List1.FirstOrDefault(s => s.EpAllCodingKala1.Id == item.Id).EpVahedAsliKala.Name;
+                        item.MeghdarMa_NM = _List3.Where(s => s.KalaId == item.Id && s.NameAmaliatCode == 2).Sum(s => s.Meghdar) - _List3.Where(s => s.KalaId == item.Id && s.NameAmaliatCode == 3).Sum(s => s.Meghdar);
+                    }
+
+
+                    if (Fm != null)
+                    {
+                        if (Fm.En2 == EnumCED.Edit)
+                            epNameKalasBindingSource.DataSource = q.Count > 0 ? q.OrderBy(s => s.Code).ToList() : null;
+                        else
+                            epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList() : null;
+                    }
+
                 }
-                //else if (Jm != null)
-                //{
-                //    var q2 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == BeAnbarId).Select(s => s.TabagheKalaId).ToList();
-                //    List2 = q2.Except(q2.Except(q1));
-
-                //}
-                //else if (Dm != null)
-                //{
-                //    List2 = q1;
-
-                //}
-
-                foreach (var item in List2)
+                else
                 {
-                    var q5 = db.EpNameKalas.Where(s => s.SalId == _SalId && s.EpGroupFareeKala1.EpGroupAsliKala1.TabaghehId == item).ToList();
-                    List1.AddRange(q5);
+                    db = new MyContext();
+                    _SalId = Convert.ToInt32(lblSalId.Text);
+                    int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                    //BeAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
+                    //List<AKAmaliatAnbarVKala_Riz> _List3 = new List<AKAmaliatAnbarVKala_Riz>();
+                    var qq1 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId).ToList();
+                    //var qq2 = qq1.Where(s => s.KalaId == _KalaId && s.NameAmaliatCode == 2).ToList();
+                    //var qq3 = qq1.Where(s => s.KalaId == _KalaId && s.NameAmaliatCode == 3).ToList();
+                    //if (qq2.Count > 0)
+                    //    _List3.AddRange(qq2);
+                    //if (qq3.Count > 0)
+                    //_List3.AddRange(qq3);
+
+                    //var q3 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId).ToList();
+                    //var q6 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == AzAnbarId).ToList();
+                    //var q1 = db.R_EpListAnbarha_B_EpTabaghehKalas.Where(s => s.SalId == _SalId && s.AnbarhId == AzAnbarId).Select(s => s.TabagheKalaId).ToList();
+                    //List<EpNameKala> List1 = new List<EpNameKala>();
+                    //IEnumerable<int> List2 = null;
+
+                    //if (Fm != null)
+                    //{
+                    //    List2 = q1;
+                    //}
+
+                    //foreach (var item in List2)
+                    //{
+                    //    var q5 = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
+                    //    List1.AddRange(q5);
+                    //}
+                    var q = db.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
+                    foreach (var item in q)
+                    {
+                        item.TabagheKalaName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.Name;
+                        item.GroupAsliName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
+                        item.GroupFareeName_NM = item.EpGroupFareeKala1.Name;
+                        item.VahedAsliName_NM = q.FirstOrDefault(s => s.EpAllCodingKala1.Id == item.Id).EpVahedAsliKala.Name;
+                        item.MeghdarMa_NM = qq1.Where(s => s.KalaId == item.Id && s.NameAmaliatCode == 2).Sum(s => s.Meghdar) - qq1.Where(s => s.KalaId == item.Id && s.NameAmaliatCode == 3).Sum(s => s.Meghdar);
+                    }
+
+
+                    if (Fm != null)
+                    {
+                        if (Fm.En2 == EnumCED.Edit)
+                            epNameKalasBindingSource.DataSource = q.Count > 0 ? q.OrderBy(s => s.Code).ToList() : null;
+                        else
+                            epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true).OrderBy(s => s.Code).ToList() : null;
+                    }
+
                 }
-                var q = List1.OrderBy(s => s.Code).ToList();
-                foreach (var item in q)
-                {
-                    item.TabagheKalaName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.Name;
-                    item.GroupAsliName_NM = item.EpGroupFareeKala1.EpGroupAsliKala1.Name;
-                    item.GroupFareeName_NM = item.EpGroupFareeKala1.Name;
-                    item.MeghdarMa_NM = _List3.Where(s => s.KalaId == item.Id && s.NoeAmaliatCode == 2).Sum(s => s.Meghdar) - _List3.Where(s => s.KalaId == item.Id && s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
-                }
 
 
-                if (Fm != null)
-                {
-                    if (Fm.En2 == EnumCED.Edit)
-                        epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
-                    else
-                        epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
-                }
-                //else if (Jm != null)
-                //{
-                //    if (Jm.En2 == EnumCED.Edit)
-                //        epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
-                //    else
-                //        epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
-                //}
-                //else if (Dm != null)
-                //{
-                //    if (Dm.En2 == EnumCED.Edit)
-                //        epNameKalasBindingSource.DataSource = q.Count > 0 ? q : null;
-                //    else
-                //        epNameKalasBindingSource.DataSource = q.Where(s => s.IsActive == true).ToList().Count > 0 ? q.Where(s => s.IsActive == true) : null;
-                //}
-
-
-                //db.EpNameKalas.Where(s => s.SalId == _SallId ).LoadAsync().ContinueWith(loadTask =>
-                //{
-                //    // Bind data to control when loading complete
-                //    epNameKalasBindingSource.DataSource = db.EpNameKalas.Local.ToBindingList();
-                //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
 
             }
             catch (Exception ex)
@@ -556,98 +553,213 @@ namespace AnbarVaKala.AmaliatRozaneh
             {
                 try
                 {
-                    int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
-                    var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId);
-                    txtVahed3.Text = q != null && q.EpVahedKala3 != null ? q.EpVahedKala3.Name : string.Empty;
-                    txtVahed2.Text = q != null && q.EpVahedKala2 != null ? q.EpVahedKala2.Name : string.Empty;
-                    txtVahed1.Text = q != null && q.EpVahedKala1 != null ? q.EpVahedKala1.Name : string.Empty;
-                    lblVahedeAsli.Text = q != null ? q.EpVahedAsliKala.Name : string.Empty;
-                    txtTedadeDarVahed3.Text = q != null ? q.HarKarton.ToString() : string.Empty;
-                    txtTedadeDarVahed2.Text = q != null ? q.HarBaste.ToString() : string.Empty;
-
-                    decimal MeghdarMa_NM = Convert.ToDecimal(cmb_NameKala.Properties.GetDataSourceValue("MeghdarMa_NM", cmb_NameKala.ItemIndex));
-                    txtMeghdarMa.Text = MeghdarMa_NM.ToString();
-
-                    if (MeghdarMa_NM != 0)
+                    if (Fm._FirstSelectAnbar_NextSanad)
                     {
-                        string _txtTedadeDarVahed1 = !string.IsNullOrEmpty(txtTedadeDarVahed1.Text) ? txtTedadeDarVahed1.Text : "0";
-                        string _txtTedadeDarVahed2 = !string.IsNullOrEmpty(txtTedadeDarVahed2.Text) ? txtTedadeDarVahed2.Text : "0";
-                        string _txtTedadeDarVahed3 = !string.IsNullOrEmpty(txtTedadeDarVahed3.Text) ? txtTedadeDarVahed3.Text : "0";
+                        int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                        var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId);
+                        txtVahed3.Text = q != null && q.EpVahedKala3 != null ? q.EpVahedKala3.Name : string.Empty;
+                        txtVahed2.Text = q != null && q.EpVahedKala2 != null ? q.EpVahedKala2.Name : string.Empty;
+                        txtVahed1.Text = q != null && q.EpVahedKala1 != null ? q.EpVahedKala1.Name : string.Empty;
+                        lblVahedeAsli.Text = q != null ? q.EpVahedAsliKala.Name : string.Empty;
+                        txtTedadeDarVahed3.Text = q != null ? q.HarKarton.ToString() : string.Empty;
+                        txtTedadeDarVahed2.Text = q != null ? q.HarBaste.ToString() : string.Empty;
 
-                        if (lblVahedeAsli.Text == txtVahed1.Text)
+                        decimal MeghdarMa_NM = 0;
+                        //if (Fm._FirstSelectAnbar_NextSanad)
+                        MeghdarMa_NM = Convert.ToDecimal(cmb_NameKala.Properties.GetDataSourceValue("MeghdarMa_NM", cmb_NameKala.ItemIndex));
+                        //else
+                        //    MeghdarMa_NM = Convert.ToDecimal(cmbNameAnbar2.Properties.GetDataSourceValue("MeghdarMa_NM", cmbNameAnbar2.ItemIndex));
+
+                        txtMeghdarMa.Text = MeghdarMa_NM.ToString();
+
+                        if (MeghdarMa_NM != 0)
                         {
-                            long _TedadeBaste = 0;
-                            long _TedadeKarton = 0;
-                            long _TedadeBaste1 = 0;
-                            decimal _Meghdar1 = 0;
+                            string _txtTedadeDarVahed1 = !string.IsNullOrEmpty(txtTedadeDarVahed1.Text) ? txtTedadeDarVahed1.Text : "0";
+                            string _txtTedadeDarVahed2 = !string.IsNullOrEmpty(txtTedadeDarVahed2.Text) ? txtTedadeDarVahed2.Text : "0";
+                            string _txtTedadeDarVahed3 = !string.IsNullOrEmpty(txtTedadeDarVahed3.Text) ? txtTedadeDarVahed3.Text : "0";
 
-                            if (!string.IsNullOrEmpty(_txtTedadeDarVahed2) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed2) && _txtTedadeDarVahed2 != "0")
-                                _TedadeBaste = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed2));
-
-                            if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && _TedadeBaste >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
+                            if (lblVahedeAsli.Text == txtVahed1.Text)
                             {
-                                _TedadeKarton = (long)(_TedadeBaste / Convert.ToDecimal(_txtTedadeDarVahed3));
-                                txtmojodi3.Text = _TedadeKarton.ToString();
-                            }
-                            else
-                                txtmojodi3.Text = "0";
+                                long _TedadeBaste = 0;
+                                long _TedadeKarton = 0;
+                                long _TedadeBaste1 = 0;
+                                decimal _Meghdar1 = 0;
 
-                            if (_TedadeBaste > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
-                            {
-                                _TedadeBaste1 = (long)(_TedadeBaste - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)));
-                                txtmojodi2.Text = _TedadeBaste1.ToString();
-                            }
-                            else
-                                txtmojodi2.Text = "0";
+                                if (!string.IsNullOrEmpty(_txtTedadeDarVahed2) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed2) && _txtTedadeDarVahed2 != "0")
+                                    _TedadeBaste = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed2));
 
-                            if (MeghdarMa_NM > _TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2))
-                            {
-                                _Meghdar1 = MeghdarMa_NM - (_TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2));
-                                txtmojodi1.Text = _Meghdar1.ToString();
+                                if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && _TedadeBaste >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
+                                {
+                                    _TedadeKarton = (long)(_TedadeBaste / Convert.ToDecimal(_txtTedadeDarVahed3));
+                                    txtmojodi3.Text = _TedadeKarton.ToString();
+                                }
+                                else
+                                    txtmojodi3.Text = "0";
+
+                                if (_TedadeBaste > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
+                                {
+                                    _TedadeBaste1 = (long)(_TedadeBaste - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)));
+                                    txtmojodi2.Text = _TedadeBaste1.ToString();
+                                }
+                                else
+                                    txtmojodi2.Text = "0";
+
+                                if (MeghdarMa_NM > _TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2))
+                                {
+                                    _Meghdar1 = MeghdarMa_NM - (_TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2));
+                                    txtmojodi1.Text = _Meghdar1.ToString();
+                                }
+                                else
+                                    txtmojodi1.Text = "0";
+
                             }
-                            else
+                            else if (lblVahedeAsli.Text == txtVahed2.Text)
+                            {
+                                long _TedadeKarton = 0;
+
+
+                                if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
+                                {
+                                    _TedadeKarton = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed3));
+                                    txtmojodi3.Text = _TedadeKarton.ToString();
+                                }
+                                else
+                                    txtmojodi3.Text = "0";
+
+                                if (MeghdarMa_NM > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
+                                {
+                                    txtmojodi2.Text = (MeghdarMa_NM - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3))).ToString();
+                                }
+                                else
+                                    txtmojodi2.Text = "0";
+
                                 txtmojodi1.Text = "0";
 
-                        }
-                        else if (lblVahedeAsli.Text == txtVahed2.Text)
-                        {
-                            long _TedadeKarton = 0;
-
-
-                            if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
-                            {
-                                _TedadeKarton = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed3));
-                                txtmojodi3.Text = _TedadeKarton.ToString();
                             }
-                            else
-                                txtmojodi3.Text = "0";
-
-                            if (MeghdarMa_NM > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
+                            else if (lblVahedeAsli.Text == txtVahed3.Text)
                             {
-                                txtmojodi2.Text = (MeghdarMa_NM - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3))).ToString();
-                            }
-                            else
+                                txtmojodi1.Text = MeghdarMa_NM.ToString();
                                 txtmojodi2.Text = "0";
-
-                            txtmojodi1.Text = "0";
+                                txtmojodi3.Text = "0";
+                            }
 
                         }
-                        else if (lblVahedeAsli.Text == txtVahed3.Text)
+                        else
                         {
-                            txtmojodi1.Text = MeghdarMa_NM.ToString();
+                            txtmojodi1.Text = "0";
                             txtmojodi2.Text = "0";
                             txtmojodi3.Text = "0";
                         }
 
+                        //txtMeghdar_EditValueChanged(null, null);
+
                     }
                     else
                     {
-                        txtmojodi1.Text = "0";
-                        txtmojodi2.Text = "0";
-                        txtmojodi3.Text = "0";
-                    }
+                        FillCmbNameAnbar2();
 
-                    txtMeghdar_EditValueChanged(null, null);
+                        if (!string.IsNullOrEmpty(cmbNameAnbar2.Text) && !string.IsNullOrEmpty(cmb_NameKala.Text))
+                        {
+                            int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                            var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId);
+                            txtVahed3.Text = q != null && q.EpVahedKala3 != null ? q.EpVahedKala3.Name : string.Empty;
+                            txtVahed2.Text = q != null && q.EpVahedKala2 != null ? q.EpVahedKala2.Name : string.Empty;
+                            txtVahed1.Text = q != null && q.EpVahedKala1 != null ? q.EpVahedKala1.Name : string.Empty;
+                            lblVahedeAsli.Text = q != null ? q.EpVahedAsliKala.Name : string.Empty;
+                            txtTedadeDarVahed3.Text = q != null ? q.HarKarton.ToString() : string.Empty;
+                            txtTedadeDarVahed2.Text = q != null ? q.HarBaste.ToString() : string.Empty;
+
+                            decimal MeghdarMa_NM = 0;
+                            //if (Fm._FirstSelectAnbar_NextSanad)
+                            MeghdarMa_NM = Convert.ToDecimal(cmbNameAnbar2.Properties.GetDataSourceValue("MeghdarMa_NM", cmbNameAnbar2.ItemIndex));
+                            //else
+                            //    MeghdarMa_NM = Convert.ToDecimal(cmbNameAnbar2.Properties.GetDataSourceValue("MeghdarMa_NM", cmbNameAnbar2.ItemIndex));
+
+                            txtMeghdarMa.Text = MeghdarMa_NM.ToString();
+
+                            if (MeghdarMa_NM != 0)
+                            {
+                                string _txtTedadeDarVahed1 = !string.IsNullOrEmpty(txtTedadeDarVahed1.Text) ? txtTedadeDarVahed1.Text : "0";
+                                string _txtTedadeDarVahed2 = !string.IsNullOrEmpty(txtTedadeDarVahed2.Text) ? txtTedadeDarVahed2.Text : "0";
+                                string _txtTedadeDarVahed3 = !string.IsNullOrEmpty(txtTedadeDarVahed3.Text) ? txtTedadeDarVahed3.Text : "0";
+
+                                if (lblVahedeAsli.Text == txtVahed1.Text)
+                                {
+                                    long _TedadeBaste = 0;
+                                    long _TedadeKarton = 0;
+                                    long _TedadeBaste1 = 0;
+                                    decimal _Meghdar1 = 0;
+
+                                    if (!string.IsNullOrEmpty(_txtTedadeDarVahed2) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed2) && _txtTedadeDarVahed2 != "0")
+                                        _TedadeBaste = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed2));
+
+                                    if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && _TedadeBaste >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
+                                    {
+                                        _TedadeKarton = (long)(_TedadeBaste / Convert.ToDecimal(_txtTedadeDarVahed3));
+                                        txtmojodi3.Text = _TedadeKarton.ToString();
+                                    }
+                                    else
+                                        txtmojodi3.Text = "0";
+
+                                    if (_TedadeBaste > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
+                                    {
+                                        _TedadeBaste1 = (long)(_TedadeBaste - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)));
+                                        txtmojodi2.Text = _TedadeBaste1.ToString();
+                                    }
+                                    else
+                                        txtmojodi2.Text = "0";
+
+                                    if (MeghdarMa_NM > _TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2))
+                                    {
+                                        _Meghdar1 = MeghdarMa_NM - (_TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2));
+                                        txtmojodi1.Text = _Meghdar1.ToString();
+                                    }
+                                    else
+                                        txtmojodi1.Text = "0";
+
+                                }
+                                else if (lblVahedeAsli.Text == txtVahed2.Text)
+                                {
+                                    long _TedadeKarton = 0;
+
+
+                                    if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
+                                    {
+                                        _TedadeKarton = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed3));
+                                        txtmojodi3.Text = _TedadeKarton.ToString();
+                                    }
+                                    else
+                                        txtmojodi3.Text = "0";
+
+                                    if (MeghdarMa_NM > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
+                                    {
+                                        txtmojodi2.Text = (MeghdarMa_NM - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3))).ToString();
+                                    }
+                                    else
+                                        txtmojodi2.Text = "0";
+
+                                    txtmojodi1.Text = "0";
+
+                                }
+                                else if (lblVahedeAsli.Text == txtVahed3.Text)
+                                {
+                                    txtmojodi1.Text = MeghdarMa_NM.ToString();
+                                    txtmojodi2.Text = "0";
+                                    txtmojodi3.Text = "0";
+                                }
+
+                            }
+                            else
+                            {
+                                txtmojodi1.Text = "0";
+                                txtmojodi2.Text = "0";
+                                txtmojodi3.Text = "0";
+                            }
+
+                            // txtMeghdar_EditValueChanged(null, null);
+
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -701,7 +813,7 @@ namespace AnbarVaKala.AmaliatRozaneh
                             IsClosed = true;
                         if (Fm._FirstSelectAnbar_NextSanad == false)
                         {
-                            if (Fm._NoeSanadIndex != 8 && Fm._NoeSanadIndex != 9)
+                            if (Fm._NameSanadIndex != 8 && Fm._NameSanadIndex != 9)
                             {
                                 AzAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
                                 BeAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
@@ -765,9 +877,9 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                             }
 
-                            if (Fm._NoeSanadIndex == 8)
+                            if (Fm._NameSanadIndex == 8)
                             {
-                                Fm.amaliatAnbarVKala_RizsBindingSource2.DataSource = null ;
+                                Fm.amaliatAnbarVKala_RizsBindingSource2.DataSource = null;
                                 Fm.amaliatAnbarVKala_RizsBindingSource2.DataSource = Fm.amaliatAnbarVKala_RizsBindingSource1.DataSource;
                             }
 
@@ -1019,7 +1131,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
         }
 
-        private void cmbControl_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        private void cmb_NameKala_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
         {
             HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
         }
@@ -1106,16 +1218,135 @@ namespace AnbarVaKala.AmaliatRozaneh
         {
             if (cmbNameAnbar2.Text != "")
             {
-                if (Fm._FirstSelectAnbar_NextSanad==false)
+                if (Fm._FirstSelectAnbar_NextSanad == true)
+                    FillcmbNameKala();
+                //else if (Fm._FirstSelectAnbar_NextSanad == false)
+                // {
+                //     //FillcmbNameKala();
+
+                // }
+
+                if (Fm._NameSanadIndex != 8 && Fm._NameSanadIndex != 9)
                 {
-                    if (Fm._NoeSanadIndex != 8 && Fm._NoeSanadIndex != 9)
+                    AzAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
+                    BeAnbarId = Convert.ToInt32(cmbNameAnbar2.EditValue);
+                }
+
+
+                using (var db = new MyContext())
+                {
+                    try
                     {
-                        AzAnbarId =  Convert.ToInt32(cmbNameAnbar2.EditValue);
-                        BeAnbarId =  Convert.ToInt32(cmbNameAnbar2.EditValue);
+                        if (!Fm._FirstSelectAnbar_NextSanad && !string.IsNullOrEmpty(cmb_NameKala.Text))
+                        {
+                            int _KalaId = Convert.ToInt32(cmb_NameKala.EditValue);
+                            var q = db.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _KalaId);
+                            txtVahed3.Text = q != null && q.EpVahedKala3 != null ? q.EpVahedKala3.Name : string.Empty;
+                            txtVahed2.Text = q != null && q.EpVahedKala2 != null ? q.EpVahedKala2.Name : string.Empty;
+                            txtVahed1.Text = q != null && q.EpVahedKala1 != null ? q.EpVahedKala1.Name : string.Empty;
+                            lblVahedeAsli.Text = q != null ? q.EpVahedAsliKala.Name : string.Empty;
+                            txtTedadeDarVahed3.Text = q != null ? q.HarKarton.ToString() : string.Empty;
+                            txtTedadeDarVahed2.Text = q != null ? q.HarBaste.ToString() : string.Empty;
+
+                            decimal MeghdarMa_NM = 0;
+                            //if (Fm._FirstSelectAnbar_NextSanad)
+                            MeghdarMa_NM = Convert.ToDecimal(cmbNameAnbar2.Properties.GetDataSourceValue("MeghdarMa_NM", cmbNameAnbar2.ItemIndex));
+                            //else
+                            //    MeghdarMa_NM = Convert.ToDecimal(cmbNameAnbar2.Properties.GetDataSourceValue("MeghdarMa_NM", cmbNameAnbar2.ItemIndex));
+
+                            txtMeghdarMa.Text = MeghdarMa_NM.ToString();
+
+                            if (MeghdarMa_NM != 0)
+                            {
+                                string _txtTedadeDarVahed1 = !string.IsNullOrEmpty(txtTedadeDarVahed1.Text) ? txtTedadeDarVahed1.Text : "0";
+                                string _txtTedadeDarVahed2 = !string.IsNullOrEmpty(txtTedadeDarVahed2.Text) ? txtTedadeDarVahed2.Text : "0";
+                                string _txtTedadeDarVahed3 = !string.IsNullOrEmpty(txtTedadeDarVahed3.Text) ? txtTedadeDarVahed3.Text : "0";
+
+                                if (lblVahedeAsli.Text == txtVahed1.Text)
+                                {
+                                    long _TedadeBaste = 0;
+                                    long _TedadeKarton = 0;
+                                    long _TedadeBaste1 = 0;
+                                    decimal _Meghdar1 = 0;
+
+                                    if (!string.IsNullOrEmpty(_txtTedadeDarVahed2) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed2) && _txtTedadeDarVahed2 != "0")
+                                        _TedadeBaste = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed2));
+
+                                    if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && _TedadeBaste >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
+                                    {
+                                        _TedadeKarton = (long)(_TedadeBaste / Convert.ToDecimal(_txtTedadeDarVahed3));
+                                        txtmojodi3.Text = _TedadeKarton.ToString();
+                                    }
+                                    else
+                                        txtmojodi3.Text = "0";
+
+                                    if (_TedadeBaste > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
+                                    {
+                                        _TedadeBaste1 = (long)(_TedadeBaste - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)));
+                                        txtmojodi2.Text = _TedadeBaste1.ToString();
+                                    }
+                                    else
+                                        txtmojodi2.Text = "0";
+
+                                    if (MeghdarMa_NM > _TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2))
+                                    {
+                                        _Meghdar1 = MeghdarMa_NM - (_TedadeBaste * Convert.ToDecimal(_txtTedadeDarVahed2));
+                                        txtmojodi1.Text = _Meghdar1.ToString();
+                                    }
+                                    else
+                                        txtmojodi1.Text = "0";
+
+                                }
+                                else if (lblVahedeAsli.Text == txtVahed2.Text)
+                                {
+                                    long _TedadeKarton = 0;
+
+
+                                    if (!string.IsNullOrEmpty(_txtTedadeDarVahed3) && MeghdarMa_NM >= Convert.ToDecimal(_txtTedadeDarVahed3) && _txtTedadeDarVahed3 != "0")
+                                    {
+                                        _TedadeKarton = (long)(MeghdarMa_NM / Convert.ToDecimal(_txtTedadeDarVahed3));
+                                        txtmojodi3.Text = _TedadeKarton.ToString();
+                                    }
+                                    else
+                                        txtmojodi3.Text = "0";
+
+                                    if (MeghdarMa_NM > (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3)))
+                                    {
+                                        txtmojodi2.Text = (MeghdarMa_NM - (_TedadeKarton * Convert.ToDecimal(_txtTedadeDarVahed3))).ToString();
+                                    }
+                                    else
+                                        txtmojodi2.Text = "0";
+
+                                    txtmojodi1.Text = "0";
+
+                                }
+                                else if (lblVahedeAsli.Text == txtVahed3.Text)
+                                {
+                                    txtmojodi1.Text = MeghdarMa_NM.ToString();
+                                    txtmojodi2.Text = "0";
+                                    txtmojodi3.Text = "0";
+                                }
+
+                            }
+                            else
+                            {
+                                txtmojodi1.Text = "0";
+                                txtmojodi2.Text = "0";
+                                txtmojodi3.Text = "0";
+                            }
+
+                            // txtMeghdar_EditValueChanged(null, null);
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                            "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
-                FillcmbNameKala();
+
             }
         }
 

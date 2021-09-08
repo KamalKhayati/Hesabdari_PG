@@ -122,17 +122,17 @@ namespace AnbarVaKala.Reports
                     //            DataRow1[3] = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).LevelName;
                     //            DataRow1[4] = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).EpNameKala1.VahedKala1Name;
 
-                    //            DataRow1[5] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 1).Sum(s => s.Meghdar);
-                    //            DataRow1[7] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 1).Sum(s => s.Mablag);
-                    //            DataRow1[6] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 1).Sum(s => s.Mablag) != 0 ? q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 1).Sum(s => s.Mablag) / q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 1).Sum(s => s.Meghdar) : 0;
+                    //            DataRow1[5] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 1).Sum(s => s.Meghdar);
+                    //            DataRow1[7] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 1).Sum(s => s.Mablag);
+                    //            DataRow1[6] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 1).Sum(s => s.Mablag) != 0 ? q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 1).Sum(s => s.Mablag) / q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 1).Sum(s => s.Meghdar) : 0;
 
-                    //            DataRow1[8] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2).Sum(s => s.Meghdar);
-                    //            DataRow1[10] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2).Sum(s => s.Mablag);
-                    //            DataRow1[9] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2).Sum(s => s.Mablag) != 0 ? q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2).Sum(s => s.Mablag) / q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2).Sum(s => s.Meghdar) : 0;
+                    //            DataRow1[8] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2).Sum(s => s.Meghdar);
+                    //            DataRow1[10] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2).Sum(s => s.Mablag);
+                    //            DataRow1[9] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2).Sum(s => s.Mablag) != 0 ? q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2).Sum(s => s.Mablag) / q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2).Sum(s => s.Meghdar) : 0;
 
-                    //            DataRow1[11] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3).Sum(s => s.Meghdar);
-                    //            DataRow1[13] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3).Sum(s => s.Mablag);
-                    //            DataRow1[12] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3).Sum(s => s.Mablag) != 0 ? q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3).Sum(s => s.Mablag) / q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3).Sum(s => s.Meghdar) : 0;
+                    //            DataRow1[11] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3).Sum(s => s.Meghdar);
+                    //            DataRow1[13] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3).Sum(s => s.Mablag);
+                    //            DataRow1[12] = q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3).Sum(s => s.Mablag) != 0 ? q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3).Sum(s => s.Mablag) / q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3).Sum(s => s.Meghdar) : 0;
 
                     //            //DataRow1[14] = Convert.ToDecimal(DataRow1[5].ToString()) + Convert.ToDecimal(DataRow1[8].ToString()) - Convert.ToDecimal(DataRow1[11].ToString());
                     //            //DataRow1[16] = Convert.ToDecimal(DataRow1[7].ToString()) + Convert.ToDecimal(DataRow1[10].ToString()) - Convert.ToDecimal(DataRow1[13].ToString());
@@ -158,16 +158,16 @@ namespace AnbarVaKala.Reports
                     //                        DataRow1[4] = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).EpNameKala1.VahedKala1Name;
 
                     //                        //decimal a = Convert.ToDecimal(DataRow1[5].ToString());
-                    //                        DataRow1[5] = Convert.ToDecimal(DataRow1[5].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 1 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                    //                        DataRow1[7] = Convert.ToDecimal(DataRow1[7].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 1 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
+                    //                        DataRow1[5] = Convert.ToDecimal(DataRow1[5].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 1 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                    //                        DataRow1[7] = Convert.ToDecimal(DataRow1[7].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 1 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
                     //                        DataRow1[6] = Convert.ToDecimal(DataRow1[7].ToString()) != 0 ? Convert.ToDecimal(DataRow1[7].ToString()) / Convert.ToDecimal(DataRow1[5].ToString()) : 0;
 
-                    //                        DataRow1[8] = Convert.ToDecimal(DataRow1[8].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                    //                        DataRow1[10] = Convert.ToDecimal(DataRow1[10].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
+                    //                        DataRow1[8] = Convert.ToDecimal(DataRow1[8].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                    //                        DataRow1[10] = Convert.ToDecimal(DataRow1[10].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
                     //                        DataRow1[9] = Convert.ToDecimal(DataRow1[10].ToString()) != 0 ? Convert.ToDecimal(DataRow1[10].ToString()) / Convert.ToDecimal(DataRow1[8].ToString()) : 0;
 
-                    //                        DataRow1[11] = Convert.ToDecimal(DataRow1[11].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                    //                        DataRow1[13] = Convert.ToDecimal(DataRow1[13].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
+                    //                        DataRow1[11] = Convert.ToDecimal(DataRow1[11].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                    //                        DataRow1[13] = Convert.ToDecimal(DataRow1[13].ToString()) + q3.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
                     //                        DataRow1[12] = Convert.ToDecimal(DataRow1[13].ToString()) != 0 ? Convert.ToDecimal(DataRow1[13].ToString()) / Convert.ToDecimal(DataRow1[11].ToString()) : 0;
 
 
@@ -215,22 +215,22 @@ namespace AnbarVaKala.Reports
                     var CheckedList = cmbAnbarName.Properties.GetItems().GetCheckedValues();
                     if (CheckedList.Count > 0)
                     {
-                        List<AmaliatAnbarVKala_Riz> _List1 = new List<AmaliatAnbarVKala_Riz>();
+                        List<AKAmaliatAnbarVKala_Riz> _List1 = new List<AKAmaliatAnbarVKala_Riz>();
 
                         foreach (var item in CheckedList)
                         {
                             int _AnbarId = Convert.ToInt32(item);
-                            var qq1 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.DateTimeSanad <= EndDate).ToList();
-                            var qq2 = qq1.Where(s => s.BeAnbarId == _AnbarId && s.NoeAmaliatCode == 2).ToList();
-                            var qq3 = qq1.Where(s => s.AzAnbarId == _AnbarId && s.NoeAmaliatCode == 3).ToList();
-                            //List<AmaliatAnbarVKala_Riz> List = new List<AmaliatAnbarVKala_Riz>();
+                            var qq1 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.DateTimeSanad <= EndDate).ToList();
+                            var qq2 = qq1.Where(s => s.BeAnbarId == _AnbarId && s.NameAmaliatCode == 2).ToList();
+                            var qq3 = qq1.Where(s => s.AzAnbarId == _AnbarId && s.NameAmaliatCode == 3).ToList();
+                            //List<AKAmaliatAnbarVKala_Riz> List = new List<AKAmaliatAnbarVKala_Riz>();
                             if (qq2.Count > 0)
                                 _List1.AddRange(qq2);
                             if (qq3.Count > 0)
                                 _List1.AddRange(qq3);
 
 
-                            //var q6 = db.AmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.DateTimeSanad <= EndDate).ToList();
+                            //var q6 = db.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.AzAnbarId == _AnbarId && s.DateTimeSanad <= EndDate).ToList();
                             //if (q6.Count > 0)
                             //    _List1.AddRange(q6);
                         }
@@ -243,11 +243,11 @@ namespace AnbarVaKala.Reports
                             var q2 = db.EpAllCodingKalas.Where(s => s.SalId == _SalId && s.LevelNumber == 4).ToList();
                             var q5 = db.EpVahedKalas.Where(s => s.SalId == _SalId).ToList();
 
-                            List<AmaliatAnbarVKala_Riz> _List2 = new List<AmaliatAnbarVKala_Riz>();
+                            List<AKAmaliatAnbarVKala_Riz> _List2 = new List<AKAmaliatAnbarVKala_Riz>();
 
                             for (int RowCounter = 0; RowCounter < q1.Count; RowCounter++)
                             {
-                                AmaliatAnbarVKala_Riz obj2 = new AmaliatAnbarVKala_Riz();
+                                AKAmaliatAnbarVKala_Riz obj2 = new AKAmaliatAnbarVKala_Riz();
 
                                 obj2.KalaId = q1[RowCounter];
                                 obj2.KalaCode_NM = q2.FirstOrDefault(s => s.Id == q1[RowCounter]).KeyCode.ToString();
@@ -276,30 +276,30 @@ namespace AnbarVaKala.Reports
 
                                         if (chkIsEdgham.Checked)
                                         {
-                                            decimal _MeghdarMo = obj2.MeghdarMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
-                                            decimal _MablagMo = obj2.MablagMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
-                                            decimal _MeghdarSa = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
-                                            decimal _MablagSa = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
+                                            decimal _MeghdarMo = obj2.MeghdarMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
+                                            decimal _MablagMo = obj2.MablagMo_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
+                                            decimal _MeghdarSa = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Meghdar);
+                                            decimal _MablagSa = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad < StartDate).Sum(s => s.Mablag);
                                             obj2.MeghdarMo_NM = _MeghdarMo - _MeghdarSa;
                                             obj2.MablagMo_NM = _MablagMo - _MablagSa;
                                             obj2.NerkhMo_NM = obj2.MeghdarMo_NM != 0 ? obj2.MablagMo_NM / obj2.MeghdarMo_NM : 0;
 
-                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
-                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
+                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
+                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.BeAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
                                             obj2.NerkhVa_NM = obj2.MeghdarVa_NM != 0 ? obj2.MablagVa_NM / obj2.MeghdarVa_NM : 0;
 
-                                            obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
-                                            obj2.MablagSa_NM = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
+                                            obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Meghdar);
+                                            obj2.MablagSa_NM = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId && s.DateTimeSanad >= StartDate).Sum(s => s.Mablag);
                                             obj2.NerkhSa_NM = obj2.MeghdarSa_NM != 0 ? obj2.MablagSa_NM / obj2.MeghdarSa_NM : 0;
                                         }
                                         else
                                         {
-                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 2 && s.BeAnbarId == _AnbarId).Sum(s => s.Mablag);
+                                            obj2.MeghdarVa_NM = obj2.MeghdarVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.BeAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                                            obj2.MablagVa_NM = obj2.MablagVa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 2 && s.BeAnbarId == _AnbarId).Sum(s => s.Mablag);
                                             obj2.NerkhVa_NM = obj2.MeghdarVa_NM != 0 ? obj2.MablagVa_NM / obj2.MeghdarVa_NM : 0;
 
-                                            obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
-                                            obj2.MablagSa_NM = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NoeAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
+                                            obj2.MeghdarSa_NM = obj2.MeghdarSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Meghdar);
+                                            obj2.MablagSa_NM = obj2.MablagSa_NM + _List1.Where(s => s.KalaId == q1[RowCounter] && s.NameAmaliatCode == 3 && s.AzAnbarId == _AnbarId).Sum(s => s.Mablag);
                                             obj2.NerkhSa_NM = obj2.MeghdarSa_NM != 0 ? obj2.MablagSa_NM / obj2.MeghdarSa_NM : 0;
                                         }
                                     }

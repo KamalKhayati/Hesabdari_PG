@@ -1503,8 +1503,9 @@ namespace EtelaatePaye.CodingHesabdari
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message, "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

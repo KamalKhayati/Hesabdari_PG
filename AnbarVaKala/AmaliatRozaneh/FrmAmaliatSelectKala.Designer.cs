@@ -110,7 +110,7 @@
             this.btnReload_NameKala.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReload_NameKala.Appearance.Options.UseForeColor = true;
             this.btnReload_NameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReload_NameKala.ImageOptions.SvgImage")));
-            this.btnReload_NameKala.Location = new System.Drawing.Point(64, 44);
+            this.btnReload_NameKala.Location = new System.Drawing.Point(61, 8);
             this.btnReload_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload_NameKala.Name = "btnReload_NameKala";
             this.btnReload_NameKala.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -124,7 +124,7 @@
             // 
             this.cmb_NameKala.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_NameKala.EnterMoveNextControl = true;
-            this.cmb_NameKala.Location = new System.Drawing.Point(119, 47);
+            this.cmb_NameKala.Location = new System.Drawing.Point(116, 11);
             this.cmb_NameKala.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_NameKala.Name = "cmb_NameKala";
             this.cmb_NameKala.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
@@ -138,8 +138,8 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "آیدی", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد", 200, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام حساب", 600, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("VahedAsliName", "واحد اصلی", 135, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MeghdarMa_NM", "موجودی", 150, DevExpress.Utils.FormatType.Numeric, "c3", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("VahedAsliName_NM", "واحد اصلی", 135, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MeghdarMa_NM", "موجودی", 170, DevExpress.Utils.FormatType.Numeric, "c3", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupFareeName_NM", "گروه فرعی", 320, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("GroupAsliName_NM", "گروه اصلی", 280, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaName_NM", "طبقه کالا", 230, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
@@ -151,13 +151,13 @@
             this.cmb_NameKala.Properties.NullText = "";
             this.cmb_NameKala.Properties.NullValuePrompt = "انتخاب نام کالا ...";
             this.cmb_NameKala.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmb_NameKala.Properties.PopupWidth = 1300;
+            this.cmb_NameKala.Properties.PopupWidth = 1310;
             this.cmb_NameKala.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmb_NameKala.Properties.ValueMember = "Id";
             this.cmb_NameKala.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmb_NameKala.Size = new System.Drawing.Size(756, 34);
-            this.cmb_NameKala.TabIndex = 1;
-            this.cmb_NameKala.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbControl_CustomDrawRow);
+            this.cmb_NameKala.TabIndex = 0;
+            this.cmb_NameKala.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmb_NameKala_CustomDrawRow);
             this.cmb_NameKala.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmb_NameKala_CustomDrawCell);
             this.cmb_NameKala.EditValueChanged += new System.EventHandler(this.cmb_NameKala_EditValueChanged);
             this.cmb_NameKala.Enter += new System.EventHandler(this.cmb_NameKala_Enter);
@@ -172,7 +172,7 @@
             this.btnReloadNameKala.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadNameKala.Appearance.Options.UseForeColor = true;
             this.btnReloadNameKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadNameKala.ImageOptions.SvgImage")));
-            this.btnReloadNameKala.Location = new System.Drawing.Point(13, 44);
+            this.btnReloadNameKala.Location = new System.Drawing.Point(10, 8);
             this.btnReloadNameKala.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadNameKala.Name = "btnReloadNameKala";
             this.btnReloadNameKala.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -759,7 +759,7 @@
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(227, 395);
+            this.lblUserName.Location = new System.Drawing.Point(223, 350);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(53, 27);
@@ -769,7 +769,7 @@
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(301, 395);
+            this.lblUserId.Location = new System.Drawing.Point(297, 350);
             this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lblUserId.Name = "lblUserId";
             this.lblUserId.Size = new System.Drawing.Size(72, 27);
@@ -781,7 +781,7 @@
             // 
             this.lblSalMali.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSalMali.AutoEllipsis = true;
-            this.lblSalMali.Location = new System.Drawing.Point(473, 393);
+            this.lblSalMali.Location = new System.Drawing.Point(469, 348);
             this.lblSalMali.Margin = new System.Windows.Forms.Padding(4);
             this.lblSalMali.Name = "lblSalMali";
             this.lblSalMali.Size = new System.Drawing.Size(73, 27);
@@ -793,7 +793,7 @@
             // 
             this.lblSalId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSalId.AutoEllipsis = true;
-            this.lblSalId.Location = new System.Drawing.Point(394, 393);
+            this.lblSalId.Location = new System.Drawing.Point(390, 348);
             this.lblSalId.Margin = new System.Windows.Forms.Padding(4);
             this.lblSalId.Name = "lblSalId";
             this.lblSalId.Size = new System.Drawing.Size(56, 27);
@@ -917,13 +917,9 @@
             this.panelControl1.Controls.Add(this.labelControl9);
             this.panelControl1.Controls.Add(this.labelControl11);
             this.panelControl1.Controls.Add(this.lblVahedeAsli);
-            this.panelControl1.Controls.Add(this.lblUserId);
             this.panelControl1.Controls.Add(this.txtMeghdar);
-            this.panelControl1.Controls.Add(this.lblUserName);
             this.panelControl1.Controls.Add(this.btnSaveAndNext);
-            this.panelControl1.Controls.Add(this.lblSalId);
             this.panelControl1.Controls.Add(this.labelControl13);
-            this.panelControl1.Controls.Add(this.lblSalMali);
             this.panelControl1.Controls.Add(this.btnKardes);
             this.panelControl1.Controls.Add(this.cmb_NameKala);
             this.panelControl1.Controls.Add(this.btnMojodiAnbarVKala);
@@ -955,6 +951,10 @@
             this.panelControl1.Controls.Add(this.labelControl6);
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.labelControl7);
+            this.panelControl1.Controls.Add(this.lblUserId);
+            this.panelControl1.Controls.Add(this.lblUserName);
+            this.panelControl1.Controls.Add(this.lblSalId);
+            this.panelControl1.Controls.Add(this.lblSalMali);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
@@ -966,7 +966,7 @@
             this.labelControl14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl14.Appearance.Options.UseForeColor = true;
-            this.labelControl14.Location = new System.Drawing.Point(883, 50);
+            this.labelControl14.Location = new System.Drawing.Point(880, 14);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(46, 27);
@@ -978,7 +978,7 @@
             this.cmbNameAnbar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameAnbar2.Enabled = false;
             this.cmbNameAnbar2.EnterMoveNextControl = true;
-            this.cmbNameAnbar2.Location = new System.Drawing.Point(120, 8);
+            this.cmbNameAnbar2.Location = new System.Drawing.Point(116, 50);
             this.cmbNameAnbar2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbNameAnbar2.Name = "cmbNameAnbar2";
             this.cmbNameAnbar2.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
@@ -990,11 +990,12 @@
             this.cmbNameAnbar2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbNameAnbar2.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 70, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 250, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "کد انبار", 85, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "نام انبار", 280, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MeghdarMa_NM", "موجودی", 170, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NoeAnbar", "نوع انبار", 150, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 400, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 170, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TabagheKalaIdName_NM", "ارتباط انبار با طبقه", 350, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MojavezMojodiManfi", "اجازه موجودی منفی", 190, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IsActive", "فعال", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Center, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.cmbNameAnbar2.Properties.DataSource = this.epListAnbarhasBindingSource;
             this.cmbNameAnbar2.Properties.DisplayMember = "Name";
@@ -1002,12 +1003,12 @@
             this.cmbNameAnbar2.Properties.NullText = "";
             this.cmbNameAnbar2.Properties.NullValuePrompt = "انبار مورد نظر را انتخاب کنید";
             this.cmbNameAnbar2.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbNameAnbar2.Properties.PopupWidth = 1000;
+            this.cmbNameAnbar2.Properties.PopupWidth = 1100;
             this.cmbNameAnbar2.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.cmbNameAnbar2.Properties.ValueMember = "Id";
             this.cmbNameAnbar2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbNameAnbar2.Size = new System.Drawing.Size(756, 34);
-            this.cmbNameAnbar2.TabIndex = 0;
+            this.cmbNameAnbar2.TabIndex = 1;
             this.cmbNameAnbar2.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbNameAnbar2_CustomDrawRow);
             this.cmbNameAnbar2.CustomDrawCell += new DevExpress.XtraEditors.Popup.LookUpCustomDrawCellEventHandler(this.cmbNameAnbar2_CustomDrawCell);
             this.cmbNameAnbar2.EditValueChanged += new System.EventHandler(this.cmbNameAnbar2_EditValueChanged);
@@ -1024,7 +1025,7 @@
             this.btnReloadNameAnbar2.Appearance.Options.UseForeColor = true;
             this.btnReloadNameAnbar2.Enabled = false;
             this.btnReloadNameAnbar2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadNameAnbar2.ImageOptions.SvgImage")));
-            this.btnReloadNameAnbar2.Location = new System.Drawing.Point(65, 9);
+            this.btnReloadNameAnbar2.Location = new System.Drawing.Point(61, 51);
             this.btnReloadNameAnbar2.Margin = new System.Windows.Forms.Padding(4);
             this.btnReloadNameAnbar2.Name = "btnReloadNameAnbar2";
             this.btnReloadNameAnbar2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1039,7 +1040,7 @@
             this.labelControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl11.Appearance.Options.UseForeColor = true;
-            this.labelControl11.Location = new System.Drawing.Point(884, 9);
+            this.labelControl11.Location = new System.Drawing.Point(880, 51);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(48, 27);

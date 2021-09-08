@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEE08A0A-36F4-4192-B525-0A09570A3157}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KharidVaFroosh</RootNamespace>
+    <AssemblyName>KharidVaFroosh</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.1" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1" />
+    <Reference Include="DevExpress.Data.v20.1" />
+    <Reference Include="DevExpress.Utils.v20.1" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v20.1" />
+    <Reference Include="DevExpress.Printing.v20.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AmaliatFrooshVKharid\FrmFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmaliatFrooshVKharid\FrmFactor.Designer.cs">
+      <DependentUpon>FrmFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AmaliatFrooshVKharid\FrmListFrooshVKharid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmaliatFrooshVKharid\FrmListFrooshVKharid.Designer.cs">
+      <DependentUpon>FrmListFrooshVKharid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AmaliatFrooshVKharid\FrmSelectKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmaliatFrooshVKharid\FrmSelectKala.Designer.cs">
+      <DependentUpon>FrmSelectKala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Taarif\FrmTarifEz_Ks_Factor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taarif\FrmTarifEz_Ks_Factor.Designer.cs">
+      <DependentUpon>FrmTarifEz_Ks_Factor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanzimat\FrmTanzimatFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanzimat\FrmTanzimatFactor.Designer.cs">
+      <DependentUpon>FrmTanzimatFactor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AmaliatFrooshVKharid\FrmFactor.resx">
+      <DependentUpon>FrmFactor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmaliatFrooshVKharid\FrmListFrooshVKharid.resx">
+      <DependentUpon>FrmListFrooshVKharid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmaliatFrooshVKharid\FrmSelectKala.resx">
+      <DependentUpon>FrmSelectKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Taarif\FrmTarifEz_Ks_Factor.resx">
+      <DependentUpon>FrmTarifEz_Ks_Factor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanzimat\FrmTanzimatFactor.resx">
+      <DependentUpon>FrmTanzimatFactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnbarVaKala\AnbarVaKala.csproj">
+      <Project>{06DC8F20-9B49-453A-B22D-A3BA5AD76129}</Project>
+      <Name>AnbarVaKala</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBHesabdari_PG\DBHesabdari_PG.csproj">
+      <Project>{a8821623-3d7b-4298-aaae-c6ad5e96ca5e}</Project>
+      <Name>DBHesabdari_PG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EtelaatePaye\EtelaatePaye.csproj">
+      <Project>{403481de-962e-43c6-8a5a-24cbf93c75bb}</Project>
+      <Name>EtelaatePaye</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpClassLibrary\HelpClassLibrary.csproj">
+      <Project>{26168114-9431-42db-b60e-8213d68a1e2f}</Project>
+      <Name>HelpClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

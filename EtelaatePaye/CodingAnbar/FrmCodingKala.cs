@@ -157,6 +157,7 @@ namespace EtelaatePaye.CodingAnbar
             }
 
         }
+        public string _TabaghehGroupName = string.Empty;
         //bool IsOkGroupTafsili = true;
         public bool FillcmbGroupTafsili()
         {
@@ -165,7 +166,7 @@ namespace EtelaatePaye.CodingAnbar
                 try
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
-                    var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && (s.TabaghehGroupName == "اقلام انبار") && s.LevelNumber == _LevelNumberGroupTafsili).OrderBy(s => s.KeyCode).ToList();
+                    var q = db.EpAllGroupTafsilis.Where(s => s.SalId == _SalId && s.TabaghehGroupName == _TabaghehGroupName && s.LevelNumber == _LevelNumberGroupTafsili).OrderBy(s => s.KeyCode).ToList();
                     var qq = db.EpTabaghehKalas.Where(s => s.SalId == _SalId).ToList();
 
                     if (qq.Count > 0)
@@ -187,16 +188,16 @@ namespace EtelaatePaye.CodingAnbar
                             if (q.Count > 0)
                             {
                                 cmbGroupTafsili_Tabagheh.Properties.DataSource = q;
-                              return true;
+                                return true;
                             }
                             else
                             {
                                 cmbGroupTafsili_Tabagheh.Properties.DataSource = null;
-                                XtraMessageBox.Show("تمامی گروه های تفصیلی مربوط به اقلام انبار قبلا برای تعریف طبقه کالا استفاده شده" + "\n" +
-                                    "لذا گروه جدیدی برای انتخاب وجود ندارد در صورت نیاز بایستی در قسمت مربوط به " + "\n" +
-                                    "تعریف گروهای تفصیلی ، در سطح " + _LevelNumberGroupTafsili + " گروه جدیدی برای اقلام انبار ایجاد کنید",
+                                XtraMessageBox.Show("تمامی گروه های تفصیلی مربوط به " + cmbNoeTabagheh.SelectedItem.ToString() + " قبلا برای تعریف طبقه کالا استفاده " + "\n" +
+                                    "شده لذا گروه جدیدی برای انتخاب وجود ندارد در صورت نیاز بایستی " + "\n"+"در قسمت اطلاعات پایه -> کدینگ حسابداری -> گروه های تفصیلی " + "\n" +
+                                    " -> در سطح " + _LevelNumberGroupTafsili + " ، گروه جدیدی برای " + _TabaghehGroupName + " ایجاد نمایید",
                                     "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                En = EnumCED.Cancel;
+                                btnCancel_Click(null, null);
                                 return false;
                             }
 
@@ -233,10 +234,11 @@ namespace EtelaatePaye.CodingAnbar
                         else
                         {
                             cmbGroupTafsili_Tabagheh.Properties.DataSource = null;
-                            XtraMessageBox.Show(" گروه تفصیلی برای انتخاب وجود ندارد لطفاً از قسمت مربوط به " + "\n" +
-                                "تعریف گروهای تفصیلی ، در سطح " + _LevelNumberGroupTafsili + " گروه جدیدی برای اقلام انبار ایجاد کنید",
+                            XtraMessageBox.Show("تمامی گروه های تفصیلی مربوط به " + cmbNoeTabagheh.SelectedItem.ToString() + " قبلا برای تعریف طبقه کالا استفاده " + "\n" +
+                                "شده لذا گروه جدیدی برای انتخاب وجود ندارد در صورت نیاز بایستی " + "\n" + "در قسمت اطلاعات پایه -> کدینگ حسابداری -> گروه های تفصیلی " + "\n" +
+                                " -> در سطح " + _LevelNumberGroupTafsili + " ، گروه جدیدی برای " + _TabaghehGroupName + " ایجاد نمایید",
                                 "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            En = EnumCED.Cancel;
+                            btnCancel_Click(null, null);
                             return false;
                         }
                     }
@@ -565,7 +567,13 @@ namespace EtelaatePaye.CodingAnbar
                         _Code = !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt64(txtCode.Text) : 0;
                         _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
 
-                        if (_TabaghehKalaId == 0)
+                        if (cmbNoeTabagheh.SelectedIndex<0)
+                        {
+                            XtraMessageBox.Show("لطفا نوع طبقه را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cmbNoeTabagheh.Focus();
+                            return false;
+                        }
+                        else if (_TabaghehKalaId == 0)
                         {
                             XtraMessageBox.Show("لطفا گروه تفصیلی را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             cmbTabaghehKala.Focus();
@@ -1021,21 +1029,16 @@ namespace EtelaatePaye.CodingAnbar
                     }
                 }
 
-
-
                 if (_SelectedTabPage == "xtraTabPage_TabaghehKala")
                 {
-                    HelpClass1.ClearControls(PanelControl2);
-                    if (FillcmbGroupTafsili())
-                    {
-                        HelpClass1.InActiveButtons(PanelControl1);
-                        HelpClass1.ActiveControls(PanelControl2);
-                        //tnNewCode_Click(null, null);
-                        cmbTabaghehKala.Focus();
-                        gridControl.Enabled = false;
-                        chkIsActive.Checked = true;
 
-                    }
+                    HelpClass1.ActiveControls(PanelControl2);
+                    HelpClass1.ClearControls(PanelControl2);
+                    HelpClass1.InActiveButtons(PanelControl1);
+                    cmbNoeTabagheh.ReadOnly = false;
+                    gridControl.Enabled = false;
+                    chkIsActive.Checked = true;
+                    cmbNoeTabagheh.ShowPopup();
                 }
                 else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
                 {
@@ -1164,6 +1167,7 @@ namespace EtelaatePaye.CodingAnbar
             {
                 if (gridView.RowCount > 0)
                 {
+                    cmbNoeTabagheh.ReadOnly = true;
                     gridControl.Enabled = false;
                     EditRowIndex = gridView.FocusedRowHandle;
                     En = EnumCED.Edit;
@@ -1212,7 +1216,7 @@ namespace EtelaatePaye.CodingAnbar
                         TabaghehKalaIdBeforeEdit = Convert.ToInt32(cmbTabaghehKala.EditValue);
                         GroupTafsiliIdBeforeEdit = new MyContext().EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == TabaghehKalaIdBeforeEdit).GroupTafsiliId;
                         GroupAsliIdBeforeEdit = Convert.ToInt32(cmbGroupAsliKala.EditValue);
-                        NameKalaBeforeEdit = txtName.Text; 
+                        NameKalaBeforeEdit = txtName.Text;
                         FillcmbTabaghehKala();
                         cmbTabaghehKala.Focus();
                     }
@@ -1295,6 +1299,8 @@ namespace EtelaatePaye.CodingAnbar
                                     //obj.VahedKalaName = cmbVahedKala.Text;
                                     obj.GroupTafsiliId = _TabaghehKalaId;
                                     obj.LevelNumber = _LevelNumber;
+                                    obj.NoeTabagheName = cmbNoeTabagheh.Text;
+                                    obj.NoeTabagheIndex = cmbNoeTabagheh.SelectedIndex;
                                     obj.SharhHesab = _SharhHesab;
                                     /////////////////////////////////////////////////////////////////////////////////////
                                     // var q = db.EpHesabTabagheh.FirstOrDefault(s => s.Code == _code && s.SalId == _SalId);
@@ -1410,7 +1416,11 @@ namespace EtelaatePaye.CodingAnbar
                                     if (!string.IsNullOrEmpty(txtCodeEkhtesasi_NameKala.Text))
                                         obj.CodeEkhtesasi = Convert.ToInt32(txtCodeEkhtesasi_NameKala.Text);
 
-                                    obj.CodeHesabdari = _Code;
+                                    _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                                    if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
+                                        obj.CodeHesabdari = _Code;
+                                    else
+                                        obj.CodeHesabdari = 0;
 
                                     if (!string.IsNullOrEmpty(cmbTaminKonande_NameKala.Text))
                                     {
@@ -1514,31 +1524,35 @@ namespace EtelaatePaye.CodingAnbar
                                     n1.EpNameKala1 = obj;
                                     db.EpAllCodingKalas.Add(n1);
 
-                                    ///////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
-                                    EpHesabTafsiliAghlamAnbar objAghlamAnbar = new EpHesabTafsiliAghlamAnbar();
-                                    objAghlamAnbar.SalId = _SalId;
-                                    objAghlamAnbar.LevelNumber = _LevelNumberGroupTafsili;
-                                    objAghlamAnbar.Code = _Code;
-                                    objAghlamAnbar.Name = _Name;
-                                    objAghlamAnbar.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
-                                    objAghlamAnbar.IsActive = _IsActive;
-                                    objAghlamAnbar.SharhHesab = _SharhHesab;
-                                    objAghlamAnbar.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
-                                    objAghlamAnbar.IsCreateByUser = false;
-                                    objAghlamAnbar.CreateName = "سیستم انبار";
-                                    objAghlamAnbar.CodeKala = _Code;
+                                    _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                                    /////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
+                                    if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
+                                    {
+                                        EpHesabTafsiliAghlamAnbar objAghlamAnbar = new EpHesabTafsiliAghlamAnbar();
+                                        objAghlamAnbar.SalId = _SalId;
+                                        objAghlamAnbar.LevelNumber = _LevelNumberGroupTafsili;
+                                        objAghlamAnbar.Code = _Code;
+                                        objAghlamAnbar.Name = _Name;
+                                        objAghlamAnbar.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
+                                        objAghlamAnbar.IsActive = _IsActive;
+                                        objAghlamAnbar.SharhHesab = _SharhHesab;
+                                        objAghlamAnbar.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                        objAghlamAnbar.IsCreateByUser = false;
+                                        objAghlamAnbar.CreateName = "سیستم انبار";
+                                        objAghlamAnbar.CodeKala = _Code;
 
-                                    EpAllHesabTafsili obj1 = new EpAllHesabTafsili();
-                                    obj1.SalId = _SalId;
-                                    obj1.LevelNumber = _LevelNumberGroupTafsili;
-                                    obj1.Code = _Code;
-                                    obj1.Name = _Name;
-                                    obj1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
-                                    obj1.IsActive = _IsActive;
-                                    obj1.SharhHesab = _SharhHesab;
-                                    obj1.EpHesabTafsiliAghlamAnbar1 = objAghlamAnbar;
-                                    db.EpAllHesabTafsilis.Add(obj1);
+                                        EpAllHesabTafsili obj1 = new EpAllHesabTafsili();
+                                        obj1.SalId = _SalId;
+                                        obj1.LevelNumber = _LevelNumberGroupTafsili;
+                                        obj1.Code = _Code;
+                                        obj1.Name = _Name;
+                                        obj1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                        obj1.IsActive = _IsActive;
+                                        obj1.SharhHesab = _SharhHesab;
+                                        obj1.EpHesabTafsiliAghlamAnbar1 = objAghlamAnbar;
+                                        db.EpAllHesabTafsilis.Add(obj1);
 
+                                    }
                                     db.SaveChanges();
                                     btnCancel_Click(null, null);
                                     FillGridViewCodingKala();
@@ -1616,6 +1630,8 @@ namespace EtelaatePaye.CodingAnbar
                                         q.VahedKalaId = _VahedKalaId;
                                         //q.VahedKalaName = cmbVahedKala.Text;
                                         q.GroupTafsiliId = Convert.ToInt32(cmbGroupTafsili_Tabagheh.EditValue);
+                                        q.NoeTabagheName = cmbNoeTabagheh.Text;
+                                        q.NoeTabagheIndex = cmbNoeTabagheh.SelectedIndex;
                                         q.SharhHesab = _SharhHesab;
                                         q.EpGroupAsliKalas = q4;
                                     }
@@ -1667,38 +1683,43 @@ namespace EtelaatePaye.CodingAnbar
                                         //}
                                         /////////////////////////////////////////////////////////////////////////////////////////////
                                         ///////////////////////////////// ویرایش کد در حسابداری //////////////////////////
-                                        // int RowId = Convert.ToInt32(txtId.Text);
-                                        var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.GroupTafsiliId == GroupTafsiliIdBeforeEdit && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false).ToList();
-                                        //var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Id && s.LevelNumber == _LevelNumberGroupTafsili);
-
-                                        if (qq.Count > 0)
+                                        /////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
+                                        if (cmbNoeTabagheh.SelectedIndex == 0)
                                         {
-                                            foreach (var item in qq)
+                                            // int RowId = Convert.ToInt32(txtId.Text);
+                                            var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.GroupTafsiliId == GroupTafsiliIdBeforeEdit && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false).ToList();
+                                            //var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Id && s.LevelNumber == _LevelNumberGroupTafsili);
+
+                                            if (qq.Count > 0)
                                             {
-                                                //q.SalId = _SalId;
-                                                //q.LevelNumber = _levelNamber;
-                                                //q.TabaghehGroupIndex = _TabaghehIndex;
-                                                long HesabCode = Convert.ToInt64(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter).Replace(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter), _Code.ToString())
-                                                                + item.Code.ToString().Substring(_CodeTabaghehKalaCarakter));
-
-                                                if (_CodeBeforeEdit != _Code)
+                                                foreach (var item in qq)
                                                 {
-                                                    item.Code = HesabCode;
-                                                    item.GroupTafsiliId = Convert.ToInt32(cmbGroupTafsili_Tabagheh.EditValue);
+                                                    //q.SalId = _SalId;
+                                                    //q.LevelNumber = _levelNamber;
+                                                    //q.TabaghehGroupIndex = _TabaghehIndex;
+                                                    long HesabCode = Convert.ToInt64(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter).Replace(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter), _Code.ToString())
+                                                                    + item.Code.ToString().Substring(_CodeTabaghehKalaCarakter));
 
-                                                    item.EpHesabTafsiliAghlamAnbar1.Code = HesabCode;
-                                                    item.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = Convert.ToInt32(cmbGroupTafsili_Tabagheh.EditValue);
-                                                    item.EpHesabTafsiliAghlamAnbar1.CodeKala = HesabCode;
+                                                    if (_CodeBeforeEdit != _Code)
+                                                    {
+                                                        item.Code = HesabCode;
+                                                        item.GroupTafsiliId = Convert.ToInt32(cmbGroupTafsili_Tabagheh.EditValue);
 
-                                                }
+                                                        item.EpHesabTafsiliAghlamAnbar1.Code = HesabCode;
+                                                        item.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = Convert.ToInt32(cmbGroupTafsili_Tabagheh.EditValue);
+                                                        item.EpHesabTafsiliAghlamAnbar1.CodeKala = HesabCode;
+                                                    }
 
-                                                if (_IsActiveBeforeEdit != _IsActive)
-                                                {
-                                                    item.IsActive = _IsActive;
-                                                    item.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
+                                                    if (_IsActiveBeforeEdit != _IsActive)
+                                                    {
+                                                        item.IsActive = _IsActive;
+                                                        item.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
 
+                                                    }
                                                 }
                                             }
+
+
                                         }
 
                                         db.SaveChanges();
@@ -1812,40 +1833,47 @@ namespace EtelaatePaye.CodingAnbar
                                         //}
                                         //////////////////////////////////////////////////////////////////////////////////////
                                         ///////////////////////////////// ویرایش کد در حسابداری //////////////////////////
-                                        // int RowId = Convert.ToInt32(txtId.Text);
-                                        var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.GroupTafsiliId == GroupTafsiliIdBeforeEdit && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false && s.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter) == _CodeBeforeEdit.ToString()).ToList();
-                                        //var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Id && s.LevelNumber == _LevelNumberGroupTafsili);
-
-                                        if (qq.Count > 0)
+                                        _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                                        /////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
+                                        if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
                                         {
-                                            foreach (var item in qq)
+                                            // int RowId = Convert.ToInt32(txtId.Text);
+                                            var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.GroupTafsiliId == GroupTafsiliIdBeforeEdit && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false && s.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter) == _CodeBeforeEdit.ToString()).ToList();
+                                            //var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Id && s.LevelNumber == _LevelNumberGroupTafsili);
+
+                                            if (qq.Count > 0)
                                             {
-                                                //q.SalId = _SalId;
-                                                //q.LevelNumber = _levelNamber;
-                                                //q.TabaghehGroupIndex = _TabaghehIndex;
-                                                long HesabCode = Convert.ToInt64(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter).Replace(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter), _Code.ToString())
-                                                                + item.Code.ToString().Substring(_CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter));
-
-                                                if (_CodeBeforeEdit != _Code)
+                                                foreach (var item in qq)
                                                 {
-                                                    item.Code = HesabCode;
-                                                    item.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
+                                                    //q.SalId = _SalId;
+                                                    //q.LevelNumber = _levelNamber;
+                                                    //q.TabaghehGroupIndex = _TabaghehIndex;
+                                                    long HesabCode = Convert.ToInt64(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter).Replace(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter), _Code.ToString())
+                                                                    + item.Code.ToString().Substring(_CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter));
 
-                                                    item.EpHesabTafsiliAghlamAnbar1.Code = HesabCode;
-                                                    item.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
-                                                    item.EpHesabTafsiliAghlamAnbar1.CodeKala = HesabCode;
+                                                    if (_CodeBeforeEdit != _Code)
+                                                    {
+                                                        item.Code = HesabCode;
+                                                        item.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
 
-                                                }
+                                                        item.EpHesabTafsiliAghlamAnbar1.Code = HesabCode;
+                                                        item.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
+                                                        item.EpHesabTafsiliAghlamAnbar1.CodeKala = HesabCode;
 
-                                                if (_IsActiveBeforeEdit != _IsActive)
-                                                {
-                                                    item.IsActive = _IsActive;
+                                                    }
 
-                                                    item.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
+                                                    if (_IsActiveBeforeEdit != _IsActive)
+                                                    {
+                                                        item.IsActive = _IsActive;
 
+                                                        item.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
+
+                                                    }
                                                 }
                                             }
+
                                         }
+
                                         //////////////////////////////////////////////////////////////////////////////////
                                         if (_IsActiveBeforeEdit == false && chkIsActive.Checked == true)
                                         {
@@ -1952,40 +1980,47 @@ namespace EtelaatePaye.CodingAnbar
                                         //    }
                                         //}
                                         ///////////////////////////////// ویرایش کد در حسابداری //////////////////////////
-                                        // int RowId = Convert.ToInt32(txtId.Text);
-                                        var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.GroupTafsiliId == GroupTafsiliIdBeforeEdit && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false && s.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter) == _CodeBeforeEdit.ToString()).ToList();
-                                        //var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Id && s.LevelNumber == _LevelNumberGroupTafsili);
-
-                                        if (qq.Count > 0)
+                                        _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                                        /////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
+                                        if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
                                         {
-                                            foreach (var item in qq)
+                                            // int RowId = Convert.ToInt32(txtId.Text);
+                                            var qq = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.GroupTafsiliId == GroupTafsiliIdBeforeEdit && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false && s.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter) == _CodeBeforeEdit.ToString()).ToList();
+                                            //var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == _Id && s.LevelNumber == _LevelNumberGroupTafsili);
+
+                                            if (qq.Count > 0)
                                             {
-                                                //q.SalId = _SalId;
-                                                //q.LevelNumber = _levelNamber;
-                                                //q.TabaghehGroupIndex = _TabaghehIndex;
-                                                long HesabCode = Convert.ToInt64(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter).Replace(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter), _Code.ToString())
-                                                                + item.Code.ToString().Substring(_CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter));
-
-                                                if (_CodeBeforeEdit != _Code)
+                                                foreach (var item in qq)
                                                 {
-                                                    item.Code = HesabCode;
-                                                    item.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
+                                                    //q.SalId = _SalId;
+                                                    //q.LevelNumber = _levelNamber;
+                                                    //q.TabaghehGroupIndex = _TabaghehIndex;
+                                                    long HesabCode = Convert.ToInt64(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter).Replace(item.Code.ToString().Substring(0, _CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter), _Code.ToString())
+                                                                    + item.Code.ToString().Substring(_CodeTabaghehKalaCarakter + _CodeGroupAsliKalaCarakter + _CodeGroupFareeKalaCarakter));
 
-                                                    item.EpHesabTafsiliAghlamAnbar1.Code = HesabCode;
-                                                    item.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
-                                                    item.EpHesabTafsiliAghlamAnbar1.CodeKala = HesabCode;
+                                                    if (_CodeBeforeEdit != _Code)
+                                                    {
+                                                        item.Code = HesabCode;
+                                                        item.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
 
-                                                }
+                                                        item.EpHesabTafsiliAghlamAnbar1.Code = HesabCode;
+                                                        item.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).GroupTafsiliId;
+                                                        item.EpHesabTafsiliAghlamAnbar1.CodeKala = HesabCode;
 
-                                                if (_IsActiveBeforeEdit != _IsActive)
-                                                {
-                                                    item.IsActive = _IsActive;
+                                                    }
 
-                                                    item.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
+                                                    if (_IsActiveBeforeEdit != _IsActive)
+                                                    {
+                                                        item.IsActive = _IsActive;
 
+                                                        item.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
+
+                                                    }
                                                 }
                                             }
+
                                         }
+
                                         //////////////////////////////////////////////////////////////////////////////////
                                         if (_IsActiveBeforeEdit == false && chkIsActive.Checked == true)
                                         {
@@ -2047,7 +2082,11 @@ namespace EtelaatePaye.CodingAnbar
                                         else
                                             q.CodeEkhtesasi = null;
 
-                                        q.CodeHesabdari = _Code;
+                                        _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                                        if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
+                                            q.CodeHesabdari = _Code;
+                                        else
+                                            q.CodeHesabdari = 0;
 
                                         cmbTaminKonande_NameKala.ShowPopup();
                                         cmbTaminKonande_NameKala.ClosePopup();
@@ -2243,29 +2282,34 @@ namespace EtelaatePaye.CodingAnbar
                                             }
 
                                             ///////////////////////////////// ویرایش کد در حسابداری //////////////////////////
-                                            // int RowId = Convert.ToInt32(txtId.Text);
-                                            //var _Id = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser==false && s.Code == _CodeBeforeEdit).Id;
-                                            var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false && s.Code == _CodeBeforeEdit);
-                                            if (qq != null)
+                                            _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
+                                            /////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
+                                            if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
                                             {
-                                                //q.SalId = _SalId;
-                                                //q.LevelNumber = _levelNamber;
-                                                //q.TabaghehGroupIndex = _TabaghehIndex;
-                                                qq.Code = _Code;
-                                                qq.Name = _Name;
-                                                qq.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
-                                                qq.IsActive = _IsActive;
-                                                qq.SharhHesab = _SharhHesab;
+                                                // int RowId = Convert.ToInt32(txtId.Text);
+                                                //var _Id = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser==false && s.Code == _CodeBeforeEdit).Id;
+                                                var qq = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser == false && s.Code == _CodeBeforeEdit);
+                                                if (qq != null)
+                                                {
+                                                    //q.SalId = _SalId;
+                                                    //q.LevelNumber = _levelNamber;
+                                                    //q.TabaghehGroupIndex = _TabaghehIndex;
+                                                    qq.Code = _Code;
+                                                    qq.Name = _Name;
+                                                    qq.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                                    qq.IsActive = _IsActive;
+                                                    qq.SharhHesab = _SharhHesab;
 
-                                                qq.EpHesabTafsiliAghlamAnbar1.Code = _Code;
-                                                qq.EpHesabTafsiliAghlamAnbar1.Name = _Name;
-                                                qq.EpHesabTafsiliAghlamAnbar1.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
-                                                qq.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
-                                                qq.EpHesabTafsiliAghlamAnbar1.SharhHesab = _SharhHesab;
-                                                qq.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
-                                                qq.EpHesabTafsiliAghlamAnbar1.CodeKala = _Code;
+                                                    qq.EpHesabTafsiliAghlamAnbar1.Code = _Code;
+                                                    qq.EpHesabTafsiliAghlamAnbar1.Name = _Name;
+                                                    qq.EpHesabTafsiliAghlamAnbar1.TarikhEjad = !string.IsNullOrEmpty(txtTarikhEjad.Text) ? Convert.ToDateTime(txtTarikhEjad.Text) : DateTime.Now;
+                                                    qq.EpHesabTafsiliAghlamAnbar1.IsActive = _IsActive;
+                                                    qq.EpHesabTafsiliAghlamAnbar1.SharhHesab = _SharhHesab;
+                                                    qq.EpHesabTafsiliAghlamAnbar1.GroupTafsiliId = db.EpTabaghehKalas.FirstOrDefault(s => s.Id == _TabaghehKalaId && s.SalId == _SalId).GroupTafsiliId;
+                                                    qq.EpHesabTafsiliAghlamAnbar1.CodeKala = _Code;
+                                                }
+
                                             }
-
                                             db.SaveChanges();
                                         }
 
@@ -2362,12 +2406,13 @@ namespace EtelaatePaye.CodingAnbar
                     txtId.Text = gridView.GetFocusedRowCellValue("Id").ToString();
                     txtName.Text = gridView.GetFocusedRowCellValue("Name").ToString();
                     chkIsActive.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsActive"));
-                    txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab") !=null? gridView.GetFocusedRowCellValue("SharhHesab").ToString():"";
-                   //cmbVahedKala.EditValue = 0;
+                    txtSharh.Text = gridView.GetFocusedRowCellValue("SharhHesab") != null ? gridView.GetFocusedRowCellValue("SharhHesab").ToString() : "";
+                    //cmbVahedKala.EditValue = 0;
 
                     if (_SelectedTabPage == "xtraTabPage_TabaghehKala")
                     {
                         cmbGroupTafsiliId = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupTafsiliId").ToString());
+                        cmbNoeTabagheh.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("NoeTabagheIndex").ToString());
                         FillcmbGroupTafsili();
                         cmbTabaghehKala.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("GroupTafsiliId").ToString());
                         txtCode.Text = gridView.GetFocusedRowCellValue("Code").ToString();
@@ -3142,6 +3187,19 @@ namespace EtelaatePaye.CodingAnbar
             if (e.KeyChar == 13 && string.IsNullOrEmpty(lstShomareFani_NameKala.Text) || lstShomareFani_NameKala.Text == "\r\n")
             {
                 btnSave.Focus();
+            }
+        }
+
+        private void cmbNoeTabagheh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbNoeTabagheh.SelectedIndex > -1)
+                _TabaghehGroupName = cmbNoeTabagheh.SelectedItem.ToString() == "کالا" ? "اقلام انبار و اموال" : "سایر";
+            else
+                _TabaghehGroupName = "";
+            if (FillcmbGroupTafsili())
+            {
+                //tnNewCode_Click(null, null);
+                cmbTabaghehKala.Focus();
             }
         }
     }

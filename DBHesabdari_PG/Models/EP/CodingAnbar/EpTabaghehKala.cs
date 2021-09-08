@@ -27,6 +27,10 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public bool IsActive { get; set; }
         [Required]
         public int LevelNumber { get; set; }
+        [Required, MaxLength(20)]
+        public string NoeTabagheName { get; set; }
+        [Required]
+        public int NoeTabagheIndex { get; set; }
         [MaxLength(500)]
         public string SharhHesab { get; set; }
         public virtual EpAllCodingKala EpAllCodingKala1 { get; set; }

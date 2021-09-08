@@ -1,5 +1,6 @@
 ﻿using DBHesabdari_PG.Models.EP.CodingAnbar;
 using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using DBHesabdari_PG.Models.FK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.AK
 {
-   public class AmaliatAnbarVKala_Riz
+   public class AKAmaliatAnbarVKala_Riz
     {
         //[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
@@ -25,17 +26,17 @@ namespace DBHesabdari_PG.Models.AK
         [Required]
         public int BeAnbarId { get; set; }
         [Required]
-        public int SeryalCol_BeNoeAmaliat_BeSelectAnbar { get; set; }
+        public int SeryalCol_BeNameAmaliat_BeSelectAnbar { get; set; }
         //[Required]
-        //public int SeryalCol_BeNoeAmaliat_BaSelectAnbar { get; set; }
+        //public int SeryalCol_BeNameAmaliat_BaSelectAnbar { get; set; }
         [Required]
-        public int SeryalCol_BaNoeAmaliat_BeSelectAnbar { get; set; }
+        public int SeryalCol_BaNameAmaliat_BeSelectAnbar { get; set; }
         [Required]
-        public int SeryalJoze_BaNoeSanad_BeSelectAnbar { get; set; }
+        public int SeryalJoze_BaNameSanad_BeSelectAnbar { get; set; }
         [Required]
-        public int SeryalCol_BaNoeAmaliat_BaSelectAnbar { get; set; }
+        public int SeryalCol_BaNameAmaliat_BaSelectAnbar { get; set; }
         [Required]
-        public int SeryalJoze_BaNoeSanad_BaSelectAnbar { get; set; }
+        public int SeryalJoze_BaNameSanad_BaSelectAnbar { get; set; }
         //[Required]
         public int? GhateySanadNamber { get; set; }
         [Required]
@@ -52,13 +53,13 @@ namespace DBHesabdari_PG.Models.AK
         public DateTime DateTimeInsert { get; set; }
         public DateTime? DateTimeEdit { get; set; }
         [Required]
-        public int NoeAmaliatCode { get; set; }
+        public int NameAmaliatCode { get; set; }
         [Required]
-        public int NoeSanadIndex { get; set; }
+        public int NameSanadIndex { get; set; }
         [Required]
-        public int NoeSanadCode { get; set; }
+        public int NameSanadCode { get; set; }
         [MaxLength(150)]
-        public string NoeSanadText { get; set; }
+        public string NameSanadText { get; set; }
         [Required]
         public decimal Meghdar { get; set; }
         [Required]
@@ -86,6 +87,8 @@ namespace DBHesabdari_PG.Models.AK
         [Required]
         public int Radif { get; set; }
         public int? FactorNumber { get; set; }
+        [Required]
+        public long FactorId { get; set; }
         [MaxLength(350)]
         public string Tozihat { get; set; }
         [MaxLength(500)]
@@ -180,5 +183,8 @@ namespace DBHesabdari_PG.Models.AK
         public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili2 { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili3 { get; set; }
+
+        //public virtual FkAmaliatFrooshVKharidVKharid_Riz FkAmaliatFrooshVKharidVKharid_Riz1 { get; set; }
+
     }
 }

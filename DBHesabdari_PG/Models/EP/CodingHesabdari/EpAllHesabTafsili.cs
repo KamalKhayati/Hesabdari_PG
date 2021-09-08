@@ -1,5 +1,6 @@
 ﻿using DBHesabdari_PG.Models.AK;
 using DBHesabdari_PG.Models.EP.CodingAnbar;
+using DBHesabdari_PG.Models.FK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -54,9 +55,12 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual ICollection<EpListAnbarha> EpListAnbarha1s { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarha2s { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarha3s { get; set; }
-        public virtual ICollection<AmaliatAnbarVKala_Riz> AmaliatAnbarVKala_Riz1s { get; set; }
-        public virtual ICollection<AmaliatAnbarVKala_Riz> AmaliatAnbarVKala_Riz2s { get; set; }
-        public virtual ICollection<AmaliatAnbarVKala_Riz> AmaliatAnbarVKala_Riz3s { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz1s { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz2s { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz3s { get; set; }
+        public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz1s { get; set; }
+        public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz2s { get; set; }
+        public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz3s { get; set; }
        // public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz1s { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz2s { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz3s { get; set; }

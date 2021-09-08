@@ -1,4 +1,5 @@
 ﻿using DBHesabdari_PG.Models.AK;
+using DBHesabdari_PG.Models.FK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,7 +27,8 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual ICollection<EpNameKala> EpNameKala4s { get; set; }
         public virtual ICollection<EpAllCodingKala> EpAllCodingKalas { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
-        public virtual ICollection<AmaliatAnbarVKala_Riz> AmaliatAnbarVKala_Rizs { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Rizs { get; set; }
+        public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Rizs { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
 
     }

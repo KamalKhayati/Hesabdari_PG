@@ -60,11 +60,11 @@
             this.gridControl_KolAmaliat = new DevExpress.XtraGrid.GridControl();
             this.amaliatAnbarVKala_RizsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView_KolAmaliat = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNoeSanadText = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNameSanadText = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn131 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn132 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn133 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -89,7 +89,7 @@
             this.gridColumn434 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn148 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn435 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn129 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtp_ResidKharid = new DevExpress.XtraTab.XtraTabPage();
             this.xtp_BargashtAzFroosh = new DevExpress.XtraTab.XtraTabPage();
@@ -181,10 +181,10 @@
             this.lblAzAnbar = new DevExpress.XtraEditors.LabelControl();
             this.btnReloadBeAnbar = new DevExpress.XtraEditors.SimpleButton();
             this.lblBeAnbar = new DevExpress.XtraEditors.LabelControl();
-            this.cmbNoeSanad = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbNameSanad = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar = new DevExpress.XtraEditors.LabelControl();
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar = new DevExpress.XtraEditors.TextEdit();
             this.txtGhateySanadNumber = new DevExpress.XtraEditors.TextEdit();
             this.lblGhatySanadNumber = new DevExpress.XtraEditors.LabelControl();
             this.txtSabetAtefNumber = new DevExpress.XtraEditors.TextEdit();
@@ -193,10 +193,10 @@
             this.lblAtefSanadNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblRozaneSanadNumber = new DevExpress.XtraEditors.LabelControl();
             this.txtRozaneSanadNumber = new DevExpress.XtraEditors.TextEdit();
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar = new DevExpress.XtraEditors.LabelControl();
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar = new DevExpress.XtraEditors.TextEdit();
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar = new DevExpress.XtraEditors.LabelControl();
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar = new DevExpress.XtraEditors.TextEdit();
             this.btnReloadHesabTafsili3 = new DevExpress.XtraEditors.SimpleButton();
             this.cmbHesabTafsili3 = new DevExpress.XtraEditors.LookUpEdit();
             this.lblHesabTafsili3 = new DevExpress.XtraEditors.LabelControl();
@@ -212,8 +212,8 @@
             this.lblHesabTafsili1 = new DevExpress.XtraEditors.LabelControl();
             this.lblTarikh = new DevExpress.XtraEditors.LabelControl();
             this.txtTarikhSanad = new DevExpress.XtraEditors.TextEdit();
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar = new DevExpress.XtraEditors.LabelControl();
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar = new DevExpress.XtraEditors.TextEdit();
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar = new DevExpress.XtraEditors.TextEdit();
             this.lblUserId = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
             this.lblSalId = new DevExpress.XtraEditors.LabelControl();
@@ -268,21 +268,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeSanad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNameSanad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhateySanadNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSabetAtefNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaygiriNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRozaneSanadNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabMoin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhSanad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl0
@@ -692,16 +692,16 @@
             // 
             // amaliatAnbarVKala_RizsBindingSource
             // 
-            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
+            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AKAmaliatAnbarVKala_Riz);
             // 
             // gridView_KolAmaliat
             // 
             this.gridView_KolAmaliat.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar,
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar,
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar,
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar,
-            this.colNoeSanadText,
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar,
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar,
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar,
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar,
+            this.colNameSanadText,
             this.gridColumn131,
             this.gridColumn132,
             this.gridColumn133,
@@ -726,7 +726,7 @@
             this.gridColumn434,
             this.gridColumn148,
             this.gridColumn435,
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar,
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar,
             this.gridColumn129});
             this.gridView_KolAmaliat.DetailHeight = 378;
             this.gridView_KolAmaliat.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
@@ -752,84 +752,84 @@
             this.gridView_KolAmaliat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gridView_KeyUp);
             this.gridView_KolAmaliat.RowCountChanged += new System.EventHandler(this.gridView_AllVorode_RowCountChanged);
             // 
-            // colSeryalCol_BaNoeAmaliat_BeSelectAnbar
+            // colSeryalCol_BaNameAmaliat_BeSelectAnbar
             // 
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.Caption = "ش سریال کل ";
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.FieldName = "SeryalCol_BaNoeAmaliat_BeSelectAnbar";
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.MinWidth = 21;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.Name = "colSeryalCol_BaNoeAmaliat_BeSelectAnbar";
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.Visible = true;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.VisibleIndex = 0;
-            this.colSeryalCol_BaNoeAmaliat_BeSelectAnbar.Width = 130;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.Caption = "ش سریال کل ";
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.FieldName = "SeryalCol_BaNameAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.MinWidth = 21;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.Name = "colSeryalCol_BaNameAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.Visible = true;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.VisibleIndex = 0;
+            this.colSeryalCol_BaNameAmaliat_BeSelectAnbar.Width = 130;
             // 
-            // colSeryalJoze_BaNoeSanad_BeSelectAnbar
+            // colSeryalJoze_BaNameSanad_BeSelectAnbar
             // 
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.Caption = "ش سریال جزء";
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.FieldName = "SeryalJoze_BaNoeSanad_BeSelectAnbar";
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.MinWidth = 25;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.Name = "colSeryalJoze_BaNoeSanad_BeSelectAnbar";
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.Visible = true;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.VisibleIndex = 1;
-            this.colSeryalJoze_BaNoeSanad_BeSelectAnbar.Width = 130;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.Caption = "ش سریال جزء";
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.FieldName = "SeryalJoze_BaNameSanad_BeSelectAnbar";
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.MinWidth = 25;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.Name = "colSeryalJoze_BaNameSanad_BeSelectAnbar";
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.Visible = true;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.VisibleIndex = 1;
+            this.colSeryalJoze_BaNameSanad_BeSelectAnbar.Width = 130;
             // 
-            // colSeryalCol_BaNoeAmaliat_BaSelectAnbar
+            // colSeryalCol_BaNameAmaliat_BaSelectAnbar
             // 
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.Caption = "ش سریال کل ";
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.FieldName = "SeryalCol_BaNoeAmaliat_BaSelectAnbar";
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.MinWidth = 25;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.Name = "colSeryalCol_BaNoeAmaliat_BaSelectAnbar";
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.Visible = true;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.VisibleIndex = 2;
-            this.colSeryalCol_BaNoeAmaliat_BaSelectAnbar.Width = 130;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.Caption = "ش سریال کل ";
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.FieldName = "SeryalCol_BaNameAmaliat_BaSelectAnbar";
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.MinWidth = 25;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.Name = "colSeryalCol_BaNameAmaliat_BaSelectAnbar";
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.Visible = true;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.VisibleIndex = 2;
+            this.colSeryalCol_BaNameAmaliat_BaSelectAnbar.Width = 130;
             // 
-            // colSeryalJoze_BaNoeSanad_BaSelectAnbar
+            // colSeryalJoze_BaNameSanad_BaSelectAnbar
             // 
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.Caption = "ش سریال جزء";
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.FieldName = "SeryalJoze_BaNoeSanad_BaSelectAnbar";
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.MinWidth = 25;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.Name = "colSeryalJoze_BaNoeSanad_BaSelectAnbar";
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.Visible = true;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.VisibleIndex = 3;
-            this.colSeryalJoze_BaNoeSanad_BaSelectAnbar.Width = 130;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.Caption = "ش سریال جزء";
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.FieldName = "SeryalJoze_BaNameSanad_BaSelectAnbar";
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.MinWidth = 25;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.Name = "colSeryalJoze_BaNameSanad_BaSelectAnbar";
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.Visible = true;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.VisibleIndex = 3;
+            this.colSeryalJoze_BaNameSanad_BaSelectAnbar.Width = 130;
             // 
-            // colNoeSanadText
+            // colNameSanadText
             // 
-            this.colNoeSanadText.AppearanceCell.Options.UseTextOptions = true;
-            this.colNoeSanadText.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colNoeSanadText.AppearanceHeader.Options.UseTextOptions = true;
-            this.colNoeSanadText.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colNoeSanadText.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colNoeSanadText.Caption = "نوع سند";
-            this.colNoeSanadText.FieldName = "NoeSanadText";
-            this.colNoeSanadText.MinWidth = 25;
-            this.colNoeSanadText.Name = "colNoeSanadText";
-            this.colNoeSanadText.Visible = true;
-            this.colNoeSanadText.VisibleIndex = 4;
-            this.colNoeSanadText.Width = 182;
+            this.colNameSanadText.AppearanceCell.Options.UseTextOptions = true;
+            this.colNameSanadText.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colNameSanadText.AppearanceHeader.Options.UseTextOptions = true;
+            this.colNameSanadText.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNameSanadText.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colNameSanadText.Caption = "نوع سند";
+            this.colNameSanadText.FieldName = "NameSanadText";
+            this.colNameSanadText.MinWidth = 25;
+            this.colNameSanadText.Name = "colNameSanadText";
+            this.colNameSanadText.Visible = true;
+            this.colNameSanadText.VisibleIndex = 4;
+            this.colNameSanadText.Width = 182;
             // 
             // gridColumn131
             // 
@@ -1220,21 +1220,21 @@
             this.gridColumn435.VisibleIndex = 28;
             this.gridColumn435.Width = 600;
             // 
-            // colSeryalCol_BeNoeAmaliat_BeSelectAnbar
+            // colSeryalCol_BeNameAmaliat_BeSelectAnbar
             // 
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Caption = "سریال ترتیبی";
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.FieldName = "SeryalCol_BeNoeAmaliat_BeSelectAnbar";
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.MinWidth = 25;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Name = "colSeryalCol_BeNoeAmaliat_BeSelectAnbar";
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Visible = true;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.VisibleIndex = 29;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Width = 112;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Caption = "سریال ترتیبی";
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.FieldName = "SeryalCol_BeNameAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.MinWidth = 25;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Name = "colSeryalCol_BeNameAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Visible = true;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.VisibleIndex = 29;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Width = 112;
             // 
             // gridColumn129
             // 
@@ -1474,7 +1474,7 @@
             // 
             // amaliatAnbarVKala_RizsBindingSource1
             // 
-            this.amaliatAnbarVKala_RizsBindingSource1.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
+            this.amaliatAnbarVKala_RizsBindingSource1.DataSource = typeof(DBHesabdari_PG.Models.AK.AKAmaliatAnbarVKala_Riz);
             // 
             // gridView_AmaliatAddVaEdit1
             // 
@@ -1804,7 +1804,7 @@
             // 
             // amaliatAnbarVKala_RizsBindingSource2
             // 
-            this.amaliatAnbarVKala_RizsBindingSource2.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
+            this.amaliatAnbarVKala_RizsBindingSource2.DataSource = typeof(DBHesabdari_PG.Models.AK.AKAmaliatAnbarVKala_Riz);
             // 
             // gridView_AmaliatAddVaEdit2
             // 
@@ -2151,10 +2151,10 @@
             this.panelControl_AddVaEdit.Controls.Add(this.lblAzAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadBeAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.lblBeAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.cmbNoeSanad);
+            this.panelControl_AddVaEdit.Controls.Add(this.cmbNameSanad);
             this.panelControl_AddVaEdit.Controls.Add(this.labelControl2);
-            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalJoze_BaNameSanad_BeSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalJoze_BaNameSanad_BeSelectAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.txtGhateySanadNumber);
             this.panelControl_AddVaEdit.Controls.Add(this.lblGhatySanadNumber);
             this.panelControl_AddVaEdit.Controls.Add(this.txtSabetAtefNumber);
@@ -2163,10 +2163,10 @@
             this.panelControl_AddVaEdit.Controls.Add(this.lblAtefSanadNumber);
             this.panelControl_AddVaEdit.Controls.Add(this.lblRozaneSanadNumber);
             this.panelControl_AddVaEdit.Controls.Add(this.txtRozaneSanadNumber);
-            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar);
             this.panelControl_AddVaEdit.Controls.Add(this.btnReloadHesabTafsili3);
             this.panelControl_AddVaEdit.Controls.Add(this.cmbHesabTafsili3);
             this.panelControl_AddVaEdit.Controls.Add(this.lblHesabTafsili3);
@@ -2182,8 +2182,8 @@
             this.panelControl_AddVaEdit.Controls.Add(this.lblHesabTafsili1);
             this.panelControl_AddVaEdit.Controls.Add(this.lblTarikh);
             this.panelControl_AddVaEdit.Controls.Add(this.txtTarikhSanad);
-            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar);
-            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.lblSeryalJoze_BaNameSanad_BaSelectAnbar);
+            this.panelControl_AddVaEdit.Controls.Add(this.txtSeryalJoze_BaNameSanad_BaSelectAnbar);
             this.panelControl_AddVaEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl_AddVaEdit.Location = new System.Drawing.Point(2, 2);
             this.panelControl_AddVaEdit.Name = "panelControl_AddVaEdit";
@@ -2390,28 +2390,28 @@
             this.lblBeAnbar.Text = "به انبار";
             this.lblBeAnbar.Visible = false;
             // 
-            // cmbNoeSanad
+            // cmbNameSanad
             // 
-            this.cmbNoeSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbNoeSanad.EnterMoveNextControl = true;
-            this.cmbNoeSanad.Location = new System.Drawing.Point(1298, 6);
-            this.cmbNoeSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbNoeSanad.Name = "cmbNoeSanad";
-            this.cmbNoeSanad.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.cmbNoeSanad.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbNoeSanad.Properties.AppearanceItemSelected.ForeColor = System.Drawing.Color.Red;
-            this.cmbNoeSanad.Properties.AppearanceItemSelected.Options.UseForeColor = true;
-            this.cmbNoeSanad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbNameSanad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbNameSanad.EnterMoveNextControl = true;
+            this.cmbNameSanad.Location = new System.Drawing.Point(1298, 6);
+            this.cmbNameSanad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameSanad.Name = "cmbNameSanad";
+            this.cmbNameSanad.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.cmbNameSanad.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbNameSanad.Properties.AppearanceItemSelected.ForeColor = System.Drawing.Color.Red;
+            this.cmbNameSanad.Properties.AppearanceItemSelected.Options.UseForeColor = true;
+            this.cmbNameSanad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbNoeSanad.Properties.DropDownRows = 10;
-            this.cmbNoeSanad.Properties.NullValuePrompt = "لطفاً نوع سند را انتخاب کنید ...";
-            this.cmbNoeSanad.Properties.ReadOnly = true;
-            this.cmbNoeSanad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbNoeSanad.Size = new System.Drawing.Size(426, 34);
-            this.cmbNoeSanad.TabIndex = 0;
-            this.cmbNoeSanad.SelectedIndexChanged += new System.EventHandler(this.cmbNoeSanad_SelectedIndexChanged);
-            this.cmbNoeSanad.Enter += new System.EventHandler(this.cmbNoeSanad_Enter);
-            this.cmbNoeSanad.Leave += new System.EventHandler(this.cmbNoeSanad_Leave);
+            this.cmbNameSanad.Properties.DropDownRows = 10;
+            this.cmbNameSanad.Properties.NullValuePrompt = "لطفاً نوع سند را انتخاب کنید ...";
+            this.cmbNameSanad.Properties.ReadOnly = true;
+            this.cmbNameSanad.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbNameSanad.Size = new System.Drawing.Size(426, 34);
+            this.cmbNameSanad.TabIndex = 0;
+            this.cmbNameSanad.SelectedIndexChanged += new System.EventHandler(this.cmbNameSanad_SelectedIndexChanged);
+            this.cmbNameSanad.Enter += new System.EventHandler(this.cmbNameSanad_Enter);
+            this.cmbNameSanad.Leave += new System.EventHandler(this.cmbNameSanad_Leave);
             // 
             // labelControl2
             // 
@@ -2425,39 +2425,39 @@
             this.labelControl2.TabIndex = 214;
             this.labelControl2.Text = "نوع سند";
             // 
-            // lblSeryalJoze_BaNoeSanad_BeSelectAnbar
+            // lblSeryalJoze_BaNameSanad_BeSelectAnbar
             // 
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Appearance.Options.UseForeColor = true;
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Location = new System.Drawing.Point(1737, 85);
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Name = "lblSeryalJoze_BaNoeSanad_BeSelectAnbar";
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Size = new System.Drawing.Size(97, 27);
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.TabIndex = 213;
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.Text = "ش سریال جزء";
-            this.lblSeryalJoze_BaNoeSanad_BeSelectAnbar.ToolTip = "ش سریال جزء در همه انبارها";
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Appearance.Options.UseForeColor = true;
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Location = new System.Drawing.Point(1737, 85);
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Name = "lblSeryalJoze_BaNameSanad_BeSelectAnbar";
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Size = new System.Drawing.Size(97, 27);
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.TabIndex = 213;
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.Text = "ش سریال جزء";
+            this.lblSeryalJoze_BaNameSanad_BeSelectAnbar.ToolTip = "ش سریال جزء در همه انبارها";
             // 
-            // txtSeryalJoze_BaNoeSanad_BeSelectAnbar
+            // txtSeryalJoze_BaNameSanad_BeSelectAnbar
             // 
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.EditValue = "";
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.EnterMoveNextControl = true;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Location = new System.Drawing.Point(1569, 82);
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Name = "txtSeryalJoze_BaNoeSanad_BeSelectAnbar";
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.MaxLength = 9;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties.ReadOnly = true;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Size = new System.Drawing.Size(155, 34);
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.TabIndex = 2;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.TabStop = false;
-            this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.ToolTip = "ش سریال جزء در همه انبارها";
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.EditValue = "";
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.EnterMoveNextControl = true;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Location = new System.Drawing.Point(1569, 82);
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Name = "txtSeryalJoze_BaNameSanad_BeSelectAnbar";
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.MaxLength = 9;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties.ReadOnly = true;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Size = new System.Drawing.Size(155, 34);
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.TabIndex = 2;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.TabStop = false;
+            this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.ToolTip = "ش سریال جزء در همه انبارها";
             // 
             // txtGhateySanadNumber
             // 
@@ -2589,73 +2589,73 @@
             this.txtRozaneSanadNumber.Size = new System.Drawing.Size(125, 34);
             this.txtRozaneSanadNumber.TabIndex = 2;
             // 
-            // lblSeryalCol_BaNoeAmaliat_BaSelectAnbar
+            // lblSeryalCol_BaNameAmaliat_BaSelectAnbar
             // 
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Appearance.Options.UseForeColor = true;
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Location = new System.Drawing.Point(1737, 126);
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Name = "lblSeryalCol_BaNoeAmaliat_BaSelectAnbar";
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Size = new System.Drawing.Size(90, 27);
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.TabIndex = 202;
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.Text = "ش سریال کل";
-            this.lblSeryalCol_BaNoeAmaliat_BaSelectAnbar.ToolTip = "ش سریال کل در انبار انتخابی";
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Appearance.Options.UseForeColor = true;
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Location = new System.Drawing.Point(1737, 126);
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Name = "lblSeryalCol_BaNameAmaliat_BaSelectAnbar";
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Size = new System.Drawing.Size(90, 27);
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.TabIndex = 202;
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Text = "ش سریال کل";
+            this.lblSeryalCol_BaNameAmaliat_BaSelectAnbar.ToolTip = "ش سریال کل در انبار انتخابی";
             // 
-            // txtSeryalCol_BaNoeAmaliat_BaSelectAnbar
+            // txtSeryalCol_BaNameAmaliat_BaSelectAnbar
             // 
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.EditValue = "";
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.EnterMoveNextControl = true;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Location = new System.Drawing.Point(1569, 120);
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Name = "txtSeryalCol_BaNoeAmaliat_BaSelectAnbar";
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.MaxLength = 9;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties.ReadOnly = true;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Size = new System.Drawing.Size(155, 34);
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.TabIndex = 3;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.TabStop = false;
-            this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.ToolTip = "ش سریال کل در انبار انتخابی";
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.EditValue = "";
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.EnterMoveNextControl = true;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Location = new System.Drawing.Point(1569, 120);
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Name = "txtSeryalCol_BaNameAmaliat_BaSelectAnbar";
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.MaxLength = 9;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties.ReadOnly = true;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Size = new System.Drawing.Size(155, 34);
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.TabIndex = 3;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.TabStop = false;
+            this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.ToolTip = "ش سریال کل در انبار انتخابی";
             // 
-            // lblSeryalCol_BaNoeAmaliat_BeSelectAnbar
+            // lblSeryalCol_BaNameAmaliat_BeSelectAnbar
             // 
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Appearance.Options.UseForeColor = true;
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Location = new System.Drawing.Point(1737, 47);
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Name = "lblSeryalCol_BaNoeAmaliat_BeSelectAnbar";
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Size = new System.Drawing.Size(90, 27);
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.TabIndex = 200;
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.Text = "ش سریال کل";
-            this.lblSeryalCol_BaNoeAmaliat_BeSelectAnbar.ToolTip = "ش سریال کل در همه انبارها";
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Appearance.Options.UseForeColor = true;
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Location = new System.Drawing.Point(1737, 47);
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Name = "lblSeryalCol_BaNameAmaliat_BeSelectAnbar";
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Size = new System.Drawing.Size(90, 27);
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.TabIndex = 200;
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Text = "ش سریال کل";
+            this.lblSeryalCol_BaNameAmaliat_BeSelectAnbar.ToolTip = "ش سریال کل در همه انبارها";
             // 
-            // txtSeryalCol_BaNoeAmaliat_BeSelectAnbar
+            // txtSeryalCol_BaNameAmaliat_BeSelectAnbar
             // 
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.EditValue = "";
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.EnterMoveNextControl = true;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Location = new System.Drawing.Point(1569, 44);
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Name = "txtSeryalCol_BaNoeAmaliat_BeSelectAnbar";
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.MaxLength = 9;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties.ReadOnly = true;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Size = new System.Drawing.Size(155, 34);
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.TabIndex = 1;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.TabStop = false;
-            this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.ToolTip = "ش سریال کل در همه انبارها";
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.EditValue = "";
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.EnterMoveNextControl = true;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Location = new System.Drawing.Point(1569, 44);
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Name = "txtSeryalCol_BaNameAmaliat_BeSelectAnbar";
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.MaxLength = 9;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties.ReadOnly = true;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Size = new System.Drawing.Size(155, 34);
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.TabIndex = 1;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.TabStop = false;
+            this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.ToolTip = "ش سریال کل در همه انبارها";
             // 
             // btnReloadHesabTafsili3
             // 
@@ -2670,8 +2670,6 @@
             this.btnReloadHesabTafsili3.Size = new System.Drawing.Size(47, 37);
             this.btnReloadHesabTafsili3.TabIndex = 197;
             this.btnReloadHesabTafsili3.TabStop = false;
-            this.btnReloadHesabTafsili3.ToolTip = "جدید";
-            this.btnReloadHesabTafsili3.ToolTipTitle = "F2";
             // 
             // cmbHesabTafsili3
             // 
@@ -2736,8 +2734,6 @@
             this.btnReloadHesabTafsili2.Size = new System.Drawing.Size(47, 37);
             this.btnReloadHesabTafsili2.TabIndex = 195;
             this.btnReloadHesabTafsili2.TabStop = false;
-            this.btnReloadHesabTafsili2.ToolTip = "جدید";
-            this.btnReloadHesabTafsili2.ToolTipTitle = "F2";
             // 
             // cmbHesabTafsili2
             // 
@@ -2967,39 +2963,39 @@
             this.txtTarikhSanad.TabIndex = 3;
             this.txtTarikhSanad.Leave += new System.EventHandler(this.txtTarikh_Leave);
             // 
-            // lblSeryalJoze_BaNoeSanad_BaSelectAnbar
+            // lblSeryalJoze_BaNameSanad_BaSelectAnbar
             // 
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Appearance.Options.UseForeColor = true;
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Location = new System.Drawing.Point(1737, 162);
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Name = "lblSeryalJoze_BaNoeSanad_BaSelectAnbar";
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Size = new System.Drawing.Size(97, 27);
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.TabIndex = 30;
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.Text = "ش سریال جزء";
-            this.lblSeryalJoze_BaNoeSanad_BaSelectAnbar.ToolTip = "ش سریال جزء در انبار انتخابی";
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Appearance.Options.UseForeColor = true;
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Location = new System.Drawing.Point(1737, 162);
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Name = "lblSeryalJoze_BaNameSanad_BaSelectAnbar";
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Size = new System.Drawing.Size(97, 27);
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.TabIndex = 30;
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.Text = "ش سریال جزء";
+            this.lblSeryalJoze_BaNameSanad_BaSelectAnbar.ToolTip = "ش سریال جزء در انبار انتخابی";
             // 
-            // txtSeryalJoze_BaNoeSanad_BaSelectAnbar
+            // txtSeryalJoze_BaNameSanad_BaSelectAnbar
             // 
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.EditValue = "";
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.EnterMoveNextControl = true;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Location = new System.Drawing.Point(1569, 159);
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Name = "txtSeryalJoze_BaNoeSanad_BaSelectAnbar";
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.MaxLength = 9;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties.ReadOnly = true;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Size = new System.Drawing.Size(155, 34);
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.TabIndex = 4;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.TabStop = false;
-            this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.ToolTip = "ش سریال جزء در انبار انتخابی";
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.EditValue = "";
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.EnterMoveNextControl = true;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Location = new System.Drawing.Point(1569, 159);
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Name = "txtSeryalJoze_BaNameSanad_BaSelectAnbar";
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.MaxLength = 9;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties.ReadOnly = true;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Size = new System.Drawing.Size(155, 34);
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.TabIndex = 4;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.TabStop = false;
+            this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.ToolTip = "ش سریال جزء در انبار انتخابی";
             // 
             // lblUserId
             // 
@@ -3117,21 +3113,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbBeAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epListAnbarhasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAzAnbar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeSanad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNoeSanad_BeSelectAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbNameSanad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNameSanad_BeSelectAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhateySanadNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSabetAtefNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaygiriNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRozaneSanadNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNoeAmaliat_BaSelectAnbar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNoeAmaliat_BeSelectAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSharhSanad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabTafsili1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbHesabMoin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarikhSanad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNoeSanad_BaSelectAnbar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeryalJoze_BaNameSanad_BaSelectAnbar.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3207,8 +3203,8 @@
         private DevExpress.XtraEditors.LabelControl lblHesabTafsili1;
         private DevExpress.XtraEditors.LabelControl lblTarikh;
         private DevExpress.XtraEditors.TextEdit txtTarikhSanad;
-        private DevExpress.XtraEditors.LabelControl lblSeryalJoze_BaNoeSanad_BaSelectAnbar;
-        public DevExpress.XtraEditors.TextEdit txtSeryalJoze_BaNoeSanad_BaSelectAnbar;
+        private DevExpress.XtraEditors.LabelControl lblSeryalJoze_BaNameSanad_BaSelectAnbar;
+        public DevExpress.XtraEditors.TextEdit txtSeryalJoze_BaNameSanad_BaSelectAnbar;
         public DevExpress.XtraEditors.TextEdit txtSharhSanad;
         private DevExpress.XtraTab.XtraTabPage xtp_BargashtAzHavaleAmval;
         private DevExpress.XtraTab.XtraTabPage xtp_HavaleAmval;
@@ -3223,10 +3219,10 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn colAzAnbarId;
         private DevExpress.XtraGrid.Columns.GridColumn colKalaId;
-        private DevExpress.XtraEditors.LabelControl lblSeryalCol_BaNoeAmaliat_BeSelectAnbar;
-        public DevExpress.XtraEditors.TextEdit txtSeryalCol_BaNoeAmaliat_BeSelectAnbar;
-        private DevExpress.XtraEditors.LabelControl lblSeryalCol_BaNoeAmaliat_BaSelectAnbar;
-        public DevExpress.XtraEditors.TextEdit txtSeryalCol_BaNoeAmaliat_BaSelectAnbar;
+        private DevExpress.XtraEditors.LabelControl lblSeryalCol_BaNameAmaliat_BeSelectAnbar;
+        public DevExpress.XtraEditors.TextEdit txtSeryalCol_BaNameAmaliat_BeSelectAnbar;
+        private DevExpress.XtraEditors.LabelControl lblSeryalCol_BaNameAmaliat_BaSelectAnbar;
+        public DevExpress.XtraEditors.TextEdit txtSeryalCol_BaNameAmaliat_BaSelectAnbar;
         private DevExpress.XtraEditors.LabelControl lblRozaneSanadNumber;
         public DevExpress.XtraEditors.TextEdit txtRozaneSanadNumber;
         private DevExpress.XtraEditors.LabelControl lblAtefSanadNumber;
@@ -3242,7 +3238,7 @@
         private DevExpress.XtraGrid.GridControl gridControl_KolAmaliat;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView_KolAmaliat;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn129;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_BaNoeAmaliat_BeSelectAnbar;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_BaNameAmaliat_BeSelectAnbar;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn131;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn132;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn133;
@@ -3261,22 +3257,22 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn146;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn147;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn148;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeryalJoze_BaNoeSanad_BeSelectAnbar;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalJoze_BaNameSanad_BeSelectAnbar;
         private DevExpress.XtraGrid.Columns.GridColumn colEpListAnbarha1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn432;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn433;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn434;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn435;
-        private DevExpress.XtraGrid.Columns.GridColumn colNoeSanadText;
+        private DevExpress.XtraGrid.Columns.GridColumn colNameSanadText;
         private DevExpress.XtraTab.XtraTabPage xtp_ResidJabejaee;
         private DevExpress.XtraTab.XtraTabPage xtp_MojodiAvalDore;
         private DevExpress.XtraTab.XtraTabPage xtp_HavaleJabejaee;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl lblSeryalJoze_BaNoeSanad_BeSelectAnbar;
-        public DevExpress.XtraEditors.TextEdit txtSeryalJoze_BaNoeSanad_BeSelectAnbar;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbNoeSanad;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_BaNoeAmaliat_BaSelectAnbar;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeryalJoze_BaNoeSanad_BaSelectAnbar;
+        private DevExpress.XtraEditors.LabelControl lblSeryalJoze_BaNameSanad_BeSelectAnbar;
+        public DevExpress.XtraEditors.TextEdit txtSeryalJoze_BaNameSanad_BeSelectAnbar;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbNameSanad;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_BaNameAmaliat_BaSelectAnbar;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalJoze_BaNameSanad_BaSelectAnbar;
         private DevExpress.XtraGrid.Columns.GridColumn colEpListAnbarha2;
         public DevExpress.XtraEditors.LookUpEdit cmbBeAnbar;
         public DevExpress.XtraEditors.LookUpEdit cmbAzAnbar;
@@ -3326,6 +3322,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colBeAnbarId1;
         private DevExpress.XtraEditors.CheckEdit chkEditCode;
         private System.Windows.Forms.BindingSource epListAnbarhasBindingSource2;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_BeNoeAmaliat_BeSelectAnbar;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeryalCol_BeNameAmaliat_BeSelectAnbar;
     }
 }

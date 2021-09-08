@@ -41,6 +41,9 @@ using EtelaatePaye.Tanzimat;
 using AnbarVaKala.AmaliatRozaneh;
 using AnbarVaKala.Reports;
 using AnbarVaKala.Tanzimat;
+using FrooshVKharid.AmaliatFrooshVKharid;
+using TanzimatSystem.Tanzimat;
+using KharidVaFroosh.Taarif;
 
 namespace Hesabdari_PG.Forms
 {
@@ -703,10 +706,13 @@ namespace Hesabdari_PG.Forms
         {
             FrmCodingKala fm = new FrmCodingKala();
             fm.MdiParent = this;
+            //fm.Name = "FrmCodingKala";
+            //fm.Text = "کدینگ کالاها";
             fm.lblUserId.Text = txtUserId.Caption;
             fm.lblUserName.Text = txtUserName.Caption;
             fm.lblSalId.Text = _SalId;
             fm.lblSalMali.Text = _SalMali;
+            //fm._TabaghehGroupName = "اقلام انبار و اموال";
             ActiveForm(fm);
 
         }
@@ -763,6 +769,178 @@ namespace Hesabdari_PG.Forms
             //fm.lblSalId.Text = _SalId;
             //fm.lblSalMali.Text = _SalMali;
             ActiveForm(fm);
+        }
+
+        private void btnCodingKhadamat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+
+        private void btnFactorFrooshKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmFactor fm = new FrmFactor();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.Name = "FrmFactorFrooshKala";
+            fm.Text = "فاکتور فروش کالا";
+            //fm.cmbNameSanad.SelectedIndex = 0;
+            fm.En1 = EnumCED.Create;
+            ActiveForm(fm);
+
+        }
+
+        private void btnBargashtAzFroosh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmFactor fm = new FrmFactor();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.Name = "FrmFactorBargashtAzFroosh";
+            fm.Text = "فاکتور برگشت از فروش کالا";
+            //fm.cmbNameSanad.SelectedIndex = 1;
+            fm.En1 = EnumCED.Create;
+            ActiveForm(fm);
+
+        }
+
+        private void btnSefareshFrooshKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmFactor fm = new FrmFactor();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.Name = "FrmSefareshFrooshKala";
+            fm.Text = "سفارش فروش کالا";
+            //fm.cmbNameSanad.SelectedIndex = 2;
+            fm.En1 = EnumCED.Create;
+            ActiveForm(fm);
+
+        }
+
+        private void btnListFrooshKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmListFrooshVKharid fm = new FrmListFrooshVKharid();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.xtp_FactorKharid.PageVisible = false;
+            fm.xtp_FactorBargashtAzKharid.PageVisible = false;
+            fm.xtp_SefareshKharid.PageVisible = false;
+            fm.Name = "FrmListFrooshKala";
+            fm.Text = "لیست فروش،برگشت از فروش وسفارش فروش کالا";
+            ActiveForm(fm);
+
+        }
+
+        private void btnFactorKharidKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmFactor fm = new FrmFactor();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.Name = "FrmFactorKharidKala";
+            fm.Text = "فاکتور خرید کالا";
+            //fm.cmbNameSanad.SelectedIndex = 0;
+            fm.En1 = EnumCED.Create;
+            ActiveForm(fm);
+
+        }
+
+        private void btnFactorBargashtAzKharid_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmFactor fm = new FrmFactor();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.Name = "FrmFactorBargashtAzKharid";
+            fm.Text = "فاکتور برگشت از خرید کالا";
+            //fm.cmbNameSanad.SelectedIndex = 1;
+            fm.En1 = EnumCED.Create;
+            ActiveForm(fm);
+
+        }
+
+        private void btnSefareshKharidKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmFactor fm = new FrmFactor();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.Name = "FrmSefareshKharidKala";
+            fm.Text = "سفارش خرید کالا";
+            //fm.cmbNameSanad.SelectedIndex = 2;
+            fm.En1 = EnumCED.Create;
+            ActiveForm(fm);
+
+        }
+
+        private void btnListKharidKala_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmListFrooshVKharid fm = new FrmListFrooshVKharid();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            fm.xtp_FactorFroosh.PageVisible = false;
+            fm.xtp_FactorBargashtAzFroosh.PageVisible = false;
+            fm.xtp_SefareshFroosh.PageVisible = false;
+            fm.Name = "FrmListKharidKala";
+            fm.Text = "لیست خرید،برگشت از خرید،سفارش خرید کالا";
+            ActiveForm(fm);
+
+        }
+
+        private void btnTanzimatSystem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmTanzimatSystem fm = new FrmTanzimatSystem();
+            //fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            //fm.xtp_FactorFroosh.PageVisible = false;
+            //fm.xtp_FactorBargashtAzFroosh.PageVisible = false;
+            //fm.xtp_SefareshFroosh.PageVisible = false;
+            //fm.Name = "FrmListKharid";
+            //fm.Text = "لیست خرید،برگشت از خرید،سفارش خرید";
+           // ActiveForm(fm);
+            fm.ShowDialog();
+
+        }
+
+        private void btnEz_Ks_Factor_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmTarifEz_Ks_Factor fm = new FrmTarifEz_Ks_Factor();
+            fm.MdiParent = this;
+            fm.lblUserId.Text = txtUserId.Caption;
+            fm.lblUserName.Text = txtUserName.Caption;
+            fm.lblSalId.Text = _SalId;
+            fm.lblSalMali.Text = _SalMali;
+            //fm.xtp_FactorFroosh.PageVisible = false;
+            //fm.xtp_FactorBargashtAzFroosh.PageVisible = false;
+            //fm.xtp_SefareshFroosh.PageVisible = false;
+            //fm.Name = "FrmListKharid";
+            //fm.Text = "لیست خرید،برگشت از خرید،سفارش خرید";
+             ActiveForm(fm);
+            //fm.ShowDialog();
+
         }
     }
 }

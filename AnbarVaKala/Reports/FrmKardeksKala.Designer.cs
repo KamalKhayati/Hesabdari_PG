@@ -59,7 +59,7 @@
             this.colIsRiali = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colHesabTafsiliName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colSanadNamber = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridColumn327 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gridControl_MeghdariVRiali = new DevExpress.XtraGrid.GridControl();
             this.amaliatAnbarVKala_RizsBindingSource = new System.Windows.Forms.BindingSource();
@@ -148,7 +148,7 @@
             this.colIsRiali,
             this.colHesabTafsiliName,
             this.colSanadNamber,
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar,
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar,
             this.gridColumn327});
             this.bandedGridView_MeghdariVRiali.DetailHeight = 341;
             this.bandedGridView_MeghdariVRiali.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
@@ -258,7 +258,7 @@
             this.Col_KalaNeme.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Col_KalaNeme.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Col_KalaNeme.Caption = "نوع سند";
-            this.Col_KalaNeme.FieldName = "NoeSanadText";
+            this.Col_KalaNeme.FieldName = "NameSanadText";
             this.Col_KalaNeme.MinWidth = 23;
             this.Col_KalaNeme.Name = "Col_KalaNeme";
             this.Col_KalaNeme.Visible = true;
@@ -591,7 +591,7 @@
             this.gridBand16.Columns.Add(this.colIsRiali);
             this.gridBand16.Columns.Add(this.colHesabTafsiliName);
             this.gridBand16.Columns.Add(this.colSanadNamber);
-            this.gridBand16.Columns.Add(this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar);
+            this.gridBand16.Columns.Add(this.colSeryalCol_BeNameAmaliat_BeSelectAnbar);
             this.gridBand16.Columns.Add(this.gridColumn327);
             this.gridBand16.Name = "gridBand16";
             this.gridBand16.VisibleIndex = 4;
@@ -641,20 +641,20 @@
             this.colSanadNamber.Visible = true;
             this.colSanadNamber.Width = 123;
             // 
-            // colSeryalCol_BeNoeAmaliat_BeSelectAnbar
+            // colSeryalCol_BeNameAmaliat_BeSelectAnbar
             // 
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Caption = "سریال ترتیبی";
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.FieldName = "SeryalCol_BeNoeAmaliat_BeSelectAnbar";
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.MinWidth = 25;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Name = "colSeryalCol_BeNoeAmaliat_BeSelectAnbar";
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Visible = true;
-            this.colSeryalCol_BeNoeAmaliat_BeSelectAnbar.Width = 108;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceCell.Options.UseTextOptions = true;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Caption = "سریال ترتیبی";
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.FieldName = "SeryalCol_BeNameAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.MinWidth = 25;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Name = "colSeryalCol_BeNameAmaliat_BeSelectAnbar";
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Visible = true;
+            this.colSeryalCol_BeNameAmaliat_BeSelectAnbar.Width = 108;
             // 
             // gridColumn327
             // 
@@ -687,7 +687,7 @@
             // 
             // amaliatAnbarVKala_RizsBindingSource
             // 
-            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AmaliatAnbarVKala_Riz);
+            this.amaliatAnbarVKala_RizsBindingSource.DataSource = typeof(DBHesabdari_PG.Models.AK.AKAmaliatAnbarVKala_Riz);
             // 
             // panelControl1
             // 
@@ -1199,6 +1199,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand16;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSeryalCol_BeNoeAmaliat_BeSelectAnbar;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colSeryalCol_BeNameAmaliat_BeSelectAnbar;
     }
 }

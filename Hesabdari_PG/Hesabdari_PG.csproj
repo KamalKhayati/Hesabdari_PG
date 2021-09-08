@@ -14,6 +14,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,8 +30,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -199,9 +199,17 @@
       <Project>{26168114-9431-42db-b60e-8213d68a1e2f}</Project>
       <Name>HelpClassLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KharidVaFroosh\FrooshVKharid.csproj">
+      <Project>{FEE08A0A-36F4-4192-B525-0A09570A3157}</Project>
+      <Name>FrooshVKharid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SystemManagement\SystemManagement.csproj">
       <Project>{BBEDE194-2E2D-4D49-A811-9982B5F4F152}</Project>
       <Name>SystemManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TanzimatSystem\TanzimatSystem.csproj">
+      <Project>{AEDF637F-4666-4283-BE93-9CED33D9730B}</Project>
+      <Name>TanzimatSystem</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
