@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnFactorFrooshKala = new DevExpress.XtraBars.BarButtonItem();
-            this.btnBargashtAzFroosh = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBargashtAzFrooshKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnListFrooshKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnFactorKharidKala = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFactorBargashtAzKharid = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFactorBargashtAzKharidKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnSefareshKharidKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnListKharidKala = new DevExpress.XtraBars.BarButtonItem();
             this.btnDaryaft = new DevExpress.XtraBars.BarButtonItem();
@@ -108,7 +108,7 @@
             this.btnTanzimatAnbaVKala = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
-            this.btnEz_Ks_Factor = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEz_Ks_Factor1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem42 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem43 = new DevExpress.XtraBars.BarButtonItem();
@@ -156,6 +156,10 @@
             this.btnSefareshKharidKhadamat = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem19 = new DevExpress.XtraBars.BarSubItem();
             this.btnListKharidKhadamat = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem20 = new DevExpress.XtraBars.BarSubItem();
+            this.btnBargashtAzFrooshKhadamat = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem21 = new DevExpress.XtraBars.BarSubItem();
+            this.btnFactorBargashtAzKharidKhadamat = new DevExpress.XtraBars.BarButtonItem();
             this.rpKharidFroosh = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgFroosh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgKharid = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -215,7 +219,7 @@
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnEz_Ks_Factor2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msMajmoeBindingSource)).BeginInit();
@@ -239,7 +243,6 @@
             this.hideContainerRight.SuspendLayout();
             this.dockPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -251,10 +254,10 @@
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
             this.btnFactorFrooshKala,
-            this.btnBargashtAzFroosh,
+            this.btnBargashtAzFrooshKala,
             this.btnListFrooshKala,
             this.btnFactorKharidKala,
-            this.btnFactorBargashtAzKharid,
+            this.btnFactorBargashtAzKharidKala,
             this.btnSefareshKharidKala,
             this.btnListKharidKala,
             this.btnDaryaft,
@@ -352,7 +355,7 @@
             this.btnKardeksKala,
             this.btnTanzimatAnbaVKala,
             this.btnTanzimatSystem,
-            this.btnEz_Ks_Factor,
+            this.btnEz_Ks_Factor1,
             this.barSubItem9,
             this.btnFactorFrooshKhadamat,
             this.barSubItem10,
@@ -364,11 +367,16 @@
             this.barSubItem18,
             this.btnSefareshKharidKhadamat,
             this.barSubItem19,
-            this.btnListKharidKhadamat});
+            this.btnListKharidKhadamat,
+            this.barSubItem20,
+            this.barSubItem21,
+            this.btnBargashtAzFrooshKhadamat,
+            this.btnFactorBargashtAzKharidKhadamat,
+            this.btnEz_Ks_Factor2});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ribbon.MaxItemId = 197;
+            this.ribbon.MaxItemId = 202;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsPageCategories.ShowCaptions = false;
             this.ribbon.PageHeaderItemLinks.Add(this.ribbon.ExpandCollapseItem);
@@ -409,7 +417,7 @@
             this.ribbon.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1889, 233);
+            this.ribbon.Size = new System.Drawing.Size(1889, 215);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ribbon_MouseDoubleClick);
@@ -422,19 +430,19 @@
             this.btnFactorFrooshKala.Name = "btnFactorFrooshKala";
             this.btnFactorFrooshKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFactorFrooshKala_ItemClick);
             // 
-            // btnBargashtAzFroosh
+            // btnBargashtAzFrooshKala
             // 
-            this.btnBargashtAzFroosh.Caption = "فاکتور برگشت از فروش کالا";
-            this.btnBargashtAzFroosh.Id = 2;
-            this.btnBargashtAzFroosh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBargashtAzFroosh.ImageOptions.SvgImage")));
-            this.btnBargashtAzFroosh.LargeWidth = 80;
-            this.btnBargashtAzFroosh.Name = "btnBargashtAzFroosh";
-            this.btnBargashtAzFroosh.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnBargashtAzFroosh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBargashtAzFroosh_ItemClick);
+            this.btnBargashtAzFrooshKala.Caption = "فاکتور برگشت از فروش کالا";
+            this.btnBargashtAzFrooshKala.Id = 2;
+            this.btnBargashtAzFrooshKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBargashtAzFrooshKala.ImageOptions.SvgImage")));
+            this.btnBargashtAzFrooshKala.LargeWidth = 80;
+            this.btnBargashtAzFrooshKala.Name = "btnBargashtAzFrooshKala";
+            this.btnBargashtAzFrooshKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnBargashtAzFrooshKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBargashtAzFrooshKala_ItemClick);
             // 
             // btnListFrooshKala
             // 
-            this.btnListFrooshKala.Caption = "لیست فروش،برگشت و سفارش کالا";
+            this.btnListFrooshKala.Caption = "لیست فروش،برگشت از فروش و سفارش فروش (کالا)";
             this.btnListFrooshKala.Id = 4;
             this.btnListFrooshKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListFrooshKala.ImageOptions.SvgImage")));
             this.btnListFrooshKala.Name = "btnListFrooshKala";
@@ -449,15 +457,15 @@
             this.btnFactorKharidKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnFactorKharidKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFactorKharidKala_ItemClick);
             // 
-            // btnFactorBargashtAzKharid
+            // btnFactorBargashtAzKharidKala
             // 
-            this.btnFactorBargashtAzKharid.Caption = "فاکتور برگشت از خرید کالا";
-            this.btnFactorBargashtAzKharid.Id = 6;
-            this.btnFactorBargashtAzKharid.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFactorBargashtAzKharid.ImageOptions.SvgImage")));
-            this.btnFactorBargashtAzKharid.LargeWidth = 80;
-            this.btnFactorBargashtAzKharid.Name = "btnFactorBargashtAzKharid";
-            this.btnFactorBargashtAzKharid.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnFactorBargashtAzKharid.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFactorBargashtAzKharid_ItemClick);
+            this.btnFactorBargashtAzKharidKala.Caption = "فاکتور برگشت از خرید کالا";
+            this.btnFactorBargashtAzKharidKala.Id = 6;
+            this.btnFactorBargashtAzKharidKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFactorBargashtAzKharidKala.ImageOptions.SvgImage")));
+            this.btnFactorBargashtAzKharidKala.LargeWidth = 80;
+            this.btnFactorBargashtAzKharidKala.Name = "btnFactorBargashtAzKharidKala";
+            this.btnFactorBargashtAzKharidKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnFactorBargashtAzKharidKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFactorBargashtAzKharidKala_ItemClick);
             // 
             // btnSefareshKharidKala
             // 
@@ -470,7 +478,7 @@
             // 
             // btnListKharidKala
             // 
-            this.btnListKharidKala.Caption = "لیست خرید،برگشت و سفارش کالا";
+            this.btnListKharidKala.Caption = "لیست خرید،برگشت از خرید و سفارش خرید (کـالا)";
             this.btnListKharidKala.Id = 8;
             this.btnListKharidKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListKharidKala.ImageOptions.SvgImage")));
             this.btnListKharidKala.Name = "btnListKharidKala";
@@ -701,7 +709,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCodingHesabdari),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGroupTafsili),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabhaTafsiliLevel1, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabhaTafsiliLevel2),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHesabhaTafsiliLevel3),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnJoziatEtelaatAshkhas)});
             this.mbsCodingHesabdari.Name = "mbsCodingHesabdari";
@@ -710,15 +717,17 @@
             // 
             // btnCodingHesabdari
             // 
-            this.btnCodingHesabdari.Caption = "کدینگ حسابداری";
+            this.btnCodingHesabdari.Caption = "تعریف کدینگ حسابداری";
             this.btnCodingHesabdari.Id = 163;
+            this.btnCodingHesabdari.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCodingHesabdari.ImageOptions.SvgImage")));
             this.btnCodingHesabdari.Name = "btnCodingHesabdari";
             this.btnCodingHesabdari.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCodingHesabdari_ItemClick);
             // 
             // btnGroupTafsili
             // 
-            this.btnGroupTafsili.Caption = "گروه های تفصیلی";
+            this.btnGroupTafsili.Caption = "تعریف گروه های تفصیلی";
             this.btnGroupTafsili.Id = 56;
+            this.btnGroupTafsili.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGroupTafsili.ImageOptions.SvgImage")));
             this.btnGroupTafsili.Name = "btnGroupTafsili";
             this.btnGroupTafsili.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGroupTafsili_ItemClick);
             // 
@@ -726,6 +735,7 @@
             // 
             this.btnHesabhaTafsiliLevel1.Caption = "حسابهای تفصیلی سطح 1";
             this.btnHesabhaTafsiliLevel1.Id = 169;
+            this.btnHesabhaTafsiliLevel1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHesabhaTafsiliLevel1.ImageOptions.SvgImage")));
             this.btnHesabhaTafsiliLevel1.Name = "btnHesabhaTafsiliLevel1";
             this.btnHesabhaTafsiliLevel1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabhaTafsiliLevel1_ItemClick);
             // 
@@ -740,6 +750,7 @@
             // 
             this.btnHesabhaTafsiliLevel3.Caption = "حسابهای تفصیلی سطح 3";
             this.btnHesabhaTafsiliLevel3.Id = 174;
+            this.btnHesabhaTafsiliLevel3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHesabhaTafsiliLevel3.ImageOptions.SvgImage")));
             this.btnHesabhaTafsiliLevel3.Name = "btnHesabhaTafsiliLevel3";
             this.btnHesabhaTafsiliLevel3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesabhaTafsiliLevel3_ItemClick);
             // 
@@ -747,6 +758,7 @@
             // 
             this.btnJoziatEtelaatAshkhas.Caption = "جزئیات اطلاعات اشخاص";
             this.btnJoziatEtelaatAshkhas.Id = 172;
+            this.btnJoziatEtelaatAshkhas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnJoziatEtelaatAshkhas.ImageOptions.SvgImage")));
             this.btnJoziatEtelaatAshkhas.Name = "btnJoziatEtelaatAshkhas";
             this.btnJoziatEtelaatAshkhas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnJoziatEtelaatAshkhas_ItemClick);
             // 
@@ -759,28 +771,32 @@
             this.mbsCodingAnbarVaKala.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnListAnbarha),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCodingKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEz_Ks_Factor2),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnVahedKala)});
             this.mbsCodingAnbarVaKala.Name = "mbsCodingAnbarVaKala";
             this.mbsCodingAnbarVaKala.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnListAnbarha
             // 
-            this.btnListAnbarha.Caption = "لیست انبارها";
+            this.btnListAnbarha.Caption = "تعریف نام انبارها";
             this.btnListAnbarha.Id = 58;
+            this.btnListAnbarha.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListAnbarha.ImageOptions.SvgImage")));
             this.btnListAnbarha.Name = "btnListAnbarha";
             this.btnListAnbarha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListAnbarha_ItemClick);
             // 
             // btnCodingKala
             // 
-            this.btnCodingKala.Caption = "کدینگ کالا و خدمات";
+            this.btnCodingKala.Caption = "تعریف کدینگ کالا و خدمات";
             this.btnCodingKala.Id = 175;
+            this.btnCodingKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCodingKala.ImageOptions.SvgImage")));
             this.btnCodingKala.Name = "btnCodingKala";
             this.btnCodingKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCodingKala_ItemClick);
             // 
             // btnVahedKala
             // 
-            this.btnVahedKala.Caption = "واحد کالاها";
+            this.btnVahedKala.Caption = "تعریف واحد سنجش کالاها";
             this.btnVahedKala.Id = 62;
+            this.btnVahedKala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnVahedKala.ImageOptions.SvgImage")));
             this.btnVahedKala.Name = "btnVahedKala";
             this.btnVahedKala.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVahedKala_ItemClick);
             // 
@@ -1014,17 +1030,17 @@
             this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem27),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem28),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEz_Ks_Factor)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEz_Ks_Factor1)});
             this.barSubItem8.Name = "barSubItem8";
             this.barSubItem8.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // btnEz_Ks_Factor
+            // btnEz_Ks_Factor1
             // 
-            this.btnEz_Ks_Factor.Caption = "تعریف اضافات و کسورات فاکتور";
-            this.btnEz_Ks_Factor.Id = 184;
-            this.btnEz_Ks_Factor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEz_Ks_Factor.ImageOptions.SvgImage")));
-            this.btnEz_Ks_Factor.Name = "btnEz_Ks_Factor";
-            this.btnEz_Ks_Factor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEz_Ks_Factor_ItemClick);
+            this.btnEz_Ks_Factor1.Caption = "تعریف اضافات و کسورات فاکتور";
+            this.btnEz_Ks_Factor1.Id = 184;
+            this.btnEz_Ks_Factor1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEz_Ks_Factor.ImageOptions.SvgImage")));
+            this.btnEz_Ks_Factor1.Name = "btnEz_Ks_Factor1";
+            this.btnEz_Ks_Factor1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEz_Ks_Factor_ItemClick);
             // 
             // barButtonItem31
             // 
@@ -1252,10 +1268,10 @@
             this.chkDefault.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.chkDefault.Id = 124;
             this.chkDefault.Name = "chkDefault";
-            toolTipItem2.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
+            toolTipItem1.Text = "در صورتیکه بعد از انتخاب دفتر مالی مورد نظر تیک پیش فرض زده شود در اجرای دفعات بع" +
     "دی برنامه نیازی به انتخاب مجدد همان دفتر مالی نیست";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.chkDefault.SuperTip = superToolTip2;
+            superToolTip1.Items.Add(toolTipItem1);
+            this.chkDefault.SuperTip = superToolTip1;
             this.chkDefault.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkDefault_CheckedChanged);
             // 
             // txtUserName
@@ -1345,10 +1361,11 @@
             // 
             // btnFactorFrooshKhadamat
             // 
-            this.btnFactorFrooshKhadamat.Caption = "فاکـتور خدمـات";
+            this.btnFactorFrooshKhadamat.Caption = "فاکـتور فروش خدمـات";
             this.btnFactorFrooshKhadamat.Id = 186;
             this.btnFactorFrooshKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFactorFrooshKhadamat.ImageOptions.SvgImage")));
             this.btnFactorFrooshKhadamat.Name = "btnFactorFrooshKhadamat";
+            this.btnFactorFrooshKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFactorFrooshKhadamat_ItemClick);
             // 
             // barSubItem10
             // 
@@ -1368,6 +1385,7 @@
             this.btnSefareshFrooshKhadamat.Id = 188;
             this.btnSefareshFrooshKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSefareshFrooshKhadamat.ImageOptions.SvgImage")));
             this.btnSefareshFrooshKhadamat.Name = "btnSefareshFrooshKhadamat";
+            this.btnSefareshFrooshKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSefareshFrooshKhadamat_ItemClick);
             // 
             // barSubItem16
             // 
@@ -1382,10 +1400,11 @@
             // 
             // btnListFrooshKhadamat
             // 
-            this.btnListFrooshKhadamat.Caption = "لیست فروش و سفارش خدمات";
+            this.btnListFrooshKhadamat.Caption = "لیست فروش،برگشت از فروش و سفارش فروش (خدمات)";
             this.btnListFrooshKhadamat.Id = 190;
             this.btnListFrooshKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListFrooshKhadamat.ImageOptions.SvgImage")));
             this.btnListFrooshKhadamat.Name = "btnListFrooshKhadamat";
+            this.btnListFrooshKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListFrooshKhadamat_ItemClick);
             // 
             // barSubItem17
             // 
@@ -1405,6 +1424,7 @@
             this.btnFactorKharidKhadamat.Id = 192;
             this.btnFactorKharidKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFactorKharidKhadamat.ImageOptions.SvgImage")));
             this.btnFactorKharidKhadamat.Name = "btnFactorKharidKhadamat";
+            this.btnFactorKharidKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFactorKharidKhadamat_ItemClick);
             // 
             // barSubItem18
             // 
@@ -1424,6 +1444,7 @@
             this.btnSefareshKharidKhadamat.Id = 194;
             this.btnSefareshKharidKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSefareshKharidKhadamat.ImageOptions.SvgImage")));
             this.btnSefareshKharidKhadamat.Name = "btnSefareshKharidKhadamat";
+            this.btnSefareshKharidKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSefareshKharidKhadamat_ItemClick);
             // 
             // barSubItem19
             // 
@@ -1438,10 +1459,50 @@
             // 
             // btnListKharidKhadamat
             // 
-            this.btnListKharidKhadamat.Caption = "لیست خرید و سفارش خدمات";
+            this.btnListKharidKhadamat.Caption = "لیست خرید،برگشت از خرید و سفارش خرید (خدمات)";
             this.btnListKharidKhadamat.Id = 196;
             this.btnListKharidKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListKharidKhadamat.ImageOptions.SvgImage")));
             this.btnListKharidKhadamat.Name = "btnListKharidKhadamat";
+            this.btnListKharidKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListKharidKhadamat_ItemClick);
+            // 
+            // barSubItem20
+            // 
+            this.barSubItem20.Caption = "فاکتور برگشت از فروش";
+            this.barSubItem20.Id = 197;
+            this.barSubItem20.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem20.ImageOptions.SvgImage")));
+            this.barSubItem20.LargeWidth = 80;
+            this.barSubItem20.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBargashtAzFrooshKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBargashtAzFrooshKhadamat)});
+            this.barSubItem20.Name = "barSubItem20";
+            this.barSubItem20.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btnBargashtAzFrooshKhadamat
+            // 
+            this.btnBargashtAzFrooshKhadamat.Caption = "فاکتور برگشت از فروش خدمات";
+            this.btnBargashtAzFrooshKhadamat.Id = 199;
+            this.btnBargashtAzFrooshKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBargashtAzFrooshKhadamat.ImageOptions.SvgImage")));
+            this.btnBargashtAzFrooshKhadamat.Name = "btnBargashtAzFrooshKhadamat";
+            this.btnBargashtAzFrooshKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBargashtAzFrooshKhadamat_ItemClick);
+            // 
+            // barSubItem21
+            // 
+            this.barSubItem21.Caption = "فاکتور برگشت از خرید";
+            this.barSubItem21.Id = 198;
+            this.barSubItem21.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem21.ImageOptions.SvgImage")));
+            this.barSubItem21.LargeWidth = 80;
+            this.barSubItem21.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFactorBargashtAzKharidKala),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFactorBargashtAzKharidKhadamat)});
+            this.barSubItem21.Name = "barSubItem21";
+            // 
+            // btnFactorBargashtAzKharidKhadamat
+            // 
+            this.btnFactorBargashtAzKharidKhadamat.Caption = "فاکتور برگشت از خرید خدمات";
+            this.btnFactorBargashtAzKharidKhadamat.Id = 200;
+            this.btnFactorBargashtAzKharidKhadamat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFactorBargashtAzKharidKhadamat.ImageOptions.SvgImage")));
+            this.btnFactorBargashtAzKharidKhadamat.Name = "btnFactorBargashtAzKharidKhadamat";
+            this.btnFactorBargashtAzKharidKhadamat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFactorBargashtAzKharidKhadamat_ItemClick);
             // 
             // rpKharidFroosh
             // 
@@ -1457,7 +1518,7 @@
             // rpgFroosh
             // 
             this.rpgFroosh.ItemLinks.Add(this.barSubItem9);
-            this.rpgFroosh.ItemLinks.Add(this.btnBargashtAzFroosh, true);
+            this.rpgFroosh.ItemLinks.Add(this.barSubItem20, true);
             this.rpgFroosh.ItemLinks.Add(this.barSubItem10, true);
             this.rpgFroosh.ItemLinks.Add(this.barSubItem16, true);
             this.rpgFroosh.Name = "rpgFroosh";
@@ -1466,7 +1527,7 @@
             // rpgKharid
             // 
             this.rpgKharid.ItemLinks.Add(this.barSubItem17);
-            this.rpgKharid.ItemLinks.Add(this.btnFactorBargashtAzKharid, true);
+            this.rpgKharid.ItemLinks.Add(this.barSubItem21, true);
             this.rpgKharid.ItemLinks.Add(this.barSubItem18, true);
             this.rpgKharid.ItemLinks.Add(this.barSubItem19, true);
             this.rpgKharid.Name = "rpgKharid";
@@ -1798,11 +1859,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserId, true);
             this.ribbonStatusBar.ItemLinks.Add(this.txtUserName, true);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 857);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 860);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1889, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1889, 37);
             // 
             // barButtonItem30
             // 
@@ -1840,9 +1901,9 @@
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1852, 233);
+            this.hideContainerRight.Location = new System.Drawing.Point(1855, 215);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(37, 624);
+            this.hideContainerRight.Size = new System.Drawing.Size(34, 645);
             // 
             // dockPanel1
             // 
@@ -1891,10 +1952,13 @@
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "سایر موارد";
             // 
-            // popupMenu1
+            // btnEz_Ks_Factor2
             // 
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbon;
+            this.btnEz_Ks_Factor2.Caption = "تعریف اضافات و کسورات فاکتور";
+            this.btnEz_Ks_Factor2.Id = 201;
+            this.btnEz_Ks_Factor2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEz_Ks_Factor2.ImageOptions.SvgImage")));
+            this.btnEz_Ks_Factor2.Name = "btnEz_Ks_Factor2";
+            this.btnEz_Ks_Factor2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEz_Ks_Factor_ItemClick);
             // 
             // FrmMain
             // 
@@ -1941,7 +2005,6 @@
             this.hideContainerRight.ResumeLayout(false);
             this.dockPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1952,11 +2015,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgFroosh;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem btnFactorFrooshKala;
-        private DevExpress.XtraBars.BarButtonItem btnBargashtAzFroosh;
+        private DevExpress.XtraBars.BarButtonItem btnBargashtAzFrooshKala;
         private DevExpress.XtraBars.BarButtonItem btnListFrooshKala;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgKharid;
         private DevExpress.XtraBars.BarButtonItem btnFactorKharidKala;
-        private DevExpress.XtraBars.BarButtonItem btnFactorBargashtAzKharid;
+        private DevExpress.XtraBars.BarButtonItem btnFactorBargashtAzKharidKala;
         private DevExpress.XtraBars.BarButtonItem btnSefareshKharidKala;
         private DevExpress.XtraBars.BarButtonItem btnListKharidKala;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpDaryaftPardakht;
@@ -2115,15 +2178,13 @@
         private DevExpress.XtraBars.BarButtonItem btnMojodiAnbarVKala;
         private DevExpress.XtraBars.BarButtonItem btnKardeksKala;
         private DevExpress.XtraBars.BarButtonItem btnTanzimatAnbaVKala;
-        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerRight;
         private DevExpress.XtraBars.BarButtonItem btnTanzimatSystem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
-        private DevExpress.XtraBars.BarButtonItem btnEz_Ks_Factor;
+        private DevExpress.XtraBars.BarButtonItem btnEz_Ks_Factor1;
         private DevExpress.XtraBars.BarSubItem barSubItem9;
         private DevExpress.XtraBars.BarButtonItem btnFactorFrooshKhadamat;
         private DevExpress.XtraBars.BarSubItem barSubItem10;
         private DevExpress.XtraBars.BarButtonItem btnSefareshFrooshKhadamat;
-        private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarSubItem barSubItem16;
         private DevExpress.XtraBars.BarButtonItem btnListFrooshKhadamat;
         private DevExpress.XtraBars.BarSubItem barSubItem17;
@@ -2132,5 +2193,11 @@
         private DevExpress.XtraBars.BarButtonItem btnSefareshKharidKhadamat;
         private DevExpress.XtraBars.BarSubItem barSubItem19;
         private DevExpress.XtraBars.BarButtonItem btnListKharidKhadamat;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerRight;
+        private DevExpress.XtraBars.BarSubItem barSubItem20;
+        private DevExpress.XtraBars.BarSubItem barSubItem21;
+        private DevExpress.XtraBars.BarButtonItem btnBargashtAzFrooshKhadamat;
+        private DevExpress.XtraBars.BarButtonItem btnFactorBargashtAzKharidKhadamat;
+        private DevExpress.XtraBars.BarButtonItem btnEz_Ks_Factor2;
     }
 }

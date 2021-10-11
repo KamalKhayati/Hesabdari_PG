@@ -7,6 +7,8 @@
 *	Written by Kamal Khayati <Kamal1355@gmail.com>,  2019 / 3 / 9   11:35 ق.ظ
 *	
 ***********************************************************************************/
+using DBHesabdari_PG.Models.FK;
+using DBHesabdari_PG.Models.FK.Tanzimat;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -61,6 +63,8 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual ICollection<EpSahmSahamdar_A> EpSahmSahamdar_As { get; set; }
         public virtual ICollection<EpDarsadVizitor_A> EpDarsadVizitor_As { get; set; }
         public virtual ICollection<EpDarsadRanande_A> EpDarsadRanande_As { get; set; }
+        public virtual ICollection<FKTanzimatFactor> FKTanzimatFactors { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Rizs { get; set; }
 
     }
 }

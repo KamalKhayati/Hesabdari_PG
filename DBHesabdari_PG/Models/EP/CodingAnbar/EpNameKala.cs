@@ -1,6 +1,7 @@
 ﻿using DBHesabdari_PG.Models.AK;
 using DBHesabdari_PG.Models.EP.CodingHesabdari;
 using DBHesabdari_PG.Models.FK;
+using DBHesabdari_PG.Models.FK.Tanzimat;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -104,6 +105,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual EpGroupFareeKala EpGroupFareeKala1 { get; set; }
         public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Rizs { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Rizs { get; set; }
+        public virtual ICollection<FKTanzimatFactor> FKTanzimatFactors { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
     }

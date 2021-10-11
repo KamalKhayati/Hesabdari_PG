@@ -25,9 +25,8 @@ namespace TanzimatSystem.Tanzimat
         {
             InitializeComponent();
             Fm = fm;
-
+            
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             //if (Convert.ToInt32(cmbHesabMoin.EditValue) > 0)
@@ -42,31 +41,31 @@ namespace TanzimatSystem.Tanzimat
 
                         if (Fm._HesabMoinId != 0)
                         {
-                            Fm._HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.LevelNumber == 1 && s.EpAllGroupTafsili1.Id == 19 && s.Name == "سایر 1").Id : Convert.ToInt32(cmbHesabTafsili1.EditValue);
-                            Fm._HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.LevelNumber == 2 && s.EpAllGroupTafsili1.Id == 38 && s.Name == "سایر 2").Id : Convert.ToInt32(cmbHesabTafsili2.EditValue);
-                            Fm._HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.LevelNumber == 3 && s.EpAllGroupTafsili1.Id == 57 && s.Name == "سایر 3").Id : Convert.ToInt32(cmbHesabTafsili3.EditValue);
+                            Fm._HesabTafsili1Id = Convert.ToInt32(cmbHesabTafsili1.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.LevelNumber == 1 && s.EpAllGroupTafsili1.TabaghehGroupIndex == 11 && s.Name == "سایر 1").Id : Convert.ToInt32(cmbHesabTafsili1.EditValue);
+                            Fm._HesabTafsili2Id = Convert.ToInt32(cmbHesabTafsili2.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.LevelNumber == 2 && s.EpAllGroupTafsili1.TabaghehGroupIndex == 11 && s.Name == "سایر 2").Id : Convert.ToInt32(cmbHesabTafsili2.EditValue);
+                            Fm._HesabTafsili3Id = Convert.ToInt32(cmbHesabTafsili3.EditValue) == 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.LevelNumber == 3 && s.EpAllGroupTafsili1.TabaghehGroupIndex == 11 && s.Name == "سایر 3").Id : Convert.ToInt32(cmbHesabTafsili3.EditValue);
                             //_Code = gridView1.GetFocusedRowCellValue("Code") != null ? Convert.ToInt32(gridView1.GetFocusedRowCellValue("Code")) : 0;
                             //_Name = gridView1.GetFocusedRowCellValue("Name") != null ? gridView1.GetFocusedRowCellValue("Name").ToString() : "";
                             //_NameSanad = gridView1.GetFocusedRowCellValue("NameSanad") != null ? gridView1.GetFocusedRowCellValue("NameSanad").ToString() : "";
-                            Fm._HesabMoinName = Fm._HesabMoinId != 0 ? db.EpAllCodingHesabdaris.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabMoinId).LevelName : "";
-                            Fm._HesabTafsili1Name = Fm._HesabTafsili1Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabTafsili1Id).Name : "";
-                            Fm._HesabTafsili2Name = Fm._HesabTafsili2Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabTafsili2Id).Name : "";
-                            Fm._HesabTafsili3Name = Fm._HesabTafsili3Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabTafsili3Id).Name : "";
+                            Fm._HesabMoinName = Fm._HesabMoinId != 0 ? db.EpAllCodingHesabdaris.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabMoinId).LevelName : null;
+                            Fm._HesabTafsili1Name = Fm._HesabTafsili1Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabTafsili1Id).Name : null;
+                            Fm._HesabTafsili2Name = Fm._HesabTafsili2Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabTafsili2Id).Name : null;
+                            Fm._HesabTafsili3Name = Fm._HesabTafsili3Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == Fm._SalId && s.Id == Fm._HesabTafsili3Id).Name : null;
 
                         }
                         else
                         {
-                            Fm._HesabTafsili1Id = 0;
-                            Fm._HesabTafsili2Id = 0;
-                            Fm._HesabTafsili3Id = 0;
-                            Fm._HesabMoinName = "";
-                            Fm._HesabTafsili1Name = "";
-                            Fm._HesabTafsili2Name = "";
-                            Fm._HesabTafsili3Name = "";
+                            Fm._HesabTafsili1Id = null;
+                            Fm._HesabTafsili2Id = null;
+                            Fm._HesabTafsili3Id = null;
+                            Fm._HesabMoinName = null;
+                            Fm._HesabTafsili1Name = null;
+                            Fm._HesabTafsili2Name = null;
+                            Fm._HesabTafsili3Name = null;
                         }
-                        if (Fm.XtraTabControl1.SelectedTabPage.Name == "xtp_Anbar")
+                        if (Fm.XtraTabControl1.SelectedTabPage.Name == "xtp_AnbarDarFactor")
                         {
-                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.AnbarId == Fm._cmbId && s.NoeAghlam == Fm._NoeAghlam && s.Code == Fm._Code);
+                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.AnbarId == Fm._cmbId && s.IndexAghlamFactor == Fm._IndexAghlamFactor && s.Code == Fm._Code);
                             if (q != null)
                             {
                                 q.HesabMoinId = Fm._HesabMoinId;
@@ -79,7 +78,7 @@ namespace TanzimatSystem.Tanzimat
                         }
                         else if (Fm.XtraTabControl1.SelectedTabPage.Name == "xtp_Khadamat")
                         {
-                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.KhadamatId == Fm._cmbId && s.NoeAghlam == Fm._NoeAghlam && s.Code == Fm._Code);
+                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.KhadamatId == Fm._cmbId && s.IndexAghlamFactor == Fm._IndexAghlamFactor && s.Code == Fm._Code);
                             if (q != null)
                             {
                                 q.HesabMoinId = Fm._HesabMoinId;
@@ -92,7 +91,7 @@ namespace TanzimatSystem.Tanzimat
                         }
                         else if (Fm.XtraTabControl1.SelectedTabPage.Name == "xtp_Ezafat")
                         {
-                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.Ez_KsId == Fm._cmbId && s.NoeAghlam == Fm._NoeAghlam && s.Code == Fm._Code);
+                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.Ez_KsId == Fm._cmbId && s.IndexAghlamFactor == Fm._IndexAghlamFactor && s.Code == Fm._Code);
                             if (q != null)
                             {
                                 q.HesabMoinId = Fm._HesabMoinId;
@@ -105,7 +104,7 @@ namespace TanzimatSystem.Tanzimat
                         }
                         else if (Fm.XtraTabControl1.SelectedTabPage.Name == "xtp_Ksorat")
                         {
-                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.Ez_KsId == Fm._cmbId && s.NoeAghlam == Fm._NoeAghlam && s.Code == Fm._Code);
+                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.Ez_KsId == Fm._cmbId && s.IndexAghlamFactor == Fm._IndexAghlamFactor && s.Code == Fm._Code);
                             if (q != null)
                             {
                                 q.HesabMoinId = Fm._HesabMoinId;
@@ -116,9 +115,9 @@ namespace TanzimatSystem.Tanzimat
                             }
 
                         }
-                        else if (Fm.XtraTabControl1.SelectedTabPage.Name == "xtp_Vasete")
+                        else if (Fm.XtraTabControl1.SelectedTabPage.Name == "xtp_Vizitor")
                         {
-                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.VizitorId == Fm._cmbId && s.NoeAghlam == Fm._NoeAghlam && s.Code == Fm._Code);
+                            var q = db.FKTanzimatFactors.FirstOrDefault(s => s.SalId == Fm._SalId && s.VizitorId == Fm._cmbId && s.IndexAghlamFactor == Fm._IndexAghlamFactor && s.Code == Fm._Code);
                             if (q != null)
                             {
                                 q.HesabMoinId = Fm._HesabMoinId;
@@ -312,7 +311,7 @@ namespace TanzimatSystem.Tanzimat
             FillCmbHesabMoin();
 
             lblName.Text = Fm._NameSanad.Replace(".", "").Replace("1", "").Replace("2", "").Replace("3", "").Replace("4", "");
-            groupControl1.Text = Fm._Name;
+            groupControl1.Text = Fm._Titel;
             cmbHesabMoin.EditValue = Fm._HesabMoinId;
             cmbHesabTafsili1.EditValue = Fm._HesabTafsili1Id;
             cmbHesabTafsili2.EditValue = Fm._HesabTafsili2Id;
@@ -422,6 +421,25 @@ namespace TanzimatSystem.Tanzimat
         {
             if (string.IsNullOrEmpty(cmbHesabTafsili3.Text))
                 cmbHesabTafsili3.EditValue = 0;
+
+        }
+
+        bool _IsActiveRow = true;
+        private void cmbControl_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
+        {
+            _IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
+
+        }
+
+        private void cmbHesabMoin_CustomDrawCell(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawCellArgs e)
+        {
+            if (!_IsActiveRow)
+                e.Appearance.ForeColor = Color.Red;
+
+            if (e.Header.Caption == "فعال" && e.DisplayText == "True")
+                e.DisplayText = "بله";
+            if (e.Header.Caption == "فعال" && e.DisplayText == "False")
+                e.DisplayText = "خیر";
 
         }
     }

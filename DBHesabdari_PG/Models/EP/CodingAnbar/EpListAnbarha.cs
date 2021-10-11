@@ -1,6 +1,7 @@
 ﻿using DBHesabdari_PG.Models.AK;
 using DBHesabdari_PG.Models.EP.CodingHesabdari;
 using DBHesabdari_PG.Models.FK;
+using DBHesabdari_PG.Models.FK.Tanzimat;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -50,10 +51,10 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual ICollection<R_EpListAnbarha_B_EpTabaghehKala> R_EpListAnbarha_B_EpTabaghehKalas { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh1s { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozaneh2s { get; set; }
-        //public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz1s { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz1s { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz1s { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz2s { get; set; }
-        //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz1s { get; set; }
+        public virtual ICollection<FKTanzimatFactor> FKTanzimatFactors { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz2s { get; set; }
         public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }

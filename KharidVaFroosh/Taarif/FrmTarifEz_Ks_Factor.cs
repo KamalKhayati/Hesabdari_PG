@@ -67,8 +67,8 @@ namespace KharidVaFroosh.Taarif
 
         private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
-            _NoeEz_KsIndex = Convert.ToByte(xtraTabControl1.SelectedTabPageIndex +3);
-            _NoeEz_KsName = xtraTabControl1.SelectedTabPage.Name;
+            _NoeEz_KsIndex = Convert.ToByte(xtraTabControl1.SelectedTabPageIndex +2);
+            _NoeEz_KsName = xtraTabControl1.SelectedTabPage.Text;
             //objXtraTabPage = new XtraTabPage();
             //objGridControl = new GridControl();
             //objXtraTabPage = xtraTabControl1.SelectedTabPage;
@@ -331,7 +331,7 @@ namespace KharidVaFroosh.Taarif
                     _Name = txtName.Text.Trim();
                     _IsActive = chkIsActive.Checked;
                     _SharhHesab = txtSharhHesab.Text.Trim();
-                    _NoeEz_KsIndex = Convert.ToByte(xtraTabControl1.SelectedTabPageIndex +3);
+                    _NoeEz_KsIndex = Convert.ToByte(xtraTabControl1.SelectedTabPageIndex +2);
                     _NoeEz_KsName = xtraTabControl1.SelectedTabPage.Name;
                     _Code = !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt32(txtCode.Text) : 0;
 

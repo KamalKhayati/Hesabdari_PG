@@ -2537,7 +2537,7 @@ namespace AnbarVaKala.AmaliatRozaneh
 
                                                         if (_FirstSelectAnbar_NextSanad)
                                                         {
-                                                            _BeAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                                                            //_BeAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
 
                                                             //var qp2 = qp1.Where(s => s.BeAnbarId == _BeAnbarId).ToList();
                                                             //_SeryalCol_BeNameAmaliat_BaSelectAnbar = qp2.Count > 0 ? qp2.Max(s => s.SeryalCol_BeNameAmaliat_BaSelectAnbar) + 1 : 1;

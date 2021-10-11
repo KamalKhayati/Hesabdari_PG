@@ -193,11 +193,15 @@ namespace EtelaatePaye.CodingAnbar
                             else
                             {
                                 cmbGroupTafsili_Tabagheh.Properties.DataSource = null;
-                                XtraMessageBox.Show("تمامی گروه های تفصیلی مربوط به " + cmbNoeTabagheh.SelectedItem.ToString() + " قبلا برای تعریف طبقه کالا استفاده " + "\n" +
-                                    "شده لذا گروه جدیدی برای انتخاب وجود ندارد در صورت نیاز بایستی " + "\n"+"در قسمت اطلاعات پایه -> کدینگ حسابداری -> گروه های تفصیلی " + "\n" +
-                                    " -> در سطح " + _LevelNumberGroupTafsili + " ، گروه جدیدی برای " + _TabaghehGroupName + " ایجاد نمایید",
-                                    "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                btnCancel_Click(null, null);
+                                if (cmbNoeTabagheh.SelectedIndex > -1)
+                                {
+                                    XtraMessageBox.Show("تمامی گروه های تفصیلی مربوط به " + cmbNoeTabagheh.SelectedItem.ToString() + " قبلا برای تعریف طبقه کالا استفاده " + "\n" +
+                                "شده لذا گروه جدیدی برای انتخاب وجود ندارد در صورت نیاز بایستی " + "\n" + "در قسمت اطلاعات پایه -> کدینگ حسابداری -> گروه های تفصیلی " + "\n" +
+                                " -> در سطح " + _LevelNumberGroupTafsili + " ، گروه جدیدی برای " + _TabaghehGroupName + " ایجاد نمایید",
+                                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    btnCancel_Click(null, null);
+                                }
                                 return false;
                             }
 
@@ -567,7 +571,7 @@ namespace EtelaatePaye.CodingAnbar
                         _Code = !String.IsNullOrEmpty(txtCode.Text) ? Convert.ToInt64(txtCode.Text) : 0;
                         _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
 
-                        if (cmbNoeTabagheh.SelectedIndex<0)
+                        if (cmbNoeTabagheh.SelectedIndex < 0)
                         {
                             XtraMessageBox.Show("لطفا نوع طبقه را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             cmbNoeTabagheh.Focus();
@@ -1032,12 +1036,13 @@ namespace EtelaatePaye.CodingAnbar
                 if (_SelectedTabPage == "xtraTabPage_TabaghehKala")
                 {
 
-                    HelpClass1.ActiveControls(PanelControl2);
                     HelpClass1.ClearControls(PanelControl2);
                     HelpClass1.InActiveButtons(PanelControl1);
                     cmbNoeTabagheh.ReadOnly = false;
                     gridControl.Enabled = false;
                     chkIsActive.Checked = true;
+                    //panelControl_Tabagheh.Enabled = true;
+                    HelpClass1.ActiveControls(PanelControl2);
                     cmbNoeTabagheh.ShowPopup();
                 }
                 else if (_SelectedTabPage == "xtraTabPage_GroupAsli")
@@ -1417,10 +1422,10 @@ namespace EtelaatePaye.CodingAnbar
                                         obj.CodeEkhtesasi = Convert.ToInt32(txtCodeEkhtesasi_NameKala.Text);
 
                                     _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
-                                    if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
-                                        obj.CodeHesabdari = _Code;
-                                    else
-                                        obj.CodeHesabdari = 0;
+                                    // if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
+                                    obj.CodeHesabdari = _Code;
+                                    //else
+                                    // obj.CodeHesabdari = 0;
 
                                     if (!string.IsNullOrEmpty(cmbTaminKonande_NameKala.Text))
                                     {
@@ -1526,7 +1531,7 @@ namespace EtelaatePaye.CodingAnbar
 
                                     _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
                                     /////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
-                                    if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
+                                    //if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
                                     {
                                         EpHesabTafsiliAghlamAnbar objAghlamAnbar = new EpHesabTafsiliAghlamAnbar();
                                         objAghlamAnbar.SalId = _SalId;
@@ -2083,10 +2088,10 @@ namespace EtelaatePaye.CodingAnbar
                                             q.CodeEkhtesasi = null;
 
                                         _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
-                                        if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
+                                       // if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
                                             q.CodeHesabdari = _Code;
-                                        else
-                                            q.CodeHesabdari = 0;
+                                       // else
+                                         //   q.CodeHesabdari = 0;
 
                                         cmbTaminKonande_NameKala.ShowPopup();
                                         cmbTaminKonande_NameKala.ClosePopup();
@@ -2284,7 +2289,7 @@ namespace EtelaatePaye.CodingAnbar
                                             ///////////////////////////////// ویرایش کد در حسابداری //////////////////////////
                                             _TabaghehKalaId = Convert.ToInt32(cmbTabaghehKala.EditValue);
                                             /////////////////////////////// تعریف کد کالا در حسابداری ///////////////////////////////
-                                            if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
+                                           // if (db.EpTabaghehKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _TabaghehKalaId).NoeTabagheIndex == 0)
                                             {
                                                 // int RowId = Convert.ToInt32(txtId.Text);
                                                 //var _Id = db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.LevelNumber == _LevelNumberGroupTafsili && s.EpHesabTafsiliAghlamAnbar1.IsCreateByUser==false && s.Code == _CodeBeforeEdit).Id;
@@ -3193,7 +3198,34 @@ namespace EtelaatePaye.CodingAnbar
         private void cmbNoeTabagheh_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbNoeTabagheh.SelectedIndex > -1)
-                _TabaghehGroupName = cmbNoeTabagheh.SelectedItem.ToString() == "کالا" ? "اقلام انبار و اموال" : "سایر";
+            {
+                switch (cmbNoeTabagheh.SelectedItem.ToString())
+                {
+                    case "کالا":
+                        {
+                            _TabaghehGroupName = "اقلام انبار و اموال";
+                            break;
+                        }
+                    case "خدمات":
+                        {
+                            _TabaghehGroupName = "کالاهای خدماتی";
+                            break;
+                        }
+                    //case "اضافات فاکتور":
+                    //    {
+                    //        _TabaghehGroupName = "اضافات فاکتور";
+                    //        break;
+                    //    }
+                    //case "کسورات فاکتور":
+                    //    {
+                    //        _TabaghehGroupName = "کسورات فاکتور";
+                    //        break;
+                    //    }
+                    default:
+                        break;
+                }
+            }
+            // _TabaghehGroupName = cmbNoeTabagheh.SelectedItem.ToString() == "کالا" ? "اقلام انبار و اموال" : "سایر";
             else
                 _TabaghehGroupName = "";
             if (FillcmbGroupTafsili())

@@ -222,18 +222,19 @@
             this.gridViewEetebar1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCode1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TaEngheza = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl_Eetebarat = new DevExpress.XtraEditors.PanelControl();
+            this.txtTaEngheza_E = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl68 = new DevExpress.XtraEditors.LabelControl();
             this.txtIndex_EtebarFroosh = new DevExpress.XtraEditors.TextEdit();
             this.txtMablagh = new DevExpress.XtraEditors.TextEdit();
-            this.txtTarikhGharadad = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.chkEetebarat = new DevExpress.XtraEditors.CheckEdit();
             this.chkDefaultEetebar = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
@@ -248,8 +249,9 @@
             this.gridViewTakhfif1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DarsadTakhfifJamei = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DarsadTakhfifRadifi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -257,6 +259,9 @@
             this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl_Takhfif = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDarsadTakhfifJamei = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
             this.txtIndex_DarsadeTakhfif = new DevExpress.XtraEditors.TextEdit();
             this.txtTaTarikh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
@@ -265,12 +270,10 @@
             this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
             this.chkTarikh = new DevExpress.XtraEditors.CheckEdit();
             this.chkDefaultTakhfif = new DevExpress.XtraEditors.CheckEdit();
-            this.txtDarsadTakhfif = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDarsadTakhfifRadifi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
             this.txtMolahezat_DT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbNoeTakhfif = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tpPersonel = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
             this.gridControlMPersoneli1 = new DevExpress.XtraGrid.GridControl();
@@ -481,9 +484,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEetebar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Eetebarat)).BeginInit();
             this.panelControl_Eetebarat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaEngheza_E.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIndex_EtebarFroosh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMablagh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTarikhGharadad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEetebarat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDefaultEetebar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShGharadad.Properties)).BeginInit();
@@ -496,14 +499,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTakhfif1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Takhfif)).BeginInit();
             this.panelControl_Takhfif.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDarsadTakhfifJamei.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeTakhfif.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaTarikh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAzTarikh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkTarikh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDefaultTakhfif.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDarsadTakhfif.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDarsadTakhfifRadifi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMolahezat_DT.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeTakhfif.Properties)).BeginInit();
             this.tpPersonel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
             this.panelControl10.SuspendLayout();
@@ -576,9 +579,8 @@
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1056, 49);
+            this.panelControl1.Size = new System.Drawing.Size(1166, 44);
             this.panelControl1.TabIndex = 0;
             // 
             // btnReloadHesabTafsili_Ashkhas
@@ -587,11 +589,10 @@
             this.btnReloadHesabTafsili_Ashkhas.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadHesabTafsili_Ashkhas.Appearance.Options.UseForeColor = true;
             this.btnReloadHesabTafsili_Ashkhas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadHesabTafsili_Ashkhas.ImageOptions.SvgImage")));
-            this.btnReloadHesabTafsili_Ashkhas.Location = new System.Drawing.Point(5, 7);
-            this.btnReloadHesabTafsili_Ashkhas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnReloadHesabTafsili_Ashkhas.Location = new System.Drawing.Point(325, 6);
             this.btnReloadHesabTafsili_Ashkhas.Name = "btnReloadHesabTafsili_Ashkhas";
             this.btnReloadHesabTafsili_Ashkhas.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnReloadHesabTafsili_Ashkhas.Size = new System.Drawing.Size(48, 35);
+            this.btnReloadHesabTafsili_Ashkhas.Size = new System.Drawing.Size(38, 31);
             this.btnReloadHesabTafsili_Ashkhas.TabIndex = 140;
             this.btnReloadHesabTafsili_Ashkhas.TabStop = false;
             this.btnReloadHesabTafsili_Ashkhas.ToolTip = "جدید";
@@ -604,11 +605,10 @@
             this.btnReloadGroupTafsili_Ashkhas.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.btnReloadGroupTafsili_Ashkhas.Appearance.Options.UseForeColor = true;
             this.btnReloadGroupTafsili_Ashkhas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReloadGroupTafsili_Ashkhas.ImageOptions.SvgImage")));
-            this.btnReloadGroupTafsili_Ashkhas.Location = new System.Drawing.Point(599, 7);
-            this.btnReloadGroupTafsili_Ashkhas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnReloadGroupTafsili_Ashkhas.Location = new System.Drawing.Point(800, 6);
             this.btnReloadGroupTafsili_Ashkhas.Name = "btnReloadGroupTafsili_Ashkhas";
             this.btnReloadGroupTafsili_Ashkhas.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnReloadGroupTafsili_Ashkhas.Size = new System.Drawing.Size(48, 35);
+            this.btnReloadGroupTafsili_Ashkhas.Size = new System.Drawing.Size(38, 31);
             this.btnReloadGroupTafsili_Ashkhas.TabIndex = 139;
             this.btnReloadGroupTafsili_Ashkhas.TabStop = false;
             this.btnReloadGroupTafsili_Ashkhas.ToolTip = "جدید";
@@ -619,8 +619,7 @@
             // 
             this.cmbGroupTafsili.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbGroupTafsili.EnterMoveNextControl = true;
-            this.cmbGroupTafsili.Location = new System.Drawing.Point(655, 8);
-            this.cmbGroupTafsili.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbGroupTafsili.Location = new System.Drawing.Point(845, 7);
             this.cmbGroupTafsili.Name = "cmbGroupTafsili";
             this.cmbGroupTafsili.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbGroupTafsili.Properties.Appearance.Options.UseForeColor = true;
@@ -641,12 +640,11 @@
             this.cmbGroupTafsili.Properties.ImmediatePopup = true;
             this.cmbGroupTafsili.Properties.NullText = "";
             this.cmbGroupTafsili.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbGroupTafsili.Properties.PopupWidth = 545;
+            this.cmbGroupTafsili.Properties.PopupWidth = 436;
             this.cmbGroupTafsili.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbGroupTafsili.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbGroupTafsili.Properties.ValueMember = "Id";
             this.cmbGroupTafsili.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbGroupTafsili.Size = new System.Drawing.Size(292, 34);
+            this.cmbGroupTafsili.Size = new System.Drawing.Size(234, 30);
             this.cmbGroupTafsili.TabIndex = 0;
             this.cmbGroupTafsili.TabStop = false;
             this.cmbGroupTafsili.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
@@ -657,8 +655,7 @@
             // 
             this.cmbTafsiliAshkhas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTafsiliAshkhas.EnterMoveNextControl = true;
-            this.cmbTafsiliAshkhas.Location = new System.Drawing.Point(62, 8);
-            this.cmbTafsiliAshkhas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbTafsiliAshkhas.Location = new System.Drawing.Point(371, 7);
             this.cmbTafsiliAshkhas.Name = "cmbTafsiliAshkhas";
             this.cmbTafsiliAshkhas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbTafsiliAshkhas.Properties.Appearance.Options.UseForeColor = true;
@@ -679,12 +676,11 @@
             this.cmbTafsiliAshkhas.Properties.ImmediatePopup = true;
             this.cmbTafsiliAshkhas.Properties.NullText = "";
             this.cmbTafsiliAshkhas.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbTafsiliAshkhas.Properties.PopupWidth = 636;
+            this.cmbTafsiliAshkhas.Properties.PopupWidth = 509;
             this.cmbTafsiliAshkhas.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbTafsiliAshkhas.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbTafsiliAshkhas.Properties.ValueMember = "Id";
             this.cmbTafsiliAshkhas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbTafsiliAshkhas.Size = new System.Drawing.Size(403, 34);
+            this.cmbTafsiliAshkhas.Size = new System.Drawing.Size(322, 30);
             this.cmbTafsiliAshkhas.TabIndex = 1;
             this.cmbTafsiliAshkhas.TabStop = false;
             this.cmbTafsiliAshkhas.CustomDrawRow += new DevExpress.XtraEditors.Popup.LookUpCustomDrawRowEventHandler(this.cmbLookupEdit_CustomDrawRow);
@@ -699,8 +695,7 @@
             // 
             this.txtGroupTafsiliId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGroupTafsiliId.EditValue = "آیدی";
-            this.txtGroupTafsiliId.Location = new System.Drawing.Point(763, 8);
-            this.txtGroupTafsiliId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtGroupTafsiliId.Location = new System.Drawing.Point(931, 7);
             this.txtGroupTafsiliId.Name = "txtGroupTafsiliId";
             this.txtGroupTafsiliId.Properties.Appearance.Options.UseTextOptions = true;
             this.txtGroupTafsiliId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -709,7 +704,7 @@
             this.txtGroupTafsiliId.Properties.NullText = "آیدی انبار";
             this.txtGroupTafsiliId.Properties.ReadOnly = true;
             this.txtGroupTafsiliId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtGroupTafsiliId.Size = new System.Drawing.Size(50, 34);
+            this.txtGroupTafsiliId.Size = new System.Drawing.Size(40, 30);
             this.txtGroupTafsiliId.TabIndex = 37;
             this.txtGroupTafsiliId.TabStop = false;
             this.txtGroupTafsiliId.Visible = false;
@@ -719,8 +714,7 @@
             this.txtCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCode.EditValue = "";
             this.txtCode.EnterMoveNextControl = true;
-            this.txtCode.Location = new System.Drawing.Point(280, 8);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCode.Location = new System.Drawing.Point(545, 7);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -728,7 +722,7 @@
             this.txtCode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCode.Properties.MaxLength = 5;
             this.txtCode.Properties.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(124, 34);
+            this.txtCode.Size = new System.Drawing.Size(99, 30);
             this.txtCode.TabIndex = 31;
             this.txtCode.TabStop = false;
             // 
@@ -736,8 +730,7 @@
             // 
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.EditValue = "آیدی";
-            this.txtId.Location = new System.Drawing.Point(216, 8);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtId.Location = new System.Drawing.Point(494, 7);
             this.txtId.Name = "txtId";
             this.txtId.Properties.Appearance.Options.UseTextOptions = true;
             this.txtId.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -746,7 +739,7 @@
             this.txtId.Properties.NullText = "آیدی انبار";
             this.txtId.Properties.ReadOnly = true;
             this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId.Size = new System.Drawing.Size(112, 34);
+            this.txtId.Size = new System.Drawing.Size(90, 30);
             this.txtId.TabIndex = 34;
             this.txtId.TabStop = false;
             this.txtId.Visible = false;
@@ -756,10 +749,9 @@
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(472, 10);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl1.Location = new System.Drawing.Point(699, 9);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(102, 27);
+            this.labelControl1.Size = new System.Drawing.Size(90, 24);
             this.labelControl1.TabIndex = 35;
             this.labelControl1.Text = "حساب تفصیلی";
             // 
@@ -768,10 +760,9 @@
             this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(953, 11);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl3.Location = new System.Drawing.Point(1083, 10);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(85, 27);
+            this.labelControl3.Size = new System.Drawing.Size(76, 24);
             this.labelControl3.TabIndex = 36;
             this.labelControl3.Text = "گروه تفصیلی";
             // 
@@ -779,11 +770,10 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(397, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnClose.Location = new System.Drawing.Point(639, 6);
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnClose.Size = new System.Drawing.Size(47, 40);
+            this.btnClose.Size = new System.Drawing.Size(38, 36);
             this.btnClose.TabIndex = 15;
             this.btnClose.ToolTip = "بستن ";
             this.btnClose.ToolTipTitle = "F12";
@@ -804,10 +794,9 @@
             this.panelControl_Buttons.Controls.Add(this.btnCancel);
             this.panelControl_Buttons.Controls.Add(this.btnCreate);
             this.panelControl_Buttons.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl_Buttons.Location = new System.Drawing.Point(0, 49);
-            this.panelControl_Buttons.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_Buttons.Location = new System.Drawing.Point(0, 44);
             this.panelControl_Buttons.Name = "panelControl_Buttons";
-            this.panelControl_Buttons.Size = new System.Drawing.Size(1056, 51);
+            this.panelControl_Buttons.Size = new System.Drawing.Size(1166, 45);
             this.panelControl_Buttons.TabIndex = 26;
             // 
             // btnNext
@@ -815,11 +804,10 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNext.ImageOptions.SvgImage")));
-            this.btnNext.Location = new System.Drawing.Point(670, 5);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnNext.Location = new System.Drawing.Point(857, 4);
             this.btnNext.Name = "btnNext";
             this.btnNext.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnNext.Size = new System.Drawing.Size(47, 40);
+            this.btnNext.Size = new System.Drawing.Size(38, 36);
             this.btnNext.TabIndex = 6;
             this.btnNext.ToolTip = "بعدی";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -828,11 +816,10 @@
             // 
             this.btnPrintPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintPreview.ImageOptions.SvgImage")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(452, 7);
-            this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnPrintPreview.Location = new System.Drawing.Point(683, 6);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnPrintPreview.Size = new System.Drawing.Size(47, 40);
+            this.btnPrintPreview.Size = new System.Drawing.Size(38, 36);
             this.btnPrintPreview.TabIndex = 13;
             this.btnPrintPreview.TabStop = false;
             this.btnPrintPreview.ToolTip = "نمایش چاپ";
@@ -845,11 +832,10 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
-            this.btnEdit.Location = new System.Drawing.Point(888, 5);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEdit.Location = new System.Drawing.Point(1031, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnEdit.Size = new System.Drawing.Size(47, 40);
+            this.btnEdit.Size = new System.Drawing.Size(38, 36);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.ToolTip = "ویرایش";
             this.btnEdit.ToolTipTitle = "F4";
@@ -860,11 +846,10 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Enabled = false;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(943, 5);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDelete.Location = new System.Drawing.Point(1075, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnDelete.Size = new System.Drawing.Size(47, 40);
+            this.btnDelete.Size = new System.Drawing.Size(38, 36);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.ToolTip = "حذف";
             this.btnDelete.ToolTipTitle = "F3";
@@ -875,11 +860,10 @@
             this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFirst.ImageOptions.SvgImage")));
-            this.btnFirst.Location = new System.Drawing.Point(561, 5);
-            this.btnFirst.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnFirst.Location = new System.Drawing.Point(770, 4);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnFirst.Size = new System.Drawing.Size(47, 40);
+            this.btnFirst.Size = new System.Drawing.Size(38, 36);
             this.btnFirst.TabIndex = 8;
             this.btnFirst.ToolTip = "اولین رکورد";
             this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
@@ -889,11 +873,10 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Enabled = false;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(834, 5);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSave.Location = new System.Drawing.Point(988, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnSave.Size = new System.Drawing.Size(47, 40);
+            this.btnSave.Size = new System.Drawing.Size(38, 36);
             this.btnSave.TabIndex = 0;
             this.btnSave.ToolTip = "ذخیره";
             this.btnSave.ToolTipTitle = "F5";
@@ -904,11 +887,10 @@
             this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreview.ImageOptions.Image")));
             this.btnPreview.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPreview.ImageOptions.SvgImage")));
-            this.btnPreview.Location = new System.Drawing.Point(616, 5);
-            this.btnPreview.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnPreview.Location = new System.Drawing.Point(814, 4);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnPreview.Size = new System.Drawing.Size(47, 40);
+            this.btnPreview.Size = new System.Drawing.Size(38, 36);
             this.btnPreview.TabIndex = 7;
             this.btnPreview.ToolTip = "قبلی";
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
@@ -917,11 +899,10 @@
             // 
             this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLast.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLast.ImageOptions.SvgImage")));
-            this.btnLast.Location = new System.Drawing.Point(725, 5);
-            this.btnLast.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLast.Location = new System.Drawing.Point(901, 4);
             this.btnLast.Name = "btnLast";
             this.btnLast.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnLast.Size = new System.Drawing.Size(47, 40);
+            this.btnLast.Size = new System.Drawing.Size(38, 36);
             this.btnLast.TabIndex = 5;
             this.btnLast.ToolTip = "آخرین رکورد";
             this.btnLast.ToolTipTitle = "آخرین رکورد";
@@ -931,11 +912,10 @@
             // 
             this.btnDisplyList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisplyList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDisplyList.ImageOptions.SvgImage")));
-            this.btnDisplyList.Location = new System.Drawing.Point(506, 5);
-            this.btnDisplyList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDisplyList.Location = new System.Drawing.Point(726, 4);
             this.btnDisplyList.Name = "btnDisplyList";
             this.btnDisplyList.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnDisplyList.Size = new System.Drawing.Size(47, 40);
+            this.btnDisplyList.Size = new System.Drawing.Size(38, 36);
             this.btnDisplyList.TabIndex = 9;
             this.btnDisplyList.ToolTip = "دوباره سازی";
             this.btnDisplyList.Click += new System.EventHandler(this.btnDisplyList_Click);
@@ -945,11 +925,10 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(779, 5);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancel.Location = new System.Drawing.Point(944, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnCancel.Size = new System.Drawing.Size(47, 40);
+            this.btnCancel.Size = new System.Drawing.Size(38, 36);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.ToolTip = "انصراف";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -958,11 +937,10 @@
             // 
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
-            this.btnCreate.Location = new System.Drawing.Point(997, 5);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCreate.Location = new System.Drawing.Point(1119, 4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnCreate.Size = new System.Drawing.Size(47, 40);
+            this.btnCreate.Size = new System.Drawing.Size(38, 36);
             this.btnCreate.TabIndex = 1;
             this.btnCreate.ToolTip = "جدید";
             this.btnCreate.ToolTipTitle = "F2";
@@ -971,11 +949,10 @@
             // xtraTabControl
             // 
             this.xtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl.Location = new System.Drawing.Point(0, 100);
-            this.xtraTabControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.xtraTabControl.Location = new System.Drawing.Point(0, 89);
             this.xtraTabControl.Name = "xtraTabControl";
             this.xtraTabControl.SelectedTabPage = this.tpMoshakhasat;
-            this.xtraTabControl.Size = new System.Drawing.Size(1056, 470);
+            this.xtraTabControl.Size = new System.Drawing.Size(1166, 481);
             this.xtraTabControl.TabIndex = 0;
             this.xtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tpMoshakhasat,
@@ -996,9 +973,8 @@
             // 
             this.tpMoshakhasat.Controls.Add(this.panelControl4);
             this.tpMoshakhasat.Controls.Add(this.panelControl_Moshakhasat);
-            this.tpMoshakhasat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpMoshakhasat.Name = "tpMoshakhasat";
-            this.tpMoshakhasat.Size = new System.Drawing.Size(1054, 429);
+            this.tpMoshakhasat.Size = new System.Drawing.Size(1164, 443);
             this.tpMoshakhasat.Text = "مشخصات";
             // 
             // panelControl4
@@ -1010,21 +986,20 @@
             this.panelControl4.Controls.Add(this.lblUserId);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl4.Size = new System.Drawing.Size(1164, 282);
             this.panelControl4.TabIndex = 28;
             // 
             // gridControlMoshkhasat1
             // 
             this.gridControlMoshkhasat1.DataSource = this.epMoshakhasat_AsBindingSource;
             this.gridControlMoshkhasat1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlMoshkhasat1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlMoshkhasat1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlMoshkhasat1.Location = new System.Drawing.Point(2, 2);
             this.gridControlMoshkhasat1.MainView = this.gridViewMoshkhasat1;
-            this.gridControlMoshkhasat1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlMoshkhasat1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlMoshkhasat1.Name = "gridControlMoshkhasat1";
-            this.gridControlMoshkhasat1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlMoshkhasat1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlMoshkhasat1.TabIndex = 32;
             this.gridControlMoshkhasat1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMoshkhasat1});
@@ -1044,10 +1019,10 @@
             this.colCodeEghtesadi,
             this.colShomareSabt,
             this.colMolahezat});
-            this.gridViewMoshkhasat1.DetailHeight = 378;
+            this.gridViewMoshkhasat1.DetailHeight = 336;
             this.gridViewMoshkhasat1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewMoshkhasat1.GridControl = this.gridControlMoshkhasat1;
-            this.gridViewMoshkhasat1.IndicatorWidth = 28;
+            this.gridViewMoshkhasat1.IndicatorWidth = 22;
             this.gridViewMoshkhasat1.Name = "gridViewMoshkhasat1";
             this.gridViewMoshkhasat1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewMoshkhasat1.OptionsBehavior.Editable = false;
@@ -1070,9 +1045,9 @@
             // colId
             // 
             this.colId.FieldName = "Id";
-            this.colId.MinWidth = 21;
+            this.colId.MinWidth = 17;
             this.colId.Name = "colId";
-            this.colId.Width = 84;
+            this.colId.Width = 67;
             // 
             // Line
             // 
@@ -1084,12 +1059,12 @@
             this.Line.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Line.Caption = "ردیف";
             this.Line.FieldName = "Line";
-            this.Line.MinWidth = 21;
+            this.Line.MinWidth = 17;
             this.Line.Name = "Line";
             this.Line.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.Line.Visible = true;
             this.Line.VisibleIndex = 0;
-            this.Line.Width = 66;
+            this.Line.Width = 53;
             // 
             // colNameEkhtesar
             // 
@@ -1101,11 +1076,11 @@
             this.colNameEkhtesar.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colNameEkhtesar.Caption = "نام اختصار ";
             this.colNameEkhtesar.FieldName = "NameEkhtesar";
-            this.colNameEkhtesar.MinWidth = 22;
+            this.colNameEkhtesar.MinWidth = 18;
             this.colNameEkhtesar.Name = "colNameEkhtesar";
             this.colNameEkhtesar.Visible = true;
             this.colNameEkhtesar.VisibleIndex = 1;
-            this.colNameEkhtesar.Width = 334;
+            this.colNameEkhtesar.Width = 267;
             // 
             // colNoeFaaliat
             // 
@@ -1117,11 +1092,11 @@
             this.colNoeFaaliat.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colNoeFaaliat.Caption = "نوع فعالیت";
             this.colNoeFaaliat.FieldName = "NoeFaaliat";
-            this.colNoeFaaliat.MinWidth = 22;
+            this.colNoeFaaliat.MinWidth = 18;
             this.colNoeFaaliat.Name = "colNoeFaaliat";
             this.colNoeFaaliat.Visible = true;
             this.colNoeFaaliat.VisibleIndex = 2;
-            this.colNoeFaaliat.Width = 278;
+            this.colNoeFaaliat.Width = 222;
             // 
             // colShenaseMelli
             // 
@@ -1133,11 +1108,11 @@
             this.colShenaseMelli.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colShenaseMelli.Caption = "کد ملی";
             this.colShenaseMelli.FieldName = "ShenaseMelli";
-            this.colShenaseMelli.MinWidth = 22;
+            this.colShenaseMelli.MinWidth = 18;
             this.colShenaseMelli.Name = "colShenaseMelli";
             this.colShenaseMelli.Visible = true;
             this.colShenaseMelli.VisibleIndex = 3;
-            this.colShenaseMelli.Width = 166;
+            this.colShenaseMelli.Width = 133;
             // 
             // colCodeEghtesadi
             // 
@@ -1149,11 +1124,11 @@
             this.colCodeEghtesadi.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colCodeEghtesadi.Caption = "کد اقتصادی";
             this.colCodeEghtesadi.FieldName = "CodeEghtesadi";
-            this.colCodeEghtesadi.MinWidth = 22;
+            this.colCodeEghtesadi.MinWidth = 18;
             this.colCodeEghtesadi.Name = "colCodeEghtesadi";
             this.colCodeEghtesadi.Visible = true;
             this.colCodeEghtesadi.VisibleIndex = 4;
-            this.colCodeEghtesadi.Width = 166;
+            this.colCodeEghtesadi.Width = 133;
             // 
             // colShomareSabt
             // 
@@ -1165,11 +1140,11 @@
             this.colShomareSabt.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colShomareSabt.Caption = "شماره ثبت";
             this.colShomareSabt.FieldName = "ShomareSabt";
-            this.colShomareSabt.MinWidth = 22;
+            this.colShomareSabt.MinWidth = 18;
             this.colShomareSabt.Name = "colShomareSabt";
             this.colShomareSabt.Visible = true;
             this.colShomareSabt.VisibleIndex = 5;
-            this.colShomareSabt.Width = 145;
+            this.colShomareSabt.Width = 116;
             // 
             // colMolahezat
             // 
@@ -1181,48 +1156,48 @@
             this.colMolahezat.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colMolahezat.Caption = "ملاحظات";
             this.colMolahezat.FieldName = "Molahezat";
-            this.colMolahezat.MinWidth = 21;
+            this.colMolahezat.MinWidth = 17;
             this.colMolahezat.Name = "colMolahezat";
             this.colMolahezat.Visible = true;
             this.colMolahezat.VisibleIndex = 6;
-            this.colMolahezat.Width = 545;
+            this.colMolahezat.Width = 436;
             // 
             // lblSalMali
             // 
-            this.lblSalMali.Location = new System.Drawing.Point(25, 174);
-            this.lblSalMali.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblSalMali.Location = new System.Drawing.Point(20, 155);
+            this.lblSalMali.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSalMali.Name = "lblSalMali";
-            this.lblSalMali.Size = new System.Drawing.Size(64, 27);
+            this.lblSalMali.Size = new System.Drawing.Size(57, 24);
             this.lblSalMali.TabIndex = 36;
             this.lblSalMali.Text = "سال مالی";
             this.lblSalMali.Visible = false;
             // 
             // lblSalId
             // 
-            this.lblSalId.Location = new System.Drawing.Point(25, 125);
-            this.lblSalId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblSalId.Location = new System.Drawing.Point(20, 111);
+            this.lblSalId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSalId.Name = "lblSalId";
-            this.lblSalId.Size = new System.Drawing.Size(66, 27);
+            this.lblSalId.Size = new System.Drawing.Size(60, 24);
             this.lblSalId.TabIndex = 35;
             this.lblSalId.Text = "آیدی سال";
             this.lblSalId.Visible = false;
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(25, 86);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblUserName.Location = new System.Drawing.Point(20, 76);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(53, 27);
+            this.lblUserName.Size = new System.Drawing.Size(48, 24);
             this.lblUserName.TabIndex = 31;
             this.lblUserName.Text = "نام کاربر";
             this.lblUserName.Visible = false;
             // 
             // lblUserId
             // 
-            this.lblUserId.Location = new System.Drawing.Point(25, 51);
-            this.lblUserId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblUserId.Location = new System.Drawing.Point(20, 45);
+            this.lblUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(72, 27);
+            this.lblUserId.Size = new System.Drawing.Size(66, 24);
             this.lblUserId.TabIndex = 30;
             this.lblUserId.Text = "آیدی  کاربر";
             this.lblUserId.Visible = false;
@@ -1247,10 +1222,9 @@
             this.panelControl_Moshakhasat.Controls.Add(this.labelControl5);
             this.panelControl_Moshakhasat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_Moshakhasat.Enabled = false;
-            this.panelControl_Moshakhasat.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_Moshakhasat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_Moshakhasat.Location = new System.Drawing.Point(0, 282);
             this.panelControl_Moshakhasat.Name = "panelControl_Moshakhasat";
-            this.panelControl_Moshakhasat.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_Moshakhasat.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_Moshakhasat.TabIndex = 37;
             // 
             // txtIndex_Moshakhasat
@@ -1258,8 +1232,7 @@
             this.txtIndex_Moshakhasat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_Moshakhasat.EditValue = "";
             this.txtIndex_Moshakhasat.Enabled = false;
-            this.txtIndex_Moshakhasat.Location = new System.Drawing.Point(459, 91);
-            this.txtIndex_Moshakhasat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_Moshakhasat.Location = new System.Drawing.Point(688, 81);
             this.txtIndex_Moshakhasat.Name = "txtIndex_Moshakhasat";
             this.txtIndex_Moshakhasat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_Moshakhasat.Properties.Appearance.Options.UseForeColor = true;
@@ -1269,7 +1242,7 @@
             this.txtIndex_Moshakhasat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_Moshakhasat.Properties.NullText = "آیدی انبار";
             this.txtIndex_Moshakhasat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_Moshakhasat.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_Moshakhasat.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_Moshakhasat.TabIndex = 214;
             this.txtIndex_Moshakhasat.TabStop = false;
             this.txtIndex_Moshakhasat.Visible = false;
@@ -1278,12 +1251,11 @@
             // 
             this.pictureEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1.Location = new System.Drawing.Point(24, 10);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureEdit1.Location = new System.Drawing.Point(340, 9);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(180, 160);
+            this.pictureEdit1.Size = new System.Drawing.Size(144, 142);
             this.pictureEdit1.TabIndex = 188;
             // 
             // btnDeletePictuer
@@ -1291,11 +1263,10 @@
             this.btnDeletePictuer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletePictuer.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnDeletePictuer.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeletePictuer.ImageOptions.SvgImage")));
-            this.btnDeletePictuer.Location = new System.Drawing.Point(211, 135);
-            this.btnDeletePictuer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDeletePictuer.Location = new System.Drawing.Point(490, 120);
             this.btnDeletePictuer.Name = "btnDeletePictuer";
             this.btnDeletePictuer.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnDeletePictuer.Size = new System.Drawing.Size(46, 36);
+            this.btnDeletePictuer.Size = new System.Drawing.Size(37, 32);
             this.btnDeletePictuer.TabIndex = 190;
             this.btnDeletePictuer.TabStop = false;
             this.btnDeletePictuer.Click += new System.EventHandler(this.btnDeletePictuer_Click);
@@ -1305,11 +1276,10 @@
             this.btnBrowsPictuer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBrowsPictuer.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnBrowsPictuer.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBrowsPictuer.ImageOptions.SvgImage")));
-            this.btnBrowsPictuer.Location = new System.Drawing.Point(211, 93);
-            this.btnBrowsPictuer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBrowsPictuer.Location = new System.Drawing.Point(490, 83);
             this.btnBrowsPictuer.Name = "btnBrowsPictuer";
             this.btnBrowsPictuer.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnBrowsPictuer.Size = new System.Drawing.Size(46, 36);
+            this.btnBrowsPictuer.Size = new System.Drawing.Size(37, 32);
             this.btnBrowsPictuer.TabIndex = 189;
             this.btnBrowsPictuer.TabStop = false;
             this.btnBrowsPictuer.Click += new System.EventHandler(this.btnBrowsPictuer_Click);
@@ -1318,39 +1288,39 @@
             // 
             this.txtShomareSabt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareSabt.EnterMoveNextControl = true;
-            this.txtShomareSabt.Location = new System.Drawing.Point(613, 94);
-            this.txtShomareSabt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShomareSabt.Location = new System.Drawing.Point(811, 84);
+            this.txtShomareSabt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShomareSabt.Name = "txtShomareSabt";
             this.txtShomareSabt.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShomareSabt.Properties.Appearance.Options.UseForeColor = true;
             this.txtShomareSabt.Properties.MaxLength = 12;
-            this.txtShomareSabt.Size = new System.Drawing.Size(304, 34);
+            this.txtShomareSabt.Size = new System.Drawing.Size(243, 30);
             this.txtShomareSabt.TabIndex = 4;
             // 
             // txtNoeFaaliat
             // 
             this.txtNoeFaaliat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNoeFaaliat.EnterMoveNextControl = true;
-            this.txtNoeFaaliat.Location = new System.Drawing.Point(210, 10);
-            this.txtNoeFaaliat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNoeFaaliat.Location = new System.Drawing.Point(489, 9);
+            this.txtNoeFaaliat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNoeFaaliat.Name = "txtNoeFaaliat";
             this.txtNoeFaaliat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtNoeFaaliat.Properties.Appearance.Options.UseForeColor = true;
             this.txtNoeFaaliat.Properties.MaxLength = 70;
-            this.txtNoeFaaliat.Size = new System.Drawing.Size(285, 34);
+            this.txtNoeFaaliat.Size = new System.Drawing.Size(228, 30);
             this.txtNoeFaaliat.TabIndex = 1;
             // 
             // txtCodeEghtesadi
             // 
             this.txtCodeEghtesadi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodeEghtesadi.EnterMoveNextControl = true;
-            this.txtCodeEghtesadi.Location = new System.Drawing.Point(210, 51);
-            this.txtCodeEghtesadi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodeEghtesadi.Location = new System.Drawing.Point(489, 45);
+            this.txtCodeEghtesadi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodeEghtesadi.Name = "txtCodeEghtesadi";
             this.txtCodeEghtesadi.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtCodeEghtesadi.Properties.Appearance.Options.UseForeColor = true;
             this.txtCodeEghtesadi.Properties.MaxLength = 12;
-            this.txtCodeEghtesadi.Size = new System.Drawing.Size(285, 34);
+            this.txtCodeEghtesadi.Size = new System.Drawing.Size(228, 30);
             this.txtCodeEghtesadi.TabIndex = 3;
             // 
             // labelControl2
@@ -1358,10 +1328,10 @@
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(502, 12);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl2.Location = new System.Drawing.Point(723, 11);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(76, 27);
+            this.labelControl2.Size = new System.Drawing.Size(69, 24);
             this.labelControl2.TabIndex = 151;
             this.labelControl2.Text = "نوع فعالیت";
             // 
@@ -1370,10 +1340,10 @@
             this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(924, 97);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl4.Location = new System.Drawing.Point(1060, 86);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(71, 27);
+            this.labelControl4.Size = new System.Drawing.Size(64, 24);
             this.labelControl4.TabIndex = 152;
             this.labelControl4.Text = "شماره ثبت";
             // 
@@ -1382,10 +1352,10 @@
             this.labelControl25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl25.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl25.Appearance.Options.UseForeColor = true;
-            this.labelControl25.Location = new System.Drawing.Point(502, 54);
-            this.labelControl25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl25.Location = new System.Drawing.Point(723, 48);
+            this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(79, 27);
+            this.labelControl25.Size = new System.Drawing.Size(71, 24);
             this.labelControl25.TabIndex = 151;
             this.labelControl25.Text = "کد اقتصادی";
             // 
@@ -1393,13 +1363,13 @@
             // 
             this.txtMolahezat_M.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_M.EnterMoveNextControl = true;
-            this.txtMolahezat_M.Location = new System.Drawing.Point(265, 137);
-            this.txtMolahezat_M.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_M.Location = new System.Drawing.Point(533, 122);
+            this.txtMolahezat_M.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_M.Name = "txtMolahezat_M";
             this.txtMolahezat_M.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_M.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_M.Properties.MaxLength = 400;
-            this.txtMolahezat_M.Size = new System.Drawing.Size(652, 34);
+            this.txtMolahezat_M.Size = new System.Drawing.Size(522, 30);
             this.txtMolahezat_M.TabIndex = 5;
             // 
             // labelControl7
@@ -1407,10 +1377,10 @@
             this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(925, 139);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl7.Location = new System.Drawing.Point(1061, 124);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(63, 27);
+            this.labelControl7.Size = new System.Drawing.Size(54, 24);
             this.labelControl7.TabIndex = 148;
             this.labelControl7.Text = "ملاحظات";
             // 
@@ -1418,13 +1388,13 @@
             // 
             this.txtShenaseMelli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShenaseMelli.EnterMoveNextControl = true;
-            this.txtShenaseMelli.Location = new System.Drawing.Point(613, 51);
-            this.txtShenaseMelli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShenaseMelli.Location = new System.Drawing.Point(811, 45);
+            this.txtShenaseMelli.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShenaseMelli.Name = "txtShenaseMelli";
             this.txtShenaseMelli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShenaseMelli.Properties.Appearance.Options.UseForeColor = true;
             this.txtShenaseMelli.Properties.MaxLength = 11;
-            this.txtShenaseMelli.Size = new System.Drawing.Size(304, 34);
+            this.txtShenaseMelli.Size = new System.Drawing.Size(243, 30);
             this.txtShenaseMelli.TabIndex = 2;
             // 
             // labelControl18
@@ -1432,10 +1402,10 @@
             this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl18.Appearance.Options.UseForeColor = true;
-            this.labelControl18.Location = new System.Drawing.Point(924, 54);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl18.Location = new System.Drawing.Point(1060, 48);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(98, 27);
+            this.labelControl18.Size = new System.Drawing.Size(87, 24);
             this.labelControl18.TabIndex = 148;
             this.labelControl18.Text = "کد/شناسه ملی";
             // 
@@ -1443,13 +1413,12 @@
             // 
             this.txtNameEkhtesar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameEkhtesar.EnterMoveNextControl = true;
-            this.txtNameEkhtesar.Location = new System.Drawing.Point(612, 10);
-            this.txtNameEkhtesar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNameEkhtesar.Location = new System.Drawing.Point(811, 9);
             this.txtNameEkhtesar.Name = "txtNameEkhtesar";
             this.txtNameEkhtesar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtNameEkhtesar.Properties.Appearance.Options.UseForeColor = true;
             this.txtNameEkhtesar.Properties.MaxLength = 70;
-            this.txtNameEkhtesar.Size = new System.Drawing.Size(306, 34);
+            this.txtNameEkhtesar.Size = new System.Drawing.Size(245, 30);
             this.txtNameEkhtesar.TabIndex = 0;
             // 
             // labelControl5
@@ -1460,10 +1429,9 @@
             this.labelControl5.Appearance.Options.UseTextOptions = true;
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl5.AutoEllipsis = true;
-            this.labelControl5.Location = new System.Drawing.Point(925, 12);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl5.Location = new System.Drawing.Point(1061, 11);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(70, 27);
+            this.labelControl5.Size = new System.Drawing.Size(63, 24);
             this.labelControl5.TabIndex = 119;
             this.labelControl5.Text = "نام اختصار";
             // 
@@ -1471,9 +1439,8 @@
             // 
             this.tpAdress.Controls.Add(this.panelControl2);
             this.tpAdress.Controls.Add(this.panelControl_Adress);
-            this.tpAdress.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpAdress.Name = "tpAdress";
-            this.tpAdress.Size = new System.Drawing.Size(1054, 429);
+            this.tpAdress.Size = new System.Drawing.Size(1164, 443);
             this.tpAdress.Text = "آدرس";
             // 
             // panelControl2
@@ -1483,21 +1450,20 @@
             this.panelControl2.Controls.Add(this.labelControl9);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl2.Size = new System.Drawing.Size(1164, 282);
             this.panelControl2.TabIndex = 29;
             // 
             // gridControlAdress1
             // 
             this.gridControlAdress1.DataSource = this.epAdress_AsBindingSource;
             this.gridControlAdress1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlAdress1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlAdress1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlAdress1.Location = new System.Drawing.Point(2, 2);
             this.gridControlAdress1.MainView = this.gridViewAdress1;
-            this.gridControlAdress1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlAdress1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlAdress1.Name = "gridControlAdress1";
-            this.gridControlAdress1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlAdress1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlAdress1.TabIndex = 32;
             this.gridControlAdress1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAdress1});
@@ -1519,10 +1485,10 @@
             this.colSandoghPosti,
             this.colIsDefault,
             this.colMolahezat1});
-            this.gridViewAdress1.DetailHeight = 378;
+            this.gridViewAdress1.DetailHeight = 336;
             this.gridViewAdress1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewAdress1.GridControl = this.gridControlAdress1;
-            this.gridViewAdress1.IndicatorWidth = 28;
+            this.gridViewAdress1.IndicatorWidth = 22;
             this.gridViewAdress1.Name = "gridViewAdress1";
             this.gridViewAdress1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewAdress1.OptionsBehavior.Editable = false;
@@ -1546,9 +1512,9 @@
             // 
             this.Id_A.Caption = "آیدی";
             this.Id_A.FieldName = "Id";
-            this.Id_A.MinWidth = 21;
+            this.Id_A.MinWidth = 17;
             this.Id_A.Name = "Id_A";
-            this.Id_A.Width = 84;
+            this.Id_A.Width = 67;
             // 
             // Line_A
             // 
@@ -1560,12 +1526,12 @@
             this.Line_A.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Line_A.Caption = "ردیف";
             this.Line_A.FieldName = "Line";
-            this.Line_A.MinWidth = 21;
+            this.Line_A.MinWidth = 17;
             this.Line_A.Name = "Line_A";
             this.Line_A.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.Line_A.Visible = true;
             this.Line_A.VisibleIndex = 0;
-            this.Line_A.Width = 66;
+            this.Line_A.Width = 53;
             // 
             // colNameAdress
             // 
@@ -1577,11 +1543,11 @@
             this.colNameAdress.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colNameAdress.Caption = "آدرس";
             this.colNameAdress.FieldName = "NameAdress";
-            this.colNameAdress.MinWidth = 22;
+            this.colNameAdress.MinWidth = 18;
             this.colNameAdress.Name = "colNameAdress";
             this.colNameAdress.Visible = true;
             this.colNameAdress.VisibleIndex = 1;
-            this.colNameAdress.Width = 134;
+            this.colNameAdress.Width = 107;
             // 
             // colNameOstan
             // 
@@ -1593,11 +1559,11 @@
             this.colNameOstan.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colNameOstan.Caption = "استان";
             this.colNameOstan.FieldName = "NameOstan";
-            this.colNameOstan.MinWidth = 22;
+            this.colNameOstan.MinWidth = 18;
             this.colNameOstan.Name = "colNameOstan";
             this.colNameOstan.Visible = true;
             this.colNameOstan.VisibleIndex = 2;
-            this.colNameOstan.Width = 134;
+            this.colNameOstan.Width = 107;
             // 
             // colNameShahrstan
             // 
@@ -1609,11 +1575,11 @@
             this.colNameShahrstan.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colNameShahrstan.Caption = "شهرستان";
             this.colNameShahrstan.FieldName = "NameShahrstan";
-            this.colNameShahrstan.MinWidth = 22;
+            this.colNameShahrstan.MinWidth = 18;
             this.colNameShahrstan.Name = "colNameShahrstan";
             this.colNameShahrstan.Visible = true;
             this.colNameShahrstan.VisibleIndex = 3;
-            this.colNameShahrstan.Width = 145;
+            this.colNameShahrstan.Width = 116;
             // 
             // colSharhAdress
             // 
@@ -1625,11 +1591,11 @@
             this.colSharhAdress.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colSharhAdress.Caption = "شرح آدرس";
             this.colSharhAdress.FieldName = "SharhAdress";
-            this.colSharhAdress.MinWidth = 22;
+            this.colSharhAdress.MinWidth = 18;
             this.colSharhAdress.Name = "colSharhAdress";
             this.colSharhAdress.Visible = true;
             this.colSharhAdress.VisibleIndex = 4;
-            this.colSharhAdress.Width = 500;
+            this.colSharhAdress.Width = 400;
             // 
             // colCodePosti
             // 
@@ -1641,11 +1607,11 @@
             this.colCodePosti.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colCodePosti.Caption = "کد پستی";
             this.colCodePosti.FieldName = "CodePosti";
-            this.colCodePosti.MinWidth = 22;
+            this.colCodePosti.MinWidth = 18;
             this.colCodePosti.Name = "colCodePosti";
             this.colCodePosti.Visible = true;
             this.colCodePosti.VisibleIndex = 5;
-            this.colCodePosti.Width = 155;
+            this.colCodePosti.Width = 124;
             // 
             // colSandoghPosti
             // 
@@ -1657,11 +1623,11 @@
             this.colSandoghPosti.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colSandoghPosti.Caption = "صندوق پستی";
             this.colSandoghPosti.FieldName = "SandoghPosti";
-            this.colSandoghPosti.MinWidth = 22;
+            this.colSandoghPosti.MinWidth = 18;
             this.colSandoghPosti.Name = "colSandoghPosti";
             this.colSandoghPosti.Visible = true;
             this.colSandoghPosti.VisibleIndex = 6;
-            this.colSandoghPosti.Width = 145;
+            this.colSandoghPosti.Width = 116;
             // 
             // colIsDefault
             // 
@@ -1673,11 +1639,11 @@
             this.colIsDefault.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colIsDefault.Caption = "آدرس پیش فرض";
             this.colIsDefault.FieldName = "IsDefault";
-            this.colIsDefault.MinWidth = 22;
+            this.colIsDefault.MinWidth = 18;
             this.colIsDefault.Name = "colIsDefault";
             this.colIsDefault.Visible = true;
             this.colIsDefault.VisibleIndex = 7;
-            this.colIsDefault.Width = 164;
+            this.colIsDefault.Width = 131;
             // 
             // colMolahezat1
             // 
@@ -1689,28 +1655,28 @@
             this.colMolahezat1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.colMolahezat1.Caption = "ملاحظات";
             this.colMolahezat1.FieldName = "Molahezat";
-            this.colMolahezat1.MinWidth = 22;
+            this.colMolahezat1.MinWidth = 18;
             this.colMolahezat1.Name = "colMolahezat1";
             this.colMolahezat1.Visible = true;
             this.colMolahezat1.VisibleIndex = 8;
-            this.colMolahezat1.Width = 545;
+            this.colMolahezat1.Width = 436;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(25, 86);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl8.Location = new System.Drawing.Point(20, 76);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(53, 27);
+            this.labelControl8.Size = new System.Drawing.Size(48, 24);
             this.labelControl8.TabIndex = 31;
             this.labelControl8.Text = "نام کاربر";
             this.labelControl8.Visible = false;
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(25, 51);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl9.Location = new System.Drawing.Point(20, 45);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(72, 27);
+            this.labelControl9.Size = new System.Drawing.Size(66, 24);
             this.labelControl9.TabIndex = 30;
             this.labelControl9.Text = "آیدی  کاربر";
             this.labelControl9.Visible = false;
@@ -1738,10 +1704,9 @@
             this.panelControl_Adress.Controls.Add(this.labelControl13);
             this.panelControl_Adress.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_Adress.Enabled = false;
-            this.panelControl_Adress.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_Adress.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_Adress.Location = new System.Drawing.Point(0, 282);
             this.panelControl_Adress.Name = "panelControl_Adress";
-            this.panelControl_Adress.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_Adress.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_Adress.TabIndex = 38;
             // 
             // txtIndex_Adress
@@ -1749,8 +1714,7 @@
             this.txtIndex_Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_Adress.EditValue = "";
             this.txtIndex_Adress.Enabled = false;
-            this.txtIndex_Adress.Location = new System.Drawing.Point(15, 94);
-            this.txtIndex_Adress.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_Adress.Location = new System.Drawing.Point(333, 84);
             this.txtIndex_Adress.Name = "txtIndex_Adress";
             this.txtIndex_Adress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_Adress.Properties.Appearance.Options.UseForeColor = true;
@@ -1760,7 +1724,7 @@
             this.txtIndex_Adress.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_Adress.Properties.NullText = "آیدی انبار";
             this.txtIndex_Adress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_Adress.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_Adress.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_Adress.TabIndex = 214;
             this.txtIndex_Adress.TabStop = false;
             this.txtIndex_Adress.Visible = false;
@@ -1769,27 +1733,26 @@
             // 
             this.chkDefaultAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultAdress.EnterMoveNextControl = true;
-            this.chkDefaultAdress.Location = new System.Drawing.Point(213, 98);
-            this.chkDefaultAdress.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultAdress.Location = new System.Drawing.Point(491, 87);
             this.chkDefaultAdress.Name = "chkDefaultAdress";
             this.chkDefaultAdress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultAdress.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultAdress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkDefaultAdress.Properties.Caption = "آدرس پیش فرض";
-            this.chkDefaultAdress.Size = new System.Drawing.Size(167, 35);
+            this.chkDefaultAdress.Size = new System.Drawing.Size(134, 32);
             this.chkDefaultAdress.TabIndex = 6;
             // 
             // txtSandoghPosti
             // 
             this.txtSandoghPosti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSandoghPosti.EnterMoveNextControl = true;
-            this.txtSandoghPosti.Location = new System.Drawing.Point(445, 97);
-            this.txtSandoghPosti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSandoghPosti.Location = new System.Drawing.Point(677, 86);
+            this.txtSandoghPosti.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSandoghPosti.Name = "txtSandoghPosti";
             this.txtSandoghPosti.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSandoghPosti.Properties.Appearance.Options.UseForeColor = true;
             this.txtSandoghPosti.Properties.MaxLength = 12;
-            this.txtSandoghPosti.Size = new System.Drawing.Size(185, 34);
+            this.txtSandoghPosti.Size = new System.Drawing.Size(148, 30);
             this.txtSandoghPosti.TabIndex = 5;
             // 
             // labelControl16
@@ -1797,10 +1760,10 @@
             this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl16.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl16.Appearance.Options.UseForeColor = true;
-            this.labelControl16.Location = new System.Drawing.Point(635, 100);
-            this.labelControl16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl16.Location = new System.Drawing.Point(829, 89);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(92, 27);
+            this.labelControl16.Size = new System.Drawing.Size(82, 24);
             this.labelControl16.TabIndex = 171;
             this.labelControl16.Text = "صندوق پستی";
             // 
@@ -1808,13 +1771,13 @@
             // 
             this.txtCodePosti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodePosti.EnterMoveNextControl = true;
-            this.txtCodePosti.Location = new System.Drawing.Point(739, 97);
-            this.txtCodePosti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodePosti.Location = new System.Drawing.Point(912, 86);
+            this.txtCodePosti.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodePosti.Name = "txtCodePosti";
             this.txtCodePosti.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtCodePosti.Properties.Appearance.Options.UseForeColor = true;
             this.txtCodePosti.Properties.MaxLength = 12;
-            this.txtCodePosti.Size = new System.Drawing.Size(191, 34);
+            this.txtCodePosti.Size = new System.Drawing.Size(153, 30);
             this.txtCodePosti.TabIndex = 4;
             // 
             // labelControl14
@@ -1822,10 +1785,10 @@
             this.labelControl14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl14.Appearance.Options.UseForeColor = true;
-            this.labelControl14.Location = new System.Drawing.Point(937, 100);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl14.Location = new System.Drawing.Point(1071, 89);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(61, 27);
+            this.labelControl14.Size = new System.Drawing.Size(54, 24);
             this.labelControl14.TabIndex = 171;
             this.labelControl14.Text = "کد پستی";
             // 
@@ -1833,13 +1796,13 @@
             // 
             this.txtSharhAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhAdress.EnterMoveNextControl = true;
-            this.txtSharhAdress.Location = new System.Drawing.Point(15, 55);
-            this.txtSharhAdress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSharhAdress.Location = new System.Drawing.Point(333, 49);
+            this.txtSharhAdress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSharhAdress.Name = "txtSharhAdress";
             this.txtSharhAdress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSharhAdress.Properties.Appearance.Options.UseForeColor = true;
             this.txtSharhAdress.Properties.MaxLength = 400;
-            this.txtSharhAdress.Size = new System.Drawing.Size(916, 34);
+            this.txtSharhAdress.Size = new System.Drawing.Size(733, 30);
             this.txtSharhAdress.TabIndex = 3;
             // 
             // labelControl12
@@ -1847,10 +1810,10 @@
             this.labelControl12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl12.Appearance.Options.UseForeColor = true;
-            this.labelControl12.Location = new System.Drawing.Point(937, 57);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl12.Location = new System.Drawing.Point(1071, 51);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(74, 27);
+            this.labelControl12.Size = new System.Drawing.Size(68, 24);
             this.labelControl12.TabIndex = 169;
             this.labelControl12.Text = "شرح آدرس";
             // 
@@ -1859,10 +1822,10 @@
             this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl10.Appearance.Options.UseForeColor = true;
-            this.labelControl10.Location = new System.Drawing.Point(937, 15);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl10.Location = new System.Drawing.Point(1071, 13);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(90, 27);
+            this.labelControl10.Size = new System.Drawing.Size(82, 24);
             this.labelControl10.TabIndex = 169;
             this.labelControl10.Text = "انتخاب آدرس";
             // 
@@ -1870,8 +1833,7 @@
             // 
             this.cmbNameShahrstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameShahrstan.EnterMoveNextControl = true;
-            this.cmbNameShahrstan.Location = new System.Drawing.Point(65, 12);
-            this.cmbNameShahrstan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameShahrstan.Location = new System.Drawing.Point(373, 11);
             this.cmbNameShahrstan.Name = "cmbNameShahrstan";
             this.cmbNameShahrstan.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbNameShahrstan.Properties.Appearance.Options.UseForeColor = true;
@@ -1890,10 +1852,9 @@
             this.cmbNameShahrstan.Properties.NullText = "";
             this.cmbNameShahrstan.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbNameShahrstan.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbNameShahrstan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNameShahrstan.Properties.ValueMember = "Id";
             this.cmbNameShahrstan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameShahrstan.Size = new System.Drawing.Size(205, 34);
+            this.cmbNameShahrstan.Size = new System.Drawing.Size(164, 30);
             this.cmbNameShahrstan.TabIndex = 2;
             this.cmbNameShahrstan.Enter += new System.EventHandler(this.cmbNameShahrstan_Enter);
             // 
@@ -1906,11 +1867,10 @@
             this.btnShahrstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShahrstan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnShahrstan.ImageOptions.Image")));
             this.btnShahrstan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnShahrstan.ImageOptions.SvgImage")));
-            this.btnShahrstan.Location = new System.Drawing.Point(17, 11);
-            this.btnShahrstan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnShahrstan.Location = new System.Drawing.Point(335, 10);
             this.btnShahrstan.Name = "btnShahrstan";
             this.btnShahrstan.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnShahrstan.Size = new System.Drawing.Size(46, 36);
+            this.btnShahrstan.Size = new System.Drawing.Size(37, 32);
             this.btnShahrstan.TabIndex = 166;
             this.btnShahrstan.TabStop = false;
             this.btnShahrstan.Text = "simpleButton1";
@@ -1921,8 +1881,7 @@
             // 
             this.cmbNameAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameAdress.EnterMoveNextControl = true;
-            this.cmbNameAdress.Location = new System.Drawing.Point(736, 12);
-            this.cmbNameAdress.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameAdress.Location = new System.Drawing.Point(910, 11);
             this.cmbNameAdress.Name = "cmbNameAdress";
             this.cmbNameAdress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbNameAdress.Properties.Appearance.Options.UseForeColor = true;
@@ -1941,10 +1900,9 @@
             this.cmbNameAdress.Properties.NullText = "";
             this.cmbNameAdress.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbNameAdress.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbNameAdress.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNameAdress.Properties.ValueMember = "Id";
             this.cmbNameAdress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameAdress.Size = new System.Drawing.Size(194, 34);
+            this.cmbNameAdress.Size = new System.Drawing.Size(155, 30);
             this.cmbNameAdress.TabIndex = 0;
             this.cmbNameAdress.Enter += new System.EventHandler(this.cmbNameAdress_Enter);
             // 
@@ -1957,11 +1915,10 @@
             this.btnAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdress.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdress.ImageOptions.Image")));
             this.btnAdress.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdress.ImageOptions.SvgImage")));
-            this.btnAdress.Location = new System.Drawing.Point(687, 11);
-            this.btnAdress.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAdress.Location = new System.Drawing.Point(871, 10);
             this.btnAdress.Name = "btnAdress";
             this.btnAdress.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnAdress.Size = new System.Drawing.Size(46, 36);
+            this.btnAdress.Size = new System.Drawing.Size(37, 32);
             this.btnAdress.TabIndex = 167;
             this.btnAdress.TabStop = false;
             this.btnAdress.Text = "simpleButton1";
@@ -1972,8 +1929,7 @@
             // 
             this.cmbNameOstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameOstan.EnterMoveNextControl = true;
-            this.cmbNameOstan.Location = new System.Drawing.Point(417, 12);
-            this.cmbNameOstan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameOstan.Location = new System.Drawing.Point(655, 11);
             this.cmbNameOstan.Name = "cmbNameOstan";
             this.cmbNameOstan.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbNameOstan.Properties.Appearance.Options.UseForeColor = true;
@@ -1992,10 +1948,9 @@
             this.cmbNameOstan.Properties.NullText = "";
             this.cmbNameOstan.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbNameOstan.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbNameOstan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNameOstan.Properties.ValueMember = "Id";
             this.cmbNameOstan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameOstan.Size = new System.Drawing.Size(201, 34);
+            this.cmbNameOstan.Size = new System.Drawing.Size(161, 30);
             this.cmbNameOstan.TabIndex = 1;
             this.cmbNameOstan.EditValueChanged += new System.EventHandler(this.cmbNameOstan_EditValueChanged);
             this.cmbNameOstan.Enter += new System.EventHandler(this.cmbNameOstan_Enter);
@@ -2009,11 +1964,10 @@
             this.btnOstan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOstan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOstan.ImageOptions.Image")));
             this.btnOstan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOstan.ImageOptions.SvgImage")));
-            this.btnOstan.Location = new System.Drawing.Point(363, 10);
-            this.btnOstan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnOstan.Location = new System.Drawing.Point(611, 9);
             this.btnOstan.Name = "btnOstan";
             this.btnOstan.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnOstan.Size = new System.Drawing.Size(46, 36);
+            this.btnOstan.Size = new System.Drawing.Size(37, 32);
             this.btnOstan.TabIndex = 167;
             this.btnOstan.TabStop = false;
             this.btnOstan.Text = "simpleButton1";
@@ -2025,10 +1979,10 @@
             this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl20.Appearance.Options.UseForeColor = true;
-            this.labelControl20.Location = new System.Drawing.Point(283, 15);
-            this.labelControl20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl20.Location = new System.Drawing.Point(547, 13);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(61, 27);
+            this.labelControl20.Size = new System.Drawing.Size(55, 24);
             this.labelControl20.TabIndex = 163;
             this.labelControl20.Text = "شهرستان";
             // 
@@ -2037,10 +1991,10 @@
             this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl19.Appearance.Options.UseForeColor = true;
-            this.labelControl19.Location = new System.Drawing.Point(625, 15);
-            this.labelControl19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl19.Location = new System.Drawing.Point(821, 13);
+            this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(39, 27);
+            this.labelControl19.Size = new System.Drawing.Size(35, 24);
             this.labelControl19.TabIndex = 162;
             this.labelControl19.Text = "استان";
             // 
@@ -2048,13 +2002,13 @@
             // 
             this.txtMolahezat_A.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_A.EnterMoveNextControl = true;
-            this.txtMolahezat_A.Location = new System.Drawing.Point(15, 138);
-            this.txtMolahezat_A.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_A.Location = new System.Drawing.Point(333, 123);
+            this.txtMolahezat_A.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_A.Name = "txtMolahezat_A";
             this.txtMolahezat_A.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_A.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_A.Properties.MaxLength = 400;
-            this.txtMolahezat_A.Size = new System.Drawing.Size(916, 34);
+            this.txtMolahezat_A.Size = new System.Drawing.Size(733, 30);
             this.txtMolahezat_A.TabIndex = 7;
             // 
             // labelControl13
@@ -2062,10 +2016,10 @@
             this.labelControl13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl13.Appearance.Options.UseForeColor = true;
-            this.labelControl13.Location = new System.Drawing.Point(938, 141);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl13.Location = new System.Drawing.Point(1071, 125);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(63, 27);
+            this.labelControl13.Size = new System.Drawing.Size(54, 24);
             this.labelControl13.TabIndex = 148;
             this.labelControl13.Text = "ملاحظات";
             // 
@@ -2073,9 +2027,8 @@
             // 
             this.tpTamas.Controls.Add(this.panelControl5);
             this.tpTamas.Controls.Add(this.panelControl_Tamas);
-            this.tpTamas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpTamas.Name = "tpTamas";
-            this.tpTamas.Size = new System.Drawing.Size(1054, 429);
+            this.tpTamas.Size = new System.Drawing.Size(1164, 443);
             this.tpTamas.Text = "شماره تماس";
             // 
             // panelControl5
@@ -2085,21 +2038,20 @@
             this.panelControl5.Controls.Add(this.labelControl11);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(0, 0);
-            this.panelControl5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl5.Size = new System.Drawing.Size(1164, 282);
             this.panelControl5.TabIndex = 39;
             // 
             // gridControlTamas1
             // 
             this.gridControlTamas1.DataSource = this.epShTamas_AsBindingSource;
             this.gridControlTamas1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlTamas1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlTamas1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlTamas1.Location = new System.Drawing.Point(2, 2);
             this.gridControlTamas1.MainView = this.gridViewTamas1;
-            this.gridControlTamas1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlTamas1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlTamas1.Name = "gridControlTamas1";
-            this.gridControlTamas1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlTamas1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlTamas1.TabIndex = 32;
             this.gridControlTamas1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTamas1});
@@ -2120,10 +2072,10 @@
             this.gridColumn7,
             this.gridColumn9,
             this.gridColumn10});
-            this.gridViewTamas1.DetailHeight = 378;
+            this.gridViewTamas1.DetailHeight = 336;
             this.gridViewTamas1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewTamas1.GridControl = this.gridControlTamas1;
-            this.gridViewTamas1.IndicatorWidth = 28;
+            this.gridViewTamas1.IndicatorWidth = 22;
             this.gridViewTamas1.Name = "gridViewTamas1";
             this.gridViewTamas1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewTamas1.OptionsBehavior.Editable = false;
@@ -2147,9 +2099,9 @@
             // 
             this.gridColumn1.Caption = "آیدی";
             this.gridColumn1.FieldName = "Id";
-            this.gridColumn1.MinWidth = 21;
+            this.gridColumn1.MinWidth = 17;
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Width = 84;
+            this.gridColumn1.Width = 67;
             // 
             // gridColumn2
             // 
@@ -2161,12 +2113,12 @@
             this.gridColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn2.Caption = "ردیف";
             this.gridColumn2.FieldName = "Line";
-            this.gridColumn2.MinWidth = 21;
+            this.gridColumn2.MinWidth = 17;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 66;
+            this.gridColumn2.Width = 53;
             // 
             // gridColumn3
             // 
@@ -2178,11 +2130,11 @@
             this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn3.Caption = "نوع تماس";
             this.gridColumn3.FieldName = "NoeTamas";
-            this.gridColumn3.MinWidth = 22;
+            this.gridColumn3.MinWidth = 18;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 134;
+            this.gridColumn3.Width = 107;
             // 
             // gridColumn4
             // 
@@ -2194,11 +2146,11 @@
             this.gridColumn4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn4.Caption = "شماره تماس";
             this.gridColumn4.FieldName = "ShTamas";
-            this.gridColumn4.MinWidth = 22;
+            this.gridColumn4.MinWidth = 18;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 200;
+            this.gridColumn4.Width = 160;
             // 
             // gridColumn5
             // 
@@ -2210,11 +2162,11 @@
             this.gridColumn5.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn5.Caption = "نام طرف";
             this.gridColumn5.FieldName = "NameTaraf";
-            this.gridColumn5.MinWidth = 22;
+            this.gridColumn5.MinWidth = 18;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 273;
+            this.gridColumn5.Width = 218;
             // 
             // gridColumn6
             // 
@@ -2226,11 +2178,11 @@
             this.gridColumn6.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn6.Caption = "نام قسمت";
             this.gridColumn6.FieldName = "NameGhesmat";
-            this.gridColumn6.MinWidth = 22;
+            this.gridColumn6.MinWidth = 18;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 273;
+            this.gridColumn6.Width = 218;
             // 
             // gridColumn7
             // 
@@ -2242,11 +2194,11 @@
             this.gridColumn7.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn7.Caption = "شماره داخلی";
             this.gridColumn7.FieldName = "ShDakheli";
-            this.gridColumn7.MinWidth = 22;
+            this.gridColumn7.MinWidth = 18;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
-            this.gridColumn7.Width = 164;
+            this.gridColumn7.Width = 131;
             // 
             // gridColumn9
             // 
@@ -2258,11 +2210,11 @@
             this.gridColumn9.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn9.Caption = "ش پیش فرض";
             this.gridColumn9.FieldName = "IsDefault";
-            this.gridColumn9.MinWidth = 22;
+            this.gridColumn9.MinWidth = 18;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
-            this.gridColumn9.Width = 145;
+            this.gridColumn9.Width = 116;
             // 
             // gridColumn10
             // 
@@ -2274,28 +2226,28 @@
             this.gridColumn10.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn10.Caption = "ملاحظات";
             this.gridColumn10.FieldName = "Molahezat";
-            this.gridColumn10.MinWidth = 22;
+            this.gridColumn10.MinWidth = 18;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 7;
-            this.gridColumn10.Width = 545;
+            this.gridColumn10.Width = 436;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(25, 86);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl6.Location = new System.Drawing.Point(20, 76);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(53, 27);
+            this.labelControl6.Size = new System.Drawing.Size(48, 24);
             this.labelControl6.TabIndex = 31;
             this.labelControl6.Text = "نام کاربر";
             this.labelControl6.Visible = false;
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(25, 51);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl11.Location = new System.Drawing.Point(20, 45);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(72, 27);
+            this.labelControl11.Size = new System.Drawing.Size(66, 24);
             this.labelControl11.TabIndex = 30;
             this.labelControl11.Text = "آیدی  کاربر";
             this.labelControl11.Visible = false;
@@ -2318,10 +2270,9 @@
             this.panelControl_Tamas.Controls.Add(this.cmbNoeTamas);
             this.panelControl_Tamas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_Tamas.Enabled = false;
-            this.panelControl_Tamas.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_Tamas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_Tamas.Location = new System.Drawing.Point(0, 282);
             this.panelControl_Tamas.Name = "panelControl_Tamas";
-            this.panelControl_Tamas.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_Tamas.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_Tamas.TabIndex = 40;
             // 
             // txtIndex_ShomareTamas
@@ -2329,8 +2280,7 @@
             this.txtIndex_ShomareTamas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_ShomareTamas.EditValue = "";
             this.txtIndex_ShomareTamas.Enabled = false;
-            this.txtIndex_ShomareTamas.Location = new System.Drawing.Point(22, 53);
-            this.txtIndex_ShomareTamas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_ShomareTamas.Location = new System.Drawing.Point(339, 47);
             this.txtIndex_ShomareTamas.Name = "txtIndex_ShomareTamas";
             this.txtIndex_ShomareTamas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_ShomareTamas.Properties.Appearance.Options.UseForeColor = true;
@@ -2340,7 +2290,7 @@
             this.txtIndex_ShomareTamas.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_ShomareTamas.Properties.NullText = "آیدی انبار";
             this.txtIndex_ShomareTamas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_ShomareTamas.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_ShomareTamas.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_ShomareTamas.TabIndex = 214;
             this.txtIndex_ShomareTamas.TabStop = false;
             this.txtIndex_ShomareTamas.Visible = false;
@@ -2349,40 +2299,39 @@
             // 
             this.chkDefaultShTamas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultShTamas.EnterMoveNextControl = true;
-            this.chkDefaultShTamas.Location = new System.Drawing.Point(140, 57);
-            this.chkDefaultShTamas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultShTamas.Location = new System.Drawing.Point(433, 51);
             this.chkDefaultShTamas.Name = "chkDefaultShTamas";
             this.chkDefaultShTamas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultShTamas.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultShTamas.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkDefaultShTamas.Properties.Caption = "شماره پیش فرض";
-            this.chkDefaultShTamas.Size = new System.Drawing.Size(175, 35);
+            this.chkDefaultShTamas.Size = new System.Drawing.Size(140, 32);
             this.chkDefaultShTamas.TabIndex = 5;
             // 
             // txtNameGhesmat
             // 
             this.txtNameGhesmat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameGhesmat.EnterMoveNextControl = true;
-            this.txtNameGhesmat.Location = new System.Drawing.Point(762, 56);
-            this.txtNameGhesmat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNameGhesmat.Location = new System.Drawing.Point(931, 50);
+            this.txtNameGhesmat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNameGhesmat.Name = "txtNameGhesmat";
             this.txtNameGhesmat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtNameGhesmat.Properties.Appearance.Options.UseForeColor = true;
             this.txtNameGhesmat.Properties.MaxLength = 50;
-            this.txtNameGhesmat.Size = new System.Drawing.Size(190, 34);
+            this.txtNameGhesmat.Size = new System.Drawing.Size(152, 30);
             this.txtNameGhesmat.TabIndex = 3;
             // 
             // txtNameTaraf
             // 
             this.txtNameTaraf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNameTaraf.EnterMoveNextControl = true;
-            this.txtNameTaraf.Location = new System.Drawing.Point(22, 13);
-            this.txtNameTaraf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNameTaraf.Location = new System.Drawing.Point(339, 12);
+            this.txtNameTaraf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNameTaraf.Name = "txtNameTaraf";
             this.txtNameTaraf.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtNameTaraf.Properties.Appearance.Options.UseForeColor = true;
             this.txtNameTaraf.Properties.MaxLength = 50;
-            this.txtNameTaraf.Size = new System.Drawing.Size(294, 34);
+            this.txtNameTaraf.Size = new System.Drawing.Size(235, 30);
             this.txtNameTaraf.TabIndex = 2;
             // 
             // labelControl28
@@ -2390,10 +2339,10 @@
             this.labelControl28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl28.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl28.Appearance.Options.UseForeColor = true;
-            this.labelControl28.Location = new System.Drawing.Point(957, 59);
-            this.labelControl28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl28.Location = new System.Drawing.Point(1087, 52);
+            this.labelControl28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(71, 27);
+            this.labelControl28.Size = new System.Drawing.Size(63, 24);
             this.labelControl28.TabIndex = 171;
             this.labelControl28.Text = "نام قسمت";
             // 
@@ -2401,13 +2350,13 @@
             // 
             this.txtShDakheli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShDakheli.EnterMoveNextControl = true;
-            this.txtShDakheli.Location = new System.Drawing.Point(429, 56);
-            this.txtShDakheli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShDakheli.Location = new System.Drawing.Point(664, 50);
+            this.txtShDakheli.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShDakheli.Name = "txtShDakheli";
             this.txtShDakheli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShDakheli.Properties.Appearance.Options.UseForeColor = true;
             this.txtShDakheli.Properties.MaxLength = 20;
-            this.txtShDakheli.Size = new System.Drawing.Size(190, 34);
+            this.txtShDakheli.Size = new System.Drawing.Size(152, 30);
             this.txtShDakheli.TabIndex = 4;
             // 
             // labelControl27
@@ -2415,10 +2364,10 @@
             this.labelControl27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl27.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl27.Appearance.Options.UseForeColor = true;
-            this.labelControl27.Location = new System.Drawing.Point(323, 17);
-            this.labelControl27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl27.Location = new System.Drawing.Point(579, 15);
+            this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(57, 27);
+            this.labelControl27.Size = new System.Drawing.Size(50, 24);
             this.labelControl27.TabIndex = 171;
             this.labelControl27.Text = "نام طرف";
             // 
@@ -2427,10 +2376,10 @@
             this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl15.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(627, 59);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl15.Location = new System.Drawing.Point(823, 52);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(85, 27);
+            this.labelControl15.Size = new System.Drawing.Size(74, 24);
             this.labelControl15.TabIndex = 171;
             this.labelControl15.Text = "شماره داخلی";
             // 
@@ -2438,13 +2387,13 @@
             // 
             this.txtShTamas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShTamas.EnterMoveNextControl = true;
-            this.txtShTamas.Location = new System.Drawing.Point(429, 13);
-            this.txtShTamas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShTamas.Location = new System.Drawing.Point(664, 12);
+            this.txtShTamas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShTamas.Name = "txtShTamas";
             this.txtShTamas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShTamas.Properties.Appearance.Options.UseForeColor = true;
             this.txtShTamas.Properties.MaxLength = 20;
-            this.txtShTamas.Size = new System.Drawing.Size(191, 34);
+            this.txtShTamas.Size = new System.Drawing.Size(153, 30);
             this.txtShTamas.TabIndex = 1;
             // 
             // labelControl17
@@ -2452,10 +2401,10 @@
             this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl17.Appearance.Options.UseForeColor = true;
-            this.labelControl17.Location = new System.Drawing.Point(626, 17);
-            this.labelControl17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl17.Location = new System.Drawing.Point(822, 15);
+            this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(83, 27);
+            this.labelControl17.Size = new System.Drawing.Size(74, 24);
             this.labelControl17.TabIndex = 171;
             this.labelControl17.Text = "شماره تماس";
             // 
@@ -2464,10 +2413,10 @@
             this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl22.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl22.Appearance.Options.UseForeColor = true;
-            this.labelControl22.Location = new System.Drawing.Point(959, 17);
-            this.labelControl22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl22.Location = new System.Drawing.Point(1088, 15);
+            this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(69, 27);
+            this.labelControl22.Size = new System.Drawing.Size(62, 24);
             this.labelControl22.TabIndex = 169;
             this.labelControl22.Text = "نوع تماس";
             // 
@@ -2475,13 +2424,13 @@
             // 
             this.txtMolahezat_T.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_T.EnterMoveNextControl = true;
-            this.txtMolahezat_T.Location = new System.Drawing.Point(22, 98);
-            this.txtMolahezat_T.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_T.Location = new System.Drawing.Point(339, 87);
+            this.txtMolahezat_T.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_T.Name = "txtMolahezat_T";
             this.txtMolahezat_T.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_T.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_T.Properties.MaxLength = 400;
-            this.txtMolahezat_T.Size = new System.Drawing.Size(930, 34);
+            this.txtMolahezat_T.Size = new System.Drawing.Size(744, 30);
             this.txtMolahezat_T.TabIndex = 6;
             // 
             // labelControl26
@@ -2489,10 +2438,10 @@
             this.labelControl26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl26.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl26.Appearance.Options.UseForeColor = true;
-            this.labelControl26.Location = new System.Drawing.Point(959, 101);
-            this.labelControl26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl26.Location = new System.Drawing.Point(1088, 90);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(63, 27);
+            this.labelControl26.Size = new System.Drawing.Size(54, 24);
             this.labelControl26.TabIndex = 148;
             this.labelControl26.Text = "ملاحظات";
             // 
@@ -2500,8 +2449,7 @@
             // 
             this.cmbNoeTamas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNoeTamas.EnterMoveNextControl = true;
-            this.cmbNoeTamas.Location = new System.Drawing.Point(762, 15);
-            this.cmbNoeTamas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNoeTamas.Location = new System.Drawing.Point(931, 13);
             this.cmbNoeTamas.Name = "cmbNoeTamas";
             this.cmbNoeTamas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbNoeTamas.Properties.Appearance.Options.UseForeColor = true;
@@ -2516,9 +2464,8 @@
             "پیامک",
             "سایر"});
             this.cmbNoeTamas.Properties.PopupSizeable = true;
-            this.cmbNoeTamas.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNoeTamas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNoeTamas.Size = new System.Drawing.Size(190, 34);
+            this.cmbNoeTamas.Size = new System.Drawing.Size(152, 30);
             this.cmbNoeTamas.TabIndex = 0;
             this.cmbNoeTamas.Enter += new System.EventHandler(this.cmbNoeTamas_Enter);
             // 
@@ -2526,9 +2473,8 @@
             // 
             this.tpFazaMajazi.Controls.Add(this.panelControl7);
             this.tpFazaMajazi.Controls.Add(this.panelControl_FazaMajazi);
-            this.tpFazaMajazi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpFazaMajazi.Name = "tpFazaMajazi";
-            this.tpFazaMajazi.Size = new System.Drawing.Size(1054, 429);
+            this.tpFazaMajazi.Size = new System.Drawing.Size(1164, 443);
             this.tpFazaMajazi.Text = "فضای مجازی";
             // 
             // panelControl7
@@ -2538,21 +2484,20 @@
             this.panelControl7.Controls.Add(this.labelControl32);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
-            this.panelControl7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl7.Size = new System.Drawing.Size(1164, 282);
             this.panelControl7.TabIndex = 41;
             // 
             // gridControlFazaMajazi1
             // 
             this.gridControlFazaMajazi1.DataSource = this.epFazaMajazi_AsBindingSource;
             this.gridControlFazaMajazi1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlFazaMajazi1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlFazaMajazi1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlFazaMajazi1.Location = new System.Drawing.Point(2, 2);
             this.gridControlFazaMajazi1.MainView = this.gridViewFazaMajazi1;
-            this.gridControlFazaMajazi1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlFazaMajazi1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlFazaMajazi1.Name = "gridControlFazaMajazi1";
-            this.gridControlFazaMajazi1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlFazaMajazi1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlFazaMajazi1.TabIndex = 32;
             this.gridControlFazaMajazi1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewFazaMajazi1});
@@ -2570,10 +2515,10 @@
             this.gridColumn20,
             this.gridColumn24,
             this.gridColumn25});
-            this.gridViewFazaMajazi1.DetailHeight = 378;
+            this.gridViewFazaMajazi1.DetailHeight = 336;
             this.gridViewFazaMajazi1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewFazaMajazi1.GridControl = this.gridControlFazaMajazi1;
-            this.gridViewFazaMajazi1.IndicatorWidth = 28;
+            this.gridViewFazaMajazi1.IndicatorWidth = 22;
             this.gridViewFazaMajazi1.Name = "gridViewFazaMajazi1";
             this.gridViewFazaMajazi1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewFazaMajazi1.OptionsBehavior.Editable = false;
@@ -2597,9 +2542,9 @@
             // 
             this.gridColumn15.Caption = "آیدی";
             this.gridColumn15.FieldName = "Id";
-            this.gridColumn15.MinWidth = 21;
+            this.gridColumn15.MinWidth = 17;
             this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Width = 84;
+            this.gridColumn15.Width = 67;
             // 
             // gridColumn16
             // 
@@ -2611,12 +2556,12 @@
             this.gridColumn16.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn16.Caption = "ردیف";
             this.gridColumn16.FieldName = "Line";
-            this.gridColumn16.MinWidth = 21;
+            this.gridColumn16.MinWidth = 17;
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 0;
-            this.gridColumn16.Width = 66;
+            this.gridColumn16.Width = 53;
             // 
             // gridColumn19
             // 
@@ -2628,11 +2573,11 @@
             this.gridColumn19.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn19.Caption = "آدرس";
             this.gridColumn19.FieldName = "NameAdress";
-            this.gridColumn19.MinWidth = 22;
+            this.gridColumn19.MinWidth = 18;
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
             this.gridColumn19.VisibleIndex = 1;
-            this.gridColumn19.Width = 164;
+            this.gridColumn19.Width = 131;
             // 
             // gridColumn20
             // 
@@ -2644,11 +2589,11 @@
             this.gridColumn20.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn20.Caption = "شرح آدرس";
             this.gridColumn20.FieldName = "SharhAdress";
-            this.gridColumn20.MinWidth = 22;
+            this.gridColumn20.MinWidth = 18;
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 2;
-            this.gridColumn20.Width = 545;
+            this.gridColumn20.Width = 436;
             // 
             // gridColumn24
             // 
@@ -2660,11 +2605,11 @@
             this.gridColumn24.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn24.Caption = "پیش فرض";
             this.gridColumn24.FieldName = "IsDefault";
-            this.gridColumn24.MinWidth = 22;
+            this.gridColumn24.MinWidth = 18;
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 3;
-            this.gridColumn24.Width = 145;
+            this.gridColumn24.Width = 116;
             // 
             // gridColumn25
             // 
@@ -2676,28 +2621,28 @@
             this.gridColumn25.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn25.Caption = "ملاحظات";
             this.gridColumn25.FieldName = "Molahezat";
-            this.gridColumn25.MinWidth = 22;
+            this.gridColumn25.MinWidth = 18;
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
             this.gridColumn25.VisibleIndex = 4;
-            this.gridColumn25.Width = 545;
+            this.gridColumn25.Width = 436;
             // 
             // labelControl30
             // 
-            this.labelControl30.Location = new System.Drawing.Point(25, 86);
-            this.labelControl30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl30.Location = new System.Drawing.Point(20, 76);
+            this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(53, 27);
+            this.labelControl30.Size = new System.Drawing.Size(48, 24);
             this.labelControl30.TabIndex = 31;
             this.labelControl30.Text = "نام کاربر";
             this.labelControl30.Visible = false;
             // 
             // labelControl32
             // 
-            this.labelControl32.Location = new System.Drawing.Point(25, 51);
-            this.labelControl32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl32.Location = new System.Drawing.Point(20, 45);
+            this.labelControl32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(72, 27);
+            this.labelControl32.Size = new System.Drawing.Size(66, 24);
             this.labelControl32.TabIndex = 30;
             this.labelControl32.Text = "آیدی  کاربر";
             this.labelControl32.Visible = false;
@@ -2714,10 +2659,9 @@
             this.panelControl_FazaMajazi.Controls.Add(this.cmbNameAdress_F);
             this.panelControl_FazaMajazi.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_FazaMajazi.Enabled = false;
-            this.panelControl_FazaMajazi.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_FazaMajazi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_FazaMajazi.Location = new System.Drawing.Point(0, 282);
             this.panelControl_FazaMajazi.Name = "panelControl_FazaMajazi";
-            this.panelControl_FazaMajazi.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_FazaMajazi.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_FazaMajazi.TabIndex = 42;
             // 
             // txtIndex_FazaMajazi
@@ -2725,8 +2669,7 @@
             this.txtIndex_FazaMajazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_FazaMajazi.EditValue = "";
             this.txtIndex_FazaMajazi.Enabled = false;
-            this.txtIndex_FazaMajazi.Location = new System.Drawing.Point(894, 98);
-            this.txtIndex_FazaMajazi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_FazaMajazi.Location = new System.Drawing.Point(1036, 87);
             this.txtIndex_FazaMajazi.Name = "txtIndex_FazaMajazi";
             this.txtIndex_FazaMajazi.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_FazaMajazi.Properties.Appearance.Options.UseForeColor = true;
@@ -2736,7 +2679,7 @@
             this.txtIndex_FazaMajazi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_FazaMajazi.Properties.NullText = "آیدی انبار";
             this.txtIndex_FazaMajazi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_FazaMajazi.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_FazaMajazi.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_FazaMajazi.TabIndex = 214;
             this.txtIndex_FazaMajazi.TabStop = false;
             this.txtIndex_FazaMajazi.Visible = false;
@@ -2745,28 +2688,27 @@
             // 
             this.chkDefaultFazaMajazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultFazaMajazi.EnterMoveNextControl = true;
-            this.chkDefaultFazaMajazi.Location = new System.Drawing.Point(15, 56);
-            this.chkDefaultFazaMajazi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultFazaMajazi.Location = new System.Drawing.Point(333, 50);
             this.chkDefaultFazaMajazi.Name = "chkDefaultFazaMajazi";
             this.chkDefaultFazaMajazi.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultFazaMajazi.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultFazaMajazi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkDefaultFazaMajazi.Properties.Caption = "پیش فرض";
-            this.chkDefaultFazaMajazi.Size = new System.Drawing.Size(112, 35);
+            this.chkDefaultFazaMajazi.Size = new System.Drawing.Size(90, 32);
             this.chkDefaultFazaMajazi.TabIndex = 3;
             // 
             // txtSharhAdress_F
             // 
             this.txtSharhAdress_F.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSharhAdress_F.EnterMoveNextControl = true;
-            this.txtSharhAdress_F.Location = new System.Drawing.Point(15, 13);
-            this.txtSharhAdress_F.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSharhAdress_F.Location = new System.Drawing.Point(333, 12);
+            this.txtSharhAdress_F.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSharhAdress_F.Name = "txtSharhAdress_F";
             this.txtSharhAdress_F.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSharhAdress_F.Properties.Appearance.Options.UseForeColor = true;
             this.txtSharhAdress_F.Properties.MaxLength = 200;
             this.txtSharhAdress_F.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSharhAdress_F.Size = new System.Drawing.Size(606, 34);
+            this.txtSharhAdress_F.Size = new System.Drawing.Size(485, 30);
             this.txtSharhAdress_F.TabIndex = 1;
             // 
             // labelControl37
@@ -2774,10 +2716,10 @@
             this.labelControl37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl37.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl37.Appearance.Options.UseForeColor = true;
-            this.labelControl37.Location = new System.Drawing.Point(627, 17);
-            this.labelControl37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl37.Location = new System.Drawing.Point(823, 15);
+            this.labelControl37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(74, 27);
+            this.labelControl37.Size = new System.Drawing.Size(68, 24);
             this.labelControl37.TabIndex = 171;
             this.labelControl37.Text = "شرح آدرس";
             // 
@@ -2786,10 +2728,10 @@
             this.labelControl38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl38.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl38.Appearance.Options.UseForeColor = true;
-            this.labelControl38.Location = new System.Drawing.Point(939, 17);
-            this.labelControl38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl38.Location = new System.Drawing.Point(1072, 15);
+            this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(90, 27);
+            this.labelControl38.Size = new System.Drawing.Size(82, 24);
             this.labelControl38.TabIndex = 169;
             this.labelControl38.Text = "انتخاب آدرس";
             // 
@@ -2797,13 +2739,13 @@
             // 
             this.txtMolahezat_F.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_F.EnterMoveNextControl = true;
-            this.txtMolahezat_F.Location = new System.Drawing.Point(134, 56);
-            this.txtMolahezat_F.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_F.Location = new System.Drawing.Point(428, 50);
+            this.txtMolahezat_F.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_F.Name = "txtMolahezat_F";
             this.txtMolahezat_F.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_F.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_F.Properties.MaxLength = 400;
-            this.txtMolahezat_F.Size = new System.Drawing.Size(797, 34);
+            this.txtMolahezat_F.Size = new System.Drawing.Size(638, 30);
             this.txtMolahezat_F.TabIndex = 2;
             // 
             // labelControl39
@@ -2811,10 +2753,10 @@
             this.labelControl39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl39.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl39.Appearance.Options.UseForeColor = true;
-            this.labelControl39.Location = new System.Drawing.Point(938, 59);
-            this.labelControl39.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl39.Location = new System.Drawing.Point(1071, 52);
+            this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(63, 27);
+            this.labelControl39.Size = new System.Drawing.Size(54, 24);
             this.labelControl39.TabIndex = 148;
             this.labelControl39.Text = "ملاحظات";
             // 
@@ -2822,8 +2764,7 @@
             // 
             this.cmbNameAdress_F.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameAdress_F.EnterMoveNextControl = true;
-            this.cmbNameAdress_F.Location = new System.Drawing.Point(746, 15);
-            this.cmbNameAdress_F.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameAdress_F.Location = new System.Drawing.Point(918, 13);
             this.cmbNameAdress_F.Name = "cmbNameAdress_F";
             this.cmbNameAdress_F.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbNameAdress_F.Properties.Appearance.Options.UseForeColor = true;
@@ -2837,9 +2778,8 @@
             "شبکه اجتماعی",
             "سایر"});
             this.cmbNameAdress_F.Properties.PopupSizeable = true;
-            this.cmbNameAdress_F.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNameAdress_F.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameAdress_F.Size = new System.Drawing.Size(185, 34);
+            this.cmbNameAdress_F.Size = new System.Drawing.Size(148, 30);
             this.cmbNameAdress_F.TabIndex = 0;
             this.cmbNameAdress_F.Enter += new System.EventHandler(this.cmbNameAdress_F_Enter);
             // 
@@ -2847,9 +2787,8 @@
             // 
             this.tpHesabBanki.Controls.Add(this.panelControl8);
             this.tpHesabBanki.Controls.Add(this.panelControl_HesabBanki);
-            this.tpHesabBanki.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpHesabBanki.Name = "tpHesabBanki";
-            this.tpHesabBanki.Size = new System.Drawing.Size(1054, 429);
+            this.tpHesabBanki.Size = new System.Drawing.Size(1164, 443);
             this.tpHesabBanki.Text = "حسابهای بانکی";
             // 
             // panelControl8
@@ -2859,21 +2798,20 @@
             this.panelControl8.Controls.Add(this.labelControl35);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl8.Location = new System.Drawing.Point(0, 0);
-            this.panelControl8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl8.Size = new System.Drawing.Size(1164, 282);
             this.panelControl8.TabIndex = 43;
             // 
             // gridControlHesabBanki1
             // 
             this.gridControlHesabBanki1.DataSource = this.epHesabBanki_AsBindingSource;
             this.gridControlHesabBanki1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlHesabBanki1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlHesabBanki1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHesabBanki1.Location = new System.Drawing.Point(2, 2);
             this.gridControlHesabBanki1.MainView = this.gridViewHesabBanki1;
-            this.gridControlHesabBanki1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlHesabBanki1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlHesabBanki1.Name = "gridControlHesabBanki1";
-            this.gridControlHesabBanki1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlHesabBanki1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlHesabBanki1.TabIndex = 32;
             this.gridControlHesabBanki1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewHesabBanki1});
@@ -2894,10 +2832,10 @@
             this.gridColumn31,
             this.gridColumn27,
             this.gridColumn28});
-            this.gridViewHesabBanki1.DetailHeight = 378;
+            this.gridViewHesabBanki1.DetailHeight = 336;
             this.gridViewHesabBanki1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewHesabBanki1.GridControl = this.gridControlHesabBanki1;
-            this.gridViewHesabBanki1.IndicatorWidth = 28;
+            this.gridViewHesabBanki1.IndicatorWidth = 22;
             this.gridViewHesabBanki1.Name = "gridViewHesabBanki1";
             this.gridViewHesabBanki1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewHesabBanki1.OptionsBehavior.Editable = false;
@@ -2921,9 +2859,9 @@
             // 
             this.gridColumn21.Caption = "آیدی";
             this.gridColumn21.FieldName = "Id";
-            this.gridColumn21.MinWidth = 21;
+            this.gridColumn21.MinWidth = 17;
             this.gridColumn21.Name = "gridColumn21";
-            this.gridColumn21.Width = 84;
+            this.gridColumn21.Width = 67;
             // 
             // gridColumn22
             // 
@@ -2935,12 +2873,12 @@
             this.gridColumn22.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn22.Caption = "ردیف";
             this.gridColumn22.FieldName = "Line";
-            this.gridColumn22.MinWidth = 21;
+            this.gridColumn22.MinWidth = 17;
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 0;
-            this.gridColumn22.Width = 66;
+            this.gridColumn22.Width = 53;
             // 
             // gridColumn23
             // 
@@ -2952,11 +2890,11 @@
             this.gridColumn23.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn23.Caption = "نام بانک";
             this.gridColumn23.FieldName = "NameBank";
-            this.gridColumn23.MinWidth = 22;
+            this.gridColumn23.MinWidth = 18;
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 1;
-            this.gridColumn23.Width = 164;
+            this.gridColumn23.Width = 131;
             // 
             // gridColumn26
             // 
@@ -2968,11 +2906,11 @@
             this.gridColumn26.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn26.Caption = "شماره حساب";
             this.gridColumn26.FieldName = "ShomareHesab";
-            this.gridColumn26.MinWidth = 22;
+            this.gridColumn26.MinWidth = 18;
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
             this.gridColumn26.VisibleIndex = 2;
-            this.gridColumn26.Width = 255;
+            this.gridColumn26.Width = 204;
             // 
             // gridColumn29
             // 
@@ -2984,11 +2922,11 @@
             this.gridColumn29.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn29.Caption = "شماره کارت";
             this.gridColumn29.FieldName = "ShomareKart";
-            this.gridColumn29.MinWidth = 23;
+            this.gridColumn29.MinWidth = 18;
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.Visible = true;
             this.gridColumn29.VisibleIndex = 3;
-            this.gridColumn29.Width = 255;
+            this.gridColumn29.Width = 204;
             // 
             // gridColumn30
             // 
@@ -3000,11 +2938,11 @@
             this.gridColumn30.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn30.Caption = "شماره شبا";
             this.gridColumn30.FieldName = "ShomareShaba";
-            this.gridColumn30.MinWidth = 23;
+            this.gridColumn30.MinWidth = 18;
             this.gridColumn30.Name = "gridColumn30";
             this.gridColumn30.Visible = true;
             this.gridColumn30.VisibleIndex = 4;
-            this.gridColumn30.Width = 255;
+            this.gridColumn30.Width = 204;
             // 
             // gridColumn31
             // 
@@ -3016,11 +2954,11 @@
             this.gridColumn31.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn31.Caption = "شماره مشتری";
             this.gridColumn31.FieldName = "ShomareMoshtari";
-            this.gridColumn31.MinWidth = 23;
+            this.gridColumn31.MinWidth = 18;
             this.gridColumn31.Name = "gridColumn31";
             this.gridColumn31.Visible = true;
             this.gridColumn31.VisibleIndex = 5;
-            this.gridColumn31.Width = 255;
+            this.gridColumn31.Width = 204;
             // 
             // gridColumn27
             // 
@@ -3032,11 +2970,11 @@
             this.gridColumn27.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn27.Caption = "پیش فرض";
             this.gridColumn27.FieldName = "IsDefault";
-            this.gridColumn27.MinWidth = 22;
+            this.gridColumn27.MinWidth = 18;
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
             this.gridColumn27.VisibleIndex = 6;
-            this.gridColumn27.Width = 145;
+            this.gridColumn27.Width = 116;
             // 
             // gridColumn28
             // 
@@ -3048,28 +2986,28 @@
             this.gridColumn28.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn28.Caption = "ملاحظات";
             this.gridColumn28.FieldName = "Molahezat";
-            this.gridColumn28.MinWidth = 22;
+            this.gridColumn28.MinWidth = 18;
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
             this.gridColumn28.VisibleIndex = 7;
-            this.gridColumn28.Width = 545;
+            this.gridColumn28.Width = 436;
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(25, 86);
-            this.labelControl34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl34.Location = new System.Drawing.Point(20, 76);
+            this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(53, 27);
+            this.labelControl34.Size = new System.Drawing.Size(48, 24);
             this.labelControl34.TabIndex = 31;
             this.labelControl34.Text = "نام کاربر";
             this.labelControl34.Visible = false;
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(25, 51);
-            this.labelControl35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl35.Location = new System.Drawing.Point(20, 45);
+            this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(72, 27);
+            this.labelControl35.Size = new System.Drawing.Size(66, 24);
             this.labelControl35.TabIndex = 30;
             this.labelControl35.Text = "آیدی  کاربر";
             this.labelControl35.Visible = false;
@@ -3093,10 +3031,9 @@
             this.panelControl_HesabBanki.Controls.Add(this.labelControl41);
             this.panelControl_HesabBanki.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_HesabBanki.Enabled = false;
-            this.panelControl_HesabBanki.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_HesabBanki.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_HesabBanki.Location = new System.Drawing.Point(0, 282);
             this.panelControl_HesabBanki.Name = "panelControl_HesabBanki";
-            this.panelControl_HesabBanki.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_HesabBanki.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_HesabBanki.TabIndex = 44;
             // 
             // txtIndex_HesabhaBanki
@@ -3104,8 +3041,7 @@
             this.txtIndex_HesabhaBanki.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_HesabhaBanki.EditValue = "";
             this.txtIndex_HesabhaBanki.Enabled = false;
-            this.txtIndex_HesabhaBanki.Location = new System.Drawing.Point(10, 55);
-            this.txtIndex_HesabhaBanki.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_HesabhaBanki.Location = new System.Drawing.Point(329, 49);
             this.txtIndex_HesabhaBanki.Name = "txtIndex_HesabhaBanki";
             this.txtIndex_HesabhaBanki.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_HesabhaBanki.Properties.Appearance.Options.UseForeColor = true;
@@ -3115,7 +3051,7 @@
             this.txtIndex_HesabhaBanki.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_HesabhaBanki.Properties.NullText = "آیدی انبار";
             this.txtIndex_HesabhaBanki.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_HesabhaBanki.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_HesabhaBanki.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_HesabhaBanki.TabIndex = 214;
             this.txtIndex_HesabhaBanki.TabStop = false;
             this.txtIndex_HesabhaBanki.Visible = false;
@@ -3124,13 +3060,12 @@
             // 
             this.txtShomareShaba.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareShaba.EnterMoveNextControl = true;
-            this.txtShomareShaba.Location = new System.Drawing.Point(704, 55);
-            this.txtShomareShaba.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtShomareShaba.Location = new System.Drawing.Point(884, 49);
             this.txtShomareShaba.Name = "txtShomareShaba";
             this.txtShomareShaba.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShomareShaba.Properties.Appearance.Options.UseForeColor = true;
             this.txtShomareShaba.Properties.MaxLength = 40;
-            this.txtShomareShaba.Size = new System.Drawing.Size(255, 34);
+            this.txtShomareShaba.Size = new System.Drawing.Size(204, 30);
             this.txtShomareShaba.TabIndex = 3;
             // 
             // labelControl45
@@ -3139,10 +3074,9 @@
             this.labelControl45.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl45.Appearance.Options.UseForeColor = true;
             this.labelControl45.AutoEllipsis = true;
-            this.labelControl45.Location = new System.Drawing.Point(587, 57);
-            this.labelControl45.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl45.Location = new System.Drawing.Point(791, 51);
             this.labelControl45.Name = "labelControl45";
-            this.labelControl45.Size = new System.Drawing.Size(92, 27);
+            this.labelControl45.Size = new System.Drawing.Size(83, 24);
             this.labelControl45.TabIndex = 181;
             this.labelControl45.Text = "شماره مشتری";
             // 
@@ -3150,13 +3084,12 @@
             // 
             this.txtShomareMoshtari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareMoshtari.EnterMoveNextControl = true;
-            this.txtShomareMoshtari.Location = new System.Drawing.Point(367, 55);
-            this.txtShomareMoshtari.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtShomareMoshtari.Location = new System.Drawing.Point(615, 49);
             this.txtShomareMoshtari.Name = "txtShomareMoshtari";
             this.txtShomareMoshtari.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShomareMoshtari.Properties.Appearance.Options.UseForeColor = true;
             this.txtShomareMoshtari.Properties.MaxLength = 40;
-            this.txtShomareMoshtari.Size = new System.Drawing.Size(214, 34);
+            this.txtShomareMoshtari.Size = new System.Drawing.Size(171, 30);
             this.txtShomareMoshtari.TabIndex = 4;
             // 
             // labelControl46
@@ -3165,10 +3098,9 @@
             this.labelControl46.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl46.Appearance.Options.UseForeColor = true;
             this.labelControl46.AutoEllipsis = true;
-            this.labelControl46.Location = new System.Drawing.Point(969, 57);
-            this.labelControl46.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl46.Location = new System.Drawing.Point(1096, 51);
             this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(65, 27);
+            this.labelControl46.Size = new System.Drawing.Size(59, 24);
             this.labelControl46.TabIndex = 182;
             this.labelControl46.Text = "شماره شبا";
             // 
@@ -3176,8 +3108,7 @@
             // 
             this.txtShomareKart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareKart.EnterMoveNextControl = true;
-            this.txtShomareKart.Location = new System.Drawing.Point(10, 12);
-            this.txtShomareKart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtShomareKart.Location = new System.Drawing.Point(329, 11);
             this.txtShomareKart.Name = "txtShomareKart";
             this.txtShomareKart.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShomareKart.Properties.Appearance.Options.UseForeColor = true;
@@ -3186,7 +3117,7 @@
             this.txtShomareKart.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtShomareKart.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtShomareKart.Properties.MaxLength = 40;
-            this.txtShomareKart.Size = new System.Drawing.Size(238, 34);
+            this.txtShomareKart.Size = new System.Drawing.Size(190, 30);
             this.txtShomareKart.TabIndex = 2;
             // 
             // labelControl44
@@ -3195,10 +3126,9 @@
             this.labelControl44.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl44.Appearance.Options.UseForeColor = true;
             this.labelControl44.AutoEllipsis = true;
-            this.labelControl44.Location = new System.Drawing.Point(260, 16);
-            this.labelControl44.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl44.Location = new System.Drawing.Point(529, 14);
             this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(76, 27);
+            this.labelControl44.Size = new System.Drawing.Size(68, 24);
             this.labelControl44.TabIndex = 178;
             this.labelControl44.Text = "شماره کارت";
             // 
@@ -3208,10 +3138,9 @@
             this.labelControl43.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl43.Appearance.Options.UseForeColor = true;
             this.labelControl43.AutoEllipsis = true;
-            this.labelControl43.Location = new System.Drawing.Point(587, 17);
-            this.labelControl43.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl43.Location = new System.Drawing.Point(791, 15);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(89, 27);
+            this.labelControl43.Size = new System.Drawing.Size(78, 24);
             this.labelControl43.TabIndex = 176;
             this.labelControl43.Text = "شماره حساب";
             // 
@@ -3219,21 +3148,19 @@
             // 
             this.txtShomareHesab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShomareHesab.EnterMoveNextControl = true;
-            this.txtShomareHesab.Location = new System.Drawing.Point(367, 13);
-            this.txtShomareHesab.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtShomareHesab.Location = new System.Drawing.Point(615, 12);
             this.txtShomareHesab.Name = "txtShomareHesab";
             this.txtShomareHesab.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShomareHesab.Properties.Appearance.Options.UseForeColor = true;
             this.txtShomareHesab.Properties.MaxLength = 40;
-            this.txtShomareHesab.Size = new System.Drawing.Size(214, 34);
+            this.txtShomareHesab.Size = new System.Drawing.Size(171, 30);
             this.txtShomareHesab.TabIndex = 1;
             // 
             // cmbNameBank
             // 
             this.cmbNameBank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbNameBank.EnterMoveNextControl = true;
-            this.cmbNameBank.Location = new System.Drawing.Point(758, 13);
-            this.cmbNameBank.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbNameBank.Location = new System.Drawing.Point(927, 12);
             this.cmbNameBank.Name = "cmbNameBank";
             this.cmbNameBank.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbNameBank.Properties.Appearance.Options.UseForeColor = true;
@@ -3252,10 +3179,9 @@
             this.cmbNameBank.Properties.NullText = "";
             this.cmbNameBank.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbNameBank.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
-            this.cmbNameBank.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbNameBank.Properties.ValueMember = "Id";
             this.cmbNameBank.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNameBank.Size = new System.Drawing.Size(202, 34);
+            this.cmbNameBank.Size = new System.Drawing.Size(162, 30);
             this.cmbNameBank.TabIndex = 0;
             this.cmbNameBank.Enter += new System.EventHandler(this.cmbNamBank_Enter);
             // 
@@ -3268,11 +3194,10 @@
             this.btnNamBank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNamBank.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNamBank.ImageOptions.Image")));
             this.btnNamBank.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNamBank.ImageOptions.SvgImage")));
-            this.btnNamBank.Location = new System.Drawing.Point(704, 12);
-            this.btnNamBank.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnNamBank.Location = new System.Drawing.Point(884, 11);
             this.btnNamBank.Name = "btnNamBank";
             this.btnNamBank.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnNamBank.Size = new System.Drawing.Size(46, 36);
+            this.btnNamBank.Size = new System.Drawing.Size(37, 32);
             this.btnNamBank.TabIndex = 173;
             this.btnNamBank.TabStop = false;
             this.btnNamBank.ToolTipTitle = "بعدی";
@@ -3284,10 +3209,9 @@
             this.labelControl42.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl42.Appearance.Options.UseForeColor = true;
             this.labelControl42.AutoEllipsis = true;
-            this.labelControl42.Location = new System.Drawing.Point(970, 17);
-            this.labelControl42.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl42.Location = new System.Drawing.Point(1097, 15);
             this.labelControl42.Name = "labelControl42";
-            this.labelControl42.Size = new System.Drawing.Size(56, 27);
+            this.labelControl42.Size = new System.Drawing.Size(51, 24);
             this.labelControl42.TabIndex = 174;
             this.labelControl42.Text = "نام بانک";
             // 
@@ -3295,27 +3219,26 @@
             // 
             this.chkDefaultHesabBanki.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultHesabBanki.EnterMoveNextControl = true;
-            this.chkDefaultHesabBanki.Location = new System.Drawing.Point(17, 94);
-            this.chkDefaultHesabBanki.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultHesabBanki.Location = new System.Drawing.Point(335, 84);
             this.chkDefaultHesabBanki.Name = "chkDefaultHesabBanki";
             this.chkDefaultHesabBanki.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultHesabBanki.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultHesabBanki.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkDefaultHesabBanki.Properties.Caption = "پیش فرض";
-            this.chkDefaultHesabBanki.Size = new System.Drawing.Size(112, 35);
+            this.chkDefaultHesabBanki.Size = new System.Drawing.Size(90, 32);
             this.chkDefaultHesabBanki.TabIndex = 6;
             // 
             // txtMolahezat_H
             // 
             this.txtMolahezat_H.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_H.EnterMoveNextControl = true;
-            this.txtMolahezat_H.Location = new System.Drawing.Point(136, 96);
-            this.txtMolahezat_H.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_H.Location = new System.Drawing.Point(430, 85);
+            this.txtMolahezat_H.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_H.Name = "txtMolahezat_H";
             this.txtMolahezat_H.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_H.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_H.Properties.MaxLength = 400;
-            this.txtMolahezat_H.Size = new System.Drawing.Size(824, 34);
+            this.txtMolahezat_H.Size = new System.Drawing.Size(659, 30);
             this.txtMolahezat_H.TabIndex = 5;
             // 
             // labelControl41
@@ -3323,10 +3246,10 @@
             this.labelControl41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl41.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl41.Appearance.Options.UseForeColor = true;
-            this.labelControl41.Location = new System.Drawing.Point(966, 98);
-            this.labelControl41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl41.Location = new System.Drawing.Point(1094, 87);
+            this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
-            this.labelControl41.Size = new System.Drawing.Size(63, 27);
+            this.labelControl41.Size = new System.Drawing.Size(54, 24);
             this.labelControl41.TabIndex = 148;
             this.labelControl41.Text = "ملاحظات";
             // 
@@ -3334,9 +3257,8 @@
             // 
             this.tpEetebarat.Controls.Add(this.panelControl3);
             this.tpEetebarat.Controls.Add(this.panelControl_Eetebarat);
-            this.tpEetebarat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpEetebarat.Name = "tpEetebarat";
-            this.tpEetebarat.Size = new System.Drawing.Size(1054, 429);
+            this.tpEetebarat.Size = new System.Drawing.Size(1164, 443);
             this.tpEetebarat.Text = "اعتبار فروش";
             // 
             // panelControl3
@@ -3346,21 +3268,20 @@
             this.panelControl3.Controls.Add(this.labelControl23);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl3.Size = new System.Drawing.Size(1164, 282);
             this.panelControl3.TabIndex = 41;
             // 
             // gridControlEetebar1
             // 
             this.gridControlEetebar1.DataSource = this.epEetebarat_AsBindingSource;
             this.gridControlEetebar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlEetebar1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlEetebar1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlEetebar1.Location = new System.Drawing.Point(2, 2);
             this.gridControlEetebar1.MainView = this.gridViewEetebar1;
-            this.gridControlEetebar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlEetebar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlEetebar1.Name = "gridControlEetebar1";
-            this.gridControlEetebar1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlEetebar1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlEetebar1.TabIndex = 32;
             this.gridControlEetebar1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewEetebar1});
@@ -3374,15 +3295,16 @@
             this.gridViewEetebar1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn8,
             this.gridColumn11,
-            this.gridColumn12,
-            this.gridColumn17,
+            this.colCode1,
             this.gridColumn13,
-            this.gridColumn14,
+            this.gridColumn12,
+            this.TaEngheza,
+            this.gridColumn17,
             this.gridColumn18});
-            this.gridViewEetebar1.DetailHeight = 378;
+            this.gridViewEetebar1.DetailHeight = 336;
             this.gridViewEetebar1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewEetebar1.GridControl = this.gridControlEetebar1;
-            this.gridViewEetebar1.IndicatorWidth = 28;
+            this.gridViewEetebar1.IndicatorWidth = 22;
             this.gridViewEetebar1.Name = "gridViewEetebar1";
             this.gridViewEetebar1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewEetebar1.OptionsBehavior.Editable = false;
@@ -3406,9 +3328,9 @@
             // 
             this.gridColumn8.Caption = "آیدی";
             this.gridColumn8.FieldName = "Id";
-            this.gridColumn8.MinWidth = 21;
+            this.gridColumn8.MinWidth = 17;
             this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Width = 84;
+            this.gridColumn8.Width = 67;
             // 
             // gridColumn11
             // 
@@ -3420,12 +3342,44 @@
             this.gridColumn11.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn11.Caption = "ردیف";
             this.gridColumn11.FieldName = "Line";
-            this.gridColumn11.MinWidth = 21;
+            this.gridColumn11.MinWidth = 17;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 0;
-            this.gridColumn11.Width = 66;
+            this.gridColumn11.Width = 53;
+            // 
+            // colCode1
+            // 
+            this.colCode1.AppearanceCell.Options.UseTextOptions = true;
+            this.colCode1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colCode1.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colCode1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colCode1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colCode1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colCode1.Caption = "کد";
+            this.colCode1.FieldName = "Code";
+            this.colCode1.MinWidth = 25;
+            this.colCode1.Name = "colCode1";
+            this.colCode1.Visible = true;
+            this.colCode1.VisibleIndex = 1;
+            this.colCode1.Width = 115;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn13.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn13.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn13.Caption = "شماره قرارداد";
+            this.gridColumn13.FieldName = "ShGharadad";
+            this.gridColumn13.MinWidth = 18;
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 2;
+            this.gridColumn13.Width = 160;
             // 
             // gridColumn12
             // 
@@ -3439,11 +3393,27 @@
             this.gridColumn12.DisplayFormat.FormatString = "n";
             this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn12.FieldName = "Mablagh";
-            this.gridColumn12.MinWidth = 22;
+            this.gridColumn12.MinWidth = 18;
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 1;
-            this.gridColumn12.Width = 182;
+            this.gridColumn12.VisibleIndex = 3;
+            this.gridColumn12.Width = 173;
+            // 
+            // TaEngheza
+            // 
+            this.TaEngheza.AppearanceCell.Options.UseTextOptions = true;
+            this.TaEngheza.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TaEngheza.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.TaEngheza.AppearanceHeader.Options.UseTextOptions = true;
+            this.TaEngheza.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TaEngheza.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.TaEngheza.Caption = "تاریخ انقضاء";
+            this.TaEngheza.FieldName = "TaEngheza";
+            this.TaEngheza.MinWidth = 25;
+            this.TaEngheza.Name = "TaEngheza";
+            this.TaEngheza.Visible = true;
+            this.TaEngheza.VisibleIndex = 4;
+            this.TaEngheza.Width = 160;
             // 
             // gridColumn17
             // 
@@ -3453,45 +3423,13 @@
             this.gridColumn17.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn17.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn17.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn17.Caption = "ش پیش فرض";
+            this.gridColumn17.Caption = "اعمال روی فاکتور";
             this.gridColumn17.FieldName = "IsDefault";
-            this.gridColumn17.MinWidth = 22;
+            this.gridColumn17.MinWidth = 18;
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 2;
-            this.gridColumn17.Width = 145;
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn13.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn13.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn13.Caption = "شماره قرارداد";
-            this.gridColumn13.FieldName = "ShGharadad";
-            this.gridColumn13.MinWidth = 22;
-            this.gridColumn13.Name = "gridColumn13";
-            this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 3;
-            this.gridColumn13.Width = 200;
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn14.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn14.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn14.Caption = "تاریخ قرارداد";
-            this.gridColumn14.FieldName = "TarikhGharadad";
-            this.gridColumn14.MinWidth = 22;
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 4;
-            this.gridColumn14.Width = 200;
+            this.gridColumn17.VisibleIndex = 5;
+            this.gridColumn17.Width = 136;
             // 
             // gridColumn18
             // 
@@ -3503,38 +3441,38 @@
             this.gridColumn18.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn18.Caption = "ملاحظات";
             this.gridColumn18.FieldName = "Molahezat";
-            this.gridColumn18.MinWidth = 22;
+            this.gridColumn18.MinWidth = 18;
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 5;
-            this.gridColumn18.Width = 545;
+            this.gridColumn18.VisibleIndex = 6;
+            this.gridColumn18.Width = 436;
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(25, 86);
-            this.labelControl21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl21.Location = new System.Drawing.Point(20, 76);
+            this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(53, 27);
+            this.labelControl21.Size = new System.Drawing.Size(48, 24);
             this.labelControl21.TabIndex = 31;
             this.labelControl21.Text = "نام کاربر";
             this.labelControl21.Visible = false;
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(25, 51);
-            this.labelControl23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl23.Location = new System.Drawing.Point(20, 45);
+            this.labelControl23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(72, 27);
+            this.labelControl23.Size = new System.Drawing.Size(66, 24);
             this.labelControl23.TabIndex = 30;
             this.labelControl23.Text = "آیدی  کاربر";
             this.labelControl23.Visible = false;
             // 
             // panelControl_Eetebarat
             // 
+            this.panelControl_Eetebarat.Controls.Add(this.txtTaEngheza_E);
+            this.panelControl_Eetebarat.Controls.Add(this.labelControl68);
             this.panelControl_Eetebarat.Controls.Add(this.txtIndex_EtebarFroosh);
             this.panelControl_Eetebarat.Controls.Add(this.txtMablagh);
-            this.panelControl_Eetebarat.Controls.Add(this.txtTarikhGharadad);
-            this.panelControl_Eetebarat.Controls.Add(this.labelControl24);
             this.panelControl_Eetebarat.Controls.Add(this.chkEetebarat);
             this.panelControl_Eetebarat.Controls.Add(this.chkDefaultEetebar);
             this.panelControl_Eetebarat.Controls.Add(this.labelControl29);
@@ -3544,19 +3482,48 @@
             this.panelControl_Eetebarat.Controls.Add(this.labelControl33);
             this.panelControl_Eetebarat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_Eetebarat.Enabled = false;
-            this.panelControl_Eetebarat.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_Eetebarat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_Eetebarat.Location = new System.Drawing.Point(0, 282);
             this.panelControl_Eetebarat.Name = "panelControl_Eetebarat";
-            this.panelControl_Eetebarat.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_Eetebarat.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_Eetebarat.TabIndex = 39;
+            // 
+            // txtTaEngheza_E
+            // 
+            this.txtTaEngheza_E.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTaEngheza_E.EnterMoveNextControl = true;
+            this.txtTaEngheza_E.Location = new System.Drawing.Point(638, 47);
+            this.txtTaEngheza_E.Name = "txtTaEngheza_E";
+            this.txtTaEngheza_E.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtTaEngheza_E.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTaEngheza_E.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTaEngheza_E.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtTaEngheza_E.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtTaEngheza_E.Properties.Mask.BeepOnError = true;
+            this.txtTaEngheza_E.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtTaEngheza_E.Properties.Mask.PlaceHolder = '-';
+            this.txtTaEngheza_E.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTaEngheza_E.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTaEngheza_E.Size = new System.Drawing.Size(139, 30);
+            this.txtTaEngheza_E.TabIndex = 3;
+            // 
+            // labelControl68
+            // 
+            this.labelControl68.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl68.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.labelControl68.Appearance.Options.UseForeColor = true;
+            this.labelControl68.AutoEllipsis = true;
+            this.labelControl68.Location = new System.Drawing.Point(783, 51);
+            this.labelControl68.Name = "labelControl68";
+            this.labelControl68.Size = new System.Drawing.Size(121, 24);
+            this.labelControl68.TabIndex = 216;
+            this.labelControl68.Text = "تاریخ انقضای قرارداد";
             // 
             // txtIndex_EtebarFroosh
             // 
             this.txtIndex_EtebarFroosh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_EtebarFroosh.EditValue = "";
             this.txtIndex_EtebarFroosh.Enabled = false;
-            this.txtIndex_EtebarFroosh.Location = new System.Drawing.Point(419, 53);
-            this.txtIndex_EtebarFroosh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_EtebarFroosh.Location = new System.Drawing.Point(602, 46);
             this.txtIndex_EtebarFroosh.Name = "txtIndex_EtebarFroosh";
             this.txtIndex_EtebarFroosh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_EtebarFroosh.Properties.Appearance.Options.UseForeColor = true;
@@ -3566,7 +3533,7 @@
             this.txtIndex_EtebarFroosh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_EtebarFroosh.Properties.NullText = "آیدی انبار";
             this.txtIndex_EtebarFroosh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_EtebarFroosh.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_EtebarFroosh.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_EtebarFroosh.TabIndex = 214;
             this.txtIndex_EtebarFroosh.TabStop = false;
             this.txtIndex_EtebarFroosh.Visible = false;
@@ -3576,8 +3543,7 @@
             this.txtMablagh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMablagh.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtMablagh.EnterMoveNextControl = true;
-            this.txtMablagh.Location = new System.Drawing.Point(753, 10);
-            this.txtMablagh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMablagh.Location = new System.Drawing.Point(923, 9);
             this.txtMablagh.Name = "txtMablagh";
             this.txtMablagh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMablagh.Properties.Appearance.Options.UseForeColor = true;
@@ -3587,79 +3553,45 @@
             this.txtMablagh.Properties.Mask.EditMask = "n";
             this.txtMablagh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMablagh.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtMablagh.Size = new System.Drawing.Size(185, 34);
+            this.txtMablagh.Size = new System.Drawing.Size(148, 30);
             this.txtMablagh.TabIndex = 0;
-            // 
-            // txtTarikhGharadad
-            // 
-            this.txtTarikhGharadad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTarikhGharadad.EnterMoveNextControl = true;
-            this.txtTarikhGharadad.Location = new System.Drawing.Point(463, 53);
-            this.txtTarikhGharadad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtTarikhGharadad.Name = "txtTarikhGharadad";
-            this.txtTarikhGharadad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtTarikhGharadad.Properties.Appearance.Options.UseForeColor = true;
-            this.txtTarikhGharadad.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtTarikhGharadad.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtTarikhGharadad.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtTarikhGharadad.Properties.Mask.BeepOnError = true;
-            this.txtTarikhGharadad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtTarikhGharadad.Properties.Mask.PlaceHolder = '-';
-            this.txtTarikhGharadad.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtTarikhGharadad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTarikhGharadad.Size = new System.Drawing.Size(153, 34);
-            this.txtTarikhGharadad.TabIndex = 4;
-            // 
-            // labelControl24
-            // 
-            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl24.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.labelControl24.Appearance.Options.UseForeColor = true;
-            this.labelControl24.AutoEllipsis = true;
-            this.labelControl24.Location = new System.Drawing.Point(623, 56);
-            this.labelControl24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(83, 27);
-            this.labelControl24.TabIndex = 173;
-            this.labelControl24.Text = "تاریخ قرارداد";
             // 
             // chkEetebarat
             // 
             this.chkEetebarat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkEetebarat.EditValue = true;
             this.chkEetebarat.EnterMoveNextControl = true;
-            this.chkEetebarat.Location = new System.Drawing.Point(57, 13);
-            this.chkEetebarat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkEetebarat.Location = new System.Drawing.Point(5, 11);
             this.chkEetebarat.Name = "chkEetebarat";
             this.chkEetebarat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkEetebarat.Properties.Appearance.Options.UseForeColor = true;
-            this.chkEetebarat.Properties.Caption = "مبلغ اعتبار با احتساب مانده بدهی + جمع چکهای سررسید نشده می باشد";
-            this.chkEetebarat.Size = new System.Drawing.Size(554, 31);
-            this.chkEetebarat.TabIndex = 2;
+            this.chkEetebarat.Properties.Caption = "مبلغ اعتبار با احتساب مانده بدهی + مبلغ فاکتور + جمع چکهای سررسید نشده می باشد";
+            this.chkEetebarat.Size = new System.Drawing.Size(614, 28);
+            this.chkEetebarat.TabIndex = 6;
+            this.chkEetebarat.CheckedChanged += new System.EventHandler(this.chkEetebarat_CheckedChanged);
             // 
             // chkDefaultEetebar
             // 
             this.chkDefaultEetebar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultEetebar.EnterMoveNextControl = true;
-            this.chkDefaultEetebar.Location = new System.Drawing.Point(627, 11);
-            this.chkDefaultEetebar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultEetebar.Location = new System.Drawing.Point(634, 10);
             this.chkDefaultEetebar.Name = "chkDefaultEetebar";
             this.chkDefaultEetebar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultEetebar.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultEetebar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.chkDefaultEetebar.Properties.Caption = "پیش فرض";
-            this.chkDefaultEetebar.Size = new System.Drawing.Size(110, 35);
-            this.chkDefaultEetebar.TabIndex = 1;
+            this.chkDefaultEetebar.Properties.Caption = "اعمال روی فاکتور فروش";
+            this.chkDefaultEetebar.Size = new System.Drawing.Size(189, 32);
+            this.chkDefaultEetebar.TabIndex = 5;
             // 
             // labelControl29
             // 
             this.labelControl29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl29.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl29.Appearance.Options.UseForeColor = true;
-            this.labelControl29.Location = new System.Drawing.Point(948, 15);
-            this.labelControl29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl29.Location = new System.Drawing.Point(1079, 13);
+            this.labelControl29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(67, 27);
+            this.labelControl29.Size = new System.Drawing.Size(61, 24);
             this.labelControl29.TabIndex = 171;
             this.labelControl29.Text = "مبلغ اعتبار";
             // 
@@ -3667,8 +3599,8 @@
             // 
             this.txtShGharadad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShGharadad.EnterMoveNextControl = true;
-            this.txtShGharadad.Location = new System.Drawing.Point(753, 54);
-            this.txtShGharadad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShGharadad.Location = new System.Drawing.Point(923, 48);
+            this.txtShGharadad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShGharadad.Name = "txtShGharadad";
             this.txtShGharadad.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShGharadad.Properties.Appearance.Options.UseForeColor = true;
@@ -3676,18 +3608,18 @@
             this.txtShGharadad.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtShGharadad.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.txtShGharadad.Properties.MaxLength = 20;
-            this.txtShGharadad.Size = new System.Drawing.Size(187, 34);
-            this.txtShGharadad.TabIndex = 3;
+            this.txtShGharadad.Size = new System.Drawing.Size(150, 30);
+            this.txtShGharadad.TabIndex = 1;
             // 
             // labelControl31
             // 
             this.labelControl31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl31.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl31.Appearance.Options.UseForeColor = true;
-            this.labelControl31.Location = new System.Drawing.Point(948, 56);
-            this.labelControl31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl31.Location = new System.Drawing.Point(1079, 50);
+            this.labelControl31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(85, 27);
+            this.labelControl31.Size = new System.Drawing.Size(75, 24);
             this.labelControl31.TabIndex = 171;
             this.labelControl31.Text = "شماره قرارداد";
             // 
@@ -3695,24 +3627,24 @@
             // 
             this.txtMolahezat_E.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_E.EnterMoveNextControl = true;
-            this.txtMolahezat_E.Location = new System.Drawing.Point(15, 96);
-            this.txtMolahezat_E.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_E.Location = new System.Drawing.Point(333, 85);
+            this.txtMolahezat_E.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_E.Name = "txtMolahezat_E";
             this.txtMolahezat_E.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_E.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_E.Properties.MaxLength = 400;
-            this.txtMolahezat_E.Size = new System.Drawing.Size(925, 34);
-            this.txtMolahezat_E.TabIndex = 5;
+            this.txtMolahezat_E.Size = new System.Drawing.Size(740, 30);
+            this.txtMolahezat_E.TabIndex = 4;
             // 
             // labelControl33
             // 
             this.labelControl33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl33.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl33.Appearance.Options.UseForeColor = true;
-            this.labelControl33.Location = new System.Drawing.Point(948, 98);
-            this.labelControl33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl33.Location = new System.Drawing.Point(1079, 87);
+            this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(63, 27);
+            this.labelControl33.Size = new System.Drawing.Size(54, 24);
             this.labelControl33.TabIndex = 148;
             this.labelControl33.Text = "ملاحظات";
             // 
@@ -3720,8 +3652,9 @@
             // 
             this.tpTakhfif.Controls.Add(this.panelControl9);
             this.tpTakhfif.Controls.Add(this.panelControl_Takhfif);
+            this.tpTakhfif.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tpTakhfif.Name = "tpTakhfif";
-            this.tpTakhfif.Size = new System.Drawing.Size(1054, 429);
+            this.tpTakhfif.Size = new System.Drawing.Size(1164, 443);
             this.tpTakhfif.Text = "درصد تخفیف در فاکتور";
             // 
             // panelControl9
@@ -3731,21 +3664,20 @@
             this.panelControl9.Controls.Add(this.labelControl40);
             this.panelControl9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl9.Location = new System.Drawing.Point(0, 0);
-            this.panelControl9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl9.Name = "panelControl9";
-            this.panelControl9.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl9.Size = new System.Drawing.Size(1164, 282);
             this.panelControl9.TabIndex = 43;
             // 
             // gridControlTakhfif1
             // 
             this.gridControlTakhfif1.DataSource = this.epDarsadTakhfif_AsBindingSource;
             this.gridControlTakhfif1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlTakhfif1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlTakhfif1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlTakhfif1.Location = new System.Drawing.Point(2, 2);
             this.gridControlTakhfif1.MainView = this.gridViewTakhfif1;
-            this.gridControlTakhfif1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlTakhfif1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlTakhfif1.Name = "gridControlTakhfif1";
-            this.gridControlTakhfif1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlTakhfif1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlTakhfif1.TabIndex = 32;
             this.gridControlTakhfif1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTakhfif1});
@@ -3759,16 +3691,17 @@
             this.gridViewTakhfif1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn32,
             this.gridColumn33,
-            this.gridColumn34,
-            this.gridColumn35,
+            this.colCode,
+            this.DarsadTakhfifJamei,
+            this.DarsadTakhfifRadifi,
             this.gridColumn38,
             this.gridColumn39,
             this.gridColumn36,
             this.gridColumn37});
-            this.gridViewTakhfif1.DetailHeight = 378;
+            this.gridViewTakhfif1.DetailHeight = 336;
             this.gridViewTakhfif1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewTakhfif1.GridControl = this.gridControlTakhfif1;
-            this.gridViewTakhfif1.IndicatorWidth = 28;
+            this.gridViewTakhfif1.IndicatorWidth = 22;
             this.gridViewTakhfif1.Name = "gridViewTakhfif1";
             this.gridViewTakhfif1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewTakhfif1.OptionsBehavior.Editable = false;
@@ -3792,9 +3725,9 @@
             // 
             this.gridColumn32.Caption = "آیدی";
             this.gridColumn32.FieldName = "Id";
-            this.gridColumn32.MinWidth = 21;
+            this.gridColumn32.MinWidth = 17;
             this.gridColumn32.Name = "gridColumn32";
-            this.gridColumn32.Width = 84;
+            this.gridColumn32.Width = 67;
             // 
             // gridColumn33
             // 
@@ -3806,44 +3739,60 @@
             this.gridColumn33.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn33.Caption = "ردیف";
             this.gridColumn33.FieldName = "Line";
-            this.gridColumn33.MinWidth = 21;
+            this.gridColumn33.MinWidth = 17;
             this.gridColumn33.Name = "gridColumn33";
             this.gridColumn33.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn33.Visible = true;
             this.gridColumn33.VisibleIndex = 0;
-            this.gridColumn33.Width = 66;
+            this.gridColumn33.Width = 53;
             // 
-            // gridColumn34
+            // colCode
             // 
-            this.gridColumn34.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn34.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn34.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn34.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn34.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn34.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn34.Caption = "نوع تخفیف";
-            this.gridColumn34.FieldName = "NoeTakhfif";
-            this.gridColumn34.MinWidth = 22;
-            this.gridColumn34.Name = "gridColumn34";
-            this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 1;
-            this.gridColumn34.Width = 209;
+            this.colCode.AppearanceCell.Options.UseTextOptions = true;
+            this.colCode.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colCode.AppearanceHeader.Options.UseTextOptions = true;
+            this.colCode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colCode.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colCode.Caption = "کد";
+            this.colCode.FieldName = "Code";
+            this.colCode.MinWidth = 25;
+            this.colCode.Name = "colCode";
+            this.colCode.Visible = true;
+            this.colCode.VisibleIndex = 1;
+            this.colCode.Width = 104;
             // 
-            // gridColumn35
+            // DarsadTakhfifJamei
             // 
-            this.gridColumn35.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn35.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn35.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn35.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn35.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn35.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn35.Caption = "درصد تخفیف";
-            this.gridColumn35.FieldName = "DarsadTakhfif";
-            this.gridColumn35.MinWidth = 22;
-            this.gridColumn35.Name = "gridColumn35";
-            this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 2;
-            this.gridColumn35.Width = 118;
+            this.DarsadTakhfifJamei.AppearanceCell.Options.UseTextOptions = true;
+            this.DarsadTakhfifJamei.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DarsadTakhfifJamei.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DarsadTakhfifJamei.AppearanceHeader.Options.UseTextOptions = true;
+            this.DarsadTakhfifJamei.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DarsadTakhfifJamei.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DarsadTakhfifJamei.Caption = "تخفیف جمعی فاکتور";
+            this.DarsadTakhfifJamei.FieldName = "DarsadTakhfifJamei";
+            this.DarsadTakhfifJamei.MinWidth = 18;
+            this.DarsadTakhfifJamei.Name = "DarsadTakhfifJamei";
+            this.DarsadTakhfifJamei.Visible = true;
+            this.DarsadTakhfifJamei.VisibleIndex = 2;
+            this.DarsadTakhfifJamei.Width = 152;
+            // 
+            // DarsadTakhfifRadifi
+            // 
+            this.DarsadTakhfifRadifi.AppearanceCell.Options.UseTextOptions = true;
+            this.DarsadTakhfifRadifi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DarsadTakhfifRadifi.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DarsadTakhfifRadifi.AppearanceHeader.Options.UseTextOptions = true;
+            this.DarsadTakhfifRadifi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DarsadTakhfifRadifi.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DarsadTakhfifRadifi.Caption = "تخفیف ردیفی فاکتور";
+            this.DarsadTakhfifRadifi.FieldName = "DarsadTakhfifRadifi";
+            this.DarsadTakhfifRadifi.MinWidth = 18;
+            this.DarsadTakhfifRadifi.Name = "DarsadTakhfifRadifi";
+            this.DarsadTakhfifRadifi.Visible = true;
+            this.DarsadTakhfifRadifi.VisibleIndex = 3;
+            this.DarsadTakhfifRadifi.Width = 153;
             // 
             // gridColumn38
             // 
@@ -3855,11 +3804,11 @@
             this.gridColumn38.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn38.Caption = "از تاریخ";
             this.gridColumn38.FieldName = "AzTarikh";
-            this.gridColumn38.MinWidth = 23;
+            this.gridColumn38.MinWidth = 18;
             this.gridColumn38.Name = "gridColumn38";
             this.gridColumn38.Visible = true;
-            this.gridColumn38.VisibleIndex = 3;
-            this.gridColumn38.Width = 136;
+            this.gridColumn38.VisibleIndex = 4;
+            this.gridColumn38.Width = 135;
             // 
             // gridColumn39
             // 
@@ -3871,11 +3820,11 @@
             this.gridColumn39.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn39.Caption = "تا تاریخ";
             this.gridColumn39.FieldName = "TaTarikh";
-            this.gridColumn39.MinWidth = 23;
+            this.gridColumn39.MinWidth = 18;
             this.gridColumn39.Name = "gridColumn39";
             this.gridColumn39.Visible = true;
-            this.gridColumn39.VisibleIndex = 4;
-            this.gridColumn39.Width = 136;
+            this.gridColumn39.VisibleIndex = 5;
+            this.gridColumn39.Width = 133;
             // 
             // gridColumn36
             // 
@@ -3885,13 +3834,13 @@
             this.gridColumn36.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn36.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn36.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn36.Caption = "پیش فرض";
+            this.gridColumn36.Caption = "اعمال روی فاکتور";
             this.gridColumn36.FieldName = "IsDefault";
-            this.gridColumn36.MinWidth = 22;
+            this.gridColumn36.MinWidth = 18;
             this.gridColumn36.Name = "gridColumn36";
             this.gridColumn36.Visible = true;
-            this.gridColumn36.VisibleIndex = 5;
-            this.gridColumn36.Width = 118;
+            this.gridColumn36.VisibleIndex = 6;
+            this.gridColumn36.Width = 112;
             // 
             // gridColumn37
             // 
@@ -3903,34 +3852,37 @@
             this.gridColumn37.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn37.Caption = "ملاحظات";
             this.gridColumn37.FieldName = "Molahezat";
-            this.gridColumn37.MinWidth = 22;
+            this.gridColumn37.MinWidth = 18;
             this.gridColumn37.Name = "gridColumn37";
             this.gridColumn37.Visible = true;
-            this.gridColumn37.VisibleIndex = 6;
-            this.gridColumn37.Width = 545;
+            this.gridColumn37.VisibleIndex = 7;
+            this.gridColumn37.Width = 559;
             // 
             // labelControl36
             // 
-            this.labelControl36.Location = new System.Drawing.Point(25, 86);
-            this.labelControl36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl36.Location = new System.Drawing.Point(20, 76);
+            this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(53, 27);
+            this.labelControl36.Size = new System.Drawing.Size(48, 24);
             this.labelControl36.TabIndex = 31;
             this.labelControl36.Text = "نام کاربر";
             this.labelControl36.Visible = false;
             // 
             // labelControl40
             // 
-            this.labelControl40.Location = new System.Drawing.Point(25, 51);
-            this.labelControl40.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl40.Location = new System.Drawing.Point(20, 45);
+            this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(72, 27);
+            this.labelControl40.Size = new System.Drawing.Size(66, 24);
             this.labelControl40.TabIndex = 30;
             this.labelControl40.Text = "آیدی  کاربر";
             this.labelControl40.Visible = false;
             // 
             // panelControl_Takhfif
             // 
+            this.panelControl_Takhfif.Controls.Add(this.labelControl24);
+            this.panelControl_Takhfif.Controls.Add(this.txtDarsadTakhfifJamei);
+            this.panelControl_Takhfif.Controls.Add(this.labelControl47);
             this.panelControl_Takhfif.Controls.Add(this.txtIndex_DarsadeTakhfif);
             this.panelControl_Takhfif.Controls.Add(this.txtTaTarikh);
             this.panelControl_Takhfif.Controls.Add(this.labelControl51);
@@ -3939,27 +3891,65 @@
             this.panelControl_Takhfif.Controls.Add(this.labelControl50);
             this.panelControl_Takhfif.Controls.Add(this.chkTarikh);
             this.panelControl_Takhfif.Controls.Add(this.chkDefaultTakhfif);
-            this.panelControl_Takhfif.Controls.Add(this.txtDarsadTakhfif);
-            this.panelControl_Takhfif.Controls.Add(this.labelControl47);
+            this.panelControl_Takhfif.Controls.Add(this.txtDarsadTakhfifRadifi);
             this.panelControl_Takhfif.Controls.Add(this.labelControl48);
             this.panelControl_Takhfif.Controls.Add(this.txtMolahezat_DT);
             this.panelControl_Takhfif.Controls.Add(this.labelControl49);
-            this.panelControl_Takhfif.Controls.Add(this.cmbNoeTakhfif);
             this.panelControl_Takhfif.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_Takhfif.Enabled = false;
-            this.panelControl_Takhfif.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_Takhfif.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_Takhfif.Location = new System.Drawing.Point(0, 282);
             this.panelControl_Takhfif.Name = "panelControl_Takhfif";
-            this.panelControl_Takhfif.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_Takhfif.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_Takhfif.TabIndex = 44;
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl24.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.labelControl24.Appearance.Options.UseForeColor = true;
+            this.labelControl24.AutoEllipsis = true;
+            this.labelControl24.Location = new System.Drawing.Point(632, 18);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(11, 24);
+            this.labelControl24.TabIndex = 217;
+            this.labelControl24.Text = "%";
+            // 
+            // txtDarsadTakhfifJamei
+            // 
+            this.txtDarsadTakhfifJamei.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDarsadTakhfifJamei.EnterMoveNextControl = true;
+            this.txtDarsadTakhfifJamei.Location = new System.Drawing.Point(649, 15);
+            this.txtDarsadTakhfifJamei.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDarsadTakhfifJamei.Name = "txtDarsadTakhfifJamei";
+            this.txtDarsadTakhfifJamei.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtDarsadTakhfifJamei.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDarsadTakhfifJamei.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDarsadTakhfifJamei.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtDarsadTakhfifJamei.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtDarsadTakhfifJamei.Properties.Mask.EditMask = "c2";
+            this.txtDarsadTakhfifJamei.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDarsadTakhfifJamei.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDarsadTakhfifJamei.Size = new System.Drawing.Size(106, 30);
+            this.txtDarsadTakhfifJamei.TabIndex = 1;
+            // 
+            // labelControl47
+            // 
+            this.labelControl47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl47.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl47.Appearance.Options.UseForeColor = true;
+            this.labelControl47.Location = new System.Drawing.Point(760, 18);
+            this.labelControl47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl47.Name = "labelControl47";
+            this.labelControl47.Size = new System.Drawing.Size(124, 24);
+            this.labelControl47.TabIndex = 216;
+            this.labelControl47.Text = "تخفیف جمعی فاکتور";
             // 
             // txtIndex_DarsadeTakhfif
             // 
             this.txtIndex_DarsadeTakhfif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_DarsadeTakhfif.EditValue = "";
             this.txtIndex_DarsadeTakhfif.Enabled = false;
-            this.txtIndex_DarsadeTakhfif.Location = new System.Drawing.Point(399, 54);
-            this.txtIndex_DarsadeTakhfif.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_DarsadeTakhfif.Location = new System.Drawing.Point(596, 52);
             this.txtIndex_DarsadeTakhfif.Name = "txtIndex_DarsadeTakhfif";
             this.txtIndex_DarsadeTakhfif.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_DarsadeTakhfif.Properties.Appearance.Options.UseForeColor = true;
@@ -3969,7 +3959,7 @@
             this.txtIndex_DarsadeTakhfif.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_DarsadeTakhfif.Properties.NullText = "آیدی انبار";
             this.txtIndex_DarsadeTakhfif.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_DarsadeTakhfif.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_DarsadeTakhfif.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_DarsadeTakhfif.TabIndex = 214;
             this.txtIndex_DarsadeTakhfif.TabStop = false;
             this.txtIndex_DarsadeTakhfif.Visible = false;
@@ -3977,10 +3967,8 @@
             // txtTaTarikh
             // 
             this.txtTaTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTaTarikh.Enabled = false;
             this.txtTaTarikh.EnterMoveNextControl = true;
-            this.txtTaTarikh.Location = new System.Drawing.Point(444, 54);
-            this.txtTaTarikh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTaTarikh.Location = new System.Drawing.Point(632, 52);
             this.txtTaTarikh.Name = "txtTaTarikh";
             this.txtTaTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtTaTarikh.Properties.Appearance.Options.UseForeColor = true;
@@ -3992,8 +3980,8 @@
             this.txtTaTarikh.Properties.Mask.PlaceHolder = '-';
             this.txtTaTarikh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTaTarikh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTaTarikh.Size = new System.Drawing.Size(153, 34);
-            this.txtTaTarikh.TabIndex = 4;
+            this.txtTaTarikh.Size = new System.Drawing.Size(122, 30);
+            this.txtTaTarikh.TabIndex = 3;
             // 
             // labelControl51
             // 
@@ -4001,20 +3989,17 @@
             this.labelControl51.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl51.Appearance.Options.UseForeColor = true;
             this.labelControl51.AutoEllipsis = true;
-            this.labelControl51.Location = new System.Drawing.Point(604, 57);
-            this.labelControl51.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl51.Location = new System.Drawing.Point(760, 55);
             this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(52, 27);
+            this.labelControl51.Size = new System.Drawing.Size(45, 24);
             this.labelControl51.TabIndex = 177;
             this.labelControl51.Text = "تا تاریخ";
             // 
             // txtAzTarikh
             // 
             this.txtAzTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAzTarikh.Enabled = false;
             this.txtAzTarikh.EnterMoveNextControl = true;
-            this.txtAzTarikh.Location = new System.Drawing.Point(741, 54);
-            this.txtAzTarikh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAzTarikh.Location = new System.Drawing.Point(903, 52);
             this.txtAzTarikh.Name = "txtAzTarikh";
             this.txtAzTarikh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtAzTarikh.Properties.Appearance.Options.UseForeColor = true;
@@ -4026,8 +4011,8 @@
             this.txtAzTarikh.Properties.Mask.PlaceHolder = '-';
             this.txtAzTarikh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtAzTarikh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAzTarikh.Size = new System.Drawing.Size(153, 34);
-            this.txtAzTarikh.TabIndex = 3;
+            this.txtAzTarikh.Size = new System.Drawing.Size(122, 30);
+            this.txtAzTarikh.TabIndex = 2;
             // 
             // labelControl52
             // 
@@ -4035,10 +4020,9 @@
             this.labelControl52.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl52.Appearance.Options.UseForeColor = true;
             this.labelControl52.AutoEllipsis = true;
-            this.labelControl52.Location = new System.Drawing.Point(423, 17);
-            this.labelControl52.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl52.Location = new System.Drawing.Point(903, 18);
             this.labelControl52.Name = "labelControl52";
-            this.labelControl52.Size = new System.Drawing.Size(12, 27);
+            this.labelControl52.Size = new System.Drawing.Size(11, 24);
             this.labelControl52.TabIndex = 175;
             this.labelControl52.Text = "%";
             // 
@@ -4048,92 +4032,81 @@
             this.labelControl50.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl50.Appearance.Options.UseForeColor = true;
             this.labelControl50.AutoEllipsis = true;
-            this.labelControl50.Location = new System.Drawing.Point(901, 57);
-            this.labelControl50.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl50.Location = new System.Drawing.Point(1031, 55);
             this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(50, 27);
+            this.labelControl50.Size = new System.Drawing.Size(44, 24);
             this.labelControl50.TabIndex = 175;
             this.labelControl50.Text = "از تاریخ";
             // 
             // chkTarikh
             // 
             this.chkTarikh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkTarikh.EditValue = true;
+            this.chkTarikh.Enabled = false;
             this.chkTarikh.EnterMoveNextControl = true;
-            this.chkTarikh.Location = new System.Drawing.Point(961, 64);
-            this.chkTarikh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkTarikh.Location = new System.Drawing.Point(1081, 55);
             this.chkTarikh.Name = "chkTarikh";
             this.chkTarikh.Properties.Caption = "";
-            this.chkTarikh.Size = new System.Drawing.Size(26, 24);
+            this.chkTarikh.Size = new System.Drawing.Size(21, 24);
             this.chkTarikh.TabIndex = 2;
+            this.chkTarikh.TabStop = false;
+            this.chkTarikh.Visible = false;
             this.chkTarikh.CheckedChanged += new System.EventHandler(this.chkTarikh_CheckedChanged);
             // 
             // chkDefaultTakhfif
             // 
             this.chkDefaultTakhfif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultTakhfif.EnterMoveNextControl = true;
-            this.chkDefaultTakhfif.Location = new System.Drawing.Point(15, 94);
-            this.chkDefaultTakhfif.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultTakhfif.Location = new System.Drawing.Point(385, 50);
             this.chkDefaultTakhfif.Name = "chkDefaultTakhfif";
             this.chkDefaultTakhfif.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultTakhfif.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultTakhfif.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.chkDefaultTakhfif.Properties.Caption = "پیش فرض";
-            this.chkDefaultTakhfif.Size = new System.Drawing.Size(112, 35);
-            this.chkDefaultTakhfif.TabIndex = 6;
+            this.chkDefaultTakhfif.Properties.Caption = "اعمال روی فاکتور فروش";
+            this.chkDefaultTakhfif.Size = new System.Drawing.Size(180, 32);
+            this.chkDefaultTakhfif.TabIndex = 4;
             // 
-            // txtDarsadTakhfif
+            // txtDarsadTakhfifRadifi
             // 
-            this.txtDarsadTakhfif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDarsadTakhfif.EnterMoveNextControl = true;
-            this.txtDarsadTakhfif.Location = new System.Drawing.Point(444, 13);
-            this.txtDarsadTakhfif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDarsadTakhfif.Name = "txtDarsadTakhfif";
-            this.txtDarsadTakhfif.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.txtDarsadTakhfif.Properties.Appearance.Options.UseForeColor = true;
-            this.txtDarsadTakhfif.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtDarsadTakhfif.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtDarsadTakhfif.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtDarsadTakhfif.Properties.Mask.EditMask = "P2";
-            this.txtDarsadTakhfif.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtDarsadTakhfif.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDarsadTakhfif.Size = new System.Drawing.Size(90, 34);
-            this.txtDarsadTakhfif.TabIndex = 1;
-            // 
-            // labelControl47
-            // 
-            this.labelControl47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl47.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl47.Appearance.Options.UseForeColor = true;
-            this.labelControl47.Location = new System.Drawing.Point(540, 17);
-            this.labelControl47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.labelControl47.Name = "labelControl47";
-            this.labelControl47.Size = new System.Drawing.Size(88, 27);
-            this.labelControl47.TabIndex = 171;
-            this.labelControl47.Text = "درصد تخفیف";
+            this.txtDarsadTakhfifRadifi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDarsadTakhfifRadifi.EnterMoveNextControl = true;
+            this.txtDarsadTakhfifRadifi.Location = new System.Drawing.Point(920, 15);
+            this.txtDarsadTakhfifRadifi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDarsadTakhfifRadifi.Name = "txtDarsadTakhfifRadifi";
+            this.txtDarsadTakhfifRadifi.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtDarsadTakhfifRadifi.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDarsadTakhfifRadifi.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDarsadTakhfifRadifi.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtDarsadTakhfifRadifi.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtDarsadTakhfifRadifi.Properties.Mask.EditMask = "n2";
+            this.txtDarsadTakhfifRadifi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDarsadTakhfifRadifi.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDarsadTakhfifRadifi.Size = new System.Drawing.Size(105, 30);
+            this.txtDarsadTakhfifRadifi.TabIndex = 0;
             // 
             // labelControl48
             // 
             this.labelControl48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl48.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl48.Appearance.Options.UseForeColor = true;
-            this.labelControl48.Location = new System.Drawing.Point(900, 16);
-            this.labelControl48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl48.Location = new System.Drawing.Point(1030, 18);
+            this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(128, 27);
+            this.labelControl48.Size = new System.Drawing.Size(123, 24);
             this.labelControl48.TabIndex = 169;
-            this.labelControl48.Text = "انتخاب نوع تخفیف";
+            this.labelControl48.Text = "تخفیف ردیفی فاکتور";
             // 
             // txtMolahezat_DT
             // 
             this.txtMolahezat_DT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_DT.EnterMoveNextControl = true;
-            this.txtMolahezat_DT.Location = new System.Drawing.Point(134, 94);
-            this.txtMolahezat_DT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_DT.Location = new System.Drawing.Point(385, 88);
+            this.txtMolahezat_DT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_DT.Name = "txtMolahezat_DT";
             this.txtMolahezat_DT.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_DT.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_DT.Properties.MaxLength = 400;
-            this.txtMolahezat_DT.Size = new System.Drawing.Size(759, 34);
+            this.txtMolahezat_DT.Size = new System.Drawing.Size(639, 30);
             this.txtMolahezat_DT.TabIndex = 5;
             // 
             // labelControl49
@@ -4141,42 +4114,19 @@
             this.labelControl49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl49.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl49.Appearance.Options.UseForeColor = true;
-            this.labelControl49.Location = new System.Drawing.Point(898, 98);
-            this.labelControl49.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl49.Location = new System.Drawing.Point(1028, 91);
+            this.labelControl49.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(63, 27);
+            this.labelControl49.Size = new System.Drawing.Size(54, 24);
             this.labelControl49.TabIndex = 148;
             this.labelControl49.Text = "ملاحظات";
-            // 
-            // cmbNoeTakhfif
-            // 
-            this.cmbNoeTakhfif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbNoeTakhfif.EnterMoveNextControl = true;
-            this.cmbNoeTakhfif.Location = new System.Drawing.Point(682, 13);
-            this.cmbNoeTakhfif.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbNoeTakhfif.Name = "cmbNoeTakhfif";
-            this.cmbNoeTakhfif.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.cmbNoeTakhfif.Properties.Appearance.Options.UseForeColor = true;
-            this.cmbNoeTakhfif.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbNoeTakhfif.Properties.ImmediatePopup = true;
-            this.cmbNoeTakhfif.Properties.Items.AddRange(new object[] {
-            "تخفیف ردیفی فاکتور",
-            "تخفیف جمعی فاکتور"});
-            this.cmbNoeTakhfif.Properties.PopupSizeable = true;
-            this.cmbNoeTakhfif.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbNoeTakhfif.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbNoeTakhfif.Size = new System.Drawing.Size(211, 34);
-            this.cmbNoeTakhfif.TabIndex = 0;
-            this.cmbNoeTakhfif.Enter += new System.EventHandler(this.cmbNoeTakhfif_Enter);
             // 
             // tpPersonel
             // 
             this.tpPersonel.Controls.Add(this.panelControl10);
             this.tpPersonel.Controls.Add(this.panelControl_MPersoneli);
-            this.tpPersonel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpPersonel.Name = "tpPersonel";
-            this.tpPersonel.Size = new System.Drawing.Size(1054, 429);
+            this.tpPersonel.Size = new System.Drawing.Size(1164, 443);
             this.tpPersonel.Text = "مشخصات پرسنلی";
             // 
             // panelControl10
@@ -4186,21 +4136,20 @@
             this.panelControl10.Controls.Add(this.labelControl54);
             this.panelControl10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl10.Location = new System.Drawing.Point(0, 0);
-            this.panelControl10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl10.Size = new System.Drawing.Size(1164, 282);
             this.panelControl10.TabIndex = 45;
             // 
             // gridControlMPersoneli1
             // 
             this.gridControlMPersoneli1.DataSource = this.epMPersoneli_AsBindingSource;
             this.gridControlMPersoneli1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlMPersoneli1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlMPersoneli1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlMPersoneli1.Location = new System.Drawing.Point(2, 2);
             this.gridControlMPersoneli1.MainView = this.gridViewMPersoneli1;
-            this.gridControlMPersoneli1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlMPersoneli1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlMPersoneli1.Name = "gridControlMPersoneli1";
-            this.gridControlMPersoneli1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlMPersoneli1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlMPersoneli1.TabIndex = 32;
             this.gridControlMPersoneli1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMPersoneli1});
@@ -4223,10 +4172,10 @@
             this.gridColumn49,
             this.gridColumn50,
             this.gridColumn47});
-            this.gridViewMPersoneli1.DetailHeight = 378;
+            this.gridViewMPersoneli1.DetailHeight = 336;
             this.gridViewMPersoneli1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewMPersoneli1.GridControl = this.gridControlMPersoneli1;
-            this.gridViewMPersoneli1.IndicatorWidth = 28;
+            this.gridViewMPersoneli1.IndicatorWidth = 22;
             this.gridViewMPersoneli1.Name = "gridViewMPersoneli1";
             this.gridViewMPersoneli1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewMPersoneli1.OptionsBehavior.Editable = false;
@@ -4250,9 +4199,9 @@
             // 
             this.gridColumn40.Caption = "آیدی";
             this.gridColumn40.FieldName = "Id";
-            this.gridColumn40.MinWidth = 21;
+            this.gridColumn40.MinWidth = 17;
             this.gridColumn40.Name = "gridColumn40";
-            this.gridColumn40.Width = 84;
+            this.gridColumn40.Width = 67;
             // 
             // gridColumn41
             // 
@@ -4264,12 +4213,12 @@
             this.gridColumn41.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn41.Caption = "ردیف";
             this.gridColumn41.FieldName = "Line";
-            this.gridColumn41.MinWidth = 21;
+            this.gridColumn41.MinWidth = 17;
             this.gridColumn41.Name = "gridColumn41";
             this.gridColumn41.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn41.Visible = true;
             this.gridColumn41.VisibleIndex = 0;
-            this.gridColumn41.Width = 66;
+            this.gridColumn41.Width = 53;
             // 
             // gridColumn42
             // 
@@ -4281,11 +4230,11 @@
             this.gridColumn42.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn42.Caption = "کد پرسنلی";
             this.gridColumn42.FieldName = "CodPersoneli";
-            this.gridColumn42.MinWidth = 22;
+            this.gridColumn42.MinWidth = 18;
             this.gridColumn42.Name = "gridColumn42";
             this.gridColumn42.Visible = true;
             this.gridColumn42.VisibleIndex = 1;
-            this.gridColumn42.Width = 136;
+            this.gridColumn42.Width = 109;
             // 
             // gridColumn44
             // 
@@ -4297,11 +4246,11 @@
             this.gridColumn44.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn44.Caption = "تاریخ استخدام";
             this.gridColumn44.FieldName = "TarikhEstekhdam";
-            this.gridColumn44.MinWidth = 23;
+            this.gridColumn44.MinWidth = 18;
             this.gridColumn44.Name = "gridColumn44";
             this.gridColumn44.Visible = true;
             this.gridColumn44.VisibleIndex = 2;
-            this.gridColumn44.Width = 136;
+            this.gridColumn44.Width = 109;
             // 
             // gridColumn43
             // 
@@ -4313,11 +4262,11 @@
             this.gridColumn43.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn43.Caption = "نام پدر";
             this.gridColumn43.FieldName = "NamePedar";
-            this.gridColumn43.MinWidth = 22;
+            this.gridColumn43.MinWidth = 18;
             this.gridColumn43.Name = "gridColumn43";
             this.gridColumn43.Visible = true;
             this.gridColumn43.VisibleIndex = 3;
-            this.gridColumn43.Width = 136;
+            this.gridColumn43.Width = 109;
             // 
             // gridColumn46
             // 
@@ -4329,11 +4278,11 @@
             this.gridColumn46.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn46.Caption = "ش شناسنامه";
             this.gridColumn46.FieldName = "ShShenasname";
-            this.gridColumn46.MinWidth = 22;
+            this.gridColumn46.MinWidth = 18;
             this.gridColumn46.Name = "gridColumn46";
             this.gridColumn46.Visible = true;
             this.gridColumn46.VisibleIndex = 4;
-            this.gridColumn46.Width = 136;
+            this.gridColumn46.Width = 109;
             // 
             // gridColumn45
             // 
@@ -4345,11 +4294,11 @@
             this.gridColumn45.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn45.Caption = "تاریخ تولد";
             this.gridColumn45.FieldName = "TarikhTavalod";
-            this.gridColumn45.MinWidth = 23;
+            this.gridColumn45.MinWidth = 18;
             this.gridColumn45.Name = "gridColumn45";
             this.gridColumn45.Visible = true;
             this.gridColumn45.VisibleIndex = 5;
-            this.gridColumn45.Width = 136;
+            this.gridColumn45.Width = 109;
             // 
             // gridColumn48
             // 
@@ -4361,11 +4310,11 @@
             this.gridColumn48.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn48.Caption = "جنسیت";
             this.gridColumn48.FieldName = "Jensiat";
-            this.gridColumn48.MinWidth = 23;
+            this.gridColumn48.MinWidth = 18;
             this.gridColumn48.Name = "gridColumn48";
             this.gridColumn48.Visible = true;
             this.gridColumn48.VisibleIndex = 6;
-            this.gridColumn48.Width = 91;
+            this.gridColumn48.Width = 73;
             // 
             // gridColumn49
             // 
@@ -4377,11 +4326,11 @@
             this.gridColumn49.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn49.Caption = "تأهل";
             this.gridColumn49.FieldName = "Taahol";
-            this.gridColumn49.MinWidth = 23;
+            this.gridColumn49.MinWidth = 18;
             this.gridColumn49.Name = "gridColumn49";
             this.gridColumn49.Visible = true;
             this.gridColumn49.VisibleIndex = 7;
-            this.gridColumn49.Width = 91;
+            this.gridColumn49.Width = 73;
             // 
             // gridColumn50
             // 
@@ -4393,11 +4342,11 @@
             this.gridColumn50.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn50.Caption = "شغل";
             this.gridColumn50.FieldName = "Shogl";
-            this.gridColumn50.MinWidth = 23;
+            this.gridColumn50.MinWidth = 18;
             this.gridColumn50.Name = "gridColumn50";
             this.gridColumn50.Visible = true;
             this.gridColumn50.VisibleIndex = 8;
-            this.gridColumn50.Width = 164;
+            this.gridColumn50.Width = 131;
             // 
             // gridColumn47
             // 
@@ -4409,28 +4358,28 @@
             this.gridColumn47.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn47.Caption = "ملاحظات";
             this.gridColumn47.FieldName = "Molahezat";
-            this.gridColumn47.MinWidth = 22;
+            this.gridColumn47.MinWidth = 18;
             this.gridColumn47.Name = "gridColumn47";
             this.gridColumn47.Visible = true;
             this.gridColumn47.VisibleIndex = 9;
-            this.gridColumn47.Width = 545;
+            this.gridColumn47.Width = 436;
             // 
             // labelControl53
             // 
-            this.labelControl53.Location = new System.Drawing.Point(25, 86);
-            this.labelControl53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl53.Location = new System.Drawing.Point(20, 76);
+            this.labelControl53.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl53.Name = "labelControl53";
-            this.labelControl53.Size = new System.Drawing.Size(53, 27);
+            this.labelControl53.Size = new System.Drawing.Size(48, 24);
             this.labelControl53.TabIndex = 31;
             this.labelControl53.Text = "نام کاربر";
             this.labelControl53.Visible = false;
             // 
             // labelControl54
             // 
-            this.labelControl54.Location = new System.Drawing.Point(25, 51);
-            this.labelControl54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl54.Location = new System.Drawing.Point(20, 45);
+            this.labelControl54.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl54.Name = "labelControl54";
-            this.labelControl54.Size = new System.Drawing.Size(72, 27);
+            this.labelControl54.Size = new System.Drawing.Size(66, 24);
             this.labelControl54.TabIndex = 30;
             this.labelControl54.Text = "آیدی  کاربر";
             this.labelControl54.Visible = false;
@@ -4458,10 +4407,9 @@
             this.panelControl_MPersoneli.Controls.Add(this.labelControl60);
             this.panelControl_MPersoneli.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_MPersoneli.Enabled = false;
-            this.panelControl_MPersoneli.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_MPersoneli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_MPersoneli.Location = new System.Drawing.Point(0, 282);
             this.panelControl_MPersoneli.Name = "panelControl_MPersoneli";
-            this.panelControl_MPersoneli.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_MPersoneli.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_MPersoneli.TabIndex = 46;
             // 
             // txtIndex_MoshakhasatPersoneli
@@ -4469,8 +4417,7 @@
             this.txtIndex_MoshakhasatPersoneli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_MoshakhasatPersoneli.EditValue = "";
             this.txtIndex_MoshakhasatPersoneli.Enabled = false;
-            this.txtIndex_MoshakhasatPersoneli.Location = new System.Drawing.Point(192, 91);
-            this.txtIndex_MoshakhasatPersoneli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_MoshakhasatPersoneli.Location = new System.Drawing.Point(475, 81);
             this.txtIndex_MoshakhasatPersoneli.Name = "txtIndex_MoshakhasatPersoneli";
             this.txtIndex_MoshakhasatPersoneli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_MoshakhasatPersoneli.Properties.Appearance.Options.UseForeColor = true;
@@ -4480,7 +4427,7 @@
             this.txtIndex_MoshakhasatPersoneli.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_MoshakhasatPersoneli.Properties.NullText = "آیدی انبار";
             this.txtIndex_MoshakhasatPersoneli.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_MoshakhasatPersoneli.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_MoshakhasatPersoneli.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_MoshakhasatPersoneli.TabIndex = 214;
             this.txtIndex_MoshakhasatPersoneli.TabStop = false;
             this.txtIndex_MoshakhasatPersoneli.Visible = false;
@@ -4489,7 +4436,8 @@
             // 
             this.cmbJensiat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbJensiat.EnterMoveNextControl = true;
-            this.cmbJensiat.Location = new System.Drawing.Point(192, 53);
+            this.cmbJensiat.Location = new System.Drawing.Point(475, 47);
+            this.cmbJensiat.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbJensiat.Name = "cmbJensiat";
             this.cmbJensiat.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbJensiat.Properties.Appearance.Options.UseForeColor = true;
@@ -4499,7 +4447,7 @@
             "مرد",
             "زن"});
             this.cmbJensiat.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbJensiat.Size = new System.Drawing.Size(175, 34);
+            this.cmbJensiat.Size = new System.Drawing.Size(140, 30);
             this.cmbJensiat.TabIndex = 5;
             this.cmbJensiat.Enter += new System.EventHandler(this.cmbJensiat_Enter);
             // 
@@ -4507,7 +4455,8 @@
             // 
             this.cmbTaahol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbTaahol.EnterMoveNextControl = true;
-            this.cmbTaahol.Location = new System.Drawing.Point(761, 96);
+            this.cmbTaahol.Location = new System.Drawing.Point(930, 85);
+            this.cmbTaahol.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbTaahol.Name = "cmbTaahol";
             this.cmbTaahol.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.cmbTaahol.Properties.Appearance.Options.UseForeColor = true;
@@ -4517,7 +4466,7 @@
             "متأهل",
             "مجرد"});
             this.cmbTaahol.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbTaahol.Size = new System.Drawing.Size(175, 34);
+            this.cmbTaahol.Size = new System.Drawing.Size(140, 30);
             this.cmbTaahol.TabIndex = 6;
             this.cmbTaahol.Enter += new System.EventHandler(this.cmbTaahol_Enter);
             // 
@@ -4525,8 +4474,7 @@
             // 
             this.txtTarikhEstekhdam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTarikhEstekhdam.EnterMoveNextControl = true;
-            this.txtTarikhEstekhdam.Location = new System.Drawing.Point(453, 12);
-            this.txtTarikhEstekhdam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTarikhEstekhdam.Location = new System.Drawing.Point(683, 11);
             this.txtTarikhEstekhdam.Name = "txtTarikhEstekhdam";
             this.txtTarikhEstekhdam.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtTarikhEstekhdam.Properties.Appearance.Options.UseForeColor = true;
@@ -4538,7 +4486,7 @@
             this.txtTarikhEstekhdam.Properties.Mask.PlaceHolder = '-';
             this.txtTarikhEstekhdam.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTarikhEstekhdam.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTarikhEstekhdam.Size = new System.Drawing.Size(170, 34);
+            this.txtTarikhEstekhdam.Size = new System.Drawing.Size(136, 30);
             this.txtTarikhEstekhdam.TabIndex = 1;
             // 
             // labelControl55
@@ -4547,10 +4495,9 @@
             this.labelControl55.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl55.Appearance.Options.UseForeColor = true;
             this.labelControl55.AutoEllipsis = true;
-            this.labelControl55.Location = new System.Drawing.Point(630, 15);
-            this.labelControl55.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl55.Location = new System.Drawing.Point(825, 13);
             this.labelControl55.Name = "labelControl55";
-            this.labelControl55.Size = new System.Drawing.Size(97, 27);
+            this.labelControl55.Size = new System.Drawing.Size(86, 24);
             this.labelControl55.TabIndex = 177;
             this.labelControl55.Text = "تاریخ استخدام";
             // 
@@ -4558,8 +4505,7 @@
             // 
             this.txtTarikhTavalod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTarikhTavalod.EnterMoveNextControl = true;
-            this.txtTarikhTavalod.Location = new System.Drawing.Point(453, 54);
-            this.txtTarikhTavalod.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTarikhTavalod.Location = new System.Drawing.Point(683, 48);
             this.txtTarikhTavalod.Name = "txtTarikhTavalod";
             this.txtTarikhTavalod.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtTarikhTavalod.Properties.Appearance.Options.UseForeColor = true;
@@ -4571,7 +4517,7 @@
             this.txtTarikhTavalod.Properties.Mask.PlaceHolder = '-';
             this.txtTarikhTavalod.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTarikhTavalod.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTarikhTavalod.Size = new System.Drawing.Size(170, 34);
+            this.txtTarikhTavalod.Size = new System.Drawing.Size(136, 30);
             this.txtTarikhTavalod.TabIndex = 4;
             // 
             // labelControl58
@@ -4580,10 +4526,9 @@
             this.labelControl58.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl58.Appearance.Options.UseForeColor = true;
             this.labelControl58.AutoEllipsis = true;
-            this.labelControl58.Location = new System.Drawing.Point(378, 12);
-            this.labelControl58.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl58.Location = new System.Drawing.Point(623, 11);
             this.labelControl58.Name = "labelControl58";
-            this.labelControl58.Size = new System.Drawing.Size(44, 27);
+            this.labelControl58.Size = new System.Drawing.Size(40, 24);
             this.labelControl58.TabIndex = 175;
             this.labelControl58.Text = "نام پدر";
             // 
@@ -4593,10 +4538,9 @@
             this.labelControl63.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl63.Appearance.Options.UseForeColor = true;
             this.labelControl63.AutoEllipsis = true;
-            this.labelControl63.Location = new System.Drawing.Point(630, 98);
-            this.labelControl63.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl63.Location = new System.Drawing.Point(825, 87);
             this.labelControl63.Name = "labelControl63";
-            this.labelControl63.Size = new System.Drawing.Size(31, 27);
+            this.labelControl63.Size = new System.Drawing.Size(28, 24);
             this.labelControl63.TabIndex = 175;
             this.labelControl63.Text = "شغل";
             // 
@@ -4606,10 +4550,9 @@
             this.labelControl61.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl61.Appearance.Options.UseForeColor = true;
             this.labelControl61.AutoEllipsis = true;
-            this.labelControl61.Location = new System.Drawing.Point(378, 57);
-            this.labelControl61.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl61.Location = new System.Drawing.Point(623, 51);
             this.labelControl61.Name = "labelControl61";
-            this.labelControl61.Size = new System.Drawing.Size(54, 27);
+            this.labelControl61.Size = new System.Drawing.Size(48, 24);
             this.labelControl61.TabIndex = 175;
             this.labelControl61.Text = "جنسیت";
             // 
@@ -4619,10 +4562,9 @@
             this.labelControl62.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl62.Appearance.Options.UseForeColor = true;
             this.labelControl62.AutoEllipsis = true;
-            this.labelControl62.Location = new System.Drawing.Point(946, 98);
-            this.labelControl62.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl62.Location = new System.Drawing.Point(1078, 87);
             this.labelControl62.Name = "labelControl62";
-            this.labelControl62.Size = new System.Drawing.Size(33, 27);
+            this.labelControl62.Size = new System.Drawing.Size(29, 24);
             this.labelControl62.TabIndex = 175;
             this.labelControl62.Text = "تأهل";
             // 
@@ -4632,10 +4574,9 @@
             this.labelControl59.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl59.Appearance.Options.UseForeColor = true;
             this.labelControl59.AutoEllipsis = true;
-            this.labelControl59.Location = new System.Drawing.Point(630, 56);
-            this.labelControl59.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl59.Location = new System.Drawing.Point(825, 50);
             this.labelControl59.Name = "labelControl59";
-            this.labelControl59.Size = new System.Drawing.Size(68, 27);
+            this.labelControl59.Size = new System.Drawing.Size(60, 24);
             this.labelControl59.TabIndex = 175;
             this.labelControl59.Text = "تاریخ تولد";
             // 
@@ -4645,10 +4586,9 @@
             this.labelControl57.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl57.Appearance.Options.UseForeColor = true;
             this.labelControl57.AutoEllipsis = true;
-            this.labelControl57.Location = new System.Drawing.Point(946, 56);
-            this.labelControl57.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl57.Location = new System.Drawing.Point(1078, 50);
             this.labelControl57.Name = "labelControl57";
-            this.labelControl57.Size = new System.Drawing.Size(86, 27);
+            this.labelControl57.Size = new System.Drawing.Size(78, 24);
             this.labelControl57.TabIndex = 175;
             this.labelControl57.Text = "ش شناسنامه";
             // 
@@ -4658,10 +4598,9 @@
             this.labelControl56.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl56.Appearance.Options.UseForeColor = true;
             this.labelControl56.AutoEllipsis = true;
-            this.labelControl56.Location = new System.Drawing.Point(945, 15);
-            this.labelControl56.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl56.Location = new System.Drawing.Point(1077, 13);
             this.labelControl56.Name = "labelControl56";
-            this.labelControl56.Size = new System.Drawing.Size(69, 27);
+            this.labelControl56.Size = new System.Drawing.Size(61, 24);
             this.labelControl56.TabIndex = 175;
             this.labelControl56.Text = "کد پرسنلی";
             // 
@@ -4669,8 +4608,8 @@
             // 
             this.txtShShenasname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShShenasname.EnterMoveNextControl = true;
-            this.txtShShenasname.Location = new System.Drawing.Point(761, 54);
-            this.txtShShenasname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShShenasname.Location = new System.Drawing.Point(930, 48);
+            this.txtShShenasname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShShenasname.Name = "txtShShenasname";
             this.txtShShenasname.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShShenasname.Properties.Appearance.Options.UseForeColor = true;
@@ -4680,15 +4619,15 @@
             this.txtShShenasname.Properties.Mask.EditMask = "P";
             this.txtShShenasname.Properties.MaxLength = 10;
             this.txtShShenasname.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtShShenasname.Size = new System.Drawing.Size(175, 34);
+            this.txtShShenasname.Size = new System.Drawing.Size(140, 30);
             this.txtShShenasname.TabIndex = 3;
             // 
             // txtShogl
             // 
             this.txtShogl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtShogl.EnterMoveNextControl = true;
-            this.txtShogl.Location = new System.Drawing.Point(453, 94);
-            this.txtShogl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShogl.Location = new System.Drawing.Point(683, 84);
+            this.txtShogl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShogl.Name = "txtShogl";
             this.txtShogl.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtShogl.Properties.Appearance.Options.UseForeColor = true;
@@ -4698,15 +4637,15 @@
             this.txtShogl.Properties.Mask.EditMask = "P";
             this.txtShogl.Properties.MaxLength = 20;
             this.txtShogl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtShogl.Size = new System.Drawing.Size(170, 34);
+            this.txtShogl.Size = new System.Drawing.Size(136, 30);
             this.txtShogl.TabIndex = 7;
             // 
             // txtNamePedar
             // 
             this.txtNamePedar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNamePedar.EnterMoveNextControl = true;
-            this.txtNamePedar.Location = new System.Drawing.Point(192, 10);
-            this.txtNamePedar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNamePedar.Location = new System.Drawing.Point(475, 9);
+            this.txtNamePedar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNamePedar.Name = "txtNamePedar";
             this.txtNamePedar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtNamePedar.Properties.Appearance.Options.UseForeColor = true;
@@ -4716,15 +4655,15 @@
             this.txtNamePedar.Properties.Mask.EditMask = "P";
             this.txtNamePedar.Properties.MaxLength = 20;
             this.txtNamePedar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNamePedar.Size = new System.Drawing.Size(177, 34);
+            this.txtNamePedar.Size = new System.Drawing.Size(142, 30);
             this.txtNamePedar.TabIndex = 2;
             // 
             // txtCodPersoneli
             // 
             this.txtCodPersoneli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodPersoneli.EnterMoveNextControl = true;
-            this.txtCodPersoneli.Location = new System.Drawing.Point(761, 12);
-            this.txtCodPersoneli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodPersoneli.Location = new System.Drawing.Point(930, 11);
+            this.txtCodPersoneli.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodPersoneli.Name = "txtCodPersoneli";
             this.txtCodPersoneli.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtCodPersoneli.Properties.Appearance.Options.UseForeColor = true;
@@ -4735,20 +4674,20 @@
             this.txtCodPersoneli.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCodPersoneli.Properties.MaxLength = 9;
             this.txtCodPersoneli.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCodPersoneli.Size = new System.Drawing.Size(175, 34);
+            this.txtCodPersoneli.Size = new System.Drawing.Size(140, 30);
             this.txtCodPersoneli.TabIndex = 0;
             // 
             // txtMolahezat_MP
             // 
             this.txtMolahezat_MP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_MP.EnterMoveNextControl = true;
-            this.txtMolahezat_MP.Location = new System.Drawing.Point(192, 137);
-            this.txtMolahezat_MP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_MP.Location = new System.Drawing.Point(475, 122);
+            this.txtMolahezat_MP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_MP.Name = "txtMolahezat_MP";
             this.txtMolahezat_MP.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_MP.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_MP.Properties.MaxLength = 400;
-            this.txtMolahezat_MP.Size = new System.Drawing.Size(746, 34);
+            this.txtMolahezat_MP.Size = new System.Drawing.Size(597, 30);
             this.txtMolahezat_MP.TabIndex = 8;
             // 
             // labelControl60
@@ -4756,10 +4695,10 @@
             this.labelControl60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl60.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl60.Appearance.Options.UseForeColor = true;
-            this.labelControl60.Location = new System.Drawing.Point(946, 140);
-            this.labelControl60.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl60.Location = new System.Drawing.Point(1078, 124);
+            this.labelControl60.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl60.Name = "labelControl60";
-            this.labelControl60.Size = new System.Drawing.Size(63, 27);
+            this.labelControl60.Size = new System.Drawing.Size(54, 24);
             this.labelControl60.TabIndex = 148;
             this.labelControl60.Text = "ملاحظات";
             // 
@@ -4767,9 +4706,8 @@
             // 
             this.tpSahmSahamdar.Controls.Add(this.panelControl11);
             this.tpSahmSahamdar.Controls.Add(this.panelControl_SahmSahamdar);
-            this.tpSahmSahamdar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpSahmSahamdar.Name = "tpSahmSahamdar";
-            this.tpSahmSahamdar.Size = new System.Drawing.Size(1054, 429);
+            this.tpSahmSahamdar.Size = new System.Drawing.Size(1164, 443);
             this.tpSahmSahamdar.Text = "سهم سهامدار";
             // 
             // panelControl11
@@ -4779,21 +4717,20 @@
             this.panelControl11.Controls.Add(this.labelControl65);
             this.panelControl11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl11.Location = new System.Drawing.Point(0, 0);
-            this.panelControl11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl11.Name = "panelControl11";
-            this.panelControl11.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl11.Size = new System.Drawing.Size(1164, 282);
             this.panelControl11.TabIndex = 47;
             // 
             // gridControlSahmSahamdar1
             // 
             this.gridControlSahmSahamdar1.DataSource = this.epSahmSahamdar_AsBindingSource;
             this.gridControlSahmSahamdar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlSahmSahamdar1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlSahmSahamdar1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlSahmSahamdar1.Location = new System.Drawing.Point(2, 2);
             this.gridControlSahmSahamdar1.MainView = this.gridViewSahmSahamdar1;
-            this.gridControlSahmSahamdar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlSahmSahamdar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlSahmSahamdar1.Name = "gridControlSahmSahamdar1";
-            this.gridControlSahmSahamdar1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlSahmSahamdar1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlSahmSahamdar1.TabIndex = 32;
             this.gridControlSahmSahamdar1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSahmSahamdar1});
@@ -4811,10 +4748,10 @@
             this.gridColumn55,
             this.gridColumn56,
             this.gridColumn61});
-            this.gridViewSahmSahamdar1.DetailHeight = 378;
+            this.gridViewSahmSahamdar1.DetailHeight = 336;
             this.gridViewSahmSahamdar1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewSahmSahamdar1.GridControl = this.gridControlSahmSahamdar1;
-            this.gridViewSahmSahamdar1.IndicatorWidth = 28;
+            this.gridViewSahmSahamdar1.IndicatorWidth = 22;
             this.gridViewSahmSahamdar1.Name = "gridViewSahmSahamdar1";
             this.gridViewSahmSahamdar1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewSahmSahamdar1.OptionsBehavior.Editable = false;
@@ -4838,9 +4775,9 @@
             // 
             this.gridColumn51.Caption = "آیدی";
             this.gridColumn51.FieldName = "Id";
-            this.gridColumn51.MinWidth = 21;
+            this.gridColumn51.MinWidth = 17;
             this.gridColumn51.Name = "gridColumn51";
-            this.gridColumn51.Width = 84;
+            this.gridColumn51.Width = 67;
             // 
             // gridColumn52
             // 
@@ -4852,12 +4789,12 @@
             this.gridColumn52.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn52.Caption = "ردیف";
             this.gridColumn52.FieldName = "Line";
-            this.gridColumn52.MinWidth = 21;
+            this.gridColumn52.MinWidth = 17;
             this.gridColumn52.Name = "gridColumn52";
             this.gridColumn52.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn52.Visible = true;
             this.gridColumn52.VisibleIndex = 0;
-            this.gridColumn52.Width = 66;
+            this.gridColumn52.Width = 53;
             // 
             // gridColumn53
             // 
@@ -4869,11 +4806,11 @@
             this.gridColumn53.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn53.Caption = "تعداد سهم";
             this.gridColumn53.FieldName = "TedadSahm";
-            this.gridColumn53.MinWidth = 22;
+            this.gridColumn53.MinWidth = 18;
             this.gridColumn53.Name = "gridColumn53";
             this.gridColumn53.Visible = true;
             this.gridColumn53.VisibleIndex = 1;
-            this.gridColumn53.Width = 118;
+            this.gridColumn53.Width = 94;
             // 
             // gridColumn55
             // 
@@ -4887,11 +4824,11 @@
             this.gridColumn55.DisplayFormat.FormatString = "n";
             this.gridColumn55.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn55.FieldName = "MablaghHarSahm";
-            this.gridColumn55.MinWidth = 22;
+            this.gridColumn55.MinWidth = 18;
             this.gridColumn55.Name = "gridColumn55";
             this.gridColumn55.Visible = true;
             this.gridColumn55.VisibleIndex = 2;
-            this.gridColumn55.Width = 182;
+            this.gridColumn55.Width = 146;
             // 
             // gridColumn56
             // 
@@ -4905,11 +4842,11 @@
             this.gridColumn56.DisplayFormat.FormatString = "n";
             this.gridColumn56.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn56.FieldName = "SumMablagh";
-            this.gridColumn56.MinWidth = 22;
+            this.gridColumn56.MinWidth = 18;
             this.gridColumn56.Name = "gridColumn56";
             this.gridColumn56.Visible = true;
             this.gridColumn56.VisibleIndex = 3;
-            this.gridColumn56.Width = 200;
+            this.gridColumn56.Width = 160;
             // 
             // gridColumn61
             // 
@@ -4921,28 +4858,28 @@
             this.gridColumn61.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn61.Caption = "ملاحظات";
             this.gridColumn61.FieldName = "Molahezat";
-            this.gridColumn61.MinWidth = 22;
+            this.gridColumn61.MinWidth = 18;
             this.gridColumn61.Name = "gridColumn61";
             this.gridColumn61.Visible = true;
             this.gridColumn61.VisibleIndex = 4;
-            this.gridColumn61.Width = 545;
+            this.gridColumn61.Width = 436;
             // 
             // labelControl64
             // 
-            this.labelControl64.Location = new System.Drawing.Point(25, 86);
-            this.labelControl64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl64.Location = new System.Drawing.Point(20, 76);
+            this.labelControl64.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl64.Name = "labelControl64";
-            this.labelControl64.Size = new System.Drawing.Size(53, 27);
+            this.labelControl64.Size = new System.Drawing.Size(48, 24);
             this.labelControl64.TabIndex = 31;
             this.labelControl64.Text = "نام کاربر";
             this.labelControl64.Visible = false;
             // 
             // labelControl65
             // 
-            this.labelControl65.Location = new System.Drawing.Point(25, 51);
-            this.labelControl65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl65.Location = new System.Drawing.Point(20, 45);
+            this.labelControl65.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl65.Name = "labelControl65";
-            this.labelControl65.Size = new System.Drawing.Size(72, 27);
+            this.labelControl65.Size = new System.Drawing.Size(66, 24);
             this.labelControl65.TabIndex = 30;
             this.labelControl65.Text = "آیدی  کاربر";
             this.labelControl65.Visible = false;
@@ -4960,10 +4897,9 @@
             this.panelControl_SahmSahamdar.Controls.Add(this.labelControl74);
             this.panelControl_SahmSahamdar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_SahmSahamdar.Enabled = false;
-            this.panelControl_SahmSahamdar.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_SahmSahamdar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_SahmSahamdar.Location = new System.Drawing.Point(0, 282);
             this.panelControl_SahmSahamdar.Name = "panelControl_SahmSahamdar";
-            this.panelControl_SahmSahamdar.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_SahmSahamdar.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_SahmSahamdar.TabIndex = 48;
             // 
             // txtIndex_SahmSahamdar
@@ -4971,8 +4907,7 @@
             this.txtIndex_SahmSahamdar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_SahmSahamdar.EditValue = "";
             this.txtIndex_SahmSahamdar.Enabled = false;
-            this.txtIndex_SahmSahamdar.Location = new System.Drawing.Point(202, 12);
-            this.txtIndex_SahmSahamdar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_SahmSahamdar.Location = new System.Drawing.Point(483, 11);
             this.txtIndex_SahmSahamdar.Name = "txtIndex_SahmSahamdar";
             this.txtIndex_SahmSahamdar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_SahmSahamdar.Properties.Appearance.Options.UseForeColor = true;
@@ -4982,7 +4917,7 @@
             this.txtIndex_SahmSahamdar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_SahmSahamdar.Properties.NullText = "آیدی انبار";
             this.txtIndex_SahmSahamdar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_SahmSahamdar.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_SahmSahamdar.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_SahmSahamdar.TabIndex = 214;
             this.txtIndex_SahmSahamdar.TabStop = false;
             this.txtIndex_SahmSahamdar.Visible = false;
@@ -4991,8 +4926,7 @@
             // 
             this.txtMablaghHarSahm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMablaghHarSahm.EnterMoveNextControl = true;
-            this.txtMablaghHarSahm.Location = new System.Drawing.Point(575, 12);
-            this.txtMablaghHarSahm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMablaghHarSahm.Location = new System.Drawing.Point(781, 11);
             this.txtMablaghHarSahm.Name = "txtMablaghHarSahm";
             this.txtMablaghHarSahm.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMablaghHarSahm.Properties.Appearance.Options.UseForeColor = true;
@@ -5005,7 +4939,7 @@
             this.txtMablaghHarSahm.Properties.Mask.PlaceHolder = '-';
             this.txtMablaghHarSahm.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMablaghHarSahm.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMablaghHarSahm.Size = new System.Drawing.Size(155, 34);
+            this.txtMablaghHarSahm.Size = new System.Drawing.Size(124, 30);
             this.txtMablaghHarSahm.TabIndex = 1;
             this.txtMablaghHarSahm.EditValueChanged += new System.EventHandler(this.txtMablaghHarSahm_EditValueChanged);
             // 
@@ -5015,10 +4949,9 @@
             this.labelControl66.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl66.Appearance.Options.UseForeColor = true;
             this.labelControl66.AutoEllipsis = true;
-            this.labelControl66.Location = new System.Drawing.Point(738, 15);
-            this.labelControl66.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl66.Location = new System.Drawing.Point(911, 13);
             this.labelControl66.Name = "labelControl66";
-            this.labelControl66.Size = new System.Drawing.Size(85, 27);
+            this.labelControl66.Size = new System.Drawing.Size(77, 24);
             this.labelControl66.TabIndex = 177;
             this.labelControl66.Text = "مبلغ هر سهم";
             // 
@@ -5028,10 +4961,9 @@
             this.labelControl67.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl67.Appearance.Options.UseForeColor = true;
             this.labelControl67.AutoEllipsis = true;
-            this.labelControl67.Location = new System.Drawing.Point(432, 15);
-            this.labelControl67.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl67.Location = new System.Drawing.Point(667, 13);
             this.labelControl67.Name = "labelControl67";
-            this.labelControl67.Size = new System.Drawing.Size(65, 27);
+            this.labelControl67.Size = new System.Drawing.Size(58, 24);
             this.labelControl67.TabIndex = 175;
             this.labelControl67.Text = "جمع مبلغ";
             // 
@@ -5041,10 +4973,9 @@
             this.labelControl73.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl73.Appearance.Options.UseForeColor = true;
             this.labelControl73.AutoEllipsis = true;
-            this.labelControl73.Location = new System.Drawing.Point(956, 15);
-            this.labelControl73.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl73.Location = new System.Drawing.Point(1086, 13);
             this.labelControl73.Name = "labelControl73";
-            this.labelControl73.Size = new System.Drawing.Size(69, 27);
+            this.labelControl73.Size = new System.Drawing.Size(61, 24);
             this.labelControl73.TabIndex = 175;
             this.labelControl73.Text = "تعداد سهم";
             // 
@@ -5052,8 +4983,8 @@
             // 
             this.txtSumMablagh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSumMablagh.EnterMoveNextControl = true;
-            this.txtSumMablagh.Location = new System.Drawing.Point(247, 12);
-            this.txtSumMablagh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSumMablagh.Location = new System.Drawing.Point(519, 11);
+            this.txtSumMablagh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSumMablagh.Name = "txtSumMablagh";
             this.txtSumMablagh.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtSumMablagh.Properties.Appearance.Options.UseForeColor = true;
@@ -5065,15 +4996,15 @@
             this.txtSumMablagh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSumMablagh.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtSumMablagh.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSumMablagh.Size = new System.Drawing.Size(177, 34);
+            this.txtSumMablagh.Size = new System.Drawing.Size(142, 30);
             this.txtSumMablagh.TabIndex = 2;
             // 
             // txtTedadSahm
             // 
             this.txtTedadSahm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTedadSahm.EnterMoveNextControl = true;
-            this.txtTedadSahm.Location = new System.Drawing.Point(864, 12);
-            this.txtTedadSahm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTedadSahm.Location = new System.Drawing.Point(1012, 11);
+            this.txtTedadSahm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTedadSahm.Name = "txtTedadSahm";
             this.txtTedadSahm.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtTedadSahm.Properties.Appearance.Options.UseForeColor = true;
@@ -5084,20 +5015,20 @@
             this.txtTedadSahm.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTedadSahm.Properties.MaxLength = 9;
             this.txtTedadSahm.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTedadSahm.Size = new System.Drawing.Size(84, 34);
+            this.txtTedadSahm.Size = new System.Drawing.Size(67, 30);
             this.txtTedadSahm.TabIndex = 0;
             // 
             // txtMolahezat_SS
             // 
             this.txtMolahezat_SS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_SS.EnterMoveNextControl = true;
-            this.txtMolahezat_SS.Location = new System.Drawing.Point(247, 54);
-            this.txtMolahezat_SS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_SS.Location = new System.Drawing.Point(519, 48);
+            this.txtMolahezat_SS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_SS.Name = "txtMolahezat_SS";
             this.txtMolahezat_SS.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_SS.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_SS.Properties.MaxLength = 400;
-            this.txtMolahezat_SS.Size = new System.Drawing.Size(702, 34);
+            this.txtMolahezat_SS.Size = new System.Drawing.Size(562, 30);
             this.txtMolahezat_SS.TabIndex = 8;
             // 
             // labelControl74
@@ -5105,10 +5036,10 @@
             this.labelControl74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl74.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl74.Appearance.Options.UseForeColor = true;
-            this.labelControl74.Location = new System.Drawing.Point(956, 57);
-            this.labelControl74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl74.Location = new System.Drawing.Point(1086, 51);
+            this.labelControl74.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl74.Name = "labelControl74";
-            this.labelControl74.Size = new System.Drawing.Size(63, 27);
+            this.labelControl74.Size = new System.Drawing.Size(54, 24);
             this.labelControl74.TabIndex = 148;
             this.labelControl74.Text = "ملاحظات";
             // 
@@ -5116,9 +5047,8 @@
             // 
             this.tpDarsadVizitor.Controls.Add(this.panelControl12);
             this.tpDarsadVizitor.Controls.Add(this.panelControl_DarsadVizitor);
-            this.tpDarsadVizitor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpDarsadVizitor.Name = "tpDarsadVizitor";
-            this.tpDarsadVizitor.Size = new System.Drawing.Size(1054, 429);
+            this.tpDarsadVizitor.Size = new System.Drawing.Size(1164, 443);
             this.tpDarsadVizitor.Text = "درصد ویزیتور";
             // 
             // panelControl12
@@ -5128,21 +5058,20 @@
             this.panelControl12.Controls.Add(this.labelControl71);
             this.panelControl12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl12.Location = new System.Drawing.Point(0, 0);
-            this.panelControl12.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl12.Name = "panelControl12";
-            this.panelControl12.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl12.Size = new System.Drawing.Size(1164, 282);
             this.panelControl12.TabIndex = 49;
             // 
             // gridControlDarsadVizitor1
             // 
             this.gridControlDarsadVizitor1.DataSource = this.epDarsadVizitor_AsBindingSource;
             this.gridControlDarsadVizitor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlDarsadVizitor1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlDarsadVizitor1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlDarsadVizitor1.Location = new System.Drawing.Point(2, 2);
             this.gridControlDarsadVizitor1.MainView = this.gridViewDarsadVizitor1;
-            this.gridControlDarsadVizitor1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlDarsadVizitor1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlDarsadVizitor1.Name = "gridControlDarsadVizitor1";
-            this.gridControlDarsadVizitor1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlDarsadVizitor1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlDarsadVizitor1.TabIndex = 32;
             this.gridControlDarsadVizitor1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDarsadVizitor1});
@@ -5160,10 +5089,10 @@
             this.gridColumn58,
             this.gridColumn60,
             this.gridColumn62});
-            this.gridViewDarsadVizitor1.DetailHeight = 378;
+            this.gridViewDarsadVizitor1.DetailHeight = 336;
             this.gridViewDarsadVizitor1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewDarsadVizitor1.GridControl = this.gridControlDarsadVizitor1;
-            this.gridViewDarsadVizitor1.IndicatorWidth = 28;
+            this.gridViewDarsadVizitor1.IndicatorWidth = 22;
             this.gridViewDarsadVizitor1.Name = "gridViewDarsadVizitor1";
             this.gridViewDarsadVizitor1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewDarsadVizitor1.OptionsBehavior.Editable = false;
@@ -5187,9 +5116,9 @@
             // 
             this.gridColumn54.Caption = "آیدی";
             this.gridColumn54.FieldName = "Id";
-            this.gridColumn54.MinWidth = 21;
+            this.gridColumn54.MinWidth = 17;
             this.gridColumn54.Name = "gridColumn54";
-            this.gridColumn54.Width = 84;
+            this.gridColumn54.Width = 67;
             // 
             // gridColumn57
             // 
@@ -5201,12 +5130,12 @@
             this.gridColumn57.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn57.Caption = "ردیف";
             this.gridColumn57.FieldName = "Line";
-            this.gridColumn57.MinWidth = 21;
+            this.gridColumn57.MinWidth = 17;
             this.gridColumn57.Name = "gridColumn57";
             this.gridColumn57.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn57.Visible = true;
             this.gridColumn57.VisibleIndex = 0;
-            this.gridColumn57.Width = 66;
+            this.gridColumn57.Width = 53;
             // 
             // gridColumn59
             // 
@@ -5220,11 +5149,11 @@
             this.gridColumn59.DisplayFormat.FormatString = "n";
             this.gridColumn59.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn59.FieldName = "MablaghSabet";
-            this.gridColumn59.MinWidth = 22;
+            this.gridColumn59.MinWidth = 18;
             this.gridColumn59.Name = "gridColumn59";
             this.gridColumn59.Visible = true;
             this.gridColumn59.VisibleIndex = 1;
-            this.gridColumn59.Width = 182;
+            this.gridColumn59.Width = 146;
             // 
             // gridColumn58
             // 
@@ -5236,11 +5165,11 @@
             this.gridColumn58.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn58.Caption = "درصد ویزیتور";
             this.gridColumn58.FieldName = "DarsadVizitor";
-            this.gridColumn58.MinWidth = 22;
+            this.gridColumn58.MinWidth = 18;
             this.gridColumn58.Name = "gridColumn58";
             this.gridColumn58.Visible = true;
             this.gridColumn58.VisibleIndex = 2;
-            this.gridColumn58.Width = 118;
+            this.gridColumn58.Width = 94;
             // 
             // gridColumn60
             // 
@@ -5252,11 +5181,11 @@
             this.gridColumn60.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn60.Caption = "پیش فرض";
             this.gridColumn60.FieldName = "IsDefault";
-            this.gridColumn60.MinWidth = 22;
+            this.gridColumn60.MinWidth = 18;
             this.gridColumn60.Name = "gridColumn60";
             this.gridColumn60.Visible = true;
             this.gridColumn60.VisibleIndex = 3;
-            this.gridColumn60.Width = 109;
+            this.gridColumn60.Width = 87;
             // 
             // gridColumn62
             // 
@@ -5268,28 +5197,28 @@
             this.gridColumn62.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn62.Caption = "ملاحظات";
             this.gridColumn62.FieldName = "Molahezat";
-            this.gridColumn62.MinWidth = 22;
+            this.gridColumn62.MinWidth = 18;
             this.gridColumn62.Name = "gridColumn62";
             this.gridColumn62.Visible = true;
             this.gridColumn62.VisibleIndex = 4;
-            this.gridColumn62.Width = 545;
+            this.gridColumn62.Width = 436;
             // 
             // labelControl70
             // 
-            this.labelControl70.Location = new System.Drawing.Point(25, 86);
-            this.labelControl70.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl70.Location = new System.Drawing.Point(20, 76);
+            this.labelControl70.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl70.Name = "labelControl70";
-            this.labelControl70.Size = new System.Drawing.Size(53, 27);
+            this.labelControl70.Size = new System.Drawing.Size(48, 24);
             this.labelControl70.TabIndex = 31;
             this.labelControl70.Text = "نام کاربر";
             this.labelControl70.Visible = false;
             // 
             // labelControl71
             // 
-            this.labelControl71.Location = new System.Drawing.Point(25, 51);
-            this.labelControl71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl71.Location = new System.Drawing.Point(20, 45);
+            this.labelControl71.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl71.Name = "labelControl71";
-            this.labelControl71.Size = new System.Drawing.Size(72, 27);
+            this.labelControl71.Size = new System.Drawing.Size(66, 24);
             this.labelControl71.TabIndex = 30;
             this.labelControl71.Text = "آیدی  کاربر";
             this.labelControl71.Visible = false;
@@ -5307,10 +5236,9 @@
             this.panelControl_DarsadVizitor.Controls.Add(this.labelControl79);
             this.panelControl_DarsadVizitor.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_DarsadVizitor.Enabled = false;
-            this.panelControl_DarsadVizitor.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_DarsadVizitor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_DarsadVizitor.Location = new System.Drawing.Point(0, 282);
             this.panelControl_DarsadVizitor.Name = "panelControl_DarsadVizitor";
-            this.panelControl_DarsadVizitor.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_DarsadVizitor.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_DarsadVizitor.TabIndex = 50;
             // 
             // txtIndex_DarsadeVizitor
@@ -5318,8 +5246,7 @@
             this.txtIndex_DarsadeVizitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_DarsadeVizitor.EditValue = "";
             this.txtIndex_DarsadeVizitor.Enabled = false;
-            this.txtIndex_DarsadeVizitor.Location = new System.Drawing.Point(203, 14);
-            this.txtIndex_DarsadeVizitor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_DarsadeVizitor.Location = new System.Drawing.Point(483, 12);
             this.txtIndex_DarsadeVizitor.Name = "txtIndex_DarsadeVizitor";
             this.txtIndex_DarsadeVizitor.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_DarsadeVizitor.Properties.Appearance.Options.UseForeColor = true;
@@ -5329,7 +5256,7 @@
             this.txtIndex_DarsadeVizitor.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_DarsadeVizitor.Properties.NullText = "آیدی انبار";
             this.txtIndex_DarsadeVizitor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_DarsadeVizitor.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_DarsadeVizitor.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_DarsadeVizitor.TabIndex = 214;
             this.txtIndex_DarsadeVizitor.TabStop = false;
             this.txtIndex_DarsadeVizitor.Visible = false;
@@ -5338,14 +5265,13 @@
             // 
             this.chkDefaultDvizitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultDvizitor.EnterMoveNextControl = true;
-            this.chkDefaultDvizitor.Location = new System.Drawing.Point(248, 13);
-            this.chkDefaultDvizitor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultDvizitor.Location = new System.Drawing.Point(519, 12);
             this.chkDefaultDvizitor.Name = "chkDefaultDvizitor";
             this.chkDefaultDvizitor.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultDvizitor.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultDvizitor.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkDefaultDvizitor.Properties.Caption = "پیش فرض";
-            this.chkDefaultDvizitor.Size = new System.Drawing.Size(112, 35);
+            this.chkDefaultDvizitor.Size = new System.Drawing.Size(90, 32);
             this.chkDefaultDvizitor.TabIndex = 2;
             // 
             // labelControl80
@@ -5354,10 +5280,9 @@
             this.labelControl80.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl80.Appearance.Options.UseForeColor = true;
             this.labelControl80.AutoEllipsis = true;
-            this.labelControl80.Location = new System.Drawing.Point(446, 17);
-            this.labelControl80.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl80.Location = new System.Drawing.Point(678, 15);
             this.labelControl80.Name = "labelControl80";
-            this.labelControl80.Size = new System.Drawing.Size(12, 27);
+            this.labelControl80.Size = new System.Drawing.Size(11, 24);
             this.labelControl80.TabIndex = 189;
             this.labelControl80.Text = "%";
             // 
@@ -5365,8 +5290,8 @@
             // 
             this.txtDarsadVizitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDarsadVizitor.EnterMoveNextControl = true;
-            this.txtDarsadVizitor.Location = new System.Drawing.Point(467, 13);
-            this.txtDarsadVizitor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDarsadVizitor.Location = new System.Drawing.Point(695, 12);
+            this.txtDarsadVizitor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDarsadVizitor.Name = "txtDarsadVizitor";
             this.txtDarsadVizitor.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtDarsadVizitor.Properties.Appearance.Options.UseForeColor = true;
@@ -5376,15 +5301,14 @@
             this.txtDarsadVizitor.Properties.Mask.EditMask = "P2";
             this.txtDarsadVizitor.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDarsadVizitor.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDarsadVizitor.Size = new System.Drawing.Size(90, 34);
+            this.txtDarsadVizitor.Size = new System.Drawing.Size(72, 30);
             this.txtDarsadVizitor.TabIndex = 1;
             // 
             // txtMablaghSabet
             // 
             this.txtMablaghSabet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMablaghSabet.EnterMoveNextControl = true;
-            this.txtMablaghSabet.Location = new System.Drawing.Point(793, 13);
-            this.txtMablaghSabet.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMablaghSabet.Location = new System.Drawing.Point(955, 12);
             this.txtMablaghSabet.Name = "txtMablaghSabet";
             this.txtMablaghSabet.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMablaghSabet.Properties.Appearance.Options.UseForeColor = true;
@@ -5397,7 +5321,7 @@
             this.txtMablaghSabet.Properties.Mask.PlaceHolder = '-';
             this.txtMablaghSabet.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMablaghSabet.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMablaghSabet.Size = new System.Drawing.Size(155, 34);
+            this.txtMablaghSabet.Size = new System.Drawing.Size(124, 30);
             this.txtMablaghSabet.TabIndex = 0;
             // 
             // labelControl76
@@ -5406,10 +5330,9 @@
             this.labelControl76.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl76.Appearance.Options.UseForeColor = true;
             this.labelControl76.AutoEllipsis = true;
-            this.labelControl76.Location = new System.Drawing.Point(956, 16);
-            this.labelControl76.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl76.Location = new System.Drawing.Point(1086, 14);
             this.labelControl76.Name = "labelControl76";
-            this.labelControl76.Size = new System.Drawing.Size(67, 27);
+            this.labelControl76.Size = new System.Drawing.Size(60, 24);
             this.labelControl76.TabIndex = 177;
             this.labelControl76.Text = "مبلغ ثابت";
             // 
@@ -5419,10 +5342,9 @@
             this.labelControl78.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl78.Appearance.Options.UseForeColor = true;
             this.labelControl78.AutoEllipsis = true;
-            this.labelControl78.Location = new System.Drawing.Point(564, 16);
-            this.labelControl78.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl78.Location = new System.Drawing.Point(772, 14);
             this.labelControl78.Name = "labelControl78";
-            this.labelControl78.Size = new System.Drawing.Size(87, 27);
+            this.labelControl78.Size = new System.Drawing.Size(79, 24);
             this.labelControl78.TabIndex = 175;
             this.labelControl78.Text = "درصد ویزیتور";
             // 
@@ -5430,13 +5352,13 @@
             // 
             this.txtMolahezat_DV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_DV.EnterMoveNextControl = true;
-            this.txtMolahezat_DV.Location = new System.Drawing.Point(247, 54);
-            this.txtMolahezat_DV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_DV.Location = new System.Drawing.Point(519, 48);
+            this.txtMolahezat_DV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_DV.Name = "txtMolahezat_DV";
             this.txtMolahezat_DV.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_DV.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_DV.Properties.MaxLength = 400;
-            this.txtMolahezat_DV.Size = new System.Drawing.Size(702, 34);
+            this.txtMolahezat_DV.Size = new System.Drawing.Size(562, 30);
             this.txtMolahezat_DV.TabIndex = 3;
             // 
             // labelControl79
@@ -5444,10 +5366,10 @@
             this.labelControl79.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl79.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl79.Appearance.Options.UseForeColor = true;
-            this.labelControl79.Location = new System.Drawing.Point(956, 57);
-            this.labelControl79.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl79.Location = new System.Drawing.Point(1086, 51);
+            this.labelControl79.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl79.Name = "labelControl79";
-            this.labelControl79.Size = new System.Drawing.Size(63, 27);
+            this.labelControl79.Size = new System.Drawing.Size(54, 24);
             this.labelControl79.TabIndex = 148;
             this.labelControl79.Text = "ملاحظات";
             // 
@@ -5455,9 +5377,8 @@
             // 
             this.tpDarsadRanande.Controls.Add(this.panelControl13);
             this.tpDarsadRanande.Controls.Add(this.panelControl_DarsadRanande);
-            this.tpDarsadRanande.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpDarsadRanande.Name = "tpDarsadRanande";
-            this.tpDarsadRanande.Size = new System.Drawing.Size(1054, 429);
+            this.tpDarsadRanande.Size = new System.Drawing.Size(1164, 443);
             this.tpDarsadRanande.Text = "درصد راننده";
             // 
             // panelControl13
@@ -5467,21 +5388,20 @@
             this.panelControl13.Controls.Add(this.labelControl77);
             this.panelControl13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl13.Location = new System.Drawing.Point(0, 0);
-            this.panelControl13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelControl13.Name = "panelControl13";
-            this.panelControl13.Size = new System.Drawing.Size(1054, 248);
+            this.panelControl13.Size = new System.Drawing.Size(1164, 282);
             this.panelControl13.TabIndex = 51;
             // 
             // gridControlDarsadRanande1
             // 
             this.gridControlDarsadRanande1.DataSource = this.epDarsadRanande_AsBindingSource;
             this.gridControlDarsadRanande1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlDarsadRanande1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlDarsadRanande1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlDarsadRanande1.Location = new System.Drawing.Point(2, 2);
             this.gridControlDarsadRanande1.MainView = this.gridViewDarsadRanande1;
-            this.gridControlDarsadRanande1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControlDarsadRanande1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControlDarsadRanande1.Name = "gridControlDarsadRanande1";
-            this.gridControlDarsadRanande1.Size = new System.Drawing.Size(1050, 244);
+            this.gridControlDarsadRanande1.Size = new System.Drawing.Size(1160, 278);
             this.gridControlDarsadRanande1.TabIndex = 32;
             this.gridControlDarsadRanande1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewDarsadRanande1});
@@ -5499,10 +5419,10 @@
             this.gridColumn66,
             this.gridColumn67,
             this.gridColumn68});
-            this.gridViewDarsadRanande1.DetailHeight = 378;
+            this.gridViewDarsadRanande1.DetailHeight = 336;
             this.gridViewDarsadRanande1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.gridViewDarsadRanande1.GridControl = this.gridControlDarsadRanande1;
-            this.gridViewDarsadRanande1.IndicatorWidth = 28;
+            this.gridViewDarsadRanande1.IndicatorWidth = 22;
             this.gridViewDarsadRanande1.Name = "gridViewDarsadRanande1";
             this.gridViewDarsadRanande1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridViewDarsadRanande1.OptionsBehavior.Editable = false;
@@ -5526,9 +5446,9 @@
             // 
             this.gridColumn63.Caption = "آیدی";
             this.gridColumn63.FieldName = "Id";
-            this.gridColumn63.MinWidth = 21;
+            this.gridColumn63.MinWidth = 17;
             this.gridColumn63.Name = "gridColumn63";
-            this.gridColumn63.Width = 84;
+            this.gridColumn63.Width = 67;
             // 
             // gridColumn64
             // 
@@ -5540,12 +5460,12 @@
             this.gridColumn64.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn64.Caption = "ردیف";
             this.gridColumn64.FieldName = "Line";
-            this.gridColumn64.MinWidth = 21;
+            this.gridColumn64.MinWidth = 17;
             this.gridColumn64.Name = "gridColumn64";
             this.gridColumn64.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
             this.gridColumn64.Visible = true;
             this.gridColumn64.VisibleIndex = 0;
-            this.gridColumn64.Width = 66;
+            this.gridColumn64.Width = 53;
             // 
             // gridColumn65
             // 
@@ -5559,11 +5479,11 @@
             this.gridColumn65.DisplayFormat.FormatString = "n";
             this.gridColumn65.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn65.FieldName = "MablaghSabet";
-            this.gridColumn65.MinWidth = 22;
+            this.gridColumn65.MinWidth = 18;
             this.gridColumn65.Name = "gridColumn65";
             this.gridColumn65.Visible = true;
             this.gridColumn65.VisibleIndex = 1;
-            this.gridColumn65.Width = 182;
+            this.gridColumn65.Width = 146;
             // 
             // gridColumn66
             // 
@@ -5575,11 +5495,11 @@
             this.gridColumn66.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn66.Caption = "درصد راننده";
             this.gridColumn66.FieldName = "DarsadRanande";
-            this.gridColumn66.MinWidth = 22;
+            this.gridColumn66.MinWidth = 18;
             this.gridColumn66.Name = "gridColumn66";
             this.gridColumn66.Visible = true;
             this.gridColumn66.VisibleIndex = 2;
-            this.gridColumn66.Width = 118;
+            this.gridColumn66.Width = 94;
             // 
             // gridColumn67
             // 
@@ -5591,11 +5511,11 @@
             this.gridColumn67.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn67.Caption = "پیش فرض";
             this.gridColumn67.FieldName = "IsDefault";
-            this.gridColumn67.MinWidth = 22;
+            this.gridColumn67.MinWidth = 18;
             this.gridColumn67.Name = "gridColumn67";
             this.gridColumn67.Visible = true;
             this.gridColumn67.VisibleIndex = 3;
-            this.gridColumn67.Width = 109;
+            this.gridColumn67.Width = 87;
             // 
             // gridColumn68
             // 
@@ -5607,28 +5527,28 @@
             this.gridColumn68.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridColumn68.Caption = "ملاحظات";
             this.gridColumn68.FieldName = "Molahezat";
-            this.gridColumn68.MinWidth = 22;
+            this.gridColumn68.MinWidth = 18;
             this.gridColumn68.Name = "gridColumn68";
             this.gridColumn68.Visible = true;
             this.gridColumn68.VisibleIndex = 4;
-            this.gridColumn68.Width = 545;
+            this.gridColumn68.Width = 436;
             // 
             // labelControl72
             // 
-            this.labelControl72.Location = new System.Drawing.Point(25, 86);
-            this.labelControl72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl72.Location = new System.Drawing.Point(20, 76);
+            this.labelControl72.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl72.Name = "labelControl72";
-            this.labelControl72.Size = new System.Drawing.Size(53, 27);
+            this.labelControl72.Size = new System.Drawing.Size(48, 24);
             this.labelControl72.TabIndex = 31;
             this.labelControl72.Text = "نام کاربر";
             this.labelControl72.Visible = false;
             // 
             // labelControl77
             // 
-            this.labelControl77.Location = new System.Drawing.Point(25, 51);
-            this.labelControl77.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl77.Location = new System.Drawing.Point(20, 45);
+            this.labelControl77.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl77.Name = "labelControl77";
-            this.labelControl77.Size = new System.Drawing.Size(72, 27);
+            this.labelControl77.Size = new System.Drawing.Size(66, 24);
             this.labelControl77.TabIndex = 30;
             this.labelControl77.Text = "آیدی  کاربر";
             this.labelControl77.Visible = false;
@@ -5646,10 +5566,9 @@
             this.panelControl_DarsadRanande.Controls.Add(this.labelControl85);
             this.panelControl_DarsadRanande.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl_DarsadRanande.Enabled = false;
-            this.panelControl_DarsadRanande.Location = new System.Drawing.Point(0, 248);
-            this.panelControl_DarsadRanande.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panelControl_DarsadRanande.Location = new System.Drawing.Point(0, 282);
             this.panelControl_DarsadRanande.Name = "panelControl_DarsadRanande";
-            this.panelControl_DarsadRanande.Size = new System.Drawing.Size(1054, 181);
+            this.panelControl_DarsadRanande.Size = new System.Drawing.Size(1164, 161);
             this.panelControl_DarsadRanande.TabIndex = 52;
             // 
             // txtIndex_DarsadeRanande
@@ -5657,8 +5576,7 @@
             this.txtIndex_DarsadeRanande.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIndex_DarsadeRanande.EditValue = "";
             this.txtIndex_DarsadeRanande.Enabled = false;
-            this.txtIndex_DarsadeRanande.Location = new System.Drawing.Point(203, 14);
-            this.txtIndex_DarsadeRanande.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIndex_DarsadeRanande.Location = new System.Drawing.Point(483, 12);
             this.txtIndex_DarsadeRanande.Name = "txtIndex_DarsadeRanande";
             this.txtIndex_DarsadeRanande.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtIndex_DarsadeRanande.Properties.Appearance.Options.UseForeColor = true;
@@ -5668,7 +5586,7 @@
             this.txtIndex_DarsadeRanande.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIndex_DarsadeRanande.Properties.NullText = "آیدی انبار";
             this.txtIndex_DarsadeRanande.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtIndex_DarsadeRanande.Size = new System.Drawing.Size(37, 34);
+            this.txtIndex_DarsadeRanande.Size = new System.Drawing.Size(30, 30);
             this.txtIndex_DarsadeRanande.TabIndex = 214;
             this.txtIndex_DarsadeRanande.TabStop = false;
             this.txtIndex_DarsadeRanande.Visible = false;
@@ -5677,14 +5595,13 @@
             // 
             this.chkDefaultDarsadRanande.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDefaultDarsadRanande.EnterMoveNextControl = true;
-            this.chkDefaultDarsadRanande.Location = new System.Drawing.Point(248, 13);
-            this.chkDefaultDarsadRanande.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.chkDefaultDarsadRanande.Location = new System.Drawing.Point(519, 12);
             this.chkDefaultDarsadRanande.Name = "chkDefaultDarsadRanande";
             this.chkDefaultDarsadRanande.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.chkDefaultDarsadRanande.Properties.Appearance.Options.UseForeColor = true;
             this.chkDefaultDarsadRanande.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.chkDefaultDarsadRanande.Properties.Caption = "پیش فرض";
-            this.chkDefaultDarsadRanande.Size = new System.Drawing.Size(112, 35);
+            this.chkDefaultDarsadRanande.Size = new System.Drawing.Size(104, 32);
             this.chkDefaultDarsadRanande.TabIndex = 2;
             // 
             // labelControl81
@@ -5693,10 +5610,9 @@
             this.labelControl81.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl81.Appearance.Options.UseForeColor = true;
             this.labelControl81.AutoEllipsis = true;
-            this.labelControl81.Location = new System.Drawing.Point(446, 17);
-            this.labelControl81.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl81.Location = new System.Drawing.Point(678, 15);
             this.labelControl81.Name = "labelControl81";
-            this.labelControl81.Size = new System.Drawing.Size(12, 27);
+            this.labelControl81.Size = new System.Drawing.Size(11, 24);
             this.labelControl81.TabIndex = 189;
             this.labelControl81.Text = "%";
             // 
@@ -5704,8 +5620,8 @@
             // 
             this.txtDarsadRanande.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDarsadRanande.EnterMoveNextControl = true;
-            this.txtDarsadRanande.Location = new System.Drawing.Point(467, 13);
-            this.txtDarsadRanande.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDarsadRanande.Location = new System.Drawing.Point(695, 12);
+            this.txtDarsadRanande.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDarsadRanande.Name = "txtDarsadRanande";
             this.txtDarsadRanande.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtDarsadRanande.Properties.Appearance.Options.UseForeColor = true;
@@ -5715,15 +5631,14 @@
             this.txtDarsadRanande.Properties.Mask.EditMask = "P2";
             this.txtDarsadRanande.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDarsadRanande.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDarsadRanande.Size = new System.Drawing.Size(90, 34);
+            this.txtDarsadRanande.Size = new System.Drawing.Size(72, 30);
             this.txtDarsadRanande.TabIndex = 1;
             // 
             // txtMablaghSabet_2
             // 
             this.txtMablaghSabet_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMablaghSabet_2.EnterMoveNextControl = true;
-            this.txtMablaghSabet_2.Location = new System.Drawing.Point(793, 13);
-            this.txtMablaghSabet_2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMablaghSabet_2.Location = new System.Drawing.Point(955, 12);
             this.txtMablaghSabet_2.Name = "txtMablaghSabet_2";
             this.txtMablaghSabet_2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMablaghSabet_2.Properties.Appearance.Options.UseForeColor = true;
@@ -5736,7 +5651,7 @@
             this.txtMablaghSabet_2.Properties.Mask.PlaceHolder = '-';
             this.txtMablaghSabet_2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMablaghSabet_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMablaghSabet_2.Size = new System.Drawing.Size(155, 34);
+            this.txtMablaghSabet_2.Size = new System.Drawing.Size(124, 30);
             this.txtMablaghSabet_2.TabIndex = 0;
             // 
             // labelControl83
@@ -5745,10 +5660,9 @@
             this.labelControl83.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl83.Appearance.Options.UseForeColor = true;
             this.labelControl83.AutoEllipsis = true;
-            this.labelControl83.Location = new System.Drawing.Point(956, 16);
-            this.labelControl83.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl83.Location = new System.Drawing.Point(1086, 14);
             this.labelControl83.Name = "labelControl83";
-            this.labelControl83.Size = new System.Drawing.Size(67, 27);
+            this.labelControl83.Size = new System.Drawing.Size(60, 24);
             this.labelControl83.TabIndex = 177;
             this.labelControl83.Text = "مبلغ ثابت";
             // 
@@ -5758,10 +5672,9 @@
             this.labelControl84.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl84.Appearance.Options.UseForeColor = true;
             this.labelControl84.AutoEllipsis = true;
-            this.labelControl84.Location = new System.Drawing.Point(564, 16);
-            this.labelControl84.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl84.Location = new System.Drawing.Point(772, 14);
             this.labelControl84.Name = "labelControl84";
-            this.labelControl84.Size = new System.Drawing.Size(76, 27);
+            this.labelControl84.Size = new System.Drawing.Size(70, 24);
             this.labelControl84.TabIndex = 175;
             this.labelControl84.Text = "درصد راننده";
             // 
@@ -5769,13 +5682,13 @@
             // 
             this.txtMolahezat_DR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMolahezat_DR.EnterMoveNextControl = true;
-            this.txtMolahezat_DR.Location = new System.Drawing.Point(247, 54);
-            this.txtMolahezat_DR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMolahezat_DR.Location = new System.Drawing.Point(519, 48);
+            this.txtMolahezat_DR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMolahezat_DR.Name = "txtMolahezat_DR";
             this.txtMolahezat_DR.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.txtMolahezat_DR.Properties.Appearance.Options.UseForeColor = true;
             this.txtMolahezat_DR.Properties.MaxLength = 400;
-            this.txtMolahezat_DR.Size = new System.Drawing.Size(702, 34);
+            this.txtMolahezat_DR.Size = new System.Drawing.Size(562, 30);
             this.txtMolahezat_DR.TabIndex = 3;
             // 
             // labelControl85
@@ -5783,10 +5696,10 @@
             this.labelControl85.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl85.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             this.labelControl85.Appearance.Options.UseForeColor = true;
-            this.labelControl85.Location = new System.Drawing.Point(956, 57);
-            this.labelControl85.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl85.Location = new System.Drawing.Point(1086, 51);
+            this.labelControl85.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl85.Name = "labelControl85";
-            this.labelControl85.Size = new System.Drawing.Size(63, 27);
+            this.labelControl85.Size = new System.Drawing.Size(54, 24);
             this.labelControl85.TabIndex = 148;
             this.labelControl85.Text = "ملاحظات";
             // 
@@ -5796,15 +5709,14 @@
             // 
             // FrmEtelaateAshkhas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 570);
+            this.ClientSize = new System.Drawing.Size(1166, 570);
             this.Controls.Add(this.xtraTabControl);
             this.Controls.Add(this.panelControl_Buttons);
             this.Controls.Add(this.panelControl1);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FrmEtelaateAshkhas.IconOptions.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(1058, 610);
             this.Name = "FrmEtelaateAshkhas";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -5928,9 +5840,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Eetebarat)).EndInit();
             this.panelControl_Eetebarat.ResumeLayout(false);
             this.panelControl_Eetebarat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaEngheza_E.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIndex_EtebarFroosh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMablagh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTarikhGharadad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEetebarat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDefaultEetebar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShGharadad.Properties)).EndInit();
@@ -5945,14 +5857,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Takhfif)).EndInit();
             this.panelControl_Takhfif.ResumeLayout(false);
             this.panelControl_Takhfif.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDarsadTakhfifJamei.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIndex_DarsadeTakhfif.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaTarikh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAzTarikh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkTarikh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDefaultTakhfif.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDarsadTakhfif.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDarsadTakhfifRadifi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMolahezat_DT.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbNoeTakhfif.Properties)).EndInit();
             this.tpPersonel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).EndInit();
             this.panelControl10.ResumeLayout(false);
@@ -6158,7 +6070,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         public DevExpress.XtraEditors.LabelControl labelControl21;
@@ -6170,8 +6081,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl31;
         public DevExpress.XtraEditors.TextEdit txtMolahezat_E;
         private DevExpress.XtraEditors.LabelControl labelControl33;
-        public DevExpress.XtraEditors.TextEdit txtTarikhGharadad;
-        private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.CheckEdit chkEetebarat;
         private System.Windows.Forms.BindingSource epEetebarat_AsBindingSource;
         public DevExpress.XtraEditors.TextEdit txtMablagh;
@@ -6232,20 +6141,18 @@
         public DevExpress.XtraGrid.Views.Grid.GridView gridViewTakhfif1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn DarsadTakhfifJamei;
+        private DevExpress.XtraGrid.Columns.GridColumn DarsadTakhfifRadifi;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
         public DevExpress.XtraEditors.LabelControl labelControl36;
         public DevExpress.XtraEditors.LabelControl labelControl40;
         private DevExpress.XtraEditors.PanelControl panelControl_Takhfif;
         private DevExpress.XtraEditors.CheckEdit chkDefaultTakhfif;
-        public DevExpress.XtraEditors.TextEdit txtDarsadTakhfif;
-        private DevExpress.XtraEditors.LabelControl labelControl47;
+        public DevExpress.XtraEditors.TextEdit txtDarsadTakhfifRadifi;
         private DevExpress.XtraEditors.LabelControl labelControl48;
         public DevExpress.XtraEditors.TextEdit txtMolahezat_DT;
         private DevExpress.XtraEditors.LabelControl labelControl49;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbNoeTakhfif;
         public DevExpress.XtraEditors.TextEdit txtTaTarikh;
         private DevExpress.XtraEditors.LabelControl labelControl51;
         public DevExpress.XtraEditors.TextEdit txtAzTarikh;
@@ -6373,5 +6280,13 @@
         public DevExpress.XtraEditors.TextEdit txtIndex_SahmSahamdar;
         public DevExpress.XtraEditors.TextEdit txtIndex_DarsadeVizitor;
         public DevExpress.XtraEditors.TextEdit txtIndex_DarsadeRanande;
+        public DevExpress.XtraEditors.TextEdit txtTaEngheza_E;
+        private DevExpress.XtraEditors.LabelControl labelControl68;
+        private DevExpress.XtraGrid.Columns.GridColumn TaEngheza;
+        private DevExpress.XtraGrid.Columns.GridColumn colCode1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCode;
+        private DevExpress.XtraEditors.LabelControl labelControl24;
+        public DevExpress.XtraEditors.TextEdit txtDarsadTakhfifJamei;
+        private DevExpress.XtraEditors.LabelControl labelControl47;
     }
 }

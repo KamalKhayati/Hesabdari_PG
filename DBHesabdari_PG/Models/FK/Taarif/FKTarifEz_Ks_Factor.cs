@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBHesabdari_PG.Models.FK.Tanzimat;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -52,6 +53,9 @@ namespace DBHesabdari_PG.Models.FK.Taarif
         //[NotMapped]
         //[MaxLength(100)]
         //public string HesabTafsili3Name_NM { get; set; }
+
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Rizs { get; set; }
+        public virtual ICollection<FKTanzimatFactor> FKTanzimatFactors { get; set; }
 
     }
 }

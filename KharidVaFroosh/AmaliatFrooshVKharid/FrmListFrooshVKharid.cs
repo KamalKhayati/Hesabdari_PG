@@ -27,6 +27,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
         int _SalId = 0;
         public bool _FirstSelectAnbar_NextSanad = false;
+        public byte _NoeFactor = 0;
         MyContext dbContext;
 
         private void FrmListFrooshVKharid_Load(object sender, EventArgs e)
@@ -43,6 +44,36 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
                     //gridControl1 = gridControl_AghlamKala;
                     //gridView1 = gridView_AghlamKala;
+
+                    if (this.Name == "FrmListFrooshKhadamat" || this.Name == "FrmListKharidKhadamat")
+                    {
+                        //xtp_FactorBargashtAzFroosh.PageVisible = xtp_FactorBargashtAzKharid.PageVisible = false;
+                        xtp_FactorFroosh.Text = "فاکتور فروش خدمات";
+                        xtp_FactorBargashtAzFroosh.Text = "فاکتور برگشت از فروش خدمات";
+                        xtp_SefareshFroosh.Text = "سفارش فروش خدمات";
+                        xtp_FactorKharid.Text = "فاکتور خرید خدمات";
+                        xtp_FactorBargashtAzKharid.Text = "فاکتور برگشت از خرید خدمات";
+                        xtp_SefareshKharid.Text = "سفارش خرید خدمات";
+                        panelControl_NameAnbar.Enabled = false;
+                        panelControl_NameAnbar.Visible = false;
+                        panelControl_NameAnbar.Width = 0;
+                        _NoeFactor = 1;
+                        xtc_ListFrooshVKharid.Enabled = true;
+                        btnDisplyList.Enabled = true;
+                    }
+                    else
+                    {
+                        _NoeFactor = 0;
+                        if (!_FirstSelectAnbar_NextSanad)
+                        {
+                            panelControl_NameAnbar.Enabled = false;
+                            panelControl_NameAnbar.Visible = false;
+                            panelControl_NameAnbar.Width = 0;
+                            xtc_ListFrooshVKharid.Enabled = true;
+                            btnDisplyList.Enabled = true;
+                        }
+
+                    }
 
                     xtc_ListFrooshVKharid_SelectedPageChanged(null, null);
 
@@ -66,52 +97,55 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
             fm.lblSalId.Text = lblSalId.Text;
             fm.lblSalMali.Text = lblSalMali.Text;
             fm.En1 = EnumCED.Create;
-            if (_FirstSelectAnbar_NextSanad)
-                fm._AnbarId= Convert.ToInt32(cmbNameAnbar.EditValue);
+
+            //_NoeFactor = Convert.ToByte(gridView.GetFocusedRowCellValue("NoeFactor").ToString());
+            if (_FirstSelectAnbar_NextSanad && _NoeFactor == 0)
+                fm._AnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
 
             if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorFroosh)
             {
-                fm.Name = "FrmFactorFrooshKala";
-                fm.Text = "فاکتور فروش کالا";
-                //fm.cmbNameSanad.SelectedIndex = 0;
-                fm.ShowDialog(this);
+                if (_NoeFactor == 0)
+                    fm.Name = "FrmFactorFrooshKala";
+                else
+                    fm.Name = "FrmFactorFrooshKhadamat";
             }
             else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorBargashtAzFroosh)
             {
-                fm.Name = "FrmFactorBargashtAzFroosh";
-                fm.Text = "فاکتور برگشت از فروش کالا";
-               // fm.cmbNameSanad.SelectedIndex = 1;
-                fm.ShowDialog(this);
+                if (_NoeFactor == 0)
+                    fm.Name = "FrmFactorBargashtAzFrooshKala";
+                else
+                    fm.Name = "FrmFactorBargashtAzFrooshKhadamat";
             }
             else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_SefareshFroosh)
             {
-                fm.Name = "FrmSefareshFrooshKala";
-                fm.Text = "سفارش فروش کالا";
-               // fm.cmbNameSanad.SelectedIndex = 2;
-                fm.ShowDialog(this);
+                if (_NoeFactor == 0)
+                    fm.Name = "FrmSefareshFrooshKala";
+                else
+                    fm.Name = "FrmSefareshFrooshKhadamat";
             }
             else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorKharid)
             {
-                fm.Name = "FrmFactorKharidKala";
-                fm.Text = "فاکتور خرید کالا";
-                //fm.cmbNameSanad.SelectedIndex = 0;
-                fm.ShowDialog(this);
+                if (_NoeFactor == 0)
+                    fm.Name = "FrmFactorKharidKala";
+                else
+                    fm.Name = "FrmFactorKharidKhadamat";
             }
             else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorBargashtAzKharid)
             {
-                fm.Name = "FrmFactorBargashtAzKharid";
-                fm.Text = "فاکتور برگشت از خرید کالا";
-               // fm.cmbNameSanad.SelectedIndex = 1;
-                fm.ShowDialog(this);
+                if (_NoeFactor == 0)
+                    fm.Name = "FrmFactorBargashtAzKharidKala";
+                else
+                    fm.Name = "FrmFactorBargashtAzKharidKhadamat";
             }
             else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_SefareshKharid)
             {
-                fm.Name = "FrmSefareshKharidKala";
-                fm.Text = "سفارش خرید کالا";
-                //fm.cmbNameSanad.SelectedIndex = 2;
-                fm.ShowDialog(this);
+                if (_NoeFactor == 0)
+                    fm.Name = "FrmSefareshKharidKala";
+                else
+                    fm.Name = "FrmSefareshKharidKhadamat";
             }
 
+            fm.ShowDialog(this);
 
         }
 
@@ -124,13 +158,6 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
         private void gridView_List_RowCellClick(object sender, RowCellClickEventArgs e)
         {
-            try
-            {
-                btnDelete.Enabled = btnEdit.Enabled = true;
-            }
-            catch (Exception)
-            {
-            }
         }
 
         private void gridView_List_KeyDown(object sender, KeyEventArgs e)
@@ -209,7 +236,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
             if (xtc_ListFrooshVKharid.Enabled == false)
                 xtc_ListFrooshVKharid.Enabled = true;
             xtc_ListFrooshVKharid_SelectedPageChanged(null, null);
-
+            btnDisplyList.Enabled = true;
         }
 
         bool _IsActiveRow = true;
@@ -267,37 +294,37 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                 {
                     _NameAmaliatCode = 2;
                     _NameSanadCode = 201;
-                    _NameSanadText = xtp_FactorFroosh.Text;
+                    //_NameSanadText = xtp_FactorFroosh.Text;
                 }
                 else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorBargashtAzFroosh)
                 {
                     _NameAmaliatCode = 2;
                     _NameSanadCode = 202;
-                    _NameSanadText = xtp_FactorBargashtAzFroosh.Text;
+                    // _NameSanadText = xtp_FactorBargashtAzFroosh.Text;
                 }
                 else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_SefareshFroosh)
                 {
                     _NameAmaliatCode = 2;
                     _NameSanadCode = 203;
-                    _NameSanadText = xtp_SefareshFroosh.Text;
+                    // _NameSanadText = xtp_SefareshFroosh.Text;
                 }
                 else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorKharid)
                 {
                     _NameAmaliatCode = 1;
                     _NameSanadCode = 101;
-                    _NameSanadText = xtp_FactorKharid.Text;
+                    // _NameSanadText = xtp_FactorKharid.Text;
                 }
                 else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorBargashtAzKharid)
                 {
                     _NameAmaliatCode = 1;
                     _NameSanadCode = 102;
-                    _NameSanadText = xtp_FactorBargashtAzKharid.Text;
+                    //  _NameSanadText = xtp_FactorBargashtAzKharid.Text;
                 }
                 else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_SefareshKharid)
                 {
                     _NameAmaliatCode = 1;
                     _NameSanadCode = 103;
-                    _NameSanadText = xtp_SefareshKharid.Text;
+                    // _NameSanadText = xtp_SefareshKharid.Text;
                 }
 
 
@@ -355,27 +382,32 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
 
 
-                if (_FirstSelectAnbar_NextSanad)
+                if (_FirstSelectAnbar_NextSanad && _NoeFactor == 0)
                 {
-                    gridView.Columns["FNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
-                    gridView.Columns["SNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
-                    gridView.Columns["FNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = true;
-                    gridView.Columns["SNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = true;
+                    //gridView.Columns["FNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
+                    //gridView.Columns["SNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
+                    //gridView.Columns["FNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = true;
+                    //gridView.Columns["SNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = true;
                     gridView.Columns["FNumberJoze_BaNameSanad_BaSelectAnbar"].GroupIndex = 0;
-                    //if (Convert.ToInt32(cmbNameAnbar.EditValue) > 0)
-                    //    btnDisplyList.Enabled = true;
-                    //else
-                    //    btnDisplyList.Enabled = false;
-
                 }
-                else
+                else if (!_FirstSelectAnbar_NextSanad && _NoeFactor == 0)
                 {
-                    gridView.Columns["FNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
-                    gridView.Columns["SNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
+                    //gridView.Columns["FNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
+                    //gridView.Columns["SNumberCol_BaNameSanad_BeSelectAnbar"].Visible = true;
                     gridView.Columns["FNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = false;
                     gridView.Columns["SNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = false;
-                    gridView.Columns["FNumberCol_BaNameSanad_BeSelectAnbar"].GroupIndex = 0;
-                    btnDisplyList.Enabled = true;
+                    gridView.Columns["FNumberJoze_BaNameSanad_BaNoeFactor"].GroupIndex = 0;
+                }
+                else if ((_FirstSelectAnbar_NextSanad && _NoeFactor == 1) || (!_FirstSelectAnbar_NextSanad && _NoeFactor == 1))
+                {
+                    gridView.Columns["EpNameKala1.Code"].Caption = "کد خدمات";
+                    gridView.Columns["EpNameKala1.Name"].Caption = "نام خدمات";
+                    gridView.Columns["EpVahedKala1.Name"].Caption = "واحد خدمات";
+                    gridView.Columns["SNumberCol_BaNameSanad_BeSelectAnbar"].Visible = false;
+                    gridView.Columns["FNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = false;
+                    gridView.Columns["SNumberJoze_BaNameSanad_BaSelectAnbar"].Visible = false;
+                    gridView.Columns["FNumberJoze_BaNameSanad_BaNoeFactor"].GroupIndex = 0;
+                    gridView.Columns["EpListAnbarha1.Name"].Visible = false;
                 }
 
                 objXtraTabPage.Controls.Add(objGridControl);
@@ -397,15 +429,30 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                     //List<FkAmaliatFrooshVKharid_Riz> q = new List<FkAmaliatFrooshVKharid_Riz>();
                     if (_FirstSelectAnbar_NextSanad)
                     {
-                        _AnbarId = _AnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
-                        var list = dbContext.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.AnbarId == _AnbarId && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode).ToList();
-                        gridControl.DataSource = list.Count > 0 ? list.OrderBy(s => s.DateTimeSanad).ThenBy(s => s.FNumberJoze_BaNameSanad_BaSelectAnbar).ToList() : null;
-
+                        if (_NoeFactor == 0)
+                        {
+                            _AnbarId = _AnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+                            var list = dbContext.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.AnbarId == _AnbarId && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode && s.NoeFactor == _NoeFactor).ToList();
+                            gridControl.DataSource = list.Count > 0 ? list.OrderBy(s => s.DateTimeSanad).ThenBy(s => s.FNumberJoze_BaNameSanad_BaSelectAnbar).ToList() : null;
+                        }
+                        else
+                        {
+                            var list = dbContext.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.AnbarId == null && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode && s.NoeFactor == _NoeFactor).ToList();
+                            gridControl.DataSource = list.Count > 0 ? list.OrderBy(s => s.DateTimeSanad).ThenBy(s => s.FNumberJoze_BaNameSanad_BaNoeFactor).ToList() : null;
+                        }
                     }
                     else
                     {
-                        var list = dbContext.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode).ToList();
-                        gridControl.DataSource = list.Count > 0 ? list.OrderBy(s => s.DateTimeSanad).ThenBy(s => s.FNumberJoze_BaNameSanad_BaSelectAnbar).ToList() : null;
+                        if (_NoeFactor == 0)
+                        {
+                            var list = dbContext.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.AnbarId != 0 && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode && s.NoeFactor == _NoeFactor).ToList();
+                            gridControl.DataSource = list.Count > 0 ? list.OrderBy(s => s.DateTimeSanad).ThenBy(s => s.FNumberJoze_BaNameSanad_BaSelectAnbar).ToList() : null;
+                        }
+                        else
+                        {
+                            var list = dbContext.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.AnbarId == null && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode && s.NoeFactor == _NoeFactor).ToList();
+                            gridControl.DataSource = list.Count > 0 ? list.OrderBy(s => s.DateTimeSanad).ThenBy(s => s.FNumberJoze_BaNameSanad_BaSelectAnbar).ToList() : null;
+                        }
                     }
 
                     btnDelete.Enabled = btnEdit.Enabled = false;
@@ -428,6 +475,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
         int _TabPageCount = 0;
         int EditRowIndex = 0;
         int _FNumberCol_BaNameSanad_BeSelectAnbar = 0;
+        int _FNumberJoze_BaNameSanad_BaNoeFactor = 0;
         int _FNumberJoze_BaNameSanad_BaSelectAnbar = 0;
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -438,38 +486,43 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                     try
                     {
                         _FNumberCol_BaNameSanad_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberCol_BaNameSanad_BeSelectAnbar").ToString());
-                        _FNumberJoze_BaNameSanad_BaSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberJoze_BaNameSanad_BaSelectAnbar").ToString());
-                        _NameAmaliatCode = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameAmaliatCode").ToString());
-                        _NameSanadCode = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameSanadCode").ToString());
-                        _NameSanadText = gridView.GetFocusedRowCellValue("NameSanadText").ToString();
-
+                        _FNumberJoze_BaNameSanad_BaNoeFactor = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberJoze_BaNameSanad_BaNoeFactor").ToString());
                     }
                     catch (Exception)
                     {
-                        XtraMessageBox.Show("لطفاً روی زیر گروه مربوطه کلیک کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //XtraMessageBox.Show("لطفاً روی زیر گروه مربوطه کلیک کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnEdit.Enabled = btnDelete.Enabled = false;
                         return;
                     }
-                    //string NameSanad = XtraTabControl1_1.SelectedTabPage.Text;
+
+                    _NameSanadText = gridView.GetFocusedRowCellValue("NameSanadText").ToString();
                     if (XtraMessageBox.Show("آیا " + _NameSanadText + " مورد نظر کلاً حذف گردد؟", "پیغام حذف", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         EditRowIndex = gridView.FocusedRowHandle;
+                        _NameAmaliatCode = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameAmaliatCode").ToString());
+                        _NameSanadCode = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameSanadCode").ToString());
+                        _NoeFactor = Convert.ToByte(gridView.GetFocusedRowCellValue("NoeFactor").ToString());
+
                         using (var db = new MyContext())
                         {
                             try
                             {
                                 _SalId = Convert.ToInt32(lblSalId.Text);
                                 //_AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
-                                _AnbarId = Convert.ToInt32(gridView.GetFocusedRowCellValue("AnbarId").ToString());
                                 var q = db.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode
-                                && s.FNumberCol_BaNameSanad_BeSelectAnbar == _FNumberCol_BaNameSanad_BeSelectAnbar).ToList();
+                                && s.FNumberCol_BaNameSanad_BeSelectAnbar == _FNumberCol_BaNameSanad_BeSelectAnbar
+                                && s.FNumberJoze_BaNameSanad_BaNoeFactor== _FNumberJoze_BaNameSanad_BaNoeFactor).ToList();
                                 if (q.Count > 0)
                                 {
-                                    if (_FirstSelectAnbar_NextSanad)
-                                    {
-                                        var q1 = q.Where(s => s.FNumberJoze_BaNameSanad_BaSelectAnbar == _FNumberJoze_BaNameSanad_BaSelectAnbar && s.AnbarId == _AnbarId).ToList();
-                                        db.FkAmaliatFrooshVKharid_Rizs.RemoveRange(q1);
-                                    }
-                                    else
+                                    //if (_FirstSelectAnbar_NextSanad && _NoeFactor == 0)
+                                    //{
+                                    //    _FNumberJoze_BaNameSanad_BaSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberJoze_BaNameSanad_BaSelectAnbar").ToString());
+
+                                    //    _AnbarId = Convert.ToInt32(gridView.GetFocusedRowCellValue("AnbarId").ToString());
+                                    //    var q1 = q.Where(s => s.FNumberJoze_BaNameSanad_BaSelectAnbar == _FNumberJoze_BaNameSanad_BaSelectAnbar && s.AnbarId == _AnbarId).ToList();
+                                    //    db.FkAmaliatFrooshVKharid_Rizs.RemoveRange(q1);
+                                    //}
+                                    //else
                                         db.FkAmaliatFrooshVKharid_Rizs.RemoveRange(q);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
@@ -512,11 +565,12 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
                     try
                     {
-                        int _FNumberCol_BaNameSanad_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberCol_BaNameSanad_BeSelectAnbar").ToString());
+                        _FNumberCol_BaNameSanad_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberCol_BaNameSanad_BeSelectAnbar").ToString());
                     }
                     catch (Exception)
                     {
-                        XtraMessageBox.Show("لطفاً روی زیر گروه مربوطه کلیک کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //XtraMessageBox.Show("لطفاً روی زیر گروه مربوطه کلیک کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnEdit.Enabled = btnDelete.Enabled = false;
                         return;
                     }
 
@@ -531,259 +585,66 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                         fm.lblUserName.Text = lblUserName.Text;
                         fm.lblSalId.Text = lblSalId.Text;
                         fm.lblSalMali.Text = lblSalMali.Text;
-                        if (_FirstSelectAnbar_NextSanad)
-                            fm._AnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
+
+                        _NoeFactor = Convert.ToByte(gridView.GetFocusedRowCellValue("NoeFactor").ToString());
+                        if (_FirstSelectAnbar_NextSanad && _NoeFactor == 0)
+                        {
+                            fm._AnbarId = fm._BeforEditAnbarId= Convert.ToInt32(cmbNameAnbar.EditValue);
+
+                        }
 
                         if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorFroosh)
                         {
-                            fm.Name = "FrmFactorFrooshKala";
-                            //fm.Text = "فاکتور فروش";
-                            //fm.cmbNameSanad.SelectedIndex = 0;
+                            if (_NoeFactor == 0)
+                                fm.Name = "FrmFactorFrooshKala";
+                            else
+                                fm.Name = "FrmFactorFrooshKhadamat";
                         }
                         else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorBargashtAzFroosh)
                         {
-                            fm.Name = "FrmFactorBargashtAzFroosh";
-                            //fm.Text = "فاکتور برگشت از فروش";
-                            //fm.cmbNameSanad.SelectedIndex = 1;
+                            if (_NoeFactor == 0)
+                                fm.Name = "FrmFactorBargashtAzFrooshKala";
+                            else
+                                fm.Name = "FrmFactorBargashtAzFrooshKhadamat";
                         }
                         else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_SefareshFroosh)
                         {
-                            fm.Name = "FrmSefareshFrooshKala";
-                            //fm.Text = "سفارش فروش";
-                            //fm.cmbNameSanad.SelectedIndex = 2;
+                            if (_NoeFactor == 0)
+                                fm.Name = "FrmSefareshFrooshKala";
+                            else
+                                fm.Name = "FrmSefareshFrooshKhadamat";
                         }
                         else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorKharid)
                         {
-                            fm.Name = "FrmFactorKharidKala";
-                            //fm.Text = "فاکتور خرید";
-                            //fm.cmbNameSanad.SelectedIndex = 4;
+                            if (_NoeFactor == 0)
+                                fm.Name = "FrmFactorKharidKala";
+                            else
+                                fm.Name = "FrmFactorKharidKhadamat";
                         }
                         else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_FactorBargashtAzKharid)
                         {
-                            fm.Name = "FrmFactorBargashtAzKharid";
-                            //fm.Text = "فاکتور برگشت از خرید";
-                            //fm.cmbNameSanad.SelectedIndex = 5;
+                            if (_NoeFactor == 0)
+                                fm.Name = "FrmFactorBargashtAzKharidKala";
+                            else
+                                fm.Name = "FrmFactorBargashtAzKharidKhadamat";
                         }
                         else if (xtc_ListFrooshVKharid.SelectedTabPage == xtp_SefareshKharid)
                         {
-                            fm.Name = "FrmSefareshKharidKala";
-                            // fm.Text = "سفارش خرید";
-                            //fm.cmbNameSanad.SelectedIndex = 6;
+                            if (_NoeFactor == 0)
+                                fm.Name = "FrmSefareshKharidKala";
+                            else
+                                fm.Name = "FrmSefareshKharidKhadamat";
                         }
 
                         fm._FNumber_BeNameAmaliat_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumber_BeNameAmaliat_BeSelectAnbar"));
-                        fm._FNumber_BaNameAmaliat_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumber_BaNameAmaliat_BeSelectAnbar"));
+                        //fm._FNumber_BaNameAmaliat_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumber_BaNameAmaliat_BeSelectAnbar"));
                         fm._FNumberCol_BaNameSanad_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberCol_BaNameSanad_BeSelectAnbar"));
-                        fm._FNumber_BaNameAmaliat_BaSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberJoze_BaNameSanad_BaSelectAnbar"));
+                        //fm._FNumber_BaNameAmaliat_BaSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumber_BaNameAmaliat_BaSelectAnbar"));
                         fm._FNumberJoze_BaNameSanad_BaSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberJoze_BaNameSanad_BaSelectAnbar"));
                         fm._FNumberJoze_BaNameSanad_BaNoeFactor = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberJoze_BaNameSanad_BaNoeFactor"));
 
 
                         fm.ShowDialog(this);
-
-                       // // _IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
-                       // // btnSaveAndNext.Enabled = false;
-                       // //_AnbarId = Convert.ToInt32(gridView.GetFocusedRowCellValue("AnbarId"));
-                       // //_SeryalCol_BaNameAmaliat_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("SeryalCol_BaNameAmaliat_BeSelectAnbar").ToString());
-                       // //_SeryalJoze_BaNameSanad_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("SeryalJoze_BaNameSanad_BeSelectAnbar").ToString());
-
-                       // //if (_FirstSelectAnbar_NextSanad)
-                       //// {
-                       //     //panelControl_NameAnbar.Enabled = false;
-
-                       //     //txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Text = txtSeryalJoze_BaNameSanad_BeSelectAnbar.Text = "0";
-                       //     //_SeryalCol_BaNameAmaliat_BaSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("SeryalCol_BaNameAmaliat_BaSelectAnbar").ToString());
-                       //     //_SeryalJoze_BaNameSanad_BaSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("SeryalJoze_BaNameSanad_BaSelectAnbar").ToString());
-                       // //}
-                       //// else
-                       //// {
-                       //     //txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Text = txtSeryalJoze_BaNameSanad_BaSelectAnbar.Text = "0";
-                       //     //txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Visible = txtSeryalJoze_BaNameSanad_BaSelectAnbar.Visible = false;
-                       //     //lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Visible = lblSeryalJoze_BaNameSanad_BaSelectAnbar.Visible = false;
-                       //// }
-                       // //////////////////////////////////////////////////////////////////////////////////////////////////////
-                       // fm._NameSanadIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameSanadIndex"));
-                       // fm._NameSanadCode = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameSanadCode").ToString());
-                       // int? fm._GhateySanadNamber = null;
-                       // if (gridView.GetFocusedRowCellValue("GhateySanadNamber") != null)
-                       //     _GhateySanadNamber = Convert.ToInt32(gridView.GetFocusedRowCellValue("GhateySanadNamber").ToString());
-                       // int _SabetAtefNumber = Convert.ToInt32(gridView.GetFocusedRowCellValue("SabetAtefNumber").ToString());
-                       // int _RozaneSanadNumber = Convert.ToInt32(gridView.GetFocusedRowCellValue("RozaneSanadNumber").ToString());
-                       // int? _PaygiriNumber = null;
-                       // if (gridView.GetFocusedRowCellValue("PaygiriNumber") != null)
-                       //     _PaygiriNumber = Convert.ToInt32(gridView.GetFocusedRowCellValue("PaygiriNumber").ToString());
-                       // string _DateTimePaygiri = string.Empty;
-                       // if (gridView.GetFocusedRowCellValue("DateTimePaygiri") != null)
-                       //     _DateTimePaygiri = Convert.ToDateTime(gridView.GetFocusedRowCellValue("DateTimePaygiri")).ToString();
-                       // string _DateTimeSanad = Convert.ToDateTime(gridView.GetFocusedRowCellValue("DateTimeSanad")).ToString();
-                       // bool _IsRiali = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsRiali"));
-                       // //string _SabetAtefNumber = gridView.GetFocusedRowCellValue("SabetAtefNumber").ToString();
-                       // int _MoinId = Convert.ToInt32(gridView.GetFocusedRowCellValue("HesabMoinId"));
-                       // // string _TafsiliId = gridView.GetFocusedRowCellValue("TafsiliName").ToString();
-                       // _SharhSanad = gridView.GetFocusedRowCellValue("SharhSanad") != null ? gridView.GetFocusedRowCellValue("SharhSanad").ToString() : null;
-                       // int _Tafsili1Id = Convert.ToInt32(gridView.GetFocusedRowCellValue("HesabTafsili1Id"));
-                       // int _Tafsili2Id = Convert.ToInt32(gridView.GetFocusedRowCellValue("HesabTafsili2Id"));
-                       // int _Tafsili3Id = Convert.ToInt32(gridView.GetFocusedRowCellValue("HesabTafsili3Id"));
-                       // ActiveButtons();
-
-                       // var q2 = dbContext.EpNameKalas.Where(s => s.SalId == _SalId).ToList();
-                       // var q3 = dbContext.EpAllHesabTafsilis.Where(s => s.SalId == _SalId).ToList();
-                       // switch (_NameAmaliatTabpageName)
-                       // {
-                       //     case "xtpVrodeKala":
-                       //         {
-                       //             if (_FirstSelectAnbar_NextSanad)
-                       //             {
-                       //                 cmbBeAnbar.EditValue = _BeAnbarId;
-                       //                 cmbBeAnbar.ReadOnly = true;
-                       //             }
-
-                       //             var q1 = dbContext.AKAmaliatAnbarVKala_Rizs.Where(s => s.SalId == _SalId && s.SeryalCol_BeNameAmaliat_BeSelectAnbar == _SeryalCol_BeNameAmaliat_BeSelectAnbar).ToList();
-                       //             var q = q1.Where(s => s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode && s.SeryalCol_BaNameAmaliat_BeSelectAnbar == _SeryalCol_BaNameAmaliat_BeSelectAnbar).ToList();
-                       //             if (q.Count > 0)
-                       //             {
-                       //                 cmbNameSanad.Properties.Items.Clear();
-                       //                 cmbNameSanad.Properties.Items.Add("رسید خرید");
-                       //                 cmbNameSanad.Properties.Items.Add("برگشت از فروش");
-                       //                 cmbNameSanad.Properties.Items.Add("رسید کالای امانی");
-                       //                 cmbNameSanad.Properties.Items.Add("رسید تولید");
-                       //                 cmbNameSanad.Properties.Items.Add("برگشت از حواله تولید");
-                       //                 cmbNameSanad.Properties.Items.Add("برگشت از حواله هزینه");
-                       //                 cmbNameSanad.Properties.Items.Add("برگشت از حواله اموال");
-                       //                 cmbNameSanad.Properties.Items.Add("اضافات انبار");
-                       //                 if (_FirstSelectAnbar_NextSanad)
-                       //                     cmbNameSanad.Properties.Items.Add("رسید (جابجایی)");
-                       //                 else
-                       //                     cmbNameSanad.Properties.Items.Add("جابجایی کالا");
-                       //                 cmbNameSanad.Properties.Items.Add("رسید تبدیل");
-                       //                 cmbNameSanad.Properties.Items.Add("رسید سایر");
-                       //                 cmbNameSanad.Properties.Items.Add("موجودی اول دوره");
-
-                       //                 // _IndexTabPage = XtraTabControl1_1.SelectedTabPageIndex;
-                       //                 cmbNameSanad.SelectedIndex = _NameSanadIndex;
-                       //                 txtSeryalCol_BaNameAmaliat_BeSelectAnbar.Text = _SeryalCol_BaNameAmaliat_BeSelectAnbar.ToString();
-                       //                 txtSeryalJoze_BaNameSanad_BeSelectAnbar.Text = _SeryalJoze_BaNameSanad_BeSelectAnbar.ToString();
-                       //                 txtSeryalCol_BaNameAmaliat_BaSelectAnbar.Text = _SeryalCol_BaNameAmaliat_BaSelectAnbar.ToString();
-                       //                 txtSeryalJoze_BaNameSanad_BaSelectAnbar.Text = _SeryalJoze_BaNameSanad_BaSelectAnbar.ToString();
-                       //                 txtGhateySanadNumber.Text = _GhateySanadNamber != null ? _GhateySanadNamber.ToString() : "";
-                       //                 txtSabetAtefNumber.Text = _SabetAtefNumber.ToString();
-                       //                 txtRozaneSanadNumber.Text = _RozaneSanadNumber.ToString();
-                       //                 txtPaygiriNumber.Text = _PaygiriNumber != null ? _PaygiriNumber.ToString() : "";
-                       //                 //txtNameAmaliat1.Text = xtcAmaliatRozaneh.SelectedTabPage.Name;
-                       //                 //txtNameSanad1.Text = XtraTabControl1_1.SelectedTabPage.Name;
-                       //                 //txtNameSanad.Text = XtraTabControl1_1.SelectedTabPage.Text;
-                       //                 //txtNameSanad.BackColor = Color.Yellow;
-                       //                 HelpClass1.DateTimeMask(txtPaygiriTarikh);
-                       //                 txtPaygiriTarikh.Text = _DateTimePaygiri;
-                       //                 HelpClass1.DateTimeMask(txtTarikhSanad);
-                       //                 txtTarikhSanad.Text = _DateTimeSanad;
-                       //                 //chkIsSanadHesabdari.Checked = _IsRiali;
-                       //                 //txtSabetAtefNumber.Text = _SabetAtefNumber;
-                       //                 txtSharhSanad.Text = _SharhSanad;
-                       //                 //lblSanadNamber.BackColor = Color.Yellow;
-                       //                 // _TabPageCount = XtraTabControl1_1.TabPages.Count;
-                       //                 xtpVrodeKala.PageEnabled = xtpKhrojeKala.PageEnabled = false;
-                       //                 xtcAmaliatRozaneh.SelectedTabPageIndex = 2;
-                       //                 xtpAmaliatAddVEdit.PageVisible = true;
-                       //                 //NameSanad = NameSanad + " : نوع رسید " + ": " + XtraTabControl1_1.SelectedTabPage.Text;
-                       //                 //xtpAmaliatAddVEdit.Text = NameSanad;
-                       //                 xtpAmaliatAddVEdit.Appearance.Header.BackColor = Color.Pink;
-                       //                 //lblSeryalCol_BaNameAmaliat_BeSelectAnbar.Text = "ش رسید در کل انبارها";
-                       //                 //lblSeryalCol_BaNameAmaliat_BaSelectAnbar.Text = "ش رسید در انبار انتخابی";
-                       //                 //lblSeryalJoze_BaNameSanad_BaSelectAnbar.Text = "ش رسید در نوع رسید";
-                       //                 FillCmbHesabMoin();
-                       //                 cmbHesabMoin.EditValue = _MoinId;
-                       //                 cmbHesabTafsili1.EditValue = _Tafsili1Id;
-                       //                 cmbHesabTafsili2.EditValue = _Tafsili2Id;
-                       //                 cmbHesabTafsili3.EditValue = _Tafsili3Id;
-                       //                 //cmbHesabTafsili1.Text = q3.Find(s => s.Id == _Tafsili1Id).Name.ToString();
-                       //                 //cmbHesabTafsili2.Text = q3.Find(s => s.Id == _Tafsili2Id).Name.ToString();
-                       //                 //cmbHesabTafsili3.Text = q3.Find(s => s.Id == _Tafsili3Id).Name.ToString();
-                       //                 //cmbHesabTafsili1.ShowPopup();
-                       //                 //cmbHesabTafsili1.ClosePopup();
-                       //                 //cmbHesabTafsili2.ShowPopup();
-                       //                 //cmbHesabTafsili2.ClosePopup();
-                       //                 //cmbHesabTafsili3.ShowPopup();
-                       //                 //cmbHesabTafsili3.ClosePopup();
-
-                       //                 //List<AKAmaliatAnbarVKala_Riz> DBGridControl = (List<AKAmaliatAnbarVKala_Riz>)gridControl.DataSource;
-                       //                 //BindingList<AKAmaliatAnbarVKala_Riz> bl = new BindingList<AKAmaliatAnbarVKala_Riz>(DBGridControl);
-                       //                 //akVorodeKala_RizsBindingSource.DataSource = bl.Where(s => s.Seryal == _Seryal);
-
-                       //                 foreach (var item in q1)
-                       //                 {
-                       //                     item.KalaCode_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).Code.ToString();
-                       //                     item.KalaName_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).Name;
-                       //                     item.VahedeKala_NM = q2.FirstOrDefault(s => s.Id == item.KalaId).EpVahedAsliKala.Name;
-                       //                     item.AzAnbarName_NM = new MyContext().EpListAnbarhas.FirstOrDefault(s => s.Id == item.AzAnbarId).Name;
-                       //                     item.BeAnbarName_NM = new MyContext().EpListAnbarhas.FirstOrDefault(s => s.Id == item.BeAnbarId).Name;
-                       //                 }
-
-                       //                 //dbContext.AKAmaliatAnbarVKala_Rizs.LoadAsync().ContinueWith(loadTask =>
-                       //                 //{
-                       //                 //    // Bind data to control when loading complete
-                       //                 //    gridControl.DataSource = dbContext.AKAmaliatAnbarVKala_Rizs.Local.ToBindingList();
-                       //                 //}, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-
-                       //                 //xtp_AddVaEdit.PageVisible = true;
-
-                       //                 //dbContext.AKAmaliatAnbarVKala_Rizs.Where(s => s.Id == 0).Load();
-                       //                 // Bind data to control when loading complete
-
-                       //                 if (_NameSanadIndex == 8 || _NameSanadIndex == 9)
-                       //                 {
-                       //                     cmbAzAnbar.EditValue = _AzAnbarId;
-                       //                     cmbBeAnbar.EditValue = _BeAnbarId;
-                       //                     amaliatAnbarVKala_RizsBindingSource1.DataSource = q1.Where(s => s.AzAnbarId == _AzAnbarId && s.NameAmaliatCode == 3).ToList().Count > 0 ? q1.Where(s => s.AzAnbarId == _AzAnbarId && s.NameAmaliatCode == 3).ToList() : null;
-                       //                     amaliatAnbarVKala_RizsBindingSource2.DataSource = q1.Where(s => s.BeAnbarId == _BeAnbarId && s.NameAmaliatCode == 2).ToList().Count > 0 ? q1.Where(s => s.BeAnbarId == _BeAnbarId && s.NameAmaliatCode == 2).ToList() : null;
-                       //                 }
-                       //                 else
-                       //                 {
-                       //                     if (!_FirstSelectAnbar_NextSanad)
-                       //                     {
-                       //                         //akVorodeKala_RizsBindingSource.DataSource = dbContext.AKAmaliatAnbarVKala_Rizs.Local.ToBindingList();
-                       //                         amaliatAnbarVKala_RizsBindingSource1.DataSource = q.Count > 0 ? q.ToList() : null;
-                       //                     }
-                       //                     else
-                       //                     {
-                       //                         var q4 = q.Where(s => s.BeAnbarId == _BeAnbarId).ToList();
-                       //                         amaliatAnbarVKala_RizsBindingSource1.DataSource = q4.Count > 0 ? q4.ToList() : null;
-                       //                     }
-                       //                 }
-
-
-                       //                 txtTarikhSanad.Focus();
-
-                       //             }
-
-
-                       //             //for (int i = 0; i < XtraTabControl1_1.TabPages.Count; i++)
-                       //             //{
-                       //             //    if (XtraTabControl1_1.TabPages[i].Name != NameSanadTabpageName)
-                       //             //    {
-                       //             //        XtraTabControl1_1.TabPages[i].PageEnabled = false;
-                       //             //    }
-                       //             //}
-
-                       //             break;
-                       //         }
-                       //     default:
-                       //         break;
-                       // }
-
-                       // cmbNameSanad.ReadOnly = true;
-
-                       // //if (cmbNameSanad.SelectedIndex == 8)
-                       // //{
-                       // //    cmbAzAnbar.EditValue = _AzAnbarId;
-                       // //    cmbBeAnbar.EditValue = _BeAnbarId;
-                       // //    amaliatAnbarVKala_RizsBindingSource2.DataSource = amaliatAnbarVKala_RizsBindingSource1.DataSource;
-                       // //}
-                       // //if (cmbNameSanad.SelectedIndex == 8 || cmbNameSanad.SelectedIndex == 9)
-                       // //{
-                       // //    cmbAzAnbar.EditValue = _AzAnbarId;
-                       // //    cmbBeAnbar.EditValue = _BeAnbarId;
-                       // //}
 
                     }
                     catch (Exception ex)
@@ -829,6 +690,27 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
         private void cmbNameAnbar_Enter(object sender, EventArgs e)
         {
             cmbNameAnbar.ShowPopup();
+        }
+
+        private void gridView_List_RowClick(object sender, RowClickEventArgs e)
+        {
+            try
+            {
+                _FNumberCol_BaNameSanad_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberCol_BaNameSanad_BeSelectAnbar").ToString());
+                btnDelete.Enabled = btnEdit.Enabled = true;
+            }
+            catch (Exception)
+            {
+                //XtraMessageBox.Show("لطفاً روی زیر گروه مربوطه کلیک کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnEdit.Enabled = btnDelete.Enabled = false;
+                return;
+            }
+        }
+
+        private void FrmListFrooshVKharid_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (dbContext != null)
+                dbContext.Dispose();
         }
     }
 }

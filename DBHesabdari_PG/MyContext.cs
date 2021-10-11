@@ -210,12 +210,13 @@ namespace DBHesabdari_PG
             modelBuilder.Entity<EpHesabGroup>().HasMany(m => m.EpHesabCols).WithRequired(m => m.EpHesabGroup1).HasForeignKey(m => m.GroupId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpHesabCol>().HasMany(m => m.EpHesabMoin1s).WithRequired(m => m.EpHesabCol1).HasForeignKey(m => m.ColId).WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.HesabMoinId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.HesabMoinId_Bed).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.AKAmaliatAnbarVKala_Rizs).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.HesabMoinId).WillCascadeOnDelete(false);
             //modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.AkKhorojeKala_Rizs).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.HesabMoinId).WillCascadeOnDelete(false);
             //modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.AkAllAmaliateRozanehs).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.HesabMoinId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.EpSharhStandardMoins).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.EpListAnbarhas).WithRequired(m => m.EpHesabMoin1).HasForeignKey(m => m.MoinId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabMoin1>().HasMany(m => m.FKTanzimatFactors).WithOptional(m => m.EpHesabMoin1).HasForeignKey(m => m.HesabMoinId).WillCascadeOnDelete(false);
 
 
             //modelBuilder.Entity<EpGroupTafsiliLevel1>().HasMany(m => m.EpHesabTafsiliSandoghs).WithRequired(m => m.EpGroupTafsiliLevel1).HasForeignKey(m => m.GroupTafsiliId).WillCascadeOnDelete(false);
@@ -254,14 +255,14 @@ namespace DBHesabdari_PG
             modelBuilder.Entity<EpVahedKala>().HasMany(m => m.EpNameKala3s).WithOptional(m => m.EpVahedKala3).HasForeignKey(m => m.VahedKala3Id).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpVahedKala>().HasMany(m => m.EpNameKala4s).WithRequired(m => m.EpVahedAsliKala).HasForeignKey(m => m.VahedAsliId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpVahedKala>().HasMany(m => m.EpAllCodingKalas).WithRequired(m => m.EpVahedAsliKala).HasForeignKey(m => m.VahedAsliKalaId).WillCascadeOnDelete(false);
-            modelBuilder.Entity<EpVahedKala>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithRequired(m => m.EpVahedKala1).HasForeignKey(m => m.VahedeKalaId).WillCascadeOnDelete(false);
+            //modelBuilder.Entity<EpVahedKala>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithOptional(m => m.EpVahedKala1).HasForeignKey(m => m.VahedeKalaId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpVahedKala>().HasMany(m => m.AKAmaliatAnbarVKala_Rizs).WithRequired(m => m.EpVahedKala1).HasForeignKey(m => m.VahedeKalaId).WillCascadeOnDelete(false);
             //modelBuilder.Entity<EpVahedKala>().HasMany(m => m.AkKhorojeKala_Rizs).WithRequired(m => m.EpVahedKala1).HasForeignKey(m => m.VahedeKalaId).WillCascadeOnDelete(false);
 
 
-            modelBuilder.Entity<EpNameKala>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithRequired(m => m.EpNameKala1).HasForeignKey(m => m.KalaId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNameKala>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithOptional(m => m.EpNameKala1).HasForeignKey(m => m.KalaId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpNameKala>().HasMany(m => m.AKAmaliatAnbarVKala_Rizs).WithRequired(m => m.EpNameKala1).HasForeignKey(m => m.KalaId).WillCascadeOnDelete(false);
-            //modelBuilder.Entity<EpNameKala>().HasMany(m => m.AkKhorojeKala_Rizs).WithRequired(m => m.EpNameKala1).HasForeignKey(m => m.KalaId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpNameKala>().HasMany(m => m.FKTanzimatFactors).WithOptional(m => m.EpNameKala1).HasForeignKey(m => m.KhadamatId).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<EpAllCodingKala>().HasOptional(m => m.EpTabaghehKala1).WithRequired(m => m.EpAllCodingKala1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllCodingKala>().HasOptional(m => m.EpGroupAsliKala1).WithRequired(m => m.EpAllCodingKala1).WillCascadeOnDelete(true);
@@ -287,10 +288,15 @@ namespace DBHesabdari_PG
             modelBuilder.Entity<EpAllHesabTafsili>().HasOptional(m => m.EpHesabTafsiliAnbarha1).WithRequired(m => m.EpAllHesabTafsili1).WillCascadeOnDelete(true);
             modelBuilder.Entity<EpAllHesabTafsili>().HasOptional(m => m.EpHesabTafsiliSayer1).WithRequired(m => m.EpAllHesabTafsili1).WillCascadeOnDelete(true);
 
-            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz1s).WithRequired(m => m.EpAllHesabTafsili1).HasForeignKey(m => m.HesabTafsili1Id).WillCascadeOnDelete(false);
-            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz2s).WithRequired(m => m.EpAllHesabTafsili2).HasForeignKey(m => m.HesabTafsili2Id).WillCascadeOnDelete(false);
-            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz3s).WithRequired(m => m.EpAllHesabTafsili3).HasForeignKey(m => m.HesabTafsili3Id).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz1s).WithRequired(m => m.EpAllHesabTafsili1).HasForeignKey(m => m.HesabTafsili1Id_Bed).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz2s).WithRequired(m => m.EpAllHesabTafsili2).HasForeignKey(m => m.HesabTafsili2Id_Bed).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz3s).WithRequired(m => m.EpAllHesabTafsili3).HasForeignKey(m => m.HesabTafsili3Id_Bed).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabTafsiliAshkhas>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithOptional(m => m.EpHesabTafsiliAshkhas1).HasForeignKey(m => m.VizitorId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpHesabTafsiliAshkhas>().HasMany(m => m.FKTanzimatFactors).WithOptional(m => m.EpHesabTafsiliAshkhas1).HasForeignKey(m => m.VizitorId).WillCascadeOnDelete(true);
 
+            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FKTanzimatFactor1s).WithOptional(m => m.EpAllHesabTafsili1).HasForeignKey(m => m.HesabTafsili1Id).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FKTanzimatFactor2s).WithOptional(m => m.EpAllHesabTafsili2).HasForeignKey(m => m.HesabTafsili2Id).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.FKTanzimatFactor3s).WithOptional(m => m.EpAllHesabTafsili3).HasForeignKey(m => m.HesabTafsili3Id).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.AKAmaliatAnbarVKala_Riz1s).WithRequired(m => m.EpAllHesabTafsili1).HasForeignKey(m => m.HesabTafsili1Id).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.AKAmaliatAnbarVKala_Riz2s).WithRequired(m => m.EpAllHesabTafsili2).HasForeignKey(m => m.HesabTafsili2Id).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpAllHesabTafsili>().HasMany(m => m.AKAmaliatAnbarVKala_Riz3s).WithRequired(m => m.EpAllHesabTafsili3).HasForeignKey(m => m.HesabTafsili3Id).WillCascadeOnDelete(false);
@@ -352,15 +358,16 @@ namespace DBHesabdari_PG
             modelBuilder.Entity<EpTabaghehKala>().HasMany(m => m.R_EpListAnbarha_B_EpTabaghehKalas).WithRequired(m => m.EpTabaghehKala1).HasForeignKey(m => m.TabagheKalaId).WillCascadeOnDelete(true);
 
             //modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz1s).WithRequired(m => m.EpListAnbarha1).HasForeignKey(m => m.AnbarId).WillCascadeOnDelete(false);
-            //modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.AkAllAmaliateRozaneh2s).WithRequired(m => m.EpListAnbarha2).HasForeignKey(m => m.BeAnbarId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.FkAmaliatFrooshVKharid_Riz1s).WithOptional(m => m.EpListAnbarha1).HasForeignKey(m => m.AnbarId).WillCascadeOnDelete(false);
 
             modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.AKAmaliatAnbarVKala_Riz1s).WithRequired(m => m.EpListAnbarha1).HasForeignKey(m => m.AzAnbarId).WillCascadeOnDelete(false);
             modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.AKAmaliatAnbarVKala_Riz2s).WithRequired(m => m.EpListAnbarha2).HasForeignKey(m => m.BeAnbarId).WillCascadeOnDelete(false);
 
-            //modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.AkKhorojeKala_Riz1s).WithRequired(m => m.EpListAnbarha1).HasForeignKey(m => m.AzAnbarId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.FKTanzimatFactors).WithOptional(m => m.EpListAnbarha1).HasForeignKey(m => m.AnbarId).WillCascadeOnDelete(true);
             //modelBuilder.Entity<EpListAnbarha>().HasMany(m => m.AkKhorojeKala_Riz2s).WithRequired(m => m.EpListAnbarha2).HasForeignKey(m => m.BeAnbarId).WillCascadeOnDelete(false);
 
-            //modelBuilder.Entity<FkAmaliatFrooshVKharidVKharid_Riz>().HasMany(m => m.AKAmaliatAnbarVKala_Rizs).WithRequired(m => m.FkAmaliatFrooshVKharidVKharid_Riz1).HasForeignKey(m => m.FactorId).WillCascadeOnDelete(true);
+            modelBuilder.Entity<FKTarifEz_Ks_Factor>().HasMany(m => m.FkAmaliatFrooshVKharid_Rizs).WithOptional(m => m.FKTarifEz_Ks_Factor1).HasForeignKey(m => m.Ez_KsId).WillCascadeOnDelete(false);
+            modelBuilder.Entity<FKTarifEz_Ks_Factor>().HasMany(m => m.FKTanzimatFactors).WithOptional(m => m.FKTarifEz_Ks_Factor1).HasForeignKey(m => m.Ez_KsId).WillCascadeOnDelete(true);
 
 
             #region

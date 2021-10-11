@@ -1,6 +1,7 @@
 ﻿using DBHesabdari_PG.Models.AK;
 using DBHesabdari_PG.Models.EP.CodingAnbar;
 using DBHesabdari_PG.Models.EP.CodingHesabdari;
+using DBHesabdari_PG.Models.FK.Taarif;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,41 +17,41 @@ namespace DBHesabdari_PG.Models.FK
         public long Id { get; set; }
         [Required]
         public int SalId { get; set; }
-        [Required]
-        public int KalaId { get; set; }
-        [Required]
-        public int VahedeKalaId { get; set; }
-        [Required]
-        public int AnbarId { get; set; }
         //[Required]
-        //public int BeAnbarId { get; set; }
+        public int? KalaId { get; set; }
         //[Required]
-        //public byte NoeAghlam { get; set; }
+        //public int? VahedeKalaId { get; set; }
+        //[Required]
+        public int? AnbarId { get; set; }
+        //[Required]
+        public int? Ez_KsId { get; set; }
+        //[Required]
+        public int? VizitorId { get; set; }
 
         [Required]///// شماره فاکتور کلی بدون هیچ فیلتر یا شرطی
         public int FNumber_BeNameAmaliat_BeSelectAnbar { get; set; }
-        [Required]///// شماره فاکتور کلی با فیلتر یکی از عملیات خرید یا فروش
-        public int FNumber_BaNameAmaliat_BeSelectAnbar { get; set; }
+        //[Required]///// شماره فاکتور کلی با فیلتر یکی از عملیات خرید یا فروش
+        //public int FNumber_BaNameAmaliat_BeSelectAnbar { get; set; }
         [Required]///// شماره فاکتور کلی با فیلتر یکی از سندهای عملیات خرید یا فروش بدون نوع فاکتور(کالا/خدمات)ض
         public int FNumberCol_BaNameSanad_BeSelectAnbar { get; set; }
-        [Required]///// شماره فاکتور جزء با فیلتر یکی از عملیات خرید یا فروش و یکی از انبارها
-        public int FNumber_BaNameAmaliat_BaSelectAnbar { get; set; }
+        //[Required]///// شماره فاکتور جزء با فیلتر یکی از عملیات خرید یا فروش و یکی از انبارها
+        //public int FNumber_BaNameAmaliat_BaSelectAnbar { get; set; }
         [Required]///// شماره فاکتور جزء با فیلتر یکی از سندهای عملیات خرید یا فروش و یکی از انبارها
         public int FNumberJoze_BaNameSanad_BaSelectAnbar { get; set; }
         [Required]///// شماره فاکتور جزء با فیلتر یکی از سندهای عملیات خرید یا فروش و یکی از انبارها
         public int FNumberJoze_BaNameSanad_BaNoeFactor { get; set; }
 
 
-        [Required]
-        public int SNumber_BeNameAmaliat_BeSelectAnbar { get; set; }
-        [Required]
-        public int SNumber_BaNameAmaliat_BeSelectAnbar { get; set; }
-        [Required]
-        public int SNumberCol_BaNameSanad_BeSelectAnbar { get; set; }
-        [Required]
-        public int SNumber_BaNameAmaliat_BaSelectAnbar { get; set; }
-        [Required]
-        public int SNumberJoze_BaNameSanad_BaSelectAnbar { get; set; }
+        //[Required]
+        public int? SNumber_BeNameAmaliat_BeSelectAnbar { get; set; }
+        //[Required]
+        //public int SNumber_BaNameAmaliat_BeSelectAnbar { get; set; }
+        //[Required]
+        public int? SNumberCol_BaNameSanad_BeSelectAnbar { get; set; }
+        //[Required]
+        //public int SNumber_BaNameAmaliat_BaSelectAnbar { get; set; }
+        //[Required]
+        public int? SNumberJoze_BaNameSanad_BaSelectAnbar { get; set; }
 
 
         //[Required]
@@ -102,14 +103,26 @@ namespace DBHesabdari_PG.Models.FK
         //////////////سفارش داخلی //// سفارش صادارتی 
         [MaxLength(100)]
         public string NoeSanadText { get; set; }
+        //////////////خرید داخلی ==0////خرید وارداتی==1
+        //////////////برگشت داخلی ==0//// برگشت وارداتی ==1
+        //////////////سفارش داخلی ==0//// سفارش وارداتی ==1
+        //////////////فروش داخلی ==0//// فروش صادارتی ==1
+        //////////////برگشت داخلی ==0//// برگشت صادارتی ==1
+        //////////////سفارش داخلی ==0//// سفارش صادارتی ==1
         //[Required]
-        //public int NoeAghlamIndex { get; set; }
+        //public int NoeSanadIndex_Khadamat { get; set; }
+        //////////////خرید داخلی ////خرید وارداتی
+        //////////////برگشت داخلی //// برگشت وارداتی 
+        //////////////سفارش داخلی //// سفارش وارداتی 
+        //////////////فروش داخلی //// فروش صادارتی 
+        //////////////برگشت داخلی //// برگشت صادارتی 
+        //////////////سفارش داخلی //// سفارش صادارتی 
         //[MaxLength(100)]
-        //public string NoeAghlamText { get; set; }
-        [Required]
-        public int SefareshId { get; set; }
-        [Required]
-        public int SanadMabnaId { get; set; }
+        //public string NoeSanadText_Khadamat { get; set; }
+        //[Required]
+        public int? SefareshId { get; set; }
+        //[Required]
+        public int? SanadMabnaId { get; set; }
         [Required]
         public decimal Meghdar { get; set; }
         [Required]
@@ -117,19 +130,37 @@ namespace DBHesabdari_PG.Models.FK
         [Required]
         public decimal Mablag { get; set; }
         //[Required]
-        //public bool IsMeghdari { get; set; }
+        public decimal? Motefareghe { get; set; }
+        public decimal? TakhfifRadifiKala { get; set; }
+        public decimal? TakhfifRadifiTaraf { get; set; }
+        public decimal? Maliat { get; set; }
+        public decimal? Avarez { get; set; }
         [Required]
-        public bool IsRiali { get; set; }
+        public byte IndexAghlamFactor { get; set; }
+        //[Required]
+        //public decimal? Ksorat { get; set; }
+        //[Required]
+        //public bool IsMeghdari { get; set; }
+        //[Required]
+        //public bool? IsRiali { get; set; }
         //[Required]
         //public int RozaneSanadNumber { get; set; }
         [Required]
-        public int HesabMoinId { get; set; }
+        public int HesabMoinId_Bed { get; set; }
         [Required]
-        public int HesabTafsili1Id { get; set; }
+        public int HesabTafsili1Id_Bed { get; set; }
         [Required]
-        public int HesabTafsili2Id { get; set; }
+        public int HesabTafsili2Id_Bed { get; set; }
         [Required]
-        public int HesabTafsili3Id { get; set; }
+        public int HesabTafsili3Id_Bed { get; set; }
+        [Required]
+        public int HesabMoinId_Bes { get; set; }
+        [Required]
+        public int HesabTafsili1Id_Bes { get; set; }
+        [Required]
+        public int HesabTafsili2Id_Bes { get; set; }
+        [Required]
+        public int HesabTafsili3Id_Bes { get; set; }
         //[MaxLength(100)]
         //public string Tafsili2Name { get; set; }
         //[MaxLength(100)]
@@ -158,6 +189,9 @@ namespace DBHesabdari_PG.Models.FK
         [NotMapped]
         [MaxLength(100)]
         public string KalaName_NM { get; set; }
+        //[NotMapped]
+        //[MaxLength(100)]
+        //public string VizitorName_NM { get; set; }
         [NotMapped]
         [MaxLength(20)]
         public string VahedeKala_NM { get; set; }
@@ -225,14 +259,16 @@ namespace DBHesabdari_PG.Models.FK
 
 
 
-        //public virtual EpListAnbarha EpListAnbarha1 { get; set; }
+        public virtual EpListAnbarha EpListAnbarha1 { get; set; }
         //public virtual EpListAnbarha EpListAnbarha2 { get; set; }
-        public virtual EpVahedKala EpVahedKala1 { get; set; }
+        //public virtual EpVahedKala EpVahedKala1 { get; set; }
         public virtual EpNameKala EpNameKala1 { get; set; }
+        public virtual FKTarifEz_Ks_Factor FKTarifEz_Ks_Factor1 { get; set; }
         public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili2 { get; set; }
         public virtual EpAllHesabTafsili EpAllHesabTafsili3 { get; set; }
+        public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
 
     }
 }

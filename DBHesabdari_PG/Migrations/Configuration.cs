@@ -48,7 +48,7 @@ namespace DBHesabdari_PG.Migrations
                 try
                 {
                     /////////////// تعریف گروه تفصیلی در حسابدای
-                    if (context.EpAllGroupTafsilis.Any())
+                    if (!context.EpAllGroupTafsilis.Any())
                     {
                         var q1 = new EpGroupTafsiliLevel1() { Id = 1, Code = 10, StartCode = 10000001, EndCode = 10999999, Name = "سهامداران", IsActive = true, SalId = 1, LevelNumber = 1, TabaghehIndex = 0, TabaghehName = "اشخاص" };
                         context.Entry(new EpAllGroupTafsili() { Id = 1, KeyCode = 10, ParentCode = 10, LevelName = "سهامداران", IsActive = true, SalId = 1, LevelNumber = 1, TabaghehGroupIndex = 0, TabaghehGroupName = "اشخاص", EpGroupTafsiliLevel1 = q1 }).State = context.EpAllGroupTafsilis.Any(s => s.KeyCode == 10) ? EntityState.Unchanged : EntityState.Added;
@@ -175,6 +175,7 @@ namespace DBHesabdari_PG.Migrations
                         context.Entry(new EpAllGroupTafsili() { Id = 59, KeyCode = 961, ParentCode = 96, LevelName = "کالاهای خدماتی", IsActive = true, SalId = 1, LevelNumber = 2, TabaghehGroupIndex = 11, TabaghehGroupName = "سایر", EpGroupTafsiliLevel2 = q59 }).State = context.EpAllGroupTafsilis.Any(s => s.KeyCode == 961) ? EntityState.Unchanged : EntityState.Added;
                         var q60 = new EpGroupTafsiliLevel3() { Id = 60, Code = 9611, StartCode = 9611000001, EndCode = 9611999999, Name = "کالاهای خدماتی", IsActive = true, SalId = 1, LevelNumber = 3, Level2Id = 59 };
                         context.Entry(new EpAllGroupTafsili() { Id = 60, KeyCode = 9611, ParentCode = 961, LevelName = "کالاهای خدماتی", IsActive = true, SalId = 1, LevelNumber = 3, TabaghehGroupIndex = 11, TabaghehGroupName = "سایر", EpGroupTafsiliLevel3 = q60 }).State = context.EpAllGroupTafsilis.Any(s => s.KeyCode == 9611) ? EntityState.Unchanged : EntityState.Added;
+                       // context.SaveChanges();
 
                     }
 

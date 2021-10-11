@@ -97,7 +97,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 this.Close();
 
-            }        }
+            }
+        }
 
         private bool TextEditValidation()
         {
@@ -303,16 +304,16 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView1.RowCount > 0)
                 {
-                        gridControl1.Enabled = false;
-                        EditRowIndex = gridView1.FocusedRowHandle;
-                        En = EnumCED.Edit;
-                        HelpClass1.InActiveButtons(panelControl2);
-                        HelpClass1.ActiveControls(panelControl1);
+                    gridControl1.Enabled = false;
+                    EditRowIndex = gridView1.FocusedRowHandle;
+                    En = EnumCED.Edit;
+                    HelpClass1.InActiveButtons(panelControl2);
+                    HelpClass1.ActiveControls(panelControl1);
 
-                        txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
-                        txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                    txtId.Text = gridView1.GetFocusedRowCellValue("Id").ToString();
+                    txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
 
-                        txtName.Focus();
+                    txtName.Focus();
                 }
             }
         }
@@ -490,13 +491,13 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-                gridControl1.Enabled = true;
-                En = EnumCED.Cancel;
-                HelpClass1.ActiveButtons(panelControl2);
-                HelpClass1.ClearControls(panelControl1);
-                HelpClass1.InActiveControls(panelControl1);
-                btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
-                btnCreate.Focus();
+            gridControl1.Enabled = true;
+            En = EnumCED.Cancel;
+            HelpClass1.ActiveButtons(panelControl2);
+            HelpClass1.ClearControls(panelControl1);
+            HelpClass1.InActiveControls(panelControl1);
+            btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
+            btnCreate.Focus();
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -511,15 +512,16 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void FrmNameBank_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (Application.OpenForms["FrmEtelaateAshkhas"] != null)
+                FM.FillcmbNameBank();
+
             if (Application.OpenForms["FrmHesabhaTafsiliLevel1"] != null
-                || Application.OpenForms["FrmHesabhaTafsiliLevel2"] != null
-                || Application.OpenForms["FrmHesabhaTafsiliLevel3"] != null)
+                            || Application.OpenForms["FrmHesabhaTafsiliLevel2"] != null
+                            || Application.OpenForms["FrmHesabhaTafsiliLevel3"] != null)
             {
                 Fm.FillcmbNameBank();
                 //Fm.cmbNameBank_Enter(null, null);
             }
-            if (Application.OpenForms["FrmEtelaateAshkhas"] != null)
-                FM.FillcmbNameBank();
         }
 
         private void gridView1_KeyDown(object sender, KeyEventArgs e)

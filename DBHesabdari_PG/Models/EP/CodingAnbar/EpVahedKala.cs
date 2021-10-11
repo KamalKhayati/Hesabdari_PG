@@ -27,7 +27,7 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual ICollection<EpNameKala> EpNameKala4s { get; set; }
         public virtual ICollection<EpAllCodingKala> EpAllCodingKalas { get; set; }
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
-        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Rizs { get; set; }
+        //public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Rizs { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Rizs { get; set; }
         //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
 

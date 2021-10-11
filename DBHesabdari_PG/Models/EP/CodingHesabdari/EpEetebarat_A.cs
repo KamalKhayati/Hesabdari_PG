@@ -28,7 +28,9 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [MaxLength(20)]
         public string ShGharadad { get; set; }
         [Column(TypeName = "Date")]
-        public DateTime? TarikhGharadad { get; set; }
+        public DateTime? AzTarikh { get; set; }
+        [Column(TypeName = "Date")]
+        public DateTime? TaEngheza { get; set; }
         [Required]
         public decimal Mablagh { get; set; }
         [Required]

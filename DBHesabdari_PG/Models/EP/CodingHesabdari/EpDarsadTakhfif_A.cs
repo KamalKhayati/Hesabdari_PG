@@ -25,12 +25,14 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //public int AshkhasCode { get; set; }
         //[Required, MaxLength(100)]
         //public string AshkhasName { get; set; }
+        //[Required]
+        //public int IndexNoeTakhfif { get; set; }
+        //[Required, MaxLength(20)]
+        //public string NoeTakhfif { get; set; }
         [Required]
-        public int IndexNoeTakhfif { get; set; }
-        [Required, MaxLength(20)]
-        public string NoeTakhfif { get; set; }
+        public float DarsadTakhfifRadifi { get; set; }
         [Required]
-        public float DarsadTakhfif { get; set; }
+        public float DarsadTakhfifJamei { get; set; }
         [Required]
         public bool IsChecked { get; set; }
         [Column(TypeName = "Date")]

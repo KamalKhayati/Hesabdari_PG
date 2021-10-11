@@ -29,26 +29,30 @@ namespace TanzimatSystem.Tanzimat
         public int _SalId = 0;
         public int _cmbId = 0;
         //public int _cmbId = 0;
-        public int _HesabMoinId = 0;
-        public int _HesabTafsili1Id = 0;
-        public int _HesabTafsili2Id = 0;
-        public int _HesabTafsili3Id = 0;
+        public int? _HesabMoinId = null;
+        public int? _HesabTafsili1Id = null;
+        public int? _HesabTafsili2Id = null;
+        public int? _HesabTafsili3Id = null;
         public int _Code = 0;
-        public string _Name = string.Empty;
+        public string _Titel = string.Empty;
         public string _NameSanad = string.Empty;
-        public string _HesabMoinName = string.Empty;
-        public string _HesabTafsili1Name = string.Empty;
-        public string _HesabTafsili2Name = string.Empty;
-        public string _HesabTafsili3Name = string.Empty;
+        public string _HesabMoinName = null;
+        public string _HesabTafsili1Name = null;
+        public string _HesabTafsili2Name = null;
+        public string _HesabTafsili3Name = null;
         public int _RowHandle = 0;
-        public byte _NoeAghlam = 0;
+        public byte _IndexAghlamFactor = 0;
 
         public XtraTabControl XtraTabControl1;
         public GridView gridView1;
         public SimpleButton btnEdit;
         public SimpleButton btnReload;
-        public LookUpEdit cmbControl;
+        public SimpleButton btnSetingCopy;
+        public SimpleButton btnOk;
+        public LookUpEdit cmbControl1;
+        public LookUpEdit cmbControl2;
 
+        MyContext Mydb;
         private void FrmTanzimatSystem_Load(object sender, EventArgs e)
         {
             xtc_TanzimatSystem_SelectedPageChanged(null, null);
@@ -87,8 +91,8 @@ namespace TanzimatSystem.Tanzimat
 
         private void cmbControl_Enter(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(cmbControl.EditValue) == 0)
-                cmbControl.ShowPopup();
+            if (Convert.ToInt32(cmbControl1.EditValue) == 0)
+                cmbControl1.ShowPopup();
 
         }
 
@@ -103,28 +107,33 @@ namespace TanzimatSystem.Tanzimat
         {
             //FillCmbHesabMoin();
             _SalId = Convert.ToInt32(lblSalId.Text);
-            _cmbId = Convert.ToInt32(cmbControl.EditValue);
+            _cmbId = Convert.ToInt32(cmbControl1.EditValue);
             //btnSave.Enabled = false;
 
-            using (var db = new MyContext())
+            Mydb = new MyContext();
             {
                 try
                 {
-                    if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Anbar)
+                    if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_AnbarDarFactor)
                     {
-                        var q = db.FKTanzimatFactors.Any(s => s.SalId == _SalId && s.AnbarId == _cmbId && s.NoeAghlam == _NoeAghlam);
-                        if (!q)
+
+                        var q5 = Mydb.EpListAnbarhas.Where(s => s.SalId == _SalId && s.Id != _cmbId).OrderBy(s => s.Code).ToList();
+                        if (q5.Count > 0) epListAnbarhasBindingSource1_2.DataSource = q5; else epListAnbarhasBindingSource1_2.Clear();
+
+                        var q = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                        if (q.Count == 0)
                         {
                             List<FKTanzimatFactor> List = new List<FKTanzimatFactor>();
                             for (int i = 0; i < gridView1.RowCount - 4; i++)
                             {
                                 FKTanzimatFactor obj = new FKTanzimatFactor();
                                 obj.SalId = _SalId;
-                                obj.NoeAghlam = _NoeAghlam;
+                                obj.IndexAghlamFactor = _IndexAghlamFactor;
                                 obj.AnbarId = _cmbId;
                                 obj.Code = Convert.ToInt32(gridView1.GetRowCellValue(i, "Code"));
-                                obj.Name = gridView1.GetRowCellValue(i, "Name").ToString();
                                 obj.NameSanad = gridView1.GetRowCellValue(i, "NameSanad").ToString();
+                                obj.Titel = gridView1.GetRowCellValue(i, "Titel").ToString();
+                                obj.Sharh = gridView1.GetRowCellValue(i, "Sharh").ToString();
                                 //obj.HesabMoinId = 0;
                                 //obj.HesabTafsili1Id = 0;
                                 //obj.HesabTafsili2Id = 0;
@@ -133,41 +142,48 @@ namespace TanzimatSystem.Tanzimat
                             }
                             if (List.Count > 0)
                             {
-                                db.FKTanzimatFactors.AddRange(List);
-                                db.SaveChanges();
+                                Mydb.FKTanzimatFactors.AddRange(List);
+                                Mydb.SaveChanges();
+                                var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                                fktanzimatFactorsBindingSource_Kala.DataSource = q1.ToList();
 
                             }
                         }
                         else
                         {
-                            var qq = db.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId && s.NoeAghlam == _NoeAghlam).ToList();
-                            foreach (var item in qq)
+                            var q_HesabMoin = Mydb.EpHesabMoin1s.Where(s => s.SalId == _SalId).ToList();
+                            var q_AllHesabTafsili = Mydb.EpAllHesabTafsilis.Where(s => s.SalId == _SalId).ToList();
+                            foreach (var item in q)
                             {
-                                item.HesabMoinName_NM = item.HesabMoinId != 0 ? db.EpAllCodingHesabdaris.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabMoinId).LevelName : "";
-                                item.HesabTafsili1Name_NM = item.HesabTafsili1Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili1Id).Name : "";
-                                item.HesabTafsili2Name_NM = item.HesabTafsili2Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili2Id).Name : "";
-                                item.HesabTafsili3Name_NM = item.HesabTafsili3Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili3Id).Name : "";
+                                item.HesabMoinName_NM = item.HesabMoinId != null ? q_HesabMoin.FirstOrDefault(s => s.Id == item.HesabMoinId).Name : null;
+                                item.HesabTafsili1Name_NM = item.HesabTafsili1Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name : null;
+                                item.HesabTafsili2Name_NM = item.HesabTafsili2Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili2Id).Name : null;
+                                item.HesabTafsili3Name_NM = item.HesabTafsili3Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili3Id).Name : null;
 
                             }
-                            fktanzimatFactorsBindingSource_Kala.DataSource = qq.ToList();
+                            fktanzimatFactorsBindingSource_Kala.DataSource = q.ToList();
                         }
 
                     }
                     else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Khadamat)
                     {
-                        var q = db.FKTanzimatFactors.Any(s => s.SalId == _SalId && s.KhadamatId == _cmbId && s.NoeAghlam == _NoeAghlam);
-                        if (!q)
+                        var q5 = Mydb.EpNameKalas.Where(s => s.SalId == _SalId && s.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.NoeTabagheIndex == 1 && s.Id != _cmbId).OrderBy(s => s.Code).ToList();
+                        if (q5.Count > 0) epNameKalasBindingSource_Khadamat1_2.DataSource = q5; else epNameKalasBindingSource_Khadamat1_2.Clear();
+
+                        var q = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                        if (q.Count == 0)
                         {
                             List<FKTanzimatFactor> List = new List<FKTanzimatFactor>();
                             for (int i = 0; i < gridView1.RowCount - 4; i++)
                             {
                                 FKTanzimatFactor obj = new FKTanzimatFactor();
                                 obj.SalId = _SalId;
-                                obj.NoeAghlam = _NoeAghlam;
+                                obj.IndexAghlamFactor = _IndexAghlamFactor;
                                 obj.KhadamatId = _cmbId;
                                 obj.Code = Convert.ToInt32(gridView1.GetRowCellValue(i, "Code"));
-                                obj.Name = gridView1.GetRowCellValue(i, "Name").ToString();
+                                obj.Titel = gridView1.GetRowCellValue(i, "Titel").ToString();
                                 obj.NameSanad = gridView1.GetRowCellValue(i, "NameSanad").ToString();
+                                obj.Sharh = gridView1.GetRowCellValue(i, "Sharh").ToString();
                                 //obj.HesabMoinId = _HesabMoinId;
                                 //obj.HesabTafsili1Id = _HesabTafsili1Id;
                                 //obj.HesabTafsili2Id = _HesabTafsili2Id;
@@ -176,38 +192,46 @@ namespace TanzimatSystem.Tanzimat
                             }
                             if (List.Count > 0)
                             {
-                                db.FKTanzimatFactors.AddRange(List);
-                                db.SaveChanges();
-
+                                Mydb.FKTanzimatFactors.AddRange(List);
+                                Mydb.SaveChanges();
+                                var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                                fktanzimatFactorsBindingSource1_Khadamat.DataSource = q1.ToList();
                             }
                         }
-
-                        var qq = db.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId && s.NoeAghlam == _NoeAghlam).ToList();
-                        foreach (var item in qq)
+                        else
                         {
-                            item.HesabMoinName_NM = item.HesabMoinId != 0 ? db.EpAllCodingHesabdaris.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabMoinId).LevelName : "";
-                            item.HesabTafsili1Name_NM = item.HesabTafsili1Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili1Id).Name : "";
-                            item.HesabTafsili2Name_NM = item.HesabTafsili2Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili2Id).Name : "";
-                            item.HesabTafsili3Name_NM = item.HesabTafsili3Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili3Id).Name : "";
+                            var q_HesabMoin = Mydb.EpHesabMoin1s.Where(s => s.SalId == _SalId).ToList();
+                            var q_AllHesabTafsili = Mydb.EpAllHesabTafsilis.Where(s => s.SalId == _SalId).ToList();
+                            foreach (var item in q)
+                            {
+                                item.HesabMoinName_NM = item.HesabMoinId != null ? q_HesabMoin.FirstOrDefault(s => s.Id == item.HesabMoinId).Name : null;
+                                item.HesabTafsili1Name_NM = item.HesabTafsili1Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name : null;
+                                item.HesabTafsili2Name_NM = item.HesabTafsili2Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili2Id).Name : null;
+                                item.HesabTafsili3Name_NM = item.HesabTafsili3Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili3Id).Name : null;
 
+                            }
+                            fktanzimatFactorsBindingSource1_Khadamat.DataSource = q.ToList();
                         }
-                        fktanzimatFactorsBindingSource1_Khadamat.DataSource = qq.ToList();
                     }
                     else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ezafat)
                     {
-                        var q = db.FKTanzimatFactors.Any(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.NoeAghlam == _NoeAghlam);
-                        if (!q)
+                        var q5 = Mydb.FKTarifEz_Ks_Factors.Where(s => s.SalId == _SalId && s.NoeEz_KsIndex == 2 && s.Id != _cmbId).OrderBy(s => s.Code).ToList();
+                        if (q5.Count > 0) fKTarifEz_Ks_FactorsBindingSource_Ezafat1_2.DataSource = q5; else fKTarifEz_Ks_FactorsBindingSource_Ezafat1_2.Clear();
+
+                        var q = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                        if (q.Count == 0)
                         {
                             List<FKTanzimatFactor> List = new List<FKTanzimatFactor>();
                             for (int i = 0; i < gridView1.RowCount - 4; i++)
                             {
                                 FKTanzimatFactor obj = new FKTanzimatFactor();
                                 obj.SalId = _SalId;
-                                obj.NoeAghlam = _NoeAghlam;
+                                obj.IndexAghlamFactor = _IndexAghlamFactor;
                                 obj.Ez_KsId = _cmbId;
                                 obj.Code = Convert.ToInt32(gridView1.GetRowCellValue(i, "Code"));
-                                obj.Name = gridView1.GetRowCellValue(i, "Name").ToString();
+                                obj.Titel = gridView1.GetRowCellValue(i, "Titel").ToString();
                                 obj.NameSanad = gridView1.GetRowCellValue(i, "NameSanad").ToString();
+                                obj.Sharh = gridView1.GetRowCellValue(i, "Sharh").ToString();
                                 //obj.HesabMoinId = _HesabMoinId;
                                 //obj.HesabTafsili1Id = _HesabTafsili1Id;
                                 //obj.HesabTafsili2Id = _HesabTafsili2Id;
@@ -216,38 +240,46 @@ namespace TanzimatSystem.Tanzimat
                             }
                             if (List.Count > 0)
                             {
-                                db.FKTanzimatFactors.AddRange(List);
-                                db.SaveChanges();
-
+                                Mydb.FKTanzimatFactors.AddRange(List);
+                                Mydb.SaveChanges();
+                                var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                                fKTanzimatFactorsBindingSource2_Ezafat.DataSource = q1.ToList();
                             }
                         }
-
-                        var qq = db.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.NoeAghlam == _NoeAghlam).ToList();
-                        foreach (var item in qq)
+                        else
                         {
-                            item.HesabMoinName_NM = item.HesabMoinId != 0 ? db.EpAllCodingHesabdaris.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabMoinId).LevelName : "";
-                            item.HesabTafsili1Name_NM = item.HesabTafsili1Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili1Id).Name : "";
-                            item.HesabTafsili2Name_NM = item.HesabTafsili2Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili2Id).Name : "";
-                            item.HesabTafsili3Name_NM = item.HesabTafsili3Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili3Id).Name : "";
+                            var q_HesabMoin = Mydb.EpHesabMoin1s.Where(s => s.SalId == _SalId).ToList();
+                            var q_AllHesabTafsili = Mydb.EpAllHesabTafsilis.Where(s => s.SalId == _SalId).ToList();
+                            foreach (var item in q)
+                            {
+                                item.HesabMoinName_NM = item.HesabMoinId != null ? q_HesabMoin.FirstOrDefault(s => s.Id == item.HesabMoinId).Name : null;
+                                item.HesabTafsili1Name_NM = item.HesabTafsili1Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name : null;
+                                item.HesabTafsili2Name_NM = item.HesabTafsili2Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili2Id).Name : null;
+                                item.HesabTafsili3Name_NM = item.HesabTafsili3Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili3Id).Name : null;
 
+                            }
+                            fKTanzimatFactorsBindingSource2_Ezafat.DataSource = q.ToList();
                         }
-                        fKTanzimatFactorsBindingSource2_Ezafat.DataSource = qq.ToList();
                     }
                     else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ksorat)
                     {
-                        var q = db.FKTanzimatFactors.Any(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.NoeAghlam == _NoeAghlam);
-                        if (!q)
+                        var q5 = Mydb.FKTarifEz_Ks_Factors.Where(s => s.SalId == _SalId && s.NoeEz_KsIndex == 3 && s.Id != _cmbId).OrderBy(s => s.Code).ToList();
+                        if (q5.Count > 0) fKTarifEz_Ks_FactorsBindingSource_Ksorat1_2.DataSource = q5; else fKTarifEz_Ks_FactorsBindingSource_Ksorat1_2.Clear();
+
+                        var q = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                        if (q.Count == 0)
                         {
                             List<FKTanzimatFactor> List = new List<FKTanzimatFactor>();
                             for (int i = 0; i < gridView1.RowCount - 4; i++)
                             {
                                 FKTanzimatFactor obj = new FKTanzimatFactor();
                                 obj.SalId = _SalId;
-                                obj.NoeAghlam = _NoeAghlam;
+                                obj.IndexAghlamFactor = _IndexAghlamFactor;
                                 obj.Ez_KsId = _cmbId;
                                 obj.Code = Convert.ToInt32(gridView1.GetRowCellValue(i, "Code"));
-                                obj.Name = gridView1.GetRowCellValue(i, "Name").ToString();
+                                obj.Titel = gridView1.GetRowCellValue(i, "Titel").ToString();
                                 obj.NameSanad = gridView1.GetRowCellValue(i, "NameSanad").ToString();
+                                obj.Sharh = gridView1.GetRowCellValue(i, "Sharh").ToString();
                                 //obj.HesabMoinId = _HesabMoinId;
                                 //obj.HesabTafsili1Id = _HesabTafsili1Id;
                                 //obj.HesabTafsili2Id = _HesabTafsili2Id;
@@ -256,38 +288,46 @@ namespace TanzimatSystem.Tanzimat
                             }
                             if (List.Count > 0)
                             {
-                                db.FKTanzimatFactors.AddRange(List);
-                                db.SaveChanges();
-
+                                Mydb.FKTanzimatFactors.AddRange(List);
+                                Mydb.SaveChanges();
+                                var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                                fKTanzimatFactorsBindingSource3_Ksorat.DataSource = q1.ToList();
                             }
                         }
-
-                        var qq = db.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId && s.NoeAghlam == _NoeAghlam).ToList();
-                        foreach (var item in qq)
+                        else
                         {
-                            item.HesabMoinName_NM = item.HesabMoinId != 0 ? db.EpAllCodingHesabdaris.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabMoinId).LevelName : "";
-                            item.HesabTafsili1Name_NM = item.HesabTafsili1Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili1Id).Name : "";
-                            item.HesabTafsili2Name_NM = item.HesabTafsili2Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili2Id).Name : "";
-                            item.HesabTafsili3Name_NM = item.HesabTafsili3Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili3Id).Name : "";
+                            var q_HesabMoin = Mydb.EpHesabMoin1s.Where(s => s.SalId == _SalId).ToList();
+                            var q_AllHesabTafsili = Mydb.EpAllHesabTafsilis.Where(s => s.SalId == _SalId).ToList();
+                            foreach (var item in q)
+                            {
+                                item.HesabMoinName_NM = item.HesabMoinId != null ? q_HesabMoin.FirstOrDefault(s => s.Id == item.HesabMoinId).Name : null;
+                                item.HesabTafsili1Name_NM = item.HesabTafsili1Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name : null;
+                                item.HesabTafsili2Name_NM = item.HesabTafsili2Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili2Id).Name : null;
+                                item.HesabTafsili3Name_NM = item.HesabTafsili3Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili3Id).Name : null;
 
+                            }
+                            fKTanzimatFactorsBindingSource3_Ksorat.DataSource = q.ToList();
                         }
-                        fKTanzimatFactorsBindingSource3_Ksorat.DataSource = qq.ToList();
                     }
-                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Vasete)
+                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Vizitor)
                     {
-                        var q = db.FKTanzimatFactors.Any(s => s.SalId == _SalId && s.VizitorId == _cmbId && s.NoeAghlam == _NoeAghlam);
-                        if (!q)
+                        var q5 = Mydb.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.EpAllGroupTafsili1.TabaghehGroupIndex == 0 && s.EpHesabTafsiliAshkhas1.IsVizitor == true && s.Id != _cmbId).OrderBy(s => s.Code).ToList();
+                        if (q5.Count > 0) epAllHesabTafsilisBindingSource_Vizitor1_2.DataSource = q5; else epAllHesabTafsilisBindingSource_Vizitor1_2.Clear();
+
+                        var q = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.VizitorId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                        if (q.Count == 0)
                         {
                             List<FKTanzimatFactor> List = new List<FKTanzimatFactor>();
                             for (int i = 0; i < gridView1.RowCount - 4; i++)
                             {
                                 FKTanzimatFactor obj = new FKTanzimatFactor();
                                 obj.SalId = _SalId;
-                                obj.NoeAghlam = _NoeAghlam;
+                                obj.IndexAghlamFactor = _IndexAghlamFactor;
                                 obj.VizitorId = _cmbId;
                                 obj.Code = Convert.ToInt32(gridView1.GetRowCellValue(i, "Code"));
-                                obj.Name = gridView1.GetRowCellValue(i, "Name").ToString();
+                                obj.Titel = gridView1.GetRowCellValue(i, "Titel").ToString();
                                 obj.NameSanad = gridView1.GetRowCellValue(i, "NameSanad").ToString();
+                                obj.Sharh = gridView1.GetRowCellValue(i, "Sharh").ToString();
                                 //obj.HesabMoinId = _HesabMoinId;
                                 //obj.HesabTafsili1Id = _HesabTafsili1Id;
                                 //obj.HesabTafsili2Id = _HesabTafsili2Id;
@@ -296,22 +336,26 @@ namespace TanzimatSystem.Tanzimat
                             }
                             if (List.Count > 0)
                             {
-                                db.FKTanzimatFactors.AddRange(List);
-                                db.SaveChanges();
-
+                                Mydb.FKTanzimatFactors.AddRange(List);
+                                Mydb.SaveChanges();
+                                var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.VizitorId == _cmbId && s.IndexAghlamFactor == _IndexAghlamFactor).ToList();
+                                fKTanzimatFactorsBindingSource5_Vizitor.DataSource = q1;
                             }
                         }
-
-                        var qq = db.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.VizitorId == _cmbId && s.NoeAghlam == _NoeAghlam).ToList();
-                        foreach (var item in qq)
+                        else
                         {
-                            item.HesabMoinName_NM = item.HesabMoinId != 0 ? db.EpAllCodingHesabdaris.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabMoinId).LevelName : "";
-                            item.HesabTafsili1Name_NM = item.HesabTafsili1Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili1Id).Name : "";
-                            item.HesabTafsili2Name_NM = item.HesabTafsili2Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili2Id).Name : "";
-                            item.HesabTafsili3Name_NM = item.HesabTafsili3Id != 0 ? db.EpAllHesabTafsilis.FirstOrDefault(s => s.SalId == _SalId && s.Id == item.HesabTafsili3Id).Name : "";
+                            var q_HesabMoin = Mydb.EpHesabMoin1s.Where(s => s.SalId == _SalId).ToList();
+                            var q_AllHesabTafsili = Mydb.EpAllHesabTafsilis.Where(s => s.SalId == _SalId).ToList();
+                            foreach (var item in q)
+                            {
+                                item.HesabMoinName_NM = item.HesabMoinId != null ? q_HesabMoin.FirstOrDefault(s => s.Id == item.HesabMoinId).Name : null;
+                                item.HesabTafsili1Name_NM = item.HesabTafsili1Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili1Id).Name : null;
+                                item.HesabTafsili2Name_NM = item.HesabTafsili2Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili2Id).Name : null;
+                                item.HesabTafsili3Name_NM = item.HesabTafsili3Id != null ? q_AllHesabTafsili.FirstOrDefault(s => s.Id == item.HesabTafsili3Id).Name : null;
 
+                            }
+                            fKTanzimatFactorsBindingSource5_Vizitor.DataSource = q.ToList();
                         }
-                        fKTanzimatFactorsBindingSource5_Vizitor.DataSource = qq.ToList();
                     }
 
                 }
@@ -344,30 +388,30 @@ namespace TanzimatSystem.Tanzimat
                 {
                     _SalId = Convert.ToInt32(lblSalId.Text);
 
-                    if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Anbar)
+                    if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_AnbarDarFactor)
                     {
                         var q1 = db.EpListAnbarhas.Where(s => s.SalId == _SalId).OrderBy(s => s.Code).ToList();
-                        if (q1.Count > 0) epListAnbarhasBindingSource.DataSource = q1; else epListAnbarhasBindingSource.Clear();
+                        if (q1.Count > 0) epListAnbarhasBindingSource1_1.DataSource = q1; else epListAnbarhasBindingSource1_1.Clear();
                     }
                     else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Khadamat)
                     {
                         var q1 = db.EpNameKalas.Where(s => s.SalId == _SalId && s.EpGroupFareeKala1.EpGroupAsliKala1.EpTabaghehKala1.NoeTabagheIndex == 1).OrderBy(s => s.Code).ToList();
-                        if (q1.Count > 0) epNameKalasBindingSource.DataSource = q1; else epNameKalasBindingSource.Clear();
+                        if (q1.Count > 0) epNameKalasBindingSource_Khadamat1_1.DataSource = q1; else epNameKalasBindingSource_Khadamat1_1.Clear();
                     }
                     else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ezafat)
                     {
-                        var q1 = db.FKTarifEz_Ks_Factors.Where(s => s.SalId == _SalId && s.NoeEz_KsIndex == _NoeAghlam).OrderBy(s => s.Code).ToList();
-                        if (q1.Count > 0) fKTarifEz_Ks_FactorsBindingSource_Ezafat.DataSource = q1; else fKTarifEz_Ks_FactorsBindingSource_Ezafat.Clear();
+                        var q1 = db.FKTarifEz_Ks_Factors.Where(s => s.SalId == _SalId && s.NoeEz_KsIndex == 2).OrderBy(s => s.Code).ToList();
+                        if (q1.Count > 0) fKTarifEz_Ks_FactorsBindingSource_Ezafat1_1.DataSource = q1; else fKTarifEz_Ks_FactorsBindingSource_Ezafat1_1.Clear();
                     }
                     else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ksorat)
                     {
-                        var q1 = db.FKTarifEz_Ks_Factors.Where(s => s.SalId == _SalId && s.NoeEz_KsIndex == _NoeAghlam).OrderBy(s => s.Code).ToList();
-                        if (q1.Count > 0) fKTarifEz_Ks_FactorsBindingSource1_Ksorat.DataSource = q1; else fKTarifEz_Ks_FactorsBindingSource1_Ksorat.Clear();
+                        var q1 = db.FKTarifEz_Ks_Factors.Where(s => s.SalId == _SalId && s.NoeEz_KsIndex == 3).OrderBy(s => s.Code).ToList();
+                        if (q1.Count > 0) fKTarifEz_Ks_FactorsBindingSource_Ksorat1_1.DataSource = q1; else fKTarifEz_Ks_FactorsBindingSource_Ksorat1_1.Clear();
                     }
-                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Vasete)
+                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Vizitor)
                     {
-                        var q1 = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.EpAllGroupTafsili1.TabaghehGroupIndex==0 && s.EpHesabTafsiliAshkhas1.IsVizitor==true).OrderBy(s => s.Code).ToList();
-                        if (q1.Count > 0) epAllHesabTafsilisBindingSource.DataSource = q1; else epAllHesabTafsilisBindingSource.Clear();
+                        var q1 = db.EpAllHesabTafsilis.Where(s => s.SalId == _SalId && s.EpAllGroupTafsili1.TabaghehGroupIndex == 0 && s.EpHesabTafsiliAshkhas1.IsVizitor == true).OrderBy(s => s.Code).ToList();
+                        if (q1.Count > 0) epAllHesabTafsilisBindingSource_Vizitor1_1.DataSource = q1; else epAllHesabTafsilisBindingSource_Vizitor1_1.Clear();
                     }
 
 
@@ -384,9 +428,9 @@ namespace TanzimatSystem.Tanzimat
         private void xtc_FKTanzimatFactor_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             XtraTabControl1 = xtc_FKTanzimatFactor;
-            _NoeAghlam =Convert.ToByte(XtraTabControl1.SelectedTabPageIndex + 1);
+            _IndexAghlamFactor = Convert.ToByte(XtraTabControl1.SelectedTabPageIndex);
 
-            if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Anbar)
+            if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_AnbarDarFactor)
             {
                 FillCmbControl();
 
@@ -394,190 +438,202 @@ namespace TanzimatSystem.Tanzimat
                 {
                     List<FKTanzimatFactor> list = new List<FKTanzimatFactor>();
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید", Code = 101, Name = "بدهکاری خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید", Code = 102, Name = "بستانکاری خرید" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید کالا", Code = 101, Titel = "بدهکاری خرید", Sharh = "حساب موجودی انبار بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید کالا", Code = 102, Titel = "بستانکاری خرید", Sharh = "حسابهای پرداختنی بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید", Code = 151, Name = "بدهکاری برگشت از خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید", Code = 152, Name = "بستانکاری برگشت از خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید", Code = 153, Name = "انحراف نرخ خرید با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید کالا", Code = 201, Titel = "بدهکاری برگشت از خرید", Sharh = "حسابهای پرداختنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید کالا", Code = 202, Titel = "بستانکاری برگشت از خرید", Sharh = "حساب انحراف نرخ برگشت از خرید بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید کالا", Code = 203, Titel = "بدهکاری بهای تمام شده برگشت", Sharh = "حساب انحراف نرخ برگشت از خرید بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید کالا", Code = 204, Titel = "بستانکاری بهای تمام شده برگشت", Sharh = "حساب موجودی انبار بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش", Code = 201, Name = "بدهکاری فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش", Code = 202, Name = "بستانکاری فروش داخلی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش", Code = 203, Name = "بستانکاری فروش صادراتی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش", Code = 204, Name = "بدهکاری بهای تمام شده فروش داخلی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش", Code = 205, Name = "بدهکاری بهای تمام شده فروش صادراتی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش", Code = 206, Name = "بستانکاری بهای تمام شده فروش" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش کالا", Code = 301, Titel = "بدهکاری فروش", Sharh = "حسابهای دریافتنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش کالا", Code = 302, Titel = "بستانکاری فروش داخلی", Sharh = "فروش کالای داخلی بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش کالا", Code = 303, Titel = "بستانکاری فروش صادراتی", Sharh = "فروش کالای صادراتی بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش کالا", Code = 304, Titel = "بدهکاری بهای تمام شده فروش داخلی", Sharh = "بهای تمام شده کالای فروش رفته داخلی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش کالا", Code = 305, Titel = "بدهکاری بهای تمام شده فروش صادراتی", Sharh = "بهای تمام شده کالای فروش رفته صادراتی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش کالا", Code = 306, Titel = "بستانکاری بهای تمام شده فروش", Sharh = "حساب موجودی انبار بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش", Code = 251, Name = "بدهکاری برگشت از فروش داخلی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش", Code = 252, Name = "بدهکاری برگشت از فروش صادراتی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش", Code = 253, Name = "بستانکاری برگشت از فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش", Code = 254, Name = "بدهکاری بهای تمام شده برگشت" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش", Code = 255, Name = "بستانکاری بهای تمام شده برگشت داخلی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش", Code = 256, Name = "بستانکاری بهای تمام شده برگشت صادراتی" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش", Code = 257, Name = "انحراف نرخ فروش با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش کالا", Code = 401, Titel = "بدهکاری برگشت از فروش داخلی", Sharh = "حساب برگشت از فروش و تخفیفات داخلی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش کالا", Code = 402, Titel = "بدهکاری برگشت از فروش صادراتی", Sharh = "حساب برگشت از فروش و تخفیفات صادراتی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش کالا", Code = 403, Titel = "بستانکاری برگشت از فروش", Sharh = "حسابهای دریافتنی بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش کالا", Code = 404, Titel = "بدهکاری بهای تمام شده برگشت", Sharh = "حساب موجودی انبار بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش کالا", Code = 405, Titel = "بستانکاری بهای تمام شده برگشت داخلی", Sharh = "بهای تمام شده کالای فروش رفته داخلی بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش کالا", Code = 406, Titel = "بستانکاری بهای تمام شده برگشت صادراتی", Sharh = "بهای تمام شده کالای فروش رفته صادراتی بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش کالا", Code = 407, Titel = "انحراف نرخ برگشت از فروش", Sharh = "انحراف نرخ برگشت از فروش با توجه به مابه التفاوت قیمت فروش و میانگین، بدهکار یا بستانکار میشود" });
 
                     fktanzimatFactorsBindingSource_Kala.DataSource = list.ToList();
 
                 }
-                cmbControl = cmbNameAnbar1_1;
+                cmbControl1 = cmbNameAnbar1_1;
                 gridView1 = gridView1_1;
                 btnEdit = btnEdit1_1;
                 btnReload = btnReloadNameAnbar1_1;
+                btnSetingCopy = btnSetingCopy1_1;
+                cmbControl2 = cmbNameAnbar1_2;
+                btnOk = btnOk1_1;
             }
             else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Khadamat)
             {
                 FillCmbControl();
 
-                if (Convert.ToInt32(cmbCodeKhadamat.EditValue) == 0)
+                if (Convert.ToInt32(cmbCodeKhadamat1.EditValue) == 0)
                 {
                     List<FKTanzimatFactor> list = new List<FKTanzimatFactor>();
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید خدمات", Code = 301, Name = "بدهکاری خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید خدمات", Code = 302, Name = "بستانکاری خرید" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید خدمات", Code = 101, Titel = "بدهکاری خرید", Sharh = "حساب هزینه بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید خدمات", Code = 102, Titel = "بستانکاری خرید", Sharh = "حسابهای پرداختنی بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید خدمات", Code = 351, Name = "بدهکاری برگشت از خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید خدمات", Code = 352, Name = "بستانکاری برگشت از خرید" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید خدمات", Code = 353, Name = "انحراف نرخ خرید با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید خدمات", Code = 201, Titel = "بدهکاری برگشت از خرید", Sharh = "حسابهای پرداختنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید خدمات", Code = 202, Titel = "بستانکاری برگشت از خرید", Sharh = "حساب هزینه بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 401, Name = "بدهکاری فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 402, Name = "بستانکاری فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 403, Name = "بستانکاری فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 404, Name = "بدهکاری بهای تمام شده فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 405, Name = "بدهکاری بهای تمام شده فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 406, Name = "بستانکاری بهای تمام شده فروش" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 301, Titel = "بدهکاری فروش", Sharh = "حسابهای دریافتنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 302, Titel = "بستانکاری فروش داخلی", Sharh = "حساب فروش خدمات داخلی بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش خدمات", Code = 303, Titel = "بستانکاری فروش خارجی", Sharh = "حساب فروش خدمات خارجی بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 451, Name = "بدهکاری برگشت از فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 452, Name = "بستانکاری برگشت از فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 452, Name = "بدهکاری برگشت از فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 454, Name = "بدهکاری بهای تمام شده برگشت" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 455, Name = "بستانکاری بهای تمام شده برگشت داخلی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 456, Name = "بستانکاری بهای تمام شده برگشت صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 457, Name = "انحراف نرخ فروش با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 401, Titel = "بدهکاری برگشت از فروش داخلی", Sharh = "حساب برگشت از فروش خدمات داخلی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 402, Titel = "بدهکاری برگشت از فروش خارجی", Sharh = "حساب برگشت از فروش خدمات خارجی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش خدمات", Code = 403, Titel = "بستانکاری برگشت از فروش", Sharh = "حسابهای دریافتنی بستانکار میشود" });
 
                     fktanzimatFactorsBindingSource1_Khadamat.DataSource = list.ToList();
 
                 }
-                cmbControl = cmbCodeKhadamat;
+                cmbControl1 = cmbCodeKhadamat1;
                 gridView1 = gridView1_2;
                 btnEdit = btnEdit1_2;
                 btnReload = btnReloadCodeKhadamat;
+                btnSetingCopy = btnSetingCopy1_2;
+                cmbControl2 = cmbCodeKhadamat2;
+                btnOk = btnOk1_2;
             }
             else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ezafat)
             {
                 FillCmbControl();
 
-                if (Convert.ToInt32(cmbCodeEzafat.EditValue) == 0)
+                if (Convert.ToInt32(cmbCodeEzafat1.EditValue) == 0)
                 {
                     List<FKTanzimatFactor> list = new List<FKTanzimatFactor>();
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 501, Name = "بدهکاری خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 502, Name = "بستانکاری خرید" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 101, Titel = "بدهکاری خرید", Sharh = "حساب سایر هزینه ها بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 102, Titel = "بستانکاری خرید", Sharh = "حسابهای پرداختنی بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 551, Name = "بدهکاری برگشت از خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 552, Name = "بستانکاری برگشت از خرید" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 353, Name = "انحراف نرخ خرید با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 201, Titel = "بدهکاری برگشت از خرید", Sharh = "حسابهای پرداختنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 202, Titel = "بستانکاری برگشت از خرید", Sharh = "حساب سایر هزینه ها بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 353, Titel = "انحراف نرخ خرید با برگشت" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 601, Name = "بدهکاری فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 602, Name = "بستانکاری فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 403, Name = "بستانکاری فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 404, Name = "بدهکاری بهای تمام شده فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 405, Name = "بدهکاری بهای تمام شده فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 406, Name = "بستانکاری بهای تمام شده فروش" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 301, Titel = "بدهکاری فروش", Sharh = "حسابهای دریافتنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 302, Titel = "بستانکاری فروش داخلی", Sharh = "حساب سایر درآمدهای داخلی بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 303, Titel = "بستانکاری فروش خارجی", Sharh = "حساب سایر درآمدهای خارجی بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 403, Titel = "بستانکاری فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 404, Titel = "بدهکاری بهای تمام شده فروش" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 405, Titel = "بدهکاری بهای تمام شده فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 406, Titel = "بستانکاری بهای تمام شده فروش" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 651, Name = "بدهکاری برگشت از فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 652, Name = "بستانکاری برگشت از فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 452, Name = "بدهکاری برگشت از فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 454, Name = "بدهکاری بهای تمام شده برگشت" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 455, Name = "بستانکاری بهای تمام شده برگشت داخلی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 456, Name = "بستانکاری بهای تمام شده برگشت صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 457, Name = "انحراف نرخ فروش با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 401, Titel = "بدهکاری برگشت از فروش داخلی", Sharh = "حساب سایر درآمدهای داخلی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 402, Titel = "بدهکاری برگشت از فروش خارجی", Sharh = "حساب سایر درآمدهای خارجی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 403, Titel = "بستانکاری برگشت از فروش", Sharh = "حسابهای دریافتنی بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 452, Titel = "بدهکاری برگشت از فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 454, Titel = "بدهکاری بهای تمام شده برگشت" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 455, Titel = "بستانکاری بهای تمام شده برگشت داخلی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 456, Titel = "بستانکاری بهای تمام شده برگشت صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 457, Titel = "انحراف نرخ فروش با برگشت" });
 
                     fKTanzimatFactorsBindingSource2_Ezafat.DataSource = list.ToList();
 
                 }
-                cmbControl = cmbCodeEzafat;
+                cmbControl1 = cmbCodeEzafat1;
                 gridView1 = gridView1_3;
                 btnEdit = btnEdit1_3;
                 btnReload = btnReloadEzafat;
+                btnSetingCopy = btnSetingCopy1_3;
+                cmbControl2 = cmbCodeEzafat2;
+                btnOk = btnOk1_3;
             }
             else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ksorat)
             {
                 FillCmbControl();
 
-                if (Convert.ToInt32(cmbCodeKsorat.EditValue) == 0)
+                if (Convert.ToInt32(cmbCodeKsorat1.EditValue) == 0)
                 {
                     List<FKTanzimatFactor> list = new List<FKTanzimatFactor>();
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 701, Name = "بدهکاری خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 702, Name = "بستانکاری خرید" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 101, Titel = "بدهکاری خرید", Sharh = "حسابهای پرداختنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 102, Titel = "بستانکاری خرید", Sharh = "حساب تخفیف خرید/اشانتیون بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 751, Name = "بدهکاری برگشت از خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 752, Name = "بستانکاری برگشت از خرید" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 353, Name = "انحراف نرخ خرید با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 201, Titel = "بدهکاری برگشت از خرید", Sharh = "حساب تخفیف خرید/اشانتیون بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 202, Titel = "بستانکاری برگشت از خرید", Sharh = "حسابهای پرداختنی بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 353, Titel = "انحراف نرخ خرید با برگشت" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 801, Name = "بدهکاری فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 802, Name = "بستانکاری فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 403, Name = "بستانکاری فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 404, Name = "بدهکاری بهای تمام شده فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 405, Name = "بدهکاری بهای تمام شده فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 406, Name = "بستانکاری بهای تمام شده فروش" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 301, Titel = "بدهکاری فروش داخلی", Sharh = "حساب تخفیف فروش/اشانتیون داخلی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 302, Titel = "بدهکاری فروش خارجی", Sharh = "حساب تخفیف فروش/اشانتیون خارجی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 303, Titel = "بستانکاری فروش", Sharh = "حسابهای دریافتنی بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 403, Titel = "بستانکاری فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 404, Titel = "بدهکاری بهای تمام شده فروش" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 405, Titel = "بدهکاری بهای تمام شده فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 406, Titel = "بستانکاری بهای تمام شده فروش" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 851, Name = "بدهکاری برگشت از فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 852, Name = "بستانکاری برگشت از فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 452, Name = "بدهکاری برگشت از فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 454, Name = "بدهکاری بهای تمام شده برگشت" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 455, Name = "بستانکاری بهای تمام شده برگشت داخلی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 456, Name = "بستانکاری بهای تمام شده برگشت صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 457, Name = "انحراف نرخ فروش با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 401, Titel = "بدهکاری برگشت از فروش", Sharh = "حسابهای دریافتنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 402, Titel = "بستانکاری برگشت از فروش داخلی", Sharh = "حساب تخفیف فروش/اشانتیون داخلی بستانکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 403, Titel = "بستانکاری برگشت از فروش خارجی", Sharh = "حساب تخفیف فروش/اشانتیون خارجی بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 452, Titel = "بدهکاری برگشت از فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 454, Titel = "بدهکاری بهای تمام شده برگشت" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 455, Titel = "بستانکاری بهای تمام شده برگشت داخلی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 456, Titel = "بستانکاری بهای تمام شده برگشت صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 457, Titel = "انحراف نرخ فروش با برگشت" });
 
                     fKTanzimatFactorsBindingSource3_Ksorat.DataSource = list.ToList();
 
                 }
-                cmbControl = cmbCodeKsorat;
+                cmbControl1 = cmbCodeKsorat1;
                 gridView1 = gridView1_4;
                 btnEdit = btnEdit1_4;
                 btnReload = btnReloadKsorat;
+                btnSetingCopy = btnSetingCopy1_4;
+                cmbControl2 = cmbCodeKsorat2;
+                btnOk = btnOk1_4;
             }
-            else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Vasete)
+            else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Vizitor)
             {
                 FillCmbControl();
 
-                if (Convert.ToInt32(cmbVizitor.EditValue) == 0)
+                if (Convert.ToInt32(cmbVizitor1.EditValue) == 0)
                 {
                     List<FKTanzimatFactor> list = new List<FKTanzimatFactor>();
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 901, Name = "بدهکاری خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 902, Name = "بستانکاری خرید" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 101, Titel = "بدهکاری خرید", Sharh = "حساب هزینه پورسانت بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "1. فاکتور خرید ", Code = 102, Titel = "بستانکاری خرید", Sharh = "سایر حسابهای پرداختنی بستانکار میشود" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 951, Name = "بدهکاری برگشت از خرید" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 952, Name = "بستانکاری برگشت از خرید" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 353, Name = "انحراف نرخ خرید با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 201, Titel = "بدهکاری برگشت از خرید", Sharh = "سایر حسابهای پرداختنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 202, Titel = "بستانکاری برگشت از خرید", Sharh = "حساب هزینه پورسانت بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "2. فاکتور برگشت از خرید ", Code = 353, Titel = "انحراف نرخ خرید با برگشت" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 1001, Name = "بدهکاری فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 1002, Name = "بستانکاری فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 403, Name = "بستانکاری فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 404, Name = "بدهکاری بهای تمام شده فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 405, Name = "بدهکاری بهای تمام شده فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 406, Name = "بستانکاری بهای تمام شده فروش" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 301, Titel = "بدهکاری فروش", Sharh = "حساب هزینه پورسانت بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 302, Titel = "بستانکاری فروش", Sharh = "سایر حسابهای پرداختنی بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 403, Titel = "بستانکاری فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 404, Titel = "بدهکاری بهای تمام شده فروش" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 405, Titel = "بدهکاری بهای تمام شده فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "3. فاکتور فروش ", Code = 406, Titel = "بستانکاری بهای تمام شده فروش" });
 
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 1051, Name = "بدهکاری برگشت از فروش" });
-                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 1052, Name = "بستانکاری برگشت از فروش" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 452, Name = "بدهکاری برگشت از فروش صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 454, Name = "بدهکاری بهای تمام شده برگشت" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 455, Name = "بستانکاری بهای تمام شده برگشت داخلی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 456, Name = "بستانکاری بهای تمام شده برگشت صادراتی" });
-                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 457, Name = "انحراف نرخ فروش با برگشت" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 401, Titel = "بدهکاری برگشت از فروش", Sharh = "سایر حسابهای پرداختنی بدهکار میشود" });
+                    list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 402, Titel = "بستانکاری برگشت از فروش", Sharh = "حساب هزینه پورسانت بستانکار میشود" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 452, Titel = "بدهکاری برگشت از فروش صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 454, Titel = "بدهکاری بهای تمام شده برگشت" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 455, Titel = "بستانکاری بهای تمام شده برگشت داخلی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 456, Titel = "بستانکاری بهای تمام شده برگشت صادراتی" });
+                    //list.Add(new FKTanzimatFactor() { NameSanad = "4. فاکتور برگشت از فروش ", Code = 457, Titel = "انحراف نرخ فروش با برگشت" });
 
                     fKTanzimatFactorsBindingSource5_Vizitor.DataSource = list.ToList();
 
                 }
-                cmbControl = cmbVizitor;
+                cmbControl1 = cmbVizitor1;
                 gridView1 = gridView1_5;
                 btnEdit = btnEdit1_5;
                 btnReload = btnReloadVzitor;
+                btnSetingCopy = btnSetingCopy1_5;
+                cmbControl2 = cmbVizitor2;
+                btnOk = btnOk1_5;
             }
 
-            cmbControl.Focus();
+            cmbControl1.Focus();
 
         }
 
@@ -605,18 +661,23 @@ namespace TanzimatSystem.Tanzimat
 
         private void btnEdit1_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(cmbControl.EditValue) > 0)
+            if (Convert.ToInt32(cmbControl1.EditValue) > 0)
             {
                 _RowHandle = gridView1.FocusedRowHandle;
                 _SalId = Convert.ToInt32(lblSalId.Text);
-                _cmbId = Convert.ToInt32(cmbControl.EditValue);
-                _HesabMoinId = gridView1.GetFocusedRowCellValue("HesabMoinId") != null ? Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabMoinId")) : 0;
-                _HesabTafsili1Id = gridView1.GetFocusedRowCellValue("HesabTafsili1Id") != null ? Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabTafsili1Id")) : 0;
-                _HesabTafsili2Id = gridView1.GetFocusedRowCellValue("HesabTafsili2Id") != null ? Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabTafsili2Id")) : 0;
-                _HesabTafsili3Id = gridView1.GetFocusedRowCellValue("HesabTafsili3Id") != null ? Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabTafsili3Id")) : 0;
-                _Code = gridView1.GetFocusedRowCellValue("Code") != null ? Convert.ToInt32(gridView1.GetFocusedRowCellValue("Code")) : 0;
-                _Name = gridView1.GetFocusedRowCellValue("Name") != null ? gridView1.GetFocusedRowCellValue("Name").ToString() : "";
-                _NameSanad = gridView1.GetFocusedRowCellValue("NameSanad") != null ? gridView1.GetFocusedRowCellValue("NameSanad").ToString() : "";
+                _cmbId = Convert.ToInt32(cmbControl1.EditValue);
+                _HesabMoinId = null;
+                _HesabTafsili1Id = null;
+                _HesabTafsili2Id = null;
+                _HesabTafsili3Id = null;
+
+                if (!string.IsNullOrEmpty(gridView1.GetFocusedRowCellDisplayText("HesabMoinId"))) _HesabMoinId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabMoinId"));
+                if (!string.IsNullOrEmpty(gridView1.GetFocusedRowCellDisplayText("HesabTafsili1Id"))) _HesabTafsili1Id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabTafsili1Id"));
+                if (!string.IsNullOrEmpty(gridView1.GetFocusedRowCellDisplayText("HesabTafsili2Id"))) _HesabTafsili2Id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabTafsili2Id"));
+                if (!string.IsNullOrEmpty(gridView1.GetFocusedRowCellDisplayText("HesabTafsili3Id"))) _HesabTafsili3Id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("HesabTafsili3Id"));
+                _Code = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Code")) != 0 ? Convert.ToInt32(gridView1.GetFocusedRowCellValue("Code")) : 0;
+                _Titel = gridView1.GetFocusedRowCellDisplayText("Titel") != null ? gridView1.GetFocusedRowCellDisplayText("Titel").ToString() : "";
+                _NameSanad = gridView1.GetFocusedRowCellDisplayText("NameSanad") != null ? gridView1.GetFocusedRowCellDisplayText("NameSanad").ToString() : "";
 
                 FrmSelectFKTanzimatFactor fm = new FrmSelectFKTanzimatFactor(this);
                 //fm.MdiParent = this;
@@ -636,6 +697,252 @@ namespace TanzimatSystem.Tanzimat
         {
             btnEdit.Enabled = false;
             FillCmbControl();
+        }
+
+        private void btnSetingCopy_Click(object sender, EventArgs e)
+        {
+            cmbControl2.Visible = btnOk.Visible = (cmbControl2.Visible = btnOk.Visible == false) ? cmbControl2.Visible = btnOk.Visible = true : cmbControl2.Visible = btnOk.Visible = false;
+            if (cmbControl2.Visible == true)
+                cmbControl2.ShowPopup();
+        }
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            Mydb = new MyContext();
+            {
+                try
+                {
+                    if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_AnbarDarFactor)
+                    {
+                        int _cmbId1 = Convert.ToInt32(cmbControl1.EditValue);
+                        int _cmbId2 = Convert.ToInt32(cmbControl2.EditValue);
+                        if (_cmbId2 != 0)
+                        {
+                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId2).OrderBy(s => s.Code).ToList();
+                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId1).OrderBy(s => s.Code).ToList();
+                            var q5 = Mydb.EpListAnbarhas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _cmbId1);
+                            if (q1.Count > 0)
+                            {
+                                foreach (var item in q1)
+                                {
+                                    var q3 = q2.FirstOrDefault(s => s.Code == item.Code);
+                                    if (q3 != null)
+                                    {
+                                        if (q3.Code == 101 || q3.Code == 204 || q3.Code == 306 || q3.Code == 404)
+                                        {
+                                            q3.HesabMoinId = q5.MoinId;
+                                            q3.HesabTafsili1Id = q5.TafsiliId1;
+                                            q3.HesabTafsili2Id = q5.TafsiliId2;
+                                            q3.HesabTafsili3Id = q5.TafsiliId3;
+                                            //q3.HesabMoinId = 0;
+                                            //q3.HesabTafsili1Id = 0;
+                                            //q3.HesabTafsili2Id = 0;
+                                            //q3.HesabTafsili3Id = 0;
+                                            //q3.HesabMoinName_NM = string.Empty;
+                                            //q3.HesabTafsili1Name_NM = string.Empty;
+                                            //q3.HesabTafsili2Name_NM = string.Empty;
+                                            //q3.HesabTafsili3Name_NM = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            q3.HesabMoinId = item.HesabMoinId; ;
+                                            q3.HesabTafsili1Id = item.HesabTafsili1Id;
+                                            q3.HesabTafsili2Id = item.HesabTafsili2Id;
+                                            q3.HesabTafsili3Id = item.HesabTafsili3Id;
+                                        }
+                                    }
+                                }
+                                Mydb.SaveChanges();
+                                cmbControl_EditValueChanged(null, null);
+                            }
+
+                        }
+                    }
+                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Khadamat)
+                    {
+                        int _cmbId1 = Convert.ToInt32(cmbControl1.EditValue);
+                        int _cmbId2 = Convert.ToInt32(cmbControl2.EditValue);
+                        if (_cmbId2 != 0)
+                        {
+                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId2).OrderBy(s => s.Code).ToList();
+                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId1).OrderBy(s => s.Code).ToList();
+                            if (q1.Count > 0)
+                            {
+                                foreach (var item in q1)
+                                {
+                                    var q3 = q2.FirstOrDefault(s => s.Code == item.Code);
+                                    if (q3 != null)
+                                    {
+                                        if (q3.Code == 101 || q3.Code == 202)
+                                        {
+                                            q3.HesabMoinId = null;
+                                            q3.HesabTafsili1Id = null;
+                                            q3.HesabTafsili2Id = null;
+                                            q3.HesabTafsili3Id = null;
+                                            q3.HesabMoinName_NM = string.Empty;
+                                            q3.HesabTafsili1Name_NM = string.Empty;
+                                            q3.HesabTafsili2Name_NM = string.Empty;
+                                            q3.HesabTafsili3Name_NM = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            q3.HesabMoinId = item.HesabMoinId; ;
+                                            q3.HesabTafsili1Id = item.HesabTafsili1Id;
+                                            q3.HesabTafsili2Id = item.HesabTafsili2Id;
+                                            q3.HesabTafsili3Id = item.HesabTafsili3Id;
+                                        }
+                                    }
+                                }
+                                Mydb.SaveChanges();
+                                cmbControl_EditValueChanged(null, null);
+                            }
+
+                        }
+                    }
+                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ezafat)
+                    {
+                        int _cmbId1 = Convert.ToInt32(cmbControl1.EditValue);
+                        int _cmbId2 = Convert.ToInt32(cmbControl2.EditValue);
+                        if (_cmbId2 != 0)
+                        {
+                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId2).OrderBy(s => s.Code).ToList();
+                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId1).OrderBy(s => s.Code).ToList();
+                            if (q1.Count > 0)
+                            {
+                                foreach (var item in q1)
+                                {
+                                    var q3 = q2.FirstOrDefault(s => s.Code == item.Code);
+                                    if (q3 != null)
+                                    {
+                                        //if (q3.Code == 501 || q3.Code == 552 )
+                                        //{
+                                        //    q3.HesabMoinId = 0;
+                                        //    q3.HesabTafsili1Id = 0;
+                                        //    q3.HesabTafsili2Id = 0;
+                                        //    q3.HesabTafsili3Id = 0;
+                                        //    q3.HesabMoinName_NM = string.Empty;
+                                        //    q3.HesabTafsili1Name_NM = string.Empty;
+                                        //    q3.HesabTafsili2Name_NM = string.Empty;
+                                        //    q3.HesabTafsili3Name_NM = string.Empty;
+                                        //}
+                                        //else
+                                        {
+                                            q3.HesabMoinId = item.HesabMoinId; ;
+                                            q3.HesabTafsili1Id = item.HesabTafsili1Id;
+                                            q3.HesabTafsili2Id = item.HesabTafsili2Id;
+                                            q3.HesabTafsili3Id = item.HesabTafsili3Id;
+                                        }
+                                    }
+                                }
+                                Mydb.SaveChanges();
+                                cmbControl_EditValueChanged(null, null);
+                            }
+
+                        }
+                    }
+                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Ksorat)
+                    {
+                        int _cmbId1 = Convert.ToInt32(cmbControl1.EditValue);
+                        int _cmbId2 = Convert.ToInt32(cmbControl2.EditValue);
+                        if (_cmbId2 != 0)
+                        {
+                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId2).OrderBy(s => s.Code).ToList();
+                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.Ez_KsId == _cmbId1).OrderBy(s => s.Code).ToList();
+                            if (q1.Count > 0)
+                            {
+                                foreach (var item in q1)
+                                {
+                                    var q3 = q2.FirstOrDefault(s => s.Code == item.Code);
+                                    if (q3 != null)
+                                    {
+                                        //if (q3.Code == 702 || q3.Code == 751 )
+                                        //{
+                                        //    q3.HesabMoinId = 0;
+                                        //    q3.HesabTafsili1Id = 0;
+                                        //    q3.HesabTafsili2Id = 0;
+                                        //    q3.HesabTafsili3Id = 0;
+                                        //    q3.HesabMoinName_NM = string.Empty;
+                                        //    q3.HesabTafsili1Name_NM = string.Empty;
+                                        //    q3.HesabTafsili2Name_NM = string.Empty;
+                                        //    q3.HesabTafsili3Name_NM = string.Empty;
+                                        //}
+                                        //else
+                                        {
+                                            q3.HesabMoinId = item.HesabMoinId; ;
+                                            q3.HesabTafsili1Id = item.HesabTafsili1Id;
+                                            q3.HesabTafsili2Id = item.HesabTafsili2Id;
+                                            q3.HesabTafsili3Id = item.HesabTafsili3Id;
+                                        }
+                                    }
+                                }
+                                Mydb.SaveChanges();
+                                cmbControl_EditValueChanged(null, null);
+                            }
+
+                        }
+                    }
+                    else if (xtc_FKTanzimatFactor.SelectedTabPage == xtp_Vizitor)
+                    {
+                        int _cmbId1 = Convert.ToInt32(cmbControl1.EditValue);
+                        int _cmbId2 = Convert.ToInt32(cmbControl2.EditValue);
+                        if (_cmbId2 != 0)
+                        {
+                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.VizitorId == _cmbId2).OrderBy(s => s.Code).ToList();
+                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.VizitorId == _cmbId1).OrderBy(s => s.Code).ToList();
+                            var q5 = Mydb.EpHesabTafsiliAshkhass.FirstOrDefault(s => s.SalId == _SalId && s.Id == _cmbId1 && s.IsVizitor == true).LevelNumber;
+                            if (q1.Count > 0)
+                            {
+                                foreach (var item in q1)
+                                {
+                                    var q3 = q2.FirstOrDefault(s => s.Code == item.Code);
+                                    if (q3 != null)
+                                    {
+                                        if (q3.Code == 102 || q3.Code == 201 || q3.Code == 302 || q3.Code == 401)
+                                        {
+                                            q3.HesabMoinId = item.HesabMoinId; ;
+                                            q3.HesabTafsili1Id = q5 == 1 ? _cmbId1 : item.HesabTafsili1Id;
+                                            q3.HesabTafsili2Id = q5 == 2 ? _cmbId1 : item.HesabTafsili2Id;
+                                            q3.HesabTafsili3Id = q5 == 3 ? _cmbId1 : item.HesabTafsili3Id;
+
+                                            //q3.HesabMoinId = 0;
+                                            //q3.HesabTafsili1Id = 0;
+                                            //q3.HesabTafsili2Id = 0;
+                                            //q3.HesabTafsili3Id = 0;
+                                            //q3.HesabMoinName_NM = string.Empty;
+                                            //q3.HesabTafsili1Name_NM = string.Empty;
+                                            //q3.HesabTafsili2Name_NM = string.Empty;
+                                            //q3.HesabTafsili3Name_NM = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            q3.HesabMoinId = item.HesabMoinId; ;
+                                            q3.HesabTafsili1Id = item.HesabTafsili1Id;
+                                            q3.HesabTafsili2Id = item.HesabTafsili2Id;
+                                            q3.HesabTafsili3Id = item.HesabTafsili3Id;
+                                        }
+                                    }
+                                }
+                                Mydb.SaveChanges();
+                                cmbControl_EditValueChanged(null, null);
+                            }
+
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                        "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void FrmTanzimatSystem_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Mydb!=null)
+            {
+                Mydb.Dispose();
+            }
         }
     }
 }

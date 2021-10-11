@@ -10,6 +10,7 @@
 using DBHesabdari_PG.Models.AK;
 using DBHesabdari_PG.Models.EP.CodingAnbar;
 using DBHesabdari_PG.Models.FK;
+using DBHesabdari_PG.Models.FK.Tanzimat;
 using DBHesabdari_PG.Models.Ms.ActiveSystem;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,7 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarhas { get; set; }
         public virtual ICollection<R_EpHesabMoin1_B_EpAllGroupTafsili> R_EpHesabMoin1_B_EpAllGroupTafsilis { get; set; }
+        public virtual ICollection<FKTanzimatFactor> FKTanzimatFactors { get; set; }
     }
 
     public class R_EpHesabMoin1_B_EpAllGroupTafsili

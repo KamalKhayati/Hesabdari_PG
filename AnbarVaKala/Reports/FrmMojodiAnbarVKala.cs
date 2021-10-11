@@ -331,7 +331,7 @@ namespace AnbarVaKala.Reports
 
         }
 
-        public int _EditValueId = 0;
+        public int? _EditValueId = null;
         private void FrmMojodiAnbarVKala_Load(object sender, EventArgs e)
         {
             cmbNoeGozaresh.SelectedIndex = 0;

@@ -56,7 +56,7 @@ namespace EtelaatePaye.CodingHesabdari
         TextEdit txtGroupCode;
         CheckEdit chkEditCode;
         SimpleButton btnNewCode;
-        TextEdit txtIndex ;
+        TextEdit txtIndex;
         TextEdit textId;
         TextEdit txtName;
         TextEdit txtTarikhEjad;
@@ -166,7 +166,8 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 this.Close();
 
-            }        }
+            }
+        }
         private void cmbGroupTafsili_EditValueChanged(object sender, EventArgs e)
         {
             using (var db = new MyContext())
@@ -628,8 +629,7 @@ namespace EtelaatePaye.CodingHesabdari
                             _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
                             if (string.IsNullOrEmpty(txtMablagh.Text.Trim())
                                 && string.IsNullOrEmpty(txtShGharadad.Text.Trim())
-                                && string.IsNullOrEmpty(txtTarikhGharadad.Text.Trim())
-                                && string.IsNullOrEmpty(txtMolahezat_E.Text.Trim()))
+                                && string.IsNullOrEmpty(txtTaEngheza_E.Text.Trim()))
                             {
                                 XtraMessageBox.Show("هیچگونه اطلاعاتی برای ذخیره وارد نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //btnCancel_Click(null, null);
@@ -656,8 +656,7 @@ namespace EtelaatePaye.CodingHesabdari
                         {
                             if (string.IsNullOrEmpty(txtMablagh.Text.Trim())
                                 && string.IsNullOrEmpty(txtShGharadad.Text.Trim())
-                                && string.IsNullOrEmpty(txtTarikhGharadad.Text.Trim())
-                                && string.IsNullOrEmpty(txtMolahezat_E.Text.Trim()))
+                                && string.IsNullOrEmpty(txtTaEngheza_E.Text.Trim()))
                             {
                                 XtraMessageBox.Show("هیچگونه اطلاعاتی برای ذخیره وارد نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //xtraTabControl.SelectedTabPage = tpEetebarat;
@@ -841,16 +840,15 @@ namespace EtelaatePaye.CodingHesabdari
                         if (En == EnumCED.Create)
                         {
                             _AshkhasId = Convert.ToInt32(cmbTafsiliAshkhas.EditValue);
-                            if (string.IsNullOrEmpty(txtDarsadTakhfif.Text.Trim()))
+                            //if (string.IsNullOrEmpty(txtDarsadTakhfifRadifi.Text.Trim()))
+                            //{
+                            //    XtraMessageBox.Show("هیچگونه اطلاعاتی برای ذخیره وارد نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            //    //btnCancel_Click(null, null);
+                            //    return false;
+                            //}
+                            if ((string.IsNullOrEmpty(txtDarsadTakhfifRadifi.Text.Trim()) || txtDarsadTakhfifRadifi.Text.Trim() == "0") && (string.IsNullOrEmpty(txtDarsadTakhfifJamei.Text.Trim()) || txtDarsadTakhfifJamei.Text.Trim() == "0"))
                             {
-                                XtraMessageBox.Show("هیچگونه اطلاعاتی برای ذخیره وارد نشده است", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                //btnCancel_Click(null, null);
-                                return false;
-                            }
-                            else if (!string.IsNullOrEmpty(txtDarsadTakhfif.Text.Trim())
-                                && string.IsNullOrEmpty(cmbNoeTakhfif.Text.Trim()))
-                            {
-                                XtraMessageBox.Show("لطفاً نوع تخفیف را انتخاب کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                XtraMessageBox.Show("لطفاً درصد تخفیف را مشخص کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //xtraTabControl.SelectedTabPage = tpTakhfif;
                                 return false;
                             }
@@ -873,9 +871,9 @@ namespace EtelaatePaye.CodingHesabdari
                         }
                         else if (En == EnumCED.Edit)
                         {
-                            if (string.IsNullOrEmpty(txtDarsadTakhfif.Text.Trim()) || txtDarsadTakhfif.Text.Trim() == "0")
+                            if ((string.IsNullOrEmpty(txtDarsadTakhfifRadifi.Text.Trim()) || txtDarsadTakhfifRadifi.Text.Trim() == "0") && (string.IsNullOrEmpty(txtDarsadTakhfifJamei.Text.Trim()) || txtDarsadTakhfifJamei.Text.Trim() == "0"))
                             {
-                                XtraMessageBox.Show("لطفاً درصد تخفیف را وارد کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                XtraMessageBox.Show("لطفاً درصد تخفیف را مشخص کنید", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 //xtraTabControl.SelectedTabPage = tpHesabBanki;
                                 return false;
                             }
@@ -1331,7 +1329,7 @@ namespace EtelaatePaye.CodingHesabdari
             }
             else if (xtraTabControl.SelectedTabPage == tpTakhfif)
             {
-                cmbNoeTakhfif.Focus();
+                txtDarsadTakhfifRadifi.Focus();
             }
             else if (xtraTabControl.SelectedTabPage == tpPersonel)
             {
@@ -1554,146 +1552,146 @@ namespace EtelaatePaye.CodingHesabdari
             {
                 if (gridView.RowCount > 0)
                 {
-                        En = EnumCED.Edit;
-                        HelpClass1.InActiveButtons(PanelControl_1);
-                        ActiveControls();
-                        // EditRowIndex = gridView.FocusedRowHandle;
+                    En = EnumCED.Edit;
+                    HelpClass1.InActiveButtons(PanelControl_1);
+                    ActiveControls();
+                    // EditRowIndex = gridView.FocusedRowHandle;
 
-                        #region MyRegion
-                        //if (_SelectedTabPage == "tpMoshakhasat")
-                        //{
+                    #region MyRegion
+                    //if (_SelectedTabPage == "tpMoshakhasat")
+                    //{
 
-                        //    txtNameEkhtesar.Text = gridView.GetFocusedRowCellValue("NameEkhtesar").ToString();
-                        //    txtNoeFaaliat.Text = gridView.GetFocusedRowCellValue("NoeFaaliat").ToString();
-                        //    txtShenaseMelli.Text = gridView.GetFocusedRowCellValue("ShenaseMelli").ToString();
-                        //    txtCodeEghtesadi.Text = gridView.GetFocusedRowCellValue("CodeEghtesadi").ToString();
-                        //    txtShomareSabt.Text = gridView.GetFocusedRowCellValue("ShomareSabt").ToString();
-                        //    txtMolahezat_M.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //    using (var db = new MyContext())
-                        //    {
-                        //        try
-                        //        {
-                        //            int RowId = Convert.ToInt32(txtId.Text);
-                        //            var q1 = db.EpMoshakhasat_As.FirstOrDefault(s => s.SalId == _SalId && s.Id == RowId);
-                        //            if (q1.Pictuer != null)
-                        //            {
-                        //                MemoryStream ms = new MemoryStream(q1.Pictuer);
-                        //                pictureEdit1.Image = Image.FromStream(ms);
-                        //                img = pictureEdit1.Image;
-                        //            }
-                        //            else
-                        //                pictureEdit1.Image = null;
-                        //        }
-                        //        catch (Exception ex)
-                        //        {
-                        //            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
-                        //                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //        }
-                        //    }
+                    //    txtNameEkhtesar.Text = gridView.GetFocusedRowCellValue("NameEkhtesar").ToString();
+                    //    txtNoeFaaliat.Text = gridView.GetFocusedRowCellValue("NoeFaaliat").ToString();
+                    //    txtShenaseMelli.Text = gridView.GetFocusedRowCellValue("ShenaseMelli").ToString();
+                    //    txtCodeEghtesadi.Text = gridView.GetFocusedRowCellValue("CodeEghtesadi").ToString();
+                    //    txtShomareSabt.Text = gridView.GetFocusedRowCellValue("ShomareSabt").ToString();
+                    //    txtMolahezat_M.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //    using (var db = new MyContext())
+                    //    {
+                    //        try
+                    //        {
+                    //            int RowId = Convert.ToInt32(txtId.Text);
+                    //            var q1 = db.EpMoshakhasat_As.FirstOrDefault(s => s.SalId == _SalId && s.Id == RowId);
+                    //            if (q1.Pictuer != null)
+                    //            {
+                    //                MemoryStream ms = new MemoryStream(q1.Pictuer);
+                    //                pictureEdit1.Image = Image.FromStream(ms);
+                    //                img = pictureEdit1.Image;
+                    //            }
+                    //            else
+                    //                pictureEdit1.Image = null;
+                    //        }
+                    //        catch (Exception ex)
+                    //        {
+                    //            XtraMessageBox.Show("عملیات با خطا مواجه شد" + "\n" + ex.Message,
+                    //                "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //        }
+                    //    }
 
-                        //}
-                        //else if (_SelectedTabPage == "tpAdress")
-                        //{
+                    //}
+                    //else if (_SelectedTabPage == "tpAdress")
+                    //{
 
-                        //    cmbNameAdress.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameAdressId").ToString());
-                        //    cmbNameOstan.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameOstanId").ToString());
-                        //    cmbNameShahrstan.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameShahrstanId").ToString());
-                        //    txtSharhAdress.Text = gridView.GetFocusedRowCellValue("SharhAdress").ToString();
-                        //    txtCodePosti.Text = gridView.GetFocusedRowCellValue("CodePosti").ToString();
-                        //    txtSandoghPosti.Text = gridView.GetFocusedRowCellValue("SandoghPosti").ToString();
-                        //    chkDefaultAdress.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //    txtMolahezat_A.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
-                        //else if (_SelectedTabPage == "tpTamas")
-                        //{
+                    //    cmbNameAdress.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameAdressId").ToString());
+                    //    cmbNameOstan.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameOstanId").ToString());
+                    //    cmbNameShahrstan.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameShahrstanId").ToString());
+                    //    txtSharhAdress.Text = gridView.GetFocusedRowCellValue("SharhAdress").ToString();
+                    //    txtCodePosti.Text = gridView.GetFocusedRowCellValue("CodePosti").ToString();
+                    //    txtSandoghPosti.Text = gridView.GetFocusedRowCellValue("SandoghPosti").ToString();
+                    //    chkDefaultAdress.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //    txtMolahezat_A.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
+                    //else if (_SelectedTabPage == "tpTamas")
+                    //{
 
-                        //    cmbNoeTamas.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNoeTamas").ToString());
-                        //    txtShTamas.Text = gridView.GetFocusedRowCellValue("ShTamas").ToString();
-                        //    txtNameTaraf.Text = gridView.GetFocusedRowCellValue("NameTaraf").ToString();
-                        //    txtNameGhesmat.Text = gridView.GetFocusedRowCellValue("NameGhesmat").ToString();
-                        //    txtShDakheli.Text = gridView.GetFocusedRowCellValue("ShDakheli").ToString();
-                        //    chkDefaultShTamas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //    txtMolahezat_T.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
-                        //else if (_SelectedTabPage == "tpEetebarat")
-                        //{
+                    //    cmbNoeTamas.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNoeTamas").ToString());
+                    //    txtShTamas.Text = gridView.GetFocusedRowCellValue("ShTamas").ToString();
+                    //    txtNameTaraf.Text = gridView.GetFocusedRowCellValue("NameTaraf").ToString();
+                    //    txtNameGhesmat.Text = gridView.GetFocusedRowCellValue("NameGhesmat").ToString();
+                    //    txtShDakheli.Text = gridView.GetFocusedRowCellValue("ShDakheli").ToString();
+                    //    chkDefaultShTamas.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //    txtMolahezat_T.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
+                    //else if (_SelectedTabPage == "tpEetebarat")
+                    //{
 
-                        //    txtMablagh.Text = gridView.GetFocusedRowCellValue("Mablagh").ToString();
-                        //    chkEetebarat.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("chkEetebarat"));
-                        //    //chkGharardad.Checked = Convert.ToBoolean(gridViewEetebar1.GetFocusedRowCellValue("chkGharardad"));
-                        //    txtShGharadad.Text = gridView.GetFocusedRowCellValue("ShGharadad").ToString();
-                        //    txtTarikhGharadad.Text = gridView.GetFocusedRowCellValue("TarikhGharadad") != null ? gridView.GetFocusedRowCellValue("TarikhGharadad").ToString() : "";
-                        //    chkDefaultEetebar.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //    txtMolahezat_E.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
-                        //else if (_SelectedTabPage == "tpFazaMajazi")
-                        //{
+                    //    txtMablagh.Text = gridView.GetFocusedRowCellValue("Mablagh").ToString();
+                    //    chkEetebarat.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("chkEetebarat"));
+                    //    //chkGharardad.Checked = Convert.ToBoolean(gridViewEetebar1.GetFocusedRowCellValue("chkGharardad"));
+                    //    txtShGharadad.Text = gridView.GetFocusedRowCellValue("ShGharadad").ToString();
+                    //    txtTarikhGharadad.Text = gridView.GetFocusedRowCellValue("TarikhGharadad") != null ? gridView.GetFocusedRowCellValue("TarikhGharadad").ToString() : "";
+                    //    chkDefaultEetebar.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //    txtMolahezat_E.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
+                    //else if (_SelectedTabPage == "tpFazaMajazi")
+                    //{
 
-                        //    cmbNameAdress_F.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNameAdress"));
-                        //    txtSharhAdress_F.Text = gridView.GetFocusedRowCellValue("SharhAdress").ToString();
-                        //    chkDefaultFazaMajazi.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //    txtMolahezat_F.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
-                        //else if (_SelectedTabPage == "tpHesabBanki")
-                        //{
-                        //    cmbNameBank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameBankId"));
-                        //    txtShomareHesab.Text = gridView.GetFocusedRowCellValue("ShomareHesab").ToString();
-                        //    txtShomareKart.Text = gridView.GetFocusedRowCellValue("ShomareKart").ToString();
-                        //    txtShomareShaba.Text = gridView.GetFocusedRowCellValue("ShomareShaba").ToString();
-                        //    txtShomareMoshtari.Text = gridView.GetFocusedRowCellValue("ShomareMoshtari").ToString();
-                        //    txtMolahezat_H.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //    chkDefaultHesabBanki.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //}
-                        //else if (_SelectedTabPage == "tpTakhfif")
-                        //{
+                    //    cmbNameAdress_F.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNameAdress"));
+                    //    txtSharhAdress_F.Text = gridView.GetFocusedRowCellValue("SharhAdress").ToString();
+                    //    chkDefaultFazaMajazi.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //    txtMolahezat_F.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
+                    //else if (_SelectedTabPage == "tpHesabBanki")
+                    //{
+                    //    cmbNameBank.EditValue = Convert.ToInt32(gridView.GetFocusedRowCellValue("NameBankId"));
+                    //    txtShomareHesab.Text = gridView.GetFocusedRowCellValue("ShomareHesab").ToString();
+                    //    txtShomareKart.Text = gridView.GetFocusedRowCellValue("ShomareKart").ToString();
+                    //    txtShomareShaba.Text = gridView.GetFocusedRowCellValue("ShomareShaba").ToString();
+                    //    txtShomareMoshtari.Text = gridView.GetFocusedRowCellValue("ShomareMoshtari").ToString();
+                    //    txtMolahezat_H.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //    chkDefaultHesabBanki.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //}
+                    //else if (_SelectedTabPage == "tpTakhfif")
+                    //{
 
-                        //    cmbNoeTakhfif.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNoeTakhfif"));
-                        //    txtDarsadTakhfif.Text = gridView.GetFocusedRowCellValue("DarsadTakhfif").ToString();
-                        //    chkTarikh.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsChecked"));
-                        //    txtAzTarikh.Text = gridView.GetFocusedRowCellValue("AzTarikh") != null ? gridView.GetFocusedRowCellValue("AzTarikh").ToString() : "";
-                        //    txtTaTarikh.Text = gridView.GetFocusedRowCellValue("TaTarikh") != null ? gridView.GetFocusedRowCellValue("TaTarikh").ToString() : "";
-                        //    txtMolahezat_DT.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //    chkDefaultTakhfif.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //}
-                        //else if (_SelectedTabPage == "tpPersonel")
-                        //{
+                    //    cmbNoeTakhfif.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNoeTakhfif"));
+                    //    txtDarsadTakhfif.Text = gridView.GetFocusedRowCellValue("DarsadTakhfif").ToString();
+                    //    chkTarikh.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsChecked"));
+                    //    txtAzTarikh.Text = gridView.GetFocusedRowCellValue("AzTarikh") != null ? gridView.GetFocusedRowCellValue("AzTarikh").ToString() : "";
+                    //    txtTaTarikh.Text = gridView.GetFocusedRowCellValue("TaTarikh") != null ? gridView.GetFocusedRowCellValue("TaTarikh").ToString() : "";
+                    //    txtMolahezat_DT.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //    chkDefaultTakhfif.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //}
+                    //else if (_SelectedTabPage == "tpPersonel")
+                    //{
 
-                        //    txtCodPersoneli.Text = gridView.GetFocusedRowCellValue("CodPersoneli").ToString();
-                        //    txtTarikhEstekhdam.Text = gridView.GetFocusedRowCellValue("TarikhEstekhdam") != null ? gridView.GetFocusedRowCellValue("TarikhEstekhdam").ToString() : "";
-                        //    txtTarikhTavalod.Text = gridView.GetFocusedRowCellValue("TarikhTavalod") != null ? gridView.GetFocusedRowCellValue("TarikhTavalod").ToString() : "";
-                        //    txtNamePedar.Text = gridView.GetFocusedRowCellValue("NamePedar").ToString();
-                        //    txtShShenasname.Text = gridView.GetFocusedRowCellValue("ShShenasname").ToString();
-                        //    cmbJensiat.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexJensiat"));
-                        //    cmbTaahol.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexTaahol"));
-                        //    txtShogl.Text = gridView.GetFocusedRowCellValue("Shogl").ToString();
-                        //    txtMolahezat_MP.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
-                        //else if (_SelectedTabPage == "tpSahmSahamdar")
-                        //{
+                    //    txtCodPersoneli.Text = gridView.GetFocusedRowCellValue("CodPersoneli").ToString();
+                    //    txtTarikhEstekhdam.Text = gridView.GetFocusedRowCellValue("TarikhEstekhdam") != null ? gridView.GetFocusedRowCellValue("TarikhEstekhdam").ToString() : "";
+                    //    txtTarikhTavalod.Text = gridView.GetFocusedRowCellValue("TarikhTavalod") != null ? gridView.GetFocusedRowCellValue("TarikhTavalod").ToString() : "";
+                    //    txtNamePedar.Text = gridView.GetFocusedRowCellValue("NamePedar").ToString();
+                    //    txtShShenasname.Text = gridView.GetFocusedRowCellValue("ShShenasname").ToString();
+                    //    cmbJensiat.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexJensiat"));
+                    //    cmbTaahol.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexTaahol"));
+                    //    txtShogl.Text = gridView.GetFocusedRowCellValue("Shogl").ToString();
+                    //    txtMolahezat_MP.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
+                    //else if (_SelectedTabPage == "tpSahmSahamdar")
+                    //{
 
-                        //    txtTedadSahm.Text = gridView.GetFocusedRowCellValue("TedadSahm").ToString();
-                        //    txtMablaghHarSahm.Text = gridView.GetFocusedRowCellValue("MablaghHarSahm").ToString();
-                        //    txtSumMablagh.Text = gridView.GetFocusedRowCellValue("SumMablagh").ToString();
-                        //    txtMolahezat_SS.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
-                        //else if (_SelectedTabPage == "tpDarsadVizitor")
-                        //{
+                    //    txtTedadSahm.Text = gridView.GetFocusedRowCellValue("TedadSahm").ToString();
+                    //    txtMablaghHarSahm.Text = gridView.GetFocusedRowCellValue("MablaghHarSahm").ToString();
+                    //    txtSumMablagh.Text = gridView.GetFocusedRowCellValue("SumMablagh").ToString();
+                    //    txtMolahezat_SS.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
+                    //else if (_SelectedTabPage == "tpDarsadVizitor")
+                    //{
 
-                        //    txtMablaghSabet.Text = gridView.GetFocusedRowCellValue("MablaghSabet").ToString();
-                        //    txtDarsadVizitor.Text = gridView.GetFocusedRowCellValue("DarsadVizitor").ToString();
-                        //    chkDefaultDvizitor.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //    txtMolahezat_DV.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
-                        //else if (_SelectedTabPage == "tpDarsadRanande")
-                        //{
+                    //    txtMablaghSabet.Text = gridView.GetFocusedRowCellValue("MablaghSabet").ToString();
+                    //    txtDarsadVizitor.Text = gridView.GetFocusedRowCellValue("DarsadVizitor").ToString();
+                    //    chkDefaultDvizitor.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //    txtMolahezat_DV.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
+                    //else if (_SelectedTabPage == "tpDarsadRanande")
+                    //{
 
-                        //    txtMablaghSabet_2.Text = gridView.GetFocusedRowCellValue("MablaghSabet").ToString();
-                        //    txtDarsadRanande.Text = gridView.GetFocusedRowCellValue("DarsadRanande").ToString();
-                        //    chkDefaultDarsadRanande.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
-                        //    txtMolahezat_DR.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
-                        //}
+                    //    txtMablaghSabet_2.Text = gridView.GetFocusedRowCellValue("MablaghSabet").ToString();
+                    //    txtDarsadRanande.Text = gridView.GetFocusedRowCellValue("DarsadRanande").ToString();
+                    //    chkDefaultDarsadRanande.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
+                    //    txtMolahezat_DR.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
+                    //}
 
-                        #endregion
+                    #endregion
                 }
             }
         }
@@ -1948,6 +1946,13 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             else if (xtraTabControl.SelectedTabPage == tpEetebarat)
                             {
+                                if (string.IsNullOrEmpty(txtTaEngheza_E.Text.Trim()))
+                                {
+                                    XtraMessageBox.Show("لطفاً تاریخ انقضای قرارداد مشخص شود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    //btnCancel_Click(null, null);
+                                    return;
+                                }
+
                                 if (En == EnumCED.Create)
                                 {
                                     EpEetebarat_A obj = new EpEetebarat_A();
@@ -1958,8 +1963,8 @@ namespace EtelaatePaye.CodingHesabdari
                                     obj.chkEetebarat = chkEetebarat.Checked;
                                     // obj.chkGharardad = chkGharardad.Checked;
                                     obj.ShGharadad = txtShGharadad.Text;
-                                    if (!string.IsNullOrEmpty(txtTarikhGharadad.Text))
-                                        obj.TarikhGharadad = Convert.ToDateTime(txtTarikhGharadad.Text);
+                                    //if (!string.IsNullOrEmpty(txtAzTarikh_E.Text))
+                                    obj.TaEngheza = Convert.ToDateTime(txtTaEngheza_E.Text);
                                     obj.IsDefault = chkDefaultEetebar.Checked;
                                     obj.Molahezat = txtMolahezat_E.Text;
 
@@ -1998,8 +2003,8 @@ namespace EtelaatePaye.CodingHesabdari
                                         q.chkEetebarat = chkEetebarat.Checked;
                                         //  q.chkGharardad = chkGharardad.Checked;
                                         q.ShGharadad = txtShGharadad.Text;
-                                        if (!string.IsNullOrEmpty(txtTarikhGharadad.Text))
-                                            q.TarikhGharadad = Convert.ToDateTime(txtTarikhGharadad.Text);
+                                        //if (!string.IsNullOrEmpty(txtAzTarikh_E.Text))
+                                        q.TaEngheza = Convert.ToDateTime(txtTaEngheza_E.Text);
                                         q.IsDefault = chkDefaultEetebar.Checked;
                                         q.Molahezat = txtMolahezat_E.Text;
 
@@ -2194,20 +2199,26 @@ namespace EtelaatePaye.CodingHesabdari
                             }
                             else if (xtraTabControl.SelectedTabPage == tpTakhfif)
                             {
+                                if (string.IsNullOrEmpty(txtAzTarikh.Text.Trim()) || string.IsNullOrEmpty(txtTaTarikh.Text.Trim()))
+                                {
+                                    XtraMessageBox.Show("لطفاً محدوده تاریخ تخفیف مشخص شود", "پیغام", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    //btnCancel_Click(null, null);
+                                    return;
+                                }
+
                                 if (En == EnumCED.Create)
                                 {
                                     EpDarsadTakhfif_A obj = new EpDarsadTakhfif_A();
                                     obj.AshkhasId = Convert.ToInt32(txtId.Text);
                                     obj.SalId = _SalId;
                                     obj.Code = db.EpDarsadTakhfif_As.Any() ? db.EpDarsadTakhfif_As.Max(s => s.Code) + 1 : 1;
-                                    obj.IndexNoeTakhfif = cmbNoeTakhfif.SelectedIndex;
-                                    obj.NoeTakhfif = cmbNoeTakhfif.Text;
-                                    obj.DarsadTakhfif = Convert.ToSingle(txtDarsadTakhfif.Text);
+                                    obj.DarsadTakhfifRadifi = !string.IsNullOrEmpty(txtDarsadTakhfifRadifi.Text)? Convert.ToSingle(txtDarsadTakhfifRadifi.Text) :0;
+                                    obj.DarsadTakhfifJamei = !string.IsNullOrEmpty(txtDarsadTakhfifJamei.Text) ? Convert.ToSingle(txtDarsadTakhfifJamei.Text):0;
                                     obj.IsChecked = chkTarikh.Checked;
-                                    if (!string.IsNullOrEmpty(txtAzTarikh.Text))
-                                        obj.AzTarikh = Convert.ToDateTime(txtAzTarikh.Text);
-                                    if (!string.IsNullOrEmpty(txtTaTarikh.Text))
-                                        obj.TaTarikh = Convert.ToDateTime(txtTaTarikh.Text);
+                                    //if (!string.IsNullOrEmpty(txtAzTarikh.Text))
+                                    obj.AzTarikh = Convert.ToDateTime(txtAzTarikh.Text);
+                                    //if (!string.IsNullOrEmpty(txtTaTarikh.Text))
+                                    obj.TaTarikh = Convert.ToDateTime(txtTaTarikh.Text);
                                     obj.Molahezat = txtMolahezat_DT.Text;
                                     obj.IsDefault = chkDefaultTakhfif.Checked;
 
@@ -2241,14 +2252,13 @@ namespace EtelaatePaye.CodingHesabdari
                                     if (q != null)
                                     {
                                         q.AshkhasId = Convert.ToInt32(txtId.Text);
-                                        q.IndexNoeTakhfif = cmbNoeTakhfif.SelectedIndex;
-                                        q.NoeTakhfif = cmbNoeTakhfif.Text;
-                                        q.DarsadTakhfif = Convert.ToSingle(txtDarsadTakhfif.Text);
+                                        q.DarsadTakhfifRadifi = !string.IsNullOrEmpty(txtDarsadTakhfifRadifi.Text) ? Convert.ToSingle(txtDarsadTakhfifRadifi.Text) : 0;
+                                        q.DarsadTakhfifJamei = !string.IsNullOrEmpty(txtDarsadTakhfifJamei.Text) ? Convert.ToSingle(txtDarsadTakhfifJamei.Text) : 0;
                                         q.IsChecked = chkTarikh.Checked;
-                                        if (!string.IsNullOrEmpty(txtAzTarikh.Text))
-                                            q.AzTarikh = Convert.ToDateTime(txtAzTarikh.Text);
-                                        if (!string.IsNullOrEmpty(txtTaTarikh.Text))
-                                            q.TaTarikh = Convert.ToDateTime(txtTaTarikh.Text);
+                                        //if (!string.IsNullOrEmpty(txtAzTarikh.Text))
+                                        q.AzTarikh = Convert.ToDateTime(txtAzTarikh.Text);
+                                        //if (!string.IsNullOrEmpty(txtTaTarikh.Text))
+                                        q.TaTarikh = Convert.ToDateTime(txtTaTarikh.Text);
                                         q.Molahezat = txtMolahezat_DT.Text;
                                         q.IsDefault = chkDefaultTakhfif.Checked;
 
@@ -2553,16 +2563,16 @@ namespace EtelaatePaye.CodingHesabdari
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-                En = EnumCED.Cancel;
-                HelpClass1.ActiveButtons(PanelControl_1);
-                if (xtraTabControl.SelectedTabPage == tpMoshakhasat || xtraTabControl.SelectedTabPage == tpPersonel)
-                    btnCreate.Enabled = gridView.RowCount == 0 ? true : false;
-                HelpClass1.ClearControls(PanelControl_2);
-                PanelControl_2.Enabled = false;
-                panelControl1.Enabled = true;
-                gridControl.Enabled = true;
-                btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
-                btnCreate.Focus();
+            En = EnumCED.Cancel;
+            HelpClass1.ActiveButtons(PanelControl_1);
+            if (xtraTabControl.SelectedTabPage == tpMoshakhasat || xtraTabControl.SelectedTabPage == tpPersonel)
+                btnCreate.Enabled = gridView.RowCount == 0 ? true : false;
+            HelpClass1.ClearControls(PanelControl_2);
+            PanelControl_2.Enabled = false;
+            panelControl1.Enabled = true;
+            gridControl.Enabled = true;
+            btnDelete.Enabled = btnEdit.Enabled = btnLast.Enabled = btnNext.Enabled = btnPreview.Enabled = btnFirst.Enabled = false;
+            btnCreate.Focus();
         }
 
         private void gridView_DoubleClick(object sender, EventArgs e)
@@ -2625,7 +2635,7 @@ namespace EtelaatePaye.CodingHesabdari
                 gridControl = gridControlEetebar1;
                 gridView = gridViewEetebar1;
                 PanelControl_2 = panelControl_Eetebarat;
-                HelpClass1.DateTimeMask(txtTarikhGharadad);
+                HelpClass1.DateTimeMask(txtTaEngheza_E);
                 btnCreate.Enabled = true;
                 txtIndex = txtIndex_EtebarFroosh;
             }
@@ -2779,14 +2789,6 @@ namespace EtelaatePaye.CodingHesabdari
 
         }
 
-        private void cmbNoeTakhfif_Enter(object sender, EventArgs e)
-        {
-            if (En == EnumCED.Create)
-            {
-                cmbNoeTakhfif.ShowPopup();
-            }
-
-        }
 
         private void chkTarikh_CheckedChanged(object sender, EventArgs e)
         {
@@ -2909,7 +2911,7 @@ namespace EtelaatePaye.CodingHesabdari
                         chkEetebarat.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("chkEetebarat"));
                         //chkGharardad.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("chkGharardad"));
                         txtShGharadad.Text = gridView.GetFocusedRowCellValue("ShGharadad").ToString();
-                        txtTarikhGharadad.Text = gridView.GetFocusedRowCellValue("TarikhGharadad") != null ? gridView.GetFocusedRowCellValue("TarikhGharadad").ToString() : "";
+                        txtTaEngheza_E.Text = gridView.GetFocusedRowCellValue("TaTarikh") != null ? gridView.GetFocusedRowCellValue("TaTarikh").ToString() : "";
                         chkDefaultEetebar.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsDefault"));
                         txtMolahezat_E.Text = gridView.GetFocusedRowCellValue("Molahezat").ToString();
                     }
@@ -2933,8 +2935,8 @@ namespace EtelaatePaye.CodingHesabdari
                     }
                     else if (xtraTabControl.SelectedTabPage == tpTakhfif)
                     {
-                        cmbNoeTakhfif.SelectedIndex = Convert.ToInt32(gridView.GetFocusedRowCellValue("IndexNoeTakhfif"));
-                        txtDarsadTakhfif.Text = gridView.GetFocusedRowCellValue("DarsadTakhfif").ToString();
+                        txtDarsadTakhfifRadifi.Text = gridView.GetFocusedRowCellValue("DarsadTakhfifRadifi").ToString();
+                        txtDarsadTakhfifJamei.Text = gridView.GetFocusedRowCellValue("DarsadTakhfifJamei").ToString();
                         chkTarikh.Checked = Convert.ToBoolean(gridView.GetFocusedRowCellValue("IsChecked"));
                         txtAzTarikh.Text = gridView.GetFocusedRowCellValue("AzTarikh") != null ? gridView.GetFocusedRowCellValue("AzTarikh").ToString() : "";
                         txtTaTarikh.Text = gridView.GetFocusedRowCellValue("TaTarikh") != null ? gridView.GetFocusedRowCellValue("TaTarikh").ToString() : "";
@@ -3020,6 +3022,12 @@ namespace EtelaatePaye.CodingHesabdari
         private void cmbLookupEdit_CustomDrawRow(object sender, DevExpress.XtraEditors.Popup.LookUpCustomDrawRowArgs e)
         {
             HelpClass1._IsActiveRow = Convert.ToBoolean(e.GetCellValue(0));
+        }
+
+        private void chkEetebarat_CheckedChanged(object sender, EventArgs e)
+        {
+            chkEetebarat.Text = chkEetebarat.Checked ? "مبلغ اعتبار با احتساب مانده بدهی + مبلغ فاکتور + جمع چکهای سررسید نشده می باشد" : "مبلغ اعتبار با احتساب مانده بدهی + مبلغ فاکتور می باشد";
+
         }
     }
 }
