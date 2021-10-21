@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBHesabdari_PG.Models.FK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -44,5 +45,6 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         [MaxLength(400)]
         public string Molahezat { get; set; }
         public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
+        public virtual ICollection<FKMotamemFactor> FKMotamemFactors { get; set; }
     }
 }

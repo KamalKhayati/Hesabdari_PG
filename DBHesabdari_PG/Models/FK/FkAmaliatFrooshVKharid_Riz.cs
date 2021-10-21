@@ -264,10 +264,14 @@ namespace DBHesabdari_PG.Models.FK
         //public virtual EpVahedKala EpVahedKala1 { get; set; }
         public virtual EpNameKala EpNameKala1 { get; set; }
         public virtual FKTarifEz_Ks_Factor FKTarifEz_Ks_Factor1 { get; set; }
-        public virtual EpHesabMoin1 EpHesabMoin1 { get; set; }
-        public virtual EpAllHesabTafsili EpAllHesabTafsili1 { get; set; }
-        public virtual EpAllHesabTafsili EpAllHesabTafsili2 { get; set; }
-        public virtual EpAllHesabTafsili EpAllHesabTafsili3 { get; set; }
+        public virtual EpHesabMoin1 EpHesabMoin1_Bed { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili1_Bed { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili2_Bed { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili3_Bed { get; set; }
+        public virtual EpHesabMoin1 EpHesabMoin1_Bes { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili1_Bes { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili2_Bes { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili3_Bes { get; set; }
         public virtual EpHesabTafsiliAshkhas EpHesabTafsiliAshkhas1 { get; set; }
 
     }

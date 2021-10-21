@@ -81,6 +81,14 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         [Required]
         public bool IsArzeshAfzode { get; set; }
         public byte[] Pictuer { get; set; }
+        public int? HesabMoinId_Kh { get; set; }
+        public int? HesabTafsili1Id_Kh { get; set; }
+        public int? HesabTafsili2Id_Kh { get; set; }
+        public int? HesabTafsili3Id_Kh { get; set; }
+        public int? HesabMoinId_Fr { get; set; }
+        public int? HesabTafsili1Id_Fr { get; set; }
+        public int? HesabTafsili2Id_Fr { get; set; }
+        public int? HesabTafsili3Id_Fr { get; set; }
 
 
         [MaxLength(50), NotMapped]
@@ -106,7 +114,14 @@ namespace DBHesabdari_PG.Models.EP.CodingAnbar
         public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Rizs { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Rizs { get; set; }
         public virtual ICollection<FKTanzimatFactor> FKTanzimatFactors { get; set; }
-        //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Rizs { get; set; }
-        //public virtual ICollection<AkAllAmaliateRozaneh> AkAllAmaliateRozanehs { get; set; }
+
+        public virtual EpHesabMoin1 EpHesabMoin1_Kh { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili1_Kh { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili2_Kh { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili3_Kh { get; set; }
+        public virtual EpHesabMoin1 EpHesabMoin1_Fr { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili1_Fr { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili2_Fr { get; set; }
+        public virtual EpAllHesabTafsili EpAllHesabTafsili3_Fr { get; set; }
     }
 }

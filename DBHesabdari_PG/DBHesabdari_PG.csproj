@@ -134,6 +134,7 @@
     <Compile Include="Models\EP\Tanzimat\EpTanzimatCodingHesabdari.cs" />
     <Compile Include="Models\EP\Tanzimat\EpTanzimatGroupTafsili.cs" />
     <Compile Include="Models\FK\FkAmaliatFrooshVKharid_Riz.cs" />
+    <Compile Include="Models\FK\FKMotamemFactor.cs" />
     <Compile Include="Models\FK\Taarif\FKTarifEz_Ks_Factor.cs" />
     <Compile Include="Models\FK\Tanzimat\FKTanzimatFactor.cs" />
     <Compile Include="Models\Ms\ActiveSystem\MsActiveSystem.cs" />

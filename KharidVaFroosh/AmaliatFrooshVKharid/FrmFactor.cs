@@ -829,6 +829,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                         xtp_AghlamKala.PageVisible = _NoeFactor == 1 ? false : true;
                     }
 
+
                     if (En1 == EnumCED.Edit)
                     {
                         var q1 = dbContext.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.FNumber_BeNameAmaliat_BeSelectAnbar == _FNumber_BeNameAmaliat_BeSelectAnbar && s.FNumberCol_BaNameSanad_BeSelectAnbar == _FNumberCol_BaNameSanad_BeSelectAnbar && s.FNumberJoze_BaNameSanad_BaNoeFactor == _FNumberJoze_BaNameSanad_BaNoeFactor).ToList();
@@ -875,6 +876,26 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                             cmbHesabTafsili1.EditValue = q1.FirstOrDefault(s => s.Id == _Id).HesabTafsili1Id_Bes;
                             cmbHesabTafsili2.EditValue = q1.FirstOrDefault(s => s.Id == _Id).HesabTafsili2Id_Bes;
                             cmbHesabTafsili3.EditValue = q1.FirstOrDefault(s => s.Id == _Id).HesabTafsili3Id_Bes;
+
+                        }
+                        int a = q1.FirstOrDefault().FNumber_BeNameAmaliat_BeSelectAnbar;
+                        int b = q1.FirstOrDefault().FNumberCol_BaNameSanad_BeSelectAnbar;
+                        int c = q1.FirstOrDefault().FNumberJoze_BaNameSanad_BaNoeFactor;
+                        var q11 = dbContext.FKMotamemFactors.FirstOrDefault(s => s.SalId == _SalId && s.FNumber_BeNameAmaliat_BeSelectAnbar == a && s.FNumberCol_BaNameSanad_BeSelectAnbar == b && s.FNumberJoze_BaNameSanad_BaNoeFactor == c);
+                        if (q11 != null)
+                        {
+                            cmbTakhfif.EditValue = q11.TakhfifId;
+                            txtNameTarafHesab.Text = q11.NameTarafHesab;
+                            txtShMobile1.Text = q11.ShMobile1;
+                            txtTelSabet1.Text = q11.TelSabet1;
+                            txtAdress.Text = q11.Adress;
+                            txtNameRanande.Text = q11.NameRanande;
+                            txtShMobile2.Text = q11.ShMobile2;
+                            txtTelSabet2.Text = q11.TelSabet2;
+                            txtMohalTahvil.Text = q11.MohalTahvil;
+                            txtShPlak.Text = q11.ShPlak;
+                            txtShBarname.Text = q11.ShBarname;
+                            txtVaznBaskol.Text = q11.VaznBaskol;
 
                         }
 
@@ -2060,8 +2081,42 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                                     }
                                 }
 
+                                /////////////// اطلاعات اضافی //////////////////
+                                FKMotamemFactor obj11 = new FKMotamemFactor();
+                                obj11.SalId = _SalId;
+                                obj11.FNumber_BeNameAmaliat_BeSelectAnbar = _FNumber_BeNameAmaliat_BeSelectAnbar;
+                                obj11.FNumberCol_BaNameSanad_BeSelectAnbar = _FNumberCol_BaNameSanad_BeSelectAnbar;
+                                obj11.FNumberJoze_BaNameSanad_BaSelectAnbar = 0;
+                                obj11.FNumberJoze_BaNameSanad_BaNoeFactor = _FNumberJoze_BaNameSanad_BaNoeFactor;
+                                if (Convert.ToInt32(cmbTakhfif.EditValue) != 0)
+                                    obj11.TakhfifId = Convert.ToInt32(cmbTakhfif.EditValue);
+                                if (!string.IsNullOrEmpty(txtNameTarafHesab.Text))
+                                    obj11.NameTarafHesab = txtNameTarafHesab.Text;
+                                if (!string.IsNullOrEmpty(txtShMobile1.Text))
+                                    obj11.ShMobile1 = txtShMobile1.Text;
+                                if (!string.IsNullOrEmpty(txtTelSabet1.Text))
+                                    obj11.TelSabet1 = txtTelSabet1.Text;
+                                if (!string.IsNullOrEmpty(txtAdress.Text))
+                                    obj11.Adress = txtAdress.Text;
+
+                                if (!string.IsNullOrEmpty(txtNameRanande.Text))
+                                    obj11.NameRanande = txtNameRanande.Text;
+                                if (!string.IsNullOrEmpty(txtShMobile2.Text))
+                                    obj11.ShMobile2 = txtShMobile2.Text;
+                                if (!string.IsNullOrEmpty(txtTelSabet2.Text))
+                                    obj11.TelSabet2 = txtTelSabet2.Text;
+                                if (!string.IsNullOrEmpty(txtMohalTahvil.Text))
+                                    obj11.MohalTahvil = txtMohalTahvil.Text;
+                                if (!string.IsNullOrEmpty(txtShPlak.Text))
+                                    obj11.ShPlak = txtShPlak.Text;
+                                if (!string.IsNullOrEmpty(txtShBarname.Text))
+                                    obj11.ShBarname = txtShBarname.Text;
+                                if (!string.IsNullOrEmpty(txtVaznBaskol.Text))
+                                    obj11.VaznBaskol = txtVaznBaskol.Text;
+
 
                                 db.FkAmaliatFrooshVKharid_Rizs.AddRange(list);
+                                db.FKMotamemFactors.Add(obj11);
                                 db.SaveChanges();
                                 En1 = EnumCED.Save;
                                 if (sender == btnSaveAndClosed || sender == null)
@@ -3173,7 +3228,34 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
                                 }
 
+                                /////////////// اطلاعات اضافی //////////////////
+                                var q11 = db.FKMotamemFactors.FirstOrDefault(s => s.SalId == _SalId && s.FNumber_BeNameAmaliat_BeSelectAnbar == _FNumber_BeNameAmaliat_BeSelectAnbar && s.FNumberCol_BaNameSanad_BeSelectAnbar == _FNumberCol_BaNameSanad_BeSelectAnbar && s.FNumberJoze_BaNameSanad_BaNoeFactor == _FNumberJoze_BaNameSanad_BaNoeFactor);
+                                if (q11 != null)
+                                {
+                                    q11.SalId = _SalId;
+                                    //q11.FNumber_BeNameAmaliat_BeSelectAnbar = _FNumber_BeNameAmaliat_BeSelectAnbar;
+                                    //q11.FNumberCol_BaNameSanad_BeSelectAnbar = _FNumberCol_BaNameSanad_BeSelectAnbar;
+                                    //q11.FNumberJoze_BaNameSanad_BaSelectAnbar = 0;
+                                    //q11.FNumberJoze_BaNameSanad_BaNoeFactor = _FNumberJoze_BaNameSanad_BaNoeFactor;
+                                    if (Convert.ToInt32(cmbTakhfif.EditValue) != 0)
+                                        q11.TakhfifId = Convert.ToInt32(cmbTakhfif.EditValue);
+                                    else
+                                        q11.TakhfifId = null;
 
+                                        q11.NameTarafHesab = !string.IsNullOrEmpty(txtNameTarafHesab.Text) ? txtNameTarafHesab.Text :null;
+                                        q11.ShMobile1 = !string.IsNullOrEmpty(txtShMobile1.Text)? txtShMobile1.Text : null;
+                                        q11.TelSabet1 = !string.IsNullOrEmpty(txtTelSabet1.Text) ? txtTelSabet1.Text : null;
+                                        q11.Adress = !string.IsNullOrEmpty(txtAdress.Text) ? txtAdress.Text : null;
+
+                                        q11.NameRanande = !string.IsNullOrEmpty(txtNameRanande.Text) ? txtNameRanande.Text : null;
+                                        q11.ShMobile2 = !string.IsNullOrEmpty(txtShMobile2.Text) ? txtShMobile2.Text : null;
+                                        q11.TelSabet2 = !string.IsNullOrEmpty(txtTelSabet2.Text) ? txtTelSabet2.Text : null;
+                                        q11.MohalTahvil = !string.IsNullOrEmpty(txtMohalTahvil.Text) ? txtMohalTahvil.Text : null;
+                                        q11.ShPlak = !string.IsNullOrEmpty(txtShPlak.Text) ? txtShPlak.Text : null;
+                                        q11.ShBarname = !string.IsNullOrEmpty(txtShBarname.Text) ? txtShBarname.Text : null;
+                                        q11.VaznBaskol = !string.IsNullOrEmpty(txtVaznBaskol.Text) ? txtVaznBaskol.Text : null;
+
+                                }
                                 db.FkAmaliatFrooshVKharid_Rizs.RemoveRange(RemoveList);
                                 db.FkAmaliatFrooshVKharid_Rizs.AddRange(AddList);
 
@@ -4002,7 +4084,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
             {
                 if ((gridView_AghlamKala.RowCount > 0 && _NoeFactor == 0) || (gridView_AghlamKhadamat.RowCount > 0 && _NoeFactor == 1))
                 {
-                    var Result = XtraMessageBox.Show("آیا اطلاعات ذخیره گردد؟", "پیغام خروج", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    var Result = XtraMessageBox.Show("آیا اطلاعات ذخیره گردد؟", "پیغام خروج", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (Result == DialogResult.Yes)
                     {
                         btnSaveAndClosed_Click(null, null);
@@ -4029,7 +4111,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
         private void chkEditCodeTakhfif_CheckedChanged(object sender, EventArgs e)
         {
-            cmbTakhfif.ReadOnly = chkEditCodeTakhfif.Checked? false:true;
+            cmbTakhfif.ReadOnly = chkEditCodeTakhfif.Checked ? false : true;
         }
 
         private void cmbTakhfif_Leave(object sender, EventArgs e)

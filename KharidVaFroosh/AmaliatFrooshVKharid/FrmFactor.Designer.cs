@@ -378,28 +378,28 @@
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.xtp_Sayer = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit17 = new DevExpress.XtraEditors.TextEdit();
+            this.txtShMobile2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTelSabet2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNameRanande = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtVaznBaskol = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit25 = new DevExpress.XtraEditors.TextEdit();
+            this.txtMohalTahvil = new DevExpress.XtraEditors.TextEdit();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit20 = new DevExpress.XtraEditors.TextEdit();
+            this.txtShBarname = new DevExpress.XtraEditors.TextEdit();
+            this.txtShPlak = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTelSabet1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtShMobile1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNameTarafHesab = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit19 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAdress = new DevExpress.XtraEditors.TextEdit();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl13 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl_Button = new DevExpress.XtraEditors.PanelControl();
@@ -548,19 +548,19 @@
             this.xtp_Sayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShMobile2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelSabet2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameRanande.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVaznBaskol.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMohalTahvil.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShBarname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShPlak.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelSabet1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShMobile1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameTarafHesab.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl13)).BeginInit();
             this.panelControl13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).BeginInit();
@@ -5857,19 +5857,19 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.textEdit17);
+            this.groupControl2.Controls.Add(this.txtShMobile2);
             this.groupControl2.Controls.Add(this.labelControl17);
-            this.groupControl2.Controls.Add(this.textEdit4);
+            this.groupControl2.Controls.Add(this.txtTelSabet2);
             this.groupControl2.Controls.Add(this.labelControl11);
-            this.groupControl2.Controls.Add(this.textEdit1);
+            this.groupControl2.Controls.Add(this.txtNameRanande);
             this.groupControl2.Controls.Add(this.labelControl10);
-            this.groupControl2.Controls.Add(this.textEdit3);
+            this.groupControl2.Controls.Add(this.txtVaznBaskol);
             this.groupControl2.Controls.Add(this.labelControl9);
-            this.groupControl2.Controls.Add(this.textEdit25);
+            this.groupControl2.Controls.Add(this.txtMohalTahvil);
             this.groupControl2.Controls.Add(this.labelControl29);
             this.groupControl2.Controls.Add(this.labelControl21);
-            this.groupControl2.Controls.Add(this.textEdit2);
-            this.groupControl2.Controls.Add(this.textEdit20);
+            this.groupControl2.Controls.Add(this.txtShBarname);
+            this.groupControl2.Controls.Add(this.txtShPlak);
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
@@ -5878,24 +5878,24 @@
             this.groupControl2.TabIndex = 234;
             this.groupControl2.Text = "مشخصات راننده و محموله";
             // 
-            // textEdit17
+            // txtShMobile2
             // 
-            this.textEdit17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit17.EditValue = "";
-            this.textEdit17.EnterMoveNextControl = true;
-            this.textEdit17.Location = new System.Drawing.Point(421, 79);
-            this.textEdit17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit17.Name = "textEdit17";
-            this.textEdit17.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit17.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit17.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit17.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit17.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit17.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit17.Properties.MaxLength = 11;
-            this.textEdit17.Size = new System.Drawing.Size(214, 30);
-            this.textEdit17.TabIndex = 2;
-            this.textEdit17.TabStop = false;
+            this.txtShMobile2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtShMobile2.EditValue = "";
+            this.txtShMobile2.EnterMoveNextControl = true;
+            this.txtShMobile2.Location = new System.Drawing.Point(421, 79);
+            this.txtShMobile2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtShMobile2.Name = "txtShMobile2";
+            this.txtShMobile2.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtShMobile2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtShMobile2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtShMobile2.Properties.Appearance.Options.UseForeColor = true;
+            this.txtShMobile2.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtShMobile2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtShMobile2.Properties.MaxLength = 11;
+            this.txtShMobile2.Size = new System.Drawing.Size(214, 30);
+            this.txtShMobile2.TabIndex = 2;
+            this.txtShMobile2.TabStop = false;
             // 
             // labelControl17
             // 
@@ -5909,24 +5909,24 @@
             this.labelControl17.TabIndex = 245;
             this.labelControl17.Text = "شماره موبایل";
             // 
-            // textEdit4
+            // txtTelSabet2
             // 
-            this.textEdit4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit4.EditValue = "";
-            this.textEdit4.EnterMoveNextControl = true;
-            this.textEdit4.Location = new System.Drawing.Point(71, 79);
-            this.textEdit4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit4.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit4.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit4.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit4.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit4.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit4.Properties.MaxLength = 11;
-            this.textEdit4.Size = new System.Drawing.Size(214, 30);
-            this.textEdit4.TabIndex = 3;
-            this.textEdit4.TabStop = false;
+            this.txtTelSabet2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelSabet2.EditValue = "";
+            this.txtTelSabet2.EnterMoveNextControl = true;
+            this.txtTelSabet2.Location = new System.Drawing.Point(71, 79);
+            this.txtTelSabet2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTelSabet2.Name = "txtTelSabet2";
+            this.txtTelSabet2.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTelSabet2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtTelSabet2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTelSabet2.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTelSabet2.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTelSabet2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtTelSabet2.Properties.MaxLength = 11;
+            this.txtTelSabet2.Size = new System.Drawing.Size(214, 30);
+            this.txtTelSabet2.TabIndex = 3;
+            this.txtTelSabet2.TabStop = false;
             // 
             // labelControl11
             // 
@@ -5940,22 +5940,22 @@
             this.labelControl11.TabIndex = 245;
             this.labelControl11.Text = "تلفن ثابت";
             // 
-            // textEdit1
+            // txtNameRanande
             // 
-            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit1.EditValue = "";
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(421, 41);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit1.Properties.MaxLength = 100;
-            this.textEdit1.Size = new System.Drawing.Size(214, 30);
-            this.textEdit1.TabIndex = 0;
-            this.textEdit1.TabStop = false;
+            this.txtNameRanande.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNameRanande.EditValue = "";
+            this.txtNameRanande.EnterMoveNextControl = true;
+            this.txtNameRanande.Location = new System.Drawing.Point(421, 41);
+            this.txtNameRanande.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNameRanande.Name = "txtNameRanande";
+            this.txtNameRanande.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtNameRanande.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtNameRanande.Properties.Appearance.Options.UseBackColor = true;
+            this.txtNameRanande.Properties.Appearance.Options.UseForeColor = true;
+            this.txtNameRanande.Properties.MaxLength = 100;
+            this.txtNameRanande.Size = new System.Drawing.Size(214, 30);
+            this.txtNameRanande.TabIndex = 0;
+            this.txtNameRanande.TabStop = false;
             // 
             // labelControl10
             // 
@@ -5969,26 +5969,26 @@
             this.labelControl10.TabIndex = 243;
             this.labelControl10.Text = "نام راننده/حامل";
             // 
-            // textEdit3
+            // txtVaznBaskol
             // 
-            this.textEdit3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit3.EditValue = "";
-            this.textEdit3.EnterMoveNextControl = true;
-            this.textEdit3.Location = new System.Drawing.Point(71, 152);
-            this.textEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit3.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit3.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit3.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit3.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit3.Properties.Mask.EditMask = "f3";
-            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit3.Properties.MaxLength = 10;
-            this.textEdit3.Size = new System.Drawing.Size(214, 30);
-            this.textEdit3.TabIndex = 6;
-            this.textEdit3.TabStop = false;
+            this.txtVaznBaskol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtVaznBaskol.EditValue = "";
+            this.txtVaznBaskol.EnterMoveNextControl = true;
+            this.txtVaznBaskol.Location = new System.Drawing.Point(71, 152);
+            this.txtVaznBaskol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtVaznBaskol.Name = "txtVaznBaskol";
+            this.txtVaznBaskol.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtVaznBaskol.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtVaznBaskol.Properties.Appearance.Options.UseBackColor = true;
+            this.txtVaznBaskol.Properties.Appearance.Options.UseForeColor = true;
+            this.txtVaznBaskol.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtVaznBaskol.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtVaznBaskol.Properties.Mask.EditMask = "f3";
+            this.txtVaznBaskol.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtVaznBaskol.Properties.MaxLength = 10;
+            this.txtVaznBaskol.Size = new System.Drawing.Size(214, 30);
+            this.txtVaznBaskol.TabIndex = 6;
+            this.txtVaznBaskol.TabStop = false;
             // 
             // labelControl9
             // 
@@ -6002,22 +6002,22 @@
             this.labelControl9.TabIndex = 241;
             this.labelControl9.Text = "وزن باسکول ";
             // 
-            // textEdit25
+            // txtMohalTahvil
             // 
-            this.textEdit25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit25.EditValue = "";
-            this.textEdit25.EnterMoveNextControl = true;
-            this.textEdit25.Location = new System.Drawing.Point(71, 117);
-            this.textEdit25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit25.Name = "textEdit25";
-            this.textEdit25.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit25.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit25.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit25.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit25.Properties.MaxLength = 500;
-            this.textEdit25.Size = new System.Drawing.Size(564, 30);
-            this.textEdit25.TabIndex = 4;
-            this.textEdit25.TabStop = false;
+            this.txtMohalTahvil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMohalTahvil.EditValue = "";
+            this.txtMohalTahvil.EnterMoveNextControl = true;
+            this.txtMohalTahvil.Location = new System.Drawing.Point(71, 117);
+            this.txtMohalTahvil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMohalTahvil.Name = "txtMohalTahvil";
+            this.txtMohalTahvil.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtMohalTahvil.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtMohalTahvil.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMohalTahvil.Properties.Appearance.Options.UseForeColor = true;
+            this.txtMohalTahvil.Properties.MaxLength = 500;
+            this.txtMohalTahvil.Size = new System.Drawing.Size(564, 30);
+            this.txtMohalTahvil.TabIndex = 4;
+            this.txtMohalTahvil.TabStop = false;
             // 
             // labelControl29
             // 
@@ -6043,43 +6043,43 @@
             this.labelControl21.TabIndex = 237;
             this.labelControl21.Text = "شماره پلاک خودرو";
             // 
-            // textEdit2
+            // txtShBarname
             // 
-            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit2.EditValue = "";
-            this.textEdit2.EnterMoveNextControl = true;
-            this.textEdit2.Location = new System.Drawing.Point(421, 152);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit2.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit2.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit2.Properties.MaxLength = 15;
-            this.textEdit2.Size = new System.Drawing.Size(214, 30);
-            this.textEdit2.TabIndex = 5;
-            this.textEdit2.TabStop = false;
+            this.txtShBarname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtShBarname.EditValue = "";
+            this.txtShBarname.EnterMoveNextControl = true;
+            this.txtShBarname.Location = new System.Drawing.Point(421, 152);
+            this.txtShBarname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtShBarname.Name = "txtShBarname";
+            this.txtShBarname.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtShBarname.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtShBarname.Properties.Appearance.Options.UseBackColor = true;
+            this.txtShBarname.Properties.Appearance.Options.UseForeColor = true;
+            this.txtShBarname.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtShBarname.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtShBarname.Properties.MaxLength = 15;
+            this.txtShBarname.Size = new System.Drawing.Size(214, 30);
+            this.txtShBarname.TabIndex = 5;
+            this.txtShBarname.TabStop = false;
             // 
-            // textEdit20
+            // txtShPlak
             // 
-            this.textEdit20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit20.EditValue = "";
-            this.textEdit20.EnterMoveNextControl = true;
-            this.textEdit20.Location = new System.Drawing.Point(71, 41);
-            this.textEdit20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit20.Name = "textEdit20";
-            this.textEdit20.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit20.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit20.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit20.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit20.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit20.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit20.Properties.MaxLength = 20;
-            this.textEdit20.Size = new System.Drawing.Size(214, 30);
-            this.textEdit20.TabIndex = 1;
-            this.textEdit20.TabStop = false;
+            this.txtShPlak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtShPlak.EditValue = "";
+            this.txtShPlak.EnterMoveNextControl = true;
+            this.txtShPlak.Location = new System.Drawing.Point(71, 41);
+            this.txtShPlak.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtShPlak.Name = "txtShPlak";
+            this.txtShPlak.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtShPlak.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtShPlak.Properties.Appearance.Options.UseBackColor = true;
+            this.txtShPlak.Properties.Appearance.Options.UseForeColor = true;
+            this.txtShPlak.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtShPlak.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtShPlak.Properties.MaxLength = 20;
+            this.txtShPlak.Size = new System.Drawing.Size(214, 30);
+            this.txtShPlak.TabIndex = 1;
+            this.txtShPlak.TabStop = false;
             // 
             // labelControl8
             // 
@@ -6095,13 +6095,13 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.textEdit14);
+            this.groupControl1.Controls.Add(this.txtTelSabet1);
             this.groupControl1.Controls.Add(this.labelControl16);
-            this.groupControl1.Controls.Add(this.textEdit5);
+            this.groupControl1.Controls.Add(this.txtShMobile1);
             this.groupControl1.Controls.Add(this.labelControl12);
-            this.groupControl1.Controls.Add(this.textEdit13);
+            this.groupControl1.Controls.Add(this.txtNameTarafHesab);
             this.groupControl1.Controls.Add(this.labelControl15);
-            this.groupControl1.Controls.Add(this.textEdit19);
+            this.groupControl1.Controls.Add(this.txtAdress);
             this.groupControl1.Controls.Add(this.labelControl19);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupControl1.Location = new System.Drawing.Point(796, 0);
@@ -6110,24 +6110,24 @@
             this.groupControl1.TabIndex = 235;
             this.groupControl1.Text = "اطلاعات اضافی طرف حساب";
             // 
-            // textEdit14
+            // txtTelSabet1
             // 
-            this.textEdit14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit14.EditValue = "";
-            this.textEdit14.EnterMoveNextControl = true;
-            this.textEdit14.Location = new System.Drawing.Point(12, 79);
-            this.textEdit14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit14.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit14.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit14.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit14.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit14.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit14.Properties.MaxLength = 11;
-            this.textEdit14.Size = new System.Drawing.Size(214, 30);
-            this.textEdit14.TabIndex = 2;
-            this.textEdit14.TabStop = false;
+            this.txtTelSabet1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelSabet1.EditValue = "";
+            this.txtTelSabet1.EnterMoveNextControl = true;
+            this.txtTelSabet1.Location = new System.Drawing.Point(12, 79);
+            this.txtTelSabet1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTelSabet1.Name = "txtTelSabet1";
+            this.txtTelSabet1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTelSabet1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtTelSabet1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTelSabet1.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTelSabet1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTelSabet1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtTelSabet1.Properties.MaxLength = 11;
+            this.txtTelSabet1.Size = new System.Drawing.Size(214, 30);
+            this.txtTelSabet1.TabIndex = 2;
+            this.txtTelSabet1.TabStop = false;
             // 
             // labelControl16
             // 
@@ -6141,24 +6141,24 @@
             this.labelControl16.TabIndex = 245;
             this.labelControl16.Text = "تلفن ثابت";
             // 
-            // textEdit5
+            // txtShMobile1
             // 
-            this.textEdit5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit5.EditValue = "";
-            this.textEdit5.EnterMoveNextControl = true;
-            this.textEdit5.Location = new System.Drawing.Point(362, 79);
-            this.textEdit5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit5.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit5.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit5.Properties.Appearance.Options.UseTextOptions = true;
-            this.textEdit5.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.textEdit5.Properties.MaxLength = 11;
-            this.textEdit5.Size = new System.Drawing.Size(214, 30);
-            this.textEdit5.TabIndex = 1;
-            this.textEdit5.TabStop = false;
+            this.txtShMobile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtShMobile1.EditValue = "";
+            this.txtShMobile1.EnterMoveNextControl = true;
+            this.txtShMobile1.Location = new System.Drawing.Point(362, 79);
+            this.txtShMobile1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtShMobile1.Name = "txtShMobile1";
+            this.txtShMobile1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtShMobile1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtShMobile1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtShMobile1.Properties.Appearance.Options.UseForeColor = true;
+            this.txtShMobile1.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtShMobile1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtShMobile1.Properties.MaxLength = 11;
+            this.txtShMobile1.Size = new System.Drawing.Size(214, 30);
+            this.txtShMobile1.TabIndex = 1;
+            this.txtShMobile1.TabStop = false;
             // 
             // labelControl12
             // 
@@ -6172,22 +6172,22 @@
             this.labelControl12.TabIndex = 245;
             this.labelControl12.Text = "شماره موبایل";
             // 
-            // textEdit13
+            // txtNameTarafHesab
             // 
-            this.textEdit13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit13.EditValue = "";
-            this.textEdit13.EnterMoveNextControl = true;
-            this.textEdit13.Location = new System.Drawing.Point(362, 41);
-            this.textEdit13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit13.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit13.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit13.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit13.Properties.MaxLength = 100;
-            this.textEdit13.Size = new System.Drawing.Size(214, 30);
-            this.textEdit13.TabIndex = 0;
-            this.textEdit13.TabStop = false;
+            this.txtNameTarafHesab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNameTarafHesab.EditValue = "";
+            this.txtNameTarafHesab.EnterMoveNextControl = true;
+            this.txtNameTarafHesab.Location = new System.Drawing.Point(362, 41);
+            this.txtNameTarafHesab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNameTarafHesab.Name = "txtNameTarafHesab";
+            this.txtNameTarafHesab.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtNameTarafHesab.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtNameTarafHesab.Properties.Appearance.Options.UseBackColor = true;
+            this.txtNameTarafHesab.Properties.Appearance.Options.UseForeColor = true;
+            this.txtNameTarafHesab.Properties.MaxLength = 100;
+            this.txtNameTarafHesab.Size = new System.Drawing.Size(214, 30);
+            this.txtNameTarafHesab.TabIndex = 0;
+            this.txtNameTarafHesab.TabStop = false;
             // 
             // labelControl15
             // 
@@ -6201,22 +6201,22 @@
             this.labelControl15.TabIndex = 243;
             this.labelControl15.Text = "نام طرف حساب";
             // 
-            // textEdit19
+            // txtAdress
             // 
-            this.textEdit19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit19.EditValue = "";
-            this.textEdit19.EnterMoveNextControl = true;
-            this.textEdit19.Location = new System.Drawing.Point(12, 117);
-            this.textEdit19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit19.Name = "textEdit19";
-            this.textEdit19.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit19.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            this.textEdit19.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit19.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit19.Properties.MaxLength = 500;
-            this.textEdit19.Size = new System.Drawing.Size(564, 30);
-            this.textEdit19.TabIndex = 3;
-            this.textEdit19.TabStop = false;
+            this.txtAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAdress.EditValue = "";
+            this.txtAdress.EnterMoveNextControl = true;
+            this.txtAdress.Location = new System.Drawing.Point(12, 117);
+            this.txtAdress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtAdress.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            this.txtAdress.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAdress.Properties.Appearance.Options.UseForeColor = true;
+            this.txtAdress.Properties.MaxLength = 500;
+            this.txtAdress.Size = new System.Drawing.Size(564, 30);
+            this.txtAdress.TabIndex = 3;
+            this.txtAdress.TabStop = false;
             // 
             // labelControl19
             // 
@@ -6506,20 +6506,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShMobile2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelSabet2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameRanande.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVaznBaskol.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMohalTahvil.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShBarname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShPlak.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelSabet1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShMobile1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameTarafHesab.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl13)).EndInit();
             this.panelControl13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Button)).EndInit();
@@ -6781,28 +6781,28 @@
         private DevExpress.XtraEditors.SimpleButton btnReloadEtebar;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        public DevExpress.XtraEditors.TextEdit textEdit4;
+        public DevExpress.XtraEditors.TextEdit txtTelSabet2;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        public DevExpress.XtraEditors.TextEdit textEdit1;
+        public DevExpress.XtraEditors.TextEdit txtNameRanande;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        public DevExpress.XtraEditors.TextEdit textEdit3;
+        public DevExpress.XtraEditors.TextEdit txtVaznBaskol;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        public DevExpress.XtraEditors.TextEdit textEdit2;
+        public DevExpress.XtraEditors.TextEdit txtShBarname;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        public DevExpress.XtraEditors.TextEdit textEdit20;
+        public DevExpress.XtraEditors.TextEdit txtShPlak;
         private DevExpress.XtraEditors.LabelControl labelControl21;
-        public DevExpress.XtraEditors.TextEdit textEdit25;
+        public DevExpress.XtraEditors.TextEdit txtMohalTahvil;
         private DevExpress.XtraEditors.LabelControl labelControl29;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        public DevExpress.XtraEditors.TextEdit textEdit5;
+        public DevExpress.XtraEditors.TextEdit txtShMobile1;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        public DevExpress.XtraEditors.TextEdit textEdit13;
+        public DevExpress.XtraEditors.TextEdit txtNameTarafHesab;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        public DevExpress.XtraEditors.TextEdit textEdit19;
+        public DevExpress.XtraEditors.TextEdit txtAdress;
         private DevExpress.XtraEditors.LabelControl labelControl19;
-        public DevExpress.XtraEditors.TextEdit textEdit14;
+        public DevExpress.XtraEditors.TextEdit txtTelSabet1;
         private DevExpress.XtraEditors.LabelControl labelControl16;
-        public DevExpress.XtraEditors.TextEdit textEdit17;
+        public DevExpress.XtraEditors.TextEdit txtShMobile2;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraGrid.GridControl gridControl_Ksorat;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView_Ksorat;

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace DBHesabdari_PG.Models.EP.CodingHesabdari
 {
-   public class EpAllHesabTafsili
+    public class EpAllHesabTafsili
     {
         public int Id { get; set; }
         [Required]
@@ -56,18 +56,24 @@ namespace DBHesabdari_PG.Models.EP.CodingHesabdari
         public virtual ICollection<EpListAnbarha> EpListAnbarha1s { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarha2s { get; set; }
         public virtual ICollection<EpListAnbarha> EpListAnbarha3s { get; set; }
-        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz1s { get; set; }
-        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz2s { get; set; }
-        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz3s { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz1_Beds { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz2_Beds { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz3_Beds { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz1_Bess { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz2_Bess { get; set; }
+        public virtual ICollection<FkAmaliatFrooshVKharid_Riz> FkAmaliatFrooshVKharid_Riz3_Bess { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz1s { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz2s { get; set; }
         public virtual ICollection<AKAmaliatAnbarVKala_Riz> AKAmaliatAnbarVKala_Riz3s { get; set; }
         public virtual ICollection<FKTanzimatFactor> FKTanzimatFactor1s { get; set; }
         public virtual ICollection<FKTanzimatFactor> FKTanzimatFactor2s { get; set; }
         public virtual ICollection<FKTanzimatFactor> FKTanzimatFactor3s { get; set; }
-        // public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz1s { get; set; }
-        //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz2s { get; set; }
-        //public virtual ICollection<AkKhorojeKala_Riz> AkKhorojeKala_Riz3s { get; set; }
+        public virtual ICollection<EpNameKala> EpNameKala_Kh1s { get; set; }
+        public virtual ICollection<EpNameKala> EpNameKala_Kh2s { get; set; }
+        public virtual ICollection<EpNameKala> EpNameKala_Kh3s { get; set; }
+        public virtual ICollection<EpNameKala> EpNameKala_Fr1s { get; set; }
+        public virtual ICollection<EpNameKala> EpNameKala_Fr2s { get; set; }
+        public virtual ICollection<EpNameKala> EpNameKala_Fr3s { get; set; }
     }
 
 }

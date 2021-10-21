@@ -474,6 +474,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
 
         int _TabPageCount = 0;
         int EditRowIndex = 0;
+        int _FNumber_BeNameAmaliat_BeSelectAnbar = 0;
         int _FNumberCol_BaNameSanad_BeSelectAnbar = 0;
         int _FNumberJoze_BaNameSanad_BaNoeFactor = 0;
         int _FNumberJoze_BaNameSanad_BaSelectAnbar = 0;
@@ -485,6 +486,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                 {
                     try
                     {
+                        _FNumber_BeNameAmaliat_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumber_BeNameAmaliat_BeSelectAnbar").ToString());
                         _FNumberCol_BaNameSanad_BeSelectAnbar = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberCol_BaNameSanad_BeSelectAnbar").ToString());
                         _FNumberJoze_BaNameSanad_BaNoeFactor = Convert.ToInt32(gridView.GetFocusedRowCellValue("FNumberJoze_BaNameSanad_BaNoeFactor").ToString());
                     }
@@ -511,8 +513,9 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                                 //_AzAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
                                 var q = db.FkAmaliatFrooshVKharid_Rizs.Where(s => s.SalId == _SalId && s.NameAmaliatCode == _NameAmaliatCode && s.NameSanadCode == _NameSanadCode
                                 && s.FNumberCol_BaNameSanad_BeSelectAnbar == _FNumberCol_BaNameSanad_BeSelectAnbar
-                                && s.FNumberJoze_BaNameSanad_BaNoeFactor== _FNumberJoze_BaNameSanad_BaNoeFactor).ToList();
-                                if (q.Count > 0)
+                                && s.FNumberJoze_BaNameSanad_BaNoeFactor == _FNumberJoze_BaNameSanad_BaNoeFactor).ToList();
+                                var q11 = db.FKMotamemFactors.FirstOrDefault(s => s.SalId == _SalId && s.FNumber_BeNameAmaliat_BeSelectAnbar == _FNumber_BeNameAmaliat_BeSelectAnbar && s.FNumberCol_BaNameSanad_BeSelectAnbar == _FNumberCol_BaNameSanad_BeSelectAnbar && s.FNumberJoze_BaNameSanad_BaNoeFactor == _FNumberJoze_BaNameSanad_BaNoeFactor);
+                                if (q.Count > 0 && q11 != null)
                                 {
                                     //if (_FirstSelectAnbar_NextSanad && _NoeFactor == 0)
                                     //{
@@ -523,7 +526,8 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                                     //    db.FkAmaliatFrooshVKharid_Rizs.RemoveRange(q1);
                                     //}
                                     //else
-                                        db.FkAmaliatFrooshVKharid_Rizs.RemoveRange(q);
+                                    db.FkAmaliatFrooshVKharid_Rizs.RemoveRange(q);
+                                    db.FKMotamemFactors.Remove(q11);
                                     /////////////////////////////////////////////////////////////////////////////
                                     db.SaveChanges();
 
@@ -589,7 +593,7 @@ namespace FrooshVKharid.AmaliatFrooshVKharid
                         _NoeFactor = Convert.ToByte(gridView.GetFocusedRowCellValue("NoeFactor").ToString());
                         if (_FirstSelectAnbar_NextSanad && _NoeFactor == 0)
                         {
-                            fm._AnbarId = fm._BeforEditAnbarId= Convert.ToInt32(cmbNameAnbar.EditValue);
+                            fm._AnbarId = fm._BeforEditAnbarId = Convert.ToInt32(cmbNameAnbar.EditValue);
 
                         }
 

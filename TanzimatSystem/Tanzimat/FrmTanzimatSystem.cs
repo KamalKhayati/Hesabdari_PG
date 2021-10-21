@@ -717,19 +717,19 @@ namespace TanzimatSystem.Tanzimat
                         int _cmbId2 = Convert.ToInt32(cmbControl2.EditValue);
                         if (_cmbId2 != 0)
                         {
-                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId2).OrderBy(s => s.Code).ToList();
-                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId1).OrderBy(s => s.Code).ToList();
+                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId2).OrderBy(s => s.Code).ToList();
+                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.AnbarId == _cmbId1).OrderBy(s => s.Code).ToList();
                             var q5 = Mydb.EpListAnbarhas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _cmbId1);
-                            if (q1.Count > 0)
+                            if (q2.Count > 0)
                             {
-                                foreach (var item in q1)
+                                foreach (var item in q2)
                                 {
-                                    var q3 = q2.FirstOrDefault(s => s.Code == item.Code);
+                                    var q3 = q1.FirstOrDefault(s => s.Code == item.Code);
                                     if (q3 != null)
                                     {
                                         if (q3.Code == 101 || q3.Code == 204 || q3.Code == 306 || q3.Code == 404)
                                         {
-                                            q3.HesabMoinId = q5.MoinId;
+                                            q3.HesabMoinId     = q5.MoinId;
                                             q3.HesabTafsili1Id = q5.TafsiliId1;
                                             q3.HesabTafsili2Id = q5.TafsiliId2;
                                             q3.HesabTafsili3Id = q5.TafsiliId3;
@@ -763,25 +763,38 @@ namespace TanzimatSystem.Tanzimat
                         int _cmbId2 = Convert.ToInt32(cmbControl2.EditValue);
                         if (_cmbId2 != 0)
                         {
-                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId2).OrderBy(s => s.Code).ToList();
-                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId1).OrderBy(s => s.Code).ToList();
-                            if (q1.Count > 0)
+                            var q2 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId2).OrderBy(s => s.Code).ToList();
+                            var q1 = Mydb.FKTanzimatFactors.Where(s => s.SalId == _SalId && s.KhadamatId == _cmbId1).OrderBy(s => s.Code).ToList();
+                            var q5 = Mydb.EpNameKalas.FirstOrDefault(s => s.SalId == _SalId && s.Id == _cmbId1);
+
+                            if (q2.Count > 0)
                             {
-                                foreach (var item in q1)
+                                foreach (var item in q2)
                                 {
-                                    var q3 = q2.FirstOrDefault(s => s.Code == item.Code);
+                                    var q3 = q1.FirstOrDefault(s => s.Code == item.Code);
                                     if (q3 != null)
                                     {
                                         if (q3.Code == 101 || q3.Code == 202)
                                         {
-                                            q3.HesabMoinId = null;
-                                            q3.HesabTafsili1Id = null;
-                                            q3.HesabTafsili2Id = null;
-                                            q3.HesabTafsili3Id = null;
-                                            q3.HesabMoinName_NM = string.Empty;
-                                            q3.HesabTafsili1Name_NM = string.Empty;
-                                            q3.HesabTafsili2Name_NM = string.Empty;
-                                            q3.HesabTafsili3Name_NM = string.Empty;
+                                            q3.HesabMoinId = q5.HesabMoinId_Kh;
+                                            q3.HesabTafsili1Id = q5.HesabTafsili1Id_Kh;
+                                            q3.HesabTafsili2Id = q5.HesabTafsili2Id_Kh;
+                                            q3.HesabTafsili3Id = q5.HesabTafsili3Id_Kh;
+                                            //q3.HesabMoinName_NM = string.Empty;
+                                            //q3.HesabTafsili1Name_NM = string.Empty;
+                                            //q3.HesabTafsili2Name_NM = string.Empty;
+                                            //q3.HesabTafsili3Name_NM = string.Empty;
+                                        }
+                                       else if (q3.Code == 302 || q3.Code == 401)
+                                        {
+                                            q3.HesabMoinId = q5.HesabMoinId_Fr;
+                                            q3.HesabTafsili1Id = q5.HesabTafsili1Id_Fr;
+                                            q3.HesabTafsili2Id = q5.HesabTafsili2Id_Fr;
+                                            q3.HesabTafsili3Id = q5.HesabTafsili3Id_Fr;
+                                            //q3.HesabMoinName_NM = string.Empty;
+                                            //q3.HesabTafsili1Name_NM = string.Empty;
+                                            //q3.HesabTafsili2Name_NM = string.Empty;
+                                            //q3.HesabTafsili3Name_NM = string.Empty;
                                         }
                                         else
                                         {

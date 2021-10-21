@@ -335,7 +335,7 @@
             this.btnReloadNameAnbar2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReloadNameAnbar2.Name = "btnReloadNameAnbar2";
             this.btnReloadNameAnbar2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnReloadNameAnbar2.Size = new System.Drawing.Size(37, 30);
+            this.btnReloadNameAnbar2.Size = new System.Drawing.Size(37, 33);
             this.btnReloadNameAnbar2.TabIndex = 212;
             this.btnReloadNameAnbar2.TabStop = false;
             this.btnReloadNameAnbar2.ToolTipTitle = "بعدی";
@@ -1898,7 +1898,7 @@
             this.btnReload_NameKala.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReload_NameKala.Name = "btnReload_NameKala";
             this.btnReload_NameKala.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnReload_NameKala.Size = new System.Drawing.Size(37, 30);
+            this.btnReload_NameKala.Size = new System.Drawing.Size(37, 33);
             this.btnReload_NameKala.TabIndex = 13;
             this.btnReload_NameKala.TabStop = false;
             this.btnReload_NameKala.Click += new System.EventHandler(this.btnReload_NameKala_Click);
